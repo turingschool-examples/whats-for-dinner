@@ -113,7 +113,7 @@ _Note: You can disable these buttons, hide them, or display a message to the use
 
 
 ### Comps
-**Initial State**
+**Initial State (Iteration 0)**
 <img width="973" alt="" src="Screen Shot 2020-08-15 at 2.27.04 PM.png">
 
 

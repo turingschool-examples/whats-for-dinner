@@ -114,6 +114,6 @@ _Note: You can disable these buttons, hide them, or display a message to the use
 
 ### Comps
 
-<img width="973" alt="Zero state" src="https://user-images.githubusercontent.com/25447342/62751672-c8f99e00-ba21-11e9-9029-7855eb7524fa.png">
+<img width="973" alt="Zero state" src="Screen Shot 2020-08-15 at 2.42.58 PM.png">
 
 <img width="1109" alt="After a user has requested an answer" src="https://user-images.githubusercontent.com/25447342/62751671-c8f99e00-ba21-11e9-90e5-4dc648ae2d6a.png">

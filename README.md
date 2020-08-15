@@ -114,13 +114,16 @@ _Note: You can disable these buttons, hide them, or display a message to the use
 
 ### Comps
 **Initial State (Iteration 0)**
-<img width="973" alt="" src="Screen Shot 2020-08-15 at 2.27.04 PM.png">
+<img width="973" src="Screen Shot 2020-08-15 at 2.27.04 PM.png">
 
 **Iteration 1**
-<img width="973" alt="" src="Screen Shot 2020-08-15 at 2.27.14 PM.png">
+<img width="973" src="Screen Shot 2020-08-15 at 2.27.14 PM.png">
 
 **Iteration 2** 
-<img width="973" alt="" src="Screen Shot 2020-08-15 at 2.27.32 PM.png">
+<img width="973" src="Screen Shot 2020-08-15 at 2.27.32 PM.png">
 
 **Iteration 3**
-<img width="973" alt="" src="Screen Shot 2020-08-15 at 2.42.58 PM.png">
+_shown above_
+
+**Iteration 4**
+<img width="973"  src="Screen Shot 2020-08-15 at 2.42.58 PM.png">

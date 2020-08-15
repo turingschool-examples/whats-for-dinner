@@ -1,5 +1,6 @@
 # What's For Dinner?
 ### FE1 Solo Challenge
+<img width="973" src="Screen Shot 2020-08-15 at 2.27.04 PM.png">
 
 ## Background
 What's for dinner? The ultimate question.

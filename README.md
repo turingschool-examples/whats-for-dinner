@@ -59,8 +59,9 @@ _Note: You can disable these buttons, hide them, or display a message to the use
 **Iteration 5:** BONUS ROUND (Ideas for Extensions)
 - *NOTE: This round is not required, and you should absolutely not be working on this unless your UI is solid and you are 100% sure that all of Iterations 1-4 are fully functional and bug free.*
 - Add a loading animation when a user clicks the "Let's Cook" button to simulate searching for a recipe. Hint - You will need to use CSS Keyframes, and a Javascript timeout function for this. 
-- When a user tries to add to a recipe type that does not exist, we see an error message
-
+- When a user tries to add to a recipe type that does not exist, we see an error message, OR the new category gets added! 
+- Add the ability to delete a recipe (ie: when a recipe shows up, show a button that says "I don't like this recipe" (or something similar), and remove it from the array so that it will not show up any more (does not need to persist on page load)
+- CYOA Extension! Make sure you run your idea by instructors
 
 ### Possible Foods (Feel Free to Add Your Own!)
 

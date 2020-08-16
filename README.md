@@ -45,7 +45,7 @@ Commit at the end of each iteration (if not more frequently) for good habits!
 - When the meal items appear, the cookpot icon disappears
 
 
-**Iteration 3:** Clear Functionality, Error Handling
+**Iteration 3:** Error Handling and Clear Button
 
 - The user can click a clear button, which clears the page of any message. User should only be able to click the clear button if a food is visible. When the clear button is clicked and the food is removed, the image of the cookpot should re-appear.
 - User should not be able to click the "Let's Cook" button for a recipe unless they have selected an option.

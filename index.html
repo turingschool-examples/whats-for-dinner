@@ -5,24 +5,35 @@
   </head>
   <body>
     <nav>
-      <h2>What's for Dinner?</h2>
-      <button>ADD A RECIPE</button>
+      <h2 class="title">What's for Dinner?</h2>
+      <button class="add-a-recipe">ADD A RECIPE</button>
     </nav>
     <main>
-      <div>
-        <h1>What are you looking for?</h1>
-        <!-- need a require field on h1 -->
+      <article class="menu card">
+        <h1>What are you looking for?<span class="required">*</span></h1>
         <div class="options">
-          <input type="checkbox"> Side
-          <input type="checkbox"> Main Dish
-          <input type="checkbox"> Dessert
-          <input type="checkbox"> Entire Meal
-        </div>
-        <button>LET'S COOK!</button>
-      </div>
-      <div>
-        <img src="assets/cookpot.svg" alt="">
-      </div>
+          <div class="choose">
+            <input type="checkbox">
+            <p>Side</p>
+          </div>
+          <div class="choose">
+            <input type="checkbox">
+            <p>Main Dish</p>
+          </div>
+          <div class="choose">
+            <input type="checkbox">
+            <p>Dessert</p>
+          </div>
+          <div class="choose">
+            <input type="checkbox">
+            <p>Entire Meal</p>
+          </div>
+        </div class="confirmation">
+        <button class="lets-cook">LET'S COOK!</button>
+      </article>
+      <article class="result card">
+        <img class="cookpot"src="assets/cookpot.svg" alt="cookpot icon">
+      </article>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>

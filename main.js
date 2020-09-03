@@ -5,35 +5,6 @@ var letsCookButton = document.querySelector(".lets-cook-button");
 var resultBox = document.querySelector(".result-box");
 var cookPotIcon = document.querySelector(".cook-pot-icon");
 
-letsCookButton.addEventListener("click", displayRandomDish);
-
-function displayRandomDish() {
-  if (sideSelect.checked === true) {
-    var randomSide = getRandomIndex(sides);
-    displayDish(randomSide);
-  }
-}
-
-function displayDish(dish) {
-  cookPotIcon.classList.add("hidden");
-  var singleDishBlock =
-  `<div>
-    <h4>You should make:</h4>
-    <h1>${dish}</h1>
-    </div>`
-  resultBox.insertAdjacentHTML('afterbegin', singleDishBlock);
-}
-
-function getRandomIndex(array) {
-  var randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
-}
-
-
-
-
-
-
 var sides = [
   "Miso Glazed Carrots",
   "Coleslaw",
@@ -81,3 +52,33 @@ var desserts = [
   "Croissants",
   "Eclairs"
 ];
+
+letsCookButton.addEventListener("click", displayRandomDish);
+
+function displayRandomDish() {
+  if (sideSelect.checked) {
+    var randomSide = getRandomIndex(sides);
+    displayDish(randomSide);
+  } else if (mainDishSelect.checked) {
+    var randomMainDish = getRandomIndex(mains);
+    displayDish(randomMainDish);
+  } else if (dessertSelect.checked) {
+    var randomDessert = getRandomIndex(desserts);
+    displayDish(randomDessert);
+  }
+}
+
+function displayDish(dish) {
+  cookPotIcon.classList.add("hidden");
+  var singleDishBlock =
+  `<div>
+    <h4>You should make:</h4>
+    <h1>${dish}</h1>
+    </div>`
+  resultBox.insertAdjacentHTML('afterbegin', singleDishBlock);
+}
+
+function getRandomIndex(array) {
+  var randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}

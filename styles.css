@@ -22,7 +22,8 @@ p {
 }
 
 button {
-  border-radius: 10%;
+  border-radius: 10px 10px;
+  cursor: pointer;
   border: none;
 }
 
@@ -36,6 +37,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 
@@ -51,11 +53,23 @@ main {
   height: 50%;
 }
 
-.title {
-  margin-left: 30px;
+form {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  align-self: flex-end;
 }
 
-.add-a-recipe {
+.title {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 1.25em;
+}
+
+.add-a-recipe-button {
   background-color: rgba(225, 225, 225, .9);
   margin-top: 15px;
   margin-bottom: 15px;
@@ -76,10 +90,14 @@ main {
   flex-direction: column;
 }
 
-.lets-cook {
+.check {
+  border-radius: 50%;
+}
+
+.lets-cook-button {
   margin-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #0fb9b1;
@@ -100,4 +118,38 @@ main {
 .cookpot {
   height: 150px;
   width: 150px;
+}
+
+
+.clear-button {
+  background-color: #95a5a6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  align-self: flex-end;
+  margin-left: 80%;
+}
+
+.new-recipe {
+   display: flex;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 40px;
+}
+
+.new-recipe p {
+  padding-right: 10px;
+}
+
+.add-new-button {
+  margin-left: 50px;
+  height: 35px;
+  margin-top: 12px;
+  background-color: #0fb9b1;
+}
+
+.hidden {
+  display: none;
 }

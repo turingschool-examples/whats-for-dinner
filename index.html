@@ -5,36 +5,51 @@
   </head>
   <body>
     <nav>
-      <h2 class="title">What's for Dinner?</h2>
-      <button class="add-a-recipe">ADD A RECIPE</button>
+      <h3 class="title">What's for Dinner?</h3>
+      <button class="add-a-recipe-button">ADD A RECIPE</button>
     </nav>
     <main>
       <article class="menu card">
-        <h1>What are you looking for?<span class="required">*</span></h1>
+        <h2>What are you looking for?<span class="required">*</span></h2>
         <div class="options">
           <div class="choose">
-            <input type="checkbox">
+            <input type="radio">
             <p>Side</p>
           </div>
           <div class="choose">
-            <input type="checkbox">
+            <input type="radio">
             <p>Main Dish</p>
           </div>
           <div class="choose">
-            <input type="checkbox">
+            <input type="radio">
             <p>Dessert</p>
           </div>
           <div class="choose">
-            <input type="checkbox">
+            <input type="radio">
             <p>Entire Meal</p>
           </div>
         </div class="confirmation">
-        <button class="lets-cook">LET'S COOK!</button>
+        <button class="lets-cook-button">LET'S COOK!</button>
       </article>
       <article class="result card">
+        <h4 class="hidden">You should make</h4>
+        <h1 class="hidden"></h1>
+        <h3 class="hidden"></h3>
         <img class="cookpot"src="assets/cookpot.svg" alt="cookpot icon">
+        <button class="clear-button hidden">CLEAR</button>
       </article>
     </main>
+    <form class="hidden">
+      <div class="new-recipe">
+        <p>Recipe Type:</p>
+        <input type="text">
+      </div>
+      <div class="new-recipe">
+        <p>Recipe Name:</p>
+        <input type="text">
+      </div>
+      <button class="add-new-button">ADD NEW</button>
+    </form>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

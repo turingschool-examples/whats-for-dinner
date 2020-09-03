@@ -12,6 +12,14 @@ h1, h2, p, button {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
 .required {
   color: #ee5253;
 }
@@ -111,6 +119,7 @@ form {
 
 .result-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -120,6 +129,9 @@ form {
   width: 150px;
 }
 
+.dish-block {
+  text-align: center;
+}
 
 .clear-button {
   background-color: #95a5a6;
@@ -129,7 +141,7 @@ form {
   padding-left: 20px;
   color: white;
   align-self: flex-end;
-  margin-left: 80%;
+  margin-top: 55%;
 }
 
 .new-recipe {

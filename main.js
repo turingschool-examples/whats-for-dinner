@@ -1,3 +1,39 @@
+var sideSelect = document.querySelector(".side-select");
+var mainDishSelect = document.querySelector(".main-dish-select");
+var dessertSelect = document.querySelector(".dessert-select");
+var letsCookButton = document.querySelector(".lets-cook-button");
+var resultBox = document.querySelector(".result-box");
+var cookPotIcon = document.querySelector(".cook-pot-icon");
+
+letsCookButton.addEventListener("click", displayRandomDish);
+
+function displayRandomDish() {
+  if (sideSelect.checked === true) {
+    var randomSide = getRandomIndex(sides);
+    displayDish(randomSide);
+  }
+}
+
+function displayDish(dish) {
+  cookPotIcon.classList.add("hidden");
+  var singleDishBlock =
+  `<div>
+    <h4>You should make:</h4>
+    <h1>${dish}</h1>
+    </div>`
+  resultBox.insertAdjacentHTML('afterbegin', singleDishBlock);
+}
+
+function getRandomIndex(array) {
+  var randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+
+
+
+
+
+
 var sides = [
   "Miso Glazed Carrots",
   "Coleslaw",

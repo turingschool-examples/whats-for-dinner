@@ -109,13 +109,13 @@ form {
   margin-bottom: 5px;
 }
 
-.result {
+.result-box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cookpot {
+.cook-pot-icon {
   height: 150px;
   width: 150px;
 }

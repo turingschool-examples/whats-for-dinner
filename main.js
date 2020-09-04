@@ -4,8 +4,8 @@ var dessertSelect = document.querySelector(".dessert-select");
 var letsCookButton = document.querySelector(".lets-cook-button");
 var resultBox = document.querySelector(".result-box");
 var cookPotIcon = document.querySelector(".cook-pot-icon");
-var clearButton = document.querySelector(".clear-button");
 var mealSelect = document.querySelector(".meal-select");
+var select = document.querySelectorAll('.select');
 
 var sides = [
   "Miso Glazed Carrots",
@@ -55,19 +55,22 @@ var desserts = [
   "Eclairs"
 ];
 
-letsCookButton.addEventListener("click", displayRandomDish);
-clearButton.addEventListener("click", restartQuery)
+letsCookButton.addEventListener("click", randomizeDish);
+resultBox.addEventListener("click", restartQuery);
 
-function displayRandomDish() {
-  if (sideSelect.checked) {
+function randomizeDish() {
+  if (select[0].checked) {
     var randomSide = getRandomIndex(sides);
     displayDish(randomSide);
-  } else if (mainDishSelect.checked) {
+  } else if (select[1].checked) {
     var randomMainDish = getRandomIndex(mains);
     displayDish(randomMainDish);
-  } else if (dessertSelect.checked) {
+  } else if (select[2].checked) {
     var randomDessert = getRandomIndex(desserts);
     displayDish(randomDessert);
+  }
+  for (var i = 0; i < select.length; i++) {
+    select[i].checked = false;
   }
 }
 
@@ -77,36 +80,33 @@ function getRandomIndex(array) {
 }
 
 function displayDish(dish) {
+  resultBox.innerHTML = '';
   var singleDishBlock =
   `<div class="dish-block">
-    <h4>You should make:</h4>
-    <h1>${dish}!</h1>
-    </div>`
+    <div class="dish-info">
+      <h4>You should make:</h4>
+      <h1>${dish}!</h1>
+    </div>
+    <div class="clear-div">
+      <button class="clear-button">CLEAR</button>
+    </div>
+  </div>`
   resultBox.insertAdjacentHTML('afterbegin', singleDishBlock);
   allowSelectionReset();
 }
 
 function allowSelectionReset() {
   cookPotIcon.classList.add("hidden");
-  clearButton.classList.remove("hidden");
-  letsCookButton.disabled = true;
-  sideSelect.disabled = true;
-  mainDishSelect.disabled = true;
-  dessertSelect.disabled = true;
-  mealSelect.disabled = true;
 }
 
-function restartQuery() {
-  cookPotIcon.classList.remove("hidden");
-  clearButton.classList.add("hidden");
-  letsCookButton.disabled = false;
-  sideSelect.disabled = false;
-  mainDishSelect.disabled = false;
-  dessertSelect.disabled = false;
-  mealSelect.disabled = false;
-  letsCookButton.checked = false;
-  sideSelect.checked = false;
-  mainDishSelect.checked = false;
-  dessertSelect.checked = false;
-  mealSelect.checked = false;
+function restartQuery(event) {
+  if (event.target.classList.contains('clear-button')) {
+    resultBox.innerHTML = '';
+    resultBox.insertAdjacentHTML('afterbegin', `<img class="cook-pot-icon"src="assets/cookpot.svg" alt="cookpot icon">`);
+  }
+  //if what is clicked is the clear button, remove the contents of the card.
 }
+//radios not toggling?
+//clear button not sitting right?
+//removing an insertAdjacentHTML?
+//cleaning these functions up with toggle?

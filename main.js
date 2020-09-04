@@ -54,15 +54,17 @@ letsCookButton.addEventListener("click", randomizeDish);
 resultBox.addEventListener("click", restartQuery);
 
 function randomizeDish() {
+  var randomSideDish = getRandomIndex(sides);
+  var randomMainDish = getRandomIndex(mains);
+  var randomDessert = getRandomIndex(desserts);
   if (select[0].checked) {
-    var randomSide = getRandomIndex(sides);
-    displayDish(randomSide);
+    displayDish(randomSideDish);
   } else if (select[1].checked) {
-    var randomMainDish = getRandomIndex(mains);
     displayDish(randomMainDish);
   } else if (select[2].checked) {
-    var randomDessert = getRandomIndex(desserts);
     displayDish(randomDessert);
+  } else if (select[3].checked) {
+    displayMeal(randomSideDish, randomMainDish, randomDessert);
   }
   for (var i = 0; i < select.length; i++) {
     select[i].checked = false;
@@ -87,11 +89,21 @@ function displayDish(dish) {
     </div>
   </div>`
   resultBox.insertAdjacentHTML('afterbegin', singleDishBlock);
-  allowSelectionReset();
 }
 
-function allowSelectionReset() {
-  cookPotIcon.classList.add("hidden");
+function displayMeal(main, side, dessert) {
+  resultBox.innerHTML = '';
+  var mealBlock =
+  `<div class="dish-block">
+    <div class "dish-info">
+      <h4>You should make:</h4>
+      <h3>${main} with a side of ${side} and ${dessert} for dessert!</h3>
+    </div>
+    <div class="clear-div">
+      <button class="clear-button">CLEAR</button>
+    </div>
+  </div>`
+  resultBox.insertAdjacentHTML('afterbegin', mealBlock);
 }
 
 function restartQuery(event) {

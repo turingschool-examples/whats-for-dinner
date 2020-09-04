@@ -1,10 +1,5 @@
-var sideSelect = document.querySelector(".side-select");
-var mainDishSelect = document.querySelector(".main-dish-select");
-var dessertSelect = document.querySelector(".dessert-select");
 var letsCookButton = document.querySelector(".lets-cook-button");
 var resultBox = document.querySelector(".result-box");
-var cookPotIcon = document.querySelector(".cook-pot-icon");
-var mealSelect = document.querySelector(".meal-select");
 var select = document.querySelectorAll('.select');
 
 var sides = [
@@ -100,13 +95,9 @@ function allowSelectionReset() {
 }
 
 function restartQuery(event) {
+  var cookPotIcon = `<img class="cook-pot-icon"src="assets/cookpot.svg" alt="cookpot icon">`
   if (event.target.classList.contains('clear-button')) {
     resultBox.innerHTML = '';
-    resultBox.insertAdjacentHTML('afterbegin', `<img class="cook-pot-icon"src="assets/cookpot.svg" alt="cookpot icon">`);
+    resultBox.insertAdjacentHTML('afterbegin', cookPotIcon);
   }
-  //if what is clicked is the clear button, remove the contents of the card.
 }
-//radios not toggling?
-//clear button not sitting right?
-//removing an insertAdjacentHTML?
-//cleaning these functions up with toggle?

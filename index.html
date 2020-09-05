@@ -15,15 +15,15 @@
           <ul style="list-style: none; padding-left: 0;">
             <li class="list-height">
               <input type="radio" name="food" id="side"/>
-              <label> Side</label>
+              <label for="side"> Side</label>
             </li>
             <li class="list-height">
               <input type="radio" name="food" id="main-dish"/>
-              <label> Main Dish</label>
+              <label for="main-dish"> Main Dish</label>
             </li>
             <li class="list-height">
-              <input type="radio" name="food" id="desert"/>
-              <label for="desert"> Desert</label>
+              <input type="radio" name="food" id="dessert"/>
+              <label for="dessert"> Dessert</label>
             </li>
             <li class="list-height">
               <input type="radio" name="food" id="entire-meal"/>
@@ -40,7 +40,16 @@
         <div class="results hidden">
           <h2><i>You should make:</i></h2>
           <p id="result-text">chicken dinner</p>
-          <button class="clear">CLEAR</button>
+          <button class="clear" style="
+          border-radius: 6px;
+          height: 34px;
+          margin-top: auto;
+          margin-bottom: auto;
+          border: none;
+          padding: 0 1em;
+          background-color: #95a5a6;
+          color: white;
+      ">CLEAR</button>
         </div>
       </div>
      </div>

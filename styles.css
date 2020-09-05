@@ -8,3 +8,84 @@ red - #ee5253
 
 */
 
+.main-background {
+    background-image: url('./assets/burger-friends.jpg'); 
+    background-size: cover; 
+    margin: 0;
+}
+
+.nav {
+    background: #0fb9b1; 
+    display: flex;
+    justify-content: space-between; 
+    padding: 1em;
+}
+
+.nav .page-title {
+    font-family: roboto;
+    font-size: 1.4em;
+}
+.nav .button {
+    border-radius: 6px;
+    height: 34px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    padding: 0 1em;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.2);
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 0em;
+}
+.hidden {
+    display: none !important;
+  }
+
+
+.box {
+    display: flex;
+    width: 320px;
+    padding: 3em;
+    background-color: rgba(255,255,255,0.9);
+    font-family: roboto;
+}
+
+.icon {
+    margin: auto;
+    width: 120px;
+}
+
+.start {
+    display: flex;
+    width:100%;
+}
+
+.results {
+    display: flex;
+    width:100%;
+}
+
+.results.hidden { 
+    display: none;
+}
+
+.list-height {
+    height: 2em;
+}
+
+.cook-button {
+    display: flex;
+    justify-content: center;
+    background: #0fb9b1;
+    font-family: roboto;
+    border-radius: 4px;
+    height: 32px;
+    width: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    padding: 0.7em 2em;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.2);
+}

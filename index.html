@@ -3,8 +3,47 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    
+  <body class="main-background">
+     <div class="nav">
+       <h1 class="page-title">What's for Dinner?</h1>
+       <button class="button">ADD A RECIPE</button>
+     </div>
+     <div class="content">
+      <div class="box choices">
+        <div>
+          <h2>What are you looking for?</h2>
+          <ul style="list-style: none; padding-left: 0;">
+            <li class="list-height">
+              <input type="radio" name="food" id="side"/>
+              <label> Side</label>
+            </li>
+            <li class="list-height">
+              <input type="radio" name="food" id="main-dish"/>
+              <label> Main Dish</label>
+            </li>
+            <li class="list-height">
+              <input type="radio" name="food" id="desert"/>
+              <label for="desert"> Desert</label>
+            </li>
+            <li class="list-height">
+              <input type="radio" name="food" id="entire-meal"/>
+              <label for="entire-meal"> Entire Meal</label>
+            </li>
+          </ul>
+          <button class="cook-button">LET'S COOK!</button>
+        </div>
+      </div>
+      <div class="box display-food">
+        <div class="start">
+          <img src="./assets/cookpot.svg" class="icon"/>
+        </div>
+        <div class="results hidden">
+          <h2><i>You should make:</i></h2>
+          <p id="result-text">chicken dinner</p>
+          <button class="clear">CLEAR</button>
+        </div>
+      </div>
+     </div>
   </body>
-  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
 </html>

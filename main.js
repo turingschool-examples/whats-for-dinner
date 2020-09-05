@@ -64,12 +64,12 @@ function changeDisplay() {
 function generateRandomFood() {
     if (document.getElementById("side").checked) {
         changeDisplay()
-        resultFood.innerText = sides[getRandomIndex(sides)]
+        resultFood.innerText = `${sides[getRandomIndex(sides)]}`
     } else if (document.getElementById("main-dish").checked) {
         changeDisplay()
-        resultFood.innerText = mainDishes[getRandomIndex(mainDishes)]
+        resultFood.innerText = `${mainDishes[getRandomIndex(mainDishes)]}!`
     } else if (document.getElementById("dessert").checked) {
         changeDisplay()
-        resultFood.innerText = desserts[getRandomIndex(desserts)]
+        resultFood.innerText = `${desserts[getRandomIndex(desserts)]}`
     }
 }

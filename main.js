@@ -47,10 +47,11 @@ var desserts = [
 // DOM Elements
 letsCookButton = document.querySelector(".cook-button")
 resultFood = document.getElementById("result-text")
+clearButton = document.querySelector(".empty-out")
 
 // Event Listeners
 letsCookButton.addEventListener("click", generateRandomFood)
-
+clearButton.addEventListener("click",displayCookPot)
 
 // Functions
 function getRandomIndex(array) {
@@ -59,6 +60,19 @@ function getRandomIndex(array) {
 function changeDisplay() {
     document.querySelector(".start").classList.add("hidden")
     document.querySelector(".results").classList.remove("hidden")
+}
+
+function displayCookPot() {
+    document.querySelector(".start").classList.remove("hidden")
+    document.querySelector(".results").classList.add("hidden")
+    clearRadio()
+}
+
+function clearRadio() {
+    document.querySelector('#side').checked = false
+    document.querySelector('#main-dish').checked = false
+    document.querySelector('#dessert').checked = false
+    document.querySelector('#entire-meal').checked = false
 }
 
 function generateRandomFood() {
@@ -71,8 +85,9 @@ function generateRandomFood() {
     } else if (document.getElementById("dessert").checked) {
         changeDisplay()
         resultFood.innerText = `${desserts[getRandomIndex(desserts)]}`
-    } else if (document.getElementById("entire-meal")) {
+    } else if (document.getElementById("entire-meal").checked) {
         changeDisplay()
         resultFood.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} for dessert!`
     }
+
 }

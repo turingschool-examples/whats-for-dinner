@@ -71,5 +71,8 @@ function generateRandomFood() {
     } else if (document.getElementById("dessert").checked) {
         changeDisplay()
         resultFood.innerText = `${desserts[getRandomIndex(desserts)]}`
+    } else if (document.getElementById("entire-meal")) {
+        changeDisplay()
+        resultFood.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} for dessert!`
     }
 }

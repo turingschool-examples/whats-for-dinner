@@ -7,24 +7,39 @@
     <main>
       <header>
         <h1>What's for Dinner?</h1>
-        <button>ADD A RECIPE</button>
+        <button class="add-recipe-button">ADD A RECIPE</button>
       </header>
+      <div class="two-boxes">
       <section class="receipe-form">
-        <h2>What are you looking for?</h2>
-        <form>
-          <input type="radio" id="side" name="dish" value="side">
-          <label for="side">Side</label>
-          <input type="radio" id="main-dish" name="dish" value="main-dish">
-          <label for="main-dish">Main Dish</label>
-          <input type="radio" id="dessert" name="dish" value="dessert">
-          <label for="dessert">Dessert</label>
-          <input type="radio" id="entire-meal" name="dish" value="entire-meal">
-          <label for="entire-meal">Entire Meal</label>
-        <button>LET'S COOK!</button>
+        <div class="receipe-box">
+          <h2>What are you looking for?</h2>
+          <form>
+            <div class="radio">
+              <span class="radio-button-wrapper">
+                <input type="radio" id="side" name="dish" value="side">
+                <label for="side">Side</label>
+              </span>
+              <span class="radio-button-wrapper">
+                <input type="radio" id="main-dish" name="dish" value="main-dish">
+                <label for="main-dish">Main Dish</label>
+              </span>
+              <span class="radio-button-wrapper">
+                <input type="radio" id="dessert" name="dish" value="dessert">
+                <label for="dessert">Dessert</label>
+              </span>
+              <span class="radio-button-wrapper">
+                <input type="radio" id="entire-meal" name="dish" value="entire-meal">
+                <label for="entire-meal">Entire Meal</label>
+              </span>
+            </div>
+          <button class="cook-button">LET'S COOK!</button>
+          </form>
+        </div>
       </section>
       <section class="view-dish">
         <img src="./assets/cookpot.svg">
       </section>
+      </div>
     </main>
     <script type="text/javascript" src="main.js"></script>
   </body>

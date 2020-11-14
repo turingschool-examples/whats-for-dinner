@@ -8,3 +8,84 @@ red - #ee5253
 
 */
 
+body, html {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url(./assets/burger-friends.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-left: 3%;
+}
+
+header {
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-recipe-button {
+  background-color: rgb(225, 225, 225);
+  border-radius: 5px;
+  width: 114px;
+  height: 30px;
+  margin-right: 1%;
+}
+
+h2 {
+  margin-left: 10%;
+}
+
+.two-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.receipe-form {
+  height: 450px;
+  width: 550px;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.receipe-box {
+  margin-top: 10%;
+  padding: 5%;
+}
+
+.view-dish {
+  height: 450px;
+  width: 550px;
+  background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 20%;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.radio-button-wrapper {
+  padding-bottom: 5%;
+}
+
+.cook-button {
+  background-color: #0fb9b1;
+  border-radius: 5px;
+  width: 30%;
+  margin-left: 10%;
+  padding: 1%;
+  margin-top: 5%
+}

@@ -61,9 +61,12 @@ button.add-recipe {
     background: rgba(225, 225, 225, .9);
 }
 
-.choice-list,
-.choice-result {
+.choice-list {
     padding: 50px;
+}
+
+.choice-result {
+    padding: 40px;
 }
 
 .question {
@@ -90,7 +93,9 @@ button.add-recipe {
 
 .cookpot {
     width: 140px;
-    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cook-button {

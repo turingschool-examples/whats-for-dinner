@@ -1,6 +1,5 @@
 body {
   background-image: url("./assets/burger-friends.jpg");
-  background-position: center center;
   background-size: cover;
 }
 nav .whats-for-dinner {
@@ -8,9 +7,10 @@ nav .whats-for-dinner {
   top: 0px;
   left:0px;
   width: 100%;
-  padding: 10px;
+  padding: 27px;
   background-color: #0fb9b1;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
   margin-block-start: 0px;
 }
 

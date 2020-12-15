@@ -3,6 +3,16 @@ body {
   background-position: center center;
   background-size: cover;
 }
+nav .whats-for-dinner {
+  position: fixed;
+  top: 0px;
+  left:0px;
+  width: 100%;
+  padding: 10px;
+  background-color: #0fb9b1;
+  font-family: Roboto, sans-serif;
+  margin-block-start: 0px;
+}
 
 
 /* font-family: 'Roboto', sans-serif;

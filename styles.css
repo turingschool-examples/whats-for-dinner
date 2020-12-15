@@ -41,6 +41,15 @@ button.add-recipe {
     margin: 0 auto;
 }
 
+.question {
+    margin-bottom: 20px;
+}
+
+.choice {
+    font-size: 1.3rem;
+    line-height: 2.5;
+}
+
 .left-frame {
     font-weight: bold;
 }
@@ -57,5 +66,15 @@ button.add-recipe {
 .cookpot {
     width: 80px;
     margin: 0 auto;
+}
+
+.cook-button {
+    margin-top: 10px;
+    background: #0fb9b1;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
 }
 

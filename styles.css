@@ -154,6 +154,22 @@ h3 {
     margin: 0 auto;
 }
 
+.heart {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.heart,
+.fas,
+.fa-heart {
+    color: grey;
+}
+
+i.fa-heart::after {
+    color: red;
+}
+
 /*  Footer  */
 footer {
     width: 100%;

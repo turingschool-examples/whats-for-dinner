@@ -6,6 +6,7 @@ var addNewSelector = document.querySelector('input.add-new-recipe');
 var addRecipeButton = document.querySelector('button.add-recipe');
 var loginButton = document.querySelector('input.user-login-button');
 var recipeContainer = document.getElementById('recipesContainer');
+var heartSelector = document.querySelector('i.fa-heart');
 
 loginButton.addEventListener("click", function(e) {
   e.preventDefault();
@@ -18,7 +19,7 @@ loginButton.addEventListener("click", function(e) {
     document.getElementById('authContainer').classList.add('hidden');
     document.querySelector('.welcome').innerHTML = `Welcome, ${userName}!`
   } else {
-    alert("You must enter a name to enter the site.")
+    alert("You must enter a name to enter the site.");
   }
 
 })
@@ -67,15 +68,19 @@ function getMeal(currentChoice, inputMeal = null) {
     }
   }
 
-
   imgSelector.classList.add('hidden');
 
   resultSelector.innerHTML = `
+      <span class="heart">
+        <i class="fas fa-heart"></i>
+      </span>
+      
       <article id="suggestion">
         <p class="suggestion-text">You should totally make: </p>
         <h3>${randomMeal}</h3>
       </article>
     `
+  addFavorites();
 }
 
 function randomGenerator(arr) {
@@ -103,4 +108,11 @@ addNewSelector.addEventListener("click", function(e) {
   alert("Success! Your new recipe has been added to the database!");
 
 })
+
+function addFavorites() {
+  heartSelector.addEventListener("click", function(e) {
+    e.preventDefault();
+    heartSelector.style.color = 'red';
+  })
+}
 

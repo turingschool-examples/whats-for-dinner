@@ -2,14 +2,23 @@
 var choiceSelector = document.querySelector('input.cook-button');
 var resultSelector = document.querySelector('.result');
 var imgSelector = document.querySelector('img#cookpot');
-var addNewSelector = document.querySelector('input.add-new-recipe')
+var addNewSelector = document.querySelector('input.add-new-recipe');
+var addRecipeButton = document.querySelector('button.add-recipe');
 
 choiceSelector.addEventListener("click", function(e) {
   e.preventDefault();
-
   var currentChoice = document.querySelector('input[name="choice"]:checked').value;
 
-  getMeal(currentChoice)
+  getMeal(currentChoice);
+});
+
+window.addEventListener("load", function() {
+  document.querySelector('footer').classList.add('hidden');
+})
+
+addRecipeButton.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector('footer').classList.toggle('hidden');
 })
 
 function getMeal(currentChoice) {
@@ -65,7 +74,6 @@ addNewSelector.addEventListener("click", function(e) {
   document.getElementById('add-new').reset();
 
   alert("Success! Your new recipe has been added to the database!");
-
 
 })
 

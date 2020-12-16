@@ -4,26 +4,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1>What's for dinner</h1>
-    </header>
-    <section class="yourChoice">
-      <title>What are you looking for?</title>
-      <ul>
-        <li class="choice" type="radio">Side</li>
-        <li class="choice" type="radio">Main Dish</li>
-        <li class="choice" type="radio">Dessert</li>
-        <li class="choice" type="radio">Entire Meal</li>
-        <li class="input" type="button">LET"S COOK!</li>
-      </ul>
+    <section class="header">
+      <h2>What's for Dinner?</h2>
     </section>
-    <section class="suggestion">
-      <svg></svg>
-      <h1>You should make:<h1>
-    <!-- </section>\for future use -->
-    <!-- <section class="savedVeiw">
-    </section> -->
-  <script src="./src/data.js"></script>
+    <div class="boxContainer">
+        <section class="boxes">
+          <h1>What are you looking for?<sup>*</sup></h1>
+          <form class="choiceButtons">
+            <input type="radio" id="side" name="meal" value="side">
+            <label for="side">Side</label>
+            <br>
+            <br>
+            <input type="radio" id="main" name="meal" value="main">
+            <label for="main">Main Dish</label>
+            <br>
+            <br>
+            <input type="radio" id="dessert" name="meal" value="dessert">
+            <label for="dessert">Dessert</label>
+            <br>
+            <br>
+            <input type="radio" id="entire" name="meal" value="entire">
+            <label for="entire">Entire Meal</label>
+            <br>
+            <br>
+          </form>
+        </section>
+        <section class="boxes">
+          <svg></svg>
+          <h2>You should make:<h2>
+          </section>
+    </div>
+        <!-- <section class="savedVeiw">
+        </section> -->
+
+  <script src="./src/foods.js"></script>
   <script src="./src/main.js"></script>
   </body>
   <script type="text/javascript" src="main.js"></script>

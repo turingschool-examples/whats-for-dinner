@@ -21,25 +21,32 @@ addRecipeButton.addEventListener("click", function(e) {
   document.querySelector('footer').classList.toggle('hidden');
 })
 
-function getMeal(currentChoice) {
-  var mealList = currentChoice + "s"
+function getMeal(currentChoice, inputMeal = null) {
+  var mealList = currentChoice + "s";
   var randomMeal;
 
-  if (mealList === "sides") {
-    randomMeal = randomGenerator(sides);
-  } else if (mealList === "mains") {
-    randomMeal = randomGenerator(mains);
-  } else if (mealList === "desserts") {
-    randomMeal = randomGenerator(desserts);
-  } else if (mealList === "meals") {
-    var randomSide = randomGenerator(sides);
-    var randomMain = randomGenerator(mains);
-    var randomDessert = randomGenerator(desserts);
-
+  if (inputMeal !== null) {
     randomMeal = `
+      ${inputMeal}
+    `
+  } else {
+    if (mealList === "sides") {
+      randomMeal = randomGenerator(sides);
+    } else if (mealList === "mains") {
+      randomMeal = randomGenerator(mains);
+    } else if (mealList === "desserts") {
+      randomMeal = randomGenerator(desserts);
+    } else if (mealList === "meals") {
+      var randomSide = randomGenerator(sides);
+      var randomMain = randomGenerator(mains);
+      var randomDessert = randomGenerator(desserts);
+
+      randomMeal = `
       ${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!
     `
+    }
   }
+
 
   imgSelector.classList.add('hidden');
 
@@ -61,18 +68,16 @@ addNewSelector.addEventListener("click", function(e) {
   var userInputType = document.querySelector('#user-recipe-type');
   var userInputName = document.querySelector('#user-recipe-name');
 
-  console.log(userInputType.value)
-
-  if (userInputType.value === 'sides') {
+  if (userInputType.value === 'side') {
     sides.push(userInputName.value);
-  } else if (userInputType.value === 'mains') {
+  } else if (userInputType.value === 'main') {
     mains.push(userInputName.value);
-  } else if (userInputType.value === 'desserts') {
+  } else if (userInputType.value === 'dessert') {
     desserts.push(userInputName.value);
   }
 
+  getMeal(userInputType.value, userInputName.value)
   document.getElementById('add-new').reset();
-
   alert("Success! Your new recipe has been added to the database!");
 
 })

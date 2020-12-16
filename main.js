@@ -7,8 +7,18 @@ var letsCookButton = document.querySelector('.lets-cook');
 letsCookButton.addEventListener('click', suggestRecipe);
 
 function suggestRecipe() {
+  if (sideRadio.checked) {
+    pickRandomRecipe(sides)
+  } else if (mainDishRadio.checked) {
+    pickRandomRecipe(mains)
+  } else if(dessertRadio.checked){
+    pickRandomRecipe(desserts)
+  }
 
-  console.log(sideRadio, mainDish, dessertRadio);
-  console.log(sideRadio.checked)
   event.preventDefault();
+}
+
+function pickRandomRecipe(type) {
+  var randomArrayIndex = Math.floor(Math.random()*type.length)
+  var suggestedMeal = type[randomArrayIndex]
 }

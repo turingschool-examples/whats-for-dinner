@@ -58,15 +58,15 @@ button.add-recipe {
 .frame {
     font-size: 2rem;
     width: 600px;
+    height: 400px;
     background: rgba(225, 225, 225, .9);
 }
 
-.choice-list {
+.choice-list,
+.result {
     padding: 50px;
-}
-
-.choice-result {
-    padding: 40px;
+    margin: 0 auto;
+    height: 100%;
 }
 
 .question {
@@ -82,16 +82,11 @@ button.add-recipe {
     font-weight: bold;
 }
 
-.right-frame {
-    padding: 50px;
-    margin: 0 auto;
-}
-
 .star {
     color: red;
 }
 
-.cookpot {
+#cookpot {
     width: 140px;
     display: block;
     margin-left: auto;
@@ -106,6 +101,21 @@ button.add-recipe {
     border-radius: 5px;
     border: none;
     font-size: 1.1rem;
+}
+
+#suggestion {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+h3 {
+    margin: 0 10px;
+}
+
+.suggestion-text {
+    font-size: 1.2rem;
+    margin: 0 auto;
 }
 
 

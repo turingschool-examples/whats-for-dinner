@@ -2,6 +2,7 @@
 var choiceSelector = document.querySelector('input.cook-button');
 var resultSelector = document.querySelector('.result');
 var imgSelector = document.querySelector('img#cookpot');
+var addNewSelector = document.querySelector('input.add-new-recipe')
 
 choiceSelector.addEventListener("click", function(e) {
   e.preventDefault();
@@ -44,4 +45,14 @@ function getMeal(currentChoice) {
 function randomGenerator(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
+addNewSelector.addEventListener("click", function(e) {
+  e.preventDefault();
+
+  var userInputType = document.querySelector('user-recipe-type');
+  var userInputName = document.querySelector('user-recipe-name');
+
+  console.log(userInputType.value)
+  console.log(userInputName.value)
+})
 

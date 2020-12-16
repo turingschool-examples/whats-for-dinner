@@ -4,6 +4,24 @@ var resultSelector = document.querySelector('.result');
 var imgSelector = document.querySelector('img#cookpot');
 var addNewSelector = document.querySelector('input.add-new-recipe');
 var addRecipeButton = document.querySelector('button.add-recipe');
+var loginButton = document.querySelector('input.user-login-button');
+var recipeContainer = document.getElementById('recipesContainer');
+
+loginButton.addEventListener("click", function(e) {
+  e.preventDefault();
+
+  var userName = document.getElementById('user-name').value
+
+  if (userName) {
+    recipeContainer.classList.toggle('hidden');
+    addRecipeButton.classList.toggle('hidden');
+    document.getElementById('authContainer').classList.add('hidden');
+    document.querySelector('.welcome').innerHTML = `Welcome, ${userName}!`
+  } else {
+    alert("You must enter a name to enter the site.")
+  }
+
+})
 
 choiceSelector.addEventListener("click", function(e) {
   e.preventDefault();
@@ -14,6 +32,8 @@ choiceSelector.addEventListener("click", function(e) {
 
 window.addEventListener("load", function() {
   document.querySelector('footer').classList.add('hidden');
+  recipeContainer.classList.add('hidden');
+  addRecipeButton.classList.add('hidden');
 })
 
 addRecipeButton.addEventListener("click", function(e) {

@@ -12,17 +12,25 @@
         <button class="nav-button">ADD A RECIPE</button>
       </nav>
     </header>
-    <div class="container">
-      <div class="box1">
-        <!-- unordered list of selectable options -->
-        <!-- lets cook button -->
-      </div>
-      <div class="box2">
+    <main class="container">
+      <article class="box1">
+        <h2>What are you looking for?<span class="required">*</span></h2>
+        <input class="side radio" type="radio" name="meal" value="side">
+        <label for="side">Side</label><br>
+        <input class="mainDish radio" type="radio" name="meal" value="mainDish">
+        <label for="mainDish">Main Dish</label><br>
+        <input class="dessert radio" type="radio" name="meal" value="dessert">
+        <label for="dessert">Dessert</label><br>
+        <input class="entireMeal radio" type="radio" name="meal" value="entireMeal">
+        <label for="entireMeal">Entire Meal</label><br>
+        <button class="cook-button">Let's Cook!</button>
+      </article>
+      <article class="box2">
         <img class="icon" src="./assets/cookpot.svg" alt="CookPot Icon"/>
-          <!-- meals displayed -->
-          <!-- clear button -->
-      </div>
-    </div>
+        <!-- meals displayed -->
+        <!-- clear button -->
+      </article>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

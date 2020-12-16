@@ -74,6 +74,8 @@ addNewSelector.addEventListener("click", function(e) {
     mains.push(userInputName.value);
   } else if (userInputType.value === 'dessert') {
     desserts.push(userInputName.value);
+  } else {
+    return alert("Please pick a valid category. Thx.");
   }
 
   getMeal(userInputType.value, userInputName.value)

@@ -21,7 +21,7 @@ function getMeal(currentChoice) {
     randomMeal = randomGenerator(mains);
   } else if (mealList === "desserts") {
     randomMeal = randomGenerator(desserts);
-  } else if (mealList == "meal") {
+  } else if (mealList === "meals") {
     var randomSide = randomGenerator(sides);
     var randomMain = randomGenerator(mains);
     var randomDessert = randomGenerator(desserts);
@@ -29,7 +29,6 @@ function getMeal(currentChoice) {
     randomMeal = `
       ${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!
     `
-    // get one of each and display each on a line of it's own with connecting text
   }
 
   imgSelector.classList.add('hidden');

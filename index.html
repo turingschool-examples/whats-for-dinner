@@ -5,23 +5,31 @@
   </head>
   <body>
     <article class="heading">
-      <h1>What's For Dinner</h1>
+      <h1>What's For Dinner?</h1>
       <button class="recipe-button">ADD A RECIPE</button>
     </article>
     <div>
-      <section class="box">
-        <h1>What are you looking for?*</h1>
-        <form>
-        <input type="radio" name="meal-choice" id="side-dish-select" value="side">
-        <label for="side-dish-select">Side Dish</label>
-        <input type="radio" name="meal-choice" id="main-dish-select">
-        <label for="main-dish-select">Main Dish</label>
-        <input type="radio" name="meal-choice" id="dessert-dish-select">
-        <label for="dessert-dish-select">Dessert</label>
-        <input type="radio" name="meal-choice" id="entire-dish-select">
-        <label for="entire-dish-select">Entire Meal</label>
-        <button id="lets-cook-button">Let's Cook!</button>
-        </form>
+      <section class="box" id="entry-box">
+        <h1>What are you looking for?<span>*</span></h1>
+          <form>
+            <div>
+              <input type="radio" name="meal-choice" id="side-dish-select" value="side">
+              <label for="side-dish-select">Side Dish</label>
+            </div>
+            <div>
+              <input type="radio" name="meal-choice" id="main-dish-select">
+              <label for="main-dish-select">Main Dish</label>
+            </div>
+            <div>
+              <input type="radio" name="meal-choice" id="dessert-dish-select">
+              <label for="dessert-dish-select">Dessert</label>
+            </div>
+            <div>
+              <input type="radio" name="meal-choice" id="entire-dish-select">
+              <label for="entire-dish-select">Entire Meal</label>
+            </div>
+            <button id="lets-cook-button">Let's Cook!</button>
+          </form>
       </section>
       <section class="box" id="results-box">
         <img src="assets/cookpot.svg" alt="Cook Pot">

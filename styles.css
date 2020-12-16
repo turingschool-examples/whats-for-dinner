@@ -18,23 +18,58 @@ red - #ee5253
 .box {
    
     background-color: rgba(225, 225, 225, .9);
-    border: 10px solid pink;
     height: 300px;
     width: 300px;
 }
 
 .heading {
+    display: flex;
+    justify-content: space-between;
     background-color: #0fb9b1;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
 }
 
-div {
+.recipe-button {
+    height: 40px;
+    width:  110px;
+
+}
+
+#entry-box {
+    position: absolute;
+    top: 300px;
+    left: 150px;
+    border: solid pink 5px;
+}
+
+#results-box {
+    position: absolute;
+    top: 300px;
+    right: 150px;
     display: flex;
+    justify-content: center;
+}
+
+
+h1 {
+    border: solid gold 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url('assets/burger-friends.jpg');
     background-size: cover;
+    margin: 0px;
+
+}
+
+span {
+    color:#ee5253;
 }

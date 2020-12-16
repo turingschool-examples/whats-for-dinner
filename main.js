@@ -7,6 +7,7 @@ choiceSelector.addEventListener("click", function(e) {
   var choice = document.querySelector('input[name="choice"]:checked').value;
 
   // hand that choice to a helper function
+  getMeal()
 })
 
 function getMeal(choice) {
@@ -22,5 +23,9 @@ function getMeal(choice) {
     return alert("You must make a choice of the type of meal you want.")
   }
 
+}
+
+function randomGenerator(arr) {
+  return Math.floor(Math.random() * arr.length);
 }
 

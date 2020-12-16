@@ -48,6 +48,15 @@ section {
   width: 125px;
   height: auto;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 43px;
+}
+form div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 
 

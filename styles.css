@@ -3,6 +3,7 @@ body {
   background-size: cover;
   background-position: center;
   margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 .whats-for-dinner {
   display: block;
@@ -12,7 +13,7 @@ body {
   width: 100%;
   padding: 27px;
   background-color: #0fb9b1;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   font-size: 30px;
   margin-block-start: 0px;
   margin-block-end: 10px;
@@ -47,6 +48,7 @@ section {
   width: 125px;
   height: auto;
 }
+
 
 
 /* font-family: 'Roboto', sans-serif;

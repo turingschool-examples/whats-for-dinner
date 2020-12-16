@@ -6,5 +6,9 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
-*/
+ */
 
+ img {
+   width: 1500px;
+   height: 1000px;
+ }

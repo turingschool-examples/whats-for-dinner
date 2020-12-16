@@ -5,33 +5,36 @@ var imgSelector = document.querySelector('img#cookpot');
 
 choiceSelector.addEventListener("click", function(e) {
   e.preventDefault();
-  console.log(e)
 
-  var choice = document.querySelector('input[name="choice"]:checked').value;
-  console.log(choice);
-  //
-  // // hand that choice to a helper function
-  // getMeal(choice)
+  var currentChoice = document.querySelector('input[name="choice"]:checked').value;
+
+  getMeal(currentChoice)
 })
 
-function getMeal(choice) {
-  if (choice === "side") {
-    var randomSide = randomGenerator(sides)
-    imgSelector.classList.add('hidden')
-    resultSelector.innerHTML = `You should totally make: <h3>${randomSide}`
-  } else if (choice === "main-dish") {
+function getMeal(currentChoice) {
+  var mealList = currentChoice + "s"
+  var randomMeal;
+  // var randomEntireMeal;
 
-  } else if (choice === "dessert") {
-
-  } else if (choice === "entire-meal") {
-
-  } else {
-    return alert("You must make a choice of the type of meal you want.")
+  if (mealList === "sides") {
+    randomMeal = randomGenerator(sides);
+  } else if (mealList === "mains") {
+    randomMeal = randomGenerator(mains);
+  } else if (mealList === "desserts") {
+    randomMeal = randomGenerator(desserts);
+  // } else if (mealList == meals) {
+  //   randomEntireMeal = randomGenerator(sides);
   }
 
+  imgSelector.classList.add('hidden');
+  console.log(randomMeal)
+  resultSelector.innerHTML = `
+      <h1>${currentChoice}</h1>
+      You should totally make: 
+      <h3>${randomMeal}</h3>`
 }
 
 function randomGenerator(arr) {
-  return Math.floor(Math.random() * arr.length);
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 

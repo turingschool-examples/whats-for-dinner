@@ -1,3 +1,74 @@
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
+  background-position: top right;
+  font-family: 'Roboto', sans-serif;
+}
+.whats-for-dinner {
+  display: block;
+  position: fixed;
+  top: 0px;
+  left:0px;
+  width: 100%;
+  padding: 20px;
+  background-color: #0fb9b1;
+  font-size: 30px;
+  margin-block-start: 0px;
+  margin-block-end: 10px;
+}
+section {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+#what-type-of-meal {
+  background-color: rgba(225, 225, 225, .9);
+  width: 526px;
+  min-width: 450px;
+  height: 422px;
+  margin-left: 122px;
+  margin-right: 85px;
+  margin-top: 122px;
+}
+#result {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(225, 225, 225, .9);
+  width: 526px;
+  min-width: 450px;
+  height: 422px;
+  margin-left: 85px;
+  margin-right: 122px;
+  margin-top: 122px;
+}
+.cooking-pot {
+  background-position: center;
+  width: 125px;
+  height: auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 43px;
+  font-size: 30px;
+  font-weight: bold;
+}
+form div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.lets-cook {
+  background-color: #0fb9b1;
+  border: 0px;
+  border-radius: 5px;
+  width: 200px;
+  height: 38px;
+  margin-top: 15px;
+}
+
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
@@ -7,4 +78,3 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-

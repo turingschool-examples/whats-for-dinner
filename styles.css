@@ -7,4 +7,98 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+html {
+  background-image: url("assets/burger-friends.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar {
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.nav-button {
+  float: right;
+  margin: 8px;
+  padding: 6px;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+}
+
+h2 {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.required {
+  color: red;
+}
+
+#title {
+  margin: 10px;
+  font-size: 20;
+}
+
+.container {
+  width: auto;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.box1 {
+  background-color: rgba(225, 225, 225, .9);
+  float: left;
+  width: 30%;
+  height: 300px;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 40px;
+}
+
+.radio {
+  margin: 10px;
+}
+.cook-button {
+  background-color: #0fb9b1;
+  float: left;
+  width: 175px;
+  height: 30px;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.box2 {
+  background-color: rgba(225, 225, 225, .9);
+  float: left;
+  width: 30%;
+  height: 300px;
+  /* margin-left: 10px; */
+  margin-top: 10px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  height: 110px;
+  width: 110px;
+}

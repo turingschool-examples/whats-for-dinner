@@ -14,7 +14,6 @@ choiceSelector.addEventListener("click", function(e) {
 function getMeal(currentChoice) {
   var mealList = currentChoice + "s"
   var randomMeal;
-  // var randomEntireMeal;
 
   if (mealList === "sides") {
     randomMeal = randomGenerator(sides);
@@ -22,8 +21,15 @@ function getMeal(currentChoice) {
     randomMeal = randomGenerator(mains);
   } else if (mealList === "desserts") {
     randomMeal = randomGenerator(desserts);
-  // } else if (mealList == meals) {
-  //   randomEntireMeal = randomGenerator(sides);
+  } else if (mealList == "meal") {
+    var randomSide = randomGenerator(sides);
+    var randomMain = randomGenerator(mains);
+    var randomDessert = randomGenerator(desserts);
+
+    randomMeal = `
+      ${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!
+    `
+    // get one of each and display each on a line of it's own with connecting text
   }
 
   imgSelector.classList.add('hidden');

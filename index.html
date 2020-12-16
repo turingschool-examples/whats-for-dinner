@@ -4,7 +4,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <article class="heading">
+      <h1>What's For Dinner</h1>
+      <button class="recipe-button">ADD A RECIPE</button>
+    </article>
+    <div>
+      <section class="box">
+        <h1>What are you looking for?*</h1>
+        <form>
+        <input type="radio" name="meal-choice" id="side-dish-select" value="side">
+        <label for="side-dish-select">Side Dish</label>
+        <input type="radio" name="meal-choice" id="main-dish-select">
+        <label for="main-dish-select">Main Dish</label>
+        <input type="radio" name="meal-choice" id="dessert-dish-select">
+        <label for="dessert-dish-select">Dessert</label>
+        <input type="radio" name="meal-choice" id="entire-dish-select">
+        <label for="entire-dish-select">Entire Meal</label>
+        <button id="lets-cook-button">Let's Cook!</button>
+        </form>
+      </section>
+      <section class="box" id="results-box">
+        <img src="assets/cookpot.svg" alt="Cook Pot">
+      </section>
+    <div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

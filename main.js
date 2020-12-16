@@ -109,20 +109,22 @@ addNewSelector.addEventListener("click", function(e) {
 })
 
 function addFavorites(favoritedMeal) {
-  console.log("THIS IS IN ADD FAVRT: ", favoritedMeal)
+
   document.querySelector('i.fa-heart').addEventListener("click", function(e) {
     e.preventDefault();
     document.querySelector('i.fa-heart').classList.toggle('red');
-    favoriteRecipes.push(favoritedMeal);
+
+    if (document.querySelector('i.fa-heart').classList.contains('red')) {
+      favoriteRecipes.push(favoritedMeal);
+    } else if (!document.querySelector('i.fa-heart').classList.contains('red') && favoriteRecipes.includes(favoritedMeal)) {
+      var indexOfMeal = favoriteRecipes.indexOf(favoritedMeal)
+      favoriteRecipes.splice(indexOfMeal, 1);
+    }
+
     console.log("favorite recipies should be array: ", favoriteRecipes)
   });
 
-  // if (document.querySelector('i.fa-heart').classList.contains('red')) {
-  //   favoriteRecipes.push(favoritedMeal);
-  // } else if (!document.querySelector('i.fa-heart').classList.contains('red') && favoriteRecipes.includes(favoritedMeal)) {
-  //   var indexOfMeal = favoriteRecipes.indexOf(favoritedMeal)
-  //   favoriteRecipes.splice(indexOfMeal, 1);
-  // }
+
 
 }
 

@@ -103,4 +103,19 @@ button.add-recipe {
     font-size: 1.1rem;
 }
 
+#suggestion {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+h3 {
+    margin: 0 10px;
+}
+
+.suggestion-text {
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
 

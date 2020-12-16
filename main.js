@@ -29,9 +29,11 @@ function getMeal(currentChoice) {
   imgSelector.classList.add('hidden');
   console.log(randomMeal)
   resultSelector.innerHTML = `
-      <h1>${currentChoice}</h1>
-      You should totally make: 
-      <h3>${randomMeal}</h3>`
+      <article id="suggestion">
+        <p class="suggestion-text">You should totally make: </p>
+        <h3>${randomMeal}</h3>
+      </article>
+    `
 }
 
 function randomGenerator(arr) {

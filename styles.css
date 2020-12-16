@@ -1,7 +1,23 @@
-*{
+* {
   font-family: sans-serif;
 }
 
+html {
+  background: url(./assets/burger-friends.jpg)
+  no-repeat center fixed;
+  width: 1680px;
+  height: 900px;
+
+  overflow: hidden;
+  z-index: -2;
+  background-size: cover;
+}
+img {
+  width: 1680px;
+  height: 900px;
+  z-index: -2;
+  //background-size: cover;
+}
 .roboto {
   font-family: Roboto;
 }
@@ -9,7 +25,7 @@
 .header {
   font-size: 45px;
   background-color : #0fb9b1;
-  padding: 18px;
+  padding: 1px;
 
 
 
@@ -17,12 +33,7 @@
 
 
 
-img {
-  width:1680;
-  height:1680;
 
-
-}
 
 .window {
   background.color : rgba(225, 225, 225, .9);

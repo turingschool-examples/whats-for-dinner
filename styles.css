@@ -1,44 +1,95 @@
 * {
-  font-family: sans-serif;
+  font-family: Roboto;
 }
 
 html {
   background: url(./assets/burger-friends.jpg)
-  no-repeat center fixed;
+  no-repeat top fixed;
   width: 1680px;
   height: 900px;
-
   overflow: hidden;
   z-index: -2;
   background-size: cover;
 }
+
+.header {
+  font-family: sans-serif;
+  font-size: 31px;
+  background-color : #0fb9b1;
+  padding: 18px;
+
+}
+
+section {
+  height: 350px;
+  width: 440px;
+  background: rgba(225, 225, 225, .9);
+  opacity: 79%;
+  margin: 80px;
+  float: left;
+
+}
+
+.prompt {
+  font-size: 29px;
+  padding: 13px;
+  opacity: 100%;
+}
+
+.prompt span {
+  color: #ee5253;
+  opacity: 100%
+}
+
+.cook-button {
+  background-color: #0fb9b1;
+  font-family: Roboto;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 7px;
+  margin-left: 13px;
+
+}
+.pot {
+  height: 138px;
+  width: 138px;
+  opacity: 100%;
+  margin-top: 90px;
+  margin-right: 156px;
+  margin-left: 156px;
+}
+
+.radio {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  margin-left: 8px;
+}
+
+.pizza {
+  font-size:111px;
+  font-family: Chalkduster;
+transform: scaleY(1.5);
+  transform: rotate(-31deg);
+margin-bottom: 336px;
+margin-top: 0;
+
+
+
+}
+
+
+
+
+
+
+
+
 img {
   width: 1680px;
   height: 900px;
   z-index: -2;
-  //background-size: cover;
 }
-.roboto {
-  font-family: Roboto;
-}
-
-.header {
-  font-size: 45px;
-  background-color : #0fb9b1;
-  padding: 1px;
-
-
-
-}
-
-
-
-
-
-.window {
-  background.color : rgba(225, 225, 225, .9);
-}
-
 
 /* font-family: 'Roboto', sans-serif;
 

@@ -166,7 +166,7 @@ h3 {
     color: grey;
 }
 
-i.fa-heart::after {
+.red {
     color: red;
 }
 

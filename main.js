@@ -6,7 +6,7 @@ var addNewSelector = document.querySelector('input.add-new-recipe');
 var addRecipeButton = document.querySelector('button.add-recipe');
 var loginButton = document.querySelector('input.user-login-button');
 var recipeContainer = document.getElementById('recipesContainer');
-var heartSelector = document.querySelector('i.fa-heart');
+var favoriteRecipes = [];
 
 loginButton.addEventListener("click", function(e) {
   e.preventDefault();
@@ -74,13 +74,12 @@ function getMeal(currentChoice, inputMeal = null) {
       <span class="heart">
         <i class="fas fa-heart"></i>
       </span>
-      
       <article id="suggestion">
         <p class="suggestion-text">You should totally make: </p>
         <h3>${randomMeal}</h3>
       </article>
     `
-  addFavorites();
+  addFavorites(randomMeal); // pass this meal to favorites if heart is clicked
 }
 
 function randomGenerator(arr) {
@@ -109,10 +108,27 @@ addNewSelector.addEventListener("click", function(e) {
 
 })
 
-function addFavorites() {
-  heartSelector.addEventListener("click", function(e) {
+function addFavorites(favoritedMeal) {
+  console.log("THIS IS IN ADD FAVRT: ", favoritedMeal)
+  document.querySelector('i.fa-heart').addEventListener("click", function(e) {
     e.preventDefault();
-    heartSelector.style.color = 'red';
-  })
+    document.querySelector('i.fa-heart').classList.toggle('red');
+    favoriteRecipes.push(favoritedMeal);
+    console.log("favorite recipies should be array: ", favoriteRecipes)
+  });
+
+  // if (document.querySelector('i.fa-heart').classList.contains('red')) {
+  //   favoriteRecipes.push(favoritedMeal);
+  // } else if (!document.querySelector('i.fa-heart').classList.contains('red') && favoriteRecipes.includes(favoritedMeal)) {
+  //   var indexOfMeal = favoriteRecipes.indexOf(favoritedMeal)
+  //   favoriteRecipes.splice(indexOfMeal, 1);
+  // }
+
 }
+
+// function updateFavorites(favoritedMeal) {
+//   console.log("favorited meal: ", favoritedMeal);
+//   console.log("favorite recipes: ", favoriteRecipes)
+//
+// }
 

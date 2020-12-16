@@ -8,16 +8,20 @@ red - #ee5253
 
  */
 
+body {
+  margin: 0;
+}
+
 .navBar {
   font-family: 'Roboto', sans-serif;
   font-size:21px;
   font-weight: bold;
   padding: 18px;
-  width: 1500px;
+  width: 1406;
   background-color: #0fb9b1;
 }
 
  img {
-   width: 1500px;
-   height: 1000px;
+   width: 1442;
+   height: 765;
  }

@@ -2,7 +2,7 @@ body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
 }
-nav .whats-for-dinner {
+.whats-for-dinner {
   position: fixed;
   top: 0px;
   left:0px;

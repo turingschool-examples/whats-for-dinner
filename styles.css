@@ -42,6 +42,7 @@ section {
   margin-top: 122px;
 }
 .cooking-pot {
+  display: block;
   background-position: center;
   width: 125px;
   height: auto;

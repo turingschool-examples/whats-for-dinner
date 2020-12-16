@@ -32,7 +32,7 @@ function getMeal(currentChoice) {
   }
 
   imgSelector.classList.add('hidden');
-  console.log(randomMeal)
+
   resultSelector.innerHTML = `
       <article id="suggestion">
         <p class="suggestion-text">You should totally make: </p>

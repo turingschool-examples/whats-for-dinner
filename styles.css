@@ -32,6 +32,8 @@ section {
   margin-top: 122px;
 }
 #result {
+  display: flex;
+  justify-content: center;
   background-color: rgba(225, 225, 225, .9);
   width: 526px;
   min-width: 450px;
@@ -39,6 +41,11 @@ section {
   margin-left: 85px;
   margin-right: 122px;
   margin-top: 122px;
+}
+.cooking-pot {
+  background-position: center;
+  width: 125px;
+  height: auto;
 }
 
 

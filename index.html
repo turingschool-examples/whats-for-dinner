@@ -54,7 +54,13 @@
 
       <form id="add-new">
         <label for="user-recipe-type" >Recipe Type: </label>
-        <input id="user-recipe-type" type="text" >
+<!--        <input type="text" >-->
+        <select id="user-recipe-type" >
+          <option selected="selected"></option>
+          <option value="sides">Sides</option>
+          <option value="mains">Mains</option>
+          <option value="desserts">Desserts</option>
+        </select>
 
         <label for="user-recipe-name" >Recipe Name: </label>
         <input id="user-recipe-name" type="text" >

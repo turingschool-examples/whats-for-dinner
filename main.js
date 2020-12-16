@@ -49,10 +49,23 @@ function randomGenerator(arr) {
 addNewSelector.addEventListener("click", function(e) {
   e.preventDefault();
 
-  var userInputType = document.querySelector('user-recipe-type');
-  var userInputName = document.querySelector('user-recipe-name');
+  var userInputType = document.querySelector('#user-recipe-type');
+  var userInputName = document.querySelector('#user-recipe-name');
 
   console.log(userInputType.value)
-  console.log(userInputName.value)
+
+  if (userInputType.value === 'sides') {
+    sides.push(userInputName.value);
+  } else if (userInputType.value === 'mains') {
+    mains.push(userInputName.value);
+  } else if (userInputType.value === 'desserts') {
+    desserts.push(userInputName.value);
+  }
+
+  document.getElementById('add-new').reset();
+
+  alert("Success! Your new recipe has been added to the database!");
+
+
 })
 

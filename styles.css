@@ -1,8 +1,11 @@
 body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
+  background-position: center;
+  margin-top: 20px;
 }
 .whats-for-dinner {
+  display: block;
   position: fixed;
   top: 0px;
   left:0px;
@@ -12,6 +15,30 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   margin-block-start: 0px;
+  margin-block-end: 10px;
+}
+section {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+#what-type-of-meal {
+  background-color: rgba(225, 225, 225, .9);
+  width: 526px;
+  min-width: 450px;
+  height: 422px;
+  margin-left: 122px;
+  margin-right: 85px;
+  margin-top: 122px;
+}
+#result {
+  background-color: rgba(225, 225, 225, .9);
+  width: 526px;
+  min-width: 450px;
+  height: 422px;
+  margin-left: 85px;
+  margin-right: 122px;
+  margin-top: 122px;
 }
 
 

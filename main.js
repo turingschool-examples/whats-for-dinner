@@ -18,6 +18,7 @@ var sides = [
     'Paella',
     'Poutine'
 ];
+
 var mains = [
     'Coq A Vin',
     'Chicken Chasseur',
@@ -62,27 +63,35 @@ function getMyDish(event) {
 
 function getSideItem(randomSide) {
     generatedRecipe.innerHTML = `
-        <p>Since you're snackin' light, a bit of </p> 
-        <p>${randomSide}</p>
-        <p> sounds good.</>
+        <p class="result-words">Since you're snackin' light, a bit of </p> 
+        <p class="result-meal">${randomSide}</p>
+        <p class="result-words"> sounds good.</>
         `
 }
 
 function getMainItem(randomMain) {
-    generatedRecipe.innerHTML = `Seems like you've got the munchies. You need <span>${randomMain}</span> for dinner.`
+    generatedRecipe.innerHTML = `
+        <p class="result-words"> Seems like you've got the munchies. You need</p>
+        <p class="result-meal">${randomMain}</p> 
+        <p class="result-words"> for dinner.</p>
+        `
 }
 
 function getDessertItem(randomDessert) {
-    generatedRecipe.innerHTML = `Time to satisfy your sweet tooth. How about <span>${randomDessert}</span> for dessert?`
+    generatedRecipe.innerHTML = `
+        <p class="result-words"> Time to satisfy your sweet tooth. How about</p> 
+        <p class="result-meal">${randomDessert}</p> 
+        <p class="result-words"> for dessert? </p>
+        `
 }
 
 function getEntireItem(randomSide, randomMain, randomDessert) {
     generatedRecipe.innerHTML = `
-        ${randomSide}
-        <br>
-        ${randomMain}
-        <br>
-        ${randomDessert}
+        <p class="result-words"> Three courses? Sounds like a special occasion.</p>
+        <p class="result-meal">${randomSide}, ${randomMain}</p>
+        <p class="result-words">&</p>
+        <p class="result-meal">${randomDessert}</p>
+        <p class="result-words">should really do the trick.</p>
         `
 }
 

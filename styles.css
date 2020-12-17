@@ -20,6 +20,7 @@ red - #ee5253
     background-color: rgba(225, 225, 225, .9);
     height: 300px;
     width: 300px;
+    padding: 10px 5px 10px 5px;
 }
 
 .heading {
@@ -44,6 +45,7 @@ red - #ee5253
 }
 
 #results-box {
+    flex-direction: column;
     position: absolute;
     top: 300px;
     right: 150px;
@@ -55,6 +57,23 @@ red - #ee5253
     display: none;
 }
 
+.result-words {
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+}
+
+.result-meal {
+    text-align: center;
+    font-size: 18px;
+    color: #ee5253;
+}
+
+img {
+    padding-top: 50px;
+    height: 100px;
+    width: 100px;
+}
 form {
     display: flex;
     flex-direction: column;

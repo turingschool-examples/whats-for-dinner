@@ -14,12 +14,14 @@ var loginPage = document.querySelector('.login-page');
 var pageTitle = document.querySelector('.title');
 var nameError = document.querySelector('.name-error');
 var backToLogin = document.querySelector('#back-to-login');
-var mealError = document.querySelector('.meal-error')
+var mealError = document.querySelector('.meal-error');
+var saveBtn = document.querySelector('.save');
 
 letsCookBtn.addEventListener('click', getMyDish);
 clearBtn.addEventListener('click', startOver)
 entryBtn.addEventListener('click', enterSite)
 backToLogin.addEventListener('click', loginPageAppears)
+saveBtn.addEventListener('click', saveThatShit)
 
 var sides = [
     'Pickled Herring',
@@ -50,9 +52,20 @@ var desserts = [
     'Creme Brulee'
 ];
 
+var savedSides = [];
+var savedMains = [];
+var savedDesserts = [];
+var savedEntires = [];
+
 function loginPageAppears() {
     loginPage.classList.toggle('hidden');
     recipePage.classList.toggle('hidden');
+}
+
+function showRecipe() {
+    potPicture.classList.toggle('hidden');
+    clearBtn.classList.toggle('hidden');
+    saveBtn.classList.toggle('hidden');
 }
 
 function forgotName() { 
@@ -63,9 +76,19 @@ function forgotName() {
  function forgotMeal() {
     mealError.classList.remove('hidden');
      setTimeout(() => mealError.classList.add('hidden'), 2500);
+     showRecipe();
  }
 
-function enterSite(event) {
+//  function saveThatShit(){
+//      if (sideRadioBtn.checked) {
+//          savedSides.push(randomSide)
+//      } else if (mainRadioBtn.checked) {
+//          savedMains.push(randomMain)
+//      } else if (dessertRadioBtn.checked) {
+//          savedDesserts.push(randomDessert)
+//     } 
+
+function enterSite() {
     if (userNameBox.value === "") {
         forgotName()
         return;
@@ -74,14 +97,8 @@ function enterSite(event) {
     pageTitle.innerHTML = `What's For Dinner, ${userNameBox.value}?`
 }
 
-function showRecipe() {
-    potPicture.classList.toggle('hidden');
-    clearBtn.classList.toggle('hidden');
-}
-
 function getMyDish(event) {
-    event.preventDefault();
-    
+    event.preventDefault();    
     var randomSide = sides[getRandomIndex(sides)];
     var randomMain = mains[getRandomIndex(mains)];
     var randomDessert = desserts[getRandomIndex(desserts)];
@@ -134,8 +151,7 @@ function getEntireItem(randomSide, randomMain, randomDessert) {
 }
 
 function startOver() {
-    potPicture.classList.remove('hidden');
-    clearBtn.classList.add('hidden');
+    showRecipe()
     generatedRecipe.innerHTML = "";
     sideRadioBtn.checked = false;
     mainRadioBtn.checked = false;

@@ -1,6 +1,8 @@
 body {
+  flex-wrap: wrap;
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: top right;
   font-family: 'Roboto', sans-serif;
 }
@@ -18,7 +20,8 @@ body {
 }
 section {
   display: flex;
-  /* justify-content: center;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0; */
 }
 #what-type-of-meal {
@@ -102,6 +105,22 @@ form div {
   border-radius: 5px;
   margin: 34px;
   align-self: flex-end;
+}
+#error-box {
+  justify-content: center;
+  align-items: center
+}
+#error-message {
+  position: fixed;
+  color: white;
+  height: 400px;
+  width: 400px;
+  background-color: #903132;
+  z-index: 50
+}
+#error-box {
+  justify-content: center;
+  align-items: center
 }
 
 

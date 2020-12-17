@@ -7,6 +7,7 @@ var cookingPotImg= document.querySelector('.cooking-pot');
 // var radioButtons = document.getElementsByName("dish");
 var youShouldCook= document.querySelector('.what-to-cook');
 var suggestedDish= document.querySelector('#suggested-dish');
+var errorMessage = document.querySelector('.error-message')
 
 letsCookButton.addEventListener('click', suggestRecipe);
 
@@ -23,6 +24,10 @@ function suggestRecipe() {
     mealToMake.innerText = pickRandomRecipe(desserts) + "!";
   };
 };
+
+function showErrorMessage() {
+ // errorMessage.style.display = 'flex'
+}
 
 function changeView() {
   youShouldCook.style.display = 'flex';

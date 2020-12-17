@@ -38,6 +38,14 @@ nav {
     color: white;
 }
 
+.faves-nav {
+    width: auto;
+}
+
+i.fa-heart-square {
+
+}
+
 /*  Add recipe button  */
 button.add-recipe {
     float: right;
@@ -81,6 +89,13 @@ button.add-recipe {
 label, input {
     line-height: 1.5;
     margin: 0 10px;
+}
+
+#user-name {
+    padding: 5px;
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
 }
 
 /*  Main body after login  */
@@ -154,6 +169,22 @@ h3 {
     margin: 0 auto;
 }
 
+.heart {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.heart,
+.fas,
+.fa-heart {
+    color: grey;
+}
+
+.red {
+    color: red;
+}
+
 /*  Footer  */
 footer {
     width: 100%;
@@ -198,4 +229,17 @@ label, input {
     display: none;
 }
 
+.btn {
+    margin-top: 10px;
+    background: #0fb9b1;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+}
 
+p#remove-instruc {
+    font-size: 0.5em;
+    margin: 5px;
+}

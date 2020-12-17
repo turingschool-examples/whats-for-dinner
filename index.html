@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8a691ad39a.js" crossorigin="anonymous"></script>
     <title>What's for Dinner?</title>
   </head>
   <body>
@@ -13,7 +14,10 @@
       <div class="clearfix">
         <span class="brand">What's for Dinner?</span> <span class="welcome brand"></span>
 
-        <button class="add-recipe">ADD A RECIPE</button>
+        <div>
+          <button class="add-recipe">ADD A RECIPE</button>
+        </div>
+
       </div>
     </nav>
 
@@ -28,7 +32,7 @@
       </article>
     </section>
 
-    <section id="recipesContainer" class="container">
+    <section id="recipes-container" class="container">
       <article class="frame left-frame">
         <form action="" class="choice-list">
           <span class="question">What are you looking for?<sup class="star">*</sup></span>
@@ -57,8 +61,16 @@
       <article class="frame right-frame">
         <div class="result">
           <img id="cookpot" src="./assets/cookpot.svg">
-
         </div>
+      </article>
+    </section>
+
+    <section id="faves-container" class="container hidden">
+
+      <article class="frame">
+        <p id="remove-instruc">Double click or un-heart to remove an item from your list of faves.</p>
+        <ul id="faves-list">
+        </ul>
       </article>
     </section>
 

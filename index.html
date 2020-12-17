@@ -15,25 +15,31 @@
             <form>
               <p class="what-meal">What are you looking for?</p>
               <div>
-                <input type="radio" id="side" value="side">
+                <input type="radio" name="dish" id="side" value="side" unchecked>
                 <label for="side">Side</label>
               </div>
               <div>
-                <input type="radio" id="mainDish" value="main-dish">
+                <input type="radio" name="dish" id="mainDish" value="main" unchecked>
                 <label for="mainDish">Main Dish</label>
               </div>
               <div>
-                <input type="radio" id="dessert" value="dessert">
+                <input type="radio" name="dish" id="dessert" value="dessert" unchecked>
                 <label for="dessert">Dessert</label>
               </div>
               <button class="lets-cook">LET'S COOK!</Button>
             <form>
         </article>
         <article class="box" id="result">
-            <img class="cooking-pot" src="./assets/cookpot.svg"/>
+          <div class="what-to-cook">
+            <h1 id="you-should-cook"><em>You should make:</em></h1>
+            <h1 id="suggested-dish"></h1>
+            <button id="clear-section">Clear</button>
+          </div>
+          <img class="cooking-pot" src="./assets/cookpot.svg"/>
         </article>
       </section>
     </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script src="recipes.js"></script>
 </html>

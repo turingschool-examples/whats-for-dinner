@@ -106,22 +106,20 @@ form div {
   margin: 34px;
   align-self: flex-end;
 }
-#error-box {
-  justify-content: center;
-  align-items: center
-}
 #error-message {
-  position: fixed;
-  color: white;
-  height: 400px;
-  width: 400px;
-  background-color: #903132;
-  z-index: 50
-}
-#error-box {
   justify-content: center;
-  align-items: center
+  position: fixed;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  height: 200px;
+  width: 325px;
+  background: linear-gradient(#e66465, #903132);
+  z-index: 50;
+  border-radius: 5px;
+  border: .25px solid #95a5a6;
 }
+
 
 
 /* font-family: 'Roboto', sans-serif;

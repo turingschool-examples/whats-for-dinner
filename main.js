@@ -154,22 +154,29 @@ function displayFavorites() {
 }
 
 favoritesContainer.addEventListener('dblclick', function(e) {
-    var deleteSlug = e.target.getAttribute('data-slug');
+  e.preventDefault();
+
+  var deleteSlug = e.target.getAttribute('data-slug');
   console.log(deleteSlug)
-    // var str = deleteSlug.split('-'); // split by hyphen to create a string of words
-  // var result = '';  // empty string to fill
-  //
-  // for (let i = 0; i < str; i++) {
-  //   var word = str[i]; // each word in string
-  //   str[i] = word.charAt(0).toUpperCase() + word.slice(1);  // capitalize first letter then add it to a slice of remainder
-  // }
-  //
-  // result = str.join(' ');
-  //
-  // for (let i = 0; i < favoriteRecipes.length; i++) {
-  //   if (favoriteRecipes[i] === result) {
-  //     favoriteRecipes.splice(i, 1)
-  //   }
-  // }
+
+  makeTitle(deleteSlug)
+
+  for (let i = 0; i < favoriteRecipes.length; i++) {
+    if (favoriteRecipes[i] === result) {
+      favoriteRecipes.splice(i, 1)
+    }
+  }
 })
+
+function makeTitle(slug) {
+  var words = slug.split('-'); // split slug into array of words
+
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i]; // each word in the array
+    words[i] = word.charAt(0).toUpperCase() + word.slice(1); // uppercase 1st, attach the rest
+  }
+
+  console.log(words.join(' '))
+  return words.join(' ');
+}
 

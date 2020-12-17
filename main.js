@@ -7,7 +7,7 @@ var addRecipeButton = document.querySelector('button.add-recipe');
 var loginButton = document.querySelector('input.user-login-button');
 var recipeContainer = document.getElementById('recipes-container');
 var favoritesContainer = document.getElementById('faves-list');
-// var showFavoritesButton = document.getElementById('favorites');
+// var showFavoritesButton = document.getElementById('favorites'); // for the heart in the navbar??
 var favoriteRecipes = [];
 
 loginButton.addEventListener("click", function(e) {
@@ -145,6 +145,11 @@ function checkFavorites() {
 function displayFavorites() {
   var content = "";
 
+  if (favoriteRecipes.length < 1) {
+    document.getElementById('faves-container').classList.add('hidden');
+    resetPot();
+  }
+
   for (let i = 0; i < favoriteRecipes.length; i++) {
     var slug = favoriteRecipes[i].toLowerCase().split(' ').join('-');
     console.log(slug);
@@ -159,13 +164,15 @@ favoritesContainer.addEventListener('dblclick', function(e) {
   var deleteSlug = e.target.getAttribute('data-slug');
   console.log(deleteSlug)
 
-  makeTitle(deleteSlug)
+  var result = makeTitle(deleteSlug)
 
   for (let i = 0; i < favoriteRecipes.length; i++) {
     if (favoriteRecipes[i] === result) {
       favoriteRecipes.splice(i, 1)
     }
   }
+
+  displayFavorites();
 })
 
 function makeTitle(slug) {
@@ -178,5 +185,11 @@ function makeTitle(slug) {
 
   console.log(words.join(' '))
   return words.join(' ');
+}
+
+function resetPot() {
+  document.querySelector('.choice-list').reset();
+  resultSelector.innerHTML = `<img id="cookpot" src="./assets/cookpot.svg">`;
+
 }
 

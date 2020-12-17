@@ -13,21 +13,21 @@ letsCookButton.addEventListener('click', suggestRecipe);
 function suggestRecipe() {
   event.preventDefault();
   if (sideRadio.checked) {
-    youShouldCook.style.display = 'flex';
-    cookingPotImg.style.display = 'none';
+    changeView();
     mealToMake.innerText =  pickRandomRecipe(sides) + "!";
   } else if (mainDishRadio.checked) {
-    youShouldCook.style.display = 'flex';
-    cookingPotImg.style.display = 'none';
+    changeView();
     mealToMake.innerText = pickRandomRecipe(mains) + "!";
   } else if(dessertRadio.checked){
-    youShouldCook.style.display = 'flex';
-    cookingPotImg.style.display = 'none';
+    changeView();
     mealToMake.innerText = pickRandomRecipe(desserts) + "!";
   };
 };
 
-
+function changeView() {
+  youShouldCook.style.display = 'flex';
+  cookingPotImg.style.display = 'none';
+}
 
 function pickRandomRecipe(type) {
   var randomArrayIndex = Math.floor(Math.random()*type.length);

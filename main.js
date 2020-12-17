@@ -19,15 +19,15 @@ loginButton.addEventListener("click", function(e) {
     recipeContainer.classList.toggle('hidden');
     addRecipeButton.classList.toggle('hidden');
     document.getElementById('authContainer').classList.add('hidden');
-    document.querySelector('.welcome').innerHTML = `Welcome, ${userName}!`
+    document.querySelector('.welcome').innerHTML = `Welcome, ${userName}!`;
   } else {
     alert("You must enter a name to enter the site.");
   }
-
 })
 
 choiceSelector.addEventListener("click", function(e) {
   e.preventDefault();
+
   var currentChoice = document.querySelector('input[name="choice"]:checked').value;
 
   getMeal(currentChoice);
@@ -41,6 +41,7 @@ window.addEventListener("load", function() {
 
 addRecipeButton.addEventListener("click", function(e) {
   e.preventDefault();
+
   document.querySelector('footer').classList.toggle('hidden');
 })
 
@@ -105,7 +106,7 @@ addNewSelector.addEventListener("click", function(e) {
     return alert("Please pick a valid category. Thx.");
   }
 
-  getMeal(userInputType.value, userInputName.value)
+  getMeal(userInputType.value, userInputName.value);
   document.getElementById('add-new').reset();
   alert("Success! Your new recipe has been added to the database!");
 });
@@ -162,18 +163,15 @@ favoritesContainer.addEventListener('dblclick', function(e) {
   e.preventDefault();
 
   var deleteSlug = e.target.getAttribute('data-slug');
-  console.log(deleteSlug)
-
-  var result = makeTitle(deleteSlug)
+  var result = makeTitle(deleteSlug);
 
   for (let i = 0; i < favoriteRecipes.length; i++) {
     if (favoriteRecipes[i] === result) {
-      favoriteRecipes.splice(i, 1)
+      favoriteRecipes.splice(i, 1);
     }
   }
-
   displayFavorites();
-})
+});
 
 function makeTitle(slug) {
   var words = slug.split('-'); // split slug into array of words
@@ -183,11 +181,10 @@ function makeTitle(slug) {
     words[i] = word.charAt(0).toUpperCase() + word.slice(1); // uppercase 1st, attach the rest
   }
   return words.join(' ');
-}
+};
 
 function resetPot() {
   document.querySelector('.choice-list').reset();
   resultSelector.innerHTML = `<img id="cookpot" src="./assets/cookpot.svg">`;
-
-}
+};
 

@@ -1,31 +1,45 @@
 // Create variables targetting the relevant DOM elements here.
 var cookPotImg = document.querySelector('#svg-cookpot');
-var choice = document.querySelector(".choice-buttons");
+// var choice = document.querySelectorAll("input");
 var cook = document.querySelector('.cook');
 var shouldMake = document.querySelector("#you-make");
 var clearButton = document.querySelector("#clear");
-var foodDish = document.querySelector("#change-dish");
-var foodMain = document.querySelector("#change-main");
-
-
+var dishState = document.querySelector("#dish-state");
+var mainState = document.querySelector("#main-state");
+var yourPick = "";
 // Add your event listeners here
-cook.addEventListener("click", generateDish);
+cook.addEventListener("click", changetoDish);
 
 // Create your event handlers and other functions here.
-function unhide(element) {
-  element.classList.remove('hidden');
+function unhideDish(element) {
+  element.classList.remove('hidden-dish');
 }
 
-function hide(element) {
-  element.classList.add('hidden');
+function unhideMain(element) {
+  element.classList.remove('hidden-main');
+}
+
+function hideMain(element) {
+  element.classList.add('hidden-main');
 }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function generateDish() {
+function checkRadioButtons() {
+  var choice = document.querySelectorAll("input");
+  for (var i = 0; i < choice.length; i++) {
+    if (choice[i].checked === true) {
+      yourPick = choice[i].value;
+    }
+  }
+}
+
+function changetoDish() {
   event.preventDefault();
-  hide(cookPotImg);
-  
+  hideMain(cookPotImg);
+  unhideDish(dishState);
+  checkRadioButtons();
+  console.log(yourPick);
 }

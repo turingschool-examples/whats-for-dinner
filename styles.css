@@ -12,6 +12,11 @@ html {
   background-size: cover;
 }
 
+body {
+  margin: 0px;
+
+}
+
 .header {
   font-family: sans-serif;
   font-size: 31px;
@@ -25,8 +30,8 @@ section {
   width: 440px;
   background: rgba(225, 225, 225, .9);
   opacity: 79%;
-  margin: 80px;
-  float: left;
+  display: inline-flex;
+
 
 }
 
@@ -66,17 +71,9 @@ section {
   margin-left: 8px;
 }
 
-.pizza {
-  font-size:111px;
-  font-family: Chalkduster;
-transform: scaleY(1.5);
-  transform: rotate(-31deg);
-margin-bottom: 336px;
-margin-top: 0;
 
 
 
-}
 
 
 

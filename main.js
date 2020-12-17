@@ -146,7 +146,30 @@ function displayFavorites() {
   var content = "";
 
   for (let i = 0; i < favoriteRecipes.length; i++) {
-    content += `<li>${favoriteRecipes[i]}</li>`
+    var slug = favoriteRecipes[i].toLowerCase().split(' ').join('-');
+    console.log(slug);
+    content += `<li data-slug="${slug}">${favoriteRecipes[i]}</li>`
   }
   return favoritesContainer.innerHTML = content;
 }
+
+favoritesContainer.addEventListener('dblclick', function(e) {
+    var deleteSlug = e.target.getAttribute('data-slug');
+  console.log(deleteSlug)
+    // var str = deleteSlug.split('-'); // split by hyphen to create a string of words
+  // var result = '';  // empty string to fill
+  //
+  // for (let i = 0; i < str; i++) {
+  //   var word = str[i]; // each word in string
+  //   str[i] = word.charAt(0).toUpperCase() + word.slice(1);  // capitalize first letter then add it to a slice of remainder
+  // }
+  //
+  // result = str.join(' ');
+  //
+  // for (let i = 0; i < favoriteRecipes.length; i++) {
+  //   if (favoriteRecipes[i] === result) {
+  //     favoriteRecipes.splice(i, 1)
+  //   }
+  // }
+})
+

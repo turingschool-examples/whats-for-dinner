@@ -30,17 +30,6 @@ section {
   margin-right: 85px;
   margin-top: 122px;
 }
-#result {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(225, 225, 225, .9);
-  width: 526px;
-  min-width: 450px;
-  height: 422px;
-  margin-left: 85px;
-  margin-right: 122px;
-  margin-top: 122px;
-}
 .cooking-pot {
   display: block;
   background-position: center;
@@ -67,7 +56,34 @@ form div {
   height: 38px;
   margin-top: 15px;
 }
-
+.what-to-cook {
+  display: none;
+  flex-flow: column;
+}
+#result {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(225, 225, 225, .9);
+  width: 526px;
+  min-width: 450px;
+  height: 422px;
+  margin-left: 85px;
+  margin-right: 122px;
+  margin-top: 122px;
+}
+#you-should-cook {
+  margin-top: 150px;
+  margin-bottom: 0px
+  font-size: 20px;
+}
+#suggested-dish {
+  height: 150px;
+  width: 450px;
+  margin-top: 0px;
+  padding: 10px;
+  font-size: 3vw;
+}
 
 
 /* font-family: 'Roboto', sans-serif;

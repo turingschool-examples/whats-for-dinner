@@ -182,8 +182,6 @@ function makeTitle(slug) {
     var word = words[i]; // each word in the array
     words[i] = word.charAt(0).toUpperCase() + word.slice(1); // uppercase 1st, attach the rest
   }
-
-  console.log(words.join(' '))
   return words.join(' ');
 }
 

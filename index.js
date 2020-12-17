@@ -88,32 +88,36 @@ function showMyMeal() {
   }
 };
 
-function getRandomSide(cody) {
+function getRandomSide(side) {
   rightBoxContent.innerHTML = `
   <h1 class="right-box-upper-message">You should make:<h1>
-  <h2 class="right-box-main-message">${cody}</h2>`
+  <h2 class="right-box-main-message">${side}</h2>
+  <button class="clear-button" type="button">CLEAR</button>`
 };
 
-function getRandomMainDish(randomMainDish) {
+function getRandomMainDish(main) {
   rightBoxContent.innerHTML = `
     <h1 class="right-box-upper-message">You should make:<h1>
-    <h2 class="right-box-main-message">${randomMainDish}</h2>`
+    <h2 class="right-box-main-message">${main}</h2>
+    <button class="clear-button" type="button">CLEAR</button>`
 };
 
-function getRandomDessert(randomDessert) {
+function getRandomDessert(dessert) {
   rightBoxContent.innerHTML = `
   <h1 class="right-box-upper-message">You should make:<h1>
-  <h2 class="right-box-main-message">${randomDessert}</h2>`
+  <h2 class="right-box-main-message">${dessert}</h2>
+  <button class="clear-button" type="button">CLEAR</button>`
+  
 };
 
 function clearAll() {
 
+sideRadioButton.checked = false; 
+mainDishRadioButton = false;
+dessertRadioButton = false; 
 };
 
 
 
 
 
-// sideRadioButton.checked = false; 
-// mainDishRadioButton = false;
-// dessertRadioButton = false; 

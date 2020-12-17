@@ -51,9 +51,8 @@ red - #ee5253
     justify-content: center;
 }
 
-
-h1 {
-    border: solid gold 5px;
+.hidden {
+    display: none;
 }
 
 form {

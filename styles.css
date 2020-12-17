@@ -19,6 +19,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .nav-bar {
   background-color: #0fb9b1;
   display: flex;
@@ -101,4 +105,9 @@ h2 {
 .icon {
   height: 110px;
   width: 110px;
+}
+
+.suggested-meal{
+  font-size: 3vw;
+  text-align: center;
 }

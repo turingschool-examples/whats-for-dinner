@@ -239,4 +239,7 @@ label, input {
     font-size: 1.1rem;
 }
 
-
+p#remove-instruc {
+    font-size: 0.5em;
+    margin: 5px;
+}

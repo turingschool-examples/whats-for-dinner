@@ -4,17 +4,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <form class="login-page">
+    <section class="login-page">
       <div class="login-extras">
         <h1>Welcome, Connoisseur!</h1>
         <h2>Tell us who you are:</h2>
-        <input type="text" name="user-name" id="user-name-box">
+        <input type="text" name="user-name" id="user-name-box" placeholder="Your Name Goes Here">
         <button class="entry-button">I'm Ready. Take me to the food!</button>
+        <p class="popup hidden">Looks like you forgot your name. Let's try this again.</p>
       </div>
-    </form>
+    </section>
     <section class="recipe-page hidden">
       <article class="heading">
-        <h1>What's For Dinner?</h1>
+        <h1 class="title"></h1>
+        <button class="login-button">BACK TO LOGIN</button>
         <button class="recipe-button">ADD A RECIPE</button>
       </article>
       <div>

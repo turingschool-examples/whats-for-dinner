@@ -34,6 +34,12 @@ button{
     border: solid #0fb9b1 15px;
 }
 
+.popup {
+    height: fit-content;
+    width: fit-content;
+    margin: 75px;
+    background-color: #0fb9b1;
+}
 .box {
    
     background-color: rgba(225, 225, 225, .9);
@@ -53,6 +59,7 @@ button{
 .recipe-button {
     height: 40px;
     width:  110px;
+    background-color: rgba(225, 225, 225, .9);
 
 }
 

@@ -11,6 +11,8 @@ var entryBtn = document.querySelector('.entry-button');
 var userNameBox = document.querySelector('#user-name-box');
 var recipePage = document.querySelector('.recipe-page');
 var loginPage = document.querySelector('.login-page');
+var pageTitle = document.querySelector('.title');
+var popUp = document.querySelector('.popup')
 
 letsCookBtn.addEventListener('click', getMyDish);
 clearBtn.addEventListener('click', startOver)
@@ -45,10 +47,20 @@ var desserts = [
     'Creme Brulee'
 ];
 
-function enterSite(event) {
-    event.preventDefault;
+function forgotName() { 
+    popUp.classList.remove('hidden');
+    setTimeout(() => popUp.classList.add('hidden'), 2500) 
+ }
+
+function enterSite() {
+    if (userNameBox.value === "") {
+        forgotName()
+        return;
+    }
+
     recipePage.classList.remove('hidden');
     loginPage.classList.add('hidden');
+    pageTitle.innerHTML = `What's For Dinner, ${userNameBox.value}?`
 }
 
 function getMyDish(event) {

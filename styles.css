@@ -36,7 +36,7 @@ nav {
 h1 {
     float: left;
     font-size: 3.5vh;
-    margin: 1.15% 1% 1% 1.5%;
+    margin: 1.2% 0% 1% 1.5%;
 }
 
 
@@ -53,7 +53,12 @@ section {
 }
 
 .addRecipeBtn {
+    font-size: 2vh;
+    padding: 1.5vh;
+    margin: 0.9% 1.5% 1% 0%;
     float: right;
+    border-radius: 6px;
+    border: 0px;
 }
 
 .letsCookBtn {

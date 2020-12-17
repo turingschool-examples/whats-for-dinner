@@ -4,43 +4,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <article class="heading">
-      <h1>What's For Dinner?</h1>
-      <button class="recipe-button">ADD A RECIPE</button>
-    </article>
-    <div>
-      <section class="box" id="entry-box">
-        <h1>What are you looking for?<span>*</span></h1>
-          <form>
-            <div>
-              <input type="radio" name="meal-choice" id="side-dish-select" value="side">
-              <label for="side-dish-select">Side Dish</label>
-            </div>
-            <div>
-              <input type="radio" name="meal-choice" id="main-dish-select">
-              <label for="main-dish-select">Main Dish</label>
-            </div>
-            <div>
-              <input type="radio" name="meal-choice" id="dessert-dish-select">
-              <label for="dessert-dish-select">Dessert</label>
-            </div>
-            <div>
-              <input type="radio" name="meal-choice" id="entire-dish-select">
-              <label for="entire-dish-select">Entire Meal</label>
-            </div>
-            <button id="lets-cook-button">Let's Cook!</button>
-          </form>
-      </section>
-      <section class="box" id="results-box">
-        <img class="pot-picture" src="assets/cookpot.svg" alt="Cook Pot">
-        <h1 class="generated-recipe"></h1>
-        <br>
-        <button class="clear-button user-choice hidden">No thanks, let's try again.</button>
-      </section>
-      <form class="user-recipe hidden">
-        <input type="text" name="user-creation" id="user-create">
-      </form>
-    <div>
+    <form class="login-page">
+      <div class="login-extras">
+        <h1>Welcome, Connoisseur!</h1>
+        <h2>Tell us who you are:</h2>
+        <input type="text" name="user-name" id="user-name-box">
+        <button class="entry-button">I'm Ready. Take me to the food!</button>
+      </div>
+    </form>
+    <section class="recipe-page hidden">
+      <article class="heading">
+        <h1>What's For Dinner?</h1>
+        <button class="recipe-button">ADD A RECIPE</button>
+      </article>
+      <div>
+        <section class="box" id="entry-box">
+          <h1>What are you looking for?<span>*</span></h1>
+            <form>
+              <div>
+                <input type="radio" name="meal-choice" id="side-dish-select" value="side">
+                <label for="side-dish-select">Side Dish</label>
+              </div>
+              <div>
+                <input type="radio" name="meal-choice" id="main-dish-select">
+                <label for="main-dish-select">Main Dish</label>
+              </div>
+              <div>
+                <input type="radio" name="meal-choice" id="dessert-dish-select">
+                <label for="dessert-dish-select">Dessert</label>
+              </div>
+              <div>
+                <input type="radio" name="meal-choice" id="entire-dish-select">
+                <label for="entire-dish-select">Entire Meal</label>
+              </div>
+              <button id="lets-cook-button">Let's Cook!</button>
+            </form>
+        </section>
+        <section class="box" id="results-box">
+          <img class="pot-picture" src="assets/cookpot.svg" alt="Cook Pot">
+          <h1 class="generated-recipe"></h1>
+          <br>
+          <button class="clear-button user-choice hidden">No thanks, let's try again.</button>
+        </section>
+      <div>
+    </section>    
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

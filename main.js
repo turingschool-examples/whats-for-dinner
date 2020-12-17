@@ -7,9 +7,14 @@ var resultsBox = document.querySelector('#results-box');
 var potPicture = document.querySelector('.pot-picture');
 var clearBtn = document.querySelector('.clear-button');
 var generatedRecipe = document.querySelector('.generated-recipe');
+var entryBtn = document.querySelector('.entry-button');
+var userNameBox = document.querySelector('#user-name-box');
+var recipePage = document.querySelector('.recipe-page');
+var loginPage = document.querySelector('.login-page');
 
 letsCookBtn.addEventListener('click', getMyDish);
 clearBtn.addEventListener('click', startOver)
+entryBtn.addEventListener('click', enterSite)
 
 var sides = [
     'Pickled Herring',
@@ -39,6 +44,12 @@ var desserts = [
     'Burbon Sea Salt Caramel',
     'Creme Brulee'
 ];
+
+function enterSite(event) {
+    event.preventDefault;
+    recipePage.classList.remove('hidden');
+    loginPage.classList.add('hidden');
+}
 
 function getMyDish(event) {
     event.preventDefault();

@@ -34,7 +34,7 @@ button{
     border: solid #0fb9b1 15px;
 }
 
-.popup {
+.error {
     height: fit-content;
     width: fit-content;
     margin: 75px;

@@ -10,13 +10,13 @@
         <h2>Tell us who you are:</h2>
         <input type="text" name="user-name" id="user-name-box" placeholder="Your Name Goes Here">
         <button class="entry-button">I'm Ready. Take me to the food!</button>
-        <p class="popup hidden">Looks like you forgot your name. Let's try this again.</p>
+        <p class="name-error error hidden">Looks like you forgot your name. Let's try this again.</p>
       </div>
     </section>
     <section class="recipe-page hidden">
       <article class="heading">
         <h1 class="title"></h1>
-        <button class="login-button">BACK TO LOGIN</button>
+        <button class="recipe-button" id="back-to-login">BACK TO LOGIN</button>
         <button class="recipe-button">ADD A RECIPE</button>
       </article>
       <div>
@@ -40,6 +40,7 @@
                 <label for="entire-dish-select">Entire Meal</label>
               </div>
               <button id="lets-cook-button">Let's Cook!</button>
+              <p class="meal-error error hidden">'Looks like you're missing a meal! What sounds good today?'.</p>
             </form>
         </section>
         <section class="box" id="results-box">

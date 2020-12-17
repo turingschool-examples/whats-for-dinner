@@ -12,11 +12,14 @@ var userNameBox = document.querySelector('#user-name-box');
 var recipePage = document.querySelector('.recipe-page');
 var loginPage = document.querySelector('.login-page');
 var pageTitle = document.querySelector('.title');
-var popUp = document.querySelector('.popup')
+var nameError = document.querySelector('.name-error');
+var backToLogin = document.querySelector('#back-to-login');
+var mealError = document.querySelector('.meal-error')
 
 letsCookBtn.addEventListener('click', getMyDish);
 clearBtn.addEventListener('click', startOver)
 entryBtn.addEventListener('click', enterSite)
+backToLogin.addEventListener('click', loginPageAppears)
 
 var sides = [
     'Pickled Herring',
@@ -47,30 +50,42 @@ var desserts = [
     'Creme Brulee'
 ];
 
+function loginPageAppears() {
+    loginPage.classList.toggle('hidden');
+    recipePage.classList.toggle('hidden');
+}
+
 function forgotName() { 
-    popUp.classList.remove('hidden');
-    setTimeout(() => popUp.classList.add('hidden'), 2500) 
+    nameError.classList.remove('hidden');
+    setTimeout(() => nameError.classList.add('hidden'), 2500);
  }
 
-function enterSite() {
+ function forgotMeal() {
+    mealError.classList.remove('hidden');
+     setTimeout(() => mealError.classList.add('hidden'), 2500);
+ }
+
+function enterSite(event) {
     if (userNameBox.value === "") {
         forgotName()
         return;
     }
-
-    recipePage.classList.remove('hidden');
-    loginPage.classList.add('hidden');
+    loginPageAppears()
     pageTitle.innerHTML = `What's For Dinner, ${userNameBox.value}?`
+}
+
+function showRecipe() {
+    potPicture.classList.toggle('hidden');
+    clearBtn.classList.toggle('hidden');
 }
 
 function getMyDish(event) {
     event.preventDefault();
-    potPicture.classList.add('hidden');
-    clearBtn.classList.remove('hidden');
+    
     var randomSide = sides[getRandomIndex(sides)];
     var randomMain = mains[getRandomIndex(mains)];
     var randomDessert = desserts[getRandomIndex(desserts)];
-    
+    showRecipe();
     if (sideRadioBtn.checked) {
         getSideItem(randomSide)
     } else if (mainRadioBtn.checked) {
@@ -80,7 +95,7 @@ function getMyDish(event) {
     } else if (entireRadioBtn.checked) {
        getEntireItem(randomSide, randomMain, randomDessert)
     } else if (sideRadioBtn.checked === false && mainRadioBtn.checked === false && dessertRadioBtn.checked === false && entireRadioBtn.checked === false) {
-        showErrorMessage()
+        forgotMeal();
     }
 }
 
@@ -117,13 +132,6 @@ function getEntireItem(randomSide, randomMain, randomDessert) {
         <p class="result-words">should really do the trick.</p>
         `
 }
-
-function showErrorMessage() {
-    clearBtn.classList.add('hidden');
-    potPicture.classList.remove('hidden');
-    return alert('Looks like you\'re missing a meal! What sounds good today?')
-}
-
 
 function startOver() {
     potPicture.classList.remove('hidden');

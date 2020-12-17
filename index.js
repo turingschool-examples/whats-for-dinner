@@ -1,13 +1,12 @@
 //Targets here---------------------------->
-// var sideRadioButton = document.querySelector('.side-dish');
-// var mainDishRadioButton = document.querySelector('.main-dish');
-// var dessertRadioButton = document.querySelector('.desert-dish');
+var sideRadioButton = document.querySelector('.side-dish');
+var mainDishRadioButton = document.querySelector('.main-dish');
+var dessertRadioButton = document.querySelector('.dessert-dish');
 // var entireMealRadioButton = document.querySelector('.entire-meal');
 
 var rightBoxContent = document.querySelector('.right-box-content');
 
 var letsCookButton = document.querySelector('.left-box-button');
-
 
 
 
@@ -77,31 +76,44 @@ function showMyMeal() {
   var randomSide = sides[getRandomIndex(sides)];
   var randomMainDish = mainDish[getRandomIndex(mainDish)];
   var randomDessert = dessert[getRandomIndex(dessert)];
-
-  getRandomSide(randomSide);
-  getRandomMainDish(randomMainDish);
-  getRandomDessert(randomDessert);
   
-
+  if (sideRadioButton.checked === true) {
+    getRandomSide(randomSide);
+  } 
+  if (mainDishRadioButton.checked === true) {
+     getRandomMainDish(randomMainDish);
+  } 
+  if (dessertRadioButton.checked === true) {
+    getRandomDessert(randomDessert) 
+  }
 };
 
-function getRandomSide(randomSide) {
-    rightBoxContent.innerHTML = `
-      <h1 class="right-box-upper-message">You should make:<h1>
-      <h2 class="right-box-main-message">${randomSide}</h2>
-    `
+function getRandomSide(cody) {
+  rightBoxContent.innerHTML = `
+  <h1 class="right-box-upper-message">You should make:<h1>
+  <h2 class="right-box-main-message">${cody}</h2>`
 };
 
 function getRandomMainDish(randomMainDish) {
   rightBoxContent.innerHTML = `
     <h1 class="right-box-upper-message">You should make:<h1>
-    <h2 class="right-box-main-message">${randomMainDish}</h2>
-  `
+    <h2 class="right-box-main-message">${randomMainDish}</h2>`
 };
 
 function getRandomDessert(randomDessert) {
   rightBoxContent.innerHTML = `
   <h1 class="right-box-upper-message">You should make:<h1>
-  <h2 class="right-box-main-message">${randomDessert}</h2>
-`
+  <h2 class="right-box-main-message">${randomDessert}</h2>`
 };
+
+function clearAll() {
+
+};
+
+
+
+
+
+// sideRadioButton.checked = false; 
+// mainDishRadioButton = false;
+// dessertRadioButton = false; 

@@ -26,6 +26,7 @@ h2 {
   margin-left: 10px;
   margin-right: 10px;
 }
+
 .boxes {
   margin: auto;
   height: 410px;
@@ -75,10 +76,35 @@ button {
   padding-bottom: 10px;
 }
 
+#you-make {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  margin-top: 120px;
+}
 
+#change-dish {
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
 
+#change-meal {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
 
-.hidden {
+.hidden-dish {
+  display: none;
+}
+
+.hidden-main {
   display: none;
 }
 

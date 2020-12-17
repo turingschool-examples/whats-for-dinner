@@ -4,14 +4,12 @@ var choice = document.querySelector(".choice-buttons");
 var cook = document.querySelector('.cook');
 var shouldMake = document.querySelector("#you-make");
 var clearButton = document.querySelector("#clear");
-var foodStatment = document.querySelector("#change-sentence");
-
+var foodDish = document.querySelector("#change-dish");
+var foodMain = document.querySelector("#change-main");
 
 
 // Add your event listeners here
-cook.addEventListener("click", generateMeal);
-
-
+cook.addEventListener("click", generateDish);
 
 // Create your event handlers and other functions here.
 function unhide(element) {
@@ -26,10 +24,8 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function generateMeal() {
+function generateDish() {
   event.preventDefault();
   hide(cookPotImg);
-  unhide(shouldMake);
-  unhide(clearButton);
-  unhide(foodStatment);
+  
 }

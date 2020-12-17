@@ -30,6 +30,11 @@ section {
   margin-right: 85px;
   margin-top: 122px;
 }
+.what-meal::after {
+  content:"*";
+  font-weight:bold;
+  color: #ee5253;
+}
 .cooking-pot {
   display: block;
   background-position: center;
@@ -74,7 +79,7 @@ form div {
 }
 #you-should-cook {
   margin-top: 150px;
-  margin-bottom: 0px
+  margin-bottom: 0px;
   font-size: 20px;
 }
 #suggested-dish {

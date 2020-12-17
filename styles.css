@@ -214,4 +214,14 @@ label, input {
     display: none;
 }
 
+.btn {
+    margin-top: 10px;
+    background: #0fb9b1;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+}
+
 

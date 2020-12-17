@@ -38,6 +38,14 @@ nav {
     color: white;
 }
 
+.faves-nav {
+    width: auto;
+}
+
+i.fa-heart-square {
+
+}
+
 /*  Add recipe button  */
 button.add-recipe {
     float: right;
@@ -81,6 +89,13 @@ button.add-recipe {
 label, input {
     line-height: 1.5;
     margin: 0 10px;
+}
+
+#user-name {
+    padding: 5px;
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
 }
 
 /*  Main body after login  */

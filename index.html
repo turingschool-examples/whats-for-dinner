@@ -14,7 +14,11 @@
       <div class="clearfix">
         <span class="brand">What's for Dinner?</span> <span class="welcome brand"></span>
 
-        <button class="add-recipe">ADD A RECIPE</button>
+        <div>
+          <i class="fas fa-heart-square"></i>
+          <button class="add-recipe">ADD A RECIPE</button>
+        </div>
+
       </div>
     </nav>
 
@@ -29,7 +33,7 @@
       </article>
     </section>
 
-    <section id="recipesContainer" class="container">
+    <section id="recipes-container" class="container">
       <article class="frame left-frame">
         <form action="" class="choice-list">
           <span class="question">What are you looking for?<sup class="star">*</sup></span>
@@ -58,12 +62,15 @@
       <article class="frame right-frame">
         <div class="result">
           <img id="cookpot" src="./assets/cookpot.svg">
-
-
         </div>
-
       </article>
+    </section>
 
+    <section id="faves-container" class="container hidden">
+      <article class="frame">
+        <ul id="faves-list">
+        </ul>
+      </article>
     </section>
 
     <footer>

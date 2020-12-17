@@ -5,7 +5,9 @@ var imgSelector = document.querySelector('img#cookpot');
 var addNewSelector = document.querySelector('input.add-new-recipe');
 var addRecipeButton = document.querySelector('button.add-recipe');
 var loginButton = document.querySelector('input.user-login-button');
-var recipeContainer = document.getElementById('recipesContainer');
+var recipeContainer = document.getElementById('recipes-container');
+var favoritesContainer = document.getElementById('faves-list');
+// var showFavoritesButton = document.getElementById('favorites');
 var favoriteRecipes = [];
 
 loginButton.addEventListener("click", function(e) {
@@ -77,7 +79,7 @@ function getMeal(currentChoice, inputMeal = null) {
       <article id="suggestion">
         <p class="suggestion-text">You should totally make: </p>
         <h3>${randomMeal}</h3>
-        <button id ="favorites" class="btn" disabled>Go to favorites</button>
+        <button id ="favorites" class="btn" disabled>Show my favorites</button>
       </article>
     `
   addFavorites(randomMeal);
@@ -106,8 +108,7 @@ addNewSelector.addEventListener("click", function(e) {
   getMeal(userInputType.value, userInputName.value)
   document.getElementById('add-new').reset();
   alert("Success! Your new recipe has been added to the database!");
-
-})
+});
 
 function addFavorites(favoritedMeal) {
   checkFavorites();
@@ -118,12 +119,16 @@ function addFavorites(favoritedMeal) {
 
     if (document.querySelector('i.fa-heart').classList.contains('red')) {
       favoriteRecipes.push(favoritedMeal);
-      checkFavorites();
     } else if (!document.querySelector('i.fa-heart').classList.contains('red') && favoriteRecipes.includes(favoritedMeal)) {
       var indexOfMeal = favoriteRecipes.indexOf(favoritedMeal);
       favoriteRecipes.splice(indexOfMeal, 1);
-      checkFavorites();
     }
+    checkFavorites();
+  });
+
+  document.getElementById('favorites').addEventListener('click', function() {
+    document.getElementById('faves-container').classList.toggle('hidden');
+    document.getElementById('favorites').setAttribute('disabled', 'true');
   });
 }
 
@@ -132,5 +137,16 @@ function checkFavorites() {
 
   if (favoriteRecipes.length > 0) {
     favoritesButtonSelector.removeAttribute('disabled');
+    displayFavorites();
   }
+
+}
+
+function displayFavorites() {
+  var content = "";
+
+  for (let i = 0; i < favoriteRecipes.length; i++) {
+    content += `<li>${favoriteRecipes[i]}</li>`
+  }
+  return favoritesContainer.innerHTML = content;
 }

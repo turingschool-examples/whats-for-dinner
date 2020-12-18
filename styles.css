@@ -88,7 +88,6 @@ button.add-recipe {
 #login-form
 label, input {
     line-height: 1.5;
-    margin: 0 10px;
 }
 
 #user-name {
@@ -201,7 +200,7 @@ footer {
 }
 
 .add-new-recipe {
-    margin: 0 10px;
+    margin: 10px;
     background: #0fb9b1;
     width: 100px;
     height: 30px;

@@ -3,90 +3,114 @@
 }
 
 html {
-  background: url(./assets/burger-friends.jpg)
-  no-repeat top fixed;
-  width: 1680px;
-  height: 900px;
-  overflow: hidden;
-  z-index: -2;
-  background-size: cover;
+  margin: 0px;
+  /* height: 100vh; */
+  background: url(./burger-friends.jpg) top center no-repeat;
+  /* no-repeat top fixed; */
 }
 
 body {
+  /* background-image: ('https://cdn.bitdegree.org/learn/birb-small.jpg?4d5e638chttps://cdn.bitdegree.org/learn/birb-small.jpg?4d5e638c') no-repeat; */
   margin: 0px;
+  background-size: cover;
+  width: 1024px; /*1680px*/
+  height: 756px; /*900px*/
+  /* overflow: hidden; */
+  /* z-index: -2; */
+  display:flex;
+  flex-direction: column;
 
 }
 
 .header {
+  height: 26px;
   font-family: sans-serif;
   font-size: 31px;
+  font-weight: 490;
   background-color : #0fb9b1;
-  padding: 18px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-container {
+  height: 730px;
+  width: 1024px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+section {           /* white sections */
+  height: 350px;
+  width: 440px;
+  background-color: rgba(225, 225, 225, .9);
+  opacity:70%;
+  margin: 7px;
+  display: flex;
+  justify-content: left
+}
+
+.box-two {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cook-button {
+  background-color: #0fb9b1;
+  width: 22vw;
+  font-family: Roboto;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 03px;
+  margin-top: 2vh;
+  padding: 0px;
 
 }
 
-section {
-  height: 350px;
-  width: 440px;
-  background: rgba(225, 225, 225, .9);
-  opacity: 79%;
-  display: inline-flex;
+.recipe {
+  width: 122px;
+  height: 22pxpx;
+  border-radius: 8px;
+}
 
+.pot {
+  height: 138px;
+  width: 138px;
+  opacity: 100%;
+
+}
+
+.radio {
+  font-size: 25px;
+  font-weight: normal;
+  padding-left: 1vw;
+
+}
+
+.radio > input{
+  margin-top: 2vh;
 
 }
 
 .prompt {
+  margin-left: 2vw;
+  margin-top: 3vw;
+  padding-bottom: 5vh;
   font-size: 29px;
-  padding: 13px;
+  font-weight: bold;
   opacity: 100%;
 }
 
 .prompt span {
   color: #ee5253;
   opacity: 100%
-}
-
-.cook-button {
-  background-color: #0fb9b1;
-  font-family: Roboto;
-  font-size: 25px;
-  text-align: center;
-  margin-top: 7px;
-  margin-left: 13px;
 
 }
-.pot {
-  height: 138px;
-  width: 138px;
-  opacity: 100%;
-  margin-top: 90px;
-  margin-right: 156px;
-  margin-left: 156px;
-}
 
-.radio {
-  font-size: 25px;
-  margin-top: 10px;
-  margin-bottom: 14px;
-  margin-left: 8px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-img {
-  width: 1680px;
-  height: 900px;
-  z-index: -2;
-}
 
 /* font-family: 'Roboto', sans-serif;
 

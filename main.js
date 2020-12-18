@@ -12,13 +12,14 @@ var favoriteRecipes = [];
 loginButton.addEventListener("click", function(e) {
   e.preventDefault();
 
-  var userName = document.getElementById('user-name').value
+  var userName = document.getElementById('user-name').value;
+  var randomWelcome = randomGenerator(welcomes);
 
   if (userName) {
     recipeContainer.classList.toggle('hidden');
     addRecipeButton.classList.toggle('hidden');
     document.getElementById('auth-container').classList.add('hidden');
-    document.querySelector('.welcome').innerHTML = `Welcome, ${userName}!`;
+    document.querySelector('.welcome').innerHTML = `${randomWelcome} ${userName}!`;
   } else {
     alert("You must enter a name to enter the site.");
   }

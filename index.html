@@ -4,15 +4,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-        <h1>What's for Dinner?</h1>
-        <button>ADD A RECIPE</button>
-    </header>
-    <main>
-      <section class="left">This is left</section>
-      <section class="right">This is right</section>
-    </main>
-    <footer></footer>
+    <header class="header">
+       <h1>What's for Dinner?</h1>
+       <button class="add-recipe">ADD A RECIPE</button>
+   </header>
+   <main>
+     <section class="left">
+       <h2 required>What are you looking for?</h2>
+       <form class="form">
+         <input type="radio" id="side" name="meal" value="side">
+         <label>Side</label>
+         <br>
+         <input type="radio" id="main-dish" name="meal" value="main-dish">
+         <label>Main Dish</label>
+         <br>
+         <input type="radio" id="dessert" name="meal" value="dessert">
+         <label>Dessert</label>
+         <br>
+         <!-- <input type="radio" id="entire-meal" name="meal" value="entire-meal">
+         <label>Entire Meal</label> -->
+         <br>
+         <button class="lets-cook">LET'S COOK!</button>
+       </form>
+     </section>
+     <section class="right">
+       <img id="cookpot" src="../whats-for-dinner/assets/cookpot.svg">
+     </section>
+   </main>
+   <footer></footer>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

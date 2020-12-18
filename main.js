@@ -1,8 +1,9 @@
 // Create variables targetting the relevant DOM elements here.
 var cookPotImg = document.querySelector('#svg-cookpot');
-var cook = document.querySelector('.cook');
+var cookButton = document.querySelector('.cook');
 var shouldMake = document.querySelector("#you-make");
 var clearButton = document.querySelector("#clear");
+var clearButtonTwo = document.querySelector("#clear-two");
 var dishState = document.querySelector("#dish-state");
 var mainState = document.querySelector("#main-state");
 var wholeMealStatement = document.querySelector("#change-meal");
@@ -10,9 +11,9 @@ var dishStatement = document.querySelector("#change-dish");
 var yourPick = false;
 
 // Add your event listeners here
-cook.addEventListener("click", changeToDish);
+cookButton.addEventListener("click", changeToDish);
 clearButton.addEventListener("click", reset);
-
+clearButtonTwo.addEventListener("click", reset);
 // Create your event handlers and other functions here.
 function unhideDish(element) {
   element.classList.remove('hidden-dish');
@@ -25,6 +26,11 @@ function unhideMain(element) {
 function hideMain(element) {
   element.classList.add('hidden-main');
 }
+
+function hideDish(element) {
+  element.classList.remove('hidden-dish');
+}
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -40,7 +46,6 @@ function checkRadioButtons() {
 }
 
 function randomDish() {
-  console.log(yourPick);
   if (yourPick === "side") {
     dishStatement.innerHTML = `<p id="change-dish">${sidesList[getRandomIndex(sidesList)]}!</p>`;
   } else if (yourPick === "main") {
@@ -56,18 +61,28 @@ function randomEntireMeal() {
 }
 
 function changeToDish() {
+  event.preventDefault();
   checkRadioButtons();
   if (yourPick === false) {
-    return
+    errorMessage();
   } else if (yourPick === "entire") {
-    event.preventDefault();
     hideMain(cookPotImg);
     unhideMain(mainState);
     randomEntireMeal();
   } else {
-    event.preventDefault();
     hideMain(cookPotImg);
     unhideDish(dishState);
     randomDish();
   }
+  hideMain(cookButton);
+}
+
+function errorMessage() {
+  hideMain(cookPotImg);
+  unhideDish(dishState);
+  dishStatement.innerHTML = `<p id="change-dish">Opps, Please make a selection!</p>`;
+}
+
+function reset() {
+  location.reload();
 }

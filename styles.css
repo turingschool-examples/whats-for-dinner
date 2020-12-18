@@ -81,7 +81,7 @@ button {
   justify-content: center;
   align-items: center;
   font-style: italic;
-  margin-top: 150px;
+  margin-top: 110px;
 }
 
 #change-dish {
@@ -90,6 +90,7 @@ button {
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  margin-left: 40px;
 }
 
 #change-meal {
@@ -105,6 +106,15 @@ button {
 }
 
 #clear {
+  margin-top: 40px;
+  margin-left: 400px;
+  background-color: #95a5a6;
+  color: rgba(225, 225, 225, .9);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#clear-two {
   margin-top: 40px;
   margin-left: 400px;
   background-color: #95a5a6;

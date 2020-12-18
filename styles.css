@@ -28,9 +28,20 @@ html {
 
 /*  Navigation  */
 nav {
-    height: 70px;
+    height: 90px;
     overflow: hidden;
     background: #0fb9b1;
+}
+
+#flex-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px 40px;
 }
 
 .welcome {
@@ -42,13 +53,8 @@ nav {
     width: auto;
 }
 
-i.fa-heart-square {
-
-}
-
 /*  Add recipe button  */
 button.add-recipe {
-    float: right;
     width: 160px;
     font-size: 1rem;
     padding: 10px;
@@ -140,8 +146,7 @@ label, input {
 #cookpot {
     width: 140px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 80px auto;
 }
 
 .cook-button {

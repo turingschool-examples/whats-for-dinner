@@ -4,21 +4,23 @@ var sides = [
   "Garden Salad",
   "Crispy Potatoes",
   "Sweet Potato Tots",
-  "Coconut Rice",
+  "Grilled Zucchini",
   "Caeser Salad",
   "Shrimp Summer Rolls",
   "Garlic Butter Mushrooms",
-  "Hush Puppies"
+  "Hush Puppies",
+  "French Fries",
+  "Jasmine Rice"
 ];
 
 var mains = [
   "Spaghetti and Meatballs",
   "Pineapple Chicken",
-  "Shakshuka",
+  "Hamburgers",
   "Thai Yellow Curry",
-  "Bibimbap",
+  "Butter Chicken",
   "Chicken Parmesean",
-  "Butternut Squash Soup",
+  "Pork Tacos",
   "BBQ Chicken Burgers",
   "Ramen",
   "Empanadas",

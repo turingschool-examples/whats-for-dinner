@@ -197,6 +197,7 @@ footer {
 #user-recipe-type,
 #user-recipe-name {
     height: 25px;
+    border-radius: 5px;
 }
 
 .add-new-recipe {

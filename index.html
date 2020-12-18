@@ -10,16 +10,22 @@
     <title>What's for Dinner?</title>
   </head>
   <body>
-    <nav>
-      <div class="clearfix">
-        <span class="brand">What's for Dinner?</span> <span class="welcome brand"></span>
-
-        <div>
+  <nav>
+    <div>
+      <ul class="nav" id="flex-nav">
+        <li>
+          <span class="brand">What's for Dinner?</span>
+        </li>
+        <li>
+          <span class="welcome brand"></span>
+        </li>
+        <li>
           <button class="add-recipe">ADD A RECIPE</button>
-        </div>
+        </li>
+      </ul>
 
-      </div>
-    </nav>
+    </div>
+  </nav>
 
     <section id="authContainer" class="container">
       <article class="frame">
@@ -68,7 +74,7 @@
     <section id="faves-container" class="container hidden">
 
       <article class="frame">
-        <p id="remove-instruc">Double click or un-heart to remove an item from your list of faves.</p>
+        <p id="remove-instruc">Double click to remove an item from your list of faves.</p>
         <ul id="faves-list">
         </ul>
       </article>

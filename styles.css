@@ -13,14 +13,22 @@ red - #ee5253
   font-family: 'Roboto', sans-serif
 }
 
+html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
 body {
   display: inline-block;
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(https://vase.ai/resources/content/images/2017/04/dan-gold-105699--1-.jpg);
+  background-image: url("../whats-for-dinner/assets/burger-friends.jpg");
+  position: fixed;
 }
 
 header {
@@ -28,8 +36,6 @@ header {
   font-family: 'Roboto', sans-serif;
   height: 4em;
 }
-
-
 
 main {
   position: relative;
@@ -52,14 +58,6 @@ section {
   top: 5%;
 }
 
-.left {
-  left: 15%;
-}
-
-.right {
-  right: 15%;
-}
-
 h1 {
   position: relative;
   padding-top: .5em;
@@ -67,17 +65,65 @@ h1 {
   font-size: 1.6em;
 }
 
+h2 {
+  position: relative;
+  left: 7%;
+  top: 12%;
+}
+
+h2:after{
+  position: relative;
+  bottom: 7px;
+  color: red;
+  content: "*";
+}
+
+form {
+  /* border: solid 1px black; */
+  display: inline-block;
+  /* flex-direction: column; */
+  position: relative;
+  top: 15%;
+  left: 7%;
+  font-size: 1.3em;
+}
+
+input {
+  margin-bottom: 2em;
+}
+
 button {
   position: absolute;
-  top: 1.5%;
-  left: 92%;
-  background: rgba(225, 225, 225, .9);
   border: none;
   border-radius: 5%;
-  display: inline-block;
   text-align: center;
   font-size: 1em;
   height: 2em;
   padding: .5em;
   margin-right: 2em;
+}
+
+#cookpot {
+  position: relative;
+  bottom: 100px;
+  transform: scale(.25);
+}
+
+.add-recipe {
+  background: rgba(225, 225, 225, .9);
+  top: 1.5%;
+  left: 92%;
+}
+
+.lets-cook {
+  background: #0fb9b1;
+  width: 11em;
+}
+
+.left {
+  left: 15%;
+}
+
+.right {
+  right: 15%;
 }

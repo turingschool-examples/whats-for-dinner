@@ -7,7 +7,6 @@ var addRecipeButton = document.querySelector('button.add-recipe');
 var loginButton = document.querySelector('input.user-login-button');
 var recipeContainer = document.getElementById('recipes-container');
 var favoritesContainer = document.getElementById('faves-list');
-// var showFavoritesButton = document.getElementById('favorites'); // for the heart in the navbar??
 var favoriteRecipes = [];
 
 loginButton.addEventListener("click", function(e) {
@@ -18,7 +17,7 @@ loginButton.addEventListener("click", function(e) {
   if (userName) {
     recipeContainer.classList.toggle('hidden');
     addRecipeButton.classList.toggle('hidden');
-    document.getElementById('authContainer').classList.add('hidden');
+    document.getElementById('auth-container').classList.add('hidden');
     document.querySelector('.welcome').innerHTML = `Welcome, ${userName}!`;
   } else {
     alert("You must enter a name to enter the site.");
@@ -158,9 +157,8 @@ function displayFavorites() {
   }
 
   for (let i = 0; i < favoriteRecipes.length; i++) {
-    var slug = favoriteRecipes[i].toLowerCase().split(' ').join('-');
-    console.log(slug);
-    content += `<li data-slug="${slug}">${favoriteRecipes[i]}</li>`
+    var slug = favoriteRecipes[i].split(' ').join('-');
+    content += `<li class="slugified" data-slug="${slug}">${favoriteRecipes[i]}</li>`
   }
   return favoritesContainer.innerHTML = content;
 }

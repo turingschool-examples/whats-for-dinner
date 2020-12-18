@@ -20,15 +20,9 @@ html {
     background-size: cover;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 /*  Navigation  */
 nav {
-    height: 90px;
+    height: 70px;
     overflow: hidden;
     background: #0fb9b1;
 }
@@ -42,6 +36,7 @@ nav {
 nav ul {
     list-style: none;
     margin: 10px 40px;
+    padding-inline-start: 0;
 }
 
 .welcome {
@@ -58,7 +53,7 @@ button.add-recipe {
     width: 160px;
     font-size: 1rem;
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
     background: #EFEFEF;
     border-radius: 5px;
     border: none;
@@ -67,7 +62,6 @@ button.add-recipe {
 .brand {
     float: left;
     padding: 10px;
-    margin: 10px;
 }
 
 /*  Login feature */
@@ -86,7 +80,7 @@ button.add-recipe {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 60px auto 0;
     width: 80%;
     padding: 50px 20px;
 }
@@ -198,20 +192,7 @@ footer {
     left: 0;
     background: rgba(225, 225, 225, .9);
     height: 70px;
-    padding: 10px 20px;
-}
-
-#add-new {
-    display: flex;
-    font-size: 1.2rem;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-#add-new
-label, input {
-    margin: 0 10px;
+    padding: 20px 20px 0;
 }
 
 #user-recipe-type,
@@ -248,3 +229,21 @@ p#remove-instruc {
     font-size: 0.5em;
     margin: 5px;
 }
+
+.slugified {
+    cursor: pointer;
+}
+
+#add-new {
+    display: flex;
+    line-height: 2;
+    font-size: 1.2rem;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-spans {
+    margin: 0 20px 0;
+}
+

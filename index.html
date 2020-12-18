@@ -10,8 +10,7 @@
     <title>What's for Dinner?</title>
   </head>
   <body>
-  <nav>
-    <div>
+    <nav>
       <ul class="nav" id="flex-nav">
         <li>
           <span class="brand">What's for Dinner?</span>
@@ -23,19 +22,17 @@
           <button class="add-recipe">ADD A RECIPE</button>
         </li>
       </ul>
+    </nav>
 
-    </div>
-  </nav>
-
-    <section id="authContainer" class="container">
-      <article class="frame">
+    <section id="auth-container" class="container">
+      <div id="form-wrapper" class="frame">
         <form id="login-form">
           <label for="user-name">What's your name?</label>
           <input type="text" id="user-name">
 
           <input class="user-login-button" type="submit" value="ENTER">
         </form>
-      </article>
+      </div>
     </section>
 
     <section id="recipes-container" class="container">
@@ -81,23 +78,28 @@
     </section>
 
     <footer>
+      <div id="flex-footer">
+        <form id="add-new">
+          <span class="footer-spans">
+            <label for="user-recipe-type" >Recipe Type: </label>
+            <select id="user-recipe-type" >
+              <option selected="selected"></option>
+              <option value="side">Sides</option>
+              <option value="main">Mains</option>
+              <option value="dessert">Desserts</option>
+            </select>
+          </span>
 
-      <form id="add-new">
-        <label for="user-recipe-type" >Recipe Type: </label>
-<!--        <input type="text" >-->
-        <select id="user-recipe-type" >
-          <option selected="selected"></option>
-          <option value="side">Sides</option>
-          <option value="main">Mains</option>
-          <option value="dessert">Desserts</option>
-        </select>
+          <span class="footer-spans">
+            <label for="user-recipe-name" >Recipe Name: </label>
+            <input id="user-recipe-name" type="text" >
+          </span>
 
-        <label for="user-recipe-name" >Recipe Name: </label>
-        <input id="user-recipe-name" type="text" >
-
-        <input class="add-new-recipe" type="submit" value="ADD NEW">
-      </form>
-
+          <span class="footer-spans">
+            <input class="add-new-recipe btn" type="submit" value="ADD NEW">
+          </span>
+        </form>
+      </div>
     </footer>
 
     <script type="text/javascript" src="./assets/data.js"></script>

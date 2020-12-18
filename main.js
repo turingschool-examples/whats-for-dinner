@@ -5,11 +5,13 @@ var shouldMake = document.querySelector("#you-make");
 var clearButton = document.querySelector("#clear");
 var dishState = document.querySelector("#dish-state");
 var mainState = document.querySelector("#main-state");
-var wholeMeal = document.querySelector("#change-meal");
+var wholeMealStatement = document.querySelector("#change-meal");
+var dishStatement = document.querySelector("#change-dish");
 var yourPick = false;
 
 // Add your event listeners here
-cook.addEventListener("click", changetoDish);
+cook.addEventListener("click", changeToDish);
+clearButton.addEventListener("click", reset);
 
 // Create your event handlers and other functions here.
 function unhideDish(element) {
@@ -28,11 +30,6 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-
-console.log(mainDishList[getRandomIndex(mainDishList)]);
-console.log(sidesList[getRandomIndex(sidesList)]);
-console.log(dessertList[getRandomIndex(dessertList)]);
-
 function checkRadioButtons() {
   var choice = document.querySelectorAll("input");
   for (var i = 0; i < choice.length; i++) {
@@ -42,16 +39,23 @@ function checkRadioButtons() {
   }
 }
 
-function randomDish(yourPick) {
-
+function randomDish() {
+  console.log(yourPick);
+  if (yourPick === "side") {
+    dishStatement.innerHTML = `<p id="change-dish">${sidesList[getRandomIndex(sidesList)]}!</p>`;
+  } else if (yourPick === "main") {
+    dishStatement.innerHTML = `<p id="change-dish">${mainDishList[getRandomIndex(mainDishList)]}!</p>`;
+  } else {
+    dishStatement.innerHTML = `<p id="change-dish">${dessertList[getRandomIndex(dessertList)]}!</p>`;
+  }
 }
 
 function randomEntireMeal() {
-  wholeMeal.innerHTML = `<p id="change-meal">${mainDishList[getRandomIndex(mainDishList)]}
+  wholeMealStatement.innerHTML = `<p id="change-meal">${mainDishList[getRandomIndex(mainDishList)]}
   with a side of ${sidesList[getRandomIndex(sidesList)]} and ${dessertList[getRandomIndex(dessertList)]} for dessert!<p>`
 }
 
-function changetoDish() {
+function changeToDish() {
   checkRadioButtons();
   if (yourPick === false) {
     return
@@ -64,5 +68,6 @@ function changetoDish() {
     event.preventDefault();
     hideMain(cookPotImg);
     unhideDish(dishState);
+    randomDish();
   }
 }

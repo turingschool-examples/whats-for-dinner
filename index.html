@@ -5,19 +5,33 @@
     <title>What's for dinner?</title>
   </head>
   <body>
-    <nav>
-      <h2> What's for dinner? </h2>
-    </nav>
-    <main>
-      <!-- <img class='background-image' src="./assets/burger-friends.jpg" alt="Friends enjoying a meal" /> -->
-      <div>
-        <h1> What are you looking for? </h1>
-        <ul> <li>Side</li> <li>Main Dish</li> <li>Dessert</li> <li>Entire Meal</li> </ul>
-        <button>Let's cook!</button>
+    <header class="teal-background">
+      <h2> What's for Dinner? </h2>
+    </header>
+    <main class="main-display">
+      <div class="menu-box menu-box-left">
+        <h1> What are you looking for? <sup class="super">*</sup></h1>
+        <div class="radio-button">
+          <input type="radio" id="Side" name="choice" value="Side">
+          <label for="Side">Side</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" id="Main Dish" name="choice" value="Main Dish">
+          <label for="Main Dish">Main Dish</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" id="Dessert" name="choice" value="Dessert">
+          <label for="Dessert">Dessert</label>
+        </div>
+        <div class="radio-button">
+          <input type="radio" id="Entire Meal" name="choice" value="Entire Meal">
+          <label for="Entire Meal">Entire Meal</label>
+        </div>
+        <button class="teal-background lets-cook">LET'S COOK!</button>
       </div>
-      <!-- <div>
-        <img src="./assets/cookpot.svg" />
-      </div> -->
+      <div class="menu-box">
+        <img class="menu-box-right" src="./assets/cookpot.svg"/>
+      </div>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>

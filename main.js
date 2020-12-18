@@ -126,10 +126,16 @@ function addFavorites(favoritedMeal) {
     }
     checkFavorites();
   });
+  var btn = document.getElementById('favorites');
 
-  document.getElementById('favorites').addEventListener('click', function() {
+  btn.addEventListener('click', function() {
     document.getElementById('faves-container').classList.toggle('hidden');
-    document.getElementById('favorites').setAttribute('disabled', 'true');
+
+    if (btn.innerHTML === "Show my favorites") {
+      document.getElementById('favorites').innerHTML = "Hide my favorites";
+    } else if (btn.innerHTML === "Hide my favorites") {
+      document.getElementById('favorites').innerHTML = "Show my favorites";
+    }
   });
 }
 

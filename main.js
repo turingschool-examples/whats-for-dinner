@@ -27,9 +27,14 @@ loginButton.addEventListener("click", function(e) {
 choiceSelector.addEventListener("click", function(e) {
   e.preventDefault();
 
-  var currentChoice = document.querySelector('input[name="choice"]:checked').value;
+  var currentChoice = document.querySelector('input[name="choice"]:checked');
 
-  getMeal(currentChoice);
+  if (currentChoice === null) {
+    return alert("Please pick a valid category. Thx.");
+  } else {
+    getMeal(currentChoice.value);
+  }
+
 });
 
 window.addEventListener("load", function() {

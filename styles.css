@@ -18,7 +18,7 @@ body {
   margin-block-start: 0px;
   margin-block-end: 10px;
 }
-section {
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +107,10 @@ form div {
   align-self: flex-end;
 }
 #error-message {
+  visibility: hidden;
+  font-size: 22px;
   justify-content: center;
+  flex-direction: column;
   position: fixed;
   text-align: center;
   margin-top: 50px;
@@ -115,11 +118,34 @@ form div {
   height: 200px;
   width: 325px;
   background: linear-gradient(#e66465, #903132);
-  z-index: 50;
+  z-index: 5;
   border-radius: 5px;
   border: .25px solid #95a5a6;
 }
+#try-again {
+  position: relative;
+  background-color: #95a5a6;
+  color: #FBFCFC;
+  font-size: 16px;
+  text-align: center;
+  justify-content: flex-end;
+  width: 103px;
+  height: 48px;
+  border-width: 0px;
+  border-radius: 5px;
+  margin: 0px;
+  margin-top: 60px;
+  align-self: center
 
+}
+#sorry {
+  font-size: 30px;
+  height: fit-content;
+  top: 25%;
+}
+area {
+  justify-content: flex-end;
+}
 
 
 /* font-family: 'Roboto', sans-serif;

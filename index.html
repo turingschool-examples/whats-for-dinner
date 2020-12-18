@@ -7,22 +7,25 @@
   </head>
   <body>
     <nav class="header" > What's for Dinner?</h1>
-      <button class=recipe >ADD A RECIPE</button>
+      <button class=recipeButton >ADD A RECIPE</button>
     </nav>
     <div class="flex-container">
       <section class="box-one">
         <h1 class="prompt" >What are you looking for?<span>*</span
         </h1>
         <ul class="radio">
-          <input type="radio" id="side"> Side</input><br>
-          <input type="radio" id="main"> Main Dish</input><br>
-          <input type="radio" id="dessert"> Dessert</input><br>
-          <input type="radio" id="meal"> Entire Meal</input><br>
-          <button class="cook-button">Let's Cook!</button><br>
+          <input type="radio" name="rad" id="side"> Side</input><br>
+          <input type="radio" name="rad" id="main"> Main Dish</input><br>
+          <input type="radio" name="rad" id="dessert"> Dessert</input><br>
+          <input type="radio" name="rad" id="meal"> Entire Meal</input><br>
+          <button class="cook-button">Let's Cook!</button>
         </ul>
       </section>
       <section class="box-two">
-        <img class="pot" src="./assets/cookpot.svg"
+        <img class="pot" src="./assets/cookpot.svg">
+        <button class="clear-button">CLEAR</button>
+        <div class="recommend">
+        </div>
       </section>
     </div>
     <footer></footer>

@@ -58,14 +58,10 @@ section {           /* white sections */
   justify-content: left
 }
 
-.box-two {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .cook-button {
   background-color: #0fb9b1;
+  border-radius: 8px;
   width: 22vw;
   font-family: Roboto;
   font-size: 25px;
@@ -73,20 +69,25 @@ section {           /* white sections */
   margin-left: 03px;
   margin-top: 2vh;
   padding: 0px;
-
 }
 
-.recipe {
-  width: 122px;
-  height: 22pxpx;
+.clear-button {
+  background-color: #95a5a6;
+  border: black;
   border-radius: 8px;
+  height: 5vh;
+  width: 8vw;
+  font-family: Roboto;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-left: 32vw;
+  margin-top: 37vh;
+
 }
 
 .pot {
-  height: 138px;
-  width: 138px;
-  opacity: 100%;
-
+  margin-left: 14vw;
 }
 
 .radio {
@@ -113,7 +114,12 @@ section {           /* white sections */
 .prompt span {
   color: #ee5253;
   opacity: 100%
+}
 
+.recipeButton {
+  width: 122px;
+  height: 22px;
+  border-radius: 8px;
 }
 
 

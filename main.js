@@ -49,19 +49,32 @@ var desserts = [
   "Eclairs"
 ]
 
+
 var cookPotIcon = document.querySelector('.pot');
 var cookButton = document.querySelector('.cook-button');
 
-
+var clearButton = document.querySelector('.clear-button');
+var recommend = document.querySelector('.recommend');
+var recommendation = recommend.innerHTML;
 
 
 // Event Listeners
 cookButton.addEventListener('click', showMeal)
-
+clearButton.addEventListener('click', clear)
 
 //Event Handlers
-function showMeal() {
-  cookPotIcon.classList.toggle('hidden');
-  
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 
+function showMeal() {
+  cookPotIcon.classList.add('hidden');
+  clearButton.classList.remove('hidden');
+  recommend.classList.remove('hidden');
+}
+
+function clear() {
+  cookPotIcon.classList.remove('hidden');
+  clearButton.classList.add('hidden');
+  recommend.classList.add('hidden')
 }

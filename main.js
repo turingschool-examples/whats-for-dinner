@@ -27,6 +27,7 @@ var mainDishes = [
   "Sheet Pan Fajitas",
   "Margarita Pizza"
 ];
+
 var desserts = [
   "Apple Pie",
   "Lemon Meringue Pie",
@@ -47,3 +48,20 @@ var desserts = [
   "Croissants",
   "Eclairs"
 ]
+
+var cookPotIcon = document.querySelector('.pot');
+var cookButton = document.querySelector('.cook-button');
+
+
+
+
+// Event Listeners
+cookButton.addEventListener('click', showMeal)
+
+
+//Event Handlers
+function showMeal() {
+  cookPotIcon.classList.toggle('hidden');
+  
+
+}

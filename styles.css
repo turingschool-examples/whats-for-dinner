@@ -12,6 +12,8 @@ html {
 body {
   /* background-image: ('https://cdn.bitdegree.org/learn/birb-small.jpg?4d5e638chttps://cdn.bitdegree.org/learn/birb-small.jpg?4d5e638c') no-repeat; */
   margin: 0px;
+  background-image: url(./burger-friends.jpg) top center no-repeat;
+  background-color: blue;
   background-size: cover;
   width: 1024px; /*1680px*/
   height: 756px; /*900px*/
@@ -19,7 +21,10 @@ body {
   /* z-index: -2; */
   display:flex;
   flex-direction: column;
+}
 
+.hidden {
+  display: none;
 }
 
 .header {

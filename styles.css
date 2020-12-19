@@ -1,10 +1,14 @@
+html,
 body {
   margin: 0px;
+  width: 100%;
+  height: 100%;
 }
+
 nav {
   background-color: #0fb9b1;
   height: 8%;
-  /* margin: 0px; */
+
 }
 
 h1 {
@@ -12,7 +16,6 @@ h1 {
   font-family: 'Roboto', sans-serif;
   border: 0 auto;
   padding: .6em;
-  /* margin: 0px; */
 
 }
 
@@ -20,30 +23,44 @@ button {
   float: right;
   border-radius: .5em;
   padding: .5em;
-  border: 0%;
+  border: none;
 
 }
 
 img {
-  display: flex;
-  width: 100%;
-  height: auto;
-  /* margin: 0px; */
 }
 
-main {
-  /* margin: 0px; */
+.main-image {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  z-index: 1;
+
 }
-/*
-div .box {
+
+.box {
   display: flex;
   justify-content: space-between;
-  height: 40%;
-  width: 40%;
-  color: rgba(225,225,225,.9);
-  border: 0;
-} */
+  position: relative;
+  z-index: 2;
+  height: 30%;
+  width: 60%;
+  margin: auto;
+  padding: 20% 0;
 
+}
+
+.left{
+  background-color: rgba(225,225,225,.9);
+  width: 40%;
+
+}
+
+.right{
+  background-color: rgba(225,225,225,.9);
+  width: 40%;
+
+}
 
 /*
 COLORS

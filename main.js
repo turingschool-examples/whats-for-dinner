@@ -1,6 +1,6 @@
 // Global variables
 var cookButton = document.querySelector(".lets-cook");
-var form = document.querySelector("form");
+// var form = document.querySelector("form");
 
 // query html to grab elements and assign to variables
 //  radio buttons
@@ -9,6 +9,8 @@ var form = document.querySelector("form");
 cookButton.addEventListener('click', function() {
   var potImage = document.querySelector(".menu-box-right");
   potImage.classList.toggle("hidden");
+  var foodType = document.querySelector('input[type="radio"]:checked');
+  console.log(foodType.value);
 
 });
 

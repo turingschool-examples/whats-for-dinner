@@ -18,3 +18,10 @@ nav {
   height: 83px;
   overflow: hidden;
 }
+sec {
+  background: rgba(225, 225, 225, .9);
+}
+img {
+  max-width: 1500px;
+  width: 50%;
+}

@@ -45,15 +45,34 @@ header {
 h1 {
   font-size: 30px;
   margin-top: 60px;
+  font-weight: bolder;
 }
 
-.menu-box-right {
+.menu-box-image {
   /* border: 2px solid red; */
   display: flex;
   margin: 0 auto;
   max-width: 25%;
   height: inherit;
   justify-content: center;
+}
+
+.food-idea-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1em;
+  margin-top: 18vh;
+}
+
+h4 {
+  margin: 0;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .radio-button {
@@ -69,6 +88,10 @@ h1 {
   padding: 12px 50px;
 }
 
+
+.hidden {
+  display: none;
+}
 /* font-family: 'Roboto', sans-serif; */
 
 /* COLORS

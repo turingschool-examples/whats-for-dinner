@@ -4,7 +4,7 @@ html {
 }
 body {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -20,7 +20,9 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-
+}
+.is-not-visible {
+  display: none;
 }
 form.login-form {
   flex-direction: column;
@@ -48,6 +50,9 @@ input{
   border-radius: 5px;
   margin-top: 15px
 }
+/* .is-not-visible {
+  visibility: hidden;
+} */
 .hidden{
   display: none;
   height: 100%;
@@ -56,10 +61,8 @@ input{
   display: flex;
 }
 .home-view {
-  display: none;
+  display: flex;
   flex-direction: row;
-  height: 75%;
-  width: 100%;
 }
 .whats-for-dinner {
   display: block;
@@ -209,6 +212,7 @@ area {
 article {
   display: flex;
   margin: 2px;
+  margin-bottom: 250px;
 }
 
 

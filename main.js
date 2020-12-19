@@ -10,9 +10,10 @@ var suggestedDish= document.querySelector('#suggested-dish');
 var errorMessage = document.querySelector('#error-message');
 var clearButton = document.querySelector('#clear-section');
 var submitButton = document.querySelector('#submit');
-var hiddenHomeView = document.querySelectorAll('.hidden');
+var hiddenHomeView = document.querySelectorAll('.is-not-visible');
 var homeView = document.querySelector('.home-view');
 var loginPage = document.querySelector(".login-page");
+var visible = document.querySelector('.is-not-visible')
 
 
 letsCookButton.addEventListener('click', suggestRecipe);
@@ -23,9 +24,13 @@ submitButton.addEventListener('click', login)
 function login() {
   event.preventDefault();
   console.log(hiddenHomeView)
-  hiddenHomeView[0].style.display = "flex"
-  homeView.style.display = "flex"
-  loginPage.style.display = 'none';
+  for (var i = 0; i < hiddenHomeView.length; i++) {
+    hiddenHomeView[i].classList.toggle("is-not-visible")
+  }
+  loginPage.classList.add('is-not-visible')
+  // homeView.style.display = "flex"
+  // hiddenHomeView.classList.toggle("is-not-visible")
+  // loginPage.classList.add("is-not-visible")
 }
 
 function suggestRecipe() {

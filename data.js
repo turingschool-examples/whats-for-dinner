@@ -1,4 +1,4 @@
-var sides = [
+var side = [
   "Miso Glazed Carrots",
   "Coleslaw",
   "Garden Salad",
@@ -8,7 +8,7 @@ var sides = [
   "Caeser Salad",
   "Shrimp Summer Rolls",
   "Garlic Butter Mushrooms",
-  "Hush Puppies"
+  "Hush Puppies",
 ];
 
 var mains = [

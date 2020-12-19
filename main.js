@@ -1,39 +1,38 @@
 // Global variables
 var cookButton = document.querySelector(".lets-cook");
-// var form = document.querySelector("form");
-
-// query html to grab elements and assign to variables
-//  radio buttons
-//  let's cook buttons
+  var potImage = document.querySelector(".menu-box-image");
+console.log();
 
 cookButton.addEventListener('click', function() {
-  var potImage = document.querySelector(".menu-box-right");
   potImage.classList.toggle("hidden");
-  var foodType = document.querySelector('input[type="radio"]:checked');
-  console.log(foodType.value);
-
+  var foodType = document.querySelector(`input[type="radio"]:checked`);
+  var foodList = grabArray(foodType.value);
+  buildFoodText(foodList);
 });
 
-function buildFoodtext() {
+function grabArray(foodType) {
+  if (foodType === 'side') {
+    return side;
+  }
+  if (foodType === 'main') {
+    return mains;
+  }
+  if (foodType === 'dessert') {
+    return desserts;
+  }
+}
 
-};
-
-
+function buildFoodText(foodType) {
+  var index = getRandomIndex(foodType);
+  console.log(index);
+  var foodName = foodType[index];
+  console.log(foodName);
+  var mealText = `<h3 class="food-idea-display">You should make:</h3>
+        <h4 class="food-idea-display">${foodName}!</h4>`;
+  var messageLocation = document.querySelector("#messageLocation");
+  messageLocation.innerHTML = mealText;
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
-
-// build event listeners to let's cook buttons
-//  this should read the radio buttons with .value
-//  maybe store the value of the radio buttons to pass into the function
-// then run a function
-
-// function buildHtml
-// use parameter from radio buttons to determine the array
-// use random index to get food item
-// built html to inject
-
-// function injectHtml
-// add hidden class to pot image
-// injectHtml into index.html

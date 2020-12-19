@@ -7,4 +7,101 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0fb9b1; 
+    padding: 20px 20px;
+
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    margin: 0;
+}
+
+.button1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    background-color: rgba(225, 225, 225, .9); 
+    border-radius: 5px;
+    padding: 0px 10px;
+    border: none;
+}
+
+.img1 {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    background-color: rgba(225, 225, 225, .9);
+    height: 500px;
+    width: 550px;
+    margin: 5%; 
+    z-index: 1;
+    opacity: 0.94;
+}
+
+.box-header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    padding-top:10%;
+    padding-left:15%;
+}
+
+.last-letter {
+    color: red;
+}
+
+.meal-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding-top: 2.5%;
+    padding-left: 15%;
+}
+
+.radio-button{
+    padding-top: 3.5%;
+}
+
+.button2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    background-color: #0fb9b1;
+    border-radius: 5px;
+    border: none;
+    margin-top: 4%; 
+    margin-left: 15%;
+    padding: 2% 12%;
+}
+
+.img2 {
+    max-width: 100%;
+    height:auto;
+}
+
+
+
+
+
+
 

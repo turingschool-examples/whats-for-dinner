@@ -1,10 +1,36 @@
+html {
+  height: 100%;
+  width: 100%;
+}
 body {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
   font-family: 'Roboto', sans-serif;
+}
+.login-page{
+  display: flex;
+}
+form.login-form {
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(225, 225, 225, .9);
+  height: 200px;
+  width: 300px;
+}
+h2 {
+  font-size: 30px;
+  height: fit-content;
+  width: fit-content;
+}
+.hidden{
+  display: none;
 }
 .whats-for-dinner {
   display: block;

@@ -6,16 +6,15 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 */
-nav {
-  color: #0fb9b1;
-  margin: 30px;
-  width: auto;
-  position: absolute;
-}
-body {
-  background: url(assets/burger-friends.jpg);
+html {
+  background-image: url(assets/burger-friends.jpg);
   background-size: cover;
-  position: relative;
+  }
+body {
 
-
+}
+nav {
+  background: #0fb9b1;
+  height: 83px;
+  overflow: hidden;
 }

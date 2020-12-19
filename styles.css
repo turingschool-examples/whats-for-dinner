@@ -1,8 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0px;
-  /* width: 100%; */
-  /* margin-top: 0; */
 }
 
 h1 {
@@ -22,22 +20,15 @@ button {
 }
 
 img {
-  /* margin: 0px; */
-  /* display: flex; */
-  /* background-size: cover; */
   width: 100%;
-  /* height: auto; */
-  z-index: 1;
 }
 
 .box {
-  float: left;
   background-color: rgba(225, 225, 225, .9);
-  height: 100px;
-  width: 150px;
+  height: 33%;
+  width: 33%;
   padding: 1em;
-  flex: auto;
-  z-index: 2;
+  margin-left: 10%;
 }
 
 /*

@@ -39,11 +39,9 @@ h1 {
     margin: 0;
     width: 100%;
     height: auto;
-    z-index: -1;
 }
 
 .background-container {
-    position: relative;
     width: 100%;
 }
 
@@ -58,7 +56,7 @@ h1 {
     width: 550px;
     margin: 5%; 
     z-index: 1;
-    opacity: 0.94;
+    opacity: 0.96;
 }
 
 .box-header {
@@ -95,8 +93,9 @@ h1 {
 }
 
 .img2 {
-    max-width: 100%;
-    height:auto;
+    max-width: auto;
+    max-height: 33%;
+    margin-top: 33%; 
 }
 
 

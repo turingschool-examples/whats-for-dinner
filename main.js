@@ -1,10 +1,11 @@
-//Background color/image/autosize with 
-// two gray boxes
+//variables to target side,main,dessert,entire meal and button 
+//function with conditional for which radio button is selected >> pull rando data from array >> function 
+//event listener to "let's cook" to view random dish from list of dishes in that category 
+//hide pot picture >> display rando dish pops up in box2
 
-// document.body.style.backgroundColor = "0fb9b1"
-document.body.style.backgroundimage = "./assert/burger-friends.jpg";
-function on() {
-    document.getElementById("overlay").style.display = "block";
-}
+var side = document.querySelector('#side');
+var main = document.querySelector('#main-dish');
+var dessert = document.querySelector('#dessert');
+var meal = document.querySelector('entire-meal');
+var cookButton = document.querySelector('.button2');
 
-//side, main dish, dessert, entire meal

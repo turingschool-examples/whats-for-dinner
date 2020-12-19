@@ -69,6 +69,10 @@ h1 {
   padding: 12px 50px;
 }
 
+
+.hidden {
+  display: none;
+}
 /* font-family: 'Roboto', sans-serif; */
 
 /* COLORS

@@ -1,19 +1,29 @@
 nav {
   background-color: #0fb9b1;
-  height: 80px;
+  height: 18%;
 }
 
-p {
+h1 {
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  padding: .5em;
 
+}
+
+button {
+  float: right;
+  border-radius: 10%;
+  padding: inherit;
 }
 
 .main-image {
   background-image:
 }
 
-.box {
+
+
+section .box-right {
   height: 120px;
   width: 120px;
   color: rgba(225,225,225,.9);

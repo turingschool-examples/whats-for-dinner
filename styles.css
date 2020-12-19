@@ -1,15 +1,24 @@
 nav {
   background-color: #0fb9b1;
   height: 80px;
-  font-family: 'Roboto', sans-serif;
+}
+
+p {
   font-size: 30px;
+  font-family: 'Roboto', sans-serif;
 
 }
 
 .main-image {
-  background-imag: url(../burger-friends.jpg)
+  background-image:
 }
 
+.box {
+  height: 120px;
+  width: 120px;
+  color: rgba(225,225,225,.9);
+  border: 25px;
+}
 /*
 COLORS
 teal - #0fb9b1;

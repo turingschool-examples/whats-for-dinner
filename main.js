@@ -8,7 +8,6 @@ var form = document.querySelector("form");
 
 cookButton.addEventListener('click', function() {
   var potImage = document.querySelector(".menu-box-right");
-  console.log(potImage);
   potImage.classList.toggle("hidden");
 
 });

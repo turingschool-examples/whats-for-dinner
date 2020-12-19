@@ -3,8 +3,8 @@ body {
   background-size: cover;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
+  margin-top: auto;
   width: 100%;
-  /* margin-top: 0; */
 }
 
 nav {
@@ -12,14 +12,27 @@ nav {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: .6em;
+  padding-left: 2%;
 }
 
 button {
   padding: .7em;
+  margin: 1em;
   font-size: medium;
   border-radius: 10px;
   border: 0px;
+}
+
+main {
+
+}
+
+h1 {
+  display: inline;
+}
+
+#asterisk{
+  color: red;
 }
 
 .box {
@@ -28,7 +41,8 @@ button {
   height: 33%;
   width: 33%;
   padding: 1em;
-  margin: 10%;
+  margin-left: 7%;
+  margin-top: 5%;
   flex: auto;
   z-index: 2;
   position: relative;

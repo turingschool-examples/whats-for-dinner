@@ -34,10 +34,6 @@ function combineEntireMeal() {
   return entireMeal;
 }
 
-function checkMealType() {
-
-}
-
 function suggestRecipe(event) {
   event.preventDefault();
   hide(cookpot);

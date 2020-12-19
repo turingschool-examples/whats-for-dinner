@@ -169,8 +169,8 @@ form div {
   margin: 34px;
   align-self: flex-end;
 }
-#error-message {
-  visibility: hidden;
+.error-message {
+  /* display: none; */
   font-size: 22px;
   justify-content: center;
   flex-direction: column;

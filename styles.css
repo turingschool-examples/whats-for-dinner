@@ -1,5 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  margin-top: 0;
 }
 
 h1 {
@@ -9,6 +11,8 @@ h1 {
 
 button {
   float: right;
+  padding: .7em;
+  font-size: medium;
 
 }
 

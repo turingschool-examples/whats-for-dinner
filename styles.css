@@ -1,34 +1,48 @@
+body {
+  margin: 0px;
+}
 nav {
   background-color: #0fb9b1;
-  height: 18%;
+  height: 14%;
+  /* margin: 0px; */
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 1.6em;
   font-family: 'Roboto', sans-serif;
-  margin: 0 auto;
-  padding: .5em;
+  border: 0 auto;
+  padding: .3em;
+  /* margin: 0px; */
 
 }
 
 button {
   float: right;
-  border-radius: 10%;
-  padding: inherit;
+  border-radius: .5em;
+  padding: .5em;
+  border: 0%;
+
 }
 
-.main-image {
-  background-image:
+img {
+  display: flex;
+  /* margin: 0px; */
+}I
+
+main {
+  /* margin: 0px; */
 }
-
-
-
-section .box-right {
-  height: 120px;
-  width: 120px;
+/*
+div .box {
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+  width: 40%;
   color: rgba(225,225,225,.9);
-  border: 25px;
-}
+  border: 0;
+} */
+
+
 /*
 COLORS
 teal - #0fb9b1;

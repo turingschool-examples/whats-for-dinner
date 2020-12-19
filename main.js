@@ -8,10 +8,12 @@ var suggestedMeal = document.querySelector('.suggested-meal');
 var suggestedTitle = document.querySelector('.suggested-title');
 var lilPot = document.querySelector('.icon');
 
+
 var entireMeal = [];
 var currentMeal;
 
 letsCookBtn.addEventListener('click', randomMeal);
+clearBtn.addEventListener('click', clearView);
 
 function randomGenerator(array) {
   return Math.floor(Math.random() * array.length);
@@ -38,6 +40,8 @@ function randomMeal() {
   if (radioEntireMeal.checked === true){
     hidePot();
     suggestedMeal.innerText = `${randomSide}, ${randomMain}, and ${randomDessert}!`;
+  } else {
+    popup();
   }
 }
 
@@ -46,4 +50,22 @@ function hidePot() {
   suggestedMeal.classList.remove('hidden');
   suggestedTitle.classList.remove('hidden');
   clearBtn.classList.remove('hidden');
+}
+
+function clearView() {
+  radioSide.checked = false;
+  radioMain.checked = false;
+  radioDessert.checked = false;
+  radioEntireMeal.checked = false;
+  lilPot.classList.remove('hidden');
+  suggestedMeal.classList.add('hidden');
+  suggestedTitle.classList.add('hidden');
+  clearBtn.classList.add('hidden');
+}
+
+function popup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+
+  // setTimeout(function () { popup.popmake('close');}, 3000);
 }

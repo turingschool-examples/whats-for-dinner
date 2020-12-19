@@ -93,9 +93,9 @@ h2 {
   float: left;
   width: 30%;
   height: 300px;
-  /* margin-left: 10px; */
+  margin-right: 10px;
   margin-top: 10px;
-  padding: 40px;
+  padding: 35px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -107,7 +107,45 @@ h2 {
   width: 110px;
 }
 
+.suggested-title {
+  font-weight: bold;
+}
+
 .suggested-meal{
-  font-size: 3vw;
+  font-size: 2vw;
+  font-weight: bold;
   text-align: center;
+}
+
+.clear-button {
+  background-color: #95a5a6;
+  width: 75px;
+  height: 30px;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+
+.popup .show {
+  visibility: visible;
 }

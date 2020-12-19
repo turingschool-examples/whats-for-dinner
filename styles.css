@@ -6,9 +6,11 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 */
+/*natives*/
 html {
   background-image: url(assets/burger-friends.jpg);
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
   }
 body {
 
@@ -18,10 +20,24 @@ nav {
   height: 83px;
   overflow: hidden;
 }
+/*boxes*/
 sec {
   background: rgba(225, 225, 225, .9);
+  margin-top: 4%;
+  width: 36%;
+  height: 39%;
+  display: inline-flex;
+  justify-content: center;
 }
 img {
   max-width: 1500px;
   width: 50%;
 }
+.asterisk {
+  color: #ee5253;
+}
+/*buttons*/
+.add-recipe-button {
+  background: #95a5a6;
+}
+.

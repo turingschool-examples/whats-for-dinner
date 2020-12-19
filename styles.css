@@ -11,15 +11,15 @@ nav {
 
 }
 
-h1 {
+.page-name {
   font-size: 1.55em;
   font-family: 'Roboto', sans-serif;
   border: 0 auto;
-  padding: .6em;
+  padding: .7em;
 
 }
 
-button {
+.add-recipie {
   float: right;
   border-radius: .5em;
   padding: .5em;
@@ -27,8 +27,6 @@ button {
 
 }
 
-img {
-}
 
 .main-image {
   position: absolute;
@@ -44,22 +42,29 @@ img {
   position: relative;
   z-index: 2;
   height: 30%;
-  width: 60%;
+  width: 70%;
   margin: auto;
   padding: 20% 0;
 
 }
 
-.left{
+.left {
+  background-color: rgba(225,225,225,.9);
+  width: 40%;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  padding: 1em;
+
+}
+
+.right {
   background-color: rgba(225,225,225,.9);
   width: 40%;
 
 }
 
-.right{
-  background-color: rgba(225,225,225,.9);
-  width: 40%;
-
+.lets-cook {
+  background-color: #0fb9b1;
 }
 
 /*

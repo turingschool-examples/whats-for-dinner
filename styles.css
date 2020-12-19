@@ -24,13 +24,14 @@ body {
 .is-not-visible {
   display: none;
 }
-form.login-form {
+.login-form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(225, 225, 225, .9);
   height: 200px;
   width: 300px;
+  border-radius: 5px;
 }
 h2 {
   font-size: 30px;

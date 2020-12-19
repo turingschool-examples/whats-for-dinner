@@ -21,12 +21,19 @@ var header = document.querySelector('.whats-for-dinner')
 
 letsCookButton.addEventListener('click', suggestRecipe);
 clearButton.addEventListener('click', clearResults);
-submitButton.addEventListener('click', login);
+submitButton.addEventListener('click', delayLogin);
 tryAgainButton.addEventListener('click', showErrorMessage);
 
 
-function login() {
+function delayLogin() {
   event.preventDefault();
+  document.querySelector('.input-box').style.display = "none"
+  document.querySelector('.login-message').innerText = `Hello ${loginName.value}!`
+  setTimeout(login, 3000);
+}
+
+function login() {
+  // event.preventDefault();
   if (loginName.value.length === 0) {
     return;
   }

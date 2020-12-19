@@ -9,12 +9,20 @@
       <button class="addRecipeBtn">ADD A RECIPE</button>
     </nav>
     <section class="flexBody">
-      <div class="flexBox">
-        <h2></h2>
+      <div class="flexBox"  id="userInput">
+        <h2>What are you looking for?</h2>
+        <input type="radio" id="side" value="side">
+        <label for="side">Side</label>
+        <input type="radio" id="mainDish" value="mainDish">
+        <label for="mainDish">Main Dish</label>
+        <input type="radio" id="dessert" value="dessert">
+        <label for="dessert">Dessert</label>
+        <input type="radio" id="entireMeal" value="entireMeal">
+        <label for="entireMeal">Entire Meal</label>
         <button class="letsCookBtn">Let's Cook!</button>
       </div>
-      <div class="flexBox">
-
+      <div class="flexBox" id="userOutput">
+        <img src="assets/cookpot.svg">
       </div>
     </section>
   </body>

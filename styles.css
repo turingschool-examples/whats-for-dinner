@@ -28,34 +28,71 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/* The above code addresses browser presets to effectively clear any browser presets to a neutral state to allow the following css code to  */
+
 nav {
     background-color: #0fb9b1;
-    height: 9%;
+    height: 87px;
 }
 
 h1 {
     float: left;
-    font-size: 3.5vh;
-    margin: 1.2% 0% 1% 1.5%;
+    font-size: 30px;
+    margin: 25px 0px 25px 25px;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: bold;
+    float: left;
+    margin: 13.5% 0% 0% 6%;
 }
 
 
 body {
     background-image: url(assets/burger-friends.jpg);
     background-size: cover;
+    width: 100%;
+    height: auto;
 }
 
-section {
+input[type="radio"] {
+    vertical-align: middle;
 }
 
-.flexbox {
-    
+label {
+    display: inline-block;
 }
+
+.flexBody {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+    width: 100%;
+    height: 80%;
+}
+
+.flexBox {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 64vh;
+    background-color: rgba(225, 225, 225, .9);
+}
+
+#userInput {
+}
+
+#userOutput {
+    align-content: center;
+}
+
+
 
 .addRecipeBtn {
-    font-size: 2vh;
-    padding: 1.5vh;
-    margin: 0.9% 1.5% 1% 0%;
+    font-size: 20px;
+    padding: 14px;
+    margin: 18px 32px 25px 25px;
     float: right;
     border-radius: 6px;
     border: 0px;
@@ -63,4 +100,11 @@ section {
 
 .letsCookBtn {
     background-color: #0fb9b1;
+    width: ;
+}
+
+img  {
+    margin: 27% 0% 0% 31%;
+    height: 40%;
+    width: 40%;
 }

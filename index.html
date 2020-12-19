@@ -4,15 +4,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-        <h1>What's for Dinner?</h1>
-        <button>ADD A RECIPE</button>
-    </header>
-    <main>
-      <section class="left">This is left</section>
-      <section class="right">This is right</section>
-    </main>
-    <footer></footer>
+    <header class="header">
+       <h1>What's for Dinner?</h1>
+       <button class="add-recipe">ADD A RECIPE</button>
+   </header>
+   <main>
+     <section class="pick-meal">
+       <h2 required>What are you looking for?</h2>
+       <form class="form">
+         <input type="radio" id="side" name="meal" value="sides">
+         <label>Side</label>
+         <br>
+         <input type="radio" id="main-dish" name="meal" value="mains">
+         <label>Main Dish</label>
+         <br>
+         <input type="radio" id="dessert" name="meal" value="desserts">
+         <label>Dessert</label>
+         <br>
+         <!-- <input type="radio" id="entire-meal" name="meal" value="entire-meal">
+         <label>Entire Meal</label> -->
+         <br>
+         <button class="lets-cook">LET'S COOK!</button>
+       </form>
+     </section>
+     <section class="show-meal">
+       <p id="suggestion" class="hidden">You should make:</p>
+       <p id="chosen-meal" class="hidden"></p>
+       <img id="cookpot" src="../whats-for-dinner/assets/cookpot.svg">
+     </section>
+   </main>
+   <footer></footer>
   </body>
+  <script src="food-lists.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </html>

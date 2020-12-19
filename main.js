@@ -34,19 +34,22 @@ function combineEntireMeal() {
   return entireMeal;
 }
 
+function checkMealType() {
+
+}
+
 function suggestRecipe(event) {
   event.preventDefault();
   hide(cookpot);
   unhide(suggestion);
   unhide(chosenMeal);
+  var mealKey = { sides: sides, mains: mains, desserts: desserts }
   var result = ''
-  for (i = 0; i < meal.length; i++) {
-    if (meal[0].checked) {
-      result = randomizeItem(sides)
-    } else if (meal[1].checked) {
-      result = randomizeItem(mains)
-    } else if (meal[2].checked) {
-      result = randomizeItem(desserts)
+  for (i = 0; i < meal.length-1; i++) {
+    if (meal[i].checked) {
+      result = randomizeItem(mealKey[meal[i].value])
+      chosenMeal.innerText = result
+      return
     } else if (meal[3].checked) {
       result = combineEntireMeal()
     } else {
@@ -54,7 +57,6 @@ function suggestRecipe(event) {
       result = 'Please make a selection'
     }
   }
-  chosenMeal.innerText = result
 }
 
 

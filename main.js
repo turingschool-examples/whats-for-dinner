@@ -7,6 +7,9 @@ var radioEntireMeal = document.querySelector('.entireMeal');
 var suggestedMeal = document.querySelector('.suggested-meal');
 var suggestedTitle = document.querySelector('.suggested-title');
 var lilPot = document.querySelector('.icon');
+var addRecipeBtn = document.querySelector('.nav-button');
+var addNewBtn = document.querySelector('.add-new-button');
+var recipeForm = document.querySelector('.recipe-form');
 
 
 var entireMeal = [];
@@ -14,6 +17,7 @@ var currentMeal;
 
 letsCookBtn.addEventListener('click', randomMeal);
 clearBtn.addEventListener('click', clearView);
+addRecipeBtn.addEventListener('click', showRecipeForm);
 
 function randomGenerator(array) {
   return Math.floor(Math.random() * array.length);
@@ -66,6 +70,9 @@ function clearView() {
 function popup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-
   // setTimeout(function () { popup.popmake('close');}, 3000);
+}
+
+function showRecipeForm() {
+ recipeForm.classList.remove('hidden');
 }

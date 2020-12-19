@@ -31,7 +31,6 @@ body {
 }
 
 .nav-button {
-  float: right;
   margin: 8px;
   padding: 6px;
   background-color: rgba(225, 225, 225, .9);
@@ -48,7 +47,7 @@ h2 {
 }
 
 .required {
-  color: red;
+  color: #ee5253;
 }
 
 #title {
@@ -145,7 +144,20 @@ h2 {
   margin-left: -80px;
 }
 
-
 .popup .show {
   visibility: visible;
+}
+
+.recipe-form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 30px;
+}
+
+.add-new-button {
+  background-color: #0fb9b1;
+  padding: 6px;
+  margin-left: 10px; 
 }

@@ -5,5 +5,3 @@ class EntireMeal {
     this.dessert = dessert;
   }
 }
-
-// module.exports = EntireMeal;

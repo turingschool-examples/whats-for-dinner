@@ -16,6 +16,7 @@ button {
   padding: .7em;
   font-size: medium;
   border-radius: 10px;
+  border: 0px;
 }
 
 

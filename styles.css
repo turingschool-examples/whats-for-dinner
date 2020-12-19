@@ -42,10 +42,10 @@ h1 {
 }
 
 h2 {
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: 900;
     float: left;
-    margin: 13.5% 0% 0% 6%;
+    margin: 14.5% 0% 2.5% 8%;
 }
 
 
@@ -56,12 +56,16 @@ body {
     height: auto;
 }
 
-input[type="radio"] {
-    vertical-align: middle;
+ul {
+    display: flexbox;
+    align-items: flex-start; 
 }
 
-label {
-    display: inline-block;
+.radio {
+    font-size: 21px;
+    font-weight: 600;
+    margin: 2.5% 0% 2.5% 17%;
+    transform: scale(1.15);
 }
 
 .flexBody {
@@ -75,19 +79,10 @@ label {
 .flexBox {
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 55vh;
     width: 64vh;
     background-color: rgba(225, 225, 225, .9);
 }
-
-#userInput {
-}
-
-#userOutput {
-    align-content: center;
-}
-
-
 
 .addRecipeBtn {
     font-size: 20px;
@@ -99,8 +94,14 @@ label {
 }
 
 .letsCookBtn {
+    font-size: 2vh;
+    font-weight: 500;
     background-color: #0fb9b1;
-    width: ;
+    border: 0px;
+    border-radius: 6px;
+    margin: 1.75% 0% 0% 10%;
+    width: 27vh;
+    height: 4.9vh;
 }
 
 img  {

@@ -1,9 +1,13 @@
 body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
+  width: 100%;
+  /* margin-top: 0; */
 }
 
-h1 {
+nav {
   background-color: #0fb9b1;
   display: flex;
   justify-content: space-between;
@@ -12,23 +16,22 @@ h1 {
 }
 
 button {
-  /* float: right; */
   padding: .7em;
   font-size: medium;
   border-radius: 10px;
   border: 0px;
 }
 
-img {
-  width: 100%;
-}
-
 .box {
+  float: left;
   background-color: rgba(225, 225, 225, .9);
   height: 33%;
   width: 33%;
   padding: 1em;
-  margin-left: 10%;
+  margin: 10%;
+  flex: auto;
+  z-index: 2;
+  position: relative;
 }
 
 /*

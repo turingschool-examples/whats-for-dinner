@@ -25,17 +25,13 @@ tryAgainButton.addEventListener('click', showErrorMessage);
 
 function login() {
   event.preventDefault();
-  console.log(hiddenHomeView)
   for (var i = 0; i < hiddenHomeView.length; i++) {
     if (!hiddenHomeView[i].className.includes("error-message")) {
-    hiddenHomeView[i].classList.toggle("is-not-visible")
-  }
-  }
-  loginPage.classList.add('is-not-visible')
-  // homeView.style.display = "flex"
-  // hiddenHomeView.classList.toggle("is-not-visible")
-  // loginPage.classList.add("is-not-visible")
-}
+      hiddenHomeView[i].classList.toggle("is-not-visible");
+    };
+  };
+  loginPage.classList.add('is-not-visible');
+};
 
 function suggestRecipe() {
   event.preventDefault();

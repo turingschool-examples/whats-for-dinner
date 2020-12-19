@@ -53,7 +53,6 @@ section {
   background: rgba(225, 225, 225, .9);
   transition-duration: .6s;
   margin: 50px;
-  /* opacity: 1; */
   margin: 0 auto;
   top: 5%;
 }
@@ -79,9 +78,7 @@ h2:after{
 }
 
 form {
-  /* border: solid 1px black; */
   display: inline-block;
-  /* flex-direction: column; */
   position: relative;
   top: 15%;
   left: 7%;
@@ -105,8 +102,29 @@ button {
 
 #cookpot {
   position: relative;
-  bottom: 100px;
+  bottom: 30%;
   transform: scale(.25);
+}
+
+#suggestion {
+  font-size: 1.3em;
+  font-style: italic;
+  top: 35%;
+}
+
+#chosen-meal {
+  font-size: 2.3em;
+  top: 35%;
+}
+
+.show-meal p {
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 
 .add-recipe {
@@ -120,10 +138,10 @@ button {
   width: 11em;
 }
 
-.left {
+.pick-meal {
   left: 15%;
 }
 
-.right {
+.show-meal {
   right: 15%;
 }

@@ -16,10 +16,16 @@ body {
 }
 .login-page{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
 }
 form.login-form {
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: rgba(225, 225, 225, .9);
   height: 200px;
   width: 300px;
@@ -28,9 +34,32 @@ h2 {
   font-size: 30px;
   height: fit-content;
   width: fit-content;
+  margin-bottom: 30px;
+}
+
+input{
+  margin-top: 15px;
+  width: fit-content;
+}
+#submit {
+  height: 21px;
+  background-color: #0fb9b1;
+  border: 0px;
+  border-radius: 5px;
+  margin-top: 15px
 }
 .hidden{
   display: none;
+  height: 100%;
+}
+.unhidden {
+  display: flex;
+}
+.home-view {
+  display: none;
+  flex-direction: row;
+  height: 75%;
+  width: 100%;
 }
 .whats-for-dinner {
   display: block;
@@ -46,9 +75,12 @@ h2 {
 }
 main {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; */
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
 }
 #what-type-of-meal {
   background-color: rgba(225, 225, 225, .9);
@@ -57,8 +89,8 @@ main {
   height: 422px;
   margin-left: 122px;
   margin-right: 85px;
-  margin-top: 122px;
 }
+
 .what-meal::after {
   content:"*";
   font-weight:bold;
@@ -76,6 +108,9 @@ form {
   padding: 43px;
   font-size: 30px;
   font-weight: bold;
+}
+p {
+  margin-bottom: 10px;
 }
 form div {
   margin-top: 15px;
@@ -104,7 +139,6 @@ form div {
   height: 422px;
   margin-left: 85px;
   margin-right: 122px;
-  margin-top: 122px;
 }
 #you-should-cook {
   margin-top: 150px;
@@ -171,6 +205,10 @@ form div {
 }
 area {
   justify-content: flex-end;
+}
+article {
+  display: flex;
+  margin: 2px;
 }
 
 

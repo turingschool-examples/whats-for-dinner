@@ -7,13 +7,15 @@ body {
 h1 {
   background-color: #0fb9b1;
   padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
   float: right;
   padding: .7em;
   font-size: medium;
-
+  border-radius: 10px;
 }
 
 

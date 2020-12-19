@@ -1,19 +1,20 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0px;
-  margin-top: 0;
+  /* width: 100%; */
+  /* margin-top: 0; */
 }
 
 h1 {
   background-color: #0fb9b1;
-  padding: 1em;
   display: flex;
   justify-content: space-between;
   margin: 0;
+  padding: .6em;
 }
 
 button {
-  float: right;
+  /* float: right; */
   padding: .7em;
   font-size: medium;
   border-radius: 10px;
@@ -21,11 +22,22 @@ button {
 }
 
 img {
-  margin: 0px;
+  /* margin: 0px; */
   /* display: flex; */
   /* background-size: cover; */
   width: 100%;
-  height: auto;
+  /* height: auto; */
+  z-index: 1;
+}
+
+.box {
+  float: left;
+  background-color: rgba(225, 225, 225, .9);
+  height: 100px;
+  width: 150px;
+  padding: 1em;
+  flex: auto;
+  z-index: 2;
 }
 
 /*

@@ -6,13 +6,22 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="nav is-not-visible">
         <h1 class="whats-for-dinner">What's for Dinner?</h1>
       </nav>
     </header>
-    <div>
-      <main>
-        <form id="error-message">
+    <div class="login-page">
+      <form class="login-form">
+        <h2 class="login-message">Please log in</h2>
+        <div class="input-box">
+          <input class="input-name" type="text" placeholder="First Name" name="first-name" required>
+          <button id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="home-view">
+      <main class='main is-not-visible'>
+        <form class="error-message is-not-visible">
           <h1 id="sorry">Sorry I don't know is not an option</h1>
           <button id="try-again">TRY AGAIN</button>
         </form>

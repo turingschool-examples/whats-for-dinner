@@ -76,9 +76,7 @@ function getMeal(currentChoice, inputMeal = null) {
       var randomMain = randomGenerator(mains);
       var randomDessert = randomGenerator(desserts);
 
-      randomMeal = `
-      ${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!
-    `
+      randomMeal = `${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert`
     }
   }
 
@@ -189,7 +187,7 @@ favoritesContainer.addEventListener('dblclick', function(e) {
   e.preventDefault();
 
   var deleteSlug = e.target.getAttribute('data-slug');
-  var result = makeTitle(deleteSlug);
+  var result = makeTitle(deleteSlug)
 
   for (let i = 0; i < favoriteRecipes.length; i++) {
     if (favoriteRecipes[i] === result) {
@@ -200,14 +198,8 @@ favoritesContainer.addEventListener('dblclick', function(e) {
 });
 
 // converts slug back into title
-// TODO look into not making the slug all lower case in the first place; might not need to do this
 function makeTitle(slug) {
-  var words = slug.split('-'); // split slug into array of words
-
-  for (var i = 0; i < words.length; i++) {
-    var word = words[i]; // each word in the array
-    words[i] = word.charAt(0).toUpperCase() + word.slice(1); // uppercase 1st, attach the rest
-  }
+  var words = slug.split('-');
   return words.join(' ');
 };
 

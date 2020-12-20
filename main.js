@@ -1,13 +1,12 @@
-// Global variables
 var cookButton = document.querySelector(".lets-cook");
-  var potImage = document.querySelector(".menu-box-image");
-console.log();
+var potImage = document.querySelector(".menu-box-image");
 
 cookButton.addEventListener('click', function() {
   potImage.classList.toggle("hidden");
   var foodType = document.querySelector(`input[type="radio"]:checked`);
   var foodList = grabArray(foodType.value);
-  buildFoodText(foodList);
+  var foodText = buildFoodText(foodList);
+  insertFoodText(foodText);
 });
 
 function grabArray(foodType) {
@@ -20,18 +19,19 @@ function grabArray(foodType) {
   if (foodType === 'dessert') {
     return desserts;
   }
-}
+};
 
 function buildFoodText(foodType) {
   var index = getRandomIndex(foodType);
-  console.log(index);
   var foodName = foodType[index];
-  console.log(foodName);
-  var mealText = `<h3 class="food-idea-display">You should make:</h3>
+  return `<h3 class="food-idea-display">You should make:</h3>
         <h4 class="food-idea-display">${foodName}!</h4>`;
+};
+
+function insertFoodText(foodText) {
   var messageLocation = document.querySelector("#messageLocation");
-  messageLocation.innerHTML = mealText;
-}
+  messageLocation.innerHTML = foodText;
+};
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);

@@ -38,8 +38,8 @@ h1 {
 .left-box {
   float: left;
   background-color: rgba(225, 225, 225, .9);
-  height: 40%;
-  width: 33%;
+  height: 350px;
+  width: 500px;
   padding: 1em;
   margin-left: 7%;
   margin-top: 5%;
@@ -48,17 +48,34 @@ h1 {
   position: relative;
 }
 
+.decider {
+  background-color: #0fb9b1;
+  padding: 1em;
+  margin: 1em;
+  font-size: medium;
+  border-radius: 10px;
+  border: 0px;
+}
+
 .right-box {
   float: right;
   background-color: rgba(225, 225, 225, .9);
-  height: 40%;
-  width: 33%;
+  height: 350px;
+  width: 500px;
   padding: 1em;
   margin-right: 7%;
   margin-top: 5%;
   flex: auto;
   z-index: 2;
   position: relative;
+}
+
+#cookpot {
+  height: 125px;
+  width: auto;
+  text-align: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 /*

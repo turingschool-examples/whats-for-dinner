@@ -9,7 +9,9 @@ var recipeContainer = document.getElementById('recipes-container');
 var favoritesContainer = document.getElementById('faves-list');
 var favoriteRecipes = [];
 
-// login button event listener -- hides login frame and shows left/right frames plus welcome and add recipe button in nav
+
+// *** Event listeners *** //
+
 loginButton.addEventListener('click', function(e) {
   e.preventDefault();
 
@@ -26,7 +28,6 @@ loginButton.addEventListener('click', function(e) {
   }
 })
 
-// left frame eventlistener -- detects selection from choices and then sends choice to getMeal()
 choiceSelector.addEventListener('click', function(e) {
   e.preventDefault();
 
@@ -40,22 +41,56 @@ choiceSelector.addEventListener('click', function(e) {
 
 });
 
-// window listener -- sets footer to hidden, as well as recipe container  and add recipe button so that when login is
-//  completed, they can be toggled
 window.addEventListener('load', function() {
   document.querySelector('footer').classList.add('hidden');
   recipeContainer.classList.add('hidden');
   addRecipeButton.classList.add('hidden');
 })
 
-// event listener for add recipe button in nav -- shows footer when clicked
 addRecipeButton.addEventListener('click', function(e) {
   e.preventDefault();
 
   document.querySelector('footer').classList.toggle('hidden');
 })
 
-// function to get meal, whether a current choice is made or if this is a new custom meal created by user
+favoritesContainer.addEventListener('dblclick', function(e) {
+  e.preventDefault();
+
+  var deleteSlug = e.target.getAttribute('data-slug');
+  var result = makeTitle(deleteSlug)
+
+  for (let i = 0; i < favoriteRecipes.length; i++) {
+    if (favoriteRecipes[i] === result) {
+      favoriteRecipes.splice(i, 1);
+    }
+  }
+  displayFavorites();
+});
+
+addNewSelector.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  var userInputType = document.querySelector('#user-recipe-type');
+  var userInputName = document.querySelector('#user-recipe-name');
+
+  if (document.forms['add-new-form']['new-name'].value === '') {
+    return alert('Please pick a valid category and/or provide a name for your delicious recipe. Thx.');
+  } else if (userInputType.value === 'side') {
+    sides.push(userInputName.value);
+  } else if (userInputType.value === 'main') {
+    mains.push(userInputName.value);
+  } else if (userInputType.value === 'dessert') {
+    desserts.push(userInputName.value);
+  } else {
+    return alert('Please pick a valid category and/or provide a name for your delicious recipe. Thx.');
+  }
+
+  getMeal(userInputType.value, userInputName.value);
+  document.getElementById('add-new').reset();
+  alert('Success! Your new recipe has been added to the database!');
+});
+
+// *** Helper functions *** //
 function getMeal(currentChoice, inputMeal = null) {
   var mealList = currentChoice + 's';
   var randomMeal;
@@ -95,37 +130,10 @@ function getMeal(currentChoice, inputMeal = null) {
   addFavorites(randomMeal);
 }
 
-// random number generator for meal types as well as welcome
 function randomGenerator(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// user input new recipe grabs value of fields and sends that to the right frame to show the new recipe
-// alerts prevent no category or empty fields
-addNewSelector.addEventListener('click', function(e) {
-  e.preventDefault();
-
-  var userInputType = document.querySelector('#user-recipe-type');
-  var userInputName = document.querySelector('#user-recipe-name');
-
-  if (document.forms['add-new-form']['new-name'].value === '') {
-    return alert('Please pick a valid category and/or provide a name for your delicious recipe. Thx.');
-  } else if (userInputType.value === 'side') {
-    sides.push(userInputName.value);
-  } else if (userInputType.value === 'main') {
-    mains.push(userInputName.value);
-  } else if (userInputType.value === 'dessert') {
-    desserts.push(userInputName.value);
-  } else {
-    return alert('Please pick a valid category and/or provide a name for your delicious recipe. Thx.');
-  }
-
-  getMeal(userInputType.value, userInputName.value);
-  document.getElementById('add-new').reset();
-  alert('Success! Your new recipe has been added to the database!');
-});
-
-// when user clicks hear, it turns red and the meal is added to the favorites array
 // TODO use MutationObserver() to detect favorites; might be able to connect this with a heart in the navbar
 function addFavorites(favoritedMeal) {
   checkFavorites();
@@ -155,7 +163,6 @@ function addFavorites(favoritedMeal) {
   });
 }
 
-// keeps track of the favorites array length and hides it if there isn't anything
 // TODO this could be added to the MutationObserver()
 function checkFavorites() {
   var favoritesButtonSelector = document.getElementById('favorites');
@@ -166,7 +173,6 @@ function checkFavorites() {
   }
 }
 
-// shows or hides the favorites and adds the data-slug to the recipe for later use when dblclick removes it from the favorites
 function displayFavorites() {
   var content = '';
 
@@ -182,28 +188,11 @@ function displayFavorites() {
   return favoritesContainer.innerHTML = content;
 }
 
-// remove selected recipe from favorites array and view when double clicked
-favoritesContainer.addEventListener('dblclick', function(e) {
-  e.preventDefault();
-
-  var deleteSlug = e.target.getAttribute('data-slug');
-  var result = makeTitle(deleteSlug)
-
-  for (let i = 0; i < favoriteRecipes.length; i++) {
-    if (favoriteRecipes[i] === result) {
-      favoriteRecipes.splice(i, 1);
-    }
-  }
-  displayFavorites();
-});
-
-// converts slug back into title
 function makeTitle(slug) {
   var words = slug.split('-');
   return words.join(' ');
 };
 
-// resets the pot when user deletes all recipes from favorites list
 function resetPot() {
   document.querySelector('.choice-list').reset();
   resultSelector.innerHTML = `<img id='cookpot' src=''./assets/cookpot.svg'>`;

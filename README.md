@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 What's for dinner? This application is a random meal picker. You roll the dice with what you'll 
 be eating for dinner tonight. Do ya feel lucky?? Well do ya?

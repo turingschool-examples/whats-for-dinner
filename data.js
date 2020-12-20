@@ -1,0 +1,73 @@
+var sideOptions = [
+  "Macaroni & Cheese",
+  "Mashed Potatoes",
+  "Green Beans",
+  "Rice",
+  "Steamed Vegetables",
+  "Baked Potato",
+  "Fries",
+  "Asparagus",
+  "Salad",
+  "Hummus",
+  "Biscuits",
+  "Brussel Sprouts",
+  "Corn",
+  "Cornbread",
+  "Garlic Bread",
+  "Lentils",
+  "Coleslaw",
+  "Peas",
+  "Fried Okra",
+  "Baked Beans",
+  "Mushroom Arancini"
+];
+
+
+var mainDishOptions = [
+  "Pot Roast",
+  "Cheeseburger",
+  "Lasagna",
+  "Yellow Curry",
+  "Beef Stroganoff",
+  "Shrimp Scampi",
+  "Stuffed Peppers",
+  "Chicken Sandwich",
+  "Prime Rib",
+  "Chicken Pot Pie",
+  "Pulled Pork",
+  "Chicken Parmesan",
+  "Kalleyah",
+  "Smoked Salmon",
+  "Carbonara",
+  "Burrito",
+  "Honey Glazed Ham",
+  "Chicken Casserole",
+  "Gnocchi",
+  "Stir-Fry",
+  "Sushi"
+];
+
+
+var dessertOptions = [
+  "Pudding",
+  "Brownies",
+  "Chocolate Chip Cookies",
+  "Apple Pie",
+  "Baklava",
+  "Buckeyes",
+  "Chocolate Cake",
+  "Cheesecake",
+  "Cupcakes",
+  "Peanut Brittle",
+  "Lava Cake",
+  "Doughnut",
+  "Ice Cream",
+  "Rootbeer Float",
+  "Banana Split",
+  "Cake Pop",
+  "Cotton Candy",
+  "Bunt Cake",
+  "Macadamia Nut Cookie",
+  "Pumpkin Pie",
+  "Fudge"
+];

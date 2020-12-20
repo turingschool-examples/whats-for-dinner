@@ -46,4 +46,5 @@ var desserts = [
   "Tart Tatin",
   "Croissants",
   "Eclairs",
+  "Hail Satan",
 ];

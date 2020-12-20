@@ -5,7 +5,12 @@ cookButton.addEventListener('click', function() {
   potImage.classList.toggle("hidden");
   var foodType = document.querySelector(`input[type="radio"]:checked`);
   var foodList = grabArray(foodType.value);
-  var foodText = buildFoodText(foodList);
+  if (foodList === 'meal') {
+    var foodText = buildFullMeal();
+  }
+  else {
+    var foodText = buildFoodText(foodList);
+  }
   insertFoodText(foodText);
 });
 
@@ -19,11 +24,21 @@ function grabArray(foodType) {
   if (foodType === 'dessert') {
     return desserts;
   }
+  if (foodType === 'meal') {
+    return 'meal';
+  }
 };
 
+function buildFullMeal() {
+  var sideMeal = side[getRandomIndex(side)];
+  var mainMeal = mains[getRandomIndex(mains)];
+  var dessertMeal = desserts[getRandomIndex(desserts)];
+  return `<h3 class="food-idea-display">You should make:</h3>
+        <h4 class="food-idea-display">${mainMeal} with a side of ${sideMeal} and ${dessertMeal} for dessert!</h4>`;
+}
+
 function buildFoodText(foodType) {
-  var index = getRandomIndex(foodType);
-  var foodName = foodType[index];
+  var foodName = foodType[getRandomIndex(foodType)];
   return `<h3 class="food-idea-display">You should make:</h3>
         <h4 class="food-idea-display">${foodName}!</h4>`;
 };
@@ -36,3 +51,7 @@ function insertFoodText(foodText) {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
+
+
+// if meal
+//

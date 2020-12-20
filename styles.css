@@ -42,7 +42,7 @@ nav {
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  height: 60%;
+  height: 63%;
   width: 84%;
   margin: auto;
   padding: 6% 0;
@@ -53,7 +53,7 @@ nav {
   background-color: rgba(225,225,225,.9);
   width: 40%;
   line-height: 2.7em;
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: 'Roboto', sans-serif;
   padding: 1em;
 
@@ -69,7 +69,7 @@ nav {
 
 .looking-for {
   padding: .2em;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .red-star {
@@ -83,7 +83,7 @@ nav {
   padding: 1em;
   border: none;
   width: 50%;
-  font-size: 1em;
+  font-size: .8em;
 }
 
 .pot {

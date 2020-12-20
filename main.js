@@ -1,4 +1,4 @@
-
+// Global Variables
 var choiceSelector = document.querySelector('input.cook-button');
 var resultSelector = document.querySelector('.result');
 var imgSelector = document.querySelector('img#cookpot');
@@ -9,6 +9,7 @@ var recipeContainer = document.getElementById('recipes-container');
 var favoritesContainer = document.getElementById('faves-list');
 var favoriteRecipes = [];
 
+// login button event listener -- hides login frame and shows left/right frames plus welcome and add recipe button in nav
 loginButton.addEventListener("click", function(e) {
   e.preventDefault();
 
@@ -25,6 +26,7 @@ loginButton.addEventListener("click", function(e) {
   }
 })
 
+// left frame eventlistener -- detects selection from choices and then sends choice to getMeal()
 choiceSelector.addEventListener("click", function(e) {
   e.preventDefault();
 
@@ -38,18 +40,22 @@ choiceSelector.addEventListener("click", function(e) {
 
 });
 
+// window listener -- sets footer to hidden, as well as recipe container  and add recipe button so that when login is
+//  completed, they can be toggled
 window.addEventListener("load", function() {
   document.querySelector('footer').classList.add('hidden');
   recipeContainer.classList.add('hidden');
   addRecipeButton.classList.add('hidden');
 })
 
+// event listener for add recipe button in nav -- shows footer when clicked
 addRecipeButton.addEventListener("click", function(e) {
   e.preventDefault();
 
   document.querySelector('footer').classList.toggle('hidden');
 })
 
+// function to get meal, whether a current choice is made or if this is a new custom meal created by user
 function getMeal(currentChoice, inputMeal = null) {
   var mealList = currentChoice + "s";
   var randomMeal;
@@ -91,10 +97,13 @@ function getMeal(currentChoice, inputMeal = null) {
   addFavorites(randomMeal);
 }
 
+// random number generator for meal types as well as welcome
 function randomGenerator(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// user input new recipe grabs value of fields and sends that to the right frame to show the new recipe
+// alert prevents no category or empty fields
 addNewSelector.addEventListener("click", function(e) {
   e.preventDefault();
 
@@ -107,9 +116,12 @@ addNewSelector.addEventListener("click", function(e) {
     mains.push(userInputName.value);
   } else if (userInputType.value === 'dessert') {
     desserts.push(userInputName.value);
+  } else if (document.forms["add-new-form"]['new-name'].value === "") {
+    alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
   } else {
-    return alert("Please pick a valid category. Thx.");
+    alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
   }
+
 
   getMeal(userInputType.value, userInputName.value);
   document.getElementById('add-new').reset();
@@ -118,6 +130,7 @@ addNewSelector.addEventListener("click", function(e) {
 
 function addFavorites(favoritedMeal) {
   checkFavorites();
+  var btn = document.getElementById('favorites');
 
   document.querySelector('i.fa-heart').addEventListener("click", function(e) {
     e.preventDefault();
@@ -131,7 +144,6 @@ function addFavorites(favoritedMeal) {
     }
     checkFavorites();
   });
-  var btn = document.getElementById('favorites');
 
   btn.addEventListener('click', function() {
     document.getElementById('faves-container').classList.toggle('hidden');

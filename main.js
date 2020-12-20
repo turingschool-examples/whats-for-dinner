@@ -103,31 +103,32 @@ function randomGenerator(arr) {
 }
 
 // user input new recipe grabs value of fields and sends that to the right frame to show the new recipe
-// alert prevents no category or empty fields
+// alerts prevent no category or empty fields TODO work on this error handling
 addNewSelector.addEventListener("click", function(e) {
   e.preventDefault();
 
   var userInputType = document.querySelector('#user-recipe-type');
   var userInputName = document.querySelector('#user-recipe-name');
 
-  if (userInputType.value === 'side') {
+  if (document.forms["add-new-form"]['new-name'].value === "") {
+    return alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
+  } else if (userInputType.value === 'side') {
     sides.push(userInputName.value);
   } else if (userInputType.value === 'main') {
     mains.push(userInputName.value);
   } else if (userInputType.value === 'dessert') {
     desserts.push(userInputName.value);
-  } else if (document.forms["add-new-form"]['new-name'].value === "") {
-    alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
   } else {
-    alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
+    return alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
   }
-
 
   getMeal(userInputType.value, userInputName.value);
   document.getElementById('add-new').reset();
   alert("Success! Your new recipe has been added to the database!");
 });
 
+// when user clicks hear, it turns red and the meal is added to the favorites array
+// TODO use MutationObserver() to detect favorites; might be able to connect this with a heart in the navbar
 function addFavorites(favoritedMeal) {
   checkFavorites();
   var btn = document.getElementById('favorites');
@@ -156,6 +157,8 @@ function addFavorites(favoritedMeal) {
   });
 }
 
+// keeps track of the favorites array length and hides it if there isn't anything
+// TODO this could be added to the MutationObserver()
 function checkFavorites() {
   var favoritesButtonSelector = document.getElementById('favorites');
 
@@ -163,9 +166,9 @@ function checkFavorites() {
     favoritesButtonSelector.removeAttribute('disabled');
     displayFavorites();
   }
-
 }
 
+// shows or hides the favorites and adds the data-slug to the recipe for later use when dblclick removes it from the favorites
 function displayFavorites() {
   var content = "";
 
@@ -181,6 +184,7 @@ function displayFavorites() {
   return favoritesContainer.innerHTML = content;
 }
 
+// remove selected recipe from favorites array and view when double clicked
 favoritesContainer.addEventListener('dblclick', function(e) {
   e.preventDefault();
 
@@ -195,6 +199,8 @@ favoritesContainer.addEventListener('dblclick', function(e) {
   displayFavorites();
 });
 
+// converts slug back into title
+// TODO look into not making the slug all lower case in the first place; might not need to do this
 function makeTitle(slug) {
   var words = slug.split('-'); // split slug into array of words
 
@@ -205,6 +211,7 @@ function makeTitle(slug) {
   return words.join(' ');
 };
 
+// resets the pot when user deletes all recipes from favorites list
 function resetPot() {
   document.querySelector('.choice-list').reset();
   resultSelector.innerHTML = `<img id="cookpot" src="./assets/cookpot.svg">`;

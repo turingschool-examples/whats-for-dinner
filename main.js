@@ -1,7 +1,3 @@
-// var sideRadio = document.querySelector('#side');
-// var mainDishRadio = document.querySelector('#mainDish');
-// var dessertRadio = document.querySelector('#dessert');
-// var entireMeal = document.querySelector('#entire-meal')
 var letsCookButton = document.querySelector('.lets-cook');
 var mealToMake = document.querySelector('#suggested-dish');
 var cookingPotImg= document.querySelector('.cooking-pot');
@@ -28,38 +24,37 @@ tryAgainButton.addEventListener('click', showErrorMessage);
 
 function delayLogin() {
   event.preventDefault();
-  document.querySelector('.input-box').style.display = "none"
-  document.querySelector('.login-message').innerText = `Hello ${loginName.value}!`
-  setTimeout(login, 3000);
+  if (loginName.value.length === 0) {
+    return;
+  } else {
+      setTimeout(login, 3000);
+      document.querySelector('.input-box').style.display = "none";
+      document.querySelector('.login-message').innerText = `Hello ${loginName.value}!`;
+    };
 }
 
 function login() {
-  // event.preventDefault();
-  if (loginName.value.length === 0) {
-    return;
-  }
   for (var i = 0; i < hiddenHomeView.length; i++) {
     if (!hiddenHomeView[i].className.includes("error-message")) {
       hiddenHomeView[i].classList.toggle("is-not-visible");
     };
   };
   loginPage.classList.add('is-not-visible');
-  header.innerText = `Whats for Dinner ${loginName.value}?`
+  header.innerText = `Whats for Dinner ${loginName.value}?`;
 };
 
 function suggestRecipe() {
   event.preventDefault();
   var buttonValue = [sides, mains, desserts]
-  for (var i = 0; i < radioButtons.length - 1; i++){
+  for (var i = 0; i < radioButtons.length; i++) {
     if (radioButtons[i].checked) {
       changeView();
-      mealToMake.innerText = pickRandomRecipe(buttonValue[i]) + "!";
+      return mealToMake.innerText = pickRandomRecipe(buttonValue[i]) + "!";
     } else if (radioButtons[3].checked) {
-      mealToMake.innerText = `${pickRandomRecipe(mains)} with a side of ${pickRandomRecipe(sides)} and ${pickRandomRecipe(desserts)} for dessert!`
-    } else {
-      showErrorMessage();
+       return mealToMake.innerText = `${pickRandomRecipe(mains)} with a side of ${pickRandomRecipe(sides)} and ${pickRandomRecipe(desserts)} for dessert!`;
     };
   };
+  showErrorMessage();
 };
 
 function clearResults() {
@@ -73,7 +68,6 @@ function clearResults() {
 function showErrorMessage() {
   event.preventDefault();
   errorMessage.classList.toggle("is-not-visible");
- // errorMessage.style.display = 'flex'
 };
 
 function changeView() {

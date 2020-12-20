@@ -101,7 +101,7 @@ function randomGenerator(arr) {
 }
 
 // user input new recipe grabs value of fields and sends that to the right frame to show the new recipe
-// alerts prevent no category or empty fields TODO work on this error handling
+// alerts prevent no category or empty fields
 addNewSelector.addEventListener('click', function(e) {
   e.preventDefault();
 

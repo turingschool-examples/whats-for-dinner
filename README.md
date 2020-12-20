@@ -1,7 +1,17 @@
 ## Overview
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+What's for dinner? This application is a random meal picker. You roll the dice with what you'll 
+be eating for dinner tonight. Do ya feel lucky?? Well do ya?
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+## Features
+* Login using your name. See a lovely welcome message!
+* Now you can search for random meal ideas; choose from Sides, Main courses, and Desserts -- or really 
+roll the dice by chosing the Entire Meal!
+* Once you see the option that's been chosen randomly for you, you can "heart" it to save to your 
+favorites. See your favorites any time by clicking the "Show my favorites" button (if it's not clickable, 
+  that means you don't have any faves yet -- get to clickin'!).
+* Now that you've got some favorites, you can see the list of them, but what if you remember that you don't 
+  have the stuff to make that meal?? Fear not, intrepid eater! You can delete it by double clicking on it! Once 
+  your favorites are all deleted, you will no longer see that favorites window -- so search some more and 
+  . . . get to clickin'!
+* You can even add your own ideas by clicking on the "Add a recipe" button up in the navigation bar. 

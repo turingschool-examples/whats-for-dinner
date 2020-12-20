@@ -48,3 +48,14 @@ var desserts = [
   "Croissants",
   "Eclairs"
 ];
+
+var welcomes = [
+  "Yay! You made it, ",
+  "Welcome, ",
+  "Well hello there, ",
+  "Welcome to the party, ",
+  "You're a realtime jingleblaster, ",
+  "You're an angry little elf, ",
+  "Swooooosh. ",
+  "Let's fix all your problems with a recipe, "
+]

@@ -7,4 +7,81 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+body {
+  background: url('file:///Users/whitneywilkes/turing/whats-for-dinner/assets/burger-friends.jpg') no-repeat center center fixed;
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  margin: 0;
+  padding: 0; 
+  overflow: hidden;
+      }
 
+header {
+  background-color: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 160%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 6%;
+  padding-left: 1%
+}
+
+.container-left {
+  display: flex;
+  position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 900;
+  width: auto;
+}
+
+.container-left > div {
+  display: flex;
+  align-items: center;
+  background-color: rgba(225, 225, 225, .9);
+  height: 45vh;
+  margin: auto;
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 160%;
+  white-space: pre-wrap;
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  order: -1;
+  position: sticky;
+	top: 620px;
+  left: 100px;
+}
+
+.container-right {
+  display: flex;
+  position: absolute;
+	top:0;
+	bottom: 0;
+	left: 900; 
+	right: 0;
+  width: auto;
+}
+
+.add-cookpot-image {
+  display: flex;
+  align-items: center;
+  background-color: rgba(225, 225, 225, .9);
+  height: 45vh;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 160%;
+  white-space: pre-wrap;
+  }

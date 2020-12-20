@@ -54,6 +54,8 @@ h1 {
 }
 
  .item-box {
+   font-size: 25px;
+   font-weight: bold;
    vertical-align: center;
    text-align: center;
    background-color: rgba(225, 225, 225, .9);
@@ -67,13 +69,18 @@ h1 {
 .meal-options-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  font-size: 20px;
+  font-weight: normal;
 }
 
  .lets-cook-button {
+   font-size: 15px;
+   border: 1px;
+   border-radius: 4px;
    background-color: #0fb9b1;
    height: 50px;
    width: 200px;
+
  }
 
  .cookpot-box {

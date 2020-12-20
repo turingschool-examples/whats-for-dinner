@@ -13,9 +13,10 @@ function getRandomIndex(array) {
 
 form.addEventListener("submit", getRandomDish);
 
-function getRandomDish(e) {
+function getRandomDish() {
   cookPotImage.classList.add("hidden");
-  cookPotBox.innerHTML += `<section class="cookpot-meal"></>
+  cookPotBox.innerHTML += `<section>
+    <p class="cookpot-meal"></p>
     <p id="random-meal-choice"></p>
     </section>`;
   event.preventDefault();
@@ -23,15 +24,12 @@ function getRandomDish(e) {
   var randomMealChoice = document.querySelector("#random-meal-choice");
   if (sideRadio.checked == true) {
       message.innerText = "You should make:";
-      var randomChoice = getRandomIndex(sideOptions);
-      randomMealChoice.innerText = sideOptions[randomChoice];
+      randomMealChoice.innerText = sideOptions[getRandomIndex(sideOptions)];
   } else if (mainDishRadio.checked == true) {
       message.innerText = "You should make:";
-      var randomChoice = getRandomIndex(mainDishOptions);
-      randomMealChoice.innerText = mainDishOptions[randomChoice];
+      randomMealChoice.innerText = mainDishOptions[getRandomIndex(mainDishOptions)];
   } else if (dessertRadio.checked == true) {
       message.innerText = "You should make:";
-      var randomChoice = getRandomIndex(dessertOptions);
-      randomMealChoice.innerText = dessertOptions[randomChoice];
+      randomMealChoice.innerText = dessertOptions[getRandomIndex(dessertOptions)];
   }
 };

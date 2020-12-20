@@ -88,10 +88,11 @@ h1 {
 }
 
  .cookpot-box {
-   /* background-image: url("./assets/cookpot.svg"); */
    background-position: center;
    background-repeat: no-repeat;
    background-color: rgba(225, 225, 225, .9);
+   vertical-align: center;
+   text-align: center;
    opacity: 90%;
    padding: 20px;
    margin: 35px;
@@ -101,4 +102,13 @@ h1 {
 
 .hidden {
   background-image: none;
+}
+
+.cookpot-meal {
+  font-style: italic;
+}
+
+#random-meal-choice {
+  font-size: 30px;
+  font-weight: bold;
 }

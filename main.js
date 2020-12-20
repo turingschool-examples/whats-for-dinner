@@ -47,11 +47,12 @@ function suggestRecipe() {
   event.preventDefault();
   var buttonValue = [sides, mains, desserts]
   for (var i = 0; i < radioButtons.length; i++) {
-    if (radioButtons[i].checked) {
+    if (radioButtons[3].checked) {
       changeView();
-      return mealToMake.innerText = pickRandomRecipe(buttonValue[i]) + "!";
-    } else if (radioButtons[3].checked) {
-       return mealToMake.innerText = `${pickRandomRecipe(mains)} with a side of ${pickRandomRecipe(sides)} and ${pickRandomRecipe(desserts)} for dessert!`;
+      return mealToMake.innerText = `${pickRandomRecipe(mains)} with a side of ${pickRandomRecipe(sides)} and ${pickRandomRecipe(desserts)} for dessert!`;
+    } else if (radioButtons[i].checked) {
+        changeView();
+       return mealToMake.innerText = pickRandomRecipe(buttonValue[i]) + "!";
     };
   };
   showErrorMessage();

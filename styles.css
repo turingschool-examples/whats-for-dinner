@@ -88,6 +88,19 @@ h1 {
   padding: 6em;
 }
 
+.headline,
+.make-this {
+  display: flex;
+  justify-content: center;
+}
+
+.headline {
+  font-size: medium;
+}
+
+.make-this {
+  font-size: xx-large;
+}
 /*
 COLORS
 teal - #0fb9b1;

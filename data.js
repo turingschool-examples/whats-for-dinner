@@ -9,7 +9,7 @@ var sides = [
   'Pancetta, Sweet Potato and Sage Baked Risotto',
   'Ricotta and Parmesan Fritters',
   'Coconut Rice',
-  'Sausage Stuffed Mushrooms'
+  'Sausage Stuffed Mushrooms',
   'Tomato Vegetable Casserole',
   'Parmesan Peas',
   'Creamed Pearl Onions',
@@ -17,7 +17,7 @@ var sides = [
   'Butternut Squash Mac and Cheese',
   'Sweet Potato Poutine',
   'Cuban Black Beans',
-  'Steamed Mussels in Garden Tomato Sauce'
+  'Steamed Mussels in Garden Tomato Sauce',
   'Baked Bean Falafel',
   'Quick Pickles'
 ];
@@ -41,7 +41,7 @@ var mainDishes = [
   'Chicken Pad Thai',
   'Classic Chicken Laska',
   'Chicken and Herb Risoni',
-  'Coconut and Lime Roasted Chicken'
+  'Coconut and Lime Roasted Chicken',
   'Grandma\'s Baked Eggplant Parmesan',
   'Pasta Puttanesca'
 ];
@@ -63,4 +63,4 @@ var desserts = [
   'Blackberry Cheesecake Pots',
   'Chocolate Meringue Cake',
   'Banana Tarte Tatin & Malai Ice Cream'
-]
+];

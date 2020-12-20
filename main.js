@@ -1,7 +1,15 @@
+// ⤵ global variables
 var sideRadio = document.querySelector('#Side');
 var mainRadio = document.querySelector('#Main-dish');
 var dessertRadio = document.querySelector('#Dessert');
 var mealRadio = document.querySelector('#Entire-meal');
+var addRecButton = document.querySelector('.add-recipe');
+var selectionButton = document.querySelector('.selector');
+var cookpot = document.querySelector('.cookpot');
+
+// ⤵ event listeners
+sideRadio.addEventListener('click .selector', showRandomSide);
+
 
 // Build a function that will randomly generate either a Side, Main Dish, or Dessert, depending upon which radio button is clicked
   // need arrays for [Sides], [Main Dish], [Dessert]
@@ -13,7 +21,22 @@ function generateRandomIndex(array) {
   return randomIndex;
 };
 
+function showRandomSide() {
+  cookpot.classList.add('hidden');
+  recipe.innerText = generateRandomIndex(sides);
+};
 
+function showRandomMain() {
+  cookpot.classList.add('hidden');
+};
+
+function showRandomDessert() {
+  cookpot.classList.add('hidden');
+};
+
+// function showRandomMeal() {
+//   cookpot.classList.add('hidden');
+// }
 
 // when the [LET'S COOK] button is clicked, display randomly generated recipe name
 // Recipe name should appear below the phrase "You should make:" - styles medium size font, italic

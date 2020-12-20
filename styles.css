@@ -7,23 +7,24 @@ body {
 
 nav {
   background-color: #0fb9b1;
-  height: 8%;
+  height: 8.5%;
 
 }
 
 .page-name {
-  font-size: 1.55em;
+  font-size: 2.5em;
   font-family: 'Roboto', sans-serif;
   border: 0 auto;
   padding: .7em;
 
 }
 
-.add-recipie {
+.add-recipe {
   float: right;
   border-radius: .5em;
-  padding: .5em;
+  padding: .6em;
   border: none;
+  font-size: .6em;
 
 }
 

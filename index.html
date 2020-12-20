@@ -8,12 +8,36 @@
   <body>
 
   <nav>
-    <h1>What's for Dinner? <button>ADD A RECIPE</button></h1>
+    <h2>What's for Dinner?</h2>
+    <button>ADD A RECIPE</button>
   </nav>
 
   <main>
-    <div class="box">left box</div>
-    <img src="./assets/burger-friends.jpg" alt="An overhead image of a dinner table with plates of food - burgers, french fries, and grilled vegetables.">
+    <section class="left-box">
+      <h1>What are you looking for?</h1><h1 id="asterisk">*</h1>
+      <section class="selections">
+        <div>
+           <input type="radio" id="Side" name="drone" value="side">
+           <label for="Side">Side</label>
+        </div>
+        <div>
+           <input type="radio" id="Main-Dish" name="drone" value="main-dish">
+           <label for="Main-Dish">Main Dish</label>
+        </div>
+        <div>
+           <input type="radio" id="Dessert" name="drone" value="dessert">
+           <label for="Dessert">Dessert</label>
+        </div>
+        <div>
+           <input type="radio" id="Entire-meal" name="drone" value="entire-eal">
+           <label for="Etire-meal">Entire Meal</label>
+        </div>
+      </section>  
+      <button class="decider">LET'S COOK!</button>
+    </section>
+    <section class="right-box">
+      <img class="cookpot" src="./assets/cookpot.svg">
+    </section>
   </main>
 
   </body>

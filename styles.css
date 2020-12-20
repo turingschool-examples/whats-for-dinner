@@ -1,43 +1,91 @@
 body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
-  /* width: 100%; */
-  /* margin-top: 0; */
+  margin-top: auto;
+  width: 100%;
 }
 
-h1 {
+nav {
   background-color: #0fb9b1;
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: .6em;
+  padding-left: 2%;
 }
 
 button {
-  /* float: right; */
   padding: .7em;
+  margin: 1em;
   font-size: medium;
   border-radius: 10px;
   border: 0px;
+  background-color: #efefef;
 }
 
-img {
-  /* margin: 0px; */
-  /* display: flex; */
-  /* background-size: cover; */
-  width: 100%;
-  /* height: auto; */
-  z-index: 1;
+main {
+
 }
 
-.box {
+h1 {
+  display: inline;
+}
+
+#asterisk{
+  color: red;
+}
+
+.left-box {
   float: left;
   background-color: rgba(225, 225, 225, .9);
-  height: 100px;
-  width: 150px;
+  height: 350px;
+  width: 500px;
   padding: 1em;
-  flex: auto;
-  z-index: 2;
+  margin-left: 7%;
+  margin-top: 5%;
+  /* flex: auto; */
+  /* z-index: 2; */
+  /* position: relative; */
+}
+
+.selections {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 2.5em;
+}
+
+.decider {
+  background-color: #0fb9b1;
+  border-color: blue;
+  border-width: 2px;
+  width: 160px;
+  /* margin: 1em; */
+  font-size: small;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.right-box {
+  float: right;
+  background-color: rgba(225, 225, 225, .9);
+  height: 350px;
+  width: 500px;
+  padding: 1em;
+  margin-right: 7%;
+  margin-top: 5%;
+  /* flex: auto; */
+  /* z-index: 2; */
+  /* position: relative; */
+}
+
+.cookpot {
+  display: flex;
+  justify-content: center;
+  height: 40%;
+  width: 40%;
+  margin: auto;
+  padding: 6em;
 }
 
 /*

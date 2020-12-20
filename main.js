@@ -1,0 +1,8 @@
+// Build a function that will randomly generate either a Side, Main Dish, or Dessert, depending upon which radio button is clicked
+  // need arrays for [Sides], [Main Dish], [Dessert]
+
+// when the [LET'S COOK] button is clicked, display randomly generated recipe name
+// Recipe name should appear below the phrase "You should make:" - styles medium size font, italic
+// Recipe name should appear in large font with an '!' at the end
+// Cookpot icon should disappear
+// [CLEAR] button should appear

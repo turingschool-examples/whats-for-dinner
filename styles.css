@@ -58,3 +58,41 @@ nav ul li button {
   font-family: 'Roboto', sans-serif;
 
 }
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+
+}
+
+form {
+  height: 400px;
+  width: 500px;
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  list-style: none;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 15%;
+  margin-right: 50%;
+  padding: 25% 10% 10% 25%;
+}
+
+.cookpotbox {
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  height: 580px;
+  width: 650px;
+  margin-top: 3.5%;
+  background-image: url("/assets/cookpot.svg");
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 40%;
+  width: 40%;
+}

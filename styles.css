@@ -67,8 +67,13 @@ nav {
 
 }
 
-h2 {
+.looking-for {
   padding: .2em;
+  font-size: 2em;
+}
+
+.red-star {
+  color: #ee5253;
 }
 
 .lets-cook {

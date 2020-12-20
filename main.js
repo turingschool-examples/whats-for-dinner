@@ -10,7 +10,7 @@ var favoritesContainer = document.getElementById('faves-list');
 var favoriteRecipes = [];
 
 // login button event listener -- hides login frame and shows left/right frames plus welcome and add recipe button in nav
-loginButton.addEventListener("click", function(e) {
+loginButton.addEventListener('click', function(e) {
   e.preventDefault();
 
   var userName = document.getElementById('user-name').value;
@@ -22,18 +22,18 @@ loginButton.addEventListener("click", function(e) {
     document.getElementById('auth-container').classList.add('hidden');
     document.querySelector('.welcome').innerHTML = `${randomWelcome} ${userName}!`;
   } else {
-    alert("You must enter a name to enter the site.");
+    alert('You must enter a name to enter the site.');
   }
 })
 
 // left frame eventlistener -- detects selection from choices and then sends choice to getMeal()
-choiceSelector.addEventListener("click", function(e) {
+choiceSelector.addEventListener('click', function(e) {
   e.preventDefault();
 
-  var currentChoice = document.querySelector('input[name="choice"]:checked');
+  var currentChoice = document.querySelector("input[name='choice']:checked");
 
   if (currentChoice === null) {
-    return alert("Please pick a valid category. Thx.");
+    return alert('Please pick a valid category. Thx.');
   } else {
     getMeal(currentChoice.value);
   }
@@ -42,14 +42,14 @@ choiceSelector.addEventListener("click", function(e) {
 
 // window listener -- sets footer to hidden, as well as recipe container  and add recipe button so that when login is
 //  completed, they can be toggled
-window.addEventListener("load", function() {
+window.addEventListener('load', function() {
   document.querySelector('footer').classList.add('hidden');
   recipeContainer.classList.add('hidden');
   addRecipeButton.classList.add('hidden');
 })
 
 // event listener for add recipe button in nav -- shows footer when clicked
-addRecipeButton.addEventListener("click", function(e) {
+addRecipeButton.addEventListener('click', function(e) {
   e.preventDefault();
 
   document.querySelector('footer').classList.toggle('hidden');
@@ -57,7 +57,7 @@ addRecipeButton.addEventListener("click", function(e) {
 
 // function to get meal, whether a current choice is made or if this is a new custom meal created by user
 function getMeal(currentChoice, inputMeal = null) {
-  var mealList = currentChoice + "s";
+  var mealList = currentChoice + 's';
   var randomMeal;
 
   if (inputMeal !== null) {
@@ -65,13 +65,13 @@ function getMeal(currentChoice, inputMeal = null) {
       ${inputMeal}
     `
   } else {
-    if (mealList === "sides") {
+    if (mealList === 'sides') {
       randomMeal = randomGenerator(sides);
-    } else if (mealList === "mains") {
+    } else if (mealList === 'mains') {
       randomMeal = randomGenerator(mains);
-    } else if (mealList === "desserts") {
+    } else if (mealList === 'desserts') {
       randomMeal = randomGenerator(desserts);
-    } else if (mealList === "meals") {
+    } else if (mealList === 'meals') {
       var randomSide = randomGenerator(sides);
       var randomMain = randomGenerator(mains);
       var randomDessert = randomGenerator(desserts);
@@ -83,13 +83,13 @@ function getMeal(currentChoice, inputMeal = null) {
   imgSelector.classList.add('hidden');
 
   resultSelector.innerHTML = `
-      <span class="heart">
-        <i class="fas fa-heart"></i>
+      <span class='heart'>
+        <i class='fas fa-heart'></i>
       </span>
-      <article id="suggestion">
-        <p class="suggestion-text">You should totally make: </p>
+      <article id='suggestion'>
+        <p class='suggestion-text'>You should totally make: </p>
         <h3>${randomMeal}</h3>
-        <button id ="favorites" class="btn" disabled>Show my favorites</button>
+        <button id ='favorites' class='btn' disabled>Show my favorites</button>
       </article>
     `
   addFavorites(randomMeal);
@@ -102,14 +102,14 @@ function randomGenerator(arr) {
 
 // user input new recipe grabs value of fields and sends that to the right frame to show the new recipe
 // alerts prevent no category or empty fields TODO work on this error handling
-addNewSelector.addEventListener("click", function(e) {
+addNewSelector.addEventListener('click', function(e) {
   e.preventDefault();
 
   var userInputType = document.querySelector('#user-recipe-type');
   var userInputName = document.querySelector('#user-recipe-name');
 
-  if (document.forms["add-new-form"]['new-name'].value === "") {
-    return alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
+  if (document.forms['add-new-form']['new-name'].value === '') {
+    return alert('Please pick a valid category and/or provide a name for your delicious recipe. Thx.');
   } else if (userInputType.value === 'side') {
     sides.push(userInputName.value);
   } else if (userInputType.value === 'main') {
@@ -117,12 +117,12 @@ addNewSelector.addEventListener("click", function(e) {
   } else if (userInputType.value === 'dessert') {
     desserts.push(userInputName.value);
   } else {
-    return alert("Please pick a valid category and/or provide a name for your delicious recipe. Thx.");
+    return alert('Please pick a valid category and/or provide a name for your delicious recipe. Thx.');
   }
 
   getMeal(userInputType.value, userInputName.value);
   document.getElementById('add-new').reset();
-  alert("Success! Your new recipe has been added to the database!");
+  alert('Success! Your new recipe has been added to the database!');
 });
 
 // when user clicks hear, it turns red and the meal is added to the favorites array
@@ -131,7 +131,7 @@ function addFavorites(favoritedMeal) {
   checkFavorites();
   var btn = document.getElementById('favorites');
 
-  document.querySelector('i.fa-heart').addEventListener("click", function(e) {
+  document.querySelector('i.fa-heart').addEventListener('click', function(e) {
     e.preventDefault();
     document.querySelector('i.fa-heart').classList.toggle('red');
 
@@ -147,10 +147,10 @@ function addFavorites(favoritedMeal) {
   btn.addEventListener('click', function() {
     document.getElementById('faves-container').classList.toggle('hidden');
 
-    if (btn.innerHTML === "Show my favorites") {
-      document.getElementById('favorites').innerHTML = "Hide my favorites";
-    } else if (btn.innerHTML === "Hide my favorites") {
-      document.getElementById('favorites').innerHTML = "Show my favorites";
+    if (btn.innerHTML === 'Show my favorites') {
+      document.getElementById('favorites').innerHTML = 'Hide my favorites';
+    } else if (btn.innerHTML === 'Hide my favorites') {
+      document.getElementById('favorites').innerHTML = 'Show my favorites';
     }
   });
 }
@@ -168,7 +168,7 @@ function checkFavorites() {
 
 // shows or hides the favorites and adds the data-slug to the recipe for later use when dblclick removes it from the favorites
 function displayFavorites() {
-  var content = "";
+  var content = '';
 
   if (favoriteRecipes.length < 1) {
     document.getElementById('faves-container').classList.add('hidden');
@@ -177,7 +177,7 @@ function displayFavorites() {
 
   for (let i = 0; i < favoriteRecipes.length; i++) {
     var slug = favoriteRecipes[i].split(' ').join('-');
-    content += `<li class="slugified" data-slug="${slug}">${favoriteRecipes[i]}</li>`
+    content += `<li class='slugified' data-slug='${slug}'>${favoriteRecipes[i]}</li>`
   }
   return favoritesContainer.innerHTML = content;
 }
@@ -206,6 +206,6 @@ function makeTitle(slug) {
 // resets the pot when user deletes all recipes from favorites list
 function resetPot() {
   document.querySelector('.choice-list').reset();
-  resultSelector.innerHTML = `<img id="cookpot" src="./assets/cookpot.svg">`;
+  resultSelector.innerHTML = `<img id='cookpot' src=''./assets/cookpot.svg'>`;
 };
 

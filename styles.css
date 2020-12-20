@@ -83,8 +83,12 @@ h1 {
 
  }
 
+.cookpot-image {
+  background-image: url("./assets/cookpot.svg");
+}
+
  .cookpot-box {
-   background-image: url("./assets/cookpot.svg");
+   /* background-image: url("./assets/cookpot.svg"); */
    background-position: center;
    background-repeat: no-repeat;
    background-color: rgba(225, 225, 225, .9);
@@ -94,3 +98,7 @@ h1 {
    width: 150vw;
    height: 46vh;
  }
+
+.hidden {
+  background-image: none;
+}

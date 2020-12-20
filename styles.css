@@ -42,16 +42,17 @@ nav {
   position: relative;
   z-index: 2;
   height: 30%;
-  width: 70%;
+  width: 80%;
   margin: auto;
-  padding: 20% 0;
+  padding: 6% 0;
 
 }
 
 .left {
   background-color: rgba(225,225,225,.9);
   width: 40%;
-  font-size: 1.5em;
+  line-height: 2em;
+  font-size: .9em;
   font-family: 'Roboto', sans-serif;
   padding: 1em;
 
@@ -63,8 +64,17 @@ nav {
 
 }
 
+h2 {
+  padding: 1em;
+}
+
 .lets-cook {
   background-color: #0fb9b1;
+  float: left;
+  border-radius: .5em;
+  padding: 1em;
+  border: none;
+  width: 50%;
 }
 
 /*

@@ -1,6 +1,7 @@
-var sideRadio = document.querySelector('#side');
-var mainDishRadio = document.querySelector('#mainDish');
-var dessertRadio = document.querySelector('#dessert');
+// var sideRadio = document.querySelector('#side');
+// var mainDishRadio = document.querySelector('#mainDish');
+// var dessertRadio = document.querySelector('#dessert');
+// var entireMeal = document.querySelector('#entire-meal')
 var letsCookButton = document.querySelector('.lets-cook');
 var mealToMake = document.querySelector('#suggested-dish');
 var cookingPotImg= document.querySelector('.cooking-pot');
@@ -48,18 +49,17 @@ function login() {
 
 function suggestRecipe() {
   event.preventDefault();
-  if (sideRadio.checked) {
-    changeView();
-    mealToMake.innerText =  pickRandomRecipe(sides) + "!";
-  } else if (mainDishRadio.checked) {
-    changeView();
-    mealToMake.innerText = pickRandomRecipe(mains) + "!";
-  } else if(dessertRadio.checked){
-    changeView();
-    mealToMake.innerText = pickRandomRecipe(desserts) + "!";
-  } else {
-    showErrorMessage()
-  }
+  var buttonValue = [sides, mains, desserts]
+  for (var i = 0; i < radioButtons.length - 1; i++){
+    if (radioButtons[i].checked) {
+      changeView();
+      mealToMake.innerText = pickRandomRecipe(buttonValue[i]) + "!";
+    } else if (radioButtons[3].checked) {
+      mealToMake.innerText = `${pickRandomRecipe(mains)} with a side of ${pickRandomRecipe(sides)} and ${pickRandomRecipe(desserts)} for dessert!`
+    } else {
+      showErrorMessage();
+    };
+  };
 };
 
 function clearResults() {

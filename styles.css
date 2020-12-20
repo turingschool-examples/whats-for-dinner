@@ -94,11 +94,15 @@ h1 {
 
 .img2 {
     max-width: auto;
-    max-height: 33%;
-    margin-top: 33%; 
+    max-height: 5%;
+    margin-top: 5%; 
 }
 
-
+/* .suggestion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    display: none;
+} */
 
 
 

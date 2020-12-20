@@ -35,13 +35,26 @@ h1 {
   color: red;
 }
 
-.box {
+.left-box {
   float: left;
   background-color: rgba(225, 225, 225, .9);
-  height: 33%;
+  height: 40%;
   width: 33%;
   padding: 1em;
   margin-left: 7%;
+  margin-top: 5%;
+  flex: auto;
+  z-index: 2;
+  position: relative;
+}
+
+.right-box {
+  float: right;
+  background-color: rgba(225, 225, 225, .9);
+  height: 40%;
+  width: 33%;
+  padding: 1em;
+  margin-right: 7%;
   margin-top: 5%;
   flex: auto;
   z-index: 2;

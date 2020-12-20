@@ -117,3 +117,7 @@ img {
 span {
   color: #ee5253;
 }
+
+.hidden {
+  display: none;
+}

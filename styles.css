@@ -69,22 +69,24 @@ main {
 }
 
 form {
-  height: 400px;
-  width: 500px;
+  font-family: 'Roboto', sans-serif;
+  height: 450px;
+  width: 550px;
   display: flex;
   background-color: rgba(225, 225, 225, .9);
   list-style: none;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
   margin-top: 15%;
   margin-right: 50%;
-  padding: 25% 10% 10% 25%;
+  padding: 15% 10% 10% 10%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 .cookpotbox {
   display: flex;
   background-color: rgba(225, 225, 225, .9);
-  height: 580px;
+  height: 590px;
   width: 650px;
   margin-top: 3.5%;
   background-image: url("/assets/cookpot.svg");
@@ -95,4 +97,24 @@ form {
 img {
   height: 40%;
   width: 40%;
+}
+
+.question {
+  font-size: 200%;
+  font-weight: bolder;
+  margin-bottom: 10%;
+  padding-top: 0%;
+  padding-right: 25%;
+}
+
+ #submit-button{
+  background-color: #0fb9b1;
+  border-radius: 5px;
+  margin-top: 2%;
+  height: 10%;
+  width: 40%;
+  border: none;
+}
+span {
+  color: #ee5253;
 }

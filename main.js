@@ -57,6 +57,7 @@ function getRandomIndex(array) {
 
 function letsCook() {
 event.preventDefault()
+var dishesText = document.querySelector(".dishes-text")
 var dishText = document.querySelector(".dish-text")
 var image = document.querySelector("img")
 var side = document.querySelector("#Side");
@@ -66,6 +67,13 @@ var entireMeal = document.querySelector("#Entire");
 side.value = sides[getRandomIndex(sides)];
 main.value = mains[getRandomIndex(mains)];
 dessert.value = desserts[getRandomIndex(desserts)];
+entireMeal.value = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`;
+dishText.classList.remove('hidden');
+dishesText.classList.remove('hidden');
 image.classList.add('hidden');
-dishText.classList.remove('hidden')
+var meal = document.getElementsByName('meal')
+for (var i = 0; i < meal.length; i++) {
+  if (meal[i].checked)
+  dishesText.innerHTML = meal[i].value;
+  }
 }

@@ -66,6 +66,10 @@ h1 {
    height: 50vh;
  }
 
+ sup {
+   color: #ee5253;
+ }
+
 .meal-options-form {
   display: flex;
   flex-direction: column;
@@ -78,9 +82,9 @@ h1 {
    border: 1px;
    border-radius: 4px;
    background-color: #0fb9b1;
-   height: 50px;
-   width: 200px;
-
+   height: 40px;
+   width: 220px;
+   margin-top: 30px;
  }
 
 .cookpot-image {

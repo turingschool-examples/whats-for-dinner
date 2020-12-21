@@ -195,6 +195,6 @@ function makeTitle(slug) {
 
 function resetPot() {
   document.querySelector('.choice-list').reset();
-  resultSelector.innerHTML = `<img id='cookpot' src=''./assets/cookpot.svg'>`;
+  resultSelector.innerHTML = `<img id='cookpot' src='./assets/cookpot.svg'>`;
 };
 

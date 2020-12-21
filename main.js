@@ -67,14 +67,14 @@ var entireMeal = document.querySelector("#Entire");
 side.value = sides[getRandomIndex(sides)];
 main.value = mains[getRandomIndex(mains)];
 dessert.value = desserts[getRandomIndex(desserts)];
-entireMeal.value = `${sides[getRandomIndex(sides)]},
-${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`;
+entireMeal.value = `${mains[getRandomIndex(mains)]}, with a side of
+${sides[getRandomIndex(sides)]}, and ${desserts[getRandomIndex(desserts)]} for dessert`;
 dishText.classList.remove('hidden');
 dishesText.classList.remove('hidden');
 image.classList.add('hidden');
 var meal = document.getElementsByName('meal')
 for (var i = 0; i < meal.length; i++) {
   if (meal[i].checked)
-  dishesText.innerHTML = meal[i].value;
+  dishesText.innerHTML = `${meal[i].value}!`;
   }
 }

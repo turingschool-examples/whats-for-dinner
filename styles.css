@@ -84,6 +84,7 @@ form {
 }
 
 .cookpotbox {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   background-color: rgba(225, 225, 225, .9);
   height: 590px;
@@ -91,6 +92,8 @@ form {
   margin-top: 3.5%;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 img {
@@ -120,4 +123,17 @@ span {
 
 .hidden {
   display: none;
+}
+
+.dish-text {
+  font-size: 125%;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+.dishes-text {
+  font-weight: bolder;
+  font-size: 200%;
+  text-align: center;
+  padding: 0% 10% 0% 10%;
 }

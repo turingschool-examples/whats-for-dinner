@@ -21,6 +21,7 @@ function getRandomNumber(array) {
 function getRandomDish() {
   var randomDish;
   var randomNum;
+  var entireMeal;
   var userInput;
   var dishString = '';
   for (var i = 0; i < radios.length; i++) {  
@@ -29,7 +30,23 @@ function getRandomDish() {
     }  
   };
 
-  randomNum = getRandomNumber(food[userInput])
-  randomDish = food[userInput][randomNum]
-  console.log(randomDish)
+  if (userInput === 'entire-meal') {
+    entireMeal = food['main'][(getRandomNumber(food['main']))] + 
+      " with a side of " +
+      food['side'][(getRandomNumber(food['side']))] + 
+      " and " +  
+      food['dessert'][(getRandomNumber(food['dessert']))] + " for dessert!"
+
+    document.querySelector('h2').innerHTML = entireMeal;  
+
+  } else {
+    randomNum = getRandomNumber(food[userInput]);
+    randomDish = food[userInput][randomNum];
+    dishString = `${randomDish}!`;
+    document.querySelector('h2').innerHTML = dishString;
+  }
+  document.querySelector('.suggestion').style.display = 'block';
+  document.querySelector('.img2').style.display = 'none'; 
 };
+
+

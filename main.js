@@ -67,7 +67,8 @@ var entireMeal = document.querySelector("#Entire");
 side.value = sides[getRandomIndex(sides)];
 main.value = mains[getRandomIndex(mains)];
 dessert.value = desserts[getRandomIndex(desserts)];
-entireMeal.value = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`;
+entireMeal.value = `${sides[getRandomIndex(sides)]},
+${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`;
 dishText.classList.remove('hidden');
 dishesText.classList.remove('hidden');
 image.classList.add('hidden');

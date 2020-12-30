@@ -1,20 +1,12 @@
 //////////////////////////////////////
-// Global variables
-//////////////////////////////////////  
-var side = document.querySelector('#side');
-var main = document.querySelector('#main-dish');
-var dessert = document.querySelector('#dessert');
-var meal = document.querySelector('#entire-meal');
-var cookButton = document.querySelector('.button2');
-var radios = document.getElementsByName('dish');
-
-//////////////////////////////////////
 // Event Listener
 //////////////////////////////////////
+var cookButton = document.querySelector('.button2');
+
 cookButton.addEventListener('click', function(event) {
   event.preventDefault();
   getRandomDish();
-})
+});
 
 //////////////////////////////////////
 // Functions
@@ -23,10 +15,11 @@ cookButton.addEventListener('click', function(event) {
 // Retrieve random number from array 
 function getRandomNumber(array) {
   return Math.floor(Math.random() * array.length);
-}
+};
 
 // Return radio button input and access the appropriate array 
 function getRandomDish() {
+  var radios = document.getElementsByName('dish');
   var randomDish;
   var randomNum;
   var userInput;
@@ -41,26 +34,34 @@ function getRandomDish() {
     if (radios[i].checked) {
       userInput = radios[i].id;
     }  
-  }
+  };
 
   // Display dish or entire meal based on user input 
-  if (userInput === 'entire-meal') {
+  function displayEntireMeal() {
     randomMain = food.main[(getRandomNumber(food.main))];
     randomSide = food.side[(getRandomNumber(food.side))];
     randomDessert = food.dessert[(getRandomNumber(food.dessert))];  
     
     entireMeal = `${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!`;
-    document.querySelector('h2').innerHTML = entireMeal;  
-  } else {
+    document.querySelector('h2').innerHTML = entireMeal; 
+  };
+  
+  function displayRandomDish() {
     randomNum = getRandomNumber(food[userInput]);
     randomDish = food[userInput][randomNum];
     dishString = `${randomDish}!`;
     document.querySelector('h2').innerHTML = dishString;
-  }
+  };
+  
+  if (userInput === 'entire-meal') {
+    displayEntireMeal();
+  } else {
+    displayRandomDish();
+  };
   
   // Hide cook-pot picture and display suggestion message 
   document.querySelector('.suggestion').style.display = 'block';
   document.querySelector('.img2').style.display = 'none'; 
-}
+};
 
 

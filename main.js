@@ -22,7 +22,7 @@ function getRandomDish() {
   event.preventDefault();
   var message = document.querySelector(".cookpot-meal");
   var randomMealChoice = document.querySelector("#random-meal-choice");
-  if (sideRadio.checked == true) {
+  if (sideRadio.checked == true) { 
       message.innerText = "You should make:";
       randomMealChoice.innerText = `${sideOptions[getRandomIndex(sideOptions)]}!`;
   } else if (mainDishRadio.checked == true) {

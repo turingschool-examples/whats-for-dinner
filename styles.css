@@ -54,7 +54,7 @@ h1 {
 }
 
  .item-box {
-   font-size: 20px;
+   font-size: 25px;
    font-weight: bold;
    vertical-align: center;
    text-align: center;
@@ -113,9 +113,9 @@ h1 {
 }
 
 .cookpot-meal {
-  font-style: italic;
-  font-weight: bold;
   font-size: 23px;
+  font-weight: bold;
+  font-style: italic;
   margin-bottom: 0;
 }
 

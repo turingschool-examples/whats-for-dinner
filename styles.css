@@ -61,7 +61,7 @@ h1 {
    background-color: rgba(225, 225, 225, .9);
    opacity: 90%;
    padding: 5px;
-   margin: 35px;
+   margin: 50px;
    width: 150vw;
    height: 50vh;
  }
@@ -94,12 +94,13 @@ h1 {
  .cookpot-box {
    background-position: center;
    background-repeat: no-repeat;
+   background-size: 150px;
    background-color: rgba(225, 225, 225, .9);
    vertical-align: center;
    text-align: center;
    opacity: 90%;
    padding: 20px;
-   margin: 35px;
+   margin: 50px;
    width: 150vw;
    height: 46vh;
  }

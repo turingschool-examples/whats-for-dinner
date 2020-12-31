@@ -1,6 +1,7 @@
 var sideRadio = document.querySelector("#meal-side");
 var mainDishRadio = document.querySelector("#meal-main-dish");
 var dessertRadio = document.querySelector("#meal-dessert");
+var mealRadio = document.querySelector("#meal-entire-meal");
 var letsCookButton = document.querySelector("#lets-cook");
 var form = document.querySelector("form");
 var mealOptionsForm = document.querySelector(".meal-options-form");
@@ -22,7 +23,7 @@ function getRandomDish() {
   event.preventDefault();
   var message = document.querySelector(".cookpot-meal");
   var randomMealChoice = document.querySelector("#random-meal-choice");
-  if (sideRadio.checked == true) { 
+  if (sideRadio.checked == true) {
       message.innerText = "You should make:";
       randomMealChoice.innerText = `${sideOptions[getRandomIndex(sideOptions)]}!`;
   } else if (mainDishRadio.checked == true) {
@@ -31,5 +32,8 @@ function getRandomDish() {
   } else if (dessertRadio.checked == true) {
       message.innerText = "You should make:";
       randomMealChoice.innerText = `${dessertOptions[getRandomIndex(dessertOptions)]}!`;
+  } else if (mealRadio.checked == true) {
+      message.innerText = "You should make:";
+    randomMealChoice.innerText = `${mainDishOptions[getRandomIndex(mainDishOptions)]} with a side of ${sideOptions[getRandomIndex(sideOptions)]} and ${dessertOptions[getRandomIndex(dessertOptions)]} for dessert!`;
   }
 };

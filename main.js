@@ -22,6 +22,7 @@ function displayEntireMeal() {
   var randomSide = '';
   var randomDessert = '';
   var entireMeal;
+  
   randomMain = food.main[(getRandomNumber(food.main))];
   randomSide = food.side[(getRandomNumber(food.side))];
   randomDessert = food.dessert[(getRandomNumber(food.dessert))];  
@@ -33,6 +34,7 @@ function displayRandomDish(input) {
   var dishString = '';
   var randomDish;
   var randomNum;
+  
   randomNum = getRandomNumber(food[input]);
   randomDish = food[input][randomNum];
   dishString = `${randomDish}!`;

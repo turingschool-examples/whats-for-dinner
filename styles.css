@@ -54,7 +54,7 @@ h1 {
 }
 
  .item-box {
-   font-size: 25px;
+   font-size: 20px;
    font-weight: bold;
    vertical-align: center;
    text-align: center;
@@ -103,6 +103,9 @@ h1 {
    margin: 50px;
    width: 150vw;
    height: 46vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
 .hidden {
@@ -111,9 +114,13 @@ h1 {
 
 .cookpot-meal {
   font-style: italic;
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 0;
 }
 
 #random-meal-choice {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
+  margin-top: 0;
 }

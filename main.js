@@ -24,12 +24,12 @@ function getRandomDish() {
   var randomMealChoice = document.querySelector("#random-meal-choice");
   if (sideRadio.checked == true) {
       message.innerText = "You should make:";
-      randomMealChoice.innerText = sideOptions[getRandomIndex(sideOptions)];
+      randomMealChoice.innerText = `${sideOptions[getRandomIndex(sideOptions)]}!`;
   } else if (mainDishRadio.checked == true) {
       message.innerText = "You should make:";
-      randomMealChoice.innerText = mainDishOptions[getRandomIndex(mainDishOptions)];
+      randomMealChoice.innerText = `${mainDishOptions[getRandomIndex(mainDishOptions)]}!`;
   } else if (dessertRadio.checked == true) {
       message.innerText = "You should make:";
-      randomMealChoice.innerText = dessertOptions[getRandomIndex(dessertOptions)];
+      randomMealChoice.innerText = `${dessertOptions[getRandomIndex(dessertOptions)]}!`;
   }
 };

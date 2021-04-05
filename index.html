@@ -1,10 +1,36 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <nav class="top-page">
+      <header>
+        <h1>What's for Dinner?</h1>
+      </header>
+      <button type="button" id="add-recipe" name="add-recipe">ADD A RECIPE</button>
+    </nav>
+    <div class="background-container">
+      <img src="assets/burger-friends.jpg" alt="birds-eye view of friends and burgers" class="burgers" id="burgs">
+    </div>
+    <main class="main-page">
+      <section class="left-side">
+        <h1>What are you looking for?</h1>
+        <input type="radio" id="side" name="side" value="side">
+        <label for="side">Side</label>
+        <input type="radio" id="main-dish" name="main-dish" value="main-dish">
+        <label for="main-dish">Main Dish</label>
+        <input type="radio" id="dessert" name="dessert" value="dessert">
+        <label for="dessert">Dessert</label>
+        <input type="radio" id="entire-meal" name="entire-meal" value="entire-meal">
+        <label for="entire-meal">Entire Meal</label>
+        <button type="button" id="lets-cook" name="lets-cook">LET'S COOK!</button>
+      </section>
+      <section class="right-side">
+        <img src="assets/cookpot.svg" alt="Cookpot icon" class="cook-pot" id="cookpot">
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

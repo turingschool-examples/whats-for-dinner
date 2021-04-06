@@ -8,8 +8,24 @@ red - #ee5253
 
 */
 
+* {
+  margin: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #0fb9b1;
+  padding: 10px;
+  width: 120%;
+}
+
+#add-recipe-button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
 }
 
 #cookpot-img {
@@ -19,6 +35,6 @@ body {
 #lets-cook-button {
   background-color: #0fb9b1;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 15px 70px;
 }

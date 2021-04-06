@@ -37,11 +37,11 @@ article {
   flex-direction: column;
 }
 
-.first{
+.left{
   color: black;
 }
 
-.second{
+.right{
   width: 150;
   height: 150;
 

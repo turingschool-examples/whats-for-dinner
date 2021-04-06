@@ -1,4 +1,5 @@
-var sides = [
+var meal = {
+  sides: [
 'Miso Glazed Carrots',
 'Coleslaw',
 'Garden Salad',
@@ -9,9 +10,9 @@ var sides = [
 'Shrimp Summer Rolls',
 'Garlic Butter Mushrooms',
 'Hush Puppies',
-];
+],
 
-var main = [
+mains: [
 'Spaghetti and Meatballs',
 'Pineapple Chicken',
 'Shakshuka',
@@ -25,9 +26,9 @@ var main = [
 'Chicken Fried Rice',
 'Sheet Pan Fajitas',
 'Margarita Pizza',
-];
+],
 
-var desserts = [
+desserts:[
 'Apple Pie',
 'Lemon Meringue Pie',
 'Black Forest Cake',
@@ -45,4 +46,5 @@ var desserts = [
 'Tart Tatin',
 'Croissants',
 'Eclairs',
-];
+  ]
+};

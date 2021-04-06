@@ -63,16 +63,19 @@ letsCookButton.addEventListener("click", loadMeal);
 // Functions
 
 function loadMeal() {
-  cookpotIcon.classList.add("hidden");
-  var meal = "hi";
+  rightDisplay.innerHTML = ``;
+  var meal;
   if (sideInput.checked) {
     meal = getMealOption(sides);
+    sideInput.checked = false;
   } else if (mainInput.checked) {
     meal = getMealOption(mains);
+    mainInput.checked = false;
   } else if (dessertInput.checked) {
     meal = getMealOption(desserts);
+    dessertInput.checked = false;
   } else if (entireMealInput.checked) {
-    
+    // call diff function
   }
   rightDisplay.insertAdjacentHTML("afterbegin",
     `<p><em>You should make:</em></p>
@@ -83,5 +86,7 @@ function loadMeal() {
 }
 
 function getMealOption(arrayName) {
-  return "howdy do";
+  var randomIndex = Math.floor(Math.random() * arrayName.length);
+  var mealOption = arrayName[randomIndex];
+  return mealOption;
 }

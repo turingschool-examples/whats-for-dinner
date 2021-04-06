@@ -5,10 +5,30 @@
   </head>
   <body>
     <h1>What's For Dinner?</h1>
-    <h2>test test</h2>
+      <section id="lets-cook-form">
+        <h2>What are you looking for?<span class="asterisk">*</span></h2>
+        <div class="side-dish">
+          <input type="radio" id="side" name="dish" value="side" checked>
+          <label for="side">Side Dish</label>
+        </div>
+        <div class="main-dish">
+          <input type="radio" id="main" name="dish" value="main" checked>
+          <label for="main">Main Dish</label>
+        </div>
+        <div class="dessert">
+          <input type="radio" id="dessert" name="dish" value="dessert" checked>
+          <label for="dessert">Dessert</label>
+        </div>
+        <div class="main-dish">
+          <input type="radio" id="entire-meal" name="dish" value="entire-meal" checked>
+          <label for="entire-meal">Entire Meal</label>
+        </div>
+        <button type="cook-button">Let's Cook</button>
+      </section>
     <div class="bg-image">
       <img src="assets/burger-friends.jpg" alt="Dinner With Friends">
     </div>
+
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

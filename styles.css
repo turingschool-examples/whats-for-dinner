@@ -19,7 +19,35 @@ h1 {
   padding: 13px;
 }
 
+.asterisk {
+  color: #ee5253;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+h2 {
+  font-size: 22px;
+  text-align: center;
+}
+
+#lets-cook-form {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 50px 100px 50px 40px;
+  background-color: rgba(225, 225, 225, .9);
+  position: absolute;
+  left: 100px;
+  top: 90px;
+  z-index: 1;
+}
+
+.side-dish,
+.main-dish,
+.dessert,
+.entire-meal {
+  margin: 20px 0;
+  font-size: 16px;
 }

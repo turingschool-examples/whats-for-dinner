@@ -46,3 +46,10 @@ var desserts = [
   "Croissants",
   "Eclairs"
 ];
+var letsCookButton = document.querySelector("#lets-cook-button");
+
+letsCookButton.addEventListener("click", loadMeal);
+
+function loadMeal() {
+  
+}

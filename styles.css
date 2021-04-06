@@ -53,10 +53,13 @@ span {
   float: left;
 }
 
+.meal-suggestion {
+  display: block;
+}
+
 .right-display {
-  display: flex;
   float: right;
-  justify-content: center;
+  text-align: center;
 }
 
 .wrapper {

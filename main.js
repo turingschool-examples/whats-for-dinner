@@ -53,7 +53,8 @@ var cookpotIcon = document.querySelector("#cookpot-img");
 var sideInput = document.querySelector("#side");
 var mainInput = document.querySelector("#main-dish");
 var dessertInput = document.querySelector("#dessert");
-var entireMealInput = document.querySelector("#entire-meal")
+var entireMealInput = document.querySelector("#entire-meal");
+var rightDisplay = document.querySelector(".right-display");
 
 // Event Listeners
 
@@ -63,13 +64,24 @@ letsCookButton.addEventListener("click", loadMeal);
 
 function loadMeal() {
   cookpotIcon.classList.add("hidden");
+  var meal = "hi";
   if (sideInput.checked) {
-
+    // meal = getMealOption(arrayName);
   } else if (mainInput.checked) {
 
   } else if (dessertInput.checked) {
 
   } else if (entireMealInput.checked) {
-    
+
   }
+  rightDisplay.insertAdjacentHTML("afterbegin",
+    `<p><em>You should make:</em></p>
+    <br>
+    <br>
+    <h1 class="meal-suggestion">${meal}</h1>`
+  );
 }
+
+// function getMealOption(arrayName) {
+//
+// }

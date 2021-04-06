@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Whats For Dinner</title>
 </head>
+
 <body>
   <header>
     <h1>What's for Dinner?</h1>
-    <button>ADD A RECIPE</button>
+    <button class="add-recipe-button">ADD A RECIPE</button>
   </header>
   <section>
-    <article>
+    <article class="meal-container">
       <h2>What are you looking for?*</h2>
+      <ul class="flex">
       <input type="radio" id="side" name="side"><br>
       <form action="side">Side</form>
       <input type="radio" id="main-dish" name="main-dish"><br>
@@ -24,14 +27,16 @@
       <form action="dessert">Dessert</form>
       <input type="radio" id="entire-meal" name="entire-meal"><br>
       <form action="entire-meal">Entire Meal</form>
-      <input type="button" value="LET'S COOK!">
+      <input type="button" value="LET'S COOK!" class="cook-btn">
     </article>
-  </section>
-  <article>
-    <h3>You should make:</h3>
-    <p>BBQ Chicken Burgers with a side of Miso Glazed Carrots and Lemon Meringue Pie for dessert</p>
-    <input type="button" value="CLEAR">
-  </article>
-</body>sd
+  </ul>
+    <article class="recipe-container">
+      <img src="./assets/cookpot.svg" alt="cook pot" class="pot">
+      <!-- <h3>You should make:</h3>
+      <p>BBQ Chicken Burgers with a side of Miso Glazed Carrots and Lemon Meringue Pie for dessert</p> -->
+      <!-- <input type="button" value="CLEAR" class="clear"> -->
+    </article>
+</body>
 <script type="text/javascript" src="main.js"></script>
+
 </html>

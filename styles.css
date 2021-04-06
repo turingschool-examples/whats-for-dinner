@@ -32,6 +32,10 @@ input {
   margin: 15px 20px;
 }
 
+span {
+  color: #ee5253;
+}
+
 .display-section {
   background-color: rgba(225, 225, 225, .9);
   height: 350px;

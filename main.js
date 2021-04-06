@@ -1,4 +1,6 @@
 
+// Variables
+
 var sides = [
   "Miso Glazed Carrots",
   "Coleslaw",
@@ -49,7 +51,11 @@ var desserts = [
 var letsCookButton = document.querySelector("#lets-cook-button");
 var cookpotIcon = document.querySelector("#cookpot-img");
 
+// Event Listeners
+
 letsCookButton.addEventListener("click", loadMeal);
+
+// Functions
 
 function loadMeal() {
   cookpotIcon.classList.add("hidden");

@@ -2,9 +2,36 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner</title>
   </head>
   <body>
-    
+    <nav>
+      <h1>What's for Dinner?</h1>
+      <button class="view-favs">VIEW FAVORITES</button>
+      <button class="add-recipe">ADD A RECIPE</button>
+    </nav>
+    <main>
+      <!-- background burger image -->
+      <img src="./assets/burger-friends.jpg">
+      <form class="left-box">
+        <h1>What are you looking for?*</h1>
+          <input type="radio" id="side">
+          <label for="side">Side</label><br>
+          <input type="radio" id="main-dish">
+          <label for="main-dish">Main Dish</label><br>
+          <input type="radio" id="dessert">
+          <label for="dessert">Dessert</label><br>
+          <input type="radio" id="entire-meal">
+          <label for="entire-meal">Entire Meal</label><br>
+          <button id="lets-cook">LET'S COOK</button>
+      </form>
+      <section class="right-box">
+        <!-- pot vector image placeholder-->
+        <h1>You should make:</h1>
+        <!-- output of radio button choice -->
+        <button id="clear">CLEAR</button>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

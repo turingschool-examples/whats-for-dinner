@@ -20,67 +20,89 @@ body {
 }
 
 header {
-  height: 10vh;
+  height: 5vh;
   background: var(--teal);
-  display: flex;
   justify-content: space-between;
 }
 
 header h1 {
+  align-items: center;
+  align-self:center;
   margin: 1.3rem;
+  font-size: 1.5rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 
 section {
-  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 article {
-  width: 25rem;
-  height: 18rem;
-  margin: 3rem 5rem;
+  min-width: 30rem;
+  height: 23rem;
+  margin: 4rem auto ;
   background: var(--frosted);
+  justify-content: center;
 }
 
-button {
-  margin: .5rem;
+button, .btn {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   border-radius: .3rem;
   border: none;
 }
 
-.add-recipe-button {
-    padding: .8rem;
-    margin: 1rem;
+.add-recipe-button {  
+  width: 7rem;
+  height: 1.8rem;
+  align-self:center;
+  margin-right: 1.2rem;
 }
 
 
 .meal-container {
-  padding: 2rem 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: flex-start;
+  padding-left: 3rem;
 }
 
 .recipe-container {
-  padding:1rem
+  padding: 1rem
 }
 
 .pot {
   width: 6rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 4rem
+  justify-content: center;
+  align-content: center;
 }
 
 .cook-btn {
-  padding: .3rem 2.3rem;
+  height: 2.2rem;
+  width: 10rem;
   margin-top: 1rem;
   background: var(--teal);
 }
 
-.flex {
+.flex,
+.button {
   display: flex;
-
 }
 
+input[type="radio"]  {
+margin: 1rem .2rem ;
+}
 
-
+.asterisk {
+  color: var(--red);
+  position: relative;
+  bottom: 10px;
+}

@@ -28,6 +28,10 @@ header {
   width: 100%;
 }
 
+input {
+  margin: 15px 20px;
+}
+
 .display-section {
   background-color: rgba(225, 225, 225, .9);
   height: 400px;
@@ -62,7 +66,7 @@ header {
   margin: 0;
   position: absolute;
   left: 30%;
-  top: 30%;
+  top: 28%;
   width: 200px;
 }
 

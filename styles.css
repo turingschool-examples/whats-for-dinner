@@ -8,3 +8,29 @@ red - #ee5253
 
 */
 
+* {
+  border: 1px solid blue;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+nav {
+  background-color: #0fb9b1;
+  justify-content: space-between;
+  background-size: cover;
+
+}
+
+html {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
+  display: flex;
+}
+
+section {
+  background-color: rgba(225, 225, 225, .9);
+  margin: 100px;
+  padding: 50px;
+}

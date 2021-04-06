@@ -1,10 +1,37 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Whats For Dinner</title>
+</head>
+<body>
+  <header>
+    <h1>What's for Dinner?</h1>
+    <button>ADD A RECIPE</button>
+  </header>
+  <section>
+    <article>
+      <h2>What are you looking for?*</h2>
+      <input type="radio" id="side" name="side"><br>
+      <form action="side">Side</form>
+      <input type="radio" id="main-dish" name="main-dish"><br>
+      <form action="main-dish">Main Dish</form>
+      <input type="radio" id="dessert" name="dessert"><br>
+      <form action="dessert">Dessert</form>
+      <input type="radio" id="entire-meal" name="entire-meal"><br>
+      <form action="entire-meal">Entire Meal</form>
+      <input type="button" value="LET'S COOK!">
+    </article>
+  </section>
+  <article>
+    <h3>You should make:</h3>
+    <p>BBQ Chicken Burgers with a side of Miso Glazed Carrots and Lemon Meringue Pie for dessert</p>
+    <input type="button" value="CLEAR">
+  </article>
+</body>sd
+<script type="text/javascript" src="main.js"></script>
 </html>

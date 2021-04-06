@@ -16,7 +16,6 @@ red - #ee5253
 }
 
 body {
-
       background-image:url('./assets/burger-friends.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -24,10 +23,9 @@ body {
 }
 
 header{
-  padding: 60px;
+  padding: 20px;
   text-align: center;
   background: #0fb9b1;
-  color: white;
   font-size: 30px;
   margin: 0;
 }
@@ -46,4 +44,13 @@ header{
 }
 .transboxMeal {
   background-image:url('./assets/cookpot.svg');
+  background-repeat: no-repeat;
 }
+
+/* input[type='radio']:after {
+        position: relative;
+        background-color: white;
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    } */

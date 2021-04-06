@@ -17,6 +17,11 @@ body {
   margin: 0;
 }
 
+button {
+  border: none;
+  border-radius: 5px;
+}
+
 header {
   background-color: #0fb9b1;
   padding: 5px 20px;
@@ -26,7 +31,9 @@ header {
 .display-section {
   background-color: rgba(225, 225, 225, .9);
   height: 400px;
-  width: 45%;
+  padding: 40px 60px;
+  position: relative;
+  width: 35%;
 }
 
 .left-display {
@@ -43,9 +50,7 @@ header {
 }
 
 #add-recipe-button {
-  border: none;
-  border-radius: 5px;
-  margin: 30px;
+  margin: 30px 20px;
   padding: 10px 30px;
   position: absolute;
   right: 0;
@@ -53,12 +58,15 @@ header {
 }
 
 #cookpot-img {
-  max-width: 200px;
+  display: block;
+  margin: 0;
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 200px;
 }
 
 #lets-cook-button {
   background-color: #0fb9b1;
-  border: none;
-  border-radius: 5px;
   padding: 15px 70px;
 }

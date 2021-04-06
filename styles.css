@@ -16,4 +16,6 @@ div {
   background-image: url("assets/burger-friends.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: 1800px 1400px
+
 }

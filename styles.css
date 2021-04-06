@@ -26,6 +26,10 @@ h1 {
 img {
   max-width: 100%;
   height: auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
 }
 
 h2 {
@@ -44,10 +48,36 @@ h2 {
   z-index: 1;
 }
 
+#cookpot {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 165px 195px;
+  background-color: rgba(225, 225, 225, .9);
+  position: absolute;
+  left: 700px;
+  top: 90px;
+  z-index: 1;
+}
+
+.cookpot-img {
+  max-height: 40%;
+  max-width: 50%;
+  padding: 100px 95px;
+}
+
 .side-dish,
 .main-dish,
 .dessert,
 .entire-meal {
-  margin: 20px 0;
+  margin: 15px 0;
   font-size: 16px;
+}
+
+button {
+  background-color: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  padding: 6px 50px;
+  border-radius: 5px;
+  border: 1px solid #95a5a6;
 }

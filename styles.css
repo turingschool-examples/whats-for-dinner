@@ -32,6 +32,10 @@ input {
   margin: 15px 20px;
 }
 
+span {
+  color: #ee5253;
+}
+
 .display-section {
   background-color: rgba(225, 225, 225, .9);
   height: 350px;
@@ -40,15 +44,22 @@ input {
   width: 35%;
 }
 
+.hidden {
+  display: none;
+}
+
 .left-display {
   display: block;
   float: left;
 }
 
+.meal-suggestion {
+  display: block;
+}
+
 .right-display {
-  display: flex;
   float: right;
-  justify-content: center;
+  text-align: center;
 }
 
 .wrapper {

@@ -1,4 +1,6 @@
 
+// Variables
+
 var sides = [
   "Miso Glazed Carrots",
   "Coleslaw",
@@ -46,3 +48,45 @@ var desserts = [
   "Croissants",
   "Eclairs"
 ];
+var letsCookButton = document.querySelector("#lets-cook-button");
+var cookpotIcon = document.querySelector("#cookpot-img");
+var sideInput = document.querySelector("#side");
+var mainInput = document.querySelector("#main-dish");
+var dessertInput = document.querySelector("#dessert");
+var entireMealInput = document.querySelector("#entire-meal");
+var rightDisplay = document.querySelector(".right-display");
+
+// Event Listeners
+
+letsCookButton.addEventListener("click", loadMeal);
+
+// Functions
+
+function loadMeal() {
+  rightDisplay.innerHTML = ``;
+  var meal;
+  if (sideInput.checked) {
+    meal = getMealOption(sides);
+    sideInput.checked = false;
+  } else if (mainInput.checked) {
+    meal = getMealOption(mains);
+    mainInput.checked = false;
+  } else if (dessertInput.checked) {
+    meal = getMealOption(desserts);
+    dessertInput.checked = false;
+  } else if (entireMealInput.checked) {
+    // call diff function
+  }
+  rightDisplay.insertAdjacentHTML("afterbegin",
+    `<p><em>You should make:</em></p>
+    <br>
+    <br>
+    <h1 class="meal-suggestion">${meal}</h1>`
+  );
+}
+
+function getMealOption(arrayName) {
+  var randomIndex = Math.floor(Math.random() * arrayName.length);
+  var mealOption = arrayName[randomIndex];
+  return mealOption;
+}

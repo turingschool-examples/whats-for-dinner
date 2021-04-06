@@ -8,16 +8,31 @@ red - #ee5253
 
 */
 
-html {
-  height: 100%;
+* {
+  border: 1px solid red;
 }
 
-body {
+/* body {
   display: flex;
+} */
+
+main {
+  justify-content: center;
 }
 
-article {
-  /* justify-content: space-around; */
-  
+section {
+  flex-direction: column;
 }
 
+img {
+  width: 75px;
+  height: 75px;
+}
+
+div {
+  justify-items: center;
+}
+
+ul {
+  flex-direction: column;
+}

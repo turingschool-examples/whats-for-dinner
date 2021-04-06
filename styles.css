@@ -34,23 +34,26 @@ input {
 
 .display-section {
   background-color: rgba(225, 225, 225, .9);
-  height: 400px;
+  height: 350px;
   padding: 40px 60px;
   position: relative;
   width: 35%;
 }
 
 .left-display {
+  display: block;
   float: left;
 }
 
 .right-display {
+  display: flex;
   float: right;
+  justify-content: center;
 }
 
 .wrapper {
   width: 80%;
-  margin: 4% auto;
+  margin: 5% auto;
 }
 
 #add-recipe-button {
@@ -62,12 +65,7 @@ input {
 }
 
 #cookpot-img {
-  display: block;
-  margin: 0;
-  position: absolute;
-  left: 30%;
-  top: 28%;
-  width: 200px;
+  width: 150px;
 }
 
 #lets-cook-button {

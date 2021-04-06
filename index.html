@@ -5,13 +5,17 @@
     <title>What's for Dinner</title>
   </head>
   <body>
-    <nav>
+    <header>
       <h1>What's for Dinner?</h1>
-      <button class="view-favs">VIEW FAVORITES</button>
-      <button class="add-recipe">ADD A RECIPE</button>
-    </nav>
+      <nav>
+        <ul>
+          <button class="view-favs">VIEW FAVORITES</button>
+          <button class="add-recipe">ADD A RECIPE</button>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <form class="whats-cooking">
+      <section class="whats-cooking">
         <h1>What are you looking for?*</h1>
           <input type="radio" id="side">
           <label for="side">Side</label><br>
@@ -22,11 +26,10 @@
           <input type="radio" id="entire-meal">
           <label for="entire-meal">Entire Meal</label><br>
           <button id="lets-cook">LET'S COOK</button>
-      </form>
+      </section>
       <section class="right-box">
         <img src="./assets/cookpot.svg" class="cookpot-image">
-        <h1>You should make:</h1>
-        <output form=""
+        <!-- <h1>You should make:</h1> -->
         <!-- output of radio button choice -->
         <button id="clear">CLEAR</button>
       </section>

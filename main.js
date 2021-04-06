@@ -63,4 +63,13 @@ letsCookButton.addEventListener("click", loadMeal);
 
 function loadMeal() {
   cookpotIcon.classList.add("hidden");
+  if (sideInput.checked) {
+
+  } else if (mainInput.checked) {
+
+  } else if (dessertInput.checked) {
+
+  } else if (entireMealInput.checked) {
+    
+  }
 }

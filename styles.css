@@ -23,10 +23,8 @@ body {
   background-size: cover;
   background-position: bottom;
   position: relative;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
 }
+
 .top-page {
   margin: none;
   display: flex;
@@ -35,20 +33,28 @@ body {
   background-color: #0fb9b1;
 }
 
+header {
+  padding-left: 25px;
+}
+
+button {
+  width: 150px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 5px;
+}
+
 .add-recipe {
   margin: 15px;
-  padding: 5px;
-  width: 150px;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
 }
 
 .burgers {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
   background-size: cover;
   background-position: relative;
-  height: 100%;
+  height: 60%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,20 +63,46 @@ body {
 .main-page {
   display: flex;
   flex-direction: row;
-  /* align-items: center;
-  justify-content: space-between; */
-  z-index: 4;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cook-pot {
+  height: 45%;
+  padding-top: 24%;
+}
+
+.lets-cook {
+  margin-top: 15px;
+  background-color: #0fb9b1;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.left-side {
+  margin-left: 8%;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 40px;
+}
+
+.right-side {
+  margin-left: 56%;
 }
 
 .left-side,
 .right-side {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-items: flex-start;
-  width: 35%;
-  height: 25%;
   position: absolute;
   background-color: rgba(225, 225, 225, .9);
-  opacity: 60%;
+  opacity: 90%;
+  width: 35%;
+  height: 45%;
+  margin-top: 2%;
+  padding-bottom: 35px;
+  font-size: 20px;
 }

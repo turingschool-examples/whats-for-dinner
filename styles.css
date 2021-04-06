@@ -44,3 +44,6 @@ header{
   font-weight: bold;
   color: #000000;
 }
+.transboxMeal {
+  background-image:url('./assets/cookpot.svg');
+}

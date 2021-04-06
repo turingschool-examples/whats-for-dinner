@@ -50,6 +50,10 @@ var desserts = [
 ];
 var letsCookButton = document.querySelector("#lets-cook-button");
 var cookpotIcon = document.querySelector("#cookpot-img");
+var sideInput = document.querySelector("#side");
+var mainInput = document.querySelector("#main-dish");
+var dessertInput = document.querySelector("#dessert");
+var entireMealInput = document.querySelector("#entire-meal")
 
 // Event Listeners
 

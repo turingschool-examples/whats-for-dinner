@@ -66,13 +66,13 @@ function loadMeal() {
   cookpotIcon.classList.add("hidden");
   var meal = "hi";
   if (sideInput.checked) {
-    // meal = getMealOption(arrayName);
+    meal = getMealOption(sides);
   } else if (mainInput.checked) {
-
+    meal = getMealOption(mains);
   } else if (dessertInput.checked) {
-
+    meal = getMealOption(desserts);
   } else if (entireMealInput.checked) {
-
+    
   }
   rightDisplay.insertAdjacentHTML("afterbegin",
     `<p><em>You should make:</em></p>
@@ -82,6 +82,6 @@ function loadMeal() {
   );
 }
 
-// function getMealOption(arrayName) {
-//
-// }
+function getMealOption(arrayName) {
+  return "howdy do";
+}

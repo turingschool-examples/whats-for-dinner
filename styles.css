@@ -10,4 +10,14 @@ red - #ee5253
 body {
   background-image:
       url('./assets/burger-friends.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+}
+header{
+  padding: 60px;
+  text-align: center;
+  background: #0fb9b1;
+  color: white;
+  font-size: 30px;
 }

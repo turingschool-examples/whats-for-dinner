@@ -47,9 +47,10 @@ var desserts = [
   "Eclairs"
 ];
 var letsCookButton = document.querySelector("#lets-cook-button");
+var cookpotIcon = document.querySelector("#cookpot-img");
 
 letsCookButton.addEventListener("click", loadMeal);
 
 function loadMeal() {
-  
+  cookpotIcon.classList.add("hidden");
 }

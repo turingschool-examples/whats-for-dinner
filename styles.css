@@ -40,6 +40,10 @@ input {
   width: 35%;
 }
 
+.hidden {
+  display: none;
+}
+
 .left-display {
   display: block;
   float: left;

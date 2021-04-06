@@ -8,3 +8,16 @@ red - #ee5253
 
 */
 
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+}
+
+article {
+  /* justify-content: space-around; */
+  
+}
+

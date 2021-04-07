@@ -29,12 +29,15 @@ function displayRecipe(recipe){
 
 function addRecipe(){
   event.preventDefault()
-  recipe = recipeName.value
-  displayForm(recipe)
-  console.log(recipe)
-  displayForm()
-  // console.log(recipeType.value)
-  // if(recipeName.value)
+  
+  if(recipeType.value === 'Side'){
+    meal.sides.push(recipeName.value)
+  } else if (recipeType.value === 'Main Dish'){
+    meal.mains.push(recipeName.value)
+  } else if (recipeType.value === 'Dessert'){
+    meal.desserts.push(recipeName.value)
+  }
+  displayRecipe(recipeName.value)
 }
 
 function createRecipe(){

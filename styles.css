@@ -8,6 +8,11 @@ red - #ee5253
 
 */
 
+* {
+  border: solid red 2px;
+  font-family: 'Roboto', sans-serif;
+}
+
 /*---------------------NAV BAR----------------------*/
 
 .nav-bar {
@@ -37,6 +42,7 @@ red - #ee5253
 
 .add-recipe:hover {
   background-color: #95a5a6;
+  color: white;
 }
 
 /*--------------------BODY----------------------*/
@@ -49,7 +55,6 @@ body, html {
   border: 0;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 .main-page {
@@ -61,15 +66,15 @@ body, html {
 .left-box {
   background-color: rgba(225, 225, 225, .9);
   opacity: 90%;
-  height: 400px;
-  width: 500px;
+  height: 350px;
+  width: 450px;
   padding: 30;
   margin-top: 120px;
   display: flex;
   flex-direction: column;
 }
 
-label {
+.input-label {
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -93,11 +98,12 @@ label {
 
 .lets-cook:hover {
   background-color: #95a5a6;
+  color: white;
 }
-
+/*
 .hidden {
   display: none;
-}
+} */
 
 .right-box {
   background-color: rgba(225, 225, 225, .9);
@@ -105,6 +111,7 @@ label {
   height: 400px;
   width: 500px;
   margin-top: 120px;
+  padding:30
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,14 +121,11 @@ label {
 .suggestion-title {
   font-size: 25px;
   font-style: italic;
-  margin-top: 30;
-  margin-bottom: 0;
 }
 
 .suggested-meal {
   font-size: 30px;
   font-weight: bolder;
-  margin-top: 0;
 }
 
 .cookpot {

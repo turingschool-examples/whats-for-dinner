@@ -4,16 +4,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="top home">
-      <nav class="top bar">
-          <h1 class="question-header">What's for Dinner?</h1>
+    <header>
+      <nav class="top-bar-nav">
+          <h2 class="question-header">What's for Dinner?</h2>
           <form class="add-recipe">
-            <input type="submit" name="add a recipe" value="ADD A RECIPE">
-          </form>
+            <input type="button" name="add a recipe" value="ADD A RECIPE">
       </nav>
     </header>
     <section class="input-box">
       <h3 class="question" id='question'>What are you looking for?</h3>
+      <div class="form-pick">
       <form class="pick-course" id="pick-course">
         <p>
           <input type="radio" name="course" value="side" checked="checked" /> Side
@@ -23,6 +23,7 @@
         </p>
           <button class="lets-cook" id="lets-cook">Let's Cook! </button>
       </form>
+    </div>
     </section>
     <section class="return-box">
       <p class="static-text">You should make:</p>

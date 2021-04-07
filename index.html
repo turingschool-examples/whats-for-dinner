@@ -7,20 +7,21 @@
     <header>
       <nav class="top-bar-nav">
           <h2 class="question-header">What's for Dinner?</h2>
-          <button class="add-recipe" id="add-recipe">ADD A RECIPE</button>  
+          <button class="add-recipe" id="add-recipe">ADD A RECIPE</button>
       </nav>
     </header>
     <section class="flex">
-    <section class="input-box">
-      <h3 class="question">What are you looking for?</h3>
+      <form class="input-box" id="input-box">
+        <h3 class="question">What are you looking for?</h3>
+        <br>
       <div class="form-pick">
-      <form class="pick-course" id="pick-course">
-        <p>
+
+      <div class="label">
           <input type="radio" name="course" value="side" checked="checked" /> Side
           <input type="radio" name="course" value="main-dish" /> Main dish
           <input type="radio" name="course" value="dessert" /> Dessert
           <input type ="radio" name="course" value="entire-meal" /> Entire Meal
-        </p>
+      </div>
           <button class="lets-cook" id="lets-cook">Let's Cook! </button>
       </form>
       </div>

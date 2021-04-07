@@ -41,15 +41,20 @@ nav {
   background-color: rgba(225, 225, 225, .9);
 }
 
-.course {
+.pick-course {
   margin-top: 20px;
-  background-color: #0fb9b1;
   margin-left: 25px;
   height: 50px;
   width: 250px;
   border-radius: 5px;
   border: none;
   font-size: 17px;
+}
+
+.label {
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 30;
 }
 
 .lets-cook {

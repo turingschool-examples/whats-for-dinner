@@ -8,7 +8,10 @@
   </head>
   <body>
     <main>
-      <header>What's for Dinner?</header>
+      <header>
+        <p>What's for Dinner?</p>
+        <button id="addRecipe" class="add-recipe">ADD A RECIPE</button>
+      </header>
       <section>
         <article class="left">
           <h1>What are you looking for?<span>*</span></h1>
@@ -27,8 +30,8 @@
           </div>
         </article>
       </section>
-      <footer>
-        <form>
+      <footer id="foot" class="footer hidden">
+        <form class="form">
           <label for="type">Recipe Type:</label>
           <input type="text" id="recipeType" name="fname">
           <label for="name">Recipe Name:</label>

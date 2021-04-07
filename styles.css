@@ -23,9 +23,10 @@ main {
   display: flex;
   flex-direction: column;
 }
-/* header{
-
-} */
+header{
+  display: flex;
+  justify-content: space-around;
+}
 section {
   display: flex;
   justify-content: space-evenly;
@@ -50,4 +51,8 @@ article {
 img {
   width: 75px;
   height: 75px;
+}
+
+.hidden {
+  display: none
 }

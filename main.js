@@ -7,6 +7,7 @@ var letsCookBtn = document.getElementById('lets-cook');
 var mainDishBtn = document.getElementById('main-dish');
 var sideDishBtn = document.getElementById('side');
 var clearBtn = document.getElementById('clear');
+var radios = document.querySelectorAll('.radio');
 
     //page areas
 var cookpot = document.getElementById('cookpot');
@@ -25,45 +26,73 @@ function getRandomIndex(array) {
 };
 
 function generateRandomRecipe() {
-  var format = 'You should make: ';
-  var format2 = ' with a side of ';
-  var format3 = ' and ';
-  var format4 = ' for dessert!'
-  var emphasis = '!';
-  var randomSide = sides[getRandomIndex(sides)];
-  var randomMain = mains[getRandomIndex(mains)];
-  var randomDessert = desserts[getRandomIndex(desserts)];
-  if (sideDishBtn.checked) {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += randomSide + emphasis;
-  } else if (mainDishBtn.checked) {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += randomMain + emphasis;
-  } else if (dessertBtn.checked) {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += randomDessert + emphasis;
-  } else {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += `<br>`+ randomMain + format2 + randomSide + format3 + randomDessert + format4;
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        disableLetsCookBtn();
+        hideCookpot();
+        populateInnerTextFormat();
+        console.log('done');
+      }
+    }
   }
-  hideCookpot();
-  unhideClearBtn();
-}
 
-// function resetLRSides() {
-//   unhideCookpot();
+  function populateInnerTextFormat() {
+    var withSideOf = ` with a side of<br>`;
+    var and = ` and `;
+    var forDessert = ` for dessert!`;
+    unhideClearBtn();
+    rightSide.innerHTML = `<br><br><br>You should make:`;
+  };
+
+
+// function generateRandomRecipe() {
+  // var format = `<br><br><br>You should make: `;
+//   var format2 = ' with a side of ';
+//   var format3 = ' and ';
+//   var format4 = ' for dessert!'
+//   var emphasis = '!';
+//   var randomSide = sides[getRandomIndex(sides)];
+//   var randomMain = mains[getRandomIndex(mains)];
+//   var randomDessert = desserts[getRandomIndex(desserts)];
+//   unhideClearBtn();
+//   hideCookpot();
+//   if (sideDishBtn.checked) {
+//     rightSide.innerHTML = format += `<br>` + randomSide + emphasis;
+//   } else if (mainDishBtn.checked) {
+//     rightSide.innerHTML = format += `<br>` + randomMain + emphasis;
+//   } else if (dessertBtn.checked) {
+//     rightSide.innerHTML = format += `<br>` + (randomDessert + emphasis);
+//   } else {
+//     rightSide.innerHTML = format += `<br>` + randomMain + format2 + randomSide + format3 + randomDessert + format4;
+//   }
 // }
 
-function hideClearBtn() {
-  clearBtn.classList.add('hidden');
+function resetLRSides() {
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].checked = false;
+  }
+  rightSide.innerHTML = '';
+  hideClearBtn();
+  unhideCookpot();
+  enableLetsCookBtn();
 }
 
-function unhideClearBtn() {
-  clearBtn.classList.remove('hidden');
+function disableLetsCookBtn() {
+  letsCookBtn.disabled = true;
+}
+
+function enableLetsCookBtn() {
+  letsCookBtn.disabled = false;
+}
+
+function hideClearBtn() {
+  var hidden = document.getElementById('clear');
+  clearBtn.remove();
+}
+
+function unhideClearBtn(event) {
+  var unhidden = document.getElementById('clear');
+  unhidden.add();
 }
 
 function hideCookpot() {

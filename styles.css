@@ -1,19 +1,29 @@
+* {
+  border:1px solid blue;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
 }
-.title{
+nav{
   background-color: #0fb9b1;
+  height: 50px;
+}
+.title{
   padding-left: 18px;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 17px;
-  px;
+  margin: 0px;
 }
 
 .add-recipe{
+  background-color: rgba(225, 225, 225, 0.9);
+  border: 15px,rgba(255, 225, 225, 0.9);
+  border-radius: 5px;
+  height: 28px;
   float: right;
-  margin-right: 15px;
+  margin-right: 20px;
 
 }
 

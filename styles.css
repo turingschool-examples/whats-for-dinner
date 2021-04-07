@@ -19,6 +19,7 @@ background-image: url(./assets/burger-friends.jpg);
   display: flex;
   justify-content: space-around;
 } */
+
 main {
   display: flex;
   flex-direction: column;

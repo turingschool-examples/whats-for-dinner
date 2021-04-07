@@ -8,3 +8,141 @@ red - #ee5253
 
 */
 
+/*---------------------NAV BAR----------------------*/
+
+.nav-bar {
+  background-color: #0fb9b1;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 17px;
+  margin: 20px
+}
+
+.add-recipe {
+  font-size: 16px;
+  height: 38px;
+  width: 130px;
+  border: transparent;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.add-recipe:hover {
+  background-color: #95a5a6;
+}
+
+/*--------------------BODY----------------------*/
+
+body, html {
+  background-image: url('./assets/burger-friends.jpg');
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-page {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-box {
+  background-color: rgba(225, 225, 225, .9);
+  opacity: 90%;
+  height: 400px;
+  width: 500px;
+  padding: 30;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+}
+
+.required {
+  color: #ee5253;
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  font-size: 16px;
+  height: 50px;
+  width: 100px;
+  border: 0;
+  padding: 10;
+  border-radius: 4px;
+  margin: 20px 10px;
+}
+
+.lets-cook:hover {
+  background-color: #95a5a6;
+}
+
+/* .hidden {
+  display: none;
+} */
+
+.right-box {
+  background-color: rgba(225, 225, 225, .9);
+  opacity: 90%;
+  height: 400px;
+  width: 500px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggestion-title {
+  font-size: 25px;
+  font-style: italic;
+  margin-top: 30;
+  margin-bottom: 0;
+}
+
+.suggested-meal {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-top: 0;
+}
+
+.cookpot {
+  height: auto;
+  width: 150px;
+  position: absolute;
+}
+
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+  font-size: 15px;
+  height: 38px;
+  width: 80px;
+  border: 0px;
+  border-radius: 6px;
+  margin-top: 330px;
+  margin-left: 385px;
+  position: absolute;
+}
+
+.clear-button:hover {
+  background-color: #0fb9b1;
+}

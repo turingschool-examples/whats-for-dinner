@@ -9,34 +9,72 @@ red - #ee5253
 */
 
 * {
-  border: solid red 2px;
+  /* border: solid red 2px; */
   font-family: 'Roboto', sans-serif;
 }
 
-.top-page {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 body, html {
   height: 100%;
 }
 
-.background-container {
+body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  background-position: bottom;
+  position: relative;
+}
+
+.top-page {
+  margin: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0fb9b1;
+}
+
+header {
+  padding-left: 25px;
+}
+
+button {
+  width: 150px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.clear {
+  width: 150px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  background-color: #95a5a6;
+}
+
+.clear:hover {
+ background-color: black;
+ color: white;
+}
+
+.add-recipe {
+  margin: 15px;
 }
 
 .burgers {
-  /* background-image: image("assets/burger-friends.jpg"); */
-  /* height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
+  background-size: cover;
+  background-position: relative;
+  height: 60%;
   width: 100%;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .main-page {
@@ -44,17 +82,48 @@ body, html {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-left: 10%;
-  margin-right: 10%;
+}
+
+.cook-pot {
+  height: 45%;
+  padding-top: 24%;
+}
+
+.lets-cook {
+  margin-top: 15px;
+  background-color: #0fb9b1;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.left-side {
+  margin-left: 8%;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-top: 35px;
+}
+
+.right-side {
+  margin-left: 56%;
+  align-items: center;
+  text-align: center;
+  padding-top: 35px;
 }
 
 .left-side,
 .right-side {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 35%;
-  height: 25%;
+  position: absolute;
   background-color: rgba(225, 225, 225, .9);
-  opacity: 40%;
+  opacity: 90%;
+  width: 35%;
+  height: 45%;
+  margin-top: 2%;
+  padding-bottom: 35px;
+  font-size: 20px;
 }

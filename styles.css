@@ -9,10 +9,55 @@ red - #ee5253
 */
 
 body {
-  background-image: url("./assets/burger-friends.jpg");
+  /* background-image: url("./assets/burger-friends.jpg"); */
   background-color: #0fb9b1;
   background-size: 100%;
   margin: 0px;
   font-family: 'Roboto', sans-serif;
 
 }
+
+nav {
+  background-color: #0fb9b1;
+  font-size: 30px;
+  padding: 25px
+
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 175px;
+  height: 450px;
+  width: 575px;
+  background-color: rgba(225, 225, 225, .9);
+  opacity: .25;
+}
+
+.form-pick {
+  display: inline-block;
+}
+
+.course {
+  margin-top: 20px;
+  background-color: #0fb9b1;
+  margin-left: 25px;
+  height: 50px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+}
+
+.cookpot {
+  width: 125px;
+}
+
+
+
+/*
+.div-main {
+height: 450px;
+width: 575px;
+background-color: rgba(225, 225, 225, .9);
+/* display: inline-block; */

@@ -4,7 +4,6 @@ var mainRadio = document.querySelector('#mainDish')
 var dessertRadio = document.querySelector('#dessert')
 
 var footer = document.querySelector('#foot')
-var crockpot = document.querySelector('div')
 
 var main = document.querySelector('main')
 
@@ -15,27 +14,48 @@ var addRecipeButton = document.querySelector('#addRecipe')
 var letsCookButton = document.querySelector('#letsCook')
 var addNewButton = document.querySelector('#addNew')
 var viewFavoritesButton = document.querySelector('#viewFavorites')
-var favoriteButton = document.querySelector('#favorite')
 
-//Event Listeners
-letsCookButton.addEventListener('click', createRecipe);
-addRecipeButton.addEventListener('click', displayForm);
-addNewButton.addEventListener('click', addRecipe)
-// viewFavoritesButton.addEventListener('click', addFavorite, false);
+
+
+
+var favoriteBtn = document.querySelector('#favorite') //query selector for button added to DOM through displayRecipe()
+var rightArticle = document.querySelector('.right') // query selector for parent of display-card
+// rightArticle.addEventListener('click', addFavorite) // eventlistener for container of parent of display-card
+//event.target to see where teh click is
+// if event.target.classname === 'favorite){
+  //do this
+  
+  
+  
+  //Event Listeners
+  letsCookButton.addEventListener('click', createRecipe);
+  addRecipeButton.addEventListener('click', displayForm);
+  addNewButton.addEventListener('click', addRecipe)
+  
+  var displayCard = document.querySelector('.display-card') // query selector for display-card
+  displayCard.addEventListener('click', addFavorite)
 
 //Event handlers
-function addFavorite(){
-
+function addFavorite(recipe){
+  console.log('before reassignment: ', recipe)
+  var newRecipe = recipe
+  console.log('after reassignemnt: ', newRecipe)
+  if(event.target.className === 'favoriteBtn') {
+    console.log('inside if: ', newRecipe)
+  } else if(event.target.className === 'addNewButton'){
+    console.log('addNewButton clicked')
+  }
 }
 
 function displayRecipe(recipe){
   event.preventDefault()
-  crockpot.innerHTML = `<div>
+  displayCard.innerHTML = `
   <p>You should make:</p>
   <h2>${recipe}</h2>
-  <button id="favorite">Favorite</button>
-  <button id="viewFavorites">View Favorites</button>
-  </div>`
+  <button class="favoriteBtn" id="favorite">Favorite</button>
+  <button class="addNewButton" id="viewFavorites">View Favorites</button> 
+  `
+  addFavorite(recipe)
 }
 
 function addRecipe(){

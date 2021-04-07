@@ -46,4 +46,7 @@ desserts: [
 'Tart Tatin',
 'Croissants',
 'Eclairs',
-  ]}
+],
+
+favoritedRecipes: []
+};

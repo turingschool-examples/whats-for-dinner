@@ -17,7 +17,6 @@ var viewFavoritesButton = document.querySelector('#viewFavorites')
 
 
 
-
 var favoriteBtn = document.querySelector('#favorite') //query selector for button added to DOM through displayRecipe()
 var rightArticle = document.querySelector('.right') // query selector for parent of display-card
 // rightArticle.addEventListener('click', addFavorite) // eventlistener for container of parent of display-card
@@ -25,8 +24,18 @@ var rightArticle = document.querySelector('.right') // query selector for parent
 // if event.target.classname === 'favorite){
   //do this
   
-  
-  
+var hideSection = document.querySelector('.main-section')
+window.addEventListener('load', pageLoad)
+function pageLoad(){
+  console.log('page loaded')
+}
+
+
+
+
+hideSection.classList.remove('hidden')
+
+
   //Event Listeners
   letsCookButton.addEventListener('click', createRecipe);
   addRecipeButton.addEventListener('click', displayForm);
@@ -37,6 +46,7 @@ var rightArticle = document.querySelector('.right') // query selector for parent
 
 //Event handlers
 function addFavorite(recipe){
+  hideSection.classList.toggle('hidden')
   console.log('before reassignment: ', recipe)
   var newRecipe = recipe
   console.log('after reassignemnt: ', newRecipe)

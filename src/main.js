@@ -15,49 +15,47 @@ var letsCookButton = document.querySelector('#letsCook')
 var addNewButton = document.querySelector('#addNew')
 var viewFavoritesButton = document.querySelector('#viewFavorites')
 
-
-
 var favoriteBtn = document.querySelector('#favorite') //query selector for button added to DOM through displayRecipe()
 var rightArticle = document.querySelector('.right') // query selector for parent of display-card
-// rightArticle.addEventListener('click', addFavorite) // eventlistener for container of parent of display-card
-//event.target to see where teh click is
-// if event.target.classname === 'favorite){
-  //do this
-  
-  // window.addEventListener('load', pageLoad)
-  // function pageLoad(){
-  //   console.log('page loaded')
-  // }
-  
-  
+
+var displayCard = document.querySelector('.display-card') // query selector for display-card
+
 var hideSection = document.querySelector('.main-section')
+var hideFavorite = document.querySelector('.favorite-section')
+
+//Event Listeners
+letsCookButton.addEventListener('click', createRecipe);
+addRecipeButton.addEventListener('click', displayForm);
+addNewButton.addEventListener('click', addRecipe)
+
+displayCard.addEventListener('click', addFavorite)
+
+window.addEventListener('load', pageLoad)
+
+//Event handlers
+function pageLoad(){
+  console.log('page loaded')
+  // hideFavorite.classList.add('hidden')
+}
 
 function display(){
   console.log('display function test')
-  hideSection.innerText = meal.favoritedRecipes
-  hideSection.classList.remove('hidden')
+  hideSection.innerHTML = `<div>
+  <p ondblclick="remove(this)">${meal.favoritedRecipes}</p>
+  <button class="go-home" id="goHome">Home</button>
+  </div>
+  `
+  hideFavorite.classList.remove('hidden')
 }
 
-
-
-  //Event Listeners
-  letsCookButton.addEventListener('click', createRecipe);
-  addRecipeButton.addEventListener('click', displayForm);
-  addNewButton.addEventListener('click', addRecipe)
-  
-  var displayCard = document.querySelector('.display-card') // query selector for display-card
-  displayCard.addEventListener('click', addFavorite)
-
-//Event handlers
 function addFavorite(recipe){
-  console.log('before reassignment: ', recipe)
-  var newRecipe = recipe
-  console.log('after reassignemnt: ', newRecipe)
+  // console.log('recipe variable outside if statement: ', recipe)
   if(event.target.className === 'favoriteBtn') {
-    meal.favoritedRecipes.push(newRecipe)
-    console.log('favorite button clicked')
+    // console.log('recipe variable INSIDE if statement: ', recipe)
+    // meal.favoritedRecipes.push('test meal push')
+    console.log(recipe)
   } else if(event.target.className === 'viewFavorites'){
-    display()
+    display(recipe)
     console.log('view favorites buton clicked')
   }
 }
@@ -112,3 +110,7 @@ function getRandomElement(array) {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
+function remove(el) {
+  var element = el;
+  element.remove();
+}

@@ -8,34 +8,37 @@ red - #ee5253
 
 */
 
+* {
+  border: solid red 2px;
+}
 body {
-  /* background-image: url("./assets/burger-friends.jpg"); */
+  background-image: url("./assets/burger-friends.jpg");
   background-color: #0fb9b1;
-  background-size: 100%;
+  background-size: cover;
   margin: 0px;
   font-family: 'Roboto', sans-serif;
+}
 
+.flex {
+  display: flex;
+  justify-content: space-around;
 }
 
 nav {
   background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   font-size: 30px;
-  padding: 25px
-
+  padding: 2px
 }
 
 .input-box {
-  display: flex;
   justify-content: space-evenly;
   margin-top: 175px;
   height: 450px;
   width: 575px;
   background-color: rgba(225, 225, 225, .9);
-  opacity: .25;
-}
-
-.form-pick {
-  display: inline-block;
 }
 
 .course {
@@ -49,15 +52,26 @@ nav {
   font-size: 17px;
 }
 
+.lets-cook {
+  margin-top: 20px;
+  background-color: #0fb9b1;
+  margin-left: 25px;
+  height: 50px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+}
+
+.return-box {
+    justify-content: space-evenly;
+    margin-top: 175px;
+    height: 450px;
+    width: 575px;
+    background-color: rgba(225, 225, 225, .9);
+}
+
 .cookpot {
   width: 125px;
 }
-
-
-
-/*
-.div-main {
-height: 450px;
-width: 575px;
-background-color: rgba(225, 225, 225, .9);
-/* display: inline-block; */

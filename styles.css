@@ -55,7 +55,7 @@ button, .btn {
   text-align: center;
   justify-content: center;
   align-items: center;
-  border-radius: .3rem;
+  border-radius: .4rem;
   border: none;
 }
 
@@ -96,6 +96,7 @@ button, .btn {
 .button {
   display: flex;
 }
+
 
 input[type="radio"]  {
 margin: 1rem .2rem ;

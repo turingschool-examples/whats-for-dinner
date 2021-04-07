@@ -30,7 +30,16 @@ header{
   margin: 0;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
 .transboxMeal, .transboxMenuOptions {
+  height: 40vh;
+  width: 40vw;
   margin: 30px;
   background-color: #ffffff;
   border: 1px solid black;

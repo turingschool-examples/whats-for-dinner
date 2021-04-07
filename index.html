@@ -12,29 +12,27 @@
      <button class='add-recipe' id='add-recipe'>ADD RECIPE</button>
     </nav>
     <main class='main-page' id='main-page'>
-      <form class='selection-form' id='selection-form'>
-        <h3 class='meal-question' id='meal-question'>What are you looking for?<span class='required' id='required'>*</span></h3>
-        <input type='radio' class='side-option' id='side-option' value='side'>
-        <label for='side'>Side</label>
-        <br>
-        <input type='radio' class='main-option' id='main-option' value='main'>
-        <label for='main'>Main Dish</label>
-        <br>
-        <input type='radio' class='dessert-option' id='dessert-option' value='dessert'>
-        <label for='dessert'>Dessert</label>
-        <br>
-        <input type='radio' class='entire-meal' id='entire-meal' value='entire'>
-        <label for='entire'>Entire Meal</label>
-        <br>
-        <br>
-        <button class='lets-cook' id='lets-cook'>Let's Cook!</button>
+      <form class='left-box' id='left-box'>
+        <ul>
+          <h3 class='meal-question' id='meal-question'>What are you looking for?<span class='required' id='required'>*</span></h3>
+          <br>
+          <input type='radio' class='side-option' id='side-option' value='side'>
+          <label for='side'>Side</label>
+          <input type='radio' class='main-option' id='main-option' value='main'>
+          <label for='main'>Main Dish</label>
+          <input type='radio' class='dessert-option' id='dessert-option' value='dessert'>
+          <label for='dessert'>Dessert</label>
+          <input type='radio' class='entire-meal' id='entire-meal' value='entire'>
+          <label for='entire'>Entire Meal</label>
+          <button class='lets-cook' id='lets-cook'>Let's Cook!</button>
+        </ul>
       </form>
-      <section class=display-box id='display-box'>
+      <form class='right-box' id='right-box'>
         <h3 class='suggestion-title hidden' id='suggestion-title hidden'>You should make:</h3>
-        <p class='suggested-meal hidden' id='suggested-meal hidden'>The side, main dish, and/or dessert!</p>
+        <p class='suggested-meal hidden' id='suggested-meal hidden'>A side, main, or dessert!</p>
         <img src='./assets/cookpot.svg' alt='a cookpot icon' class='cookpot' id='cookpot'>
         <button class="clear-button hidden">CLEAR</button>
-      </section>
+      </form>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>

@@ -24,16 +24,20 @@ var rightArticle = document.querySelector('.right') // query selector for parent
 // if event.target.classname === 'favorite){
   //do this
   
+  // window.addEventListener('load', pageLoad)
+  // function pageLoad(){
+  //   console.log('page loaded')
+  // }
+  
+  
 var hideSection = document.querySelector('.main-section')
-window.addEventListener('load', pageLoad)
-function pageLoad(){
-  console.log('page loaded')
+
+function display(){
+  console.log('display function test')
+  hideSection.innerText = meal.favoritedRecipes
+  hideSection.classList.remove('hidden')
 }
 
-
-
-
-hideSection.classList.remove('hidden')
 
 
   //Event Listeners
@@ -46,14 +50,15 @@ hideSection.classList.remove('hidden')
 
 //Event handlers
 function addFavorite(recipe){
-  hideSection.classList.toggle('hidden')
   console.log('before reassignment: ', recipe)
   var newRecipe = recipe
   console.log('after reassignemnt: ', newRecipe)
   if(event.target.className === 'favoriteBtn') {
-    console.log('inside if: ', newRecipe)
-  } else if(event.target.className === 'addNewButton'){
-    console.log('addNewButton clicked')
+    meal.favoritedRecipes.push(newRecipe)
+    console.log('favorite button clicked')
+  } else if(event.target.className === 'viewFavorites'){
+    display()
+    console.log('view favorites buton clicked')
   }
 }
 
@@ -63,7 +68,7 @@ function displayRecipe(recipe){
   <p>You should make:</p>
   <h2>${recipe}</h2>
   <button class="favoriteBtn" id="favorite">Favorite</button>
-  <button class="addNewButton" id="viewFavorites">View Favorites</button> 
+  <button class="viewFavorites" id="viewFavorites">View Favorites</button> 
   `
   addFavorite(recipe)
 }

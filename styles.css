@@ -46,6 +46,23 @@ button {
   padding: 5px;
 }
 
+.hidden {
+  display: none;
+}
+
+.clear {
+  width: 150px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  background-color: #95a5a6;
+}
+
+.clear:hover {
+ background-color: black;
+ color: white;
+}
+
 .add-recipe {
   margin: 15px;
 }
@@ -87,10 +104,14 @@ button {
   align-items: flex-start;
   justify-content: space-between;
   padding-left: 40px;
+  padding-top: 35px;
 }
 
 .right-side {
   margin-left: 56%;
+  align-items: center;
+  text-align: center;
+  padding-top: 35px;
 }
 
 .left-side,

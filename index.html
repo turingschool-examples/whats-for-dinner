@@ -15,7 +15,7 @@
       <div class="background-container">
         <img src="assets/burger-friends.jpg" alt="birds-eye view of friends and burgers" class="burgers" id="burgs">
       </div>
-      <section class="left-side">
+      <section class="left-side" id='left'>
         <h1>What are you looking for?*</h1>
         <input type="radio" id="side" name="side" value="side">
         <label for="side">Side</label>
@@ -27,10 +27,12 @@
         <label for="entire-meal">Entire Meal</label>
         <button type="button" class='lets-cook' id="lets-cook" name="lets-cook">LET'S COOK!</button>
       </section>
-      <section class="right-side">
+      <section class="right-side" id='right'>
         <img src="assets/cookpot.svg" alt="Cookpot icon" class="cook-pot" id="cookpot">
+        <button type="button" name="clear" class="clear hidden" id="clear">CLEAR</button>
       </section>
     </main>
   </body>
+  <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -15,13 +15,13 @@ var addRecipeButton = document.querySelector('#addRecipe')
 var letsCookButton = document.querySelector('#letsCook')
 var addNewButton = document.querySelector('#addNew')
 var viewFavoritesButton = document.querySelector('#viewFavorites')
-// var favoriteButton = document.querySelector('#favorite')
+var favoriteButton = document.querySelector('#favorite')
 
 //Event Listeners
 letsCookButton.addEventListener('click', createRecipe);
 addRecipeButton.addEventListener('click', displayForm);
 addNewButton.addEventListener('click', addRecipe)
-viewFavoritesButton.addEventListener('click', addFavorite, false);
+// viewFavoritesButton.addEventListener('click', addFavorite, false);
 
 //Event handlers
 function addFavorite(){

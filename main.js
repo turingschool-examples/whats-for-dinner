@@ -1,41 +1,40 @@
+//Query Selectors
 var sideRadio = document.querySelector('#side')
 var mainRadio = document.querySelector('#mainDish')
 var dessertRadio = document.querySelector('#dessert')
 
-var crockpot = 
+var crockpot = document.querySelector('div')
 
 var letsCookButton = document.querySelector('#letsCook')
 
+//Event Listeners
 letsCookButton.addEventListener('click', function(){
   createRecipe()
 })
-function displayRecipe(recipe){
 
+//Event handlers
+function displayRecipe(recipe){
+  crockpot.innerHTML = `<div>
+  <p>You should make:</p>
+  <h2>${recipe}</h2>
+  </div>`
 }
 function createRecipe(){
-  var recipe;
   if(sideRadio.checked){
-    recipe = getRandomElement(meal.desserts)
+    recipe = getRandomElement(meal.sides)
     displayRecipe(recipe)
   } else if(mainRadio.checked){
-    recipe = getRandomElement(meal.desserts)
+    recipe = getRandomElement(meal.mains)
     displayRecipe(recipe)
   } else if (dessertRadio.checked){
     recipe = getRandomElement(meal.desserts)
     displayRecipe(recipe)
   }
 }
+
 function getRandomElement(array) {
   return array[getRandomIndex(array)]
 };
-// function createRecipe(){
-//   var recipe = new Recipe(
-//     getRandomIndex(meal.sides),
-//     getRandomIndex(meal.mains),
-//     getRandomIndex(meals.desserts)
-//   )
-//     console.log(recipe)
-//   }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);

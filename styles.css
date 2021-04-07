@@ -27,7 +27,6 @@ main {
 
 } */
 section {
-  color: blue;
   display: flex;
   justify-content: space-evenly;
 }
@@ -44,7 +43,8 @@ article {
 .right{
   width: 150;
   height: 150;
-
+  align-items: center;
+  justify-content: center;
 }
 
 img {

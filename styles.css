@@ -5,9 +5,11 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
 nav{
   background-color: #0fb9b1;
   height: 50px;
+  margin: 0px;
 }
 .title{
   padding-left: 18px;
@@ -17,7 +19,7 @@ nav{
   margin: 0px;
 }
 
-.add-recipe{
+.add-recipe:{
   background-color: rgba(225, 225, 225, 0.9);
   border: 15px,rgba(255, 225, 225, 0.9);
   border-radius: 5px;

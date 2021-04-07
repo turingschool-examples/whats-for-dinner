@@ -28,7 +28,7 @@ mains: [
 'Margarita Pizza',
 ],
 
-desserts:[
+desserts: [
 'Apple Pie',
 'Lemon Meringue Pie',
 'Black Forest Cake',
@@ -46,5 +46,4 @@ desserts:[
 'Tart Tatin',
 'Croissants',
 'Eclairs',
-  ]
-};
+  ]}

@@ -17,6 +17,11 @@ red - #ee5253
   font-family: Roboto, sans-serif;
 }
 
+html {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -27,25 +32,68 @@ header {
   background-color: #0fb9b1;
 }
 
-header nav {
-  float: right;
-  vertical-align: middle;
+button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
-html {
-  background-image: url("./assets/burger-friends.jpg");
-  background-size: cover;
+.lets-cook {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #0fb9b1;
+  width: 50%
 }
 
-section {
-  background-color: rgba(225, 225, 225, .9);
-  margin: 100px;
-  padding: 50px;
+.clear {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #95a5a6;
+  color: white;
 }
 
 main {
   display: flex;
+  justify-content: center;
 }
+
+section {
+  background-color: rgba(225, 225, 225, .9);
+  width: 375px;
+  height: 250px;
+  padding: 50px;
+  margin-top: 50px;
+  margin: 100px;
+}
+
+section h1 span {
+  color: #ee5253
+}
+
+form {
+  margin-top: 20px;
+}
+
+section .right-box {
+  display: block;
+  justify-content: center;
+  align-content: center;
+
+}
+
+section .right-box .cookpot {
+  margin: 100px
+
+}
+
+
+
+
+
+
 
 img{
   width: 80px;

@@ -5,17 +5,24 @@
   text-align: left;
 }
 
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
 img {
-  padding-left: 113px;
-  padding-top: 80px;
+  padding-left: 145px;
+  padding-top: 95px;
 }
 
 h1 {
-  padding-left: 30px;
+  padding-left: 28px;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #0fb9b1;
-  font-size: 30px;
+  font-size: 25px;
+  margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .icon {
@@ -26,10 +33,15 @@ body {
   background-image:url("assets/burger-friends.jpg");
   background-repeat:no-repeat;
   background-size:1500px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 .looking-for {
   font-size: 30px;
+  font-weight: bold;
 }
 
 .star {
@@ -43,15 +55,18 @@ body {
     border-width: thin;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .column {
-  /* float: left; */
-  /* width: 50%; */
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 1px;
+  padding-left: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
   column-count: 2;
 }
 
@@ -59,36 +74,32 @@ body {
   display: block;
   background-color: rgba(225, 225, 225, .9);
   color: black;
-  width: 400px;
-  height: 300px;
-  padding: 50px;
+  width: 460px;
+  height: 200px;
+  padding-top: 50px;
+  padding-bottom: 180px;
+  padding-left: 50px;
   /* display: grid; */
   font-size: 20px;
   font-weight: bold;
   margin-left: 100px;
-  margin-top: 50px;
-  line-height: 2;
+  /* margin-top: 50px; */
+  line-height: 2.4;
 }
 
 .transparent-box-right {
   display: block;
   background-color: rgba(225, 225, 225, .9);
   color: black;
-  width: 400px;
-  height: 300px;
+  width: 415px;
+  height: 335px;
   padding: 50px;
-  /* display: grid; */
   font-size: 20px;
   font-weight: bold;
   margin-left: 100px;
-  margin-top: 50px;
+  margin-top: 700px;
   line-height: 2;
 }
-
-/* .grid-container {
-  display: grid;
-  grid-column-gap: 10000px;
-} */
 
 /* COLORS
 teal - #0fb9b1;

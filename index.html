@@ -14,13 +14,21 @@
       <form class="input-box" id="input-box">
         <h3 class="question">What are you looking for?</h3>
         <br>
-      <div class="form-pick">
-
-      <div class="label">
-          <input type="radio" name="course" value="side" checked="checked" /> Side
-          <input type="radio" name="course" value="main-dish" /> Main dish
-          <input type="radio" name="course" value="dessert" /> Dessert
-          <input type ="radio" name="course" value="entire-meal" /> Entire Meal
+      <div class="input-label" id="input-label">
+        <input type="radio" name="course" value="side" checked="checked"/>
+        <label for="side">Side</label>
+      </div>
+      <div class="input-label" id="input-label">
+        <input type="radio" name="course" value="main-dish" />
+        <label for="main">Main dish</label>
+      </div>
+      <div class="input-label" id="input-label">
+          <input type="radio" name="course" value="dessert" />
+          <label for="dessert" id="dessert">Dessert</label>
+      </div>
+      <div class="input-label" id="input-label">
+          <input type ="radio" name="course" value="entire-meal" />
+          <label for="entire-meal">Entire Meal</label>
       </div>
           <button class="lets-cook" id="lets-cook">Let's Cook! </button>
       </form>

@@ -40,7 +40,8 @@ button {
   border-radius: 5px;
 }
 
-.lets-cook {
+.lets-cook,
+.add-favorite {
   padding: 10px;
   border: 1px solid white;
   border-radius: 5px;
@@ -58,7 +59,7 @@ main {
 section {
   background-color: rgba(225, 225, 225, .9);
   width: 400px;
-  height: 300px;
+  min-height: 300px;
   margin-bottom: 100px;
   padding: 50px;
 }
@@ -101,7 +102,6 @@ form {
   position: absolute;
   right: 20px;
   bottom: 20px;
-
 }
 
 .hidden {

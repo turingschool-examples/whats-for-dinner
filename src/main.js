@@ -34,7 +34,7 @@ window.addEventListener('load', pageLoad)
 
 //Event handlers
 function pageLoad(){
-  console.log('page loaded')
+  // console.log('page loaded')
   // hideFavorite.classList.add('hidden')
 }
 
@@ -65,10 +65,10 @@ function displayRecipe(recipe){
   displayCard.innerHTML = `
   <p>You should make:</p>
   <h2>${recipe}</h2>
-  <button class="favoriteBtn" id="favorite">Favorite</button>
+  <button class="favoriteBtn" id="favorite" onClick=addFavorite(recipe)>Favorite</button>
   <button class="viewFavorites" id="viewFavorites">View Favorites</button> 
   `
-  addFavorite(recipe)
+  // addFavorite(recipe)
 }
 
 function addRecipe(){

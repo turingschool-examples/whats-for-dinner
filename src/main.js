@@ -34,38 +34,18 @@ displayCard.addEventListener('click', addFavorite)
 //Event handlers
 window.addEventListener('load', pageLoad)
 function pageLoad(){
-  // console.log('page loaded')
-  // hideFavorite.classList.add('hidden')
-}
 
-function display(){
-  hideSection.innerHTML = `<div>
-  <p ondblclick="remove(this)">${meal.favoritedRecipes}</p>
-  <button class="go-home" id="goHome">Home</button>
-  </div>
-  `
 }
 
 function addFavorite(){
-// debugger
+  // debugger
   if(!meal.favoritedRecipes.includes(recipe)){
     if(event.target.className === 'favoriteBtn') {
       meal.favoritedRecipes.push(recipe)
-  } else if(event.target.className === 'viewFavorites') {
+    } else if(event.target.className === 'viewFavorites') {
       display(recipe)
     }
   }
-}
-
-function displayRecipe(recipe){
-  // debugger
-  event.preventDefault()
-  displayCard.innerHTML = `
-  <p>You should make:</p>
-  <h2>${recipe}</h2>
-  <button class="favoriteBtn" id="favorite">Favorite</button>
-  <button class="viewFavorites" id="viewFavorites" onClick={display()}>View Favorites</button> 
-  `
 }
 
 function addRecipe(){
@@ -83,6 +63,36 @@ function addRecipe(){
   displayRecipe(recipeName.value)
 }
 
+function iterateList(){
+  for(var i = 0; i < meal.favoritedRecipes.length; i++){
+
+    return meal.favoritedRecipes[i]
+  }
+}
+
+function display(){
+    hideSection.innerHTML = `<div>
+    <p ondblclick="remove(this)">${meal.favoritedRecipes}</p>
+    <button class="go-home" id="goHome" onClick={}>Home</button>
+    </div>
+    `
+}
+
+function displayRecipe(recipe){
+  // debugger
+  event.preventDefault()
+  displayCard.innerHTML = `
+  <p>You should make:</p>
+  <h2>${recipe}</h2>
+  <button class="favoriteBtn" id="favorite">Favorite</button>
+  <button class="viewFavorites" id="viewFavorites" onClick={display()}>View Favorites</button> 
+  `
+}
+
+function toggleDisplay(){
+  hideFavorite.classList.toggle('hidden')
+}
+
 function createRecipe(){
   if(sideRadio.checked){
     recipe = getRandomElement(meal.sides)
@@ -95,6 +105,7 @@ function createRecipe(){
     displayRecipe(recipe)
   }
 }
+
 function displayForm(){
   footer.classList.toggle('hidden')
 }
@@ -106,6 +117,7 @@ function getRandomElement(array) {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
+
 function remove(el) {
   var element = el;
   element.remove();

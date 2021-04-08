@@ -4,7 +4,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header>
+      <h3>What's for Dinner?</h3>
+      <button id="add-recipe" class="add-recipe">add a recipe</button>
+    </header>
+    <section>
+      <h2>What are you looking for?<span class="asterisk">*</span></h2>
+      <input id="side" type="radio">Side</input>
+      <input id="main-dish" type="radio">Main Dish</input>
+      <input id="dessert" type="radio">Dessert</input>
+      <input id="Entire Meal" type="radio">Entire Meal</input>
+      <button id="lets-cook" class="lets-cook">let's cook</button>
+    </section>
+    <section id="recipe-display">
+      <img id="cookpot" class="cookpot" href="cookpot.svg">
+      <h4>You should make:</h4>
+      <h1></h1>
+      <button id="clear-button" class="clear-button">clear</button>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

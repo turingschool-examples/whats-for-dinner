@@ -29,10 +29,12 @@ body {
 }
 
 header {
-  height: 70px;
+  height: 80px;
   width: 100%;
   background-color: #0fb9b1;
   display: flex;
+  justify-content: space-between;
+  /* padding: 20px; */
 }
 
 /* div {
@@ -83,8 +85,8 @@ h1 {
 
 h3 {
   display: inline;
-  margin-right: 500px;
-  margin-left: 50px;
+  /* margin-right: 500px;
+  margin-left: 50px; */
 }
 
 h4 {

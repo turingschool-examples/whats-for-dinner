@@ -16,7 +16,7 @@ var rightBox = document.querySelector('.right-box')
 var favRecipesBox = document.querySelector('.show-fav-recipes')
 
 //////////// VARIABLES ////////////
-
+var favoriteRecipes = ['', ];
 
 //////////// EVENT LISTENERS ////////////
 letsCookButton.addEventListener('click', displayRandomFood)
@@ -54,31 +54,47 @@ function clearForm() {
   sideButton.checked = false
 }
 
-function viewFavoritesPage() {
-  leftBox.classList.add('hidden');
-  rightBox.classList.add('hidden');
-  favRecipesBox.classList.remove('hidden');
-  homeButton.classList.remove('hidden')
-
-  //page should display all of their favorite recipes in the ul
-  //need to add li elements
+function hideElement(element) {
+  element.classList.add('hidden')
 }
 
-function addToFavorites() {
-  //when addToFavoritesButton is clicked, the current recipe should be added to the favorites array
+function showElement(element) {
+  element.classList.remove('hidden')
+}
 
-
+function viewFavoritesPage() {
+  hideElement(leftBox);
+  hideElement(rightBox);
+  showElement(favRecipesBox);
+  showElement(homeButton);
 }
 
 function goHome() {
-  leftBox.classList.remove('hidden');
-  rightBox.classList.remove('hidden');
-  favRecipesBox.classList.add('hidden');
-  homeButton.classList.add('hidden')
+  showElement(leftBox);
+  showElement(rightBox);
+  hideElement(favRecipesBox);
+  hideElement(homeButton);
+}
+
+function addToFavorites() {
+  var currentRecipe = formOutput.innerText;
+  var isInArray = false;
+  for(var i = 0; i < favoriteRecipes.length; i ++) {
+    if (favoriteRecipes[i] === currentRecipe) {
+      isInArray = true
+    }
+  }
+  if (!isInArray) {
+    favoriteRecipes.push(currentRecipe);
+  }
+  //page should display all of their favorite recipes in the ul
+  //need to add li elements
+
 }
 
 function removeFavorite() {
   //Users should be able to remove a recipe from their list of favorites, by clicking a button.
   //change the DOM and data model
-  //need to add this button to the html
+  //need to add a remove button next to every single recipe name
+  //event bubblingggg
 }

@@ -4,30 +4,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="top home">
-      <nav class="top bar">
-          <h1 class="question-header">What's for Dinner?</h1>
-          <form class="add-recipe">
-            <input type="submit" name="add a recipe" value="ADD A RECIPE">
-          </form>
+    <header>
+      <nav class="top-bar-nav">
+          <h3 class="question-header">What's for Dinner?</h3>
+          <button class="add-recipe" id="add-recipe">ADD A RECIPE</button>
       </nav>
     </header>
-    <section class="input-box">
-      <h3 class="question" id='question'>What are you looking for?</h3>
-      <form class="pick-course" id="pick-course">
-        <p>
-          <input type="radio" name="course" value="side" checked="checked" /> Side
-          <input type="radio" name="course" value="main-dish" /> Main dish
-          <input type="radio" name="course" value="dessert" /> Dessert
-          <input type ="radio" name="course" value="entire-meal" /> Entire Meal
-        </p>
+    <section class="flex-container">
+      <form class="input-box" id="input-box">
+        <h3 class="question">What are you looking for?</h3>
+        <!-- <br> -->
+      <div class="input-label" id="input-label">
+        <input type="radio" name="course" value="side" checked="checked"/>
+        <label for="side">Side</label>
+      </div>
+      <div class="input-label" id="input-label">
+        <input type="radio" name="course" value="main-dish" />
+        <label for="main">Main dish</label>
+      </div>
+      <div class="input-label" id="input-label">
+          <input type="radio" name="course" value="dessert" />
+          <label for="dessert" id="dessert">Dessert</label>
+      </div>
+      <div class="input-label" id="input-label">
+          <input type ="radio" name="course" value="entire-meal" />
+          <label for="entire-meal">Entire Meal</label>
+      </div>
           <button class="lets-cook" id="lets-cook">Let's Cook! </button>
       </form>
+      <div class="return-box" id="return-box">
+          <h3 class="you-should-make hidden" id ="you-should-make hidden">You should make:</h3>
+          <img src="./assets/cookpot.svg" class="cookpot" alt="Image of large pot">
+          <button class="clear-button hidden" id="clear-button hidden">CLEAR</button>
+      </div>
     </section>
-    <section class="return-box">
-      <p class="static-text">You should make:</p>
-      <img src="./assets/cookpot.svg" class="cookpot" alt="Image of large pot">
-      <button class="clear-button" id="clear-button">CLEAR</button>
+  </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

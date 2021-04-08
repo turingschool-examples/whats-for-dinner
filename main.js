@@ -68,10 +68,8 @@ function viewFavoritesPage() {
   hideElement(rightBox);
   showElement(favRecipesBox);
   showElement(homeButton);
+  favRecipesList.innerHTML = ''
 
-//don't want this to render in the DOM every time we click view favorites
-//need the section box to flex with the amount of recipes added to it
-//don't want the ! to render on the list, maybe change HTML for this
   for(var i = 0; i <favoriteRecipes.length ; i++){
     favRecipesList.innerHTML += `
         <ul>
@@ -80,7 +78,7 @@ function viewFavoritesPage() {
             <button class="delete">Remove Favorite</button>
           </li>
         </ul>
-    `
+      `
   }
 
 }

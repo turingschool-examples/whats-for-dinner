@@ -30,45 +30,42 @@ addNewButton.addEventListener('click', addRecipe)
 
 displayCard.addEventListener('click', addFavorite)
 
-window.addEventListener('load', pageLoad)
 
 //Event handlers
+window.addEventListener('load', pageLoad)
 function pageLoad(){
   // console.log('page loaded')
   // hideFavorite.classList.add('hidden')
 }
 
 function display(){
-  console.log('display function test')
   hideSection.innerHTML = `<div>
   <p ondblclick="remove(this)">${meal.favoritedRecipes}</p>
   <button class="go-home" id="goHome">Home</button>
   </div>
   `
-  hideFavorite.classList.remove('hidden')
 }
 
-function addFavorite(recipe){
-  // console.log('recipe variable outside if statement: ', recipe)
-  if(event.target.className === 'favoriteBtn') {
-    // console.log('recipe variable INSIDE if statement: ', recipe)
-    // meal.favoritedRecipes.push('test meal push')
-    console.log(recipe)
-  } else if(event.target.className === 'viewFavorites'){
-    display(recipe)
-    console.log('view favorites buton clicked')
+function addFavorite(){
+// debugger
+  if(!meal.favoritedRecipes.includes(recipe)){
+    if(event.target.className === 'favoriteBtn') {
+      meal.favoritedRecipes.push(recipe)
+  } else if(event.target.className === 'viewFavorites') {
+      display(recipe)
+    }
   }
 }
 
 function displayRecipe(recipe){
+  // debugger
   event.preventDefault()
   displayCard.innerHTML = `
   <p>You should make:</p>
   <h2>${recipe}</h2>
-  <button class="favoriteBtn" id="favorite" onClick=addFavorite(recipe)>Favorite</button>
-  <button class="viewFavorites" id="viewFavorites">View Favorites</button> 
+  <button class="favoriteBtn" id="favorite">Favorite</button>
+  <button class="viewFavorites" id="viewFavorites" onClick={display()}>View Favorites</button> 
   `
-  // addFavorite(recipe)
 }
 
 function addRecipe(){
@@ -81,7 +78,6 @@ function addRecipe(){
   } else if (recipeType.value === 'Dessert'){
     meal.desserts.push(recipeName.value)
   } else {
-    var type = recipeType.value
     meal.type = [recipeName.value]
   }
   displayRecipe(recipeName.value)

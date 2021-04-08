@@ -16,32 +16,33 @@
     <button class="add-recipe-button">ADD A RECIPE</button>
   </header>
   <section class="flex">
-    <article class="meal-container">
+    <article class="meal-container flex">
       <h2>What are you looking for? <span class="asterisk">*</span></h2>
-      <ul>
-        <form action="side">
-          <input type="radio" name="side">
-          Side</form>
-        <form action="main-dish">
-          <input type="radio" name="main-dish">
-          Main Dish</form>
-        <form action="dessert">
-          <input type="radio" name="dessert">
-          Dessert</form>
-        <form action="entire-meal">
-          <input type="radio" name="entire-meal">
-          Entire Meal</form>
-      </ul>
-      <input class="btn cook-btn" type="button" value="LET'S COOK!">
+      <form>
+      <input type="radio" class="side" name="choices" value="side">
+      <label for="side">Side</label><br>
+      <input type="radio" class="main-dish" name="choices" value="main-dish">
+      <label for="main-dish">Main Dish</label><br>
+      <input type="radio" class="dessert" name="choices" value="dessert">
+      <label for="dessert">Dessert</label><br>
+      <input type="radio" class="entire-meal" name="choices" value="entire-meal">
+      <label for="entire-meal">Entire Meal</label><br>
+      <input class="btn cook-btn" type="submit" value="LET'S COOK!">
+    </form>
     </article>
     <article class="recipe-container flex">
       <img src="./assets/cookpot.svg" alt="cook pot" class="pot">
+      <h2 class="dish hidden">Dish</h2>
       <!-- <h3>You should make:</h3>
 <p>BBQ Chicken Burgers with a side of Miso Glazed Carrots and Lemon Meringue Pie for dessert</p> -->
       <!-- <input type="button" value="CLEAR" class="clear"> -->
     </article>
+    <script type="text/javascript" src="./javascript/food-data.js"></script>
+    <script type="text/javascript" src="./javascript/main.js"></script>
+
 </body>
-<script type="text/javascript" src="main.js"></script>
-<script type="text/javascript" src="assets/food-data.js"></script>
 
 </html>
+
+
+

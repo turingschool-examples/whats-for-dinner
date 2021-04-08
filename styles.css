@@ -36,40 +36,16 @@ nav {
   padding-right: 10px;
 }
 
-.add-recipe {
-
-}
-
 .input-box {
+  display: flex;
   justify-content: space-evenly;
-  margin-top: 50px;
   height: 400px;
   width: 500px;
   background-color: rgba(225, 225, 225, .9);
-  display: flex;
   flex-direction: column;
   margin-left: 10px;
+  margin-top: 50px;
 }
-
-/* label {
-  margin-left: 10px;
-} */
-
-/* .pick-course {
-  margin-top: 20px;
-  margin-left: 25px;
-  height: 50px;
-  width: 250px;
-  border-radius: 5px;
-  border: none;
-  font-size: 17px;
-} */
-
-/* .label {
-  font-size: 16px;
-  display: flex;
-  margin-bottom: 30;
-} */
 
 .lets-cook {
   margin-top: 20px;
@@ -96,6 +72,9 @@ nav {
 .cookpot {
   width: 125px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .clear-button {

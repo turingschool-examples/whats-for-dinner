@@ -34,6 +34,7 @@ header {
   background-color: #0fb9b1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* padding: 20px; */
 }
 
@@ -85,6 +86,8 @@ h1 {
 
 h3 {
   display: inline;
+  margin-left: 2%;
+  font-size: 30px;
   /* margin-right: 500px;
   margin-left: 50px; */
 }
@@ -94,7 +97,7 @@ h4 {
 }
 
 button {
-  border-radius: 3px;
+  border-radius: 5px;
   text-transform: uppercase;
 }
 
@@ -111,8 +114,14 @@ input {
 
 
 .add-recipe {
+  font-size: 18px;
   display: inline;
-  background-color: rgba(225, 225, 225, .9);
+  background-color: white;
+  padding: 10px;
+  margin-right: 2%;
+  height: 40px;
+  width: 150px;
+  border: 0;
 }
 
 .lets-cook {

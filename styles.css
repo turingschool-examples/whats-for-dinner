@@ -68,9 +68,9 @@ div {
 }
 
 section {
-  margin-top: 50px;
-  height: 400px;
-  width: 500px;
+  margin-top: 73px;
+  height: 535px;
+  width: 635px;
   background-color: rgba(225, 225, 225, .9);
   display: inline-block;
 }
@@ -86,7 +86,7 @@ h1 {
 
 h3 {
   display: inline;
-  margin-left: 2%;
+  margin-left: 1.5%;
   font-size: 30px;
   /* margin-right: 500px;
   margin-left: 50px; */
@@ -118,8 +118,8 @@ input {
   display: inline;
   background-color: white;
   padding: 10px;
-  margin-right: 2%;
-  height: 40px;
+  margin-right: 1.5%;
+  height: 45px;
   width: 150px;
   border: 0;
 }

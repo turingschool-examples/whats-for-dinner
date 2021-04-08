@@ -3,8 +3,8 @@ var sideSelector = document.querySelector("#side");
 var mainDishSelector = document.querySelector("#main-dish");
 var dessertSelector = document.querySelector("#dessert");
 var entireMealSelector = document.querySelector("entireMealSelector");
+var userLetsCook = document.querySelector("#lets-cook");
 var clearButton = document.querySelector("#clear-button");
-
 
 //--------ARRAY VALUES--------------------------//
 
@@ -57,6 +57,10 @@ var dessert = [
       "Croissants",
       "Eclairs"
 ];
+
+//---------Event Listeners -------------------//
+window.addEventListener('DOMContentLoaded', showDefaultView)
+userLetsCook.addEventListener('click', displayRandomDish);
 
 //-------Functions-------------------//
 function getRandomIndex(array) {

@@ -8,3 +8,122 @@ red - #ee5253
 
 */
 
+* {
+  border: blue solid 1px
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+}
+
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: 100%;
+  background-repeat: cover;
+  font-family: "Roboto";
+  margin: 0;
+  border: 0;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  background-color: #0fb9b1;
+  display: flex;
+}
+
+/* div {
+  display: inline-block;
+} */
+
+/*div {
+  height: 300px;
+  width: 300px;
+  background-color: rgba(225, 225, 225, .9);
+/*   margin: 100px;
+  padding: 50px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  align-items: center;
+}*/
+
+/* section {
+  display: inline-flex;
+} */
+
+/* flexboxing below */
+div {
+  height: 100%;
+  widthL 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+section {
+  margin-top: 50px;
+  height: 400px;
+  width: 500px;
+  background-color: rgba(225, 225, 225, .9);
+  display: inline-block;
+}
+
+/* end of flexbox */
+span {
+  color: #ee5253;
+}
+
+h1 {
+
+}
+
+h3 {
+  display: inline;
+  margin-right: 500px;
+  margin-left: 50px;
+}
+
+h4 {
+  font-style: italic;
+}
+
+button {
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+img {
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  display: inline;
+  margin-top: 10px;
+}
+
+
+.add-recipe {
+  display: inline;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  padding: 5px 50px 5px 50px;
+  display: block;
+}
+
+.clear {
+  bacgkround-color: #95a5a6;
+  color: white
+}
+
+.hidden {
+  display: none;
+}

@@ -18,6 +18,10 @@ letsCookButton.addEventListener('click', displayRandomFood)
 clearButton.addEventListener('click', clearForm)
 
 //////////// FUNCTIONS AND EVENT HANDLERS ////////////
+function randomFoods(foodType) {
+  return foodType[Math.floor(Math.random()*foodType.length)]
+}
+
 function displayRandomFood() {
   event.preventDefault();
   cookpotView.classList.add('hidden');
@@ -32,10 +36,6 @@ function displayRandomFood() {
     var randomDessert = randomFoods(desserts)
     formOutput.innerText = `${randomDessert}!`
   }
-}
-
-function randomFoods(foodType) {
-  return foodType[Math.floor(Math.random()*foodType.length)]
 }
 
 function clearForm() {

@@ -8,9 +8,9 @@ red - #ee5253
 
 */
 
-* {
+/* * {
   border: solid red 2px;
-}
+} */
 body {
   background-image: url("./assets/burger-friends.jpg");
   background-color: #0fb9b1;
@@ -19,7 +19,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.flex {
+.flex-container {
   display: flex;
   justify-content: space-around;
 }
@@ -31,17 +31,31 @@ nav {
   flex-direction: row;
   font-size: 30px;
   padding: 2px
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.add-recipe {
+
 }
 
 .input-box {
   justify-content: space-evenly;
-  margin-top: 175px;
+  margin-top: 50px;
   height: 450px;
   width: 575px;
   background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
 
-.pick-course {
+/* label {
+  margin-left: 10px;
+} */
+
+/* .pick-course {
   margin-top: 20px;
   margin-left: 25px;
   height: 50px;
@@ -49,13 +63,13 @@ nav {
   border-radius: 5px;
   border: none;
   font-size: 17px;
-}
+} */
 
-.label {
+/* .label {
   font-size: 16px;
   display: flex;
   margin-bottom: 30;
-}
+} */
 
 .lets-cook {
   margin-top: 20px;
@@ -65,18 +79,31 @@ nav {
   width: 250px;
   border-radius: 5px;
   border: none;
-  font-family: 'Roboto', sans-serif;
   font-size: 17px;
 }
 
 .return-box {
-    justify-content: space-evenly;
-    margin-top: 175px;
-    height: 450px;
-    width: 575px;
-    background-color: rgba(225, 225, 225, .9);
+  justify-content: space-evenly;
+  margin-top: 50px;
+  height: 400px;
+  width: 500px;
+  background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 }
 
 .cookpot {
   width: 125px;
 }
+
+.clear-button {
+  width: 80px;
+  height: 30px;
+  border: none;
+  background: #95a5a6;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 3px;
+  color: white;

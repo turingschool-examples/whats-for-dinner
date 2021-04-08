@@ -43,8 +43,8 @@ nav {
 .input-box {
   justify-content: space-evenly;
   margin-top: 50px;
-  height: 450px;
-  width: 575px;
+  height: 400px;
+  width: 500px;
   background-color: rgba(225, 225, 225, .9);
   display: flex;
   flex-direction: column;
@@ -95,6 +95,7 @@ nav {
 
 .cookpot {
   width: 125px;
+  display: flex;
 }
 
 .clear-button {

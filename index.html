@@ -8,21 +8,36 @@
       <h3>What's for Dinner?</h3>
       <button id="add-recipe" class="add-recipe">add a recipe</button>
     </header>
-    <section>
+    <div>
+    <section class="dish-selection">
+      <form action="/main.js" method="get">
       <h2>What are you looking for?<span class="asterisk">*</span></h2>
-      <input id="side" type="radio" name="dish" value="side"><label for="side">Side</label>
-      <input id="main-dish" type="radio" name="dish" value="main-dish">
-      <label for="main-dish">Main Dish</label>
-      <input id="dessert" type="radio" name="dish" value="dessert"><label for="dessert">Dessert</label>Dessert
-      <input id="Entire Meal" type="radio" name="dish" value="entire-meal"><label for="entire-meal">Entire Meal</label>
+        <p>
+          <input id="side" type="radio" name="dish" value="side">
+          <label for="side">Side</label>
+        </p>
+        <p>
+          <input id="main-dish" type="radio" name="dish" value="main-dish">
+          <label for="main-dish">Main Dish</label>
+        </p>
+        <p>
+          <input id="dessert" type="radio" name="dish" value="dessert">
+          <label for="dessert">Dessert</label>
+        </p>
+        <p>
+          <input id="Entire Meal" type="radio" name="dish" value="entire-meal">
+          <label for="entire-meal">Entire Meal</label>
+        </p>
       <button id="lets-cook" class="lets-cook">let's cook</button>
+    </form>
     </section>
-    <section id="recipe-display">
+    <section id="recipe-display" class="recipe-display">
       <img id="cookpot" class="cookpot" alt="Drawing of a Cook Pot" src="./assets/cookpot.svg">
       <h4 class="hidden">You should make:</h4>
       <h1></h1>
       <button id="clear-button" class="clear-button hidden">clear</button>
     </section>
+  </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

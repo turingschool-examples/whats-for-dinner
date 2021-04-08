@@ -57,3 +57,14 @@ var dessert = [
       "Croissants",
       "Eclairs"
 ];
+
+//-------Functions-------------------//
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
+
+function generateRandomDish() {
+  var randomSide = side[getRandomIndex(side)];
+  var randomMainDish = mainDish[getRandomIndex(mainDish)]
+  var randomDessert = dessert[getRandomIndex(randomDessert)]
+};

@@ -46,6 +46,11 @@ button {
   padding: 5px;
 }
 
+button:hover {
+  background-color: black;
+  color: #0fb9b1;
+}
+
 .hidden {
   display: none;
 }

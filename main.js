@@ -13,6 +13,7 @@ var radios = document.querySelectorAll('.radio');
 var cookpot = document.getElementById('cookpot');
 var leftSide = document.getElementById('left');
 var rightSide = document.getElementById('right');
+var recipe = document.getElementById('recipe');
 
 
 // EVENT LISTENERS
@@ -29,35 +30,53 @@ function generateRandomRecipe() {
     for (var i = 0; i < radios.length; i++) {
       if (radios[i].checked) {
         disableLetsCookBtn();
+        disableRadios();
         hideCookpot();
-        populateInnerTextFormat();
+        populateInnerHTML();
         console.log('done');
+        // unhideClearBtn();
       }
     }
   }
 
-  function populateInnerTextFormat() {
+  function populateInnerHTML() {
     for (var i = 0; i < radios.length; i++) {
-      if (radios[i].value === 'side' && radios[i].checked) {
+      if (radios[i].value === 'Side' && radios[i].checked) {
         rightSide.innerHTML = `<br><br><br>You should make:<br>`;
-      } else if (radios[i].value === 'main' && radios[i].checked) {
-        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
-      } else if (radios[i].value === 'dessert' && radios[i].checked) {
-        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      } else if (radios[i].value === 'Main Dish' && radios[i].checked) {
+        recipe.innerHTML = `<br><br><br>You should make:<br>`;
+      } else if (radios[i].value === 'Dessert' && radios[i].checked) {
+        recipe.innerHTML = `<br><br><br>You should make:<br>`;
       } else {
-        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+        recipe.innerHTML = `<br><br><br>You should make:<br>`;
       }
     }
+    unhideClearBtn();
   }
 
 function resetLRSides() {
   for (var i = 0; i < radios.length; i++) {
     radios[i].checked = false;
   }
-  rightSide.innerHTML = '';
   hideClearBtn();
+  recipe.innerHTML = '';
   unhideCookpot();
   enableLetsCookBtn();
+  enableRadios()
+}
+
+function disableRadios() {
+  sideDishBtn.disabled = true;
+  mainDishBtn.disabled = true;
+  dessertBtn.disabled = true;
+  entireMealBtn.disabled = true;
+}
+
+function enableRadios() {
+  sideDishBtn.disabled = false;
+  mainDishBtn.disabled = false;
+  dessertBtn.disabled = false;
+  entireMealBtn.disabled = false;
 }
 
 function disableLetsCookBtn() {
@@ -69,7 +88,7 @@ function enableLetsCookBtn() {
 }
 
 function hideClearBtn() {
-  clearBtn.classList.remove('hidden');
+  clearBtn.classList.add('hidden');
 }
 
 function unhideClearBtn() {

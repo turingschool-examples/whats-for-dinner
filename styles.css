@@ -59,7 +59,7 @@ main {
 section {
   background-color: rgba(225, 225, 225, .9);
   width: 400px;
-  height: 300px;
+  min-height: 300px;
   margin-bottom: 100px;
   padding: 50px;
 }

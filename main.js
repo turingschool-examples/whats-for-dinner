@@ -75,7 +75,8 @@ function loadMeal() {
     meal = getMealOption(desserts);
     dessertInput.checked = false;
   } else if (entireMealInput.checked) {
-    // call diff function
+    meal = getEntireMeal();
+    entireMealInput.checked = false;
   }
   rightDisplay.insertAdjacentHTML("afterbegin",
     `<p><em>You should make:</em></p>
@@ -89,4 +90,14 @@ function getMealOption(arrayName) {
   var randomIndex = Math.floor(Math.random() * arrayName.length);
   var mealOption = arrayName[randomIndex];
   return mealOption;
+}
+
+function getEntireMeal() {
+  var mainIndex = Math.floor(Math.random() * mains.length);
+  var mainOption = mains[mainIndex];
+  var sideIndex = Math.floor(Math.random() * sides.length);
+  var sideOption = sides[sideIndex];
+  var dessertIndex = Math.floor(Math.random() * desserts.length);
+  var dessertOption = desserts[dessertIndex];
+  return `${mainOption} with a side of ${sideOption} and ${dessertOption} for dessert!`;
 }

@@ -9,6 +9,7 @@ var side = document.querySelector('.side')
 var mainDish = document.querySelector('.main-dish')
 var dessert = document.querySelector('.dessert')
 var entireMeal = document.querySelector('.entire-meal')
+var suggestion = document.querySelector('h3')
 
 
 
@@ -19,15 +20,14 @@ cookButton.addEventListener('click', randomizeDish)
 function randomizeDish(e) {
 e.preventDefault()
 hide(potLogo)
+reveal(suggestion)
 reveal(dish)
-if (side.checked) {
-  dish.innerText = randomizeIndex(sides)
-  } else if (mainDish.checked) {
-    dish.innerText = randomizeIndex(mains)
-  } else if (dessert.checked) {
-    dish.innerText = randomizeIndex(desserts)
-  }
+return side.checked ? dish.innerText = randomizeIndex(sides)
+ : mainDish.checked ? dish.innerText = randomizeIndex(mains)
+ : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
+ : dish.innerText = `${randomizeIndex(sides)} with a side of ${randomizeIndex(mains)} and ${randomizeIndex(desserts)} for dessert!`
 }
+
 
 function hide(e) {
   e.classList.add('hidden')

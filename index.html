@@ -16,22 +16,28 @@
     </header>
     <main>
       <section class="whats-cooking">
-        <h1>What are you looking for?*</h1>
-          <input type="radio" id="side">
-          <label for="side">Side</label><br>
-          <input type="radio" id="main-dish">
-          <label for="main-dish">Main Dish</label><br>
-          <input type="radio" id="dessert">
-          <label for="dessert">Dessert</label><br>
-          <input type="radio" id="entire-meal">
-          <label for="entire-meal">Entire Meal</label><br>
-          <button id="lets-cook">LET'S COOK</button>
+        <h1>What are you looking for?<span>*</span></h1>
+          <form>
+            <input type="radio" id="side">
+            <label for="side">Side</label><br><br>
+            <input type="radio" id="main-dish">
+            <label for="main-dish">Main Dish</label><br><br>
+            <input type="radio" id="dessert">
+            <label for="dessert">Dessert</label><br><br>
+            <input type="radio" id="entire-meal">
+            <label for="entire-meal">Entire Meal</label><br><br>
+            <button class="lets-cook" id="lets-cook">LET'S COOK</button>
+          </form>
       </section>
       <section class="right-box">
-        <img src="./assets/cookpot.svg" class="cookpot-image">
-        <!-- <h1>You should make:</h1> -->
-        <!-- output of radio button choice -->
-        <button id="clear">CLEAR</button>
+        <div class="cookpot hidden" id="cookpot-view">
+          <img src="./assets/cookpot.svg" class="cookpot-image"><br>
+        </div>
+        <div class="form-output" id="you-should-make">
+          <p><em>You should make:</em></p>
+          <h1 class="output" id="form-output">Black Forest Cake!</h1>
+          <button class="clear" id="clear">CLEAR</button>
+        </div>
       </section>
     </main>
   </body>

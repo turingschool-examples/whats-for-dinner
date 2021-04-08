@@ -48,7 +48,7 @@ nav {
 }
 
 .atrix {
-  color: #ee5253 
+  color: #ee5253
 }
 
 .lets-cook {
@@ -63,7 +63,8 @@ nav {
 }
 
 .return-box {
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
   height: 400px;
   width: 500px;
@@ -71,6 +72,11 @@ nav {
   display: flex;
   flex-direction: column;
   margin-right: 10px;
+}
+
+.you-should-make {
+  font-style: italic;
+  font-size: 20px;
 }
 
 .cookpot {

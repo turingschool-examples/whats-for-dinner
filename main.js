@@ -12,11 +12,12 @@ var viewFavoritesButton = document.querySelector('.view-favs');
 var addToFavoritesButton = document.querySelector('.add-favorite');
 var homeButton = document.querySelector('.go-home');
 var leftBox = document.querySelector('.whats-cooking');
-var rightBox = document.querySelector('.right-box')
-var favRecipesBox = document.querySelector('.show-fav-recipes')
+var rightBox = document.querySelector('.right-box');
+var favRecipesBox = document.querySelector('.show-fav-recipes');
+var favRecipesList = document.querySelector('.fav-recipe-box');
 
 //////////// VARIABLES ////////////
-var favoriteRecipes = ['', ];
+var favoriteRecipes = [];
 
 //////////// EVENT LISTENERS ////////////
 letsCookButton.addEventListener('click', displayRandomFood)
@@ -36,13 +37,13 @@ function displayRandomFood() {
   youShouldMakeView.classList.remove('hidden');
   if(sideButton.checked) {
     var randomSide = randomFoods(sides);
-    formOutput.innerText = `${randomSide}!`
+    formOutput.innerText = `${randomSide}`
   } else if (mainDishButton.checked){
     var randomMain = randomFoods(mains)
-    formOutput.innerText = `${randomMain}!`
+    formOutput.innerText = `${randomMain}`
   } else if (dessertButton.checked){
     var randomDessert = randomFoods(desserts)
-    formOutput.innerText = `${randomDessert}!`
+    formOutput.innerText = `${randomDessert}`
   }
 }
 
@@ -67,6 +68,21 @@ function viewFavoritesPage() {
   hideElement(rightBox);
   showElement(favRecipesBox);
   showElement(homeButton);
+
+//don't want this to render in the DOM every time we click view favorites
+//need the section box to flex with the amount of recipes added to it
+//don't want the ! to render on the list, maybe change HTML for this
+  for(var i = 0; i <favoriteRecipes.length ; i++){
+    favRecipesList.innerHTML += `
+        <ul>
+          <li>
+            <span>${favoriteRecipes[i]}</span>
+            <button class="delete">Remove Favorite</button>
+          </li>
+        </ul>
+    `
+  }
+
 }
 
 function goHome() {
@@ -87,9 +103,6 @@ function addToFavorites() {
   if (!isInArray) {
     favoriteRecipes.push(currentRecipe);
   }
-  //page should display all of their favorite recipes in the ul
-  //need to add li elements
-
 }
 
 function removeFavorite() {

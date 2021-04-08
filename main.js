@@ -7,6 +7,7 @@ var userLetsCook = document.querySelector(".lets-cook");
 var clearButton = document.querySelector(".clear-button");
 var cookpot = document.querySelector(".cookpot");
 var shouldMake = document.querySelector(".you-should-make");
+var dishOption = document.querySelector("dish-option")
 
 
 //---------Event Listeners -------------------//
@@ -19,15 +20,26 @@ function getRandomIndex(array) {
 };
 
 function generateRandomDish() {
+  event.preventDefault();
   var randomSide = side[getRandomIndex(side)];
   var randomMainDish = mainDish[getRandomIndex(mainDish)];
   var randomDessert = dessert[getRandomIndex(randomDessert)];
 
-
+  if(sideSelector.checked === true) {
+    dishOption.innerHTML = `${randomSide}!`
+    displayRandomDish()
+  }
+  if(mainDishSelector.checked === true) {
+    dishOption.innerHTML = `${randomMainDish}!`
+    displayRandomDish()
+  }
+  if(dessertSelector.checked === true) {
+    dishOption.innerHTML = `${randomDessert}!`
+    displayRandomDish()
+  }
 };
 
 function displayRandomDish() {
-  // event.preventDefault();
   clearButton.classList.remove("hidden");
   cookpot.classList.add("hidden");
   shouldMake.classList.remove("hidden")

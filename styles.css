@@ -9,7 +9,6 @@ red - #ee5253
 */
 
 * {
-  border: 1px solid blue;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -26,10 +25,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   height: 70px;
   background-color: #0fb9b1;
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 button {
@@ -47,29 +48,26 @@ button {
   width: 50%
 }
 
-.clear {
-  padding: 10px;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: #95a5a6;
-  color: white;
-}
-
 main {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 100px;
 }
 
 section {
   background-color: rgba(225, 225, 225, .9);
-  width: 375px;
-  height: 250px;
+  width: 400px;
+  height: 300px;
+  margin-bottom: 100px;
   padding: 50px;
-  margin-top: 50px;
-  margin: 100px;
 }
 
-section h1 span {
+.whats-cooking h1 {
+  font-size: 30px;
+}
+
+.whats-cooking span {
   color: #ee5253
 }
 
@@ -77,25 +75,35 @@ form {
   margin-top: 20px;
 }
 
-section .right-box {
-  display: block;
+.right-box {
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.cookpot {
+  width: 100px;
+  height: 100px;
+}
+
+.output {
+  font-size: 40px;
+}
+
+.clear {
+  padding: 10px;
+  border: 1px solid #95a5a6;
+  border-radius: 5px;
+  background-color: #95a5a6;
+  color: white;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 
 }
 
-section .right-box .cookpot {
-  margin: 100px
-
-}
-
-
-
-
-
-
-
-img{
-  width: 80px;
-  height: 80px;
+.hidden {
+  display: none;
 }

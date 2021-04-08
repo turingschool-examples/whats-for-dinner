@@ -18,22 +18,18 @@
       <section class="whats-cooking">
         <h1>What are you looking for?<span>*</span></h1>
           <form>
-            <input type="radio" id="side">
-            <label for="side">Side</label><br><br>
-            <input type="radio" id="main-dish">
-            <label for="main-dish">Main Dish</label><br><br>
-            <input type="radio" id="dessert">
-            <label for="dessert">Dessert</label><br><br>
-            <input type="radio" id="entire-meal">
-            <label for="entire-meal">Entire Meal</label><br><br>
+            <input type="radio" name="group1" value="side" id="side"> Side</input><br><br>
+            <input type="radio" name="group1" value="main-dish" id="main-dish"> Main Dish</input><br><br>
+            <input type="radio" name="group1" value="dessert" id="dessert"> Dessert</input><br><br>
+            <!-- <input type="radio" name="group1" value="entire-meal" id="entire-meal"> Entire Meal</input><br><br> -->
             <button class="lets-cook" id="lets-cook">LET'S COOK</button>
           </form>
       </section>
       <section class="right-box">
-        <div class="cookpot hidden" id="cookpot-view">
-          <img src="./assets/cookpot.svg" class="cookpot-image"><br>
+        <div class="cookpot" id="cookpot-view">
+          <img src="./assets/cookpot.svg" class="cookpot-image" alt="vector image of cookpot"><br>
         </div>
-        <div class="form-output" id="you-should-make">
+        <div class="form-output hidden" id="you-should-make">
           <p><em>You should make:</em></p>
           <h1 class="output" id="form-output">Black Forest Cake!</h1>
           <button class="clear" id="clear">CLEAR</button>
@@ -42,4 +38,5 @@
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
 </html>

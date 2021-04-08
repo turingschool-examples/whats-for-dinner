@@ -37,35 +37,18 @@ function generateRandomRecipe() {
   }
 
   function populateInnerTextFormat() {
-    var withSideOf = ` with a side of<br>`;
-    var and = ` and `;
-    var forDessert = ` for dessert!`;
-    unhideClearBtn();
-    rightSide.innerHTML = `<br><br><br>You should make:`;
-  };
-
-
-// function generateRandomRecipe() {
-  // var format = `<br><br><br>You should make: `;
-//   var format2 = ' with a side of ';
-//   var format3 = ' and ';
-//   var format4 = ' for dessert!'
-//   var emphasis = '!';
-//   var randomSide = sides[getRandomIndex(sides)];
-//   var randomMain = mains[getRandomIndex(mains)];
-//   var randomDessert = desserts[getRandomIndex(desserts)];
-//   unhideClearBtn();
-//   hideCookpot();
-//   if (sideDishBtn.checked) {
-//     rightSide.innerHTML = format += `<br>` + randomSide + emphasis;
-//   } else if (mainDishBtn.checked) {
-//     rightSide.innerHTML = format += `<br>` + randomMain + emphasis;
-//   } else if (dessertBtn.checked) {
-//     rightSide.innerHTML = format += `<br>` + (randomDessert + emphasis);
-//   } else {
-//     rightSide.innerHTML = format += `<br>` + randomMain + format2 + randomSide + format3 + randomDessert + format4;
-//   }
-// }
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].value === 'side' && radios[i].checked) {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      } else if (radios[i].value === 'main' && radios[i].checked) {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      } else if (radios[i].value === 'dessert' && radios[i].checked) {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      } else {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      }
+    }
+  }
 
 function resetLRSides() {
   for (var i = 0; i < radios.length; i++) {
@@ -86,13 +69,11 @@ function enableLetsCookBtn() {
 }
 
 function hideClearBtn() {
-  var hidden = document.getElementById('clear');
-  clearBtn.remove();
+  clearBtn.classList.remove('hidden');
 }
 
-function unhideClearBtn(event) {
-  var unhidden = document.getElementById('clear');
-  unhidden.add();
+function unhideClearBtn() {
+  clearBtn.classList.remove('hidden');
 }
 
 function hideCookpot() {

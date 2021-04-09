@@ -7,7 +7,7 @@ var letsCookBtn = document.getElementById('lets-cook');
 var mainDishBtn = document.getElementById('main-dish');
 var sideDishBtn = document.getElementById('side');
 var clearBtn = document.getElementById('clear');
-var radios = document.querySelectorAll('.radio');
+var radioBtns = document.querySelectorAll('.radio');
 
     //page areas
 var cookpot = document.getElementById('cookpot');
@@ -19,6 +19,7 @@ var recipe = document.getElementById('recipe');
 // EVENT LISTENERS
 letsCookBtn.addEventListener('click', generateRandomRecipe);
 clearBtn.addEventListener('click', resetLRSides);
+radioBtns.addEventListener('change', disableUnchecked);
 
 
 // EVENT HANDLERS
@@ -27,78 +28,74 @@ function getRandomIndex(array) {
 };
 
 function generateRandomRecipe() {
-    for (var i = 0; i < radios.length; i++) {
-      if (radios[i].checked) {
+    // for (var i = 0; i < radioBtns.length; i++) {
+      // if (radioBtns[i].checked) {
         // populateInnerHTML();
-        unhideClearBtn();
-      }
-    }
-    disableLetsCookBtn();
-    disableRadios();
-    hideCookpot();
+      // }
+    // }
+    changeClearBtnVisibility();
+    changeLetsCookClickability();
+    changeRadioStatus();
+    changeCookpotVisibility();
   }
 
   function populateInnerHTML() {
-    for (var i = 0; i < radios.length; i++) {
-      if (radios[i].value === 'Side' && radios[i].checked) {
-        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
-      } else if (radios[i].value === 'Main Dish' && radios[i].checked) {
-        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
-      } else if (radios[i].value === 'Dessert' && radios[i].checked) {
-        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
-      } else {
-        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
-      }
-    }
+    console.log('need to popilate recipe info to right side!')
   }
 
 function resetLRSides() {
-  for (var i = 0; i < radios.length; i++) {
-    radios[i].checked = false;
+  // for (var i = 0; i < radios.length; i++) {
+  //   radios[i].checked = false;
+  // }
+  // rightSide.innerHTML = '';
+  changeClearBtnVisibility();
+  changeCookpotVisibility();
+  changeLetsCookClickability();
+  changeRadioStatus()
+}
+
+function changeRadioStatus() {
+  for (var i = 0; i < radioBtns.length; i++) {
+    if (radioBtns[i].disabled) {
+      radioBtns[i].disabled = false;
+      console.log('changeRadioStatus()')
+    }
+    radioBtns[i].disabled = radioBtns.disabled;
+    console.log('changeRadioStatus()')
   }
-  rightSide.innerHTML = '';
-  hideClearBtn();
-  unhideCookpot();
-  enableLetsCookBtn();
-  enableRadios()
 }
 
-function disableRadios() {
-  sideDishBtn.disabled = true;
-  mainDishBtn.disabled = true;
-  dessertBtn.disabled = true;
-  entireMealBtn.disabled = true;
+function disableUnchecked() {
+  for (var i = 0; i < radioBtns.length; i++) {
+    if (!radioBtns[i].checked) {
+      radioBtns[i].disabled = true;
+      console.log('changeRadioStatus()')
+    }
+    radioBtns[i].disabled = !radioBtns.disabled;
+    console.log('changeRadioStatus()')
+  }
 }
 
-function enableRadios() {
-  sideDishBtn.disabled = false;
-  mainDishBtn.disabled = false;
-  dessertBtn.disabled = false;
-  entireMealBtn.disabled = false;
+function changeCookpotVisibility() {
+  if (!cookpot.classList.contains('hidden')) {
+    cookpot.classList.add('hidden');
+  } else {
+    cookpot.classList.remove('hidden');
+  }
 }
 
-function disableLetsCookBtn() {
-  letsCookBtn.disabled = true;
+function changeClearBtnVisibility() {
+  if (clearBtn.classList.contains('hidden')) {
+    clearBtn.classList.remove('hidden');
+  } else {
+    clearBtn.classList.add('hidden');
+  }
 }
 
-function enableLetsCookBtn() {
-  letsCookBtn.disabled = false;
-}
-
-function hideClearBtn() {
-  var clearBtn = document.getElementById('clear');
-  clearBtn.classList.add('hidden');
-}
-
-function unhideClearBtn() {
-  var clearBtn = document.getElementById('clear');
-  clearBtn.classList.remove('hidden');
-}
-
-function hideCookpot() {
-  cookpot.classList.add('hidden');
-}
-
-function unhideCookpot() {
-  cookpot.classList.remove('hidden');
+function changeLetsCookClickability() {
+  if (!letsCookBtn.disabled) {
+    letsCookBtn.disabled = !letsCookBtn.disabled;
+  } else {
+    letsCookBtn.disabled = !letsCookBtn.disabled;
+  }
 }

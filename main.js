@@ -7,11 +7,13 @@ var letsCookBtn = document.getElementById('lets-cook');
 var mainDishBtn = document.getElementById('main-dish');
 var sideDishBtn = document.getElementById('side');
 var clearBtn = document.getElementById('clear');
+var radios = document.querySelectorAll('.radio');
 
     //page areas
 var cookpot = document.getElementById('cookpot');
 var leftSide = document.getElementById('left');
 var rightSide = document.getElementById('right');
+var recipe = document.getElementById('recipe');
 
 
 // EVENT LISTENERS
@@ -25,44 +27,71 @@ function getRandomIndex(array) {
 };
 
 function generateRandomRecipe() {
-  var format = 'You should make: ';
-  var format2 = ' with a side of ';
-  var format3 = ' and ';
-  var format4 = ' for dessert!'
-  var emphasis = '!';
-  var randomSide = sides[getRandomIndex(sides)];
-  var randomMain = mains[getRandomIndex(mains)];
-  var randomDessert = desserts[getRandomIndex(desserts)];
-  if (sideDishBtn.checked) {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += randomSide + emphasis;
-  } else if (mainDishBtn.checked) {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += randomMain + emphasis;
-  } else if (dessertBtn.checked) {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += randomDessert + emphasis;
-  } else {
-    // hideCookpot();
-    // unhideClearBtn();
-    rightSide.innerHTML = format += `<br>`+ randomMain + format2 + randomSide + format3 + randomDessert + format4;
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        // populateInnerHTML();
+        unhideClearBtn();
+      }
+    }
+    disableLetsCookBtn();
+    disableRadios();
+    hideCookpot();
   }
-  hideCookpot();
-  unhideClearBtn();
+
+  function populateInnerHTML() {
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].value === 'Side' && radios[i].checked) {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      } else if (radios[i].value === 'Main Dish' && radios[i].checked) {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      } else if (radios[i].value === 'Dessert' && radios[i].checked) {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      } else {
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
+      }
+    }
+  }
+
+function resetLRSides() {
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].checked = false;
+  }
+  rightSide.innerHTML = '';
+  hideClearBtn();
+  unhideCookpot();
+  enableLetsCookBtn();
+  enableRadios()
 }
 
-// function resetLRSides() {
-//   unhideCookpot();
-// }
+function disableRadios() {
+  sideDishBtn.disabled = true;
+  mainDishBtn.disabled = true;
+  dessertBtn.disabled = true;
+  entireMealBtn.disabled = true;
+}
+
+function enableRadios() {
+  sideDishBtn.disabled = false;
+  mainDishBtn.disabled = false;
+  dessertBtn.disabled = false;
+  entireMealBtn.disabled = false;
+}
+
+function disableLetsCookBtn() {
+  letsCookBtn.disabled = true;
+}
+
+function enableLetsCookBtn() {
+  letsCookBtn.disabled = false;
+}
 
 function hideClearBtn() {
+  var clearBtn = document.getElementById('clear');
   clearBtn.classList.add('hidden');
 }
 
 function unhideClearBtn() {
+  var clearBtn = document.getElementById('clear');
   clearBtn.classList.remove('hidden');
 }
 

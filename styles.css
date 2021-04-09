@@ -8,58 +8,133 @@ red - #ee5253
 
 */
 
-/* This allows evertything to be flush */
-*
-{
-  margin:0;
-  padding:0;
-}
-
-body {
-      background-image:url('./assets/burger-friends.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-}
-
-header{
-  padding: 20px;
-  text-align: center;
-  background: #0fb9b1;
-  font-size: 30px;
+/* This allows everything to be flush, by resetting browser defaults */
+* {
   margin: 0;
+  padding: 0;
 }
 
+/* style the .asterisk */
+.asterisk {
+  color: red;
+  font-size: xx-large;
+}
+
+/* add background image and make font san-serif */
+body {
+  font-family: sans-serif;
+  background-image: url('./assets/burger-friends.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* .row-position {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+} */
+
+/* stylize header */
+header {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  /*  */
+  padding: 15px;
+  /* text-align: left; */
+  background: #0fb9b1;
+  font-size: 2vh;
+}
+
+header button {
+  border-radius: 4px;
+  padding: 5px;
+  margin: 3px;
+  border: none;
+}
+
+.menu-selection {
+  padding-left: 5vh;
+}
+
+/* flexbox */
 .wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-
-.transboxMeal, .transboxMenuOptions {
-  height: 40vh;
-  width: 40vw;
+/* refactor these names */
+.meal-description,
+.menu-box {
+  display: flex;
+  height: 60vh;
+  width: 30vw;
   margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
+  background-color: rgba(225, 225, 225, .9);
 }
 
-.transboxMeal p, .transboxMenuOptions p {
-  margin: 5%;
+
+
+/* Text inside .meal-description and menu-box*/
+.meal-description p,
+.menu-box p {
+  font-size: 5vh;
+  margin: 25px;
+  padding: 1vh;
   font-weight: bold;
   color: #000000;
 }
-.transboxMeal {
-  background-image:url('./assets/cookpot.svg');
+
+/* come back to formatting this */
+/* img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  align-self: center;
+} */
+
+.meal-description {
+  
+  background-image: url('./assets/cookpot.svg');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20vh;
 }
 
-/* input[type='radio']:after {
-        position: relative;
-        background-color: white;
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
-    } */
+
+
+input[type="radio"]{
+  margin: 10px 0;
+}
+
+form input[type="submit"] {
+  font-size: 2vh;
+  width: 25vh;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #0fb9b1;
+  border: none;
+  margin: 3px;
+ }
+
+.add-recipe-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  text-align: center;
+  width: 8vw;
+}
+
+/* If I need to change my radio buttons */
+/* 
+input[type='radio'] {
+    position: relative;
+    background-color: white;
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+} */

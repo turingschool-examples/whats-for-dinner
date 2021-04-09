@@ -31,22 +31,31 @@ var articleFavorite = document.querySelector('#targetHere')
 letsCookButton.addEventListener('click', createRecipe);
 addRecipeButton.addEventListener('click', displayForm);
 addNewButton.addEventListener('click', addRecipe)
-// homeBtn.addEventListener('click', goHome)
 displayCard.addEventListener('click', addFavorite)
 favoriteCard.addEventListener('click', goHome)
+favoriteSection.addEventListener('dblclick',deleteFavorite)
 
 //Event handlers
+ /* find index of specific click
+    splice out at index
+*/
+
 window.addEventListener('load', pageLoad)
 function pageLoad(){
 }
 
+function deleteFavorite(){
+  var deleteMe = meal.favoritedRecipes.indexOf(event.closest)
+  console.log(deleteMe)
+  // meal.favoritedRecipes.shift()
+}
 
 function addFavorite(event){
   // debugger
   if(!meal.favoritedRecipes.includes(recipe)){
     if(event.target.className === 'favoriteBtn') {
       meal.favoritedRecipes.push(recipe)
-    } 
+    }
   }
   if(event.target.className === 'viewFavorites') {
     toggleDisplay()

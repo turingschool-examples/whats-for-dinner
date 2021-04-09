@@ -47,3 +47,12 @@ var desserts = [
   "Croissants",
   "Eclairs"
 ]
+
+
+//add Query selectors
+var sideRadial = document.querySelector('#js-side');
+var mainDishRadial = document.querySelector('#js-main-dish');
+var dessertRadial = document.querySelector('#js-dessert');
+var entireMealRadial = document.querySelector('#js-entire-meal');
+var cookButton = document.querySelector('#js-cook-btn');
+var addRecipeButton = document.querySelector('#js-add-recipe-btn');  

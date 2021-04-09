@@ -3,3 +3,18 @@ var sides = ["Miso Glazed Carrots", "Coleslaw", "Garden Salad", "Crispy Potatoes
 var mains = ["Spaghetti and Meatballs", "Pineapple Chicken", "Shakshuka", "Thai Yellow Curry", "Bibimbap", "Chicken Parmesean", "Butternut Squash Soup", "BBQ Chicken Burgers", "Ramen", "Empanadas", "Chicken Fried Rice", "Sheet Pan Fajitas", "Margarita Pizza"];
 
 var desserts = ["Apple Pie", "Lemon Meringue Pie", "Black Forest Cake", "Banana Bread", "Peach Cobbler", "Cheesecake", "Funfetti Cake", "Baklava", "Flan", "Macarons", "Macaroons", "Chocolate Cupcakes", "Pavlova", "Pumpkin Pie", "Key Lime Pie", "Tart Tatin", "Croissants", "Eclairs"];
+
+
+//DOM Variables
+var sideRadio = document.querySelector("#side");
+var mainRadio = document.querySelector("#main-dish");
+var dessertRadio = document.querySelector("#dessert");
+var entireMealRadio = document.querySelector("#entire-meal");
+var letsCookButton = document.querySelector("#lets-cook");
+
+
+//Event listeners
+
+
+
+//Event handlers/functions

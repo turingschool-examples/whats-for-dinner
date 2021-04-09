@@ -1,6 +1,6 @@
-//variables
+///////// VARIABLES /////////
 
-var letsCookButton = ".lets-cook"
+var letsCookButton = ".letscook"
 var transparentBoxRight = ".transparent-box-right"
 
 var sidesArray = ["Miso Glazed Carrots", "Coleslaw", "Garden Salad", "Crispy Potatoes", "Sweet Potato Tots", "Coconut Rice", "Caeser Salad", "Shrimp Summer Rolls", "Garlic Butter Mushrooms", "Hush Puppies"]
@@ -11,15 +11,18 @@ var recipe = ".recipe"
 var cookpot = ".cookpot"
 var hidden = "hidden"
 
-// event listeners
+///////// EVENT LISTENERS /////////
 
-letsCookButton.addEventListener("click", letsCook);
+letsCookButton.addEventListener("click", letsCook;
 
-//functions
+///////// FUNCTIONS /////////
 
+// random
 function getRandomIndex(array) {
   return Math.floor(Math.random()*array.length);
 };
+
+// specific fish arrays
 
 function getRandomSide() {
 	var randomSideIndex = getRandomIndex(sidesArray);
@@ -36,17 +39,25 @@ function getRandomDessert() {
   return dessertArray[randomDessertIndex];
 }
 
+// after letsCookButton clicked
+
+function preventDefault() {
+  event.preventDefault()
+}
+
 function letsCook() {
-  cookpot.classList.add("hidden");
-  recipe.classList.remove("hidden");
   var circleSide = document.getElementById("circle-side");
   var circleMain = document.getElementById("circle-main");
   var circleDessert = document.getElementById("circle-dessert");
+  cookpot.classList.add("hidden");
+  recipe.classList.remove("hidden");
+  preventDefault();
   if (circleSide.checked === true) {
-    getRandomSide()
+    // getRandomSide()
+    return "recipe test";
   } else if (circleMain.checked === true) {
-    getRandomMain()
+    // getRandomMain()
   } else if (circleDessert.checked === true) {
-    getRandomDessert()
+    // getRandomDessert()
   }
 }

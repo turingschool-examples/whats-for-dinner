@@ -29,9 +29,9 @@ h1 {
   margin-top: 0;
 }
 
-.icon {
-  height: 250px;
-}
+/* .icon {
+  height: 500px;
+} */
 
 body {
   background-image:url("assets/burger-friends.jpg");
@@ -49,11 +49,7 @@ body {
   font-weight: bold;
 }
 
-.star {
-   color: red;
-}
-
-.lets-cook {
+.letscook {
     background-color: #0fb9b1;
     border-radius: 5px;
     border: #0fb9b1;
@@ -85,11 +81,9 @@ body {
   padding-top: 50px;
   padding-bottom: 180px;
   padding-left: 50px;
-  /* display: grid; */
   font-size: 20px;
   font-weight: bold;
   margin-left: 100px;
-  /* margin-top: 50px; */
   line-height: 2.4;
 }
 
@@ -106,8 +100,6 @@ body {
   margin-top: 700px;
   line-height: 2;
 }
-
-.bg
 
 /* COLORS
 teal - #0fb9b1;

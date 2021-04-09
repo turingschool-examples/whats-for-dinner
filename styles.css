@@ -17,6 +17,7 @@ header {
   margin: 0 auto;
   font-size: 17px;
   padding: 13px;
+  font-weight: bold;
 }
 
 .asterisk {
@@ -27,8 +28,8 @@ img {
   max-width: 100%;
   height: auto;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0%;
+  top: 0%;
   z-index: -1;
 }
 
@@ -43,19 +44,19 @@ h2 {
   padding: 50px 100px 50px 40px;
   background-color: rgba(225, 225, 225, .9);
   position: absolute;
-  left: 100px;
-  top: 90px;
+  left: 12%;
+  top: 20%;
   z-index: 1;
 }
 
 #cookpot {
   display: inline-block;
   margin: 0 auto;
-  padding: 165px 195px;
+  padding: 165px 200px;
   background-color: rgba(225, 225, 225, .9);
   position: absolute;
-  left: 700px;
-  top: 90px;
+  left: 55%;
+  top: 20%;
   z-index: 1;
 }
 

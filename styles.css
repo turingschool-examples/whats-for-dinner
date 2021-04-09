@@ -13,6 +13,9 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
 
 body, html {
   height: 100%;
@@ -20,7 +23,7 @@ body, html {
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
-  background-size: cover;
+  /* background-size: auto; */
   background-position: bottom;
   position: relative;
 }
@@ -35,6 +38,7 @@ body {
 
 header {
   padding-left: 25px;
+  box-sizing: border-box;
 }
 
 button {
@@ -51,9 +55,6 @@ button:hover {
   color: #0fb9b1;
 }
 
-.hidden {
-  display: none;
-}
 
 .clear {
   width: 150px;
@@ -61,12 +62,13 @@ button:hover {
   font-size: 16px;
   color: white;
   background-color: #95a5a6;
-  position: relative;
+  position: absolute;
 }
 
 .clear:hover {
  background-color: black;
  color: white;
+ position: absolute;
 }
 
 .add-recipe {
@@ -75,12 +77,12 @@ button:hover {
 
 .burgers {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
-  background-size: cover;
+  background-size: auto;
   background-position: relative;
   height: 60%;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .main-page {
@@ -105,6 +107,14 @@ button:hover {
   padding-bottom: 10px;
 }
 
+.radio {
+  float: left;
+}
+
+.label {
+  float: right;
+}
+
 .left-side {
   margin-left: 8%;
   align-items: flex-start;
@@ -126,10 +136,38 @@ button:hover {
   flex-direction: column;
   position: absolute;
   background-color: rgba(225, 225, 225, .9);
-  opacity: 90%;
+  opacity: 95%;
   width: 35%;
   height: 45%;
-  margin-top: 2%;
+  margin-top: 0.01%;
   padding-bottom: 35px;
   font-size: 20px;
+  box-sizing: border-box;
+}
+
+
+/* //working on mobile responsiveness  */
+.header {width: 100%; }
+.main {width: 100%; }
+.top-page {width: 100%; }
+
+
+/* //small devices - landscape phones 576 px and up */
+@media (min-width: 576px) {
+
+/* medium devices 768 px and up AKA tablets*/
+@media (min-width: 768px) {
+
+  .header {width: 70%; }
+  .main {width: 70%; }
+  .top-page {width: 70%; }
+
+/* Large devices 992px and up */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices large desktops 1200px and up */
+@media (min-width: 1200px) {
+  .main-page {width: 90%; margin: 0 auto; }
 }

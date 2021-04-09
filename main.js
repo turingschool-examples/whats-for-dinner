@@ -29,14 +29,13 @@ function getRandomIndex(array) {
 function generateRandomRecipe() {
     for (var i = 0; i < radios.length; i++) {
       if (radios[i].checked) {
-        disableLetsCookBtn();
-        disableRadios();
-        hideCookpot();
-        populateInnerHTML();
-        console.log('done');
-        // unhideClearBtn();
+        // populateInnerHTML();
+        unhideClearBtn();
       }
     }
+    disableLetsCookBtn();
+    disableRadios();
+    hideCookpot();
   }
 
   function populateInnerHTML() {
@@ -44,22 +43,21 @@ function generateRandomRecipe() {
       if (radios[i].value === 'Side' && radios[i].checked) {
         rightSide.innerHTML = `<br><br><br>You should make:<br>`;
       } else if (radios[i].value === 'Main Dish' && radios[i].checked) {
-        recipe.innerHTML = `<br><br><br>You should make:<br>`;
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
       } else if (radios[i].value === 'Dessert' && radios[i].checked) {
-        recipe.innerHTML = `<br><br><br>You should make:<br>`;
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
       } else {
-        recipe.innerHTML = `<br><br><br>You should make:<br>`;
+        rightSide.innerHTML = `<br><br><br>You should make:<br>`;
       }
     }
-    unhideClearBtn();
   }
 
 function resetLRSides() {
   for (var i = 0; i < radios.length; i++) {
     radios[i].checked = false;
   }
+  rightSide.innerHTML = '';
   hideClearBtn();
-  recipe.innerHTML = '';
   unhideCookpot();
   enableLetsCookBtn();
   enableRadios()
@@ -88,10 +86,12 @@ function enableLetsCookBtn() {
 }
 
 function hideClearBtn() {
+  var clearBtn = document.getElementById('clear');
   clearBtn.classList.add('hidden');
 }
 
 function unhideClearBtn() {
+  var clearBtn = document.getElementById('clear');
   clearBtn.classList.remove('hidden');
 }
 

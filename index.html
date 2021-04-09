@@ -17,22 +17,24 @@
           <p>What are you looking for?*</p>
         </div>
         <div style=“float: left”>
-          <input type="radio" name="my-input" id="side">
+          <input id = "circle-side" type="radio" name="circle-side" id="side">
           <label for="side">Side</label>
         </div>
         <div style=“float: left”>
-          <input type="radio" name="my-input" id="main-dish">
+          <input id = "circle-main" type="radio" name="circle-main" id="main-dish">
           <label for="main-dish">Main Dish</label>
         </div>
         <div style=“float: left”>
-          <input type="radio" name="my-input" id="dessert">
+          <input id = "circle-dessert" type="radio" name= "circle-dessert" id="dessert">
           <label for="dessert">Dessert</label>
         </div>
-        <button class="lets-cook">LET'S COOK!</button>
+        <button onclick="letscook" class="lets-cook">LET'S COOK!</button>
       </div>
-
       <div class="transparent-box-right">
-        <img src="assets/cookpot.svg" alt="cookpot" style="width:125px">
+        <img src="assets/cookpot.svg" alt="cookpot" class="cookpot" style="width:125px">
+        <section class="view recipe hidden">
+          <section class="recipe"></section>
+        </section>
       </div>
     </div>
 

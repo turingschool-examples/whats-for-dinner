@@ -5,6 +5,10 @@
   text-align: left;
 }
 
+.hidden {
+  display: none;
+}
+
 p {
   padding: 0px;
   margin: 0px;

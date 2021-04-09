@@ -146,7 +146,7 @@ button:hover {
 }
 
 
-/* //working on mobile responsiveness  */
+/* //working on researching how to add mobile responsiveness  */
 .header {width: 100%; }
 .main {width: 100%; }
 .top-page {width: 100%; }
@@ -154,20 +154,3 @@ button:hover {
 
 /* //small devices - landscape phones 576 px and up */
 @media (min-width: 576px) {
-
-/* medium devices 768 px and up AKA tablets*/
-@media (min-width: 768px) {
-
-  .header {width: 70%; }
-  .main {width: 70%; }
-  .top-page {width: 70%; }
-
-/* Large devices 992px and up */
-@media (min-width: 992px) {
-
-}
-
-/* Extra large devices large desktops 1200px and up */
-@media (min-width: 1200px) {
-  .main-page {width: 90%; margin: 0 auto; }
-}

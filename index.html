@@ -8,7 +8,7 @@
       <h3>What's for Dinner?</h3>
       <button id="add-recipe" class="add-recipe">add a recipe</button>
     </header>
-    <div>
+    <div class="hero">
     <section class="dish-selection">
       <form action="/main.js" method="get">
         <h2>What are you looking for?<span class="asterisk">*</span></h2>
@@ -28,14 +28,16 @@
             <input id="Entire Meal" type="radio" name="dish" value="entire-meal">
             <label for="entire-meal">Entire Meal</label>
           </p>
-          <button id="lets-cook" class="lets-cook">let's cook</button>
+          <button id="lets-cook" class="lets-cook">let's cook!</button>
     </form>
     </section>
     <section id="recipe-display" class="recipe-display">
-      <img id="cookpot" class="cookpot" alt="Drawing of a Cook Pot" src="./assets/cookpot.svg">
-      <h4 class="hidden">You should make:</h4>
-      <h1></h1>
-      <button id="clear-button" class="clear-button hidden">clear</button>
+        <img id="cookpot" class="cookpot" alt="Drawing of a Cook Pot" src="./assets/cookpot.svg">
+        <div id="cookpot-card" class="cookpot-card hidden">
+          <h4 class="">You should make:</h4>
+          <h1></h1>
+          <button id="clear-button" class="clear-button hidden">clear</button>
+        </div>
     </section>
   </div>
   </body>

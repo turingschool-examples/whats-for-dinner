@@ -8,3 +8,172 @@ red - #ee5253
 
 */
 
+* {
+  border: blue solid 1px
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+}
+
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: 100%;
+  background-repeat: cover;
+  font-family: "Roboto";
+  margin: 0;
+  border: 0;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px; */
+}
+
+/* div {
+  display: inline-block;
+} */
+
+/*div {
+  height: 300px;
+  width: 300px;
+  background-color: rgba(225, 225, 225, .9);
+/*   margin: 100px;
+  padding: 50px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  align-items: center;
+}*/
+
+/* section {
+  display: inline-flex;
+} */
+
+/* flexboxing below */
+.hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+section {
+  margin-top: 73px;
+  height: 535px;
+  width: 635px;
+  background-color: rgba(225, 225, 225, .9);
+  /* display: inline-block; */
+  /* display: flex; */
+}
+
+/* end of flexbox */
+form {
+  /* margin: 80px 80px 50px 50px; */
+  margin-left: 60px;
+  margin-top: 80px;
+}
+
+span {
+  color: #ee5253;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+h3 {
+  display: inline;
+  margin-left: 1.5%;
+  font-size: 30px;
+  /* margin-right: 500px;
+  margin-left: 50px; */
+}
+
+h1 {
+  /* display: inline; */
+}
+
+h4 {
+  font-size: 24px;
+  font-style: italic;
+  /* display: block; */
+  /*margin-left: auto;
+  margin-right: auto; */
+  /* margin-top: 160px; */
+}
+
+button {
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+img {
+  height: 175px;
+  width: 200px;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 175px; */
+}
+
+input {
+  display: inline;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  /* font-size: 20px; */
+}
+
+label {
+  font-size: 26px;
+}
+
+.add-recipe {
+  font-size: 18px;
+  display: inline;
+  background-color: white;
+  padding: 10px;
+  margin-right: 1.5%;
+  height: 45px;
+  width: 150px;
+  border: 0;
+}
+
+.recipe-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookpot-card {
+
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  padding: 5px 50px 5px 50px;
+  display: block;
+  font-size: 18px;
+  width: 230px;
+  height: 45px;
+  /* height: 50px;
+  width: 100px; */
+}
+
+.clear {
+  bacgkround-color: #95a5a6;
+  color: white
+}
+
+.hidden {
+  display: none;
+}

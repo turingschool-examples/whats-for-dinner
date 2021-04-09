@@ -62,7 +62,7 @@ header {
 /* flexboxing below */
 div {
   height: 100%;
-  widthL 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
@@ -76,12 +76,24 @@ section {
 }
 
 /* end of flexbox */
+form {
+  /* margin: 80px 80px 50px 50px; */
+  margin-left: 60px;
+  margin-top: 80px;
+}
+
 span {
   color: #ee5253;
 }
 
 h1 {
+  z-index: 1;
+  display: inline-block;
+}
 
+h2 {
+  font-size: 34px;
+  font-weight: bold;
 }
 
 h3 {
@@ -93,7 +105,12 @@ h3 {
 }
 
 h4 {
+  font-size: 24px;
   font-style: italic;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 160px; */
 }
 
 button {
@@ -102,16 +119,23 @@ button {
 }
 
 img {
-  height: 50px;
+  height: 175px;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 175px;
 }
 
 input {
   display: inline;
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  /* font-size: 20px; */
 }
 
+label {
+  font-size: 26px;
+}
 
 .add-recipe {
   font-size: 18px;
@@ -123,11 +147,19 @@ input {
   width: 150px;
   border: 0;
 }
+.recipe-display {
+  display: flex;
+}
 
 .lets-cook {
   background-color: #0fb9b1;
   padding: 5px 50px 5px 50px;
   display: block;
+  font-size: 18px;
+  width: 230px;
+  height: 45px;
+  /* height: 50px;
+  width: 100px; */
 }
 
 .clear {

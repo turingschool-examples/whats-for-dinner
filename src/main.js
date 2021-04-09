@@ -20,32 +20,60 @@ var rightArticle = document.querySelector('.right') // query selector for parent
 
 var displayCard = document.querySelector('.display-card') // query selector for display-card
 
-var hideSection = document.querySelector('.main-section')
-var hideFavorite = document.querySelector('.favorite-section')
+var mainSection = document.querySelector('.main-section')
+var favoriteSection = document.querySelector('.favorite-section')
+
+var homeBtn = document.querySelector('#goHome') // FIX HOME BUTTON SWAP
+var favoriteCard = document.querySelector('.favorite')
+var articleFavorite = document.querySelector('#targetHere')
 
 //Event Listeners
 letsCookButton.addEventListener('click', createRecipe);
 addRecipeButton.addEventListener('click', displayForm);
 addNewButton.addEventListener('click', addRecipe)
-
+// homeBtn.addEventListener('click', goHome)
 displayCard.addEventListener('click', addFavorite)
-
+favoriteCard.addEventListener('click', goHome)
 
 //Event handlers
 window.addEventListener('load', pageLoad)
 function pageLoad(){
-
 }
 
-function addFavorite(){
+
+function addFavorite(event){
   // debugger
   if(!meal.favoritedRecipes.includes(recipe)){
     if(event.target.className === 'favoriteBtn') {
       meal.favoritedRecipes.push(recipe)
-    } else if(event.target.className === 'viewFavorites') {
-      display(recipe)
-    }
+    } 
   }
+  if(event.target.className === 'viewFavorites') {
+    toggleDisplay()
+    display()
+  }
+}
+
+function goHome(event){
+  if(event.target.className === 'go-home'){
+    toggleDisplay()
+  }
+}
+
+function display(){
+  favoriteCard.innerHTML = `<div>${meal.favoritedRecipes}</div>
+  <button class="go-home">Home</button>
+  `
+}
+
+function displayRecipe(recipe){
+  event.preventDefault()
+  displayCard.innerHTML = `
+  <p>You should make:</p>
+  <h2>${recipe}</h2>
+  <button class="favoriteBtn" id="favorite">Favorite</button>
+  <button class="viewFavorites" id="viewFavorites">View Favorites</button> 
+  `
 }
 
 function addRecipe(){
@@ -63,36 +91,6 @@ function addRecipe(){
   displayRecipe(recipeName.value)
 }
 
-function iterateList(){
-  for(var i = 0; i < meal.favoritedRecipes.length; i++){
-
-    return meal.favoritedRecipes[i]
-  }
-}
-
-function display(){
-    hideSection.innerHTML = `<div>
-    <p ondblclick="remove(this)">${meal.favoritedRecipes}</p>
-    <button class="go-home" id="goHome" onClick={}>Home</button>
-    </div>
-    `
-}
-
-function displayRecipe(recipe){
-  // debugger
-  event.preventDefault()
-  displayCard.innerHTML = `
-  <p>You should make:</p>
-  <h2>${recipe}</h2>
-  <button class="favoriteBtn" id="favorite">Favorite</button>
-  <button class="viewFavorites" id="viewFavorites" onClick={display()}>View Favorites</button> 
-  `
-}
-
-function toggleDisplay(){
-  hideFavorite.classList.toggle('hidden')
-}
-
 function createRecipe(){
   if(sideRadio.checked){
     recipe = getRandomElement(meal.sides)
@@ -108,6 +106,11 @@ function createRecipe(){
 
 function displayForm(){
   footer.classList.toggle('hidden')
+}
+
+function toggleDisplay(){
+  mainSection.classList.toggle('hidden')
+  favoriteSection.classList.toggle('hidden')
 }
 
 function getRandomElement(array) {

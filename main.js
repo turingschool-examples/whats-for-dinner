@@ -45,26 +45,26 @@ function generateRandomRecipe() {
 
 function entireMealInnerHTML() {
     rightSide.innerHTML = '';
-      rightSide.innerHTML =
-        `
-        <div>
-          <br><br><p class="recipe-head" id="recipe">You should make:</p>
-          <p>${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}!</p>
-          <br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
-        </div>
-         `
+    rightSide.innerHTML =
+      `
+      <div>
+        <br><br><p class="recipe-head" id="recipe">You should make:</p>
+        <p>${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}!</p>
+        <br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
+      </div>
+      `
 }
 
 function sideRecipeInnerHTML() {
-    rightSide.innerHTML = '';
-    rightSide.innerHTML =
-    `
-    <div>
-      <br><br><p class="recipe-head" id="recipe">You should make:</p>
-      <p>${sides[getRandomIndex(sides)]}!</p>
-      <br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
-    </div>
-    `
+  rightSide.innerHTML = '';
+  rightSide.innerHTML =
+  `
+  <div>
+    <br><br><p class="recipe-head" id="recipe">You should make:</p>
+    <p>${sides[getRandomIndex(sides)]}!</p>
+    <br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
+  </div>
+  `
 }
 
 function mainRecipeInnerHTML() {
@@ -91,12 +91,18 @@ function dessertRecipeInnerHTML() {
   `
 }
 
+function changeCookpotVisibility() {
+  rightSide.innerHTML =
+  `
+  <img src="assets/cookpot.svg" alt="Cookpot icon" class="cook-pot" id="cookpot" width="147.7" height="269.11">
+  `
+}
 
 function resetLRSides() {
   if (event.target.id === 'clear') {
     rightSide.innerHTML = '';
     enableLetsCookBtn();
-    changeRadioStatus()
+    changeRadioStatus();
     changeCookpotVisibility();
    }
  }
@@ -116,13 +122,6 @@ function disableUnchecked() {
       radioBtns[i].disabled = true;
     }
   }
-}
-
-function changeCookpotVisibility() {
-    rightSide.innerHTML =
-    `
-    <img src="assets/cookpot.svg" alt="Cookpot icon" class="cook-pot" id="cookpot" width="147.7" height="269.11">
-    `
 }
 
 function checkSelectedRadios() {

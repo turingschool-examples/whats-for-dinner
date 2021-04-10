@@ -16,7 +16,7 @@ When you first visit What's For Dinner you are prompted to select what kind of m
 
 Two buttons appear as well: one allows you to add the current recipe to your favorites, and another will clear the selection.
 
-![Gif showing user favoriting a recipe](https://gph.is/g/E3XGmGd.gif)
+![Gif showing user favoriting a recipe](https://media.giphy.com/media/r37UUDPVsCmEKJ2rcS/giphy.gif)
 Mmm... dessert.
 
 When you click "View Favorites" you are taken to another page which displays all of the recipes you have added to your favorites. A button appears next to each recipe which allows you to remove it from the list when your tastes change.

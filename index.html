@@ -1,10 +1,28 @@
 <html>
   <head>
+    <title>What's for Dinner?</title>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  <header>
+    <h1 class="header-title"> What's for Dinner? </h1>
+    <a class="button" href="#">Add Recipe</a>
+  </header>
   <body>
-    
+    <section class="user-select">
+       <h2 class"options">What are you looking for?</h2>
+      <form class="radio-btn">
+       <input type="radio" name="side" id="side-btn">
+       <label>Side</label><br>
+       <input type="radio" name="main" id="main-btn">
+       <label>Main Dish</label><br>
+       <input type="radio" name="dessert" id="dessert-btn">
+       <label>Dessert</label><br>
+       <input type="radio" name="entire" id="entire-btn">
+       <label>Entire Meal</label><br>
+      </form>
+      <button id="lets-cook">LETS COOK!</button>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

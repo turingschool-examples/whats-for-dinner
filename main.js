@@ -13,13 +13,14 @@ var radioBtns = document.querySelectorAll('.radio');
 var cookpot = document.getElementById('cookpot');
 var leftSide = document.getElementById('left');
 var rightSide = document.getElementById('right');
-var recipe = document.getElementById('recipe');
+
 
 
 // EVENT LISTENERS
+window.addEventListener('load', changeCookpotVisibility)
 letsCookBtn.addEventListener('click', generateRandomRecipe);
-clearBtn.addEventListener('click', resetLRSides);
-radioBtns.addEventListener('change', disableUnchecked);
+rightSide.addEventListener('click', resetLRSides);
+// leftSide.addEventListener('change', disableUnchecked);
 
 
 // EVENT HANDLERS
@@ -28,74 +29,73 @@ function getRandomIndex(array) {
 };
 
 function generateRandomRecipe() {
-    // for (var i = 0; i < radioBtns.length; i++) {
-      // if (radioBtns[i].checked) {
-        // populateInnerHTML();
-      // }
-    // }
-    changeClearBtnVisibility();
-    changeLetsCookClickability();
-    changeRadioStatus();
-    changeCookpotVisibility();
+  for (i = 0; i < radioBtns.length; i++) {
+    if (radioBtns[i].checked && radioBtns[i].id === 'entire-meal') {
+      entireMealInnerHTML();
+    }
   }
+  changeRadioStatus();
+  changeLetsCookClickability();
+}
 
-  function populateInnerHTML() {
-    console.log('need to popilate recipe info to right side!')
-  }
+function entireMealInnerHTML() {
+    rightSide.innerHTML = '';
+      rightSide.innerHTML =
+        `
+        <div>
+          <br><p class="recipe" id="recipe">You should make:</p>
+          <p>${mains[getRandomIndex(mains)]} with a side of</p>
+          <p>${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}!</p>
+          <br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+        </div>
+         `
+}
+
+function sideRecipeInnerHTML() {
+    rightSide.innerHTML = '';
+    rightSide.innerHTML =
+    `
+    `
+}
+
 
 function resetLRSides() {
-  // for (var i = 0; i < radios.length; i++) {
-  //   radios[i].checked = false;
-  // }
-  // rightSide.innerHTML = '';
-  changeClearBtnVisibility();
-  changeCookpotVisibility();
-  changeLetsCookClickability();
-  changeRadioStatus()
-}
+  if (event.target.id === 'clear') {
+    rightSide.innerHTML = '';
+    changeRadioStatus()
+    changeCookpotVisibility();
+    changeLetsCookClickability();
+   }
+ }
 
 function changeRadioStatus() {
   for (var i = 0; i < radioBtns.length; i++) {
     if (radioBtns[i].disabled) {
-      radioBtns[i].disabled = false;
-      console.log('changeRadioStatus()')
+      radioBtns[i].disabled = !radioBtns[i].disabled;
+      console.log('working?');
     }
-    radioBtns[i].disabled = radioBtns.disabled;
-    console.log('changeRadioStatus()')
   }
 }
 
-function disableUnchecked() {
+function disableUnchecked(event) {
   for (var i = 0; i < radioBtns.length; i++) {
-    if (!radioBtns[i].checked) {
+    if (event.target.id === 'radio' && radioBtns[i].checked) {
+      radioBtns[i].disabled = false;
+    } else {
       radioBtns[i].disabled = true;
-      console.log('changeRadioStatus()')
     }
-    radioBtns[i].disabled = !radioBtns.disabled;
-    console.log('changeRadioStatus()')
   }
 }
 
 function changeCookpotVisibility() {
-  if (!cookpot.classList.contains('hidden')) {
-    cookpot.classList.add('hidden');
-  } else {
-    cookpot.classList.remove('hidden');
-  }
-}
-
-function changeClearBtnVisibility() {
-  if (clearBtn.classList.contains('hidden')) {
-    clearBtn.classList.remove('hidden');
-  } else {
-    clearBtn.classList.add('hidden');
-  }
+    rightSide.innerHTML =
+    `
+    <img src="assets/cookpot.svg" alt="Cookpot icon" class="cook-pot" id="cookpot">
+    `
 }
 
 function changeLetsCookClickability() {
   if (!letsCookBtn.disabled) {
-    letsCookBtn.disabled = !letsCookBtn.disabled;
-  } else {
-    letsCookBtn.disabled = !letsCookBtn.disabled;
+    letsCookBtn.disabled = !letsCookBtn.disabled
   }
 }

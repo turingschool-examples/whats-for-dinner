@@ -26,6 +26,25 @@ viewFavoritesButton.addEventListener('click', viewFavoritesPage)
 addToFavoritesButton.addEventListener('click', addToFavorites)
 homeButton.addEventListener('click', goHome)
 
+favRecipesList.addEventListener('click', function(event){
+  if(event.target.className === 'delete'){
+    var recipe = event.target.parentElement;
+    var targetRecipe = recipe.firstElementChild.innerText
+    recipe.parentNode.removeChild(recipe);
+  }
+  //remove from the data model as well
+  //use a for loop to search the favoriteRecipes array
+  //search to see if favoriteRecipes[i] matches the span,
+  //which is the child of the li
+  //if it does match, delete it
+  for(var i = 0; i < favoriteRecipes.length; i ++) {
+    if(favoriteRecipes[i] === targetRecipe) {
+      favoriteRecipes.splice(i, 1)
+    }
+  }
+})
+
+
 //////////// FUNCTIONS AND EVENT HANDLERS ////////////
 function randomFoods(foodType) {
   return foodType[Math.floor(Math.random()*foodType.length)]
@@ -74,7 +93,7 @@ function viewFavoritesPage() {
     favRecipesList.innerHTML += `
         <ul>
           <li>
-            <span>${favoriteRecipes[i]}</span>
+            <span class="recipe-name">${favoriteRecipes[i]}</span>
             <button class="delete">Remove Favorite</button>
           </li>
         </ul>
@@ -101,11 +120,4 @@ function addToFavorites() {
   if (!isInArray) {
     favoriteRecipes.push(currentRecipe);
   }
-}
-
-function removeFavorite() {
-  //Users should be able to remove a recipe from their list of favorites, by clicking a button.
-  //change the DOM and data model
-  //need to add a remove button next to every single recipe name
-  //event bubblingggg
 }

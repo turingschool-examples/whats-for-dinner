@@ -12,10 +12,14 @@ var sides = [
 ]
 
 var mains = [
+  'Ropa Vieja',
+  'Garbanzo Stir Fry',
+  'Butternut Squash Curry',
+  'Salmon Salad',
+  'Mujadareh',
   'Fetuccini Alfredo',
   'Pineapple Chicken',
   'Shakshuka',
-  'Thai Yellow Curry',
   'Bibimbap',
   'Chicken Parmesan',
   'Butternut Squash Soup',

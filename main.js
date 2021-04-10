@@ -142,6 +142,3 @@ function addToFavorites() {
     addToFavoritesButton.classList.toggle('fav-added');
   }
 };
-
-//lets cook and clear button should both remove 'fav-added' class from
-//    addToFavoritesButton.classList.remove('fav-added');

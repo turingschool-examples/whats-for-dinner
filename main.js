@@ -47,4 +47,17 @@ var desserts = [
   'Tart Tatin',
   'Croissants',
   'Eclairs',
-]
+];
+// VARIABLES //
+
+// RADIO BUTTONS
+var sideSelect = document.querySelector('#side');
+var mainSelect = document.querySelector('#main-dish');
+var dessertSelect = document.querySelector('#dessert');
+var entireMeal = document.querySelector('#entire-meal');
+// CALLOUT BUTTONS & MODIFIERS
+var letsCook = document.querySelector('#cook');
+var clear = document.querySelector('#clear');
+var pot = document.querySelector('#pot');
+var shouldMake = document.querySelector('#make');
+var mealSelection = document.querySelector('#meal');

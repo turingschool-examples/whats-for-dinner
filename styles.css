@@ -25,13 +25,12 @@ red - #ee5253
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-
+  float: right;
+  align-content: center;
 }
 
 .label {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+
 }
 
 .cookPot {

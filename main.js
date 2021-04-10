@@ -55,6 +55,7 @@ function clear() {
   cookpot.classList.remove("hidden");
   recipe.classList.add("hidden");
   eatThis.classList.add("hidden");
+  clearButton.classList.add("hidden");
 }
 
 function letsCook() {

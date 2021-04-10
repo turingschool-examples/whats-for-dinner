@@ -8,17 +8,17 @@ var dessertArray = ["Cookies", "Ice Cream", "Apple Pie", "Carrot Cake", "Banana 
 
 // buttons
 
-var letsCookButton = document.querySelector(".letscook")
-var clearButton = document.querySelector(".clear-button")
+var letsCookButton = document.querySelector(".letscook");
+var clearButton = document.querySelector(".clear-button");
 
 // right box
 
-var transparentBoxRight = document.querySelector(".transparent-box-right")
-var hidden = document.querySelector("hidden")
-var cookpot = document.querySelector(".cookpot")
-var eatThis = document.querySelector(".eatthis")
-var recipe = document.querySelector(".recipe")
-var entireMeal = document.querySelector(".entire-meal")
+var transparentBoxRight = document.querySelector(".transparent-box-right");
+var hidden = document.querySelector("hidden");
+var cookpot = document.querySelector(".cookpot");
+var eatThis = document.querySelector(".eatthis");
+var recipe = document.querySelector(".recipe");
+var entireMeal = document.querySelector(".entire-meal");
 
 ///////// ELEMENTS BY ID /////////
 
@@ -29,8 +29,8 @@ var circleEntireMeal = document.getElementById("circle-entire-meal");
 
 ///////// EVENT LISTENERS /////////
 
-letsCookButton.addEventListener("click", letsCook)
-clearButton.addEventListener("click", clear)
+letsCookButton.addEventListener("click", letsCook);
+clearButton.addEventListener("click", clear);
 
 ///////// FUNCTIONS /////////
 
@@ -60,7 +60,7 @@ function getRandomDessert() {
 // after letsCookButton clicked
 
 function preventDefault() {
-  event.preventDefault()
+  event.preventDefault();
 }
 
 function showAlert() {
@@ -83,11 +83,11 @@ function letsCook() {
   clearButton.classList.remove("hidden");
   preventDefault();
   if (circleSide.checked === true) {
-    recipe.innerText = getRandomSide() + "!"
+    recipe.innerText = getRandomSide() + "!";
   } else if (circleMain.checked === true) {
-    recipe.innerText = getRandomMain() + "!"
+    recipe.innerText = getRandomMain() + "!";
   } else if (circleDessert.checked === true) {
-    recipe.innerText = getRandomDessert() + "!"
+    recipe.innerText = getRandomDessert() + "!";
 } else {
     cookpot.classList.remove("hidden");
     eatThis.classList.add("hidden");

@@ -109,6 +109,7 @@ p {
 .cookpot {
   padding-left: 145px;
   padding-top: 95px;
+  width: 125px;
 }
 
 /* recipe display area */
@@ -150,21 +151,5 @@ p {
   float: right;
   margin-top: 5px;
   margin-bottom: 5px;
-  vertical-align: middle
+  vertical-align: middle;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253 */

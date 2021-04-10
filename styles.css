@@ -101,6 +101,18 @@ body {
   line-height: 2;
 }
 
+.eatthis {
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+}
+
+.recipe {
+  font-style: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
 /* COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);

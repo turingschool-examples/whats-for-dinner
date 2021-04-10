@@ -128,7 +128,7 @@ function changeCookpotVisibility() {
 function checkSelectedRadios() {
   for (var i = 0; i < radioBtns.length; i++) {
     if (radioBtns[i].checked) {
-      return true
+      return true;
     }
   }
 }
@@ -136,10 +136,11 @@ function checkSelectedRadios() {
 function disableLetsCookBtn() {
   if (checkSelectedRadios()) {
     letsCookBtn.disabled = true;
-    letsCookBtn.classList.remove('button:hover');
+    letsCookBtn.classList.add('inactive');
   }
 }
 
 function enableLetsCookBtn() {
   letsCookBtn.disabled = false;
+  letsCookBtn.classList.remove('inactive');
 }

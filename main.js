@@ -63,3 +63,5 @@ function letsCook() {
     // getRandomDessert()
   }
 }
+
+letsCookButton.addEventListener("click", letsCook)

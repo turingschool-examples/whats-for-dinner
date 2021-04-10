@@ -9,36 +9,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Whats For Dinner</title>
 </head>
+
 <body>
   <header class="flex">
     <h1>What's for Dinner?</h1>
-    <button class="add-recipe-button">ADD A RECIPE</button>
+    <button class="light-btn">ADD A RECIPE</button>
   </header>
   <section class="flex">
     <article class="meal-container flex">
       <h2>What are you looking for? <span class="asterisk">*</span></h2>
       <form>
-      <input type="radio" class="side" name="choices" value="side">
-      <label for="side">Side</label><br>
-      <input type="radio" class="main-dish" name="choices" value="main-dish">
-      <label for="main-dish">Main Dish</label><br>
-      <input type="radio" class="dessert" name="choices" value="dessert">
-      <label for="dessert">Dessert</label><br>
-      <input type="radio" class="entire-meal" name="choices" value="entire-meal">
-      <label for="entire-meal">Entire Meal</label><br>
-      <input class="btn cook-btn" type="submit" value="LET'S COOK!">
-    </form>
+        <input type="radio" class="side" name="choices" value="side">
+        <label for="side">Side</label><br>
+        <input type="radio" class="main-dish" name="choices" value="main-dish">
+        <label for="main-dish">Main Dish</label><br>
+        <input type="radio" class="dessert" name="choices" value="dessert">
+        <label for="dessert">Dessert</label><br>
+        <input type="radio" class="entire-meal" name="choices" value="entire-meal">
+        <label for="entire-meal">Entire Meal</label><br>
+        <input class="btn cyan-btn cook-btn" type="submit" value="LET'S COOK!">
+      </form>
     </article>
     <article class="recipe-container flex">
       <img src="./assets/cookpot.svg" alt="cook pot" class="pot">
       <h3 class="hidden">You should make:</h3>
-      <h2 class="dish hidden">Dish</h2>
-      <!-- <input type="button" value="CLEAR" class="clear"> -->
+      <h2 class="dish hidden">Pick a dish!</h2>
+      <button class="btn dark-btn hidden clear-btn">CLEAR</button>
     </article>
     <script type="text/javascript" src="./javascript/food-data.js"></script>
     <script type="text/javascript" src="./javascript/main.js"></script>
 </body>
+
 </html>
-
-
-

@@ -20,7 +20,15 @@ body, html {
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
-  background-position: bottom;
+  background-position: relative;
+}
+
+.burgers {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
+  background-position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 header {
@@ -82,14 +90,6 @@ p {
 .recipe-head {
   font-size: 23px;
   font-style: italic;
-}
-
-.burgers {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
-  background-position: relative;
-  width: 100%;
-  background-repeat: no-repeat;
-  z-index: 0;
 }
 
 .main-page {

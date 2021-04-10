@@ -2,11 +2,11 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
   <body>
     <header>
-      <h3>What's for Dinner?</h3>
-      <button id="add-recipe" class="add-recipe">add a recipe</button>
+      <h1>What's for Dinner?</h1>
     </header>
     <div class="hero">
     <section class="dish-selection">
@@ -25,7 +25,7 @@
             <label for="dessert">Dessert</label>
           </p>
           <p>
-            <input id="Entire Meal" type="radio" name="dish" value="entire-meal">
+            <input id="entire-meal" type="radio" name="dish" value="entire-meal">
             <label for="entire-meal">Entire Meal</label>
           </p>
           <button id="lets-cook" class="lets-cook">let's cook!</button>
@@ -34,9 +34,8 @@
     <section id="recipe-display" class="recipe-display">
         <img id="cookpot" class="cookpot" alt="Drawing of a Cook Pot" src="./assets/cookpot.svg">
         <div id="cookpot-card" class="cookpot-card hidden">
-          <h4 class="">You should make:</h4>
-          <h1></h1>
-          <button id="clear-button" class="clear-button hidden">clear</button>
+          <h4>You should make:</h4>
+          <p class="insert"></p>
         </div>
     </section>
   </div>

@@ -7,10 +7,10 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-
+/*
 * {
   border: blue solid 1px
-}
+} */
 
 @font-face {
   font-family: "Roboto";
@@ -35,36 +35,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 20px; */
-}
-
-/* div {
-  display: inline-block;
-} */
-
-/*div {
-  height: 300px;
-  width: 300px;
-  background-color: rgba(225, 225, 225, .9);
-/*   margin: 100px;
-  padding: 50px;
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-  min-height: 300px;
-  align-items: center;
-}*/
-
-/* section {
-  display: inline-flex;
-} */
-
-/* flexboxing below */
-.hero {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
 }
 
 section {
@@ -72,19 +42,17 @@ section {
   height: 535px;
   width: 635px;
   background-color: rgba(225, 225, 225, .9);
-  /* display: inline-block; */
-  /* display: flex; */
 }
 
-/* end of flexbox */
 form {
-  /* margin: 80px 80px 50px 50px; */
   margin-left: 60px;
   margin-top: 80px;
 }
 
-span {
-  color: #ee5253;
+h1 {
+  display: inline;
+  margin-left: 1.5%;
+  font-size: 30px;
 }
 
 h2 {
@@ -92,25 +60,9 @@ h2 {
   font-weight: bold;
 }
 
-h3 {
-  display: inline;
-  margin-left: 1.5%;
-  font-size: 30px;
-  /* margin-right: 500px;
-  margin-left: 50px; */
-}
-
-h1 {
-  /* display: inline; */
-}
-
 h4 {
   font-size: 24px;
   font-style: italic;
-  /* display: block; */
-  /*margin-left: auto;
-  margin-right: auto; */
-  /* margin-top: 160px; */
 }
 
 button {
@@ -118,34 +70,30 @@ button {
   text-transform: uppercase;
 }
 
-img {
-  height: 175px;
-  width: 200px;
-  /* margin-left: auto;
-  margin-right: auto;
-  margin-top: 175px; */
-}
-
 input {
   display: inline;
   margin-top: 12px;
   margin-bottom: 12px;
-  /* font-size: 20px; */
 }
 
 label {
   font-size: 26px;
 }
 
-.add-recipe {
-  font-size: 18px;
-  display: inline;
-  background-color: white;
-  padding: 10px;
-  margin-right: 1.5%;
-  height: 45px;
-  width: 150px;
-  border: 0;
+.hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.asterisk {
+  color: #ee5253;
+}
+
+.cookpot {
+  height: 175px;
+  width: 200px;
 }
 
 .recipe-display {
@@ -154,9 +102,6 @@ label {
   align-items: center;
 }
 
-.cookpot-card {
-
-}
 
 .lets-cook {
   background-color: #0fb9b1;
@@ -165,13 +110,32 @@ label {
   font-size: 18px;
   width: 230px;
   height: 45px;
-  /* height: 50px;
-  width: 100px; */
 }
 
-.clear {
-  bacgkround-color: #95a5a6;
-  color: white
+.cookpot-card {
+  /* border-color: red; */
+  height: 300px;
+  width: 500px;
+  display: inline-grid;
+  justify-items: center;
+  text-align: center;
+/*   grid-auto-flow: dense; */
+/*   grid-gap: 1px; */
+/*   align-items: center; */
+}
+
+/* .directive {
+  font-size: 24px;
+  font-style: italic;
+} */
+
+.insert {
+  font-size: 32px;
+  padding-bottom: 25%;
+  padding-top: 5px;
+/*   margin-left: 25% */
+/*   margin-bottom: 75% */
+/*   margin-top: 0x; */
 }
 
 .hidden {

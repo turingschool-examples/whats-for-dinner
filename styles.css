@@ -55,6 +55,10 @@ button:hover {
   color: #0fb9b1;
 }
 
+p {
+  font-size: 25px;
+}
+
 
 .clear {
   width: 150px;
@@ -73,6 +77,10 @@ button:hover {
 
 .add-recipe {
   margin: 15px;
+}
+
+.recipe-head {
+  font-style: italic;
 }
 
 .burgers {
@@ -110,6 +118,7 @@ button:hover {
   padding-top: 10px;
   padding-bottom: 10px;
   color: black;
+  width: 250px;
 }
 
 .radio {

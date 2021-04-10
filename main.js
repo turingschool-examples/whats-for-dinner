@@ -15,7 +15,7 @@ var hidden = document.querySelector("hidden")
 
 ///////// EVENT LISTENERS /////////
 
-letsCookButton.addEventListener("click", letsCook;)
+letsCookButton.addEventListener("click", letsCook)
 
 ///////// FUNCTIONS /////////
 

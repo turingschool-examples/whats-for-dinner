@@ -77,7 +77,7 @@ function mainRecipeInnerHTML() {
     <br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
   </div>
   `
-}
+} 
 
 function dessertRecipeInnerHTML() {
   rightSide.innerHTML = '';

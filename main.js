@@ -50,7 +50,7 @@ function entireMealInnerHTML() {
         <div>
           <br><br><p class="recipe-head" id="recipe">You should make:</p>
           <p>${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}!</p>
-          <br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+          <br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
         </div>
          `
 }
@@ -62,7 +62,7 @@ function sideRecipeInnerHTML() {
     <div>
       <br><br><p class="recipe-head" id="recipe">You should make:</p>
       <p>${sides[getRandomIndex(sides)]}!</p>
-      <br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+      <br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
     </div>
     `
 }
@@ -74,10 +74,10 @@ function mainRecipeInnerHTML() {
   <div>
     <br><br><p class="recipe-head" id="recipe">You should make:</p>
     <p>${mains[getRandomIndex(mains)]}!</p>
-    <br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+    <br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
   </div>
   `
-} 
+}
 
 function dessertRecipeInnerHTML() {
   rightSide.innerHTML = '';
@@ -86,7 +86,7 @@ function dessertRecipeInnerHTML() {
   <div>
     <br><br><p class="recipe-head" id="recipe">You should make:</p>
     <p>${desserts[getRandomIndex(desserts)]}!</p>
-    <br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+    <br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear grow" id="clear">CLEAR</button>
   </div>
   `
 }

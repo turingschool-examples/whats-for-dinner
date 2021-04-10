@@ -1,7 +1,7 @@
 ///////// ARRAYS /////////
 
-var sidesArray = ["French Fries", "Potatoes", "Glazed Carrots", "Coleslaw", "Garden Salad", "Caesar Salad", "Tater Tots", "Coconut Rice", "Caeser Salad", "Egg Rolls", "Garlic Bread", "Hush Puppies"]
-var mainArray = ["Lasagna", "Sushi", "Beef Stew", "Tacos", "Fried Chicken", "Shakshuka", "Bibimbap", "Ramen", "Empanadas", "Chicken & Rice", "Cheese Pizza"]
+var sidesArray = ["French Fries", "Potatoes", "Glazed Carrots", "Coleslaw", "Garden Salad", "Caesar Salad", "Tater Tots", "Coconut Rice", "Fruit Salad", "Egg Rolls", "Garlic Bread", "Hush Puppies"]
+var mainArray = ["Lasagna", "Sushi", "Beef Stew", "Tacos", "Fried Chicken", "Shakshuka", "Bibimbap", "Ramen", "Empanadas", "Veggie Rice", "Cheese Pizza"]
 var dessertArray = ["Cookies", "Ice Cream", "Apple Pie", "Carrot Cake", "Banana Bread", "Peach Cobbler", "Cheesecake", "Funfetti Cake", "Baklava", "Flan", "Macarons", "Macaroons", "Cupcakes", "Pavlova", "Pumpkin Pie", "Key Lime Pie", "Tart Tatin", "Croissants", "Eclairs"]
 
 ///////// QUERY SELECTORS /////////

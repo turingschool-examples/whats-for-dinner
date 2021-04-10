@@ -68,10 +68,10 @@ function letsCook() {
   clearButton.classList.remove("hidden");
   preventDefault();
   if (circleSide.checked === true) {
-    recipe.innerText = getRandomMain()
+    recipe.innerText = getRandomSide() + "!"
   } else if (circleMain.checked === true) {
-    recipe.innerText = getRandomMain()
+    recipe.innerText = getRandomMain() + "!"
   } else if (circleDessert.checked === true) {
-    recipe.innerText = getRandomDessert()
+    recipe.innerText = getRandomDessert() + "!"
   }
 }

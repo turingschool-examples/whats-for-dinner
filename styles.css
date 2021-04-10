@@ -49,20 +49,6 @@ body {
   font-weight: bold;
 }
 
-.letscook {
-    background-color: #0fb9b1;
-    border-radius: 5px;
-    border: #0fb9b1;
-    border-width: thin;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top:15px;
-}
-
 .column {
   padding-top: 10px;
   padding-right: 1px;
@@ -105,12 +91,53 @@ body {
   font-style: italic;
   font-size: 20px;
   text-align: center;
+  line-height: 2;
+  margin-top: 100px;
+  margin-bottom: 1px;
+  padding-bottom: 1px;
 }
 
 .recipe {
   font-style: bold;
   font-size: 40px;
   text-align: center;
+  margin-top: 1px;
+  margin-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.letscook {
+    background-color: #0fb9b1;
+    border-radius: 5px;
+    /* border: #0fb9b1; */
+    border-width: thin;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top:15px;
+}
+
+.clear-button {
+  text-align: center;
+  background-color: #95a5a6;
+  border-radius: 5px;
+  border: #95a5a6;
+  border-width: thin;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  padding: 2px;
+  width: 80px;
+  float: right;
+  /* height: 40px; */
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* COLORS

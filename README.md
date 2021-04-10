@@ -31,6 +31,7 @@ One can click "LET'S COOK!" again to cycle through different options, and one ca
 ## Screenshots
 
 [Home Page](https://i.imgur.com/sXt1fI8.png)
+
 [Main Dish Example](https://i.imgur.com/ccKkpfU.png)
 
 ## Future additions

@@ -29,20 +29,12 @@ body {
   background-size: cover;
 }
 
-/* .row-position {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-} */
-
 /* stylize header */
 header {
   display: flex;
   flex-direction:row;
   justify-content: space-between;
-  /*  */
   padding: 15px;
-  /* text-align: left; */
   background: #0fb9b1;
   font-size: 2vh;
 }
@@ -72,11 +64,10 @@ header button {
   display: flex;
   height: 60vh;
   width: 30vw;
+  min-width: 500px;
   margin: 30px;
   background-color: rgba(225, 225, 225, .9);
 }
-
-
 
 /* Text inside .meal-description and menu-box*/
 .meal-description p,
@@ -88,24 +79,16 @@ header button {
   color: #000000;
 }
 
-/* come back to formatting this */
-/* img {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  align-self: center;
-} */
-
 .meal-description {
-  
   background-image: url('./assets/cookpot.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20vh;
 }
 
-
+.hide {
+  background-image: none;
+}
 
 input[type="radio"]{
   margin: 10px 0;
@@ -113,7 +96,7 @@ input[type="radio"]{
 
 form input[type="submit"] {
   font-size: 2vh;
-  width: 25vh;
+  width: 25vw;
   border-radius: 4px;
   padding: 5px;
   background-color: #0fb9b1;
@@ -128,13 +111,3 @@ form input[type="submit"] {
   text-align: center;
   width: 8vw;
 }
-
-/* If I need to change my radio buttons */
-/* 
-input[type='radio'] {
-    position: relative;
-    background-color: white;
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-} */

@@ -25,7 +25,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
   /* background-size: auto; */
   background-position: bottom;
-  position: relative;
+  /* position: relative; */
 }
 
 .top-page {

@@ -126,8 +126,18 @@ function changeCookpotVisibility() {
     `
 }
 
+function checkSelectedRadios() {
+  for (var i = 0; i < radioBtns.length; i++) {
+    if (radioBtns[i].checked) {
+      return true
+    }
+  }
+}
+
 function disableLetsCookBtn() {
+  if (checkSelectedRadios()) {
     letsCookBtn.disabled = true;
+  }
 }
 
 function enableLetsCookBtn() {

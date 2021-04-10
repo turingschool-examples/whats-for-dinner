@@ -68,7 +68,8 @@ section {
   font-size: 30px;
 }
 
-.whats-cooking span {
+.whats-cooking span,
+.error {
   color: #ee5253
 }
 

@@ -15,6 +15,8 @@ var leftBox = document.querySelector('.whats-cooking');
 var rightBox = document.querySelector('.right-box');
 var favRecipesBox = document.querySelector('.show-fav-recipes');
 var favRecipesList = document.querySelector('.fav-recipe-box');
+var allRadioButtons = document.querySelectorAll('.radio-button')
+var errorMessage = document.querySelector('.error');
 
 //////////// VARIABLES ////////////
 var favoriteRecipes = [];
@@ -52,9 +54,26 @@ function randomFoods(foodType) {
 
 function displayRandomFood() {
   event.preventDefault();
-  cookpotView.classList.add('hidden');
-  youShouldMakeView.classList.remove('hidden');
-  if(sideButton.checked) {
+  preventEmptyInput();
+}
+
+function preventEmptyInput() {
+  var buttonIsChecked = false;
+  for(var i = 0; i < allRadioButtons.length ; i++) {
+    if(allRadioButtons[i].checked) {
+      buttonIsChecked = true
+    }
+  }
+  if(buttonIsChecked) {
+    errorMessage.classList.add('hidden')
+    displayRecipe();
+  } else if (buttonIsChecked === false) {
+    errorMessage.classList.remove('hidden')
+  }
+}
+
+function displayRecipe() {
+  if (sideButton.checked) {
     var randomSide = randomFoods(sides);
     formOutput.innerText = `${randomSide}`
   } else if (mainDishButton.checked){
@@ -64,6 +83,8 @@ function displayRandomFood() {
     var randomDessert = randomFoods(desserts)
     formOutput.innerText = `${randomDessert}`
   }
+  cookpotView.classList.add('hidden');
+  youShouldMakeView.classList.remove('hidden');
 }
 
 function clearForm() {

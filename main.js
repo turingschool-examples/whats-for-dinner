@@ -13,7 +13,7 @@ var recipe = document.querySelector(".recipe")
 var eatThis = document.querySelector(".eatthis")
 var cookpot = document.querySelector(".cookpot")
 var hidden = document.querySelector("hidden")
-var clearButton = document.querySelector("clear-button")
+var clearButton = document.querySelector(".clear-button")
 
 ///////// EVENT LISTENERS /////////
 

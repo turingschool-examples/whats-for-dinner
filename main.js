@@ -15,7 +15,6 @@ var leftBox = document.querySelector('.whats-cooking');
 var rightBox = document.querySelector('.right-box');
 var favRecipesBox = document.querySelector('.show-fav-recipes');
 var favRecipesList = document.querySelector('.fav-recipe-box');
-var deleteButton = document.querySelector('.delete')
 
 //////////// VARIABLES ////////////
 var favoriteRecipes = [];
@@ -29,15 +28,20 @@ homeButton.addEventListener('click', goHome)
 
 favRecipesList.addEventListener('click', function(event){
   if(event.target.className === 'delete'){
-    var li = event.target.parentElement;
-    li.parentNode.removeChild(li);
+    var recipe = event.target.parentElement;
+    var targetRecipe = recipe.firstElementChild.innerText
+    recipe.parentNode.removeChild(recipe);
   }
   //remove from the data model as well
   //use a for loop to search the favoriteRecipes array
   //search to see if favoriteRecipes[i] matches the span,
   //which is the child of the li
   //if it does match, delete it
-  for(var i = 0; i < favoriteRecipes.length; i ++)
+  for(var i = 0; i < favoriteRecipes.length; i ++) {
+    if(favoriteRecipes[i] === targetRecipe) {
+      favoriteRecipes.splice(i, 1)
+    }
+  }
 })
 
 
@@ -89,7 +93,7 @@ function viewFavoritesPage() {
     favRecipesList.innerHTML += `
         <ul>
           <li>
-            <span>${favoriteRecipes[i]}</span>
+            <span class="recipe-name">${favoriteRecipes[i]}</span>
             <button class="delete">Remove Favorite</button>
           </li>
         </ul>

@@ -49,6 +49,8 @@ function randomFoods(foodType) {
 
 function displayRandomFood() {
   event.preventDefault();
+  addToFavoritesButton.innerText = 'Add to Favorites! ♥︎'
+  addToFavoritesButton.classList.remove('fav-added');
   preventEmptyInput();
 };
 
@@ -85,6 +87,8 @@ function displayRecipe() {
 function clearForm() {
   cookpotView.classList.toggle('hidden');
   youShouldMakeView.classList.toggle('hidden');
+  addToFavoritesButton.innerText = 'Add to Favorites! ♥︎'
+  addToFavoritesButton.classList.remove('fav-added');
   mainDishButton.checked = false;
   dessertButton.checked = false;
   sideButton.checked = false;
@@ -134,5 +138,10 @@ function addToFavorites() {
   }
   if (!isInArray) {
     favoriteRecipes.push(currentRecipe);
+    addToFavoritesButton.innerText = 'Added to Favorites! ♥︎'
+    addToFavoritesButton.classList.toggle('fav-added');
   }
 };
+
+//lets cook and clear button should both remove 'fav-added' class from
+//    addToFavoritesButton.classList.remove('fav-added');

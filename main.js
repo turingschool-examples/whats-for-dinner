@@ -20,7 +20,7 @@ var rightSide = document.getElementById('right');
 window.addEventListener('load', changeCookpotVisibility)
 letsCookBtn.addEventListener('click', generateRandomRecipe);
 rightSide.addEventListener('click', resetLRSides);
-// leftSide.addEventListener('change', disableUnchecked);
+leftSide.addEventListener('change', disableUnchecked);
 
 
 // EVENT HANDLERS
@@ -31,11 +31,16 @@ function getRandomIndex(array) {
 function generateRandomRecipe() {
   for (i = 0; i < radioBtns.length; i++) {
     if (radioBtns[i].checked && radioBtns[i].id === 'entire-meal') {
-      entireMealInnerHTML();
-    }
+    entireMealInnerHTML();
+  } else if (radioBtns[i].checked && radioBtns[i].id === 'side') {
+    sideRecipeInnerHTML();
+  } else if (radioBtns[i].checked && radioBtns[i].id === 'main-dish') {
+    mainRecipeInnerHTML();
+  } else if (radioBtns[i].checked && radioBtns[i].id === 'dessert') {
+    dessertRecipeInnerHTML();
   }
-  changeRadioStatus();
-  changeLetsCookClickability();
+ }
+ disableLetsCookBtn();
 }
 
 function entireMealInnerHTML() {
@@ -43,10 +48,10 @@ function entireMealInnerHTML() {
       rightSide.innerHTML =
         `
         <div>
-          <br><p class="recipe" id="recipe">You should make:</p>
+          <br><p class="recipe-head" id="recipe">You should make:</p>
           <p>${mains[getRandomIndex(mains)]} with a side of</p>
           <p>${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}!</p>
-          <br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+          <br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
         </div>
          `
 }
@@ -55,33 +60,60 @@ function sideRecipeInnerHTML() {
     rightSide.innerHTML = '';
     rightSide.innerHTML =
     `
+    <div>
+      <br><p class="recipe-head" id="recipe">You should make:</p>
+      <p>${sides[getRandomIndex(sides)]}!</p>
+      <br><br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+    </div>
     `
+}
+
+function mainRecipeInnerHTML() {
+  rightSide.innerHTML = '';
+  rightSide.innerHTML =
+  `
+  <div>
+    <br><p class="recipe-head" id="recipe">You should make:</p>
+    <p>${mains[getRandomIndex(mains)]}!</p>
+    <br><br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+  </div>
+  `
+}
+
+function dessertRecipeInnerHTML() {
+  rightSide.innerHTML = '';
+  rightSide.innerHTML =
+  `
+  <div>
+    <br><p class="recipe-head" id="recipe">You should make:</p>
+    <p>${desserts[getRandomIndex(desserts)]}!</p>
+    <br><br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+  </div>
+  `
 }
 
 
 function resetLRSides() {
   if (event.target.id === 'clear') {
     rightSide.innerHTML = '';
+    enableLetsCookBtn();
     changeRadioStatus()
     changeCookpotVisibility();
-    changeLetsCookClickability();
    }
  }
 
 function changeRadioStatus() {
   for (var i = 0; i < radioBtns.length; i++) {
-    if (radioBtns[i].disabled) {
-      radioBtns[i].disabled = !radioBtns[i].disabled;
-      console.log('working?');
+    if (radioBtns[i].disabled || radioBtns[i].checked) {
+      radioBtns[i].checked = false;
+      radioBtns[i].disabled = false;
     }
   }
 }
 
-function disableUnchecked(event) {
+function disableUnchecked() {
   for (var i = 0; i < radioBtns.length; i++) {
-    if (event.target.id === 'radio' && radioBtns[i].checked) {
-      radioBtns[i].disabled = false;
-    } else {
+    if (!radioBtns[i].checked) {
       radioBtns[i].disabled = true;
     }
   }
@@ -94,8 +126,10 @@ function changeCookpotVisibility() {
     `
 }
 
-function changeLetsCookClickability() {
-  if (!letsCookBtn.disabled) {
-    letsCookBtn.disabled = !letsCookBtn.disabled
-  }
+function disableLetsCookBtn() {
+    letsCookBtn.disabled = true;
+}
+
+function enableLetsCookBtn() {
+  letsCookBtn.disabled = false;
 }

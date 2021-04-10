@@ -58,8 +58,8 @@ function letsCook() {
   if (circleSide.checked === true) {
     recipe.innerText = getRandomSide()
   } else if (circleMain.checked === true) {
-    getRandomMain()
+    recipe.innerText = getRandomMain()
   } else if (circleDessert.checked === true) {
-    getRandomDessert()
+    recipe.innerText = getRandomDessert()
   }
 }

@@ -55,24 +55,33 @@ function randomizeIndex(dishList) {
 }
 
 function clearPage() {
-
-if (dish.innerText !== 'Pick a dish!') {Î
-show(potLogo)
-hide(clearBtn)
-hide(suggestion)
-hide(dish)
+  if (dish.innerText !== 'Pick a dish!') {
+  show(potLogo)
+  hide(clearBtn)
+  hide(suggestion)
+  hide(dish)
   }
 }
 
 function addRecipe(e) {
+  if (recipeName.value === "") {
+    recipeName.value = "Please fill this out"
+  }
   e.preventDefault()
-  // if(!recipeName.value === "") { 
+  console.lg
+  if (recipeType.value.toLowerCase() === "side" ||
+      recipeType.value.toLowerCase() === "main dish" ||
+      recipeType.value.toLowerCase() === "dessert" ||
+      recipeType.value.toLowerCase() === "entire meal" 
+      && recipeName.value !== ""
+  ) {
     hide(potLogo)
     show(clearBtn)
     show(suggestion)
     show(dish)
     dish.innerText = recipeName.value
-    e.preventDefault()
-  // }
-
+  }
+   recipeType.value = "Side, Main Dish, Dessert, or Entire Meal"
+   
+    
 }

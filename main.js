@@ -10,6 +10,7 @@ var letsCookButton = document.querySelector(".letscook")
 var transparentBoxRight = document.querySelector(".transparent-box-right")
 
 var recipe = document.querySelector(".recipe")
+var eatThis = document.querySelector(".eatthis")
 var cookpot = document.querySelector(".cookpot")
 var hidden = document.querySelector("hidden")
 
@@ -54,9 +55,11 @@ function letsCook() {
   var circleDessert = document.getElementById("circle-dessert");
   cookpot.classList.add("hidden");
   recipe.classList.remove("hidden");
+  eatThis.classList.remove("hidden");
   preventDefault();
   if (circleSide.checked === true) {
-    recipe.innerText = recipe.innerText = recipe.innerText = "You should make this recipe: " + getRandomMain()
+    // recipe.innerText = "You should make this recipe: " + getRandomMain()
+    recipe.innerText = getRandomMain()
   } else if (circleMain.checked === true) {
     recipe.innerText = getRandomMain()
   } else if (circleDessert.checked === true) {

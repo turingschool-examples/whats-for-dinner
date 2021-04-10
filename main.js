@@ -55,30 +55,21 @@ var mainDishRadial = document.querySelector('#js-main-dish');
 var dessertRadial = document.querySelector('#js-dessert');
 var entireMealRadial = document.querySelector('#js-entire-meal');
 
-//var radios = document.querySelectorAll('');
 
 var potBox = document.querySelector('.meal-description');
-
-
 var cookButton = document.querySelector('#js-cook-btn');
 //var addRecipeButton = document.querySelector('#js-add-recipe-btn');
 
 //Add Event-Listeners
 cookButton.addEventListener('click', showDish)
 
-//I'm going to check what dish is passed into this function
-//then I'm going to return a random slot from the array matching the dish-type
-//then I'm going to remove the pot img
-//then I'm going to display the text!
-
-//var dishType = document.querySelector('input[name="menu-options"]:checked').value;
-
+//functions below
 function showDish(e){
   e.preventDefault();
-  //var dish = 'Peas!'
-  //hide(potBox);
-  var food = 'Prunes';
-
+  // sideRadial.checked ? food = getRandomDish(sides) :
+  // mainDishRadial.checked ? food = getRandomDish(mains) :
+  // dessertRadial.checked ? food = getRandomDish(desserts) :
+  // entireMealRadial.checked ? console.log("Full meal") : console.log("Error"); 
   if(sideRadial.checked){
     food = getRandomDish(sides);
     //potBox.innerHTML = `You should make: ${food}`
@@ -91,23 +82,10 @@ function showDish(e){
   } else if(entireMealRadial.checked){
     //potBox.innerHTML = `You should make: ${food}`
   }
-
   potBox.classList.add("hide")
   potBox.innerHTML = `You should make: ${food}`
-   
-
-//getRandomDish(dishType);
-
 }
 
 function getRandomDish(dishType) {
   return dishType[Math.floor(Math.random() * dishType.length)];
 };
-
-// function hide(e){
-//  e.classList.add("hide");
-// }
-
-// function show(e){
-//   e.classList.remove("hide");
-// }

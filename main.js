@@ -13,7 +13,7 @@ var clearBtn = document.querySelector('.clear-button')
 
 //Event Listeners
 letsCookBtn.addEventListener('click', preventEvent);
-letsCookBtn.addEventListener('click', pushFood);
+letsCookBtn.addEventListener('click', displayRandomFood);
 clearBtn.addEventListener('click', clearFood);
 
 function getRandomIndex(array) {
@@ -31,53 +31,57 @@ function clearFood(){
   clearBtn.classList.add('hidden');
 }
 
-function hidePot(){
+function hideCookingPot() {
   cookingPot.classList.add('hidden');
+}
+
+function showRecipeSection() {
   foodDisplayHeading.classList.remove('hidden');
   foodText.classList.remove('hidden');
   clearBtn.classList.remove('hidden');
 }
 
 function createSide() {
-  if(sideBtn.value){
-    hidePot();
-    foodText.innerText = sides[getRandomIndex(sides)]
-    return `${foodText.innerText}!`
+  if(sideBtn.value) {
+    hideCookingPot();
+    showRecipeSection();
+    foodText.innerText = `${sides[getRandomIndex(sides)]}!`
   }
 }
 
 function createMain() {
-  if(mainBtn.value){
-    hidePot();
-    foodText.innerText = mains[getRandomIndex(mains)]
-    return `${mains[getRandomIndex(mains)]}!`
-  }
+  if(mainBtn.value) {
+    hideCookingPot();
+    showRecipeSection();
+    foodText.innerText = `${mains[getRandomIndex(mains)]}!`
+    }
 }
 
 function createDessert() {
-  if(dessertBtn.value){
-    hidePot();
-    foodText.innerText = desserts[getRandomIndex(desserts)]
-    return `${desserts[getRandomIndex(desserts)]}!`
+  if(dessertBtn.value) {
+    hideCookingPot();
+    showRecipeSection();
+    foodText.innerText = `${desserts[getRandomIndex(desserts)]}!`
   }
 }
 
 function createMeal() {
-  if(entireMealBtn.value){
-    hidePot();
+  if(entireMealBtn.value) {
+    hideCookingPot();
+    showRecipeSection();
     foodText.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
-    return `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+
   }
 }
 
-function pushFood(){
-  if(sideBtn.checked){
+function displayRandomFood() {
+  if(sideBtn.checked) {
     createSide();
-  } else if(mainBtn.checked){
+  } else if(mainBtn.checked) {
     createMain();
-  } else if(dessertBtn.checked){
+  } else if(dessertBtn.checked) {
     createDessert();
-  } else if(entireMealBtn.checked){
+  } else if(entireMealBtn.checked) {
     createMeal();
   }
 }

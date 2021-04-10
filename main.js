@@ -15,100 +15,99 @@ var leftBox = document.querySelector('.whats-cooking');
 var rightBox = document.querySelector('.right-box');
 var favRecipesBox = document.querySelector('.show-fav-recipes');
 var favRecipesList = document.querySelector('.fav-recipe-box');
-var allRadioButtons = document.querySelectorAll('.radio-button')
+var allRadioButtons = document.querySelectorAll('.radio-button');
 var errorMessage = document.querySelector('.error');
 
 //////////// VARIABLES ////////////
 var favoriteRecipes = [];
 
 //////////// EVENT LISTENERS ////////////
-letsCookButton.addEventListener('click', displayRandomFood)
-clearButton.addEventListener('click', clearForm)
-viewFavoritesButton.addEventListener('click', viewFavoritesPage)
-addToFavoritesButton.addEventListener('click', addToFavorites)
-homeButton.addEventListener('click', goHome)
+letsCookButton.addEventListener('click', displayRandomFood);
+clearButton.addEventListener('click', clearForm);
+viewFavoritesButton.addEventListener('click', viewFavoritesPage);
+addToFavoritesButton.addEventListener('click', addToFavorites);
+homeButton.addEventListener('click', goHome);
 
 favRecipesList.addEventListener('click', function(event){
   if(event.target.className === 'delete'){
     var recipe = event.target.parentElement;
-    var targetRecipe = recipe.firstElementChild.innerText
+    var targetRecipe = recipe.firstElementChild.innerText;
     recipe.parentNode.removeChild(recipe);
   }
-  //remove from the data model as well
-  //use a for loop to search the favoriteRecipes array
-  //search to see if favoriteRecipes[i] matches the span,
-  //which is the child of the li
-  //if it does match, delete it
   for(var i = 0; i < favoriteRecipes.length; i ++) {
     if(favoriteRecipes[i] === targetRecipe) {
-      favoriteRecipes.splice(i, 1)
+      favoriteRecipes.splice(i, 1);
     }
   }
-})
+});
 
 
 //////////// FUNCTIONS AND EVENT HANDLERS ////////////
 function randomFoods(foodType) {
-  return foodType[Math.floor(Math.random()*foodType.length)]
-}
+  return foodType[Math.floor(Math.random()*foodType.length)];
+};
 
 function displayRandomFood() {
   event.preventDefault();
+  addToFavoritesButton.innerText = 'Add to Favorites! ♥︎'
+  addToFavoritesButton.classList.remove('fav-added');
   preventEmptyInput();
-}
+};
 
 function preventEmptyInput() {
   var buttonIsChecked = false;
   for(var i = 0; i < allRadioButtons.length ; i++) {
     if(allRadioButtons[i].checked) {
-      buttonIsChecked = true
+      buttonIsChecked = true;
     }
   }
   if(buttonIsChecked) {
-    errorMessage.classList.add('hidden')
+    errorMessage.classList.add('hidden');
     displayRecipe();
   } else if (buttonIsChecked === false) {
-    errorMessage.classList.remove('hidden')
+    errorMessage.classList.remove('hidden');
   }
-}
+};
 
 function displayRecipe() {
   if (sideButton.checked) {
     var randomSide = randomFoods(sides);
-    formOutput.innerText = `${randomSide}`
+    formOutput.innerText = `${randomSide}`;
   } else if (mainDishButton.checked){
-    var randomMain = randomFoods(mains)
-    formOutput.innerText = `${randomMain}`
+    var randomMain = randomFoods(mains);
+    formOutput.innerText = `${randomMain}`;
   } else if (dessertButton.checked){
-    var randomDessert = randomFoods(desserts)
-    formOutput.innerText = `${randomDessert}`
+    var randomDessert = randomFoods(desserts);
+    formOutput.innerText = `${randomDessert}`;
   }
   cookpotView.classList.add('hidden');
   youShouldMakeView.classList.remove('hidden');
-}
+};
 
 function clearForm() {
   cookpotView.classList.toggle('hidden');
   youShouldMakeView.classList.toggle('hidden');
-  mainDishButton.checked = false
-  dessertButton.checked = false
-  sideButton.checked = false
-}
+  addToFavoritesButton.innerText = 'Add to Favorites! ♥︎'
+  addToFavoritesButton.classList.remove('fav-added');
+  mainDishButton.checked = false;
+  dessertButton.checked = false;
+  sideButton.checked = false;
+};
 
 function hideElement(element) {
-  element.classList.add('hidden')
-}
+  element.classList.add('hidden');
+};
 
 function showElement(element) {
-  element.classList.remove('hidden')
-}
+  element.classList.remove('hidden');
+};
 
 function viewFavoritesPage() {
   hideElement(leftBox);
   hideElement(rightBox);
   showElement(favRecipesBox);
   showElement(homeButton);
-  favRecipesList.innerHTML = ''
+  favRecipesList.innerHTML = '';
 
   for(var i = 0; i <favoriteRecipes.length ; i++){
     favRecipesList.innerHTML += `
@@ -119,26 +118,27 @@ function viewFavoritesPage() {
           </li>
         </ul>
       `
-  }
-
-}
+  };
+};
 
 function goHome() {
   showElement(leftBox);
   showElement(rightBox);
   hideElement(favRecipesBox);
   hideElement(homeButton);
-}
+};
 
 function addToFavorites() {
   var currentRecipe = formOutput.innerText;
   var isInArray = false;
   for(var i = 0; i < favoriteRecipes.length; i ++) {
     if (favoriteRecipes[i] === currentRecipe) {
-      isInArray = true
+      isInArray = true;
     }
   }
   if (!isInArray) {
     favoriteRecipes.push(currentRecipe);
+    addToFavoritesButton.innerText = 'Added to Favorites! ♥︎'
+    addToFavoritesButton.classList.toggle('fav-added');
   }
-}
+};

@@ -40,13 +40,33 @@ button {
   border-radius: 5px;
 }
 
+button:hover {
+  background-color: #DDDDDD;
+}
+
+.delete {
+  padding: 5px;
+  font-size: 10px;
+}
+
 .lets-cook,
 .add-favorite {
   padding: 10px;
   border: 1px solid white;
   border-radius: 5px;
   background-color: #0fb9b1;
-  width: 200px
+  width: 200px;
+}
+
+.lets-cook:hover,
+.add-favorite:hover {
+  background-color: #DDDDDD;
+}
+
+.fav-added {
+  animation: .4s;
+  color:#e23b3b;
+  background-color: #DDDDDD;
 }
 
 main {
@@ -70,7 +90,7 @@ section {
 
 .whats-cooking span,
 .error {
-  color: #ee5253
+  color: #ee5253;
 }
 
 form {
@@ -85,14 +105,20 @@ form {
   position: relative;
 }
 
+.output {
+  font-size: 40px;
+}
+
+.show-fav-recipes {
+  display: flex;
+  justify-content: center;
+}
+
 .cookpot {
   width: 100px;
   height: 100px;
 }
 
-.output {
-  font-size: 40px;
-}
 
 .clear {
   padding: 10px;
@@ -103,6 +129,11 @@ form {
   position: absolute;
   right: 20px;
   bottom: 20px;
+}
+
+.clear:hover {
+  background-color: #8a9c9d;
+  border-color: #8a9c9d;
 }
 
 .hidden {

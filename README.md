@@ -10,18 +10,18 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 
 ## Features
 
-![Image of landing page for What's For Dinner](https://imgur.com/xurjH9S)
+![Image of landing page for What's For Dinner](https://imgur.com/xurjH9S.jpg)
 
 When you first visit What's For Dinner you are prompted to select what kind of meal you are looking for- side, main, or dessert. When you have selected your meal and click "Let's Cook" the cookpot image in the right box disappears and you see a randomly selected recipe.
 
 Two buttons appear as well: one allows you to add the current recipe to your favorites, and another will clear the selection.
 
-![Gif showing user favoriting a recipe](https://gph.is/g/E3XGmGd)
+![Gif showing user favoriting a recipe](https://gph.is/g/E3XGmGd.gif)
 Mmm... dessert.
 
 When you click "View Favorites" you are taken to another page which displays all of the recipes you have added to your favorites. A button appears next to each recipe which allows you to remove it from the list when your tastes change.
 
-![Screenshot showing user removing a recipe from favorites](https://imgur.com/gFiVcOk)
+![Screenshot showing user removing a recipe from favorites](https://imgur.com/gFiVcOk.jpg)
 Yuck, salad.
 
 Another small feature, is that some error handling is incorporated into the homepage to prevent empty form submission.

@@ -4,7 +4,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
-</html>
+      <header>
+          <nav class="top-bar-nav>">
+            <h1 class="first-question">What's for Dinner?</h1>
+            <button class="add-recipe">Add Recipe</button>
+          </nav>
+        </header>
+      <section class="main-section">
+          <form class="input-box" id="input-box">
+            <h2 class="food-question">What are you looking for?<span class="asterisk" id="asterisk">*</span></h2>
+            <input type="radio" name="action" id="side" value="side">
+            <label for="side">Side</label><br>
+            <input type="radio" name="action" id="main-dish" value="main-dish">
+            <label for="main-dish">Main Dish</label><br>
+            <input type="radio" name="action" id="dessert-button" value="dessert">
+            <label for="dessert">Dessert</label><br>
+            <input type="radio" name="action" id="entire-meal" value="entire-meal">
+            <label for="entire-meal">Entire Meal</label><br>
+            <button class="cook-button">LET'S COOK!</button>
+          </form>
+        <section class="food-display-container">
+              <img class="cooking-pot" src="assets/cookpot.svg" alt="cookpot">
+              <h2 class="food-display-heading hidden">You should make:</h2>
+              <p class="food-display-text hidden">BBQ Chicken Burger</p>
+              <button class="clear-button hidden">CLEAR</button>
+            </section>
+        </section>

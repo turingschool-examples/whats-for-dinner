@@ -82,9 +82,10 @@ p {
 
 .burgers {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
-  background-position: absolute;
+  background-position: relative;
   width: 100%;
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .main-page {
@@ -155,7 +156,7 @@ p {
   padding-bottom: 25px;
   font-size: 20px;
   box-sizing: border-box;
-  margin-bottom: 25%;
+  margin-bottom: 17%;
 }
 
 

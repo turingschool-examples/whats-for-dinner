@@ -39,9 +39,8 @@ h2 {
 }
 
 #lets-cook-form {
-  display: inline-block;
   margin: 0 auto;
-  padding: 50px 100px 50px 40px;
+  padding: 50px 100px 80px 40px;
   background-color: rgba(225, 225, 225, .9);
   position: absolute;
   left: 12%;
@@ -50,9 +49,8 @@ h2 {
 }
 
 #cookpot {
-  display: inline-block;
   margin: 0 auto;
-  padding: 165px 200px;
+  padding: 165px 195px;
   background-color: rgba(225, 225, 225, .9);
   position: absolute;
   left: 55%;
@@ -64,6 +62,7 @@ h2 {
   max-height: 40%;
   max-width: 50%;
   padding: 110px 95px;
+  z-index: 2;
 }
 
 .side-dish,
@@ -74,16 +73,41 @@ h2 {
   font-size: 16px;
 }
 
-button {
+.lets-cook-btn {
   background-color: #0fb9b1;
   font-family: 'Roboto', sans-serif;
   margin: 0 auto;
   padding: 6px 50px;
   border-radius: 5px;
   border: 1px solid #95a5a6;
+  position: absolute;
+  left: 13%;
+  top: 58%;
+  z-index: 1;
 }
 
-button:hover {
+.lets-cook-btn:hover {
   background-color: black;
   color: #0fb9b1;
+}
+
+.clear-btn {
+  background-color: rgba(225, 225, 225, .9);
+  font-family: 'Roboto', sans-serif;
+  margin: 20 10;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #95a5a6;
+  position: absolute;
+  left: 78%;
+  top: 55%;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.meal-suggestion {
+  font-size: 17px;
 }

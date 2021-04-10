@@ -14,6 +14,7 @@ var eatThis = document.querySelector(".eatthis")
 var cookpot = document.querySelector(".cookpot")
 var hidden = document.querySelector("hidden")
 var clearButton = document.querySelector(".clear-button")
+var entireMeal = document.querySelector(".entire-meal")
 
 ///////// EVENT LISTENERS /////////
 
@@ -45,6 +46,13 @@ function getRandomDessert() {
   return dessertArray[randomDessertIndex];
 }
 
+function andSign() {
+  return "    &    "
+}
+function getRandomEntireMeal() {
+  return getRandomSide() + andSign() + getRandomMain() + andSign() + getRandomDessert()
+}
+
 // after letsCookButton clicked
 
 function preventDefault() {
@@ -58,10 +66,21 @@ function clear() {
   clearButton.classList.add("hidden");
 }
 
+// function getEntireMeal() {
+//   recipe.innerText = getRandomSide() + "!"
+//   recipe.innerText = getRandomMain() + "!"
+//   recipe.innerText = getRandomDessert() + "!"
+// }
+
+// function alert() {
+//   alert("Please select an option!");
+// }
+
 function letsCook() {
   var circleSide = document.getElementById("circle-side");
   var circleMain = document.getElementById("circle-main");
   var circleDessert = document.getElementById("circle-dessert");
+  var circleEntireMeal = document.getElementById("circle-entire-meal");
   cookpot.classList.add("hidden");
   recipe.classList.remove("hidden");
   eatThis.classList.remove("hidden");
@@ -73,5 +92,10 @@ function letsCook() {
     recipe.innerText = getRandomMain() + "!"
   } else if (circleDessert.checked === true) {
     recipe.innerText = getRandomDessert() + "!"
+  } else if (circleEntireMeal.checked === true) {
+    recipe.innerText = getRandomEntireMeal()
   }
+  //  else {
+  //   alert();
+  // }
 }

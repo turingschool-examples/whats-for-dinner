@@ -30,3 +30,54 @@ function clearFood(){
   foodText.classList.add('hidden');
   clearBtn.classList.add('hidden');
 }
+
+function hidePot(){
+  cookingPot.classList.add('hidden');
+  foodDisplayHeading.classList.remove('hidden');
+  foodText.classList.remove('hidden');
+  clearBtn.classList.remove('hidden');
+}
+
+function createSide() {
+  if(sideBtn.value){
+    hidePot();
+    foodText.innerText = sides[getRandomIndex(sides)]
+    return `${foodText.innerText}!`
+  }
+}
+
+function createMain() {
+  if(mainBtn.value){
+    hidePot();
+    foodText.innerText = mains[getRandomIndex(mains)]
+    return `${mains[getRandomIndex(mains)]}!`
+  }
+}
+
+function createDessert() {
+  if(dessertBtn.value){
+    hidePot();
+    foodText.innerText = desserts[getRandomIndex(desserts)]
+    return `${desserts[getRandomIndex(desserts)]}!`
+  }
+}
+
+function createMeal() {
+  if(entireMealBtn.value){
+    hidePot();
+    foodText.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+    return `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+  }
+}
+
+function pushFood(){
+  if(sideBtn.checked){
+    createSide();
+  } else if(mainBtn.checked){
+    createMain();
+  } else if(dessertBtn.checked){
+    createDessert();
+  } else if(entireMealBtn.checked){
+    createMeal();
+  }
+}

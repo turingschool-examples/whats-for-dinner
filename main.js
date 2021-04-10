@@ -57,14 +57,6 @@ function getRandomDessert() {
   return dessertArray[randomDessertIndex];
 }
 
-function andSign() {
-  return " & "
-}
-function getRandomEntireMeal() {
-  entireMeal.classList.remove("hidden");
-  return getRandomSide() + andSign() + getRandomMain() + andSign() + getRandomDessert()
-}
-
 // after letsCookButton clicked
 
 function preventDefault() {
@@ -78,41 +70,27 @@ function clear() {
   clearButton.classList.add("hidden");
 }
 
-// function getEntireMeal() {
-//   recipe.innerText = getRandomSide() + "!"
-//   recipe.innerText = getRandomMain() + "!"
-//   recipe.innerText = getRandomDessert() + "!"
-// }
-
 function showAlert() {
   alert("Please select an option!");
 }
 
 function letsCook() {
   cookpot.classList.add("hidden");
+  recipe.classList.remove("hidden");
   eatThis.classList.remove("hidden");
   clearButton.classList.remove("hidden");
-  // preventDefault();
+  preventDefault();
   if (circleSide.checked === true) {
-    recipe.classList.remove("hidden");
-    entireMeal.classList.add("hidden");
     recipe.innerText = getRandomSide() + "!"
   } else if (circleMain.checked === true) {
-    recipe.classList.remove("hidden");
-    entireMeal.classList.add("hidden");
     recipe.innerText = getRandomMain() + "!"
   } else if (circleDessert.checked === true) {
-    recipe.classList.remove("hidden");
-    entireMeal.classList.add("hidden");
     recipe.innerText = getRandomDessert() + "!"
-  } else if (circleEntireMeal.checked === true) {
-    entireMeal.classList.remove("hidden");
-    recipe.innerText = getRandomEntireMeal()
-  }
-   else {
+} else {
     cookpot.classList.remove("hidden");
     eatThis.classList.add("hidden");
     clearButton.classList.add("hidden");
+    recipe.classList.add("hidden");
     showAlert();
   }
 }

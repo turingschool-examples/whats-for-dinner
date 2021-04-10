@@ -13,10 +13,12 @@ var recipe = document.querySelector(".recipe")
 var eatThis = document.querySelector(".eatthis")
 var cookpot = document.querySelector(".cookpot")
 var hidden = document.querySelector("hidden")
+var clearButton = document.querySelector("clear-button")
 
 ///////// EVENT LISTENERS /////////
 
 letsCookButton.addEventListener("click", letsCook)
+clearButton.addEventListener("click", clear)
 
 ///////// FUNCTIONS /////////
 
@@ -49,6 +51,12 @@ function preventDefault() {
   event.preventDefault()
 }
 
+function clear() {
+  cookpot.classList.remove("hidden");
+  recipe.classList.add("hidden");
+  eatThis.classList.add("hidden");
+}
+
 function letsCook() {
   var circleSide = document.getElementById("circle-side");
   var circleMain = document.getElementById("circle-main");
@@ -56,9 +64,9 @@ function letsCook() {
   cookpot.classList.add("hidden");
   recipe.classList.remove("hidden");
   eatThis.classList.remove("hidden");
+  clearButton.classList.remove("hidden");
   preventDefault();
   if (circleSide.checked === true) {
-    // recipe.innerText = "You should make this recipe: " + getRandomMain()
     recipe.innerText = getRandomMain()
   } else if (circleMain.checked === true) {
     recipe.innerText = getRandomMain()

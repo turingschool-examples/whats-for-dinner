@@ -66,24 +66,27 @@ cookButton.addEventListener('click', showDish)
 //functions below
 function showDish(e){
   e.preventDefault();
+  var side = getRandomDish(sides);
+  var main = getRandomDish(mains); 
+  var dessert = getRandomDish(desserts); 
+  potBox.classList.add("hide")
+  potBox.innerHTML = `<p class="first-paragraph">You should make:</p>`
   // sideRadial.checked ? food = getRandomDish(sides) :
   // mainDishRadial.checked ? food = getRandomDish(mains) :
   // dessertRadial.checked ? food = getRandomDish(desserts) :
   // entireMealRadial.checked ? console.log("Full meal") : console.log("Error"); 
   if(sideRadial.checked){
-    food = getRandomDish(sides);
-    //potBox.innerHTML = `You should make: ${food}`
+    food = side;
+    potBox.innerHTML += `<p class="second-paragraph">${side}</p>`
   } else if (mainDishRadial.checked) {
-    food = getRandomDish(mains);
-    //potBox.innerHTML = `You should make: ${food}`
+    food = main;
+    potBox.innerHTML += `<p class="second-paragraph">${main}</p>`
   } else if (dessertRadial.checked) {
-    food = getRandomDish(desserts);
-    //potBox.innerHTML = `You should make: ${food}`
+    food = desserts;
+    potBox.innerHTML += `<p class="second-paragraph">${dessert}</p>`
   } else if(entireMealRadial.checked){
-    //potBox.innerHTML = `You should make: ${food}`
+    potBox.innerHTML += `<p class="second-paragraph">${main} with a side of ${side} and ${dessert} for dessert!</p>`
   }
-  potBox.classList.add("hide")
-  potBox.innerHTML = `You should make: ${food}`
 }
 
 function getRandomDish(dishType) {

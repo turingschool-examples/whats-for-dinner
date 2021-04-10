@@ -12,6 +12,7 @@ red - #ee5253
 * {
   margin: 0;
   padding: 0;
+  /* border:  1px solid red; */
 }
 
 /* style the .asterisk */
@@ -23,6 +24,7 @@ red - #ee5253
 /* add background image and make font san-serif */
 body {
   font-family: sans-serif;
+  font-size: 1.5rem;
   background-image: url('./assets/burger-friends.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -36,18 +38,28 @@ header {
   justify-content: space-between;
   padding: 15px;
   background: #0fb9b1;
-  font-size: 2vh;
+  font-size: 1.5rem;
 }
 
 header button {
   border-radius: 4px;
-  padding: 5px;
-  margin: 3px;
-  border: none;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+}
+
+form {
+  font-size: 1rem;
 }
 
 .menu-selection {
-  padding-left: 5vh;
+  padding: 2rem;
+}
+
+.menu-selection p {
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* flexbox */
@@ -62,21 +74,33 @@ header button {
 .meal-description,
 .menu-box {
   display: flex;
+  flex-direction: column;
   height: 60vh;
   width: 30vw;
   min-width: 500px;
   margin: 30px;
   background-color: rgba(225, 225, 225, .9);
+  /* Adjusting text */
+  font-size: 2rem;
+  word-wrap: normal;
+  /* font-weight: bold; */
+  color: #000000;
 }
 
 /* Text inside .meal-description and menu-box*/
-.meal-description p,
-.menu-box p {
-  font-size: 5vh;
-  margin: 25px;
-  padding: 1vh;
-  font-weight: bold;
-  color: #000000;
+
+.first-paragraph {
+  text-align: center;
+  font-style: italic;
+  margin: 4vw;
+  font-size: 1.5rem;
+}
+
+.second-paragraph {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .meal-description {
@@ -92,6 +116,8 @@ header button {
 
 input[type="radio"]{
   margin: 10px 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 form input[type="submit"] {
@@ -105,9 +131,10 @@ form input[type="submit"] {
  }
 
 .add-recipe-btn{
-  display: flex;
   flex-direction: row;
   justify-content: end;
   text-align: center;
-  width: 8vw;
+  width: 10vw;
+  align-self: center;
+  height: 4.5vh;
 }

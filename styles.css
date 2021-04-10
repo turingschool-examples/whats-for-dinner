@@ -72,6 +72,7 @@ header button {
   display: flex;
   height: 60vh;
   width: 30vw;
+  min-width: 500px;
   margin: 30px;
   background-color: rgba(225, 225, 225, .9);
 }
@@ -98,11 +99,14 @@ header button {
 } */
 
 .meal-description {
-  
   background-image: url('./assets/cookpot.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20vh;
+}
+
+.hide {
+  background-image: none;
 }
 
 
@@ -113,7 +117,7 @@ input[type="radio"]{
 
 form input[type="submit"] {
   font-size: 2vh;
-  width: 25vh;
+  width: 25vw;
   border-radius: 4px;
   padding: 5px;
   background-color: #0fb9b1;

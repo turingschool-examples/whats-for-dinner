@@ -54,8 +54,14 @@ var sideRadial = document.querySelector('#js-side');
 var mainDishRadial = document.querySelector('#js-main-dish');
 var dessertRadial = document.querySelector('#js-dessert');
 var entireMealRadial = document.querySelector('#js-entire-meal');
+
+//var radios = document.querySelectorAll('');
+
+var potBox = document.querySelector('.meal-description');
+
+
 var cookButton = document.querySelector('#js-cook-btn');
-var addRecipeButton = document.querySelector('#js-add-recipe-btn');
+//var addRecipeButton = document.querySelector('#js-add-recipe-btn');
 
 //Add Event-Listeners
 cookButton.addEventListener('click', showDish)
@@ -65,23 +71,43 @@ cookButton.addEventListener('click', showDish)
 //then I'm going to remove the pot img
 //then I'm going to display the text!
 
-//var dishType = the value of the radial button selected
+//var dishType = document.querySelector('input[name="menu-options"]:checked').value;
 
-function showDish(dishType){
+function showDish(e){
+  e.preventDefault();
+  //var dish = 'Peas!'
+  //hide(potBox);
+  var food = 'Prunes';
+
+  if(sideRadial.checked){
+    food = getRandomDish(sides);
+    //potBox.innerHTML = `You should make: ${food}`
+  } else if (mainDishRadial.checked) {
+    food = getRandomDish(mains);
+    //potBox.innerHTML = `You should make: ${food}`
+  } else if (dessertRadial.checked) {
+    food = getRandomDish(desserts);
+    //potBox.innerHTML = `You should make: ${food}`
+  } else if(entireMealRadial.checked){
+    //potBox.innerHTML = `You should make: ${food}`
+  }
+
+  potBox.classList.add("hide")
+  potBox.innerHTML = `You should make: ${food}`
+   
+
+//getRandomDish(dishType);
 
 }
 
-
-
-
-
-
-
-
-function getRandomElement(array) {
-  return array[getRandomIndex(array)]
+function getRandomDish(dishType) {
+  return dishType[Math.floor(Math.random() * dishType.length)];
 };
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-};
+// function hide(e){
+//  e.classList.add("hide");
+// }
+
+// function show(e){
+//   e.classList.remove("hide");
+// }

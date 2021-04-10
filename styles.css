@@ -13,9 +13,6 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
 }
 
-.hidden {
-  display: none;
-}
 
 body, html {
   height: 100%;
@@ -23,17 +20,7 @@ body, html {
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
-  /* background-size: auto; */
   background-position: bottom;
-  /* position: relative; */
-}
-
-.top-page {
-  margin: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #0fb9b1;
 }
 
 header {
@@ -59,6 +46,17 @@ p {
   font-size: 25px;
 }
 
+.hidden {
+  display: none;
+}
+
+.top-page {
+  margin: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0fb9b1;
+}
 
 .clear {
   width: 150px;
@@ -70,8 +68,8 @@ p {
 }
 
 .clear:hover {
- background-color: black;
- color: white;
+ background-color: #0fb9b1;
+ color: black;
  position: absolute;
 }
 
@@ -80,13 +78,14 @@ p {
 }
 
 .recipe-head {
+  font-size: 23px;
   font-style: italic;
 }
 
 .burgers {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
   background-size: auto;
-  background-position: relative;
+  background-position: absolute;
   height: 60%;
   width: 100%;
   background-repeat: no-repeat;
@@ -106,6 +105,7 @@ p {
 }
 
 .asterisk {
+  padding-left: 8px;
   color: red;
 }
 
@@ -130,15 +130,15 @@ p {
 }
 
 .left-side {
-  margin-left: 8%;
+  margin-left: 6%;
   align-items: flex-start;
   justify-content: space-between;
-  padding-left: 40px;
+  padding-left: 45px;
   padding-top: 35px;
 }
 
 .right-side {
-  margin-left: 56%;
+  margin-left: 55%;
   align-items: center;
   text-align: center;
   padding-top: 35px;
@@ -151,12 +151,12 @@ p {
   position: absolute;
   background-color: rgba(225, 225, 225, .9);
   opacity: 95%;
-  width: 35%;
+  width: 39%;
   height: 65%;
-  margin-top: none;
   padding-bottom: 35px;
   font-size: 20px;
   box-sizing: border-box;
+  margin-bottom: 25%;
 }
 
 

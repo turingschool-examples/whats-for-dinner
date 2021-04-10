@@ -48,9 +48,8 @@ function entireMealInnerHTML() {
       rightSide.innerHTML =
         `
         <div>
-          <br><p class="recipe-head" id="recipe">You should make:</p>
-          <p>${mains[getRandomIndex(mains)]} with a side of</p>
-          <p>${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}!</p>
+          <br><br><p class="recipe-head" id="recipe">You should make:</p>
+          <p>${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}!</p>
           <br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
         </div>
          `
@@ -61,9 +60,9 @@ function sideRecipeInnerHTML() {
     rightSide.innerHTML =
     `
     <div>
-      <br><p class="recipe-head" id="recipe">You should make:</p>
+      <br><br><p class="recipe-head" id="recipe">You should make:</p>
       <p>${sides[getRandomIndex(sides)]}!</p>
-      <br><br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+      <br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
     </div>
     `
 }
@@ -73,9 +72,9 @@ function mainRecipeInnerHTML() {
   rightSide.innerHTML =
   `
   <div>
-    <br><p class="recipe-head" id="recipe">You should make:</p>
+    <br><br><p class="recipe-head" id="recipe">You should make:</p>
     <p>${mains[getRandomIndex(mains)]}!</p>
-    <br><br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+    <br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
   </div>
   `
 }
@@ -85,9 +84,9 @@ function dessertRecipeInnerHTML() {
   rightSide.innerHTML =
   `
   <div>
-    <br><p class="recipe-head" id="recipe">You should make:</p>
+    <br><br><p class="recipe-head" id="recipe">You should make:</p>
     <p>${desserts[getRandomIndex(desserts)]}!</p>
-    <br><br><br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
+    <br><br><br><br><br><br><br><button type="button" name="clear" class="clear" id="clear">CLEAR</button>
   </div>
   `
 }
@@ -137,6 +136,7 @@ function checkSelectedRadios() {
 function disableLetsCookBtn() {
   if (checkSelectedRadios()) {
     letsCookBtn.disabled = true;
+    letsCookBtn.classList.remove('button:hover');
   }
 }
 

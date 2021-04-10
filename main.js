@@ -8,8 +8,8 @@ var dessertArray = ["Cookies", "Ice Cream", "Apple Pie", "Carrot Cake", "Banana 
 
 // buttons
 
-var clearButton = document.querySelector(".clear-button")
 var letsCookButton = document.querySelector(".letscook")
+var clearButton = document.querySelector(".clear-button")
 
 // right box
 
@@ -84,15 +84,15 @@ function clear() {
 //   recipe.innerText = getRandomDessert() + "!"
 // }
 
-// function alert() {
-//   alert("Please select an option!");
-// }
+function showAlert() {
+  alert("Please select an option!");
+}
 
 function letsCook() {
   cookpot.classList.add("hidden");
   eatThis.classList.remove("hidden");
   clearButton.classList.remove("hidden");
-  preventDefault();
+  // preventDefault();
   if (circleSide.checked === true) {
     recipe.classList.remove("hidden");
     entireMeal.classList.add("hidden");
@@ -109,7 +109,10 @@ function letsCook() {
     entireMeal.classList.remove("hidden");
     recipe.innerText = getRandomEntireMeal()
   }
-  //  else {
-  //   alert();
-  // }
+   else {
+    cookpot.classList.remove("hidden");
+    eatThis.classList.add("hidden");
+    clearButton.classList.add("hidden");
+    showAlert();
+  }
 }

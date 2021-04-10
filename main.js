@@ -121,7 +121,7 @@ function disableUnchecked() {
 function changeCookpotVisibility() {
     rightSide.innerHTML =
     `
-    <img src="assets/cookpot.svg" alt="Cookpot icon" class="cook-pot" id="cookpot">
+    <img src="assets/cookpot.svg" alt="Cookpot icon" class="cook-pot" id="cookpot" width="147.7" height="269.11">
     `
 }
 

@@ -2,9 +2,33 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
   <body>
-
+    <nav>
+        <h1>What's for Dinner?</h1>
+        <button id="add-recipe">ADD A RECIPE</button>
+      </nav>
+      <main>
+        <div class="container">
+          <h2 class="input-title">What are you looking for?*</h2>
+            <div class="dinner-choices">
+              <input type="radio" id="side" name="choice" value="side">Side
+              <input type="radio" id="main-dish" name="choice" value="main-dish" >Main Dish
+              <input type="radio" id="dessert" name="choice" value="dessert" >Dessert
+              <input type="radio" id="entire-meal" name="choice" value="entire-meal" >Entire Meal
+          </div>
+          <button>LET'S COOK</button>
+        </div>
+        <div class="container">
+          <img class="pot-icon" src="assets/cookpot.svg" alt="pot icon" />
+          <!-- <p class="output-saying hidden">You should make:</p>
+          <p class="recipe-name hidden"></p> -->
+          <div class="clear-button">
+            <button>CLEAR</button>
+          </div>
+        </div>
+      </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

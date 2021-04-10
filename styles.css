@@ -2,6 +2,7 @@
   --teal: #0fb9b1;
   --grey: #95a5a6;
   --red: #ee5253;
+  --white: #ffffff;
   --frosted: rgba(225, 225, 225, .9);
 }
 
@@ -21,6 +22,8 @@ body {
   height: 100%;
 }
 
+/* Header */
+
 header {
   height: 5vh;
   background: var(--teal);
@@ -34,15 +37,15 @@ h1 {
   font-size: 1.5rem;
 }
 
-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
+/* Main */
 
 section {
   flex-wrap: wrap;
-  /* justify-content: space-around; */
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 article {
@@ -52,21 +55,10 @@ article {
   background: var(--frosted);
 }
 
-button, .btn {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: .4rem;
-  border: none;
+h3 {
+  font-size: 1.4rem;
+  font-style: italic;
 }
-
-.add-recipe-button {  
-  width: 7rem;
-  height: 1.8rem;
-  align-self:center;
-  margin-right: 1.2rem;
-}
-
 
 .meal-container {
   flex-direction: column;
@@ -82,14 +74,8 @@ button, .btn {
   flex-direction: column;
 }
 
-
 .pot {
   width: 6rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-  font-style: italic;
 }
 
 .dish {
@@ -98,17 +84,7 @@ h3 {
   font-size: 1.8rem;
 }
 
-.cook-btn {
-  height: 2.2rem;
-  width: 10rem;
-  margin-top: 1rem;
-  background: var(--teal);
-}
-
-.flex,
-.button {
-  display: flex;
-}
+/* Miscellaneous */
 
 input[type="radio"]  {
 margin: 1rem .2rem ;
@@ -120,9 +96,56 @@ margin: 1rem .2rem ;
   bottom: 10px;
 }
 
+/* Utility */
+
+.flex,
+.button
+{
+  display: flex;
+}
+
 .hidden {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
 }
 
+/* Button */
+
+button,
+.btn {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: .4rem;
+  border: none;
+}
+
+.grey-btn {
+  position:absolute;
+  align-self:flex-end;
+  margin: 16rem 2rem 0 0;
+  font-size: 1.2rem;
+  height: 3.2rem;
+  width: 6rem;
+  background: var(--grey);
+  color: var(--white)
+}
+
+.cyan-btn {
+  height: 2.2rem;
+  width: 10rem;
+  margin-top: 1rem;
+  background: var(--teal);
+}
+
+.light-btn{  
+  width: 7rem;
+  height: 1.8rem;
+  align-self:center;
+  margin-right: 1.2rem;
+}
+
+.clear-btn {
+  justify-self: flex-end;
+}

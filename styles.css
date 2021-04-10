@@ -84,7 +84,7 @@ body {
   font-weight: bold;
   margin-left: 100px;
   margin-top: 700px;
-  line-height: 2;
+  line-height: 0.25;
 }
 
 .eatthis {
@@ -99,12 +99,12 @@ body {
 
 .recipe {
   font-style: bold;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
   margin-top: 1px;
   margin-bottom: 60px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 85px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -132,7 +132,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   color: white;
-  padding: 2px;
+  padding-top: 2px;
   width: 80px;
   float: right;
   /* height: 40px; */

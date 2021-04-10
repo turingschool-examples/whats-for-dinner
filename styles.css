@@ -7,6 +7,33 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-.background {
-  z-index: -1
+.box1 {
+  width: 50%;
+  height: 500px;
+  background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box2 {
+  width: 50%;
+  height: 500px;
+  background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.cookPot {
+  width: 100px;
 }

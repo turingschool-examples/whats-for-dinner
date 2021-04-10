@@ -15,26 +15,26 @@
         <h3 class="question">What are you looking for?<span class="astrix" id="astrix">*</span></h3>
         <!-- <br> -->
       <div class="input-label" id="input-label">
-        <input type="radio" name="course" value="side"/>
+        <input type="radio" id="side" name="course" value="side"/>
         <label for="side" id="side">Side</label>
       </div>
       <div class="input-label" id="input-label">
-        <input type="radio" name="course" value="main-dish" />
+        <input type="radio" id="main-dish" name="course" value="main-dish" />
         <label for="main" id="main-dish">Main dish</label>
       </div>
       <div class="input-label" id="input-label">
-          <input type="radio" name="course" value="dessert" />
+          <input type="radio" id="dessert" name="course" value="dessert" />
           <label for="dessert" id="dessert">Dessert</label>
       </div>
       <div class="input-label" id="input-label">
-          <input type ="radio" name="course" value="entire-meal" />
+          <input type ="radio" id="entire-meal" name="course" value="entire-meal" />
           <label for="entire-meal" id="entire-meal">Entire Meal</label>
       </div>
           <button class="lets-cook" id="lets-cook">Let's Cook! </button>
       </form>
       <form class="return-box" id="return-box">
           <h3 class="you-should-make hidden" id ="you-should-make hidden">You should make:</h3>
-          <p class="dish-options" id="dish-options"></p>
+          <p class="dish-options hidden" id="dish-options hidden"></p>
           <img src="./assets/cookpot.svg" class="cookpot" alt="Image of large pot">
           <button class="clear-button hidden" id="clear-button hidden">CLEAR</button>
       </form>

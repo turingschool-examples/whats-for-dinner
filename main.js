@@ -19,12 +19,13 @@ letsCookButton.addEventListener("click", letsCook)
 
 ///////// FUNCTIONS /////////
 
-// random
+// randomizer
+
 function getRandomIndex(array) {
   return Math.floor(Math.random()*array.length);
 };
 
-// specific fish arrays
+// specific recipe arrays
 
 function getRandomSide() {
 	var randomSideIndex = getRandomIndex(sidesArray);
@@ -55,13 +56,10 @@ function letsCook() {
   recipe.classList.remove("hidden");
   preventDefault();
   if (circleSide.checked === true) {
-    // getRandomSide()
-    return "recipe test";
+    recipe.innerText = getRandomSide()
   } else if (circleMain.checked === true) {
-    // getRandomMain()
+    getRandomMain()
   } else if (circleDessert.checked === true) {
-    // getRandomDessert()
+    getRandomDessert()
   }
 }
-
-letsCookButton.addEventListener("click", letsCook)

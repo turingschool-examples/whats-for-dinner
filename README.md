@@ -28,6 +28,11 @@ When the home view loads, one is asked "What are you looking for?" The person ca
 
 One can click "LET'S COOK!" again to cycle through different options, and one can clear the right dish display box by clicking "CLEAR".
 
+## Screenshots
+
+[Home Page](https://i.imgur.com/sXt1fI8.png)
+[Main Dish Example](https://i.imgur.com/ccKkpfU.png)
+
 ## Future additions
 
 Present a Entire Meal option that will combine a random side, main dish, and dessert

@@ -6,15 +6,26 @@ var dessertArray = ["Cookies", "Ice Cream", "Apple Pie", "Carrot Cake", "Banana 
 
 ///////// QUERY SELECTORS /////////
 
-var letsCookButton = document.querySelector(".letscook")
-var transparentBoxRight = document.querySelector(".transparent-box-right")
+// buttons
 
-var recipe = document.querySelector(".recipe")
-var eatThis = document.querySelector(".eatthis")
-var cookpot = document.querySelector(".cookpot")
-var hidden = document.querySelector("hidden")
 var clearButton = document.querySelector(".clear-button")
+var letsCookButton = document.querySelector(".letscook")
+
+// right box
+
+var transparentBoxRight = document.querySelector(".transparent-box-right")
+var hidden = document.querySelector("hidden")
+var cookpot = document.querySelector(".cookpot")
+var eatThis = document.querySelector(".eatthis")
+var recipe = document.querySelector(".recipe")
 var entireMeal = document.querySelector(".entire-meal")
+
+///////// ELEMENTS BY ID /////////
+
+var circleSide = document.getElementById("circle-side");
+var circleMain = document.getElementById("circle-main");
+var circleDessert = document.getElementById("circle-dessert");
+var circleEntireMeal = document.getElementById("circle-entire-meal");
 
 ///////// EVENT LISTENERS /////////
 
@@ -47,9 +58,10 @@ function getRandomDessert() {
 }
 
 function andSign() {
-  return "    &    "
+  return " & "
 }
 function getRandomEntireMeal() {
+  entireMeal.classList.remove("hidden");
   return getRandomSide() + andSign() + getRandomMain() + andSign() + getRandomDessert()
 }
 
@@ -77,22 +89,24 @@ function clear() {
 // }
 
 function letsCook() {
-  var circleSide = document.getElementById("circle-side");
-  var circleMain = document.getElementById("circle-main");
-  var circleDessert = document.getElementById("circle-dessert");
-  var circleEntireMeal = document.getElementById("circle-entire-meal");
   cookpot.classList.add("hidden");
-  recipe.classList.remove("hidden");
   eatThis.classList.remove("hidden");
   clearButton.classList.remove("hidden");
   preventDefault();
   if (circleSide.checked === true) {
+    recipe.classList.remove("hidden");
+    entireMeal.classList.add("hidden");
     recipe.innerText = getRandomSide() + "!"
   } else if (circleMain.checked === true) {
+    recipe.classList.remove("hidden");
+    entireMeal.classList.add("hidden");
     recipe.innerText = getRandomMain() + "!"
   } else if (circleDessert.checked === true) {
+    recipe.classList.remove("hidden");
+    entireMeal.classList.add("hidden");
     recipe.innerText = getRandomDessert() + "!"
   } else if (circleEntireMeal.checked === true) {
+    entireMeal.classList.remove("hidden");
     recipe.innerText = getRandomEntireMeal()
   }
   //  else {

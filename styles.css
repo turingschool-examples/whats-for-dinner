@@ -102,9 +102,9 @@ body {
   font-size: 45px;
   text-align: center;
   margin-top: 1px;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
   padding-top: 10px;
-  padding-bottom: 85px;
+  padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -140,6 +140,10 @@ body {
   margin-top: 5px;
   margin-bottom: 5px;
   vertical-align: middle
+}
+
+.entire-meal {
+  font-size: 16px;
 }
 
 /* COLORS

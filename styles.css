@@ -37,11 +37,6 @@ button {
   padding: 5px;
 }
 
-button:hover {
-  background-color: black;
-  color: #0fb9b1;
-}
-
 p {
   font-size: 25px;
 }
@@ -59,12 +54,14 @@ p {
 }
 
 .clear {
-  width: 150px;
+  width: 75px;
+  padding: 10px 10px;
   border-radius: 5px;
   font-size: 16px;
   color: white;
   background-color: #95a5a6;
   position: absolute;
+  margin-left: 25%;
 }
 
 .clear:hover {
@@ -75,6 +72,7 @@ p {
 
 .add-recipe {
   margin: 15px;
+  opacity: 55%;
 }
 
 .recipe-head {
@@ -84,12 +82,9 @@ p {
 
 .burgers {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var("assets/burger-friends.jpg");
-  background-size: auto;
   background-position: absolute;
-  height: 60%;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .main-page {
@@ -109,12 +104,16 @@ p {
   color: red;
 }
 
+.inactive {
+  opacity: 55%;
+}
+
 .lets-cook {
   margin-top: 15px;
   background-color: #0fb9b1;
   border: none;
   border-radius: 7px;
-  font-size: 16px;
+  font-size: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: black;
@@ -130,7 +129,7 @@ p {
 }
 
 .left-side {
-  margin-left: 6%;
+  margin-left: 5%;
   align-items: flex-start;
   justify-content: space-between;
   padding-left: 45px;
@@ -138,7 +137,7 @@ p {
 }
 
 .right-side {
-  margin-left: 55%;
+  margin-left: 54%;
   align-items: center;
   text-align: center;
   padding-top: 35px;
@@ -150,8 +149,8 @@ p {
   flex-direction: column;
   position: absolute;
   background-color: rgba(225, 225, 225, .9);
-  opacity: 95%;
-  width: 39%;
+  opacity: 90%;
+  width: 40%;
   height: 65%;
   padding-bottom: 35px;
   font-size: 20px;

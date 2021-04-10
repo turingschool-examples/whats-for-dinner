@@ -7,4 +7,32 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+}
+html {
+  font-family: ‘Roboto’, sans-serif;
+  background: url(/Users/williammcguire/whats-for-dinner/assets/burger-friends.jpg) no-repeat center center fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+header {
+  background-color: #0FB9B1;
+  width: 100%;
+  height: 5%;
+  font-size: small;
+  vertical-align: middle;
+}
+.user-select {
+  background: rgba(225, 225, 225, .9);
+  width: 450px;
+  height: 300px;
+  margin: 50px;
+  border: 75px ;
+  padding: 50px;
+  /* position: right; */

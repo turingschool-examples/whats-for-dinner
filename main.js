@@ -41,26 +41,36 @@ function selectRandomDish() {
   var sideDish;
   var mainDish;
   var dessertDish;
+  var entireMeal;
   if (sideRadio.checked) {
     preventDefault();
     hideCookpot();
     displayCookpotCard();
     sideDish = randomIndex(sides);
-    cookpotCard.innerHTML = `<h4 class="">You should make:</h4>
+    cookpotCard.innerHTML = `<h4>You should make:</h4>
           <h1>${sideDish}</h1>`
   } else if (mainRadio.checked) {
     preventDefault();
     hideCookpot();
     displayCookpotCard();
     mainDish = randomIndex(mains);
-    cookpotCard.innerHTML = `<h4 class="">You should make:</h4>
+    cookpotCard.innerHTML = `<h4>You should make:</h4>
           <h1>${mainDish}</h1>`
   } else if (dessertRadio.checked) {
     preventDefault();
     hideCookpot();
     displayCookpotCard();
     dessertDish = randomIndex(desserts);
-    cookpotCard.innerHTML = `<h4 class="">You should make:</h4>
+    cookpotCard.innerHTML = `<h4>You should make:</h4>
           <h1>${dessertDish}</h1>`
-    }
-  } 
+  } else if (entireMealRadio.checked) {
+    preventDefault();
+    hideCookpot();
+    displayCookpotCard();
+    sideDish = randomIndex(sides);
+    mainDish = randomIndex(mains);
+    dessertDish = randomIndex(desserts);
+    cookpotCard.innerHTML = `<h4>You should make:</h4>
+          <h1>${mainDish} with a side of ${sideDish} and ${dessertDish} for dessert!</h1>`
+  }
+}

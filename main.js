@@ -56,7 +56,7 @@ function letsCook() {
   recipe.classList.remove("hidden");
   preventDefault();
   if (circleSide.checked === true) {
-    recipe.innerText = getRandomSide()
+    recipe.innerText = recipe.innerText = recipe.innerText = "You should make this recipe: " + getRandomMain()
   } else if (circleMain.checked === true) {
     recipe.innerText = getRandomMain()
   } else if (circleDessert.checked === true) {

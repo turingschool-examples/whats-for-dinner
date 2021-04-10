@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html>
 
+<!-- INFO -->
+
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./styles.css">
-    <!-- <script src="main.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>What's for Dinner?</title>
   </head>
 
   <body>
+
+<!-- HEADER -->
+
     <h1>What's for Dinner?</h1>
 
-    <div class="column">
+    <section class="column">
+
+<!-- LEFT BOX -->
+
       <div class="transparent-box-left">
-        <div class="looking-for">
-          <p>What are you looking for?*</p>
 
-
-
-        </div>
-        <div style=“float: left”>
-          <input name="circles" type="radio" id = "circle-side" >
-          <label for="side">Side</label>
-        </div>
-
-
-        <div style=“float: left”>
-          <input name="circles" type="radio" id = "circle-main">
-          <label for="main-dish">Main Dish</label>
-        </div>
-
-
-        <div style=“float: left”>
-          <input name= "circles" type="radio" id = "circle-dessert">
-          <label for="dessert">Dessert</label>
-        </div>
-
-
-
-        <button onclick="letscook" class="letscook">LET'S COOK!</button>
-      </div>
-      <div class="transparent-box-right">
-        <img src="assets/cookpot.svg" alt="cookpot" class="cookpot" style="width:125px">
-
-        <section class="view eatthis hidden">
-          <section class="eatthis">You should make:</section>
+        <section class="looking-for">
+          <p>What are you looking for?<span class="required">*</span></p>
         </section>
 
-        <section class="view recipe hidden">
-          <section class="recipe"></section>
-        </section></section>
+<!-- circles -->
+
+        <section style=“float: left”>
+          <input name="circles" type="radio" id="circle-side"> Side</input>
+        </section>
+
+        <section style=“float: left”>
+          <input name="circles" type="radio" id = "circle-main"> Main Dish</input>
+        </section>
+
+        <section style=“float: left”>
+          <input name= "circles" type="radio" id = "circle-dessert"> Dessert</section>
+
+<!-- cook button -->
+
+        <button onclick="letscook" class="letscook">LET'S COOK!</button>
+
+      </div>
+
+<!-- RIGHT BOX -->
+
+      <div class="transparent-box-right">
+
+<!-- recipe display area -->
+
+        <img src="assets/cookpot.svg" alt="cookpot" class="cookpot" style="width:125px">
+        <section class="view eatthis hidden">You should make:</section>
+        <section class="view recipe hidden"></section>
+
+<!-- clear button -->
 
         <section class="view clear-button hidden">
           <button onclick="clear-button" class="clear-button">CLEAR</button>
         </section>
 
-      </div>
-    </div>
+<!-- CLOSING TAGS -->
 
+      </div>
+    </section>
   </body>
-      <script src="main.js"></script>
+  <script src="main.js"></script>
 </html>

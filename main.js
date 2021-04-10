@@ -63,15 +63,17 @@ function preventDefault() {
   event.preventDefault()
 }
 
+function showAlert() {
+  alert("Please select an option!");
+}
+
+// buttons
+
 function clear() {
   cookpot.classList.remove("hidden");
   recipe.classList.add("hidden");
   eatThis.classList.add("hidden");
   clearButton.classList.add("hidden");
-}
-
-function showAlert() {
-  alert("Please select an option!");
 }
 
 function letsCook() {

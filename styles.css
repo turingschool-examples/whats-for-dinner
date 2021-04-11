@@ -32,15 +32,18 @@ header {
 }
 
 h1 {
-  align-self:center;
+  /* align-self:center; */
   margin: 1.3rem;
   font-size: 1.5rem;
+  margin-right: 3rem;
+  flex: 1;
 }
 
-h2,
+header h2,
 #user {
-  align-self:center;
+  align-self: center;
   font-size: 2rem;
+  margin-right: 1.8rem;
 }
 
 /* Main */
@@ -134,12 +137,6 @@ button,
 }
 
 .grey-btn {
-  position: absolute;
-  align-self: flex-end;
-  margin: 16rem 2rem 0 0;
-  font-size: 1.2rem;
-  height: 3.2rem;
-  width: 6rem;
   background: var(--grey);
   color: var(--white)
 }
@@ -154,11 +151,25 @@ button,
   width: 7rem;
   height: 1.8rem;
   align-self: center;
+}
+
+.view-favorites-btn {
+  width: 8rem;
+  margin: 0 1.2rem 0 30rem
+}
+
+.recipe-btn {
   margin-right: 1.2rem;
+  margin-left: 2rem;
 }
 
 .clear-btn {
-  justify-self: flex-end;
+  position: absolute;
+  align-self: flex-end;
+  margin: 16rem 2rem 0 0;
+  font-size: 1.2rem;
+  height: 3.2rem;
+  width: 6rem;
 }
 
 .cook-btn {
@@ -178,6 +189,27 @@ button,
   margin-top: 2rem;
 }
 
+#favorite-btn {
+  color: var(--teal);
+  position: absolute;
+  align-self: flex-start;
+  margin: 16.5rem 0 0 2rem;
+  transition: color 700ms;
+}
+
+#favorite-btn:hover {
+  color: var(--white);
+  transition: 700ms;
+}
+
+#favorite-btn:visited {
+  color: blue;
+}
+
+.home-btn {
+  margin-right: 1.8rem;
+}
+
 /* Footer */
 
 footer {
@@ -195,9 +227,9 @@ footer {
   margin-left: .2rem;
 }
 
-div {
+/* div {
   margin-left: 1rem;
-}
+} */
 
 /* login */
 
@@ -209,10 +241,33 @@ div {
   font-size: 2rem;
 }
 
-
-
 #login-container h2 {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 4rem;
 }
+
+.favorites-container {
+
+  justify-content: space-around;
+  align-items: center;
+  margin: auto auto;
+  flex-wrap: wrap;
+}
+
+.mini-container {
+width: 15rem;
+height: 15rem;
+margin: .5rem .5rem;
+background-color: var(--frosted);
+align-items: center;
+text-align: center;
+padding: .2rem;
+}
+
+.faved {
+  font-size: 1.8rem;
+}
+
+
+

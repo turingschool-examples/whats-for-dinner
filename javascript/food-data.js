@@ -48,3 +48,4 @@ var desserts = [
 'Eclairs',
 ]
  
+var favoritedRecipes = []

@@ -9,6 +9,7 @@ var side = document.querySelector('.side')
 var mainDish = document.querySelector('.main-dish')
 var dessert = document.querySelector('.dessert')
 var entireMeal = document.querySelector('.entire-meal')
+ // Dish
 var suggestion = document.querySelector('h3')
 var clearBtn = document.querySelector('.clear-btn')
 var recipeBtn = document.querySelector('.recipe-btn')
@@ -26,6 +27,12 @@ var user = document.querySelector('#user')
 var username = document.querySelector('#username')
 var welcomeMsg = document.querySelector('#welcome')
 var favoriteBtn = document.querySelector('#favorite-btn')
+var viewFavoriteBtn = document.querySelector('.view-favorites-btn')
+var recipeBox = document.querySelector('.favorites-container')
+var faved = document.querySelector('.faved')
+var miniContainer = document.querySelector('.mini-container')
+var favoritesContainer = document.querySelector('.favorites-container')
+var homeBtn = document.querySelector('.home-btn')
 
 // Event Listeners
 cookBtn.addEventListener('click', randomizeDish)
@@ -33,23 +40,29 @@ clearBtn.addEventListener('click', clearPage)
 recipeBtn.addEventListener('click', showFooter)
 createBtn.addEventListener('click', addRecipe)
 loginBtn.addEventListener('click', showEverything)
+favoriteBtn.addEventListener('click', favorite)
+viewFavoriteBtn.addEventListener('click',viewFavorites)
 
 
+//dish.innerText !== 'Pick a dish!'
 // Event Handerlers
 function randomizeDish(e) {
  e.preventDefault()
-if (dish.innerText !== 'Pick a dish!') {
-show(clearBtn)
-show(suggestion)
-}
-show(favoriteBtn)
+if (!sides.checked && !mainDish.checked && !dessert.checked && !entireMeal.checked) {
+  hide(potLogo)
+  show(dish)
+} else {
 hide(potLogo)
 show(dish)
+show(clearBtn)
+show(favoriteBtn)
+show(suggestion)
 return side.checked ? dish.innerText = randomizeIndex(sides)
  : mainDish.checked ? dish.innerText = randomizeIndex(mains)
  : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
  : entireMeal.checked ? dish.innerText = `${randomizeIndex(sides)} with a side of ${randomizeIndex(mains)} and ${randomizeIndex(desserts)} for dessert!` 
  : console.log('No Radio Selected')
+  } 
 }
 
 
@@ -112,8 +125,27 @@ function showEverything(e) {
     hide(loginContainer)
     user.innerText = username.value
     show(welcomeMsg) 
+    show(viewFavoriteBtn)
   // }
 // loginBtn.value = "Put your name in the form please, please!"
- 
+}
 
+function favorite() {
+  favoritedRecipes.push(dish.innerText)
+  favoritesContainer.innerHTML += `<div class="mini-container flex">
+  <p class="faved">${dish.innerText}</p>
+</div>`
+}
+
+function viewFavorites() {
+  hide(mealContainer)
+  hide(recipeContainer)
+  hide(viewFavoriteBtn)
+  hide(recipeBtn)
+  hide(cookBtn)
+  hide(potLogo)
+  hide(footer)
+  show(recipeBox)
+  show(homeBtn)
+  welcomeMsg.innerText = 'Favorites'
 }

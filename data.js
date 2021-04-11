@@ -1,7 +1,7 @@
 var sides = ['Miso Glazed Carrots',
 'Coleslaw',
 'Garden Salad',
-'Crispy Potatoes'
+'Crispy Potatoes',
 'Sweet Potato Tots',
 'Coconut Rice',
 'Caeser Salad',

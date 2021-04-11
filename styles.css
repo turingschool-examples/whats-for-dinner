@@ -10,12 +10,23 @@ red - #ee5253
 
 body {
   margin: 0;
+  background-image: url(./assets/burger-friends.jpg);
+  background-size: cover;
 }
+h2 span {
+  color: #ee5253;
+}
+
+.box1 div {
+  display: flex;
+  font-size: 16px;
+  margin: 20 0;
+}
+
 .header {
   padding: 5px;
   background-color: #0fb9b1;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 525;
 }
 
 .hidden {
@@ -27,31 +38,34 @@ body {
   margin: 40px auto 0 auto;
   display: flex;
   justify-content: space-between;
+  gap: 200px;
 }
 
 .box1 {
   padding: 40px;
   box-sizing: border-box;
   margin-bottom: 20px;
-  display: flex;
+  /* margin-right: 50px; */
+  /* display: flex; */
+  flex: 1;
   flex-basis: 45%;
-  height: 500px;
   background-color: rgba(225, 225, 225, .9);
   flex-wrap: wrap;
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 525;
+  font-size: 25px;
 }
 
 .box2 {
   padding: 40px;
   box-sizing: border-box;
   margin-bottom: 20px;
-  display: flex;
+  /* display: flex; */
+  /* margin-left: 50px; */
+  flex: 1;
   flex-wrap: wrap;
   flex-direction: column;
   flex-basis: 45%;
-  height: 500px;
   background-color: rgba(225, 225, 225, .9);
   float: right;
   align-content: center;
@@ -69,10 +83,6 @@ body {
   font-weight: 525;
 }
 
-/* .label {
-
-} */
-
 .cookPot {
   width: 200px;
 }
@@ -81,6 +91,7 @@ body {
   float: right;
   height: 30px;
   border-radius: 5px;
+  border: none;
 }
 
 #clearBtn {
@@ -89,24 +100,28 @@ body {
   border-radius: 5px;
   background-color: #95a5a6;
   color: rgba(225, 225, 225, .9);
+  border: none;
 }
 
 .letsCookBtn {
-  width: 150px;
-  height: 30px;
+  padding: 0 60px;
+  line-height: 2.5;
   background-color: #0fb9b1;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
-  /* font-weight: bold; */
+  border: none;
 }
+
 .letsCookBtn:hover {
   background-color: Teal;
   color: rgba(225, 225, 225, .9);
 }
+
 #clearBtn:hover {
   background-color: Grey;
   color: Black;
 }
+
 .addRecipeBtn:hover {
   background-color: rgba(225, 225, 225, .9);
   color: White;

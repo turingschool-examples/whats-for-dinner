@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
   <title>Whats For Dinner</title>
 </head>
 
@@ -15,15 +20,12 @@
 
   <header class="flex">
     <h1>What's for Dinner?</h1>
+    <h2 id="welcome" class="hidden">Welcome, <span id="user">username</span>!</h2>
     <button class="light-btn recipe-btn hidden">ADD A RECIPE</button>
   </header>
-  <div class="lander">
-  </div>
 
   <section class="flex">
-
-
-    <article class="meal-container flex hidden">
+    <article id="meal-container" class="flex hidden">
       <h2>What are you looking for? <span class="asterisk">*</span></h2>
       <form>
         <input type="radio" class="side" name="choices" value="side">
@@ -38,19 +40,21 @@
       </form>
     </article>
     <article id="big" class="recipe-container flex">
-      <div class="login-form">
-        <h2>Welcome in!</h2>
-        <input type="text" ID="username" name="user-form">
-      </div>
-      <div>
+      <!-- login -->
+      <div id="login-container">
+        <h2>Welcome!</h2>
+        <input type="text" ID="username" name="user-form" placeholder="Name here, please!"> <br>
         <input id="login-btn" class="btn cyan-btn" type="submit" value="LOGIN">
       </div>
+      <!-- recipe container -->
       <img src="./assets/cookpot.svg" alt="cook pot" class="pot hidden">
       <h3 class="hidden">You should make:</h3>
       <h2 class="dish hidden">Pick a dish!</h2>
-      <button class="btn dark-btn hidden clear-btn">CLEAR</button>
+      <button class="btn grey-btn hidden clear-btn">CLEAR</button>
+      <i id="favorite-btn" class="fas fa-hamburger fa-4x hidden"></i>
     </article>
   </section>
+  <!-- footer -->
   <footer class="hidden flex">
     <div>
       <label for="recipe-name">Recipe Name:</label>
@@ -58,7 +62,7 @@
     </div>
     <div>
       <label for="recipe-type">Recipe Type:</label>
-      <input type="text" ID="recipe-type" name="recipe-form" required>
+      <input type="text" ID="recipe-type" name="recipe-form" placeholder="Side, Main Dish, Dessert, or Entire Meal" required>
     </div>
     <input id="add-btn" class="btn cyan-btn" type="submit" value="ADD NEW">
   </footer>

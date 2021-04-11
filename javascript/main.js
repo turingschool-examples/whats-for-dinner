@@ -25,6 +25,7 @@ var loginContainer = document.querySelector('#login-container')
 var user = document.querySelector('#user')
 var username = document.querySelector('#username')
 var welcomeMsg = document.querySelector('#welcome')
+var favoriteBtn = document.querySelector('favorite-btn')
 
 // Event Listeners
 cookBtn.addEventListener('click', randomizeDish)
@@ -36,13 +37,14 @@ loginBtn.addEventListener('click', showEverything)
 
 // Event Handerlers
 function randomizeDish(e) {
+ e.preventDefault()
 if (dish.innerText !== 'Pick a dish!') {
 show(clearBtn)
 show(suggestion)
 }
+show(favoriteBtn)
 hide(potLogo)
 show(dish)
-e.preventDefault()
 
 
 return side.checked ? dish.innerText = randomizeIndex(sides)
@@ -50,7 +52,6 @@ return side.checked ? dish.innerText = randomizeIndex(sides)
  : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
  : entireMeal.checked ? dish.innerText = `${randomizeIndex(sides)} with a side of ${randomizeIndex(mains)} and ${randomizeIndex(desserts)} for dessert!` 
  : console.log('No Radio Selected')
- 
 }
 
 
@@ -71,6 +72,7 @@ function clearPage() {
   show(potLogo)
   hide(clearBtn)
   hide(suggestion)
+  hide(favoriteBtn)
   hide(dish)
   }
 }
@@ -80,7 +82,6 @@ function addRecipe(e) {
     recipeName.value = "Please fill this out"
   }
   e.preventDefault()
-  console.lg
   if (recipeType.value.toLowerCase() === "side" ||
       recipeType.value.toLowerCase() === "main dish" ||
       recipeType.value.toLowerCase() === "dessert" ||
@@ -91,18 +92,19 @@ function addRecipe(e) {
     show(clearBtn)
     show(suggestion)
     show(dish)
+    show(favoriteBtn)
     dish.innerText = recipeName.value
   }
-   recipeType.value = "Side, Main Dish, Dessert, or Entire Meal"
+  //  recipeType.value = "Side, Main Dish, Dessert, or Entire Meal"
 }
 
 function showFooter() {
-  show(footer)
+  show(footer)gi
 }
 
 function showEverything(e) {
   e.preventDefault()
-  if(username.value) {
+  // if(username.value) {
     recipeContainer.removeAttribute('id')
     show(mealContainer)
     show(recipeContainer)
@@ -112,8 +114,8 @@ function showEverything(e) {
     hide(loginContainer)
     user.innerText = username.value
     show(welcomeMsg) 
-  }
-loginBtn.value = "Put your name in the form please, please!"
+  // }
+// loginBtn.value = "Put your name in the form please, please!"
  
 
 }

@@ -11,12 +11,19 @@
 </head>
 
 <body>
+
+
   <header class="flex">
     <h1>What's for Dinner?</h1>
-    <button class="light-btn">ADD A RECIPE</button>
+    <button class="light-btn recipe-btn hidden">ADD A RECIPE</button>
   </header>
+  <div class="lander">
+  </div>
+
   <section class="flex">
-    <article class="meal-container flex">
+
+
+    <article class="meal-container flex hidden">
       <h2>What are you looking for? <span class="asterisk">*</span></h2>
       <form>
         <input type="radio" class="side" name="choices" value="side">
@@ -30,14 +37,36 @@
         <input class="btn cyan-btn cook-btn" type="submit" value="LET'S COOK!">
       </form>
     </article>
-    <article class="recipe-container flex">
-      <img src="./assets/cookpot.svg" alt="cook pot" class="pot">
+    <article id="big" class="recipe-container flex">
+      <div class="login-form">
+        <h2>Welcome in!</h2>
+        <input type="text" ID="username" name="user-form">
+      </div>
+      <div>
+        <input id="login-btn" class="btn cyan-btn" type="submit" value="LOGIN">
+      </div>
+      <img src="./assets/cookpot.svg" alt="cook pot" class="pot hidden">
       <h3 class="hidden">You should make:</h3>
       <h2 class="dish hidden">Pick a dish!</h2>
       <button class="btn dark-btn hidden clear-btn">CLEAR</button>
     </article>
-    <script type="text/javascript" src="./javascript/food-data.js"></script>
-    <script type="text/javascript" src="./javascript/main.js"></script>
+  </section>
+  <footer class="hidden flex">
+    <div>
+      <label for="recipe-name">Recipe Name:</label>
+      <input type="text" ID="recipe-name" name="recipe-form" required>
+    </div>
+    <div>
+      <label for="recipe-type">Recipe Type:</label>
+      <input type="text" ID="recipe-type" name="recipe-form" required>
+    </div>
+    <input id="add-btn" class="btn cyan-btn" type="submit" value="ADD NEW">
+  </footer>
 </body>
+
+
+
+<script type="text/javascript" src="./javascript/food-data.js"></script>
+<script type="text/javascript" src="./javascript/main.js"></script>
 
 </html>

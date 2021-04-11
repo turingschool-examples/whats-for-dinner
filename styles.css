@@ -18,14 +18,15 @@ body {
   box-sizing: border-box;
   background: url('./assets/burger-friends.jpg') no-repeat fixed;
   background-size: cover;
-  width: 100%;
   height: 100%;
+  flex-direction: column;
+  display: flex;
 }
 
 /* Header */
 
 header {
-  height: 5vh;
+  min-height: 5vh;
   background: var(--teal);
   justify-content: space-between;
 }
@@ -40,6 +41,7 @@ h1 {
 /* Main */
 
 section {
+  min-height: 80vh;
   flex-wrap: wrap;
 }
 
@@ -110,6 +112,11 @@ margin: 1rem .2rem ;
   left: -9999px !important;
 }
 
+#big {
+  min-width: 80rem;
+  min-height: 60rem;
+}
+
 /* Button */
 
 button,
@@ -122,8 +129,8 @@ button,
 }
 
 .grey-btn {
-  position:absolute;
-  align-self:flex-end;
+  position: absolute;
+  align-self: flex-end;
   margin: 16rem 2rem 0 0;
   font-size: 1.2rem;
   height: 3.2rem;
@@ -135,17 +142,71 @@ button,
 .cyan-btn {
   height: 2.2rem;
   width: 10rem;
-  margin-top: 1rem;
   background: var(--teal);
 }
 
-.light-btn{  
+.light-btn {  
   width: 7rem;
   height: 1.8rem;
-  align-self:center;
+  align-self: center;
   margin-right: 1.2rem;
 }
 
 .clear-btn {
   justify-self: flex-end;
+}
+
+.cook-btn {
+  margin-top: 1rem;
+}
+
+#add-btn {
+  margin-left: 1rem;
+  width: 6rem;
+}
+
+#login-btn {
+  height:3rem;
+  width: 30rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+/* Footer */
+
+footer {
+  min-height: 5vh;
+  width: 100%;
+  align-self: flex-end;
+  background: var(--frosted);
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.recipe-name,
+.recipe-type {
+  height: 2rem;
+  margin-left: .2rem;
+}
+
+div {
+  margin-left: 1rem;
+}
+
+/* login */
+
+#username {
+  width: 30rem;
+  height: 2rem;
+  border-radius: .4rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+
+.login-form h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
 }

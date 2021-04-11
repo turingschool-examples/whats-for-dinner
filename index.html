@@ -12,7 +12,7 @@
       <main>
         <section class="callouts">
         <div class="form-container">
-          <h2>What are you looking for?<span class="asterisk">*</span></h2>
+          <h2>What are you looking for?<span class="required">*</span></h2>
             <form>
               <label class="field">
                 <input type="radio" id="side" name="choice" value="side">Side
@@ -30,10 +30,14 @@
           <button class="teal-button" id="cook">LET'S COOK</button>
         </div>
         <div class="meal-container">
+          <div class="cookpot-only">
           <img class="cookpot" id="cookpot" src="assets/cookpot.svg" alt="Cook Pot">
-            <p class="make-title" id="make-title">You should make:</p>
+          </div>
+          <!-- <div class="meal-only"> -->
+            <p class="make-title" id="make-title" hidden>You should make:</p>
           <h3 class="meal-text" id="meal-text"></h3>
-          <div>
+          <!-- </div> -->
+          <div class="clear-button">
             <button class="gray-button" id="clear">CLEAR</button>
           </div>
         </div>
@@ -41,4 +45,5 @@
       </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
 </html>

@@ -25,7 +25,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.asterisk {
+.required {
   color: #ee5253;
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .teal-button {
-  background-color: rgba(15,185,177,.6);
+  background-color: rgba(15, 185, 177, .6);
   padding: 8px 50px;
   border: 1px solid #0fb9b1;
   border-radius: 4px;
@@ -54,6 +54,26 @@ body {
 .teal-button:hover {
   background-color: #0fb9b1;
   color: #fff;
+}
+
+.gray-button {
+  background-color: rgba(149, 165, 166, .8);
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.gray-button:hover {
+  background-color: #95a5a6;
+  color: #fff;
+}
+
+.clear-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .callouts {

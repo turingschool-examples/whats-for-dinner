@@ -65,6 +65,7 @@ function potView() {
   cookpotImg.classList.remove("hidden");
   shouldMake.classList.add("hidden");
   mealText.classList.add("hidden");
+  entireMealText.classList.add("hidden");
   clearBtn.classList.add("hidden");
 }
 

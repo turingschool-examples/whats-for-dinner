@@ -42,9 +42,13 @@ createBtn.addEventListener('click', addRecipe)
 loginBtn.addEventListener('click', showEverything)
 favoriteBtn.addEventListener('click', favorite)
 viewFavoriteBtn.addEventListener('click',viewFavorites)
+homeBtn.addEventListener('click', viewHome)
+favoritesContainer.addEventListener('dblclick', function(e) {
+  deleteRecipe(e)
+})
 
 
-//dish.innerText !== 'Pick a dish!'
+
 // Event Handerlers
 function randomizeDish(e) {
  e.preventDefault()
@@ -133,6 +137,7 @@ function showEverything(e) {
 function favorite() {
   favoritedRecipes.push(dish.innerText)
   favoritesContainer.innerHTML += `<div class="mini-container flex">
+  <i id="x-btn" class="x-btn fas fa-times fa-2x"></i>
   <p class="faved">${dish.innerText}</p>
 </div>`
 }
@@ -148,4 +153,22 @@ function viewFavorites() {
   show(recipeBox)
   show(homeBtn)
   welcomeMsg.innerText = 'Favorites'
+}
+
+function viewHome() {
+  show(mealContainer)
+  show(recipeContainer)
+  show(recipeBtn)
+  show(cookBtn)
+  show(potLogo)
+  show(welcomeMsg) 
+  show(viewFavoriteBtn)
+  hide(loginContainer)
+  hide(homeBtn)
+  hide(favoritesContainer)
+}
+
+function deleteRecipe(e) {
+  e.target.closest('div').remove()
+  console.log('hello')
 }

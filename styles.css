@@ -82,6 +82,7 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-width: 33rem;
 }
 
 .pot {
@@ -253,21 +254,33 @@ footer {
   align-items: center;
   margin: auto auto;
   flex-wrap: wrap;
+  padding: 5rem 5rem;
 }
 
 .mini-container {
 width: 15rem;
 height: 15rem;
-margin: .5rem .5rem;
+margin: 1rem 1rem;
 background-color: var(--frosted);
 align-items: center;
-text-align: center;
-padding: .2rem;
+justify-content: center;
 }
 
 .faved {
+  margin: .2rem .2rem;
   font-size: 1.8rem;
+  text-align: center;
 }
 
+#x-btn {
+  align-self: flex-start;
+  position: absolute;
+  margin-right: 13rem;
+  color: #333;
+  transition: color 700ms;
+}
 
-
+#x-btn:hover {
+  color: var(--white);
+  transition: 700ms;
+}

@@ -12,6 +12,11 @@ html, body {
   margin: 0 auto;
 }
 
+body {
+  background: url(assets/burger-friends.jpg) no-repeat top;
+  background-size: cover;
+}
+
 header {
   background-color: #0fb9b1;
   margin: 0 auto;
@@ -38,37 +43,56 @@ h2 {
   text-align: center;
 }
 
+
 #lets-cook-form {
   margin: 0 auto;
-  padding: 50px 100px 80px 40px;
+  padding: 20px 60px 20px 40px;
   background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  flex-direction: column;
   position: absolute;
   left: 12%;
   top: 20%;
-  z-index: 1;
+  z-index: 2;
+  box-sizing: border-box;
 }
 
-#cookpot {
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right-box {
   margin: 0 auto;
-  padding: 165px 195px;
+  padding: 20px 40px;
   background-color: rgba(225, 225, 225, .9);
-  position: absolute;
-  left: 55%;
+  width: 31%;
+  height: 49%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  position: relative;
+  left: 57%;
   top: 20%;
   z-index: 1;
+  box-sizing: border-box
 }
 
 .cookpot-img {
-  max-height: 40%;
+  max-height: auto;
   max-width: 50%;
-  padding: 110px 95px;
-  z-index: 2;
+  position: relative;
+  padding: 0;
+  left: 27%;
+  top: 15%;
+  z-index: 1;
 }
 
-.side-dish,
-.main-dish,
-.dessert,
-.entire-meal {
+#side,
+#main,
+#dessert,
+#entire-meal {
   margin: 15px 0;
   font-size: 16px;
 }
@@ -76,13 +100,13 @@ h2 {
 .lets-cook-btn {
   background-color: #0fb9b1;
   font-family: 'Roboto', sans-serif;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 6px 50px;
   border-radius: 5px;
   border: 1px solid #95a5a6;
-  position: absolute;
-  left: 13%;
-  top: 58%;
+  position: relative;
+  left: 0;
+  top: 0;
   z-index: 1;
 }
 
@@ -91,23 +115,28 @@ h2 {
   color: #0fb9b1;
 }
 
-.clear-btn {
-  background-color: rgba(225, 225, 225, .9);
-  font-family: 'Roboto', sans-serif;
-  margin: 20 10;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: 1px solid #95a5a6;
-  position: absolute;
-  left: 78%;
-  top: 55%;
-  z-index: 1;
-}
-
 .hidden {
   display: none;
 }
 
-.meal-suggestion {
-  font-size: 17px;
+.clear-btn {
+  background-color: rgba(225, 225, 225, .9);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #95a5a6;
+  position: absolute;
+  left: 70%;
+  top: 80%;
+  z-index: 2;
+}
+
+
+.meal-suggestion,
+.whole-meal {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
 }

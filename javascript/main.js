@@ -106,7 +106,6 @@ function showEverything(e) {
     recipeContainer.removeAttribute('id')
     show(mealContainer)
     show(recipeContainer)
-    show(dish)
     show(recipeBtn)
     show(cookBtn)
     show(potLogo)
@@ -114,7 +113,7 @@ function showEverything(e) {
     user.innerText = username.value
     show(welcomeMsg) 
   }
- username.value = "Your name here, please!"
+loginBtn.value = "Put your name in the form please, please!"
  
 
 }

@@ -25,7 +25,7 @@ var loginContainer = document.querySelector('#login-container')
 var user = document.querySelector('#user')
 var username = document.querySelector('#username')
 var welcomeMsg = document.querySelector('#welcome')
-var favoriteBtn = document.querySelector('favorite-btn')
+var favoriteBtn = document.querySelector('#favorite-btn')
 
 // Event Listeners
 cookBtn.addEventListener('click', randomizeDish)
@@ -45,8 +45,6 @@ show(suggestion)
 show(favoriteBtn)
 hide(potLogo)
 show(dish)
-
-
 return side.checked ? dish.innerText = randomizeIndex(sides)
  : mainDish.checked ? dish.innerText = randomizeIndex(mains)
  : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
@@ -99,7 +97,7 @@ function addRecipe(e) {
 }
 
 function showFooter() {
-  show(footer)gi
+  show(footer)
 }
 
 function showEverything(e) {

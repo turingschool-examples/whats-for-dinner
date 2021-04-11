@@ -25,6 +25,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.meal-text {
+  font-size: 200%;
+  margin-top: 0px;
+}
+
 .required {
   color: #ee5253;
 }
@@ -90,8 +95,9 @@ main {
   justify-content: space-around; */
 }
 
-p.make-title {
+.make-title {
   font-style: italic;
+  margin-bottom: 10px;
 }
 
 /* NAV BAR */

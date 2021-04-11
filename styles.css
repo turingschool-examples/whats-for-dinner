@@ -109,13 +109,10 @@ nav {
   height: 222px;
   padding: 60px;
   margin: 60px;
-  /* margin-top: 60px;
-  margin-left: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px; */
 }
 
 .meal-container {
+  /* display: inline-block; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,12 +121,14 @@ nav {
   height: 222px;
   padding: 60px;
   margin: 60px;
-  /* margin-top: 60px;
-  margin-left: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px; */
 }
 
 .cookpot {
-  width: 40%;
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.cookpot-only {
+  display: inline-block;
 }

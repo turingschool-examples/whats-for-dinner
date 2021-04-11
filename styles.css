@@ -50,6 +50,7 @@ h2 {
 h4 {
   font-size: 24px;
   font-style: italic;
+  margin-bottom: 0px;
 }
 
 button {
@@ -102,16 +103,25 @@ label {
 .cookpot-card {
   height: 300px;
   width: 500px;
-  display: inline-grid;
-  justify-items: center;
+  /* display: inline-grid;
+  justify-items: center; */
   text-align: center;
 }
 
-
 .insert {
-  font-size: 32px;
+  font-size: 46px;
   padding-bottom: 25%;
   padding-top: 5px;
+  margin-top: 0px;
+}
+
+.insert-meal {
+  font-size: 34px;
+  margin-top: 20px;
+}
+
+.clear-button {
+
 }
 
 .hidden {

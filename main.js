@@ -32,24 +32,28 @@ function letsCook() {
   if (sideDishValue.checked) {
     food = sides[getFoodItem(sides)];
     sideDishValue.checked = false;
+    displayFood(food);
   } else if (mainDishValue.checked) {
     food = mains[getFoodItem(mains)];
     mainDishValue.checked = false;
+    displayFood(food);
   } else if (dessertValue.checked) {
     food = desserts[getFoodItem(desserts)];
     dessertValue.checked = false;
+    displayFood(food);
   } else {
     food = getEntireMeal();
     entireValue.checked = false;
   }
-  displayFood(food);
 }
 
 function displayFood(food) {
   cookPotBox.innerHTML = `
   <h2><em>You should make:</em></h2>
   <h1 class="meal-suggestion">${food}</h1>
-  <button class="clear-btn" id="clear" type="button">CLEAR</button>`
+  <section>
+    <button class="clear-btn" id="clear" type="button">CLEAR</button>
+  </section>`
 }
 
 function getEntireMeal() {
@@ -59,14 +63,16 @@ function getEntireMeal() {
   cookPotBox.innerHTML = `
     <p><em>You should make:</em></p>
     <br><h1 class="whole-meal">${main} with a side of ${side} and ${dessert} for dessert.</h1>
-    <button class="clear-btn" id="clear" type="button">CLEAR</button>`;
-  letsCook();
+    <section>
+      <button class="clear-btn" id="clear" type="button">CLEAR</button>
+    </section>`;
 }
 
-function clearFoodBox() {
+function clearFoodBox(event) {
   if (event.target.id === "clear") {
     cookPotBox.innerHTML = '';
-  } cookPotBox.innerHTML = `<img class="cookpot-img" src="assets/cookpot.svg" alt="cookpot logo">`
+    cookPotBox.innerHTML = `<img class="cookpot-img" src="assets/cookpot.svg" alt="cookpot logo">`
+  }
 }
 
 function disableLetsCookBtn() {

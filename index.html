@@ -14,19 +14,27 @@
         <div class="form-container">
           <h2>What are you looking for?<span class="asterisk">*</span></h2>
             <form>
-              <label class="field"><input type="radio" id="side" name="choice" value="side">Side</label>
-              <label class="field"><input type="radio" id="main-dish" name="choice" value="main-dish">Main Dish</label>
-              <label class="field"><input type="radio" id="dessert" name="choice" value="dessert">Dessert</label>
-              <label class="field"><input type="radio" id="entire-meal" name="choice" value="entire-meal">Entire Meal</label>
+              <label class="field">
+                <input type="radio" id="side" name="choice" value="side">Side
+              </label>
+              <label class="field">
+                <input type="radio" id="main-dish" name="choice" value="main-dish">Main Dish
+              </label>
+              <label class="field">
+                <input type="radio" id="dessert" name="choice" value="dessert">Dessert
+              </label>
+              <label class="field">
+                <input type="radio" id="entire-meal" name="choice" value="entire-meal">Entire Meal
+              </label>
             </form>
           <button class="teal-button" id="cook">LET'S COOK</button>
         </div>
-        <div class="recipe-container">
-          <img class="pot-icon" id="pot" src="assets/cookpot.svg" alt="pot icon" />
-          <h3 class="make" id="make" hidden>You should make:</h3>
-          <p class="meal-selection" id="meal"></p>
+        <div class="meal-container">
+          <img class="cookpot" id="cookpot" src="assets/cookpot.svg" alt="Cook Pot">
+            <p class="make-title" id="make-title">You should make:</p>
+          <h3 class="meal-text" id="meal-text"></h3>
           <div>
-            <button class="gray-button" id="clear" hidden>CLEAR</button>
+            <button class="gray-button" id="clear">CLEAR</button>
           </div>
         </div>
         <section>

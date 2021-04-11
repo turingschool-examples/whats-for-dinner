@@ -7,7 +7,7 @@ var sides = [
   'Crispy Potatoes',
   'Sweet Potato Tots',
   'Coconut Rice',
-  'Caeser Salad',
+  'Caesar Salad',
   'Shrimp Summer Rolls',
   'Garlic Butter Mushrooms',
   'Hush Puppies',
@@ -52,13 +52,95 @@ var desserts = [
 // VARIABLES //
 
 // RADIO BUTTONS
-var sideSelect = document.querySelector('#side');
-var mainSelect = document.querySelector('#main-dish');
-var dessertSelect = document.querySelector('#dessert');
-var entireMeal = document.querySelector('#entire-meal');
+var sideRadio = document.querySelector('#side');
+var mainRadio = document.querySelector('#main-dish');
+var dessertRadio = document.querySelector('#dessert');
+var entireMealRadio = document.querySelector('#entire-meal');
+
 // CALLOUT BUTTONS & MODIFIERS
-var letsCook = document.querySelector('#cook');
+var letsCookBtn = document.querySelector('#cook');
 var clearBtn = document.querySelector('#clear');
-var potIcon = document.querySelector('#pot');
-var shouldMake = document.querySelector('#make');
-var mealSelection = document.querySelector('#meal');
+var cookpotImg = document.querySelector('#cookpot');
+var shouldMake = document.querySelector('#make-title');
+var mealText = document.querySelector('#meal-text');
+
+// EVENT LISTENERS
+// letsCookBtn.addEventListener("click", displayMeal();
+letsCookBtn.addEventListener("click", displayMeal);
+clearBtn.addEventListener("click", clearRecipe);
+
+// EVENT HANDLERS
+
+function displayMeal() {
+  if (sideRadio.checked) {
+    getRandomSide();
+  } else if (mainRadio.checked) {
+    getRandomMain();
+  } else if (dessertRadio.checked) {
+    getRandomDessert();
+  } else if (entireMealRadio.checked) {
+    getRandomMeal();
+  }
+}
+
+// FUNCTIONS //
+function preventDefault() {
+  event.preventDefault();
+}
+
+// function hidecookPotImg(){
+//   co
+// }
+
+// MEAL CONTAINER VIEW FUNCTIONS //
+function recipeView() {
+  cookpotImg.classList.add("hidden");
+  shouldMake.classList.remove("hidden");
+  mealText.classList.remove("hidden");
+  clearBtn.classList.remove("hidden");
+}
+
+function potView() {
+  cookpotImg.classList.remove("hidden");
+  shouldMake.classList.add("hidden");
+  mealText.classList.add("hidden");
+  clearBtn.classList.add("hidden");
+}
+
+// RANDOMIZER FUNCTIONS  //
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random()*array.length);
+}
+
+function getRandomSide() {
+  preventDefault();
+  if(sideRadio.value) {
+    recipeView();
+    mealText.innerText = `${sides[getRandomIndex(sides)]}!`;
+  }
+}
+
+function getRandomMain() {
+  preventDefault();
+  if(mainRadio.value) {
+    recipeView();
+    mealText.innerText = `${mains[getRandomIndex(mains)]}!`;
+  }
+}
+
+function getRandomDessert() {
+  preventDefault();
+  if(dessertRadio.value) {
+    recipeView();
+    mealText.innerText = `${desserts[getRandomIndex(desserts)]}!`;
+  }
+}
+
+function getRandomMeal() {
+  preventDefault();
+  if(entireMealRadio.value) {
+    recipeView();
+    mealText.innerText = `${mains[getRandomIndex(mains)]}, with a side of ${sides[getRandomIndex(sides)]}, and ${desserts[getRandomIndex(desserts)]} for dessert!`;
+  }
+}

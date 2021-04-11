@@ -17,9 +17,14 @@ var createBtn = document.getElementById('add-btn')
 var recipeName = document.getElementById('recipe-name')
 var recipeType = document.getElementById('recipe-type')
 var footer = document.querySelector('footer')
-var loginBtn = document.querySelector('.login-btn')
+var loginBtn = document.querySelector('#login-btn')
 // to sort
 var recipeContainer = document.querySelector('.recipe-container')
+var mealContainer = document.querySelector('#meal-container')
+var loginContainer = document.querySelector('#login-container')
+var user = document.querySelector('#user')
+var username = document.querySelector('#username')
+var welcomeMsg = document.querySelector('#welcome')
 
 // Event Listeners
 cookBtn.addEventListener('click', randomizeDish)
@@ -40,7 +45,7 @@ show(dish)
 e.preventDefault()
 
 
-return (side.checked) ? dish.innerText = randomizeIndex(sides)
+return side.checked ? dish.innerText = randomizeIndex(sides)
  : mainDish.checked ? dish.innerText = randomizeIndex(mains)
  : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
  : entireMeal.checked ? dish.innerText = `${randomizeIndex(sides)} with a side of ${randomizeIndex(mains)} and ${randomizeIndex(desserts)} for dessert!` 
@@ -96,7 +101,20 @@ function showFooter() {
 }
 
 function showEverything(e) {
-  recipeContainer.removeAttribute('id')
+  e.preventDefault()
+  if(username.value) {
+    recipeContainer.removeAttribute('id')
+    show(mealContainer)
+    show(recipeContainer)
     show(dish)
-    alert(' ')
+    show(recipeBtn)
+    show(cookBtn)
+    show(potLogo)
+    hide(loginContainer)
+    user.innerText = username.value
+    show(welcomeMsg) 
+  }
+ username.value = "Your name here, please!"
+ 
+
 }

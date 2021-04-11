@@ -272,10 +272,20 @@ justify-content: center;
   text-align: center;
 }
 
-#x-btn {
+#x {
   align-self: flex-start;
   position: absolute;
   margin-right: 13rem;
+  color: #333;
+  transition: color 700ms;
+}
+
+#x:hover {
+  color: var(--white);
+  transition: 700ms;
+}
+
+#x-btn {
   color: #333;
   transition: color 700ms;
 }

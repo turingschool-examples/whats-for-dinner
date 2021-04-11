@@ -33,6 +33,8 @@ var faved = document.querySelector('.faved')
 var miniContainer = document.querySelector('.mini-container')
 var favoritesContainer = document.querySelector('.favorites-container')
 var homeBtn = document.querySelector('.home-btn')
+var deleteBtn = document.querySelector('#x-btn')
+
 
 // Event Listeners
 cookBtn.addEventListener('click', randomizeDish)
@@ -43,15 +45,16 @@ loginBtn.addEventListener('click', showEverything)
 favoriteBtn.addEventListener('click', favorite)
 viewFavoriteBtn.addEventListener('click',viewFavorites)
 homeBtn.addEventListener('click', viewHome)
-favoritesContainer.addEventListener('dblclick', function(e) {
-  deleteRecipe(e)
+favoritesContainer.addEventListener('click', function(e) {
+  deleteFavorite(e)
 })
+deleteBtn.addEventListener('click', deleteRecipe)
 
 
 
 // Event Handerlers
-function randomizeDish(e) {
- e.preventDefault()
+function randomizeDish() {
+ event.preventDefault()
 if (!sides.checked && !mainDish.checked && !dessert.checked && !entireMeal.checked) {
   hide(potLogo)
   show(dish)
@@ -61,6 +64,7 @@ show(dish)
 show(clearBtn)
 show(favoriteBtn)
 show(suggestion)
+show(deleteBtn)
 return side.checked ? dish.innerText = randomizeIndex(sides)
  : mainDish.checked ? dish.innerText = randomizeIndex(mains)
  : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
@@ -110,7 +114,6 @@ function addRecipe(e) {
     show(favoriteBtn)
     dish.innerText = recipeName.value
   }
-  //  recipeType.value = "Side, Main Dish, Dessert, or Entire Meal"
 }
 
 function showFooter() {
@@ -137,7 +140,7 @@ function showEverything(e) {
 function favorite() {
   favoritedRecipes.push(dish.innerText)
   favoritesContainer.innerHTML += `<div class="mini-container flex">
-  <i id="x-btn" class="x-btn fas fa-times fa-2x"></i>
+  <i id="x" class="x-btn fas fa-times fa-2x"></i>
   <p class="faved">${dish.innerText}</p>
 </div>`
 }
@@ -168,7 +171,10 @@ function viewHome() {
   hide(favoritesContainer)
 }
 
-function deleteRecipe(e) {
+function deleteFavorite(e) {
   e.target.closest('div').remove()
-  console.log('hello')
+}
+
+function deleteRecipe() {
+  recipeContainer.target.closest('.dish').remove()
 }

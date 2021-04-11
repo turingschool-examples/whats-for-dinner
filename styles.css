@@ -103,9 +103,8 @@ label {
 .cookpot-card {
   height: 300px;
   width: 500px;
-  /* display: inline-grid;
-  justify-items: center; */
   text-align: center;
+  padding-top: 10%;
 }
 
 .insert {

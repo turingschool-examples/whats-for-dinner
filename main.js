@@ -67,7 +67,7 @@ var mealText = document.querySelector('#meal-text');
 // EVENT LISTENERS
 // letsCookBtn.addEventListener("click", displayMeal();
 letsCookBtn.addEventListener("click", displayMeal);
-clearBtn.addEventListener("click", clearRecipe);
+clearBtn.addEventListener("click", potView);
 
 // EVENT HANDLERS
 

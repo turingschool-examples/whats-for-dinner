@@ -4,7 +4,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <main>
+      <header>What's For Dinner?</header>
+        <section class="boxes">
+          <form id="lets-cook-form">
+            <h2>What are you looking for?<span class="asterisk">*</span></h2>
+            <ul>
+              <li>
+              <input type="radio" id="side" name="dish" value="side">
+              <label for="side">Side Dish</label>
+              </li>
+              <li>
+              <input type="radio" id="main" name="dish" value="main">
+              <label for="main">Main Dish</label>
+              </li>
+              <li>
+                <input type="radio" id="dessert" name="dish" value="dessert">
+                <label for="dessert">Dessert</label>
+              </li>
+              <li>
+                <input type="radio" id="entire-meal" name="dish" value="entire-meal">
+                <label for="entire-meal">Entire Meal</label>
+              </li>
+              <li>
+              <button class="lets-cook-btn" type="button" disabled>LET'S COOK!</button>
+            </li>
+            </ul>
+          </form>
+          <section class="right-box">
+              <img class="cookpot-img" src="assets/cookpot.svg" alt="cookpot logo">
+          </section>
+        </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="foodlists.js"></script>
 </html>

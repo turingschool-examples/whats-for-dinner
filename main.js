@@ -37,6 +37,16 @@ function displayCookpotCard() {
   cookpotCard.classList.remove("hidden");
 }
 
+function populateDish(dish) {
+  cookpotCard.innerHTML = `<h4>You should make:</h4>
+        <p class="insert">${dish}</p>`
+}
+
+function populateMeal(side, main, dessert) {
+  cookpotCard.innerHTML = `<h4>You should make:</h4>
+        <p class="insert">${main} with a side of ${side} and ${dessert} for dessert!</p>`
+}
+
 function selectRandomDish() {
   var sideDish;
   var mainDish;
@@ -47,22 +57,25 @@ function selectRandomDish() {
     hideCookpot();
     displayCookpotCard();
     sideDish = randomIndex(sides);
-    cookpotCard.innerHTML = `<h4>You should make:</h4>
-          <p class="insert">${sideDish}</p>`
+    populateDish(sideDish);
+    // cookpotCard.innerHTML = `<h4>You should make:</h4>
+    //       <p class="insert">${sideDish}</p>`
   } else if (mainRadio.checked) {
     preventDefault();
     hideCookpot();
     displayCookpotCard();
     mainDish = randomIndex(mains);
-    cookpotCard.innerHTML = `<h4>You should make:</h4>
-          <p class="insert">${mainDish}</p>`
+    populateDish(mainDish);
+    // cookpotCard.innerHTML = `<h4>You should make:</h4>
+    //       <p class="insert">${mainDish}</p>`
   } else if (dessertRadio.checked) {
     preventDefault();
     hideCookpot();
     displayCookpotCard();
     dessertDish = randomIndex(desserts);
-    cookpotCard.innerHTML = `<h4>You should make:</h4>
-          <p class="insert">${dessertDish}</p>`
+    populateDish(dessertDish);
+    // cookpotCard.innerHTML = `<h4>You should make:</h4>
+    //       <p class="insert">${dessertDish}</p>`
   } else if (entireMealRadio.checked) {
     preventDefault();
     hideCookpot();
@@ -70,7 +83,8 @@ function selectRandomDish() {
     sideDish = randomIndex(sides);
     mainDish = randomIndex(mains);
     dessertDish = randomIndex(desserts);
-    cookpotCard.innerHTML = `<h4>You should make:</h4>
-          <p class="insert">${mainDish} with a side of ${sideDish} and ${dessertDish} for dessert!</p>`
+    populateMeal(sideDish, mainDish, dessertDish);
+    // cookpotCard.innerHTML = `<h4>You should make:</h4>
+    //       <p class="insert">${mainDish} with a side of ${sideDish} and ${dessertDish} for dessert!</p>`
   }
 }

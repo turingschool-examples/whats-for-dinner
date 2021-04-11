@@ -126,6 +126,7 @@ function goHome() {
   showElement(rightBox);
   hideElement(favRecipesBox);
   hideElement(homeButton);
+  clearForm();
 };
 
 function addToFavorites() {

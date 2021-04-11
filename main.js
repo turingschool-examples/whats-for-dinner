@@ -57,36 +57,50 @@ var entireMealRadial = document.querySelector('#js-entire-meal');
 
 
 var potBox = document.querySelector('.meal-description');
+var paragraph1 = document.querySelector('.first-paragraph');
+var paragraph2 = document.querySelector('.second-paragraph');
 var cookButton = document.querySelector('#js-cook-btn');
-//var addRecipeButton = document.querySelector('#js-add-recipe-btn');
+var clearButton = document.querySelector('#js-clear-recipe-btn');
+var addRecipeButton = document.querySelector('#js-add-recipe-btn');
+
+var addNewRecipeForm = document.querySelector('#js-add-recipe-form');
 
 //Add Event-Listeners
-cookButton.addEventListener('click', showDish)
+cookButton.addEventListener('click', showDish);
+clearButton.addEventListener('click', hideDish);
+addRecipeButton.addEventListener('click', addRecipe);
+
 
 //functions below
 function showDish(e){
   e.preventDefault();
   var side = getRandomDish(sides);
   var main = getRandomDish(mains); 
-  var dessert = getRandomDish(desserts); 
+  var dessert = getRandomDish(desserts);
+
   potBox.classList.add("hide")
-  potBox.innerHTML = `<p class="first-paragraph">You should make:</p>`
-  // sideRadial.checked ? food = getRandomDish(sides) :
-  // mainDishRadial.checked ? food = getRandomDish(mains) :
-  // dessertRadial.checked ? food = getRandomDish(desserts) :
-  // entireMealRadial.checked ? console.log("Full meal") : console.log("Error"); 
+  paragraph1.innerHTML = `You should make: `;
+  
   if(sideRadial.checked){
-    food = side;
-    potBox.innerHTML += `<p class="second-paragraph">${side}</p>`
+    paragraph2.innerHTML = `${side}`;
   } else if (mainDishRadial.checked) {
-    food = main;
-    potBox.innerHTML += `<p class="second-paragraph">${main}</p>`
+    paragraph2.innerHTML = `${main}`;
   } else if (dessertRadial.checked) {
-    food = desserts;
-    potBox.innerHTML += `<p class="second-paragraph">${dessert}</p>`
+    paragraph2.innerHTML = `${dessert}`;
   } else if(entireMealRadial.checked){
-    potBox.innerHTML += `<p class="second-paragraph">${main} with a side of ${side} and ${dessert} for dessert!</p>`
+    paragraph2.innerHTML = `${main} with a side of ${side} and ${dessert} for dessert!`
   }
+  clearButton.classList.remove("hide-element")
+}
+
+function hideDish() {
+  clearButton.classList.add("hide-element")
+  paragraph1.innerHTML = ``;
+  paragraph2.innerHTML = ``;
+}
+
+function addRecipe(){
+  addNewRecipeForm.classList.remove("hide-element");
 }
 
 function getRandomDish(dishType) {

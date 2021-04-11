@@ -28,12 +28,23 @@
     </section>
 
     <section class="meal-description">
-      <!-- <img src="assets/cookpot.svg"> -->
+      <p class="first-paragraph"></p>
+      <p class="second-paragraph"></p>
+      <button class="clear-recipe-btn hide-element" id="js-clear-recipe-btn">CLEAR</button>
     </section>
 
   </section>
 
-  <section class="background"></section>
+  <section class='add-recipe-form hide-element' id='js-add-recipe-form'>
+    <form>
+      <label for="r-type">Recipe Type:</label>
+      <input type="text" id="r-type" name="r-type">
+      <label for="r-name">Recipe Name:</label>
+      <input type="text" id="r-name" name="r-name">
+      <input class="insert-recipe-btn" id="js-insert-recipe-btn" type="submit" value="Add New!">
+    </form>
+  </section>
+
   <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

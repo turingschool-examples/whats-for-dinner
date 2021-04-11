@@ -15,6 +15,7 @@ red - #ee5253
   /* border:  1px solid red; */
 }
 
+
 /* style the .asterisk */
 .asterisk {
   color: red;
@@ -23,6 +24,9 @@ red - #ee5253
 
 /* add background image and make font san-serif */
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: sans-serif;
   font-size: 1.5rem;
   background-image: url('./assets/burger-friends.jpg');
@@ -104,6 +108,9 @@ form {
 }
 
 .meal-description {
+  display: flex;
+  flex-direction: column;
+
   background-image: url('./assets/cookpot.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -137,4 +144,34 @@ form input[type="submit"] {
   width: 10vw;
   align-self: center;
   height: 4.5vh;
+}
+
+
+.clear-recipe-btn {
+  font-size: 1rem;
+    width: 10vw;
+    border-radius: 4px;
+    padding: 7px;
+    background-color: #95a5a6;
+    border: none;
+    margin: 3px;
+    margin-left: 25vw;
+    margin-top: 15vh;
+}
+
+.clear-recipe-btn:hover {
+  background-color:  #0fb9b1;
+}
+
+.hide-element{
+  display: none!important;
+}
+
+.add-recipe-form{
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    background: rgba(225, 225, 225, .9);
+    font-size: 1.5rem;
+    width: 100vw;
 }

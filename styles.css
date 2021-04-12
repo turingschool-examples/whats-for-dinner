@@ -286,11 +286,26 @@ justify-content: center;
 }
 
 #x-btn {
+  position: absolute;
+  margin: 0 0 19rem .2rem;
+  align-self: flex-start;
   color: #333;
   transition: color 700ms;
+  font-size: 3rem;
 }
 
 #x-btn:hover {
   color: var(--white);
   transition: 700ms;
+}
+
+#removed-alert {
+  margin-bottom: 10rem;
+  position: absolute;
+  color: var(--red);
+}
+
+.fadeaway {
+  opacity: 0;
+  transition: 3s;
 }

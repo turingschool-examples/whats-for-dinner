@@ -34,6 +34,7 @@ var miniContainer = document.querySelector('.mini-container')
 var favoritesContainer = document.querySelector('.favorites-container')
 var homeBtn = document.querySelector('.home-btn')
 var deleteBtn = document.querySelector('#x-btn')
+var deleteAlert = document.querySelector('#removed-alert')
 
 
 // Event Listeners
@@ -55,16 +56,23 @@ deleteBtn.addEventListener('click', deleteRecipe)
 // Event Handerlers
 function randomizeDish() {
  event.preventDefault()
-if (!sides.checked && !mainDish.checked && !dessert.checked && !entireMeal.checked) {
+if (!side.checked && !mainDish.checked && !dessert.checked && !entireMeal.checked) {
   hide(potLogo)
   show(dish)
+} else if(side.checked && mainDish.checked && dessert.checked) {
+  hide(deleteAlert)
+  fadeAway(deleteAlert)
 } else {
 hide(potLogo)
+hide(deleteAlert)
 show(dish)
 show(clearBtn)
 show(favoriteBtn)
 show(suggestion)
 show(deleteBtn)
+if (entireMeal.checked) {
+  hide(deleteBtn)
+} 
 return side.checked ? dish.innerText = randomizeIndex(sides)
  : mainDish.checked ? dish.innerText = randomizeIndex(mains)
  : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
@@ -176,5 +184,20 @@ function deleteFavorite(e) {
 }
 
 function deleteRecipe() {
-  recipeContainer.target.closest('.dish').remove()
+  hide(deleteBtn)
+  hide(favoriteBtn)
+  hide(suggestion)
+  hide(clearBtn)
+  hide(dish)
+  show(potLogo)
+  fadeAway(deleteAlert)
+  show(deleteAlert)
+  return side.checked ? sides.splice(sides.indexOf(dish.innerText), 1) 
+  :  mainDish.checked ? mains.splice(mains.indexOf(mainDish.innerText), 1)
+  :  dessert.checked ? desserts.splice(desserts.indexOf(dessert.innerText), 1)
+  : console.log('No Radio Selected')
+}
+
+function fadeAway(e) {
+  e.classList.toggle('fadeaway')
 }

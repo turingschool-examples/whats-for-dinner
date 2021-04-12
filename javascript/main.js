@@ -1,18 +1,18 @@
 // Variables
   // Buttons
-var cookBtn= document.querySelector('.cook-btn')
+var cookBtn= document.querySelector('#cook-btn')
   // Hide/Show
-var potLogo = document.querySelector('.pot')
-var dish = document.querySelector('.dish')
+var potLogo = document.querySelector('#pot')
+var dish = document.querySelector('#dish')
   //radio
-var side = document.querySelector('.side')
-var mainDish = document.querySelector('.main-dish')
-var dessert = document.querySelector('.dessert')
-var entireMeal = document.querySelector('.entire-meal')
+var side = document.querySelector('#side')
+var mainDish = document.querySelector('#main-dish')
+var dessert = document.querySelector('#dessert')
+var entireMeal = document.querySelector('#entire-meal')
  // Dish
 var suggestion = document.querySelector('h3')
-var clearBtn = document.querySelector('.clear-btn')
-var recipeBtn = document.querySelector('.recipe-btn')
+var clearBtn = document.querySelector('#clear-btn')
+var recipeBtn = document.querySelector('#recipe-btn')
   // Add Recipe Form
 var createBtn = document.getElementById('add-btn')
 var recipeName = document.getElementById('recipe-name')
@@ -20,19 +20,19 @@ var recipeType = document.getElementById('recipe-type')
 var footer = document.querySelector('footer')
 var loginBtn = document.querySelector('#login-btn')
 // to sort
-var recipeContainer = document.querySelector('.recipe-container')
+var recipeContainer = document.querySelector('#recipe-container')
 var mealContainer = document.querySelector('#meal-container')
 var loginContainer = document.querySelector('#login-container')
 var user = document.querySelector('#user')
 var username = document.querySelector('#username')
 var welcomeMsg = document.querySelector('#welcome')
 var favoriteBtn = document.querySelector('#favorite-btn')
-var viewFavoriteBtn = document.querySelector('.view-favorites-btn')
-var recipeBox = document.querySelector('.favorites-container')
-var faved = document.querySelector('.faved')
-var miniContainer = document.querySelector('.mini-container')
-var favoritesContainer = document.querySelector('.favorites-container')
-var homeBtn = document.querySelector('.home-btn')
+var viewFavoriteBtn = document.querySelector('#view-favorites-btn')
+var recipeBox = document.querySelector('#favorites-container')
+var faved = document.querySelector('#faved')
+var miniContainer = document.querySelector('#mini-container')
+var favoritesContainer = document.querySelector('#favorites-container')
+var homeBtn = document.querySelector('#home-btn')
 var deleteBtn = document.querySelector('#x-btn')
 var deleteAlert = document.querySelector('#removed-alert')
 
@@ -111,8 +111,7 @@ function addRecipe(e) {
   e.preventDefault()
   if (recipeType.value.toLowerCase() === "side" ||
       recipeType.value.toLowerCase() === "main dish" ||
-      recipeType.value.toLowerCase() === "dessert" ||
-      recipeType.value.toLowerCase() === "entire meal" 
+      recipeType.value.toLowerCase() === "dessert" 
       && recipeName.value !== ""
   ) {
     hide(potLogo)
@@ -131,7 +130,8 @@ function showFooter() {
 function showEverything(e) {
   e.preventDefault()
   // if(username.value) {
-    recipeContainer.removeAttribute('id')
+    // recipeContainer.removeAttribute('id')
+    recipeContainer.classList.add('id')
     show(mealContainer)
     show(recipeContainer)
     show(recipeBtn)
@@ -147,7 +147,7 @@ function showEverything(e) {
 
 function favorite() {
   favoritedRecipes.push(dish.innerText)
-  favoritesContainer.innerHTML += `<div class="mini-container flex">
+  favoritesContainer.innerHTML += `<div id="mini-container" class="flex">
   <i id="x" class="x-btn fas fa-times fa-2x"></i>
   <p class="faved">${dish.innerText}</p>
 </div>`

@@ -8,23 +8,21 @@
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
   <title>Whats For Dinner</title>
 </head>
 
 <body>
-
-
   <header class="flex">
     <h1>What's for Dinner?</h1>
     <h2 id="welcome" class="hidden">Welcome, <span id="user">username</span>!</h2>
-    <button class="light-btn view-favorites-btn hidden">VIEW FAVORITES</button>
-    <button class="light-btn recipe-btn hidden">ADD A RECIPE</button>
-    <button class="light-btn home-btn hidden">HOME</button>
-  
+    <button id="view-favorites-btn" class="btn light-btn hidden">VIEW FAVORITES</button>
+    <button id="recipe-btn" class="btn light-btn hidden">ADD A RECIPE</button>
+    <button id="home-btn" class="btn light-btn hidden">HOME</button>
   </header>
-
   <section class="flex">
+    <!-- meal container -->
     <article id="meal-container" class="flex hidden">
       <h2>What are you looking for? <span class="asterisk">*</span></h2>
       <form>
@@ -36,51 +34,44 @@
         <label for="dessert">Dessert</label><br>
         <input type="radio" class="entire-meal" name="choices" value="entire-meal">
         <label for="entire-meal">Entire Meal</label><br>
-        <input class="btn cyan-btn cook-btn" type="submit" value="LET'S COOK!">
+        <input id="cook-btn" class="btn cyan-btn" type="submit" value="LET'S COOK!">
       </form>
     </article>
-    <article id="big" class="recipe-container flex">
+      <!-- recipe container -->
+    <article id="recipe-container" class="big flex">
       <!-- login -->
       <div id="login-container">
         <h2>Welcome!</h2>
-        <input type="text" ID="username" name="user-form" placeholder="Name here, please!"> <br>
+        <input type="text" ID="username" name="user-form" placeholder="Name here, please!"><br>
         <input id="login-btn" class="btn cyan-btn" type="submit" value="LOGIN">
       </div>
-      <!-- recipe container -->
+        <!-- recipe -->
       <i id="x-btn" class="x-btn fas fa-times fa-2x hidden"></i>
       <h4 id="removed-alert" class="hidden">REMOVED!</h4>
-      <img src="./assets/cookpot.svg" alt="cook pot" class="pot hidden">
+      <img src="./assets/cookpot.svg" alt="cook pot" id="pot" class="hidden">
       <h3 class="hidden">You should make:</h3>
-      <h2 class="dish hidden">Pick a dish!</h2>
-      <button class="btn grey-btn hidden clear-btn">CLEAR</button>
+      <h2 id="dish" class="hidden">Pick a dish!</h2>
+      <button id="clear-btn" class="btn grey-btn hidden">CLEAR</button>
       <i id="favorite-btn" class="fas fa-hamburger fa-4x hidden"></i>
     </article>
-
-        <!-- Favorites Container -->
-    <div class="favorites-container flex hidden">
-      <!-- <div class="mini-container flex">
-        <p class="faved">dish</p>
-      </div> -->
+    <!-- favorites Container -->
+    <div id="favorites-container" class="flex hidden">
     </div>
-
   </section>
   <!-- footer -->
-  <footer class="hidden flex">
-    <div>mine
+  <footer class="flex hidden">
+    <div>
       <label for="recipe-name">Recipe Name:</label>
       <input type="text" ID="recipe-name" name="recipe-form" required>
     </div>
     <div>
       <label for="recipe-type">Recipe Type:</label>
-      <input type="text" ID="recipe-type" name="recipe-form" placeholder="Side, Main Dish, Dessert, or Entire Meal" required>
+      <input type="text" ID="recipe-type" name="recipe-form" placeholder="Side - Main Dish - Dessert"
+        required>
     </div>
     <input id="add-btn" class="btn cyan-btn" type="submit" value="ADD NEW">
   </footer>
 </body>
-
-
-
 <script type="text/javascript" src="./javascript/food-data.js"></script>
 <script type="text/javascript" src="./javascript/main.js"></script>
-
 </html>

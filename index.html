@@ -26,19 +26,19 @@
     <article id="meal-container" class="flex hidden">
       <h2>What are you looking for? <span class="asterisk">*</span></h2>
       <form>
-        <input type="radio" class="side" name="choices" value="side">
+        <input type="radio" id="side" name="choices" value="side">
         <label for="side">Side</label><br>
-        <input type="radio" class="main-dish" name="choices" value="main-dish">
+        <input type="radio" id="main-dish" name="choices" value="main-dish">
         <label for="main-dish">Main Dish</label><br>
-        <input type="radio" class="dessert" name="choices" value="dessert">
+        <input type="radio" id="dessert" name="choices" value="dessert">
         <label for="dessert">Dessert</label><br>
-        <input type="radio" class="entire-meal" name="choices" value="entire-meal">
+        <input type="radio" id="entire-meal" name="choices" value="entire-meal">
         <label for="entire-meal">Entire Meal</label><br>
         <input id="cook-btn" class="btn cyan-btn" type="submit" value="LET'S COOK!">
       </form>
     </article>
       <!-- recipe container -->
-    <article id="recipe-container" class="big flex">
+    <article id="recipe-container" class="flex">
       <!-- login -->
       <div id="login-container">
         <h2>Welcome!</h2>
@@ -54,19 +54,20 @@
       <button id="clear-btn" class="btn grey-btn hidden">CLEAR</button>
       <i id="favorite-btn" class="fas fa-hamburger fa-4x hidden"></i>
     </article>
-    <!-- favorites Container -->
+    <!-- favorites container -->
     <div id="favorites-container" class="flex hidden">
     </div>
   </section>
   <!-- footer -->
   <footer class="flex hidden">
     <div>
-      <label for="recipe-name">Recipe Name:</label>
-      <input type="text" ID="recipe-name" name="recipe-form" required>
+      <!-- add recipe container -->
+      <label class="name" for="recipe-name">Recipe Name:</label>
+      <input type="text" id="recipe-name" name="recipe-form" required>
     </div>
     <div>
-      <label for="recipe-type">Recipe Type:</label>
-      <input type="text" ID="recipe-type" name="recipe-form" placeholder="Side - Main Dish - Dessert"
+      <label class="type" for="recipe-type">Recipe Type:</label>
+      <input type="text" id="recipe-type" name="recipe-form" placeholder="Side - Main Dish - Dessert"
         required>
     </div>
     <input id="add-btn" class="btn cyan-btn" type="submit" value="ADD NEW">

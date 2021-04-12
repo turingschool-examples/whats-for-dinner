@@ -1,93 +1,81 @@
 // Variables
   // Buttons
 var cookBtn= document.querySelector('#cook-btn')
-  // Hide/Show
-var potLogo = document.querySelector('#pot')
-var dish = document.querySelector('#dish')
-  //radio
+var clearBtn = document.querySelector('#clear-btn')
+var recipeBtn = document.querySelector('#recipe-btn')
+var loginBtn = document.querySelector('#login-btn')
+var favoriteBtn = document.querySelector('#favorite-btn')
+var viewFavoriteBtn = document.querySelector('#view-favorites-btn')
+var deleteBtn = document.querySelector('#x-btn')
+var homeBtn = document.querySelector('#home-btn')
+  // Meal container
+var mealContainer = document.querySelector('#meal-container')
+      //radio buttons
 var side = document.querySelector('#side')
 var mainDish = document.querySelector('#main-dish')
 var dessert = document.querySelector('#dessert')
 var entireMeal = document.querySelector('#entire-meal')
- // Dish
+  // Recipe Container
+var recipeContainer = document.querySelector('#recipe-container')
+var potLogo = document.querySelector('#pot')
+var dish = document.querySelector('#dish')
 var suggestion = document.querySelector('h3')
-var clearBtn = document.querySelector('#clear-btn')
-var recipeBtn = document.querySelector('#recipe-btn')
   // Add Recipe Form
-var createBtn = document.getElementById('add-btn')
+var footer = document.querySelector('footer')
+var addBtn = document.getElementById('add-btn')
 var recipeName = document.getElementById('recipe-name')
 var recipeType = document.getElementById('recipe-type')
-var footer = document.querySelector('footer')
-var loginBtn = document.querySelector('#login-btn')
-// to sort
-var recipeContainer = document.querySelector('#recipe-container')
-var mealContainer = document.querySelector('#meal-container')
+  // Login Container 
 var loginContainer = document.querySelector('#login-container')
 var user = document.querySelector('#user')
 var username = document.querySelector('#username')
 var welcomeMsg = document.querySelector('#welcome')
-var favoriteBtn = document.querySelector('#favorite-btn')
-var viewFavoriteBtn = document.querySelector('#view-favorites-btn')
+  // Favorite Container
 var recipeBox = document.querySelector('#favorites-container')
 var faved = document.querySelector('#faved')
 var miniContainer = document.querySelector('#mini-container')
 var favoritesContainer = document.querySelector('#favorites-container')
-var homeBtn = document.querySelector('#home-btn')
-var deleteBtn = document.querySelector('#x-btn')
+  // Miscellaneous
 var deleteAlert = document.querySelector('#removed-alert')
-
 
 // Event Listeners
 cookBtn.addEventListener('click', randomizeDish)
 clearBtn.addEventListener('click', clearPage)
 recipeBtn.addEventListener('click', showFooter)
-createBtn.addEventListener('click', addRecipe)
+addBtn.addEventListener('click', addRecipe)
 loginBtn.addEventListener('click', showEverything)
 favoriteBtn.addEventListener('click', favorite)
 viewFavoriteBtn.addEventListener('click',viewFavorites)
 homeBtn.addEventListener('click', viewHome)
-favoritesContainer.addEventListener('click', function(e) {
-  deleteFavorite(e)
-})
+favoritesContainer.addEventListener('dblclick', function(e) {deleteFavorite(e)})
 deleteBtn.addEventListener('click', deleteRecipe)
-
-
 
 // Event Handerlers
 function randomizeDish() {
- event.preventDefault()
+event.preventDefault()
 if (!side.checked && !mainDish.checked && !dessert.checked && !entireMeal.checked) {
   hide(potLogo)
   show(dish)
-} else if(side.checked && mainDish.checked && dessert.checked) {
+} else if (side.checked && mainDish.checked && dessert.checked) {
   hide(deleteAlert)
   fadeAway(deleteAlert)
 } else {
-hide(potLogo)
-hide(deleteAlert)
-show(dish)
-show(clearBtn)
-show(favoriteBtn)
-show(suggestion)
-show(deleteBtn)
-if (entireMeal.checked) {
-  hide(deleteBtn)
-} 
-return side.checked ? dish.innerText = randomizeIndex(sides)
- : mainDish.checked ? dish.innerText = randomizeIndex(mains)
- : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
- : entireMeal.checked ? dish.innerText = `${randomizeIndex(sides)} with a side of ${randomizeIndex(mains)} and ${randomizeIndex(desserts)} for dessert!` 
- : console.log('No Radio Selected')
+  hide(potLogo)
+  hide(deleteAlert)
+  show(dish)
+  show(clearBtn)
+  show(favoriteBtn)
+  show(suggestion)
+  show(deleteBtn)
+  if (entireMeal.checked) {
+    hide(deleteBtn)
+    } 
+  return side.checked ? dish.innerText = randomizeIndex(sides)
+  : mainDish.checked ? dish.innerText = randomizeIndex(mains)
+  : dessert.checked ? dish.innerText = randomizeIndex(desserts) 
+  : entireMeal.checked ? dish.innerText = `${randomizeIndex(sides)} with a side of ${randomizeIndex(mains)} and ${randomizeIndex(desserts)} for dessert!` 
+  : console.log('No Radio Selected')
   } 
-}
-
-
-function hide(e) {
-  e.classList.add('hidden')
-}
-
-function show(e) {
-  e.classList.remove('hidden')
 }
 
 function randomizeIndex(dishList) {
@@ -105,10 +93,10 @@ function clearPage() {
 }
 
 function addRecipe(e) {
+  e.preventDefault()
   if (recipeName.value === "") {
     recipeName.value = "Please fill this out"
   }
-  e.preventDefault()
   if (recipeType.value.toLowerCase() === "side" ||
       recipeType.value.toLowerCase() === "main dish" ||
       recipeType.value.toLowerCase() === "dessert" 
@@ -121,16 +109,28 @@ function addRecipe(e) {
     show(favoriteBtn)
     dish.innerText = recipeName.value
   }
+  if (recipeType.value.toLowerCase() === "side") {
+    sides.push(recipeName.value)
+  } else if (recipeType.value.toLowerCase() === "main dish") {
+    mains.push(recipeName.value)
+  } else if (recipeType.value.toLowerCase() === "dessert") {
+    desserts.push(recipeName.value)
+  }
 }
 
+var click = 0
 function showFooter() {
-  show(footer)
+  show(footer) 
+  click++
+  if (click > 1) {
+    click = 0
+    hide(footer)
+  }
 }
 
 function showEverything(e) {
   e.preventDefault()
-  // if(username.value) {
-    // recipeContainer.removeAttribute('id')
+  if(username.value) {
     recipeContainer.classList.add('id')
     show(mealContainer)
     show(recipeContainer)
@@ -141,8 +141,8 @@ function showEverything(e) {
     user.innerText = username.value
     show(welcomeMsg) 
     show(viewFavoriteBtn)
-  // }
-// loginBtn.value = "Put your name in the form please, please!"
+  }
+loginBtn.value = "Put your name in the form please, please!"
 }
 
 function favorite() {
@@ -153,31 +153,7 @@ function favorite() {
 </div>`
 }
 
-function viewFavorites() {
-  hide(mealContainer)
-  hide(recipeContainer)
-  hide(viewFavoriteBtn)
-  hide(recipeBtn)
-  hide(cookBtn)
-  hide(potLogo)
-  hide(footer)
-  show(recipeBox)
-  show(homeBtn)
-  welcomeMsg.innerText = 'Favorites'
-}
 
-function viewHome() {
-  show(mealContainer)
-  show(recipeContainer)
-  show(recipeBtn)
-  show(cookBtn)
-  show(potLogo)
-  show(welcomeMsg) 
-  show(viewFavoriteBtn)
-  hide(loginContainer)
-  hide(homeBtn)
-  hide(favoritesContainer)
-}
 
 function deleteFavorite(e) {
   e.target.closest('div').remove()
@@ -198,6 +174,45 @@ function deleteRecipe() {
   : console.log('No Radio Selected')
 }
 
+
+
+
+// Helpers
+function hide(e) {
+  e.classList.add('hidden')
+}
+
+function show(e) {
+  e.classList.remove('hidden')
+}
+
 function fadeAway(e) {
   e.classList.toggle('fadeaway')
+}
+
+// View Functions
+function viewFavorites() {
+  hide(mealContainer)
+  hide(recipeContainer)
+  hide(viewFavoriteBtn)
+  hide(recipeBtn)
+  hide(cookBtn)
+  hide(potLogo)
+  hide(footer)
+  show(recipeBox)
+  show(homeBtn)
+  show(welcomeMsg)
+  welcomeMsg.innerText = 'Favorites'
+}
+
+function viewHome() {
+  show(mealContainer)
+  show(recipeContainer)
+  show(recipeBtn)
+  show(cookBtn)
+  show(potLogo)
+  show(viewFavoriteBtn)
+  hide(homeBtn)
+  hide(favoritesContainer)
+  hide(welcomeMsg)
 }

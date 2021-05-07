@@ -76,23 +76,42 @@ function clear() {
   clearButton.classList.add("hidden");
 }
 
-function letsCook() {
-  cookpot.classList.add("hidden");
-  recipe.classList.remove("hidden");
-  eatThis.classList.remove("hidden");
-  clearButton.classList.remove("hidden");
-  preventDefault();
-  if (circleSide.checked === true) {
-    recipe.innerText = getRandomSide() + "!";
-  } else if (circleMain.checked === true) {
+// function letsCook() {
+//   cookpot.classList.add("hidden");
+//   recipe.classList.remove("hidden");
+//   eatThis.classList.remove("hidden");
+//   clearButton.classList.remove("hidden");
+//   preventDefault();
+//   if (circleSide.checked === true) {
+//     recipe.innerText = getRandomSide() + "!";
+//   } else if (circleMain.checked === true) {
+//     recipe.innerText = getRandomMain() + "!";
+//   } else if (circleDessert.checked === true) {
+//     recipe.innerText = getRandomDessert() + "!";
+// } else {
+//     cookpot.classList.remove("hidden");
+//     eatThis.classList.add("hidden");
+//     clearButton.classList.add("hidden");
+//     recipe.classList.add("hidden");
+//     showAlert();
+//   }
+
+var x = x.checked === true;
+
+switch (x) {
+  case "circleSide":
+    recipe.innerText = getRandomSide() + "!"
+    break;
+  case "circleMain":
     recipe.innerText = getRandomMain() + "!";
-  } else if (circleDessert.checked === true) {
+    break;
+  case "circleDessert":
     recipe.innerText = getRandomDessert() + "!";
-} else {
+    break;
+  default:
     cookpot.classList.remove("hidden");
     eatThis.classList.add("hidden");
     clearButton.classList.add("hidden");
     recipe.classList.add("hidden");
     showAlert();
-  }
 }

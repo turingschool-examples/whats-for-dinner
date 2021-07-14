@@ -21,3 +21,4 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 - Clone the repository to your local machine
 - `cd` into the project
 - Read this README thoroughly, then begin working!
+- NOTE: Running this project requires 'node -r esm main.js'

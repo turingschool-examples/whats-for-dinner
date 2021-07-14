@@ -45,4 +45,5 @@ var desserts = [
     'Croissants',
     'Eclairs'
 ];
-
+var allDishes = [sides, mains, desserts];
+export {sides, mains, desserts, allDishes};

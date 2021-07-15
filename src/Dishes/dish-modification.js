@@ -6,11 +6,10 @@ export function genRandomDish(dishType) {
 }
 
 export function genRandomMeal(allDishes){
-    var randomMeal = genRandomDish(sides) + ", " + genRandomDish(mains) + ", " + genRandomDish(desserts);
+    var randomMeal = genRandomDish(mains) + " with a side of " + 
+    genRandomDish(sides) + " and " + genRandomDish(desserts) + " for dessert!";
     return randomMeal;
 }
-
-/*
 
 var recipeTypeInput = document.getElementById('recipe-type');
 var recipeNameInput = document.getElementById('recipe-name');
@@ -22,14 +21,3 @@ export function addDish() {
     var type = recipeTypeInput.value;
 }
 
-<div className="add-recipe-tab">
-    <input id="recipe-type" list="type">Recipe Type</input>
-    <input id="recipe-name">Recipe Name</input>
-    <button class="add-recipe-button">Add New Recipe</button>
-    <datalist id="type">
-        <option value="sides">Side</option>
-        <option value="mains">Main</option>
-        <option value="desserts">Dessert</option>
-    </datalist>
-</div>
-*/

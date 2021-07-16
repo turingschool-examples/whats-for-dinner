@@ -46,4 +46,3 @@ export var desserts = [
     'Eclairs'
 ];
 export var allDishes = [sides, mains, desserts];
-//export default {sides, mains, desserts, allDishes};

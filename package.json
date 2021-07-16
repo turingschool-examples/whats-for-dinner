@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "## Overview",
   "main": "main.js",
-  "type": "module",
+  "type":"module",
   "scripts": {
-    "test": "node main.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,5 @@
   "bugs": {
     "url": "https://github.com/Xiao-Lii/whats-for-dinner/issues"
   },
-  "homepage": "https://github.com/Xiao-Lii/whats-for-dinner#readme",
-  "dependencies": {
-    "esm": "^3.2.25",
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/Xiao-Lii/whats-for-dinner#readme"
 }

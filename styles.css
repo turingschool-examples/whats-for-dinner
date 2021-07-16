@@ -50,8 +50,18 @@ red - #ee5253
     font-family: 'Roboto', sans-serif;
 }
 
+.lets-cook-button {
+    background-color: #0fb9b1;
+    cursor: pointer;
+    padding: 0.375rem 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+}
+
 .add-recipe-footer {
     background-color: rgba(225, 225, 225, .9);
+    font-family: 'Roboto', sans-serif;
+    display: none;
 }
 
 .add-new {

@@ -1,13 +1,10 @@
 /* font-family: 'Roboto', sans-serif;
-
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
-
 
 .header {
     background-color: #0fb9b1;
@@ -15,9 +12,26 @@ red - #ee5253
 }
 
 .header-title {
-    margin-left: 10px;
+    margin-left: 30px;
     background-color: #0fb9b1;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+}
+
+.add-recipe-button {
+    float: right;
+    margin: 25px 30px 0px 0px;
+    cursor: pointer;
+    padding: 0.375rem 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.add-recipe-footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #0fb9b1;
+    padding: 10px;
 }
 
 .background-picture {
@@ -27,39 +41,22 @@ red - #ee5253
     margin: 0;
 }
 
-.pot-picture {
-    background-image: url('./assets/cookpot.svg'); 
-}
-
-.body-content {
-    display: inline-block;
-}
-
-.add-recipe-button {
-    position:relative; left:90%; top:-25px;
-    display: inline-block;
-    overflow: auto;
-    white-space: nowrap;
-}
-
 .lets-cook-selection {
     width: 400px;
-    height: 200px;
+    height: 300px;
     padding: 3em;
     margin: 10% 12.5%;
     background-color: rgba(225, 225, 225, 0.9);
-    font-family: Roboto, sans-serif;
-}
-
-.cook-pot-tab {
-    width: 400px;
-    height: 200px;
-    padding: 3em;
-    margin: 10% 12.5%;
-    background-color: rgba(225, 225, 225, 0.9);
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .add-recipe-footer {
     background-color: rgba(225, 225, 225, .9);
-    }
+}
+
+.add-new {
+    padding: 0.375rem 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #0fb9b1;
+}

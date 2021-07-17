@@ -6,9 +6,13 @@ grey - #95a5a6;
 red - #ee5253
 */
 
+/* -------------- Header Elements -------------- */
 .header {
     background-color: #0fb9b1;
     padding: 5px;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .header-title {
@@ -22,18 +26,12 @@ red - #ee5253
     float: right;
     margin: 25px 30px 0px 0px;
     cursor: pointer;
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 2rem;
     border: none;
     border-radius: 0.25rem;
 }
 
-.add-recipe-footer {
-    position: fixed;
-    bottom: 0;
-    background-color: #0fb9b1;
-    padding: 10px;
-}
-
+/* -------------- Body Elements -------------- */
 .background-picture {
     background-image: url('./assets/burger-friends.jpg'); 
     background-size: cover; 
@@ -41,31 +39,59 @@ red - #ee5253
     margin: 0;
 }
 
-.lets-cook-selection {
+.body-content {
+    margin: 20% 12.5%;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+}
+
+.lets-cook-card {
     width: 400px;
     height: 300px;
-    padding: 3em;
-    margin: 10% 12.5%;
+    padding: 3rem 5rem;
     background-color: rgba(225, 225, 225, 0.9);
-    font-family: 'Roboto', sans-serif;
+    grid-column: 1;
 }
 
 .lets-cook-button {
     background-color: #0fb9b1;
     cursor: pointer;
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 3rem;
     border: none;
     border-radius: 0.25rem;
 }
 
-.add-recipe-footer {
-    background-color: rgba(225, 225, 225, .9);
-    font-family: 'Roboto', sans-serif;
+.pot-display-card {
+    background-color: rgba(225, 225, 225, 0.9);
+    width: 400px;
+    height: 300px;
+    padding: 3rem 5rem;
+    text-align: center;
+    margin-right: auto;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.make-statement {
     display: none;
+}
+
+/* -------------- Footer Elements -------------- */
+.add-recipe-footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(225, 225, 225, .9);
+    padding: 10px;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
 }
 
 .add-new {
     padding: 0.375rem 0.75rem;
+    cursor: pointer;
     border: none;
     border-radius: 0.25rem;
     background-color: #0fb9b1;

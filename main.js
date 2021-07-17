@@ -1,7 +1,7 @@
 import {sides, desserts, mains} from './src/Dishes/dishes.js';
-import {genRandomMeal} from './src/Dishes/dish-modification.js';
+import {genRandomDish, genRandomMeal} from './src/Dishes/dish-modification.js';
 
-genRandomMeal(sides);
-console.log(genRandomMeal(sides));
-console.log(genRandomMeal(mains));
-console.log(genRandomMeal(desserts));
+console.log(genRandomDish(sides));
+console.log(genRandomDish(mains));
+console.log(genRandomDish(desserts));
+console.log(genRandomMeal());

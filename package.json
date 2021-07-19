@@ -1,0 +1,24 @@
+{
+  "name": "whats-for-dinner",
+  "version": "1.0.0",
+  "description": "What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals.",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turingschool-examples/whats-for-dinner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turingschool-examples/whats-for-dinner/issues"
+  },
+  "homepage": "https://github.com/turingschool-examples/whats-for-dinner#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "yarn": "^1.22.10"
+  }
+}

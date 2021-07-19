@@ -1,4 +1,12 @@
-import {sides, mains, desserts} from './dishes.js';
+import {sides, mains, desserts, allDishes} from './dishes.js';
+
+var clearButton = document.getElementsByClassName('clear-button')[0];
+var pot = document.getElementById('pot-img');
+var makeText = document.getElementsByClassName('make-statement')[0];
+var typeSelection = document.getElementsByClassName('dishType');
+var isChecked = false;
+
+pot.querySelector
 
 
 /* ------------- Generate Random Dish ------------- */
@@ -24,6 +32,32 @@ export function toggleFooter() {
         recipeFooter.style.display = 'block';
     }
     return console.log(recipeFooter.style.display);
+}
+
+/* ------------- Hide Pot at Let's Cook Action ------------- */
+export function togglePot() {
+    for (var i = 0; i < typeSelection.length; i++) {
+      if (typeSelection[i].isChecked){
+        isChecked = true;
+        console.log('Is Checked is true')
+        break;
+      }
+    }
+
+    if (!isChecked) {
+      console.log('Please select a dish option.')
+    }
+
+    if (pot.style.display === 'block') {
+      pot.style.display = 'none';
+      makeText.style.display = 'block';
+      clearButton.style.display = 'block';
+    } else {
+      pot.style.display = 'block';
+      makeText.style.display = 'none';
+      clearButton.style.display = 'none';
+    }
+    return console.log(isChecked);
   }
 
 /*

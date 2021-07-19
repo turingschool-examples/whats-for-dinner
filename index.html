@@ -1,10 +1,83 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "./styles.css">
+    <link href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel = "stylesheet">
+
+  <! ------- HTML for the title + Recipe button's Function------- >
+  <div class = "main-title">
+    <h2 class = "title"> What's for Dinner? </h2>
+    <button class = "add-recipe-button" onclick = "displayRecipesTab()"> ADD A RECIPE </button>
+    <script class = "hiddenRecipeButton">
+      function displayRecipesTab() {
+        var displayAddedRecipeTab = document.getElementsByClassName('addedRecipes')[0];
+        
+        if (displayAddedRecipeTab.style.display === 'block') {
+            displayAddedRecipeTab.style.display = 'none';
+        } else {
+            displayAddedRecipeTab.style.display = 'block';
+        }
+        return console.log(displayAddedRecipeTab.style.display);
+      }
+    </script>
+  </div>
   </head>
-  <body>
-    
+  
+  <! ------- HTML for the background picture ------- >
+  <body class = "background-picture">
+
+  <! -------  HTML for "What are you looking for?" section ------- >
+  <div class = "selection">
+    <h1> What are you looking for? </h1>
+    <input type = "radio" name="radAnswer" id = "select-option1"> </input>
+    <label> Side </label><br>
+    <input type = "radio" name="radAnswer" id = "select-option2"> </input>
+    <label> Main Dish </label><br>
+    <input type = "radio" name="radAnswer" id = "select-option3" > </input>
+    <label> Dessert </label><br>
+    <input type = "radio" name="radAnswer" id = "select-option4"> </input>
+    <label> Entire Meal </label><br><br>
+    <button class = "display-food" onclick = "hidePotImage()"> LET'S COOK! </button>
+  </div>
+
+  <! ------- HTML for the second box display ------- >  
+  <div class = "second-box">
+    <h3 class = "title"> You should make: </h3>
+    <img id='pot' src="assets/cookpot.svg" width="200px" height="200px"></img>
+  </div>
+  <script class = "hiddenPot">
+    function hidePotImage(){
+      var hideImage = document.getElementById('pot');
+
+      if (hideImage.style.display === 'block'){
+          hideImage.style.display ='none';
+      } else {
+        hideImage.style.display = 'block';
+      }
+      return console.log(hideImage.style.display);
+    }
+  </script>
   </body>
+
+  <footer>
+    <! ------- HTML for the user to add a recipe ------- >
+    <div class = "addedRecipes">
+      <input id = "recipe-type" list = "type"> Recipe Type </input>
+      <input id = "recipe-name" list = "input"> Recipe Name </input>
+      <button class = "add-a-recipe-button"> ADD NEW </button>
+      <datalist id = "type">
+        <option value = "Side Dishes"></option>
+        <option value = "Main Dishes"></option>
+        <option value = "Dessert Dishes"></option>
+        </datalist>
+    </div>
+  </footer>
+
   <script type="text/javascript" src="main.js"></script>
-</html>
+  </html>
+
+  <! ------- HTML for the login page ------- >
+  <!-- <div class = "login">
+    <label for="name">Name:</label>
+    <input type="text" id="users-name" name="name">
+    <button class = "add-name"> Submit </button>
+  </div> -->

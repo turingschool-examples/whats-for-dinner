@@ -1,4 +1,4 @@
-export var sides = [
+var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
     'Garden Salad',
@@ -10,7 +10,7 @@ export var sides = [
     'Garlic Butter Mushrooms',
     'Hush Puppies'
 ];
-export var mains = [
+var mains = [
     'Spaghetti and Meatballs',
     'Pineapple Chicken',
     'Shakshuka',
@@ -25,7 +25,7 @@ export var mains = [
     'Sheet Pan Fajitas',
     'Margarita Pizza'
 ];
-export var desserts = [
+var desserts = [
     'Apple Pie',
     'Lemon Meringue Pie',
     'Black Forest Cake',
@@ -45,7 +45,7 @@ export var desserts = [
     'Croissants',
     'Eclairs'
 ];
-export var allDishes = [
+var allDishes = [
     {name: 'Miso Glazed Carrots', type: 'Side'},
     {name: 'Coleslaw', type: 'Side'},
     {name: 'Garden Salad', type: 'Side'},

@@ -79,6 +79,11 @@ red - #ee5253
     display: none;
 }
 
+.result-statement {
+    display: none;
+    font-size: 34px;
+}
+
 .clear-button {
     background-color: #95a5a6;
     cursor: pointer;
@@ -87,7 +92,7 @@ red - #ee5253
     border-radius: 0.25rem;
     display: none;
     float: right;
-    margin: 55% 0 0 15%;
+    margin: 5% 0 0 15%;
     color: white;
 }
 

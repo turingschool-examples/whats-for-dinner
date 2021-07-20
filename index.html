@@ -2,31 +2,14 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script type="module" src="./src/Dishes/dish-modification.js"></script>
-    <script type="module" src="./src/Dishes/dishes.js"></script>
     <script type="text/javascript" src="./src/Dishes/dishes.js"></script>
     <script type="text/javascript" src="./src/Dishes/dish-modification.js"></script>
-
 
     <!--------------- Top Header Content --------------->
     <div class="header">
       <h2 class="header-title">What's for Dinner?</h2>
       <button class="add-recipe-button" onclick="toggleFooter()">ADD A RECIPE</button>
-      <script class="toggleFooterScript">
-        function toggleFooter() {
-          var recipeFooter = document.getElementsByClassName('add-recipe-footer')[0];
-          var addRecipeButton = document.getElementsByClassName('add-recipe-button')[0];
 
-          if (recipeFooter.style.display === 'none') {
-              recipeFooter.style.display = 'block';
-              addRecipeButton.innerHTML = 'DONE ADDING RECIPES';
-          } else {
-              recipeFooter.style.display = 'none';
-              addRecipeButton.innerHTML = 'ADD A RECIPE';
-          }
-          return console.log(recipeFooter.style.display);
-        }
-      </script>
     </div>
   </head>
 
@@ -37,56 +20,24 @@
       <!--------------- Left Selection Card --------------->
       <div class = "lets-cook-card">
         <h1>What are you looking for?</h1>
-        <input class="dishType" type = "radio" name="radAnswer" id="side-option"> </input>
+        <input class="radio" type = "radio" name="radAnswer" id="side-option"> </input>
         <label> Side </label><br><br>
-        <input class="dishType" type = "radio" name="radAnswer" id="main-option"> </input>
+        <input class="radio" type = "radio" name="radAnswer" id="main-option"> </input>
         <label> Main Dish </label><br><br>
-        <input class="dishType" type = "radio" name="radAnswer" id="dessert-option" > </input>
+        <input class="radio" type = "radio" name="radAnswer" id="dessert-option" > </input>
         <label> Dessert </label><br><br>
-        <input class="dishType" type = "radio" name="radAnswer" id="meal-option"> </input>
+        <input class="radio" type = "radio" name="radAnswer" id="meal-option"> </input>
         <label> Entire Meal </label><br><br>
-        <button class = "lets-cook-button" onclick="togglePot()">LET'S COOK!</button>
-        <script class="togglePotScript">
-          function togglePot() {
-            var pot = document.getElementById('pot-img');
-            var makeText = document.getElementsByClassName('make-statement')[0];
-            var clearButton = document.getElementsByClassName('clear-button')[0];
-            var typeSelection = document.getElementsByClassName('radAnswer');
-            var isChecked = false;
-
-            for (var i = 0; i < typeSelection.length; i++) {
-              if (typeSelection[i].isChecked){
-                isChecked = true;
-                console.log('Is Checked is true')
-                break;
-              }
-            }
-
-            if (!isChecked) {
-              console.log('Please select a dish option.')
-            }
-  
-            if (pot.style.display === 'block') {
-              pot.style.display = 'none';
-              makeText.style.display = 'block';
-
-              clearButton.style.display = 'block';
-            } else {
-              pot.style.display = 'block';
-              makeText.style.display = 'none';
-              clearButton.style.display = 'none';
-            }
-            return console.log(isChecked);
-          }
-        </script>
+        <button id="lets-cook-button" class="lets-cook-button" onclick="genDish()">LET'S COOK!</button>
       </div><br>
 
       <!--------------- Display Recipe Card --------------->
       <div class = "pot-display-card">
         <br>
         <img id="pot-img" src="assets/cookpot.svg" width="400px" height="300px"></img>
-        <p class="make-statement"><i>You should make:</i></p>
-        <button class = "clear-button" onclick="togglePot()">CLEAR</button>
+        <h3 id="make-statement" class="make-statement"><i>You should make:</i></h3>
+        <h2 id="result-statement" class="result-statement"></h2>
+        <button id="clear-button" class="clear-button">CLEAR</button>
       </div>
     </div>    
   </body>

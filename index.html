@@ -1,10 +1,33 @@
-<html>
+<html lang="en" dir="rtl">
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <nav>
+      <h1>What's for Dinner?</h1>
+      <button type="button" id="add-a-recipe">ADD A RECIPE</button>
+    </nav>
+    <main>
+      <img src="./assets/burger-friends.jpg" alt="Friends Eating Burgers"/>
+      <section>
+        <p>What are you looking for?*</p>
+        <input type="radio" id="side" name="dish" value="side">
+        <label for="side">Side</label>
+        <input type="radio" id="main-dish" name="dish" value="main-dish">
+        <label for="main-dish">Main Dish</label>
+        <input type="radio" id="dessert" name="dish" value="dessert">
+        <label for="dessert">Dessert</label>
+        <input type="radio" id="entire-meal" name="dish" value="entire-meal">
+        <label for="entire-meal">Entire Meal</label>
+          <section>
+            <button type="button" id="lets-cook">LETS'S COOK!</button>
+          </section>
+      </section>
+      <section>
+        <img src="./assets/cookpot.svg" alt="Cookpot Icon"/>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

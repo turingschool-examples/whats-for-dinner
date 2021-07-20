@@ -7,23 +7,74 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-header {
+.header {
     margin: 0;
     background: #12B9B2;
+    height: 5vh;
+    position: relative;
 }
+
 
 .body-style {
     margin: 0;
     background-image: url(./assets/burger-friends.jpg);
+    /* position: relative;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    position: relative;
 }
 
-.boxes {
-    background: frosted white - rgba(225, 225, 225, .9);
-    height: 40vh;
-    width: 40vw;
-    position: center right;
+.box-form {
+    background: rgba(225, 225, 225, .9);
+    height: 50vh;
+    width: 30vw;
+    position: absolute;
+    top: 350%;
+    left: 10%;
+}
+.form {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    line-height: 300%;
+}
+.box-pot {
+    background: rgba(225, 225, 225, .9);
+    height: 50vh;
+    width: 30vw;
+    position: absolute;
+    top: 350%;
+    right: 10%;
+}
+
+.classy-pot {
+    height: 40%;
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+
+.title {
+    margin-right: 120px;
+}
+
+.add-recipe-button {
+    border: 0;
+    border-radius: 7px;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    width: 20 px;
+    height: 2.5vh;
+    background-color: #EEEEEF;
+    transform: translate(-50%);
 }

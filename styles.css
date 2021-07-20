@@ -8,3 +8,16 @@ red - #ee5253
 
 */
 
+body {
+    background: url("Users/tony/turing/mod1/whats-for-dinner/assets/burger-friends.jpg");
+    background-size: cover;
+
+}
+
+
+img {
+    display: grid;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}

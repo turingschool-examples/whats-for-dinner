@@ -12,6 +12,7 @@ red - #ee5253
     background: #12B9B2;
     height: 5vh;
     position: relative;
+    
 }
 
 
@@ -30,6 +31,14 @@ red - #ee5253
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+}
+
+.lets-cook-button {
+    border: 0;
+    border-radius: 7px;
+    width: 200px;
+    height: 3.5vh;
+    background-color: #12B9B2;
 }
 
 .box-form {

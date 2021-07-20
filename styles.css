@@ -12,20 +12,13 @@ red - #ee5253
     background: #12B9B2;
     height: 5vh;
     position: relative;
-    
+    font-family: 'roboto', sans-serif;
 }
 
 
 .body-style {
     margin: 0;
     background-image: url(./assets/burger-friends.jpg);
-    /* position: relative;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -33,18 +26,25 @@ red - #ee5253
     position: relative;
 }
 
+.required {
+    color: #ee5253;
+}
+
 .lets-cook-button {
     border: 0;
     border-radius: 7px;
-    width: 200px;
-    height: 3.5vh;
+    width: 80%;
+    height: 40px;
     background-color: #12B9B2;
+    position: absolute;
+    top: 120%;
+    font-family: 'roboto', sans-serif;
 }
 
 .box-form {
     background: rgba(225, 225, 225, .9);
-    height: 50vh;
-    width: 30vw;
+    height: 1000%;
+    width: 30%;
     position: absolute;
     top: 350%;
     left: 10%;
@@ -54,11 +54,14 @@ red - #ee5253
     top: 10%;
     left: 10%;
     line-height: 300%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'roboto';
 }
 .box-pot {
     background: rgba(225, 225, 225, .9);
-    height: 50vh;
-    width: 30vw;
+    height: 1000%;
+    width: 30%;
     position: absolute;
     top: 350%;
     right: 10%;
@@ -74,6 +77,7 @@ red - #ee5253
 
 .title {
     margin-right: 120px;
+    position: absolute;
 }
 
 .add-recipe-button {
@@ -82,8 +86,8 @@ red - #ee5253
     position: absolute;
     top: 25%;
     right: 0;
-    width: 20 px;
-    height: 2.5vh;
+    width: 7%;
+    height: 50%;
     background-color: #EEEEEF;
     transform: translate(-50%);
 }

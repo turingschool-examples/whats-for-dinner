@@ -8,13 +8,15 @@ red - #ee5253
 
 */
 
-/* header */
-/* header.page-header > h1 {
-  font: sans-serif;
-  margin: 2px;
-
-} */
+h1 {
+font-family: 'Roboto', sans-serif;
+}
 
 body {
-  background: "burger-friends.jpg";
+  background: url(./burger-friends.jpg);
+  background-color: magenta;
 }
+
+/* h1 {
+header: 125px #0fb9b1;
+} */

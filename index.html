@@ -7,26 +7,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
   </head>
   <title>Whats's for Dinner?</title>
+  <nav class="nav-bar">What's for Dinner?</nav>
   <body>
-    <div class="sub-heading"><p>What's for Dinner?</p>
-    </div>
     <div class="main-box">
       <div class="looking-for">What are you looking for?
       </div>
-      <div class="radio-buttons">
-        <div>
-          <input type="radio">Side
+      <div>
+        <radio-buttons> 
+          <div>
+            <input type= "radio" id= "side-radio" name= "meal-radio" value= "side-radio">
+            <label for="side">Side</label>
+          </div>
+          <div>
+            <input type= "radio" id= "main-radio" name= "meal-radio" value= "main-radio">
+            <label for="main">Main Dish</label>
+          </div>
+          <div>
+            <input type= "radio" id= "dessert-radio" name= "meal-radio" value= "dessert-radio">
+            <label for="desssert">Dessert</label>
+          <div>
+            <input type= "radio" id= "entire-meal-radio" name= "meal-radio" value= "entire-meal-radio">
+            <label for="entire-meal">Entire Meal</label>
+          </div>
+          </radio-buttons>
         </div>
-        <div>
-          <input type="radio">Main Dish
-        </div>
-        <div>
-          <input type="radio">Dessert
-        </div>
-        <div>
-          <input type="radio">Entire Meal
-        </div>
-      <button class="cook-button">Let's Cook!</button>
+        <button type="button">LET'S COOK!</button>
+        
+      
       </div>
 
       

@@ -7,4 +7,21 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+ h1 {
+background-color: #0fb9b1;
+}
 
+body {
+  background-image: url("assets/burger-friends.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+button {
+  padding: px;
+  width: px;
+  font-size: px;
+  margin-top: px;
+}

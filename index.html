@@ -10,23 +10,23 @@
     </header>
     <main>
       <div id="box-1">
-        <form>
+        <form id="meal-option-form">
           <h1>What are you looking for?<span>*</span></h1>
           <div class="options-form">
             <div class="option">
-              <input id="side" type="radio">
+              <input id="side" type="radio" name="options">
               <label for="side">Side</label>
             </div>
             <div class="option">
-              <input id="main-dish" type="radio">
+              <input id="main-dish" type="radio" name="options">
               <label for="main-dish">Main Dish</label>
             </div>
             <div class="option">
-              <input id="Dessert" type="radio">
-              <label for="Dessert">Dessert</label>
+              <input id="dessert" type="radio" name="options">
+              <label for="dessert">Dessert</label>
             </div>
             <div class="option">
-              <input id="entire-meal" type="radio">
+              <input id="entire-meal" type="radio" name="options">
               <label for="entire-meal">Entire Meal</label>
             </div>
             <button id="lets-cook-button">LET'S COOK!</button>
@@ -34,9 +34,12 @@
         </form>
       </div>
       <div id="box-2">
-        <img src="assets/cookpot.svg">
+        <img id="cook-pot" src="assets/cookpot.svg">
+        <div id="should-make-text" hidden><em>You should make:</em></div>
+        <div id="recipe-text"></div>
       </div>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="assets/recipies.js"></script>
 </html>

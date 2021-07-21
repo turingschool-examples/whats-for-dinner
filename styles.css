@@ -11,7 +11,48 @@ red - #ee5253
 body {
     background: url("assets/burger-friends.jpg");
     background-size: cover;
-
+    background-position: 0 50px;
+    background-repeat: no-repeat;
+    margin: 0;
 }
 
+.sub-heading {
+    background-color: #b62e00;
+    color: #f9d500;
+    padding: 10px;
+    font-size: 35px;
+    font-family: 'Chewy', cursive;
+    letter-spacing: 2px;
+}
+
+.main-box {
+    border: 5px solid blue;
+    padding: 50px;
+    margin: 100px 800px 0px 200px;
+    font-size: 30px;
+    background-color: bisque;
+    opacity: 0.8;
+}
+
+.looking-for {
+    font-family: 'Chewy', cursive;
+    font-size: 25px;
+    padding: 10px;
+    margin: 0px 0px 5px 0px;
+}
+
+.radio-buttons {
+    font-size: 25px;
+    font-family: 'Chewy', cursive;
+}
+
+.cook-button {
+    background-color: hsl(15, 100%, 50%);
+    border-radius: 30px;
+    margin: 10px 0px 0px 30px;
+    padding: 10px 25px;
+    font-size: 25px;
+    font-family: 'Chewy', cursive;
+    text-align: center;
+}
 

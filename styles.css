@@ -56,6 +56,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #box-2 img{
@@ -73,6 +74,12 @@ main{
     border: none;
     font-size: 1em;
 }
+
+#recipe-text{
+    font-size: 3em;
+}
+
+
 
 .options-form{
     display: flex;

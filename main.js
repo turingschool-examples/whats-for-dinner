@@ -40,13 +40,23 @@ var letsCookButton = document.querySelector('#lets-cook');
 var potImg = document.querySelector('#pot-img');
 var potSection = document.querySelector('#pot-section');
 var selectedMeals = document.getElementsByName('answer');
-
+var clearButton = document.querySelector('#clear');
+// var resultSection = document.querySelector('.result-p');
+// var resultMealSelection = document.querySelector('.meal-selection');
+var resultSection = document.querySelector('#result-section');
 
 letsCookButton.addEventListener('click', letsCook);
+clearButton.addEventListener('click', clearResults);
 
+function clearResults(event) {
+    event.preventDefault();
+    resultSection.classList.add('hidden');
+    potImg.classList.remove('hidden');
+};
 
 function letsCook(event) {
     event.preventDefault();
+    potImg.classList.add('hidden');
     var randomSide = sides[getRandomNumber(sides)];
     var randomDish = mainDishes[getRandomNumber(mainDishes)];
     var randomDessert = desserts[getRandomNumber(desserts)];
@@ -55,17 +65,21 @@ function letsCook(event) {
         if (selectedMeals[i].checked) {
             userInput = selectedMeals[i].id;
             if (userInput === 'side') {
-                potSection.innerHTML = `<p class="result-p"> You should make:</p>
+                resultSection.innerHTML = `<p class="result-p"> You should make:</p>
                 <p class="meal-selection">${randomSide}!</p>`;
+                clearButton.classList.remove('hidden');
             } else if (userInput === 'main-dish') {
-                potSection.innerHTML = `<p class="result-p"> You should make:</p>
+                resultSection.innerHTML = `<p class="result-p"> You should make:</p>
                 <p class="meal-selection">${randomDish}!</p>`;
+                clearButton.classList.remove('hidden');
             } else if (userInput === 'dessert') {
-                potSection.innerHTML = `<p class="result-p"> You should make:</p>
+                resultSection.innerHTML = `<p class="result-p"> You should make:</p>
                 <p class="meal-selection">${randomDessert}!</p>`;
+                clearButton.classList.remove('hidden');
             } else if (userInput === 'entire-meal') {
-                potSection.innerHTML = `<p class="result-p"> You should make:</p>
+                resultSection.innerHTML = `<p class="result-p"> You should make:</p>
                 <p class="meal-selection">${randomDish} with a side of ${randomSide} and ${randomDessert} for dessert!</p>`;
+                clearButton.classList.remove('hidden');
             };       
         };
     };

@@ -25,10 +25,7 @@ red - #ee5253
 .body-style {
     margin: 0;
     background-image: url(./assets/burger-friends.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-size: 100vw; 
     position: relative;
 }
 

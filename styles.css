@@ -8,3 +8,9 @@ red - #ee5253
 
 */
 
+/* header */
+header.page-header > h1 {
+  font: sans-serif;
+  margin: 2px;
+
+}

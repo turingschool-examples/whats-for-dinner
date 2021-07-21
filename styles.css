@@ -18,6 +18,7 @@ red - #ee5253
     height: 5vh;
     position: relative;
     font-family: 'roboto', sans-serif;
+    align-items: center;
 }
 
 
@@ -83,7 +84,7 @@ red - #ee5253
 }
 
 .title {
-    margin-right: 120px;
+    margin: 0.75%;
     position: absolute;
 }
 
@@ -101,16 +102,22 @@ red - #ee5253
 
 .result-p {
     position:absolute;
-    top: 50%;
-    right: 40%;
+    top: 30%;
+    right: 30%;
+    left:30%;
     font-family: 'roboto', sans-serif;
     font-style: italic;
+    text-align: center;
 }
 
 .meal-selection {
+    margin: 0;
     position:absolute;
-    top: 60%;
-    right: 35%;
+    top: 40%;
+    right: 10%;
+    left: 10%;
+    bottom: 10%;
     font-family: 'roboto', sans-serif;
     font-size: xx-large;
+    text-align: center;
 }

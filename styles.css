@@ -39,8 +39,8 @@ red - #ee5253
 .lets-cook-button {
     border: 0;
     border-radius: 7px;
-    width: 80%;
-    height: 40px;
+    width: 60%;
+    height: 25%;
     background-color: #12B9B2;
     position: absolute;
     top: 220%;
@@ -96,11 +96,11 @@ red - #ee5253
     border-radius: 7px;
     position: absolute;
     top: 25%;
-    right: 0;
+    right: 5%;
     width: 7%;
     height: 50%;
     background-color: #EEEEEF;
-    transform: translate(-50%);
+    font-family: 'roboto' sans-serif;
 }
 
 .result-p {
@@ -125,4 +125,19 @@ red - #ee5253
     font-size: xx-large;
     text-align: center;
     -webkit-text-size-adjust: 70vh;
+}
+
+.clear-button {
+    position: absolute;
+    top: 1130%;
+    left: 81%;
+    background-color: #95a5a6;
+    border-radius: 5px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 6%;
+    height: 70%;
+    font-family: 'roboto', sans-serif;
 }

@@ -41,8 +41,7 @@ var potImg = document.querySelector('#pot-img');
 var potSection = document.querySelector('#pot-section');
 var selectedMeals = document.getElementsByName('answer');
 var clearButton = document.querySelector('#clear');
-// var resultSection = document.querySelector('.result-p');
-// var resultMealSelection = document.querySelector('.meal-selection');
+var form = document.querySelector('#grab-form');
 var resultSection = document.querySelector('#result-section');
 
 letsCookButton.addEventListener('click', letsCook);
@@ -52,38 +51,48 @@ function clearResults(event) {
     event.preventDefault();
     resultSection.classList.add('hidden');
     potImg.classList.remove('hidden');
+    clearButton.classList.add('hidden');
+    form.reset();
 };
 
 function letsCook(event) {
     event.preventDefault();
-    potImg.classList.add('hidden');
     var randomSide = sides[getRandomNumber(sides)];
     var randomDish = mainDishes[getRandomNumber(mainDishes)];
     var randomDessert = desserts[getRandomNumber(desserts)];
     var userInput;
-    for (var i = 0; i < selectedMeals.length; i++) {
-        if (selectedMeals[i].checked) {
+
+    if(!selectedMeals[0].checked && !selectedMeals[1].checked && !selectedMeals[2].checked && !selectedMeals[3].checked) {
+        return alert('Please select one meal.');
+    };
+    for (var i = 0; i < selectedMeals.length; i++) {  
+         if (selectedMeals[i].checked) {
             userInput = selectedMeals[i].id;
-            if (userInput === 'side') {
-                resultSection.innerHTML = `<p class="result-p"> You should make:</p>
-                <p class="meal-selection">${randomSide}!</p>`;
-                clearButton.classList.remove('hidden');
+             if (userInput === 'side') {
+                renderMessage(randomSide);
             } else if (userInput === 'main-dish') {
-                resultSection.innerHTML = `<p class="result-p"> You should make:</p>
-                <p class="meal-selection">${randomDish}!</p>`;
-                clearButton.classList.remove('hidden');
+                renderMessage(randomDish);
             } else if (userInput === 'dessert') {
-                resultSection.innerHTML = `<p class="result-p"> You should make:</p>
-                <p class="meal-selection">${randomDessert}!</p>`;
-                clearButton.classList.remove('hidden');
+                renderMessage(randomDessert);
             } else if (userInput === 'entire-meal') {
                 resultSection.innerHTML = `<p class="result-p"> You should make:</p>
                 <p class="meal-selection">${randomDish} with a side of ${randomSide} and ${randomDessert} for dessert!</p>`;
                 clearButton.classList.remove('hidden');
-            };       
-        };
+                potImg.classList.add('hidden');
+                resultSection.classList.remove('hidden');
+            } 
+        }   
     };
+
+    
 };
 function getRandomNumber(array) {
     return Math.floor(Math.random() * array.length);
+};
+function renderMessage(foodType) {
+    resultSection.innerHTML = `<p class="result-p"> You should make:</p>
+      <p class="meal-selection">${foodType}!</p>`;
+      clearButton.classList.remove('hidden');
+      potImg.classList.add('hidden');
+     resultSection.classList.remove('hidden');
 };

@@ -43,7 +43,7 @@ red - #ee5253
     height: 40px;
     background-color: #12B9B2;
     position: absolute;
-    top: 120%;
+    top: 220%;
     font-family: 'roboto', sans-serif;
 }
 
@@ -63,7 +63,10 @@ red - #ee5253
     line-height: 300%;
     display: flex;
     flex-direction: column;
-    font-family: 'roboto';
+    font-family: 'roboto' sans-serif;
+    height: 30%;
+    width: 70%;
+    -webkit-text-size-adjust: 70vw;
 }
 .box-pot {
     background: rgba(225, 225, 225, .9);
@@ -84,7 +87,7 @@ red - #ee5253
 }
 
 .title {
-    margin: 0.75%;
+    margin: 1vh;
     position: absolute;
 }
 
@@ -108,6 +111,7 @@ red - #ee5253
     font-family: 'roboto', sans-serif;
     font-style: italic;
     text-align: center;
+    -webkit-text-size-adjust: auto;
 }
 
 .meal-selection {
@@ -120,4 +124,5 @@ red - #ee5253
     font-family: 'roboto', sans-serif;
     font-size: xx-large;
     text-align: center;
+    -webkit-text-size-adjust: 70vh;
 }

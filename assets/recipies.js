@@ -7,6 +7,6 @@ var side = [
 'Coconut Rice',
 'Caeser Salad',
 'Shrimp Summer Rolls',
-'Garlic Butter Mushrooms',
 'Hush Puppies',
+'Garlic Butter Mushrooms',
 ]

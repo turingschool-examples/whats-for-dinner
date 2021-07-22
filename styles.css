@@ -7,4 +7,59 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: img src="./assets/burger-friends.jpg" alt="Friends Eating Burgers";
+}
 
+nav {
+   background-color: #0fb9b1;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px 0 20px;
+ }
+
+ main {
+   display: flex;
+   justify-content: space-around;
+   
+ }
+
+ .add-a-recipe {
+   border-style: none;
+   border-radius: 10%;
+   padding: 10px;
+ }
+
+ .what-are-you-looking-for-section {
+   background-color: aqua;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+   height: 400px;
+   width: 450px;
+   padding-left: 50px;
+ }
+
+ .what-are-you-looking-for-text {
+  font-weight: 900;
+  font-size: x-large;
+ }
+
+ .lets-cook {
+  border-radius: 5%;
+  padding: 10px;
+  width: 180px;
+  background-color: #0fb9b1;
+  border: 2px solid blue;
+}
+ 
+ .cookpot-recipe-section {
+   background-color: aqua;
+   display: flex;
+   justify-content: center;
+   height: 400px;
+   width: 450px;
+ }

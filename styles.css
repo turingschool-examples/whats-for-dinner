@@ -8,7 +8,7 @@ red - #ee5253
 
 */
 
-h1 {
+.page-title {
 font-family: 'Roboto', sans-serif;
 }
 
@@ -16,6 +16,13 @@ body {
   background: url(assets/burger-friends.jpg);
 }
 
+/* image-cookpot {
+  image: url(assets/cookpot.svg);
+} */
+
+/* .boxed {
+  border: 5px solid black ;
+} */
 
 /*need other background criteria to fit to the page
 flexbox?

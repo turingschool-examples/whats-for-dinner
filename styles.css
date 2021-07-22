@@ -14,22 +14,34 @@ body {
     background-position: 0 50px;
     background-repeat: no-repeat;
     margin: 0;
-    }
+}
 
 .nav-bar {
     background-color: #0fb9b1;
     padding: 8px;
-    font-size: 35px;
+    font-size: 30px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
 }
 
-.main-box {
-    padding: 50px;
-    margin: 100px 800px 0px 200px;
-    font-size: 20px;
+.add-recipe-button {
     background-color: rgba(225, 225, 225, .9);
-    }
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+;
+}
+
+.two-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: auto;
+    align-items: flex-end;
+}
 
 .looking-for {
     font-family: 'Roboto', sans-serif;
@@ -38,7 +50,24 @@ body {
     margin: 0px 0px 5px 0px;
 }
 
-radio-buttons {
+.first-box {
+    padding: 50px;
+    font-size: 20px;
+    background-color: rgba(225, 225, 225, .9);
+}
+
+.second-box {
+    background-image: url(assets/cookpot.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 100px;
+    padding: 183px;
+    margin-top: 100px;
+    background-color: rgba(225, 225, 225, .9);
+}
+
+form {
     padding: 20px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
@@ -47,7 +76,7 @@ radio-buttons {
     flex-direction: column;
 }
 
-button {
+.lets-cook-btn {
     font-family: 'Roboto', sans-serif;
     margin: 10px;
     padding: 5px;
@@ -57,6 +86,7 @@ button {
     border: none;
     border-radius: 8px;
 }
+
 
 
 

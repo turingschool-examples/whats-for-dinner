@@ -4,43 +4,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    
   </head>
   <title>Whats's for Dinner?</title>
-  <nav class="nav-bar">What's for Dinner?</nav>
+  <nav class="nav-bar">What's for Dinner?
+    <button type="button" class= "add-recipe-button">ADD A RECIPE</button>
+  </nav>
   <body>
-    <div class="main-box">
-      <div class="looking-for">What are you looking for?
-      </div>
-      <div>
-        <radio-buttons> 
-          <div>
-            <input type= "radio" id= "side-radio" name= "meal-radio" value= "side-radio">
-            <label for="side">Side</label>
-          </div>
-          <div>
-            <input type= "radio" id= "main-radio" name= "meal-radio" value= "main-radio">
-            <label for="main">Main Dish</label>
-          </div>
-          <div>
-            <input type= "radio" id= "dessert-radio" name= "meal-radio" value= "dessert-radio">
-            <label for="desssert">Dessert</label>
-          <div>
-            <input type= "radio" id= "entire-meal-radio" name= "meal-radio" value= "entire-meal-radio">
-            <label for="entire-meal">Entire Meal</label>
-          </div>
-          </radio-buttons>
+    <div class="two-boxes">
+      <div class="first-box">
+        <div class="looking-for">What are you looking for?
         </div>
-        <button type="button">LET'S COOK!</button>
-        
+        <div>
+          <form> 
+            <div>
+              <input type= "radio" name= "meal-radio" value= "side-radio">
+              <label for="side">Side</label>
+            </div>
+            <div>
+              <input type= "radio" name= "meal-radio" value= "main-radio">
+              <label for="main">Main Dish</label>
+            </div>
+            <div>
+              <input type= "radio" name= "meal-radio" value= "dessert-radio">
+              <label for="desssert">Dessert</label>
+            </div>
+            <div>
+              <input type= "radio" name= "meal-radio" value= "entire-meal-radio">
+              <label for="entire-meal">Entire Meal</label>
+            </div>
+          </form>
+        </div>
+          <button type="button" class="lets-cook-btn">LET'S COOK!</button>
+      </div>
+      <div class="second-box">
       
       </div>
-
-      
-
     </div>
- 
-    
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

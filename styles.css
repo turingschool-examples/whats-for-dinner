@@ -13,10 +13,9 @@ font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background: url(./burger-friends.jpg);
-  background-color: magenta;
+  background: url(assets/burger-friends.jpg);
 }
-
+//need other background criteria to fit to the page
 /* h1 {
 header: 125px #0fb9b1;
 } */

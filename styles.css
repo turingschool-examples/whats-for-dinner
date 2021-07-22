@@ -15,7 +15,12 @@ font-family: 'Roboto', sans-serif;
 body {
   background: url(assets/burger-friends.jpg);
 }
-//need other background criteria to fit to the page
+
+
+/*need other background criteria to fit to the page
+flexbox?
+/which items here and then connect to html?
+
 /* h1 {
 header: 125px #0fb9b1;
 } */

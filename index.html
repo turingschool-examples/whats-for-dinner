@@ -8,27 +8,31 @@
   </head>
   <body>
     <header>
-      <h1 class="red-star">What's for Dinner?</h1>
+      <section class="header-section">
+      <h1>What's for Dinner?</h1>
       <button class="add-a-recipe-button" id="addRecipeBtn">ADD A RECIPE</button>
+      </section>
     </header>
     <main>
-    <section class="menu-container">
-      <form class="menu-selection">
+      <section class="menu-container">
         <h2>What are you looking for? <span class="red-star">*</span></h2>
-        <input type="radio" name="menu-options" value="side-dish">
-        <label for="side-dish">Side</label>
-        <input type="radio" name="menu-options" value="main-dish">
-        <label for="main-dish">Main Dish</label>
-        <input type="radio" name="menu-options" value="desserts">
-        <label for="desserts">Dessert</label>
-        <input type="radio" name="menu-options" value="entire-meal">
-        <label for="entire-meal">Entire Meal</label>
-        <button class="lets-cook-button" id="letsCookBtn">LET'S COOK!</button>
-      </form>
-    </section>
-    <section class="dish-container">
-      <img class="dish-image hidden"src="./assets/cookpot.svg" alt="cookpot">
-    </section>
+        <form class="menu-selection">
+          <input type="radio" name="menu-options" value="side-dish"/>
+          <label for="side-dish">Side</label>
+          <input type="radio" name="menu-options" value="main-dish"/>
+          <label for="main-dish">Main Dish</label>
+          <input type="radio" name="menu-options" value="desserts"/>
+          <label for="desserts">Dessert</label>
+          <input type="radio" name="menu-options" value="entire-meal"/>
+          <label for="entire-meal">Entire Meal</label>
+          <button class="lets-cook-button" id="letsCookBtn">LET'S COOK!</button>
+        </form>
+      </section>
+      <section class="dish-container">
+        <img class="dish-image hidden"src="./assets/cookpot.svg" alt="cookpot">
+        <p class="hidden">You should make:</p>
+        <p class="hidden">This will be a dish paragraph</p>
+      </section>
     </main>
   </body>
   <script type="text/javascript" src="data.js"></script>

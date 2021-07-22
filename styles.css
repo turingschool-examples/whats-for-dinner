@@ -8,3 +8,66 @@ red - #ee5253
 
 */
 
+body {
+  background-image: url('./assets/burger-friends.jpg');
+  background-size: 100%;
+  font-family: 'Roboto', sans-sans-serif;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #0fb9b1;
+  margin-left: -10px;
+  margin-top: -10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+h2 {
+}
+h3 {
+}
+section {
+  display: flex;
+}
+article {
+  background-color: rgba(225, 225, 225, .9);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex: 300px;
+  height: 500px;
+  width: 500px;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  /* padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px; */
+}
+#lets-cook-box {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+#recipe-box {
+  background-image: url('./assets/cookpot.svg');
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+ul {
+  list-style-type: none;
+}
+#star {
+  color: red;
+}

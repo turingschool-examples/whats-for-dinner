@@ -30,20 +30,20 @@ nav {
  }
 
  .add-a-recipe {
-   border-style: none;
-   border-radius: 10%;
-   padding: 10px;
+  border-style: none;
+  border-radius: 4px;
+  padding: 10px;
  }
 
- .what-are-you-looking-for-section {
-  background-color: rgba(255, 255, 255, .6); 
+ .what-are-you-looking-for-section, .cookpot-recipe-section {
+  background-color: rgba(255, 255, 255, .8); 
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  height: 400px;
-  width: 450px;
-  padding-left: 50px;
+  height: 300px;
+  width: 400px;
+  padding: 50px;
  }
 
  .what-are-you-looking-for-text {
@@ -51,26 +51,20 @@ nav {
   font-size: x-large;
  }
 
- 
+label {
+  padding: 10px;
+}
 
  .lets-cook {
-  border-radius: 5%;
+  border-radius: 4px;
+  border-style: none;
   padding: 10px;
   width: 180px;
   background-color: #0fb9b1;
-  border: 2px solid blue;
+  margin-top: 20px;
 }
  
- .cookpot-recipe-section {
-  background-color: rgba(255, 255, 255, .6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  width: 450px;
- }
-
 .cookpot {
-  height: 150px;
   width: 150px;
+  align-self: center;
 } 

@@ -8,8 +8,8 @@ red - #ee5253
 
 */
 body {
+  margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-image: img src="./assets/burger-friends.jpg" alt="Friends Eating Burgers";
 }
 
 nav {
@@ -23,7 +23,10 @@ nav {
  main {
    display: flex;
    justify-content: space-around;
-   
+   padding-top: 50px;
+   background-image: url("./assets/burger-friends.jpg");
+   background-size: 100%;   
+   height: 100%;
  }
 
  .add-a-recipe {
@@ -33,20 +36,22 @@ nav {
  }
 
  .what-are-you-looking-for-section {
-   background-color: aqua;
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-   flex-direction: column;
-   height: 400px;
-   width: 450px;
-   padding-left: 50px;
+  background-color: rgba(255, 255, 255, .6); 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 400px;
+  width: 450px;
+  padding-left: 50px;
  }
 
  .what-are-you-looking-for-text {
   font-weight: 900;
   font-size: x-large;
  }
+
+ 
 
  .lets-cook {
   border-radius: 5%;
@@ -57,9 +62,15 @@ nav {
 }
  
  .cookpot-recipe-section {
-   background-color: aqua;
-   display: flex;
-   justify-content: center;
-   height: 400px;
-   width: 450px;
+  background-color: rgba(255, 255, 255, .6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 450px;
  }
+
+.cookpot {
+  height: 150px;
+  width: 150px;
+} 

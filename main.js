@@ -4,5 +4,3 @@
 // google - javascrip - "classList.add" and "classList.remove"
 // google - css = display: none
 // google - event.default
-
-}

@@ -7,22 +7,38 @@
   <body>
     <nav>
         <h1 class="whats-for-dinner"> What's for Dinner? </h1>
-        <button>ADD A RECIPE</button>
+        <!-- <button id="add-recipe-button">ADD A RECIPE</button> -->
     </nav>
   <!-- <img src="assets/burger-friends.jpg" alt= "Bird's-eye view of friends eating a meal together." /> -->
-    <section>
-      <h1 class="options-bubble-list">What are you looking for?</h1>
-      <ul>
-        <li>Side</li>
-        <li>Main Dish</li>
-        <li>Dessert</li>
-      <li>Entire meal</li>
-      </ul>
-      <button>LET'S COOK!</button>
-    </section>
-    <section>
-      <img src="assets/cookpot.svg" alt="cooking pot icon" />
-    </section>
+    <div id="list">
+      <section class="options">
+        <h1>What are you looking for?<span>*</span></h1>
+      <form>
+        <div>
+          <input type="radio" value="Side">
+          <label for="Side">Side</label>
+        </div>
+        <div>
+          <input type="radio" value="Main Dish">
+          <label for="Main Dish">Main Dish</label>
+        </div>
+        <div>
+          <input type="radio" value="Dessert">
+          <label for="Dessert">Dessert</label>
+        </div>
+        <div>
+          <input type="radio" value="Entire Meal">
+          <label for="Entire Meal">Entire Meal</label>
+        </div>
+        <button>LET'S COOK!</button>
+      </form>
+      </section>
+    </div>
+    <div id="result">
+      <section class-"cookpot">
+        <img src="assets/cookpot.svg" alt="cooking pot icon" />
+      </section>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

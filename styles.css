@@ -16,12 +16,15 @@ body {
   background: url(assets/burger-friends.jpg);
   background-repeat: no-repeat;
    background-size: 100%
+}
 
+nav {
+  background-color: #0fb9b1;
+  padding: 0px;
+  width: 100%;
 
 }
 
-
-/*
 form {
   background-color: #95a5a6;
   border-radius: 5px;
@@ -36,9 +39,9 @@ form {
   margin-bottom: 5px;
 } */
 
-/* .add-recipe */
+/* .add-recipe
 
-.button
+button
 {
     font-size: 15px;
     font-family: 'Roboto';

@@ -16,22 +16,41 @@
       <div class="form-view">
         <form id="form">
         <p id="form-prompt"> What are you looking for?</p>
-            <ul><input type="radio" id="side-option"
-            name="Side" value="side-recipe">
-            <label for="side-option">Side</label></ul>
-            <ul><input type ="radio" id="main-option"
-            name="Main" value="main-recipe">
-            <label for="main-option">Main</label></ul>
-            <ul><input type="radio" id="dessert-option"
-            name="Dessert" value="dessert-recipe">
-            <label for="dessert-option">Dessert</label></ul>
-            <ul><input type="radio" id="entire-meal-option"
-            name="Entire Meal" value="entire-meal-recipe">
-            <label for="entire-meal-option">Entire Meal</label></ul>
-          </div>
           <div>
+            <span>
+            <ul><input type="radio" id="side-option"
+            name="food" value="side-recipe">
+            <label for="side-option">Side</label></ul>
+          </div>
+        </span>
+        <div>
+          <span>
+            <ul><input type ="radio" id="main-option"
+            name="food" value="main-recipe">
+            <label for="main-option">Main</label></ul>
+          </div>
+            </span>
+            <div>
+              <span>
+            <ul><input type="radio" id="dessert-option"
+            name="food" value="dessert-recipe">
+            <label for="dessert-option">Dessert</label></ul>
+          </div>
+            </span>
+            <div>
+              <span><ul><input type="radio" id="entire-meal-option"
+            name="food" value="entire-meal-recipe">
+            <label for="entire-meal-option">Entire Meal</label></ul>
+            <div>
+            <button type="meal-time">Let's Cook</button>
+          </div>
+          </div>
+        </span>
+          </div>
+        </section>
+          <!-- <div>
           <button type="meal-time">Let's Cook</button>
-        </div>
+        </div> -->
         </form>
         <pre id="log-meal">
         </pre>
@@ -39,6 +58,7 @@
       <div class="image-cookpot">
       <img src= "assets/cookpot.svg" alt="image of a cooking pot"/>
      </div>
+   </sectiom>
     </main>
   </body>
 </head>

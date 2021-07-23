@@ -6,8 +6,22 @@
 // google - event.default
 
 
-// var sideDishInput = document.querySelector('#sideDishRadioBtn');
-// var mainDishInput =
+// querySelector ⬇️
+var sideDishInput = document.querySelector('#sideDish');
+var mainDishInput = document.querySelector('#mainDish');
+var dessertsInput = document.querySelector('#desserts');
+var entireMeanInput = document.querySelector('#entireMeal');
+var letsCookBtn = document.querySelector('#letsCookBtn');
+var cockPotImage = document.querySelector('img');
+var displayRecipe = document.querySelector('#displayRecipe');
+var youShouldMakeText = document.querySelector('#recipeText');
+
+
+// EventListeners ⬇️
+
+
+
+// Functions ⬇️
 
 
 

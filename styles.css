@@ -76,7 +76,7 @@ form {
     flex-direction: column;
 }
 
-.lets-cook-btn {
+#lets-cook-btn {
     font-family: 'Roboto', sans-serif;
     margin: 10px;
     padding: 5px;
@@ -85,6 +85,11 @@ form {
     background-color: #0fb9b1;
     border: none;
     border-radius: 8px;
+}
+
+p {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
 

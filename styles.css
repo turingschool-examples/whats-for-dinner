@@ -8,3 +8,49 @@ red - #ee5253
 
 */
 
+.page-title {
+font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: url(assets/burger-friends.jpg);
+  background-repeat: no-repeat;
+   background-size: 100%
+
+
+}
+
+
+
+form {
+  background-color: #95a5a6;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  padding: 20px;
+  width: 200px;
+}
+
+#form-prompt {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+
+button
+{
+    font-size: 15px;
+    font-family: 'Roboto';
+    background-color: #0fb9b1;
+}
+
+button:hover, input:hover, label:hover { cursor: pointer; }
+
+
+/*need other background criteria to fit to the page
+flexbox?
+/which items here and then connect to html?
+
+/* h1 {
+header: 125px #0fb9b1;
+} */

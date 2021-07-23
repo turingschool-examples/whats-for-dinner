@@ -22,20 +22,24 @@ body {
   background: url(assets/burger-friends.jpg);
   background-repeat: no-repeat;
    background-size: 100%;
-   padding: 10;
    margin: 0;
+   font-family: 'Roboto', sans-serif;
+
 }
 
-nav {
+header {
+  display: flex;
   background-color: #0fb9b1;
-  /* list-style: none; */
-  padding: 1px 0px;
-  margin: 0px;
-  width: 100%;
-
+  margin: 0;
+  padding: 30px;
+  justify-content: space-between;
 }
 
 
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
 form {
   background-color: rgba(225, 225, 225, .9);

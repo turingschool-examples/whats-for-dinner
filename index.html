@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html>
+<head>
 <link rel="stylesheet" href="./styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <script type="text/javascript" src="main.js"></script>
-<head>
+  <title>What's for dinner?</title>
   <body>
     <nav>
       <header class="page-title">
       <h1> What's for Dinner?</h1>
       <button class="add-recipe"> Add a recipe </button>
+    </nav>
     <main>
-      <div class="box-list">
-        <h3> What are you looking for? </h3>
-        <ol>
-          <li>Side</li>
-          <li>Main</li>
-          <li>Dessert</li>
-          <li>Entire Meal</li>
-          <button class="meal-time">Let's Cook</button>
-        </ol>
-      </div>
+      <section>
+      <div class="form-view">
+        <form id="form">
+        <p id="form-prompt"> What are you looking for?</p>
+            <ul><input type="radio" id="side-option"
+            name="Side" value="side-recipe">
+            <label for="side-option">Side</label></ul>
+            <ul><input type ="radio" id="main-option"
+            name="Main" value="main-recipe">
+            <label for="main-option">Main</label></ul>
+            <ul><input type="radio" id="dessert-option"
+            name="Dessert" value="dessert-recipe">
+            <label for="dessert-option">Dessert</label></ul>
+            <ul><input type="radio" id="entire-meal-option"
+            name="Entire Meal" value="entire-meal-recipe">
+            <label for="entire-meal-option">Entire Meal</label></ul>
+          </div>
+          <div>
+          <button type="meal-time">Let's Cook</button>
+        </div>
+        </form>
+        <pre id="log-meal">
+        </pre>
+        <section>
       <div class="image-cookpot">
-       <img src= "assets/cookpot.svg" alt="image of a cooking pot"/>
-    </div>
+      <img src= "assets/cookpot.svg" alt="image of a cooking pot"/>
+     </div>
     </main>
   </body>
 </head>

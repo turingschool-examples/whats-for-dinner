@@ -21,7 +21,7 @@ body {
 }
 
 
-
+/*
 form {
   background-color: #95a5a6;
   border-radius: 5px;
@@ -34,10 +34,11 @@ form {
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 5px;
-}
+} */
 
+/* .add-recipe */
 
-button
+.button
 {
     font-size: 15px;
     font-family: 'Roboto';

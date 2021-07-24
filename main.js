@@ -56,7 +56,7 @@ var desserts = [
 
 
 //querySelectors
-var clearBtn= document.querySelector()
+// var clearBtn= document.querySelector()
 var addRecipeBtn = document.querySelector('.recipe-btn');
 var letsCookBtn = document.querySelector('.cook-btn');
 var radioSidesBtn = document.querySelector('sides-option');
@@ -68,7 +68,7 @@ var radioEntireBtn = document.querySelector('entire-meal-option');
 //does the below button even need functionality? in the cyoa it  does
 // addRecipeBtn.addEventListener('click', addRecipe);
 
-letsCookBtn.addEventListener('click', letsCook);
+letsCookBtn.addEventListener('click', checkRadioButton);
 // radioSidesBtn.addEventListener('click', letsCook);
 // radioMainsBtn.addEventListener('click', letsCook);
 // radioDessertsBtn.addEventListener('click', letsCook);
@@ -143,38 +143,36 @@ var entireMeal = {
 //
 // function selectRadioDesserts()
 
-// function letsCook () {
-//   sides.innerText = sides[getRandomIndex(sides)];
-//   mains.innerText = mains[getRandomIndex(mains)];
-//   desserts.innerText = desserts[getRandomIndex(desserts)];
-//   newMealIdea = new Foods (sides.innerText, mains.innerText, desserts.innerText);
-// };
+
 
 //do i need a random math function like we used last weekend?
 //can i use the same? does it make sense?
 
-function checkRadioButton() {
+function checkRadioButton(button) {
            if(document.querySelector('sides-option').checked) {
                document.querySelector('sides-option').innerHTML
-                   = document.querySelector('sides-option').value
+                   = document.querySelector('sides').value
                    + " radio button checked";
            }
            else if(document.querySelector('mains-option').checked) {
                document.querySelector('mains-option').innerHTML
-                   = document.querySelector'mains-option').value
+                   = document.querySelector('mains').value
                    + " radio button checked";
            }
            else if(document.querySelector('desserts-option').checked) {
                document.querySelector('desserts-option').innerHTML
-                   = document.querySelector('desserts-option').value
+                   = document.querySelector('desserts').value
                    + " radio button checked";
-           }
-           else {
-               document.querySelector"disp").innerHTML
-                   = "No one selected";
+
            }
        }
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-};
+       function letsCook () {
+         sides.innerText = sides[getRandomIndex(sides)];
+         mains.innerText = mains[getRandomIndex(mains)];
+         desserts.innerText = desserts[getRandomIndex(desserts)];
+       }
+
+// function getRandomIndex(array) {
+//   return Math.floor(Math.random() * array.length);
+// };

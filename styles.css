@@ -44,7 +44,7 @@ header {
 .recipe-btn {
   border-radius: 8px;
   margin-right: 12px;
-  width: 200px;
+  width: 124px;
   height: 36px;
   padding: 0;
   border: none;
@@ -97,7 +97,7 @@ form {
 
 
 
-
+/* trial and error to delete: */
 
 /* div>.cook-pot {
   display: flex;

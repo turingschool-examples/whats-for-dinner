@@ -7,9 +7,19 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-span { color: red;
-}
+/* span>.form-prompt {
+  color: red;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+} */
 
+span {
+  color: red;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
 
 .page-title {
 font-family: 'Roboto', sans-serif;
@@ -24,36 +34,78 @@ body {
    background-size: 100%;
    margin: 0;
    font-family: 'Roboto', sans-serif;
-
 }
 
 header {
   display: flex;
   background-color: #0fb9b1;
   margin: 0;
-  padding: 30px;
+  padding: 20px;
   justify-content: space-between;
 }
 
+button>.recipe-btn {
+  border-radius: 4px;
+}
+
+button>.cook-btn {
+background-color: #0fb9b1;
+}
 
 h1 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
+
+
 form {
+  display: flex;
   background-color: rgba(225, 225, 225, .9);
-  border-radius: 5px;
+  border-radius: 2px;
   font-family: 'Roboto';
-  padding: 20px;
+  padding: 100px;
   width: 200px;
+  height: 200px;
+  margin: 0;
 }
 
-#form-prompt {
+.cook-pot {
+    display: flex;
+    background-color: rgba(225, 225, 225, .9);
+    border-radius: 2px;
+    font-family: 'Roboto';
+    padding: 100px;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    margin-left: auto;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+/* div>.cook-pot {
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  border-radius: 0px;
+  font-family: 'Roboto';
+  padding: 20px;
+  width: 400px;
+} */
+
+
+
+/* #form-prompt {
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 5px;
-}
+} */
 
 /* .add-recipe
 

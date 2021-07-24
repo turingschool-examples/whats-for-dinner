@@ -18,6 +18,7 @@ body {
 
 .nav-bar {
     background-color: #0fb9b1;
+    display: flex;
     padding: 8px;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
@@ -104,11 +105,12 @@ form {
 
 h2 {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 
 }
 
 .output {
-    font-size: 40px;
+    font-size: 27px;
     font-family: 'Roboto', sans-serif;
 }
 

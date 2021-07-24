@@ -47,9 +47,9 @@ var desserts = [
 ]
 
 var result = document.querySelector('p');
-var randomSide = sides[getRandomIndex(sides)];
-var randomMain = mains[getRandomIndex(mains)];
-var randomDessert = desserts[getRandomIndex(desserts)];
+//var randomSide = sides[getRandomIndex(sides)];
+//var randomMain = mains[getRandomIndex(mains)];
+//var randomDessert = desserts[getRandomIndex(desserts)];
 var cookBtn = document.getElementById('cook-btn');
 var sideRadio = document.getElementById("side-radio");
 var mainRadio = document.getElementById("main-radio");
@@ -67,16 +67,15 @@ cookBtn.addEventListener('click', makeMeal);
 function makeMeal() {
   event.preventDefault();
   box2Img.classList.add('second-box-hide-bg');
-  h2Ele.classList.add('hidden');
+  h2Ele.classList.remove('hidden');
   if (sideRadio.checked) {
-      result.innerText = randomSide;
+      result.innerText = sides[getRandomIndex(sides)];
     }  else if (mainRadio.checked) {
-        result.innerText = randomMain;
+        result.innerText = mains[getRandomIndex(mains)];
      } else if (dessertRadio.checked) {
-          result.innerText = randomDessert;
+          result.innerText = desserts[getRandomIndex(desserts)];
      } else if (entireMealRadio.checked) {
-          result.innerText = `${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!`;
-          h2Ele.classList.remove('hidden');
+          result.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
  }
 }
 

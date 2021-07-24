@@ -30,15 +30,16 @@
               Dessert</input>
             </div>
             <div>
-              <input type= "radio" name= "meal-radio" value= "entire-meal-radio">
+              <input id="full-meal-radio" type= "radio" name= "meal-radio" value= "entire-meal-radio">
               Entire Meal</input>     
             </div>
-            <button onclick="fn1()" type="button" id="lets-cook-btn">LET'S COOK!</button>
+            <button id="cook-btn" type="button">LET'S COOK!</button>
           </form>
         </div>
       </div>
       <div class="second-box">
-        <p></p>
+        <h2 class="hidden">You should make:</h2>
+        <p class="output"></p>
       </div>
     </div>
   </body>

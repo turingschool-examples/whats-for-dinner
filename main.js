@@ -1,18 +1,3 @@
-// var cookBtn = document.querySelector('#lets-cook-btn');
-// var textBox = document.querySelector('#result');
-
-// cookBtn.addEventListener('click', getRadioValue)
-
-// function getRadioValue() {
-//   var radio = document.querySelector('meal-radio');
-//   event.preventDefault();
-//   for (i = 0; i < radio.length; i++){
-//     if(radio[i].checked) 
-//     document.getElementById("result").innerHTML = radio[i].value;
-//     }
-    
-//   }
-
 var sides = [
 "Miso Glazed Carrots",
 "Coleslaw",
@@ -61,24 +46,36 @@ var desserts = [
  "Eclairs",
 ]
 
-
 var result = document.querySelector('p');
 var randomSide = sides[getRandomIndex(sides)];
 var randomMain = mains[getRandomIndex(mains)];
 var randomDessert = desserts[getRandomIndex(desserts)];
+var cookBtn = document.getElementById('cook-btn');
+var sideRadio = document.getElementById("side-radio");
+var mainRadio = document.getElementById("main-radio");
+var dessertRadio = document.getElementById("dessert-radio");
+var entireMealRadio = document.getElementById("full-meal-radio");
+var h2Ele = document.querySelector('h2');
+var box2Img = document.querySelector('.second-box')
 
-function fn1 () {
+cookBtn.addEventListener('click', makeMeal);
+
+function makeMeal() {
   event.preventDefault();
-  var sideRadio = document.getElementById("side-radio");
-  var mainRadio = document.getElementById("main-radio");
-  var dessertRadio = document.getElementById("dessert-radio");
+  box2Img.classList.add('second-box-hide-bg')
 
-  if (sideRadio.checked === true) {
-    result.innerText = randomSide;
-} else if (mainRadio.checked === true) {
-    result.innerText = randomMain;
- } else if (dessertRadio.checked === true) {
-    result.innertText = randomDessert;
+  if (sideRadio.checked) {
+      result.innerText = randomSide;
+      h2Ele.classList.add('hidden');
+    }  else if (mainRadio.checked) {
+        result.innerText = randomMain;
+        h2Ele.classList.add('hidden');
+     } else if (dessertRadio.checked) {
+          result.innerText = randomDessert;
+          h2Ele.classList.add('hidden');
+     } else if (entireMealRadio.checked) {
+          result.innerText = `${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!`
+          h2Ele.classList.remove('hidden');
  }
 }
 

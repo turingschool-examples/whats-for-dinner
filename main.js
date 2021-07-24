@@ -19,21 +19,32 @@ letsCookBtn.addEventListener('click', letsCook)
 //i think i do because of there are several arrays running but can they just pass through the object?
 
 class Foods {
-  constructor () {
-    this.sides = this.sides;
-    this.mains = this.mains;
-    this.desserts = this.desserts;
-    this.entireMea = this.entireMeal;
+  constructor (sides, mains, desserts, entireMeal) {
+    this.sides = sides;
+    this.mains = mains;
+    this.desserts = desserts;
+    //not sure if entireMeal can go into the constructor?
+    //this is possible going to be its own object instead?
+    //leave out of constructor ?
+    //should it have its own object instance instead? how to do?
+    this.entireMeal = entireMeal;
   }
-}
+};
 
+//do i need new vars for each?
+//object literal for all sans entireMeal
+//need to assign these to the class above?
 var foodSuggestion {
   sides: sides,
   mains: mains,
   desserts: desserts,
-  entireMeal: entireMeal
 }
 
+var entireMeal {
+  sides: sides,
+  mains: mains,
+  desserts: desserts
+}
 //functions
 
 //this function will grant access to one of the 3 arrays
@@ -44,12 +55,29 @@ var foodSuggestion {
 //will need to create a for loop i think to run through function
 //do i need to have a random math function like last weekend's project?
 
-letsCook (){
+class Foods {
+  constructor (sides, mains, desserts, entireMeal) {
+    this.sides = sides;
+    this.mains = mains;
+    this.desserts = desserts;
+    //not sure if entireMeal can go into the constructor?
+    //this is possible going to be its own object instead?
+    //leave out of constructor ?
+    //should it have its own object instance instead? how to do?
+    this.entireMeal = entireMeal;
+  }
+};
 
-}
 
+function letsCook () {
+  sides.innerText = sides[getRandomIndex(sides)];
+  mains.innerText = mains[getRandomIndex(mains)];
+  desserts.innerText = desserts[getRandomIndex(desserts)];
+  newMealIdea = new Foods (sides.innerText, mains.innerText, desserts.innerText);
+};
 
-//do i need a random math function like we used last weekend? can i use the same?
+//do i need a random math function like we used last weekend?
+//can i use the same? does it make sense?
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };

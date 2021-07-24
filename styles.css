@@ -149,3 +149,37 @@ html {
     height: 70%;
     font-size: 0.8vw;
 }
+
+.add-recipe {
+    background: rgba(225, 225, 225, .9);
+    height: 10vh;
+    position: absolute;
+    top: 92vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* bottom: 0; */
+}
+
+.add-new-button {
+    border: 1%;
+    border-radius: 3vh;
+    width: 10vw;
+    height: 5vh;
+    background-color: #12B9B2;
+    position: absolute;
+    top: 0.3%;
+    left: 30vw;
+    /* bottom: 1%; */
+    font-size: 1vw;
+    padding: 0;
+    border: 0.5px;
+}
+
+.add-form {
+    position: absolute;
+    bottom: 4vh;
+    font-size: 1vw;
+    display: flex;
+    justify-content: space-between;
+}

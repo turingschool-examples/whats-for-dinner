@@ -7,36 +7,35 @@
   <body>
     <nav>
         <h1 class="whats-for-dinner"> What's for Dinner? </h1>
-        <!-- <button id="add-recipe-button">ADD A RECIPE</button> -->
+        <button id="add-recipe-button">ADD A RECIPE</button>
     </nav>
-  <!-- <img src="assets/burger-friends.jpg" alt= "Bird's-eye view of friends eating a meal together." /> -->
-    <div id="list">
+    <div id="form">
       <section class="options">
         <h1>What are you looking for?<span>*</span></h1>
-      <form>
-        <div>
-          <input type="radio" value="Side">
-          <label for="Side">Side</label>
-        </div>
-        <div>
-          <input type="radio" value="Main Dish">
-          <label for="Main Dish">Main Dish</label>
-        </div>
-        <div>
-          <input type="radio" value="Dessert">
-          <label for="Dessert">Dessert</label>
-        </div>
-        <div>
-          <input type="radio" value="Entire Meal">
-          <label for="Entire Meal">Entire Meal</label>
-        </div>
-        <button>LET'S COOK!</button>
-      </form>
+        <form>
+          <div>
+            <input type="radio" id="side" name="side" value="side">
+            <label for="side">Side</label>
+          </div>
+          <div>
+            <input type="radio" id="main dish" name="main dish" value="main dish">
+            <label for="main dish">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" id="dessert" name="dessert" value="dessert">
+            <label for="dessert">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" id="entire meal" name="entire meal" value="entire meal">
+            <label for="entire meal">Entire Meal</label>
+          </div>
+          <button class="lets-cook">LET'S COOK!</button>
+        </form>
       </section>
     </div>
     <div id="result">
       <section class-"cookpot">
-        <img src="assets/cookpot.svg" alt="cooking pot icon" />
+        <img src="assets/cookpot.svg" class="icon" alt="cooking pot icon" />
       </section>
     </div>
   </body>

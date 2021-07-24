@@ -94,5 +94,5 @@ function renderMessage(foodType) {
       <p class="meal-selection">${foodType}!</p>`;
       clearButton.classList.remove('hidden');
       potImg.classList.add('hidden');
-     resultSection.classList.remove('hidden');
+      resultSection.classList.remove('hidden');
 };

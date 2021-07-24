@@ -18,9 +18,8 @@ html {
 .header {
     margin: 0;
     background: #12B9B2;
-    height: 5vh;
-    position: relative;
-    font-family: 'roboto', sans-serif;
+    height: 6vh;
+    position: -webkit-sticky;
     align-items: center;
 }
 
@@ -28,8 +27,13 @@ html {
 .body-style {
     margin: 0;
     background-image: url(./assets/burger-friends.jpg);
-    background-size: 100vw; 
+    background-size: 100%; 
     position: relative;
+    /* top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; */
+    /* background-repeat: no-repeat; */
 }
 
 .required {
@@ -37,14 +41,14 @@ html {
 }
 
 .lets-cook-button {
-    border: 0;
-    border-radius: 7px;
+    border: 1%;
+    border-radius: 3vh;
     width: 60%;
     height: 25%;
     background-color: #12B9B2;
     position: absolute;
     top: 220%;
-    font-family: 'roboto', sans-serif;
+    font-size: 1vw;
 }
 
 .box-form {
@@ -55,18 +59,23 @@ html {
     position: absolute;
     top: 350%;
     left: 10%;
+    right: 10%;
+    bottom: 20%;
 }
+
 .form {
     position: absolute;
     top: 10%;
     left: 10%;
+    right: 10%;
+    bottom: 20%;
     line-height: 300%;
     display: flex;
     flex-direction: column;
-    font-family: 'roboto' sans-serif;
     height: 30%;
     width: 70%;
-    -webkit-text-size-adjust: 70vw;
+    font-size: 1vw;
+    -webkit-text-size-adjust: 100%;
 }
 .box-pot {
     background: rgba(225, 225, 225, .9);
@@ -89,18 +98,20 @@ html {
 .title {
     margin: 1vh;
     position: absolute;
+    font-size: 2.5vh;
+    top: 0.55vh;
 }
 
 .add-recipe-button {
     border: 0;
-    border-radius: 7px;
+    border-radius: 3vh;
     position: absolute;
     top: 25%;
     right: 5%;
     width: 7%;
     height: 50%;
     background-color: #EEEEEF;
-    font-family: 'roboto' sans-serif;
+    font-size: 0.8vw;
 }
 
 .result-p {
@@ -108,10 +119,9 @@ html {
     top: 30%;
     right: 30%;
     left:30%;
-    font-family: 'roboto', sans-serif;
     font-style: italic;
     text-align: center;
-    -webkit-text-size-adjust: auto;
+    font-size: 1vw;
 }
 
 .meal-selection {
@@ -121,10 +131,8 @@ html {
     right: 10%;
     left: 10%;
     bottom: 10%;
-    font-family: 'roboto', sans-serif;
-    font-size: xx-large;
+    font-size: 2vw;
     text-align: center;
-    -webkit-text-size-adjust: 70vh;
 }
 
 .clear-button {
@@ -132,12 +140,12 @@ html {
     top: 1130%;
     left: 81%;
     background-color: #95a5a6;
-    border-radius: 5px;
+    border-radius: 3vh;
     color: white;
     margin: 0;
     padding: 0;
     border: 0;
     width: 6%;
     height: 70%;
-    font-family: 'roboto', sans-serif;
+    font-size: 0.8vw;
 }

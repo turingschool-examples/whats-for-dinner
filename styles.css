@@ -8,25 +8,24 @@ red - #ee5253
 
 */
 * {
-  border: 1px green solid;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /* border: 1px green solid; */
 }
 
-.hidden {
-  display: none;
-}
 
 body {
-  background-image: url(assets/burger-friends.jpg);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: url(assets/burger-friends.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-   margin: 0;
 }
 
-main {
-  display: flex;
-  justify-content: space-around;
-}
 
 header {
   display: flex;
@@ -34,19 +33,38 @@ header {
   flex-direction: row;
   align-items: center;
   background-color: #0fb9b1;
-  height: 50px;
+  padding: 0 1.2rem;
+  height: 8%;
+  min-height: 2rem;
+  max-height: 3.5rem;
 }
 
-h1 {
+main {
+  display: flex;
   justify-content: space-around;
-  font-size: 150%;
-  padding: 10px;
-  padding-left: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 65%;
+  padding: .3 0;
+  /* background: url(assets/burger-friends.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
+
+
+h1 {
+  font-size: 1.3rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+h2 {
+  height: 50px;
+  /* position: absolute; */
 }
 
 .add-a-recipe-button,
@@ -55,14 +73,14 @@ form {
   height: 30px;
   padding: 15px;
   padding-top: 8px;
-  margin: 0px, 15px, 15px, 15px;
-  border-radius: 3px;
+  border-radius: 3px; // <- dont replace with rem
   border-style: inherit;
+  border: 0;
 }
 
-.add-a-recipe-button {
+/* .add-a-recipe-button {
   margin-right: 20px;
-}
+} */
 
 
 .lets-cook-button {
@@ -72,25 +90,60 @@ form {
 
 section {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   background-color: rgba(225, 225, 225, .9);
-  width: 60vw;
-  height: 40vh;
+  height: 23rem;
+  width: 23rem;
+  /* min-width: 20rem; */
+  /* margin: 40px; */
+}
+
+label {
+  padding: 0.6rem;
+}
+
+
+.red-star {
+  color: red;
+}
+
+
+.menu-container {
   padding: 30px;
-  margin: 40px;
+}
+
+.dish-container {
+  text-align: center;
+  align-items: center;
 }
 
 .menu-selection {
   text-align: left;
 }
 
+.recipe-text{
+  padding: 1rem;
+  font-size: large;
+  font-style: italic;
+}
+
+.display-recipe {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+
 img {
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* align-self: center; */
   height: 20vh;
   width: 20vw;
-  margin-top: 75px;
+  /* margin-top: 75px; */
+}
+
+
+.hidden {
+  display: none;
 }

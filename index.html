@@ -7,29 +7,27 @@
     <title>What's For Dinner?</title>
   </head>
   <body>
+
     <header>
       <h1>What's for Dinner?</h1>
       <button class="add-a-recipe-button" id="addRecipeBtn">ADD A RECIPE</button>
     </header>
+
     <main>
       <section class="menu-container">
         <form class="menu-selection">
           <h2>What are you looking for? <span class="red-star">*</span></h2>
-          <input type="radio" name="menu-options" id="sideDish" value="side-dish"/>
-          <label for="side-dish">Side</label>
-          <input type="radio" name="menu-options" id="mainDish" value="main-dish"/>
-          <label for="main-dish">Main Dish</label>
-          <input type="radio" name="menu-options" id="desserts" value="desserts"/>
-          <label for="desserts">Dessert</label>
-          <input type="radio" name="menu-options" id="entireMeal" value="entire-meal"/>
-          <label for="entire-meal">Entire Meal</label>
+          <label><input type="radio" id="sideDish" name="menu-options" value="side"> Side </label>
+          <label><input type="radio" id="mainDish" name="menu-options" value="main-dish"> Main Dish </label>
+          <label><input type="radio" id="desserts" name="menu-options" value="desserts"> Dessert </label>
+          <label><input type="radio" id="entireMeal" name="menu-options" value="entire-meal"> Entire Meal </label>
           <button class="lets-cook-button" id="letsCookBtn">LET'S COOK!</button>
         </form>
       </section>
       <section class="dish-container">
         <img class="dish-image" src="./assets/cookpot.svg" alt="cookpot">
-        <p class="hidden" id="recipeText">You should make:</p>
-        <p class="hidden" id="displayRecipe">This will be a dish paragraph</p>
+        <p class="recipe-text hidden" id="recipeText">You should make:</p>
+        <p class="display-recipe hidden" id="displayRecipe"></p>
       </section>
     </main>
   </body>

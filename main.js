@@ -10,19 +10,50 @@
 var sideDishInput = document.querySelector('#sideDish');
 var mainDishInput = document.querySelector('#mainDish');
 var dessertsInput = document.querySelector('#desserts');
-var entireMeanInput = document.querySelector('#entireMeal');
+var entireMealInput = document.querySelector('#entireMeal');
 var letsCookBtn = document.querySelector('#letsCookBtn');
-var cockPotImage = document.querySelector('img');
+var cookPotImage = document.querySelector('img');
 var displayRecipe = document.querySelector('#displayRecipe');
 var youShouldMakeText = document.querySelector('#recipeText');
 
 
 // EventListeners ⬇️
+letsCookBtn.addEventListener('click', getDish);
 
 
 
 // Functions ⬇️
+function getRandomFoodIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
 
+
+function getDish() {
+  event.preventDefault();
+  if(sideDishInput.checked === true) {
+    displayRecipe.innerText = sides[getRandomFoodIndex(sides)];
+  } else if(mainDishInput.checked === true) {
+    displayRecipe.innerText = mains[getRandomFoodIndex(mains)];
+  } else if(dessertsInput.checked === true) {
+    displayRecipe.innerText = desserts[getRandomFoodIndex(desserts)];
+  } else if(entireMealInput.checked === true) {
+    displayRecipe.innerText = `${mains[getRandomFoodIndex(mains)]}, with a side of ${sides[getRandomFoodIndex(sides)]} and ${desserts[getRandomFoodIndex(desserts)]} for dessert!`
+  }
+  hideImg();
+  showRecipe();
+}
+
+
+function hideImg() {
+  cookPotImage.classList.add('hidden');
+}
+
+
+
+function showRecipe() {
+  youShouldMakeText.classList.remove('hidden');
+  displayRecipe.classList.remove('hidden');
+}
 
 
 // if(sideDishRadioBtn.checked) {

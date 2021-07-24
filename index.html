@@ -6,9 +6,11 @@
     <title>What's for dinner??</title>
   </head>
   <body class="body-style">
+    <section class="background">
+    </section>
     <section class="header" id="header0">
       <h1 class="title" id="title">What's for dinner?</h1>
-      <button class="add-recipe-button" id="add-recipe-button">ADD A RECIPE</button>
+      <button class="add-recipe-button" id="add-recipe-b">ADD A RECIPE</button>
     </section>
     <section class="box-form" id="form">
         <form class="form" id="grab-form">
@@ -26,16 +28,18 @@
       </section>
     </section>
     <button class="clear-button hidden" id="clear">CLEAR</button>
-    <section class="add-recipe" id="add-section">
+    <section class="add-recipe hidden" id="add-section">
       <form class="add-form" id="add-recipe">
-        <label>Recipe Type<select id="recipe-type" name="category"></label>
+        <label class="label-class">Recipe Type: </label>
+          <select class="form-class" id="recipe-type" name="category">
           <option value="side">Side</option>
           <option value="main-dish">Main Dish</option>
-          <option value="dessert">dessert</option>
+          <option value="dessert">Dessert</option>
         </select>
-        <label>Recipe Name <input type="text" name"recipe-name"></label>
+        <label class="label-class">Recipe Name: </label>
+        <input class="form-class" type="text" id="new-recipe" name"recipe-name">
       </form>
-      <button class="add-new-button">ADD NEW</button>
+      <button class="add-new-button" id="add-new-b">ADD NEW</button>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>

@@ -109,3 +109,7 @@ form {
   height: 577px;
   align-items: center;
 }
+
+.hidden {
+  display: none;
+}

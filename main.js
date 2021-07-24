@@ -47,9 +47,6 @@ var desserts = [
 ]
 
 var result = document.querySelector('p');
-//var randomSide = sides[getRandomIndex(sides)];
-//var randomMain = mains[getRandomIndex(mains)];
-//var randomDessert = desserts[getRandomIndex(desserts)];
 var cookBtn = document.getElementById('cook-btn');
 var sideRadio = document.getElementById("side-radio");
 var mainRadio = document.getElementById("main-radio");
@@ -77,5 +74,5 @@ function makeMeal() {
      } else if (entireMealRadio.checked) {
           result.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
  }
-}
+};
 

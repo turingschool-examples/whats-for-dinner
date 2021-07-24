@@ -19,21 +19,21 @@ body {
 .nav-bar {
     background-color: #0fb9b1;
     display: flex;
-    padding: 8px;
+    padding: 15px;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
 }
 
 .add-recipe-button {
+    display: flex;
+    margin-left: auto;
     background-color: rgba(225, 225, 225, .9);
     align-items: center;
-    justify-content: center;
-    position: relative;
+    font-family: 'Roboto', sans-serif;
+    height:30px;
     border: none;
-    border-radius: 3px;
-    padding: 5px;
-;
+    border-radius: 8px;
 }
 
 .boxes-container {
@@ -69,9 +69,6 @@ body {
     background-position-x: center;
     background-position-y: center;
     background-size: 6em;
-    
-    
-    
     background-color: rgba(225, 225, 225, .9);
 }
 

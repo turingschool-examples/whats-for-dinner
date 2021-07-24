@@ -9,6 +9,17 @@ red - #ee5253
 */
 
 
+body {
+  background: url(assets/burger-friends.jpg);
+  background-repeat: no-repeat;
+   background-size: 100%;
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+}
+
+
+
+
 span {
   color: red;
 }
@@ -25,13 +36,8 @@ padding: 5px;
 margin: 5px;
 }
 
-body {
+main {
   display: flex;
-  background: url(assets/burger-friends.jpg);
-  background-repeat: no-repeat;
-   background-size: 100%;
-   margin: 0;
-   font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -52,8 +58,9 @@ header {
 }
 
 .cook-btn {
+  display: flex;
 background-color: #0fb9b1;
-border-radius: 8px;
+border-radius: 2px;
 margin-right: 12px;
 width: 200px;
 height: 36px;
@@ -62,7 +69,7 @@ border: none;
 }
 
 .clear-btn {
-  background-color: #95a5a6;
+  background-color:  #95a5a6;
   border-radius: 8px;
   margin-right: 12px;
   width: 200px;
@@ -99,5 +106,11 @@ form {
   margin: 0;
   flex-direction: column;
   align-content: flex-end;
-  margin-right: 50%;
+}
+
+.form-view {
+  display: flex;
+  justify-content: space-around;
+  height: 900px;
+  align-items: center;
 }

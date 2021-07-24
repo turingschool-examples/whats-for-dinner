@@ -7,18 +7,16 @@
     <title>What's for dinner?</title>
   </head>
   <body>
-      <section class="top-border">
-      <nav class="top-nav">
-      <header class="page-title">
+      <header>
       <h1> What's for Dinner?</h1>
-      <button class="add-recipe"> Add a recipe </button>
-      </nav>
+      <button class="recipe-btn"> ADD A RECIPE </button>
+     </header>
       <main>
-    <section class="recipe-form">
+      <section class="recipe-form">
       <section class="form-view">
         <form id="form">
         <div>
-        <p id="form-prompt"> What are you looking for?<span>*</span></p>
+        <p id="form-prompt"> <strong><p>What are you looking for?<span>*</span></strong></p>
             <ul><input type="radio" id="side-option"
             name="food" value="side-recipe">
             <label for="side-option">Side</label></ul>
@@ -31,22 +29,19 @@
             <ul><input type="radio" id="entire-meal-option"
             name="food" value="entire-meal-recipe">
             <label for="entire-meal-option">Entire Meal</label></ul>
-            <div>
-            <button type="meal-time">Let's Cook</button>
+            <button class="cook-btn">Let's Cook</button>
            </div>
         </form>
-        <section id="log-meal">
-        <section class="image-cookpot">
-      <!-- <img src= "assets/cookpot.svg" alt="image of a cooking pot"/> -->
+        <div class="cook-pot">
+        <img src="assets/cookpot.svg" alt="cookpot clipart">
+        </div>
+        <!-- <section class="cook-pot">
+          <div>
+          <!<img src= "assets/cookpot.svg" alt="image of a cooking pot"> -->
+        <!-- </div>
+      </section> -->
   </main>
   <script type="text/javascript" src="main.js"></script>
   </body>
   </head>
 </html>
-
-
-<!-- //order of operation//
-<head>
-<body>
-<nav>
-<main> -->

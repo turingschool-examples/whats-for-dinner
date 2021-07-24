@@ -56,29 +56,27 @@ var mainRadio = document.getElementById("main-radio");
 var dessertRadio = document.getElementById("dessert-radio");
 var entireMealRadio = document.getElementById("full-meal-radio");
 var h2Ele = document.querySelector('h2');
-var box2Img = document.querySelector('.second-box')
+var box2Img = document.querySelector('.second-box');
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 
 cookBtn.addEventListener('click', makeMeal);
 
 function makeMeal() {
   event.preventDefault();
-  box2Img.classList.add('second-box-hide-bg')
-
+  box2Img.classList.add('second-box-hide-bg');
+  h2Ele.classList.add('hidden');
   if (sideRadio.checked) {
       result.innerText = randomSide;
-      h2Ele.classList.add('hidden');
     }  else if (mainRadio.checked) {
         result.innerText = randomMain;
-        h2Ele.classList.add('hidden');
      } else if (dessertRadio.checked) {
           result.innerText = randomDessert;
-          h2Ele.classList.add('hidden');
      } else if (entireMealRadio.checked) {
-          result.innerText = `${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!`
+          result.innerText = `${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!`;
           h2Ele.classList.remove('hidden');
  }
 }
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-}

@@ -35,12 +35,13 @@ body {
 ;
 }
 
-.two-boxes {
+.boxes-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-self: auto;
     align-items: flex-end;
+    height: 30em;
 }
 
 .looking-for {
@@ -51,19 +52,25 @@ body {
 }
 
 .first-box {
+    height: 14em;
+    width: 14em;
     padding: 50px;
     font-size: 20px;
     background-color: rgba(225, 225, 225, .9);
 }
 
 .second-box {
+    height: 14em;
+    width: 14em;
+    padding: 5em;
     background-image: url(assets/cookpot.svg);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    background-size: 100px;
-    padding: 183px;
-    margin-top: 100px;
+    background-size: 6em;
+    
+    
+    
     background-color: rgba(225, 225, 225, .9);
 }
 
@@ -101,7 +108,7 @@ h2 {
 }
 
 .output {
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Roboto', sans-serif;
 }
 

@@ -56,13 +56,13 @@ var desserts = [
 
 
 //querySelectors
-// var clearBtn= document.querySelector()
+var clearBtn= document.querySelector('.clear-btn')
 var addRecipeBtn = document.querySelector('.recipe-btn');
 var letsCookBtn = document.querySelector('.cook-btn');
-var radioSidesBtn = document.querySelector('sides-option');
-var radioMainsBtn = document.querySelector('mains-option');
-var radioDessertsBtn = document.querySelector('desserts-option');
-var radioEntireBtn = document.querySelector('entire-meal-option');
+var radioSidesBtn = document.querySelector('.sides-option');
+var radioMainsBtn = document.querySelector('.mains-option');
+var radioDessertsBtn = document.querySelector('.desserts-option');
+var radioEntireBtn = document.querySelector('.entire-meal-option');
 var cookPot = document.querySelector('.cook-pot-img');
 
 
@@ -156,37 +156,32 @@ letsCookBtn.addEventListener('click', letsCook);
 
 function checkRadioButton () {
   if(radioSidesBtn.checked) {
-} if(radioMainsBtn.checked) {
-} if(radioDessertsBtn.checked) {
-
+     return sides[getRandomIndex(sides)];
+}
+  if(radioMainsBtn.checked) {
+    return mains[getRandomIndex(mains)];
+}
+  if(radioDessertsBtn.checked) {
+    return desserts[getRandomIndex(desserts)];
 }
 }
 
-//
-// var letsCookBtn = document.querySelector('.cook-btn');
-// var radioSidesBtn = document.querySelector('sides-option');
-// var radioMainsBtn = document.querySelector('mains-option');
-// var radioDessertsBtn = document.querySelector('desserts-option');
-// var radioEntireBtn = document.querySelector('entire-meal-option');
 
        function letsCook (event) {
          event.preventDefault()
-         foodRecommendation.innerText = sides[getRandomIndex(sides)];
+         var dish = checkRadioButton()
+         console.log(dish)
+         foodRecommendation.innerText = dish;
          foodRecommendation.classList.remove('hidden');
          cookPot.classList.add('hidden');
-         foodRecommendation.innerText = mains[getRandomIndex(mains)];
-         foodRecommendation.classList.remove('hidden');
-         cookPot.classList.add('hidden');
-         foodRecommendation.innerText = desserts[getRandomIndex(desserts)];
-         foodRecommendation.classList.remove('hidden');
-         cookPot.classList.add('hidden');
+         clearBtn.classList.remove('hidden');
        }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-
+// clearBtn.classList.remove('hidden');
 
 
 

@@ -1,3 +1,9 @@
+// import data from "./data.js"
+
+// var sides = data.sides;
+// var mains = data.mains;
+// var desserts = data.main;
+
 var sides = [
 "Miso Glazed Carrots",
 "Coleslaw",
@@ -54,17 +60,20 @@ var dessertRadio = document.getElementById("dessert-radio");
 var entireMealRadio = document.getElementById("full-meal-radio");
 var h2Ele = document.querySelector('h2');
 var box2Img = document.querySelector('.second-box');
+var clearBtn = document.getElementById("clear-btn")
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
 cookBtn.addEventListener('click', makeMeal);
+clearBtn.addEventListener('click', remove);
 
 function makeMeal() {
   event.preventDefault();
   box2Img.classList.add('second-box-hide-bg');
   h2Ele.classList.remove('hidden');
+  clearBtn.style.visibility = "visible";
   if (sideRadio.checked) {
       result.innerText = sides[getRandomIndex(sides)];
     }  else if (mainRadio.checked) {
@@ -75,4 +84,21 @@ function makeMeal() {
           result.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
  }
 };
+
+function clearAllRadios() {
+  sideaRadio.checked = false;
+  mainRadio.checked = false;
+  dessertRadio.checked = false;
+  entireMealRadio.checked = false;
+}
+
+function remove() {
+  h2Ele.classList.add('hidden');
+  result.classList.add('hidden');
+  clearBtn.style.visibility = "hidden";
+  event.preventDefault();
+  clearAllRadios();
+}
+
+
 

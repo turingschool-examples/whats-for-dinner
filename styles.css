@@ -61,6 +61,9 @@ body {
 }
 
 .second-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 14em;
     width: 14em;
     padding: 5em;
@@ -70,6 +73,8 @@ body {
     background-position-y: center;
     background-size: 6em;
     background-color: rgba(225, 225, 225, .9);
+    justify-content: space-between;
+    /* align-items: flex-end */ */
 }
 
 .second-box-hide-bg {
@@ -107,9 +112,25 @@ h2 {
 }
 
 .output {
-    font-size: 27px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
+
+#clear-btn {
+    background-color: #95a5a6;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    color: white;
+    border: none;
+    height: 2em;
+    width: 5em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    align-self: flex-end;
+    visibility: hidden;
+}
+
 
 
 

@@ -121,6 +121,7 @@ label {
 
 .menu-selection {
   text-align: left;
+
 }
 
 .recipe-text{
@@ -134,8 +135,21 @@ label {
   font-weight: bold;
   font-size: xx-large;
   padding: .4rem;
+  flex-grow: .4;
 }
 
+.delete-recipe-button{
+  height: 30px;
+  border-radius: 5px;
+  background-color: #95a5a6;
+  color: rgba(225, 225, 225, .9);
+  border: 0;
+  align-self: flex-end;
+  float: right;
+  margin-bottom: 7px;
+  margin-right: 31px;
+  width: 65px;
+}
 
 img {
   /* display: flex; */

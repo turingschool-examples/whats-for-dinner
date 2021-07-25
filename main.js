@@ -164,6 +164,7 @@ function checkRadioButton () {
   if(radioDessertsBtn.checked) {
     return desserts[getRandomIndex(desserts)];
 }
+  
 }
 
 

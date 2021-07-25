@@ -36,8 +36,8 @@ h3 {
   font-size: 1vw;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #add-recipe-button {
   background-color: rgba(225, 225, 225, 1);
@@ -46,8 +46,8 @@ h3 {
   font-size: 1vw;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 section {
   display: flex;
@@ -61,11 +61,14 @@ article {
   margin-right: 100px;
 }
 #create-recipe-box {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
   font-size: 1vw;
+}
+p {
+  font-size: 1.5vw;
 }
 form {
   font-size: 1vw;
@@ -75,13 +78,15 @@ form {
   border-radius: 3px;
   border: 0px;
   font-size: 1vw;
-  margin: 1px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #lets-cook-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-left: 150px;
   padding-right: 150px;
   padding-top: 100px;
@@ -92,44 +97,71 @@ form {
   width: 100px;
 }
 .you-should-make {
+  align-self: flex-start;
   font-weight: bold;
   font-style: italic;
   font-size: 1vw;
 }
 .output-recipe {
+  align-self: center;
   font-weight: bold;
   font-size: 1vw;
 }
 .favs-list {
+  list-style-type: none;
+  align-self: center;
   font-weight: bold;
   font-size: 1vw;
 }
 #bottom-buttons {
+  align-self: flex-end;
   display: flex;
-}
-.back-button {
-  background-color: #95a5a6;
-  border-radius: 3px;
-  border: 0px;
   flex-direction: row;
-  justify-content: space-between;
-  align-self: start;
+  justify-content: space-around;
 }
 .fav-button {
   background-color: #95a5a6;
   border-radius: 3px;
   border: 0px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: center;
+  align-self: flex-start;
+  margin-right: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.delete-fav-button {
+  background-color: #95a5a6;
+  border-radius: 3px;
+  border: 0px;
+  align-self: flex-start;
+  margin-right: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .clear-button {
   background-color: #95a5a6;
   border-radius: 3px;
   border: 0px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: end;
+  align-self: flex-end;
+  margin-left: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.back-button {
+  background-color: #95a5a6;
+  border-radius: 3px;
+  border: 0px;
+  align-self: flex-end;
+  margin-left: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 ul {
   list-style-type: none;
@@ -137,6 +169,9 @@ ul {
 }
 li {
   padding: 5px;
+}
+#delete {
+  padding: 10px;
 }
 #star {
   color: #ee5253;

@@ -84,10 +84,10 @@ function clearAllRadios() {
 }
 
 function remove() {
+  event.preventDefault();
   h2Ele.classList.add('hidden');
   result.classList.add('hidden');
   clearBtn.style.visibility = "hidden";
-  event.preventDefault();
   clearAllRadios();
 }
 

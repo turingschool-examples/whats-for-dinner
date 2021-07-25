@@ -59,13 +59,7 @@ var radioDessertsBtn = document.querySelector('.desserts-option');
 var radioEntireBtn = document.querySelector('.entire-meal-option');
 var cookPot = document.querySelector('.cook-pot-img');
 var youMake = document.querySelector('.you-make');
-
-
-var youMake = document.querySelector('.you-make')
-
 var radioEntireBtn = document.querySelector('.entire-meal-option');
-
-
 var foodRecommendation = document.querySelector('.food-recommendation')
 var clearBtn= document.querySelector('.clear-btn')
 

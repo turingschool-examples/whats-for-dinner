@@ -50,9 +50,7 @@ var desserts = [
 'Eclairs'
 ]
 
-// var entireMeal = [
-// ];
-
+var entireMeal = [];
 
 
 //querySelectors
@@ -165,7 +163,9 @@ function checkRadioButton () {
   if(radioDessertsBtn.checked) {
     return desserts[getRandomIndex(desserts)];
 }
-
+  if(radioEntireBtn.checked) {
+    return `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+  }
 }
 
 
@@ -189,6 +189,7 @@ function getRandomIndex(array) {
 // clearBtn.classList.remove('hidden');
 var youMake = document.querySelector('.you-make')
 
+var radioEntireBtn = document.querySelector('.entire-meal-option');
 
 //would this work like last project or does it need to be one function per food/meal type?
 

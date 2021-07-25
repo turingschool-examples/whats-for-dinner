@@ -27,15 +27,25 @@ header {
   padding-right: 40px;
 }
 h3 {
-  padding-top: 5px;
+  padding-right: 50%;
+}
+#view-favs-button {
+  background-color: rgba(225, 225, 225, 1);
+  border-radius: 3px;
+  border: 0px;
+  font-size: 1vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 #add-recipe-button {
   background-color: rgba(225, 225, 225, 1);
   border-radius: 3px;
   border: 0px;
-  font-size: 8pt;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 1vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding-top: 7px;
   padding-bottom: 7px;
 }
@@ -55,16 +65,16 @@ article {
   padding-right: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
-  font-size: 16pt;
+  font-size: 1vw;
 }
 form {
-  font-size: 12pt;
+  font-size: 1vw;
 }
 #lets-cook-button {
   background-color: #0fb9b1;
   border-radius: 3px;
   border: 0px;
-  font-size: 10pt;
+  font-size: 1vw;
   margin: 1px;
   padding-left: 20px;
   padding-right: 20px;
@@ -84,16 +94,41 @@ form {
 .you-should-make {
   font-weight: bold;
   font-style: italic;
-  font-size: 12pt;
+  font-size: 1vw;
 }
 .output-recipe {
   font-weight: bold;
-  font-size: 12pt;
-  word-wrap: break-word;
+  font-size: 1vw;
+}
+.favs-list {
+  font-weight: bold;
+  font-size: 1vw;
+}
+#bottom-buttons {
+  display: flex;
+}
+.back-button {
+  background-color: #95a5a6;
+  border-radius: 3px;
+  border: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: start;
+}
+.fav-button {
+  background-color: #95a5a6;
+  border-radius: 3px;
+  border: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
 }
 .clear-button {
   background-color: #95a5a6;
+  border-radius: 3px;
+  border: 0px;
   flex-direction: row;
+  justify-content: space-between;
   align-self: end;
 }
 ul {

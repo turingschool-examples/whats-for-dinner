@@ -6,11 +6,12 @@
   <body>
     <header>
       <h3>What's for Dinner?</h3>
+      <button id="view-favs-button">FAVORITE RECIPES</button>
       <button id="add-recipe-button">ADD A RECIPE</button>
     </header>
     <section>
       <article id="create-recipe-box">
-        <p><h3>What are you looking for?<span id="star">*</span></h3></p>
+        <p>What are you looking for?<span id="star">*</span></p>
         <form>
           <ul>
             <li><input type="radio" id="side-option" name="meal" value="side">
@@ -23,13 +24,21 @@
             <label for="entire-meal">Entire Meal</label></li>
           </ul>
         </form>
-        <button id="lets-cook-button"><h4>LET'S COOK!</h4></button>
+        <button id="lets-cook-button">LET'S COOK!</button>
       </article>
       <article id="lets-cook-box">
         <p class="cookpot-image"><img src="./assets/cookpot.svg" alt="cooking pot with lid tilted off"></p>
         <p class="you-should-make hidden">You should make:</p>
-        <p class="output-recipe hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button class="clear-button hidden">CLEAR</button>
+        <p class="output-recipe hidden"></p>
+        <p class="favs-list hidden">
+          <ul class="favs-list">
+          </ul>
+        </p>
+        <section id="bottom-buttons">
+          <button class="back-button hidden">BACK</button>
+          <button class="fav-button hidden">💙</button>
+          <button class="clear-button hidden">CLEAR</button>
+        </section>
       </article>
     </section>
 

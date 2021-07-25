@@ -60,19 +60,23 @@ cookBtn.addEventListener('click', makeMeal);
 clearBtn.addEventListener('click', remove);
 
 function makeMeal() {
-  event.preventDefault();
-  box2Img.classList.add('second-box-hide-bg');
-  h2Ele.classList.remove('hidden');
-  clearBtn.style.visibility = "visible";
-  result.classList.remove('hidden');
-  if (sideRadio.checked) {
-    result.innerText = sides[getRandomIndex(sides)];
-  } else if (mainRadio.checked) {
-    result.innerText = mains[getRandomIndex(mains)];
-  } else if (dessertRadio.checked) {
-    result.innerText = desserts[getRandomIndex(desserts)];
-  } else if (entireMealRadio.checked) {
-    result.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
+  if (sideRadio.checked || mainRadio.checked || dessertRadio.checked || entireMealRadio.checked) {
+    event.preventDefault();
+    box2Img.classList.add('second-box-hide-bg');
+    h2Ele.classList.remove('hidden');
+    clearBtn.style.visibility = "visible";
+    result.classList.remove('hidden');
+    if (sideRadio.checked) {
+      result.innerText = sides[getRandomIndex(sides)];
+    } else if (mainRadio.checked) {
+      result.innerText = mains[getRandomIndex(mains)];
+    } else if (dessertRadio.checked) {
+      result.innerText = desserts[getRandomIndex(desserts)];
+    } else if (entireMealRadio.checked) {
+     result.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
+    }
+  } else {
+    return;
   }
 };
 

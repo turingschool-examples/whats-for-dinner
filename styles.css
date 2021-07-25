@@ -74,7 +74,6 @@ body {
     background-size: 6em;
     background-color: rgba(225, 225, 225, .9);
     justify-content: space-between;
-    /* align-items: flex-end */ */
 }
 
 .second-box-hide-bg {

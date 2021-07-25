@@ -1,9 +1,3 @@
-// import data from "./data.js"
-
-// var sides = data.sides;
-// var mains = data.mains;
-// var desserts = data.main;
-
 var sides = [
 "Miso Glazed Carrots",
 "Coleslaw",
@@ -62,10 +56,6 @@ var h2Ele = document.querySelector('h2');
 var box2Img = document.querySelector('.second-box');
 var clearBtn = document.getElementById("clear-btn")
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-};
-
 cookBtn.addEventListener('click', makeMeal);
 clearBtn.addEventListener('click', remove);
 
@@ -74,19 +64,20 @@ function makeMeal() {
   box2Img.classList.add('second-box-hide-bg');
   h2Ele.classList.remove('hidden');
   clearBtn.style.visibility = "visible";
+  result.classList.remove('hidden');
   if (sideRadio.checked) {
-      result.innerText = sides[getRandomIndex(sides)];
-    }  else if (mainRadio.checked) {
-        result.innerText = mains[getRandomIndex(mains)];
-     } else if (dessertRadio.checked) {
-          result.innerText = desserts[getRandomIndex(desserts)];
-     } else if (entireMealRadio.checked) {
-          result.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
- }
+    result.innerText = sides[getRandomIndex(sides)];
+  } else if (mainRadio.checked) {
+    result.innerText = mains[getRandomIndex(mains)];
+  } else if (dessertRadio.checked) {
+    result.innerText = desserts[getRandomIndex(desserts)];
+  } else if (entireMealRadio.checked) {
+    result.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
+  }
 };
 
 function clearAllRadios() {
-  sideaRadio.checked = false;
+  sideRadio.checked = false;
   mainRadio.checked = false;
   dessertRadio.checked = false;
   entireMealRadio.checked = false;
@@ -100,5 +91,8 @@ function remove() {
   clearAllRadios();
 }
 
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 
 

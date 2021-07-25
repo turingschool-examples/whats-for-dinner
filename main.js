@@ -15,10 +15,12 @@ var letsCookBtn = document.querySelector('#letsCookBtn');
 var cookPotImage = document.querySelector('img');
 var displayRecipe = document.querySelector('#displayRecipe');
 var youShouldMakeText = document.querySelector('#recipeText');
+var deleteDishBtn = document.querySelector('#removeRecipe');
 
 
 // EventListeners ⬇️
 letsCookBtn.addEventListener('click', getDish);
+deleteDishBtn.addEventListener('click', deleteDish)
 
 
 
@@ -39,6 +41,7 @@ function getDish() {
   } else if(entireMealInput.checked === true) {
     displayRecipe.innerText = `${mains[getRandomFoodIndex(mains)]}, with a side of ${sides[getRandomFoodIndex(sides)]} and ${desserts[getRandomFoodIndex(desserts)]} for dessert!`
   }
+  // letsCookBtn.disabled = true;
   hideImg();
   showRecipe();
 }
@@ -53,7 +56,9 @@ function hideImg() {
 function showRecipe() {
   youShouldMakeText.classList.remove('hidden');
   displayRecipe.classList.remove('hidden');
+  deleteDishBtn.classList.remove('hidden');
 }
+
 
 
 // if(sideDishRadioBtn.checked) {

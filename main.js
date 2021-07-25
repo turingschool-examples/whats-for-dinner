@@ -56,13 +56,20 @@ var desserts = [
 
 
 //querySelectors
-var clearBtn= document.querySelector()
+var clearBtn= document.querySelector('.clear-btn')
 var addRecipeBtn = document.querySelector('.recipe-btn');
 var letsCookBtn = document.querySelector('.cook-btn');
-var radioSidesBtn = document.querySelector('sides-option');
-var radioMainsBtn = document.querySelector('mains-option');
-var radioDessertsBtn = document.querySelector('desserts-option');
-var radioEntireBtn = document.querySelector('entire-meal-option');
+var radioSidesBtn = document.querySelector('.sides-option');
+var radioMainsBtn = document.querySelector('.mains-option');
+var radioDessertsBtn = document.querySelector('.desserts-option');
+var radioEntireBtn = document.querySelector('.entire-meal-option');
+var cookPot = document.querySelector('.cook-pot-img');
+
+
+
+
+var foodRecommendation = document.querySelector('.food-recommendation')
+
 //eventListeners
 //buttons
 //does the below button even need functionality? in the cyoa it  does
@@ -74,7 +81,6 @@ letsCookBtn.addEventListener('click', letsCook);
 // radioDessertsBtn.addEventListener('click', letsCook);
 // radioEntireBtn.addEventListener('click', letsCook);
 //
-
 
 
 
@@ -101,18 +107,18 @@ letsCookBtn.addEventListener('click', letsCook);
 //do i need new vars for each?
 //object literal for all sans entireMeal
 //need to assign these to the class above?
-var foodSuggestionSides
-
-var foodSuggestionsMains
-
-var foodSuggestionsDesserts
-
-var entireMeal = {
-  sides: sides,
-  mains: mains,
-  desserts: desserts,
-
-}
+// var foodSuggestionSides
+//
+// var foodSuggestionsMains
+//
+// var foodSuggestionsDesserts
+//
+// var entireMeal = {
+//   sides: sides,
+//   mains: mains,
+//   desserts: desserts,
+//
+// }
 
 //functions
 
@@ -143,38 +149,63 @@ var entireMeal = {
 //
 // function selectRadioDesserts()
 
-// function letsCook () {
-//   sides.innerText = sides[getRandomIndex(sides)];
-//   mains.innerText = mains[getRandomIndex(mains)];
-//   desserts.innerText = desserts[getRandomIndex(desserts)];
-//   newMealIdea = new Foods (sides.innerText, mains.innerText, desserts.innerText);
-// };
+
 
 //do i need a random math function like we used last weekend?
 //can i use the same? does it make sense?
 
-function checkRadioButton() {
-           if(document.querySelector('sides-option').checked) {
-               document.querySelector('sides-option').innerHTML
-                   = document.querySelector('sides-option').value
-                   + " radio button checked";
-           }
-           else if(document.querySelector('mains-option').checked) {
-               document.querySelector('mains-option').innerHTML
-                   = document.querySelector'mains-option').value
-                   + " radio button checked";
-           }
-           else if(document.querySelector('desserts-option').checked) {
-               document.querySelector('desserts-option').innerHTML
-                   = document.querySelector('desserts-option').value
-                   + " radio button checked";
-           }
-           else {
-               document.querySelector"disp").innerHTML
-                   = "No one selected";
-           }
+function checkRadioButton () {
+  if(radioSidesBtn.checked) {
+     return sides[getRandomIndex(sides)];
+}
+  if(radioMainsBtn.checked) {
+    return mains[getRandomIndex(mains)];
+}
+  if(radioDessertsBtn.checked) {
+    return desserts[getRandomIndex(desserts)];
+}
+}
+
+
+       function letsCook (event) {
+         event.preventDefault()
+         var dish = checkRadioButton()
+         console.log(dish)
+         foodRecommendation.innerText = dish;
+         foodRecommendation.classList.remove('hidden');
+         cookPot.classList.add('hidden');
+         clearBtn.classList.remove('hidden');
        }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
+
+// clearBtn.classList.remove('hidden');
+
+
+
+//would this work like last project or does it need to be one function per food/meal type?
+
+// function hide(element) {
+//   element.classList.add('hidden');
+// };
+//
+// function show(element) {
+//   element.classList.remove('hidden');
+// };
+
+// function showFoodItem() {
+//   hide(COOK POT IMAGE);
+//   show(SIDES);
+//   show(MAINS);
+//   show(DESSERTS);
+// };
+
+// function showCookPot() {
+//   show(COOK POT IMAGE);
+//   hide(SIDES);
+//   hide(MAINS);
+//   hide(DESSERTS);
+//  // };
+// };

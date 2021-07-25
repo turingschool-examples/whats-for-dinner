@@ -170,7 +170,6 @@ function checkRadioButton () {
        function letsCook (event) {
          event.preventDefault()
          var dish = checkRadioButton()
-         console.log(dish)
          foodRecommendation.innerText = dish;
          foodRecommendation.classList.remove('hidden');
          cookPot.classList.add('hidden');

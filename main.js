@@ -50,9 +50,8 @@ var desserts = [
 ]
 
 
-
-var clearBtn= document.querySelector('.clear-btn')
 var addRecipeBtn = document.querySelector('.recipe-btn');
+var clearBtn= document.querySelector('.clear-btn')
 var letsCookBtn = document.querySelector('.cook-btn');
 var radioSidesBtn = document.querySelector('.sides-option');
 var radioMainsBtn = document.querySelector('.mains-option');

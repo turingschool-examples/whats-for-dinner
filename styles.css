@@ -9,6 +9,14 @@ red - #ee5253
 */
 
 
+
+ .food-recommedation {
+   overflow-wrap: break-word;
+   font-size: 20px;
+   align-self: center;
+   white-space: nowrap;
+ }
+
 body {
   background: url(assets/burger-friends.jpg);
   background-repeat: no-repeat;
@@ -24,8 +32,12 @@ span {
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-size: 26px;
+  font-size: 24ßpx;
   white-space: nowrap;
+  overflow-wrap: break-word;
+  align-self: center;
+  word-wrap: break-word;
+
 }
 
 .page-title {
@@ -35,8 +47,6 @@ padding: 5px;
 margin: 5px;
 }
 
-main {
-}
 
 header {
   display: flex;
@@ -69,7 +79,7 @@ border: none;
   background-color:  #95a5a6;
   border-radius: 8px;
   margin-right: 12px;
-  width: 200px;
+  width: 100px;
   height: 36px;
   padding: 0;
   border: none;
@@ -93,6 +103,7 @@ form {
     justify-content: center;
 }
 
+
 .cook-pot-img {
   width: 250px;
   height: 250px;
@@ -109,6 +120,7 @@ form {
   margin: 0;
   flex-direction: column;
   align-content: flex-end;
+
 }
 
 .form-view {
@@ -116,6 +128,7 @@ form {
   justify-content: space-around;
   height: 577px;
   align-items: center;
+
 }
 
 .hidden {

@@ -12,23 +12,31 @@
       <button class="recipe-btn"> ADD A RECIPE </button>
      </header>
       <main>
-      <section class="recipe-form">
+      <!-- <section class="recipe-form"> -->
       <section class="form-view">
         <form id="form">
-        <div>
+        <div class="form-food">
         <p id="form-prompt"> <strong><p>What are you looking for?<span>*</span></strong></p>
-            <ul><input type="radio" class="sides-option"
+          <div>
+            <input type="radio" class="sides-option"
             name="dish" value="sides-recipe">
-            <label for="side-option">Side</label></ul>
-            <ul><input type ="radio" class="mains-option"
+            <label for="side-option">Side</label>
+          </div>
+          <div>
+            <input type ="radio" class="mains-option"
             name="dish" value="mains-recipe">
-            <label for="main-option">Main</label></ul>
-            <ul><input type="radio" class="desserts-option"
+            <label for="main-option">Main</label>
+          </div>
+          <div>
+            <input type="radio" class="desserts-option"
             name="dish" value="desserts-recipe">
-            <label for="dessert-option">Dessert</label></ul>
-            <ul><input type="radio" class="entire-meal-option"
+            <label for="dessert-option">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" class="entire-meal-option"
             name="dish" value="entire-meal-recipe">
-            <label for="entire-meal-option">Entire Meal</label></ul>
+            <label for="entire-meal-option">Entire Meal</label>
+          </div>
             <button class="cook-btn">LET'S COOK!</button>
            </div>
         </form>

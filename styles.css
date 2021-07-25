@@ -24,7 +24,7 @@ span {
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   white-space: nowrap;
 }
 
@@ -82,13 +82,20 @@ h1 {
 
 form {
   display: flex;
-  background-color: rgba(225, 225, 225, .9);
-  border: none;
-  font-family: 'Roboto';
-  padding: 100px;
-  width: 200px;
-  height: 200px;
-  margin: 0;
+    background-color: rgba(225, 225, 225, .9);
+    border: none;
+    font-family: 'Roboto';
+    padding: 100px;
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.cook-pot-img {
+  width: 250px;
+  height: 250px;
 }
 
 .cook-pot {
@@ -97,7 +104,7 @@ form {
   border-radius: 2px;
   font-family: 'Roboto';
   padding: 100px;
-  width: 200px;
+  width: 300px;
   height: 200px;
   margin: 0;
   flex-direction: column;
@@ -113,4 +120,10 @@ form {
 
 .hidden {
   display: none;
+}
+
+div {
+    padding: 7px;
+    font-size: 20px;
+    margin-left: 7px;
 }

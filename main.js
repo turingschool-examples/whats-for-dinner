@@ -175,6 +175,7 @@ function checkRadioButton () {
          foodRecommendation.classList.remove('hidden');
          cookPot.classList.add('hidden');
          clearBtn.classList.remove('hidden');
+         youMake.classList.remove('hidden');
        }
 
 function getRandomIndex(array) {
@@ -182,7 +183,7 @@ function getRandomIndex(array) {
 };
 
 // clearBtn.classList.remove('hidden');
-
+var youMake = document.querySelector('.you-make')
 
 
 //would this work like last project or does it need to be one function per food/meal type?

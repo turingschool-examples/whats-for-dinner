@@ -59,7 +59,13 @@ function showRecipe() {
   deleteDishBtn.classList.remove('hidden');
 }
 
-
+function deleteDish() {
+  youShouldMakeText.classList.add('hidden');
+  displayRecipe.classList.add('hidden');
+  cookPotImage.classList.remove('hidden');
+  deleteDishBtn.classList.add('hidden');
+  letsCookBtn.disabled = false;
+}
 
 // if(sideDishRadioBtn.checked) {
 //   // statment of sidedish array will come here

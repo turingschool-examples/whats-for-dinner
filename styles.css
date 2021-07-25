@@ -63,16 +63,17 @@ form {
 }
 
 h2 {
-  height: 50px;
+  height: 2.5rem;
+  display: inline-flex;
   /* position: absolute; */
 }
 
 .add-a-recipe-button,
 .lets-cook-button {
   /* text-align: justify; */
-  height: 30px;
-  padding: 15px;
-  padding-top: 8px;
+  height: 1.875rem;
+  padding: 0.938rem;
+  padding-top: 0.5rem;
   border-radius: 3px; // <- dont replace with rem
   border-style: inherit;
   border: 0;
@@ -100,7 +101,7 @@ section {
 }
 
 label {
-  padding: 0.6rem;
+  padding: 0.7rem;
 }
 
 
@@ -110,7 +111,7 @@ label {
 
 
 .menu-container {
-  padding: 30px;
+  padding: 1.8rem;
 }
 
 .dish-container {
@@ -123,14 +124,16 @@ label {
 }
 
 .recipe-text{
-  padding: 1rem;
   font-size: large;
   font-style: italic;
+  font-weight: bold;
+
 }
 
 .display-recipe {
   font-weight: bold;
-  font-size: x-large;
+  font-size: xx-large;
+  padding: .4rem;
 }
 
 

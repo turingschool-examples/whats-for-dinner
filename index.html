@@ -4,7 +4,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header>
+      <h3>What's for Dinner?</h3>
+      <button id="add-recipe-button">ADD A RECIPE</button>
+    </header>
+    <section>
+      <article id="create-recipe-box">
+        <p><h3>What are you looking for?<span id="star">*</span></h3></p>
+        <form>
+          <ul>
+            <li><input type="radio" id="side-option" name="meal" value="side">
+            <label for="side">Side</label></li>
+            <li><input type="radio" id="main-dish-option" name="meal" value="main-dish">
+            <label for="main-dish">Main Dish</label></li>
+            <li><input type="radio" id="dessert-option" name="meal" value="dessert">
+            <label for="dessert">Dessert</label></li>
+            <li><input type="radio" id="entire-meal-option" name="meal" value="entire-meal">
+            <label for="entire-meal">Entire Meal</label></li>
+          </ul>
+        </form>
+        <button id="lets-cook-button"><h4>LET'S COOK!</h4></button>
+      </article>
+      <article id="lets-cook-box">
+        <p class="cookpot-image"><img src="./assets/cookpot.svg" alt="cooking pot with lid tilted off"></p>
+        <p class="you-should-make hidden">You should make:</p>
+        <p class="output-recipe hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="clear-button hidden">CLEAR</button>
+      </article>
+    </section>
+
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

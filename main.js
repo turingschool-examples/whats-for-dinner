@@ -1,4 +1,3 @@
-//food arrays
 
 var sides = [
 'Miso Glazed Carrots',
@@ -52,7 +51,6 @@ var desserts = [
 
 
 
-//querySelectors
 var clearBtn= document.querySelector('.clear-btn')
 var addRecipeBtn = document.querySelector('.recipe-btn');
 var letsCookBtn = document.querySelector('.cook-btn');
@@ -70,10 +68,15 @@ var radioEntireBtn = document.querySelector('.entire-meal-option');
 
 
 var foodRecommendation = document.querySelector('.food-recommendation')
+var clearBtn= document.querySelector('.clear-btn')
 
 
 letsCookBtn.addEventListener('click', letsCook);
-// clearBnt.addEventListener('click', pushClearBtn);
+clearBtn.addEventListener('click', pushClearBtn);
+
+
+
+
 
 function checkRadioButton () {
   if(radioSidesBtn.checked) {
@@ -91,61 +94,23 @@ function checkRadioButton () {
 }
 
 
-       function letsCook (event) {
-         event.preventDefault()
-         var dish = checkRadioButton()
-         foodRecommendation.innerText = dish;
-         foodRecommendation.classList.remove('hidden');
-         cookPot.classList.add('hidden');
-         clearBtn.classList.remove('hidden');
-         youMake.classList.remove('hidden');
-       }
-
-function pushClearBtn () {
+function letsCook (event) {
   event.preventDefault()
+  var dish = checkRadioButton()
+  foodRecommendation.innerText = dish;
+  foodRecommendation.classList.remove('hidden');
+  cookPot.classList.add('hidden');
+  clearBtn.classList.remove('hidden');
+  youMake.classList.remove('hidden');
+}
+
+function pushClearBtn (event) {
   clearBtn.classList.add('hidden');
   foodRecommendation.classList.add('hidden');
   cookPot.classList.remove('hidden');
   youMake.classList.add('hidden');
 }
 
-
-
-
-
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
-
-// var youMake = document.querySelector('.you-make');
-var clearBtn= document.querySelector('.clear-btn')
-
-//
-// var youMake = document.querySelector('.you-make')
-//
-// var radioEntireBtn = document.querySelector('.entire-meal-option');
-
-//would this work like last project or does it need to be one function per food/meal type?
-
-// function hide(element) {
-//   element.classList.add('hidden');
-// };
-//
-// function show(element) {
-//   element.classList.remove('hidden');
-// };
-
-// function showFoodItem() {
-//   hide(COOK POT IMAGE);
-//   show(SIDES);
-//   show(MAINS);
-//   show(DESSERTS);
-// };
-
-// function showCookPot() {
-//   show(COOK POT IMAGE);
-//   hide(SIDES);
-//   hide(MAINS);
-//   hide(DESSERTS);
-//  // };
-// };

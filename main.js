@@ -64,6 +64,7 @@ var radioMainsBtn = document.querySelector('.mains-option');
 var radioDessertsBtn = document.querySelector('.desserts-option');
 var radioEntireBtn = document.querySelector('.entire-meal-option');
 var cookPot = document.querySelector('.cook-pot-img');
+var youMake = document.querySelector('.you-make');
 
 
 
@@ -164,7 +165,7 @@ function checkRadioButton () {
   if(radioDessertsBtn.checked) {
     return desserts[getRandomIndex(desserts)];
 }
-  
+
 }
 
 
@@ -181,6 +182,9 @@ function checkRadioButton () {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
+
+// var youMake = document.querySelector('.you-make');
+
 
 // clearBtn.classList.remove('hidden');
 var youMake = document.querySelector('.you-make')

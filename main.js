@@ -41,7 +41,7 @@ function getDish() {
   } else if(entireMealInput.checked === true) {
     displayRecipe.innerText = `${mains[getRandomFoodIndex(mains)]}, with a side of ${sides[getRandomFoodIndex(sides)]} and ${desserts[getRandomFoodIndex(desserts)]} for dessert!`
   }
-  // letsCookBtn.disabled = true;
+  letsCookBtn.disabled = true;
   hideImg();
   showRecipe();
 }

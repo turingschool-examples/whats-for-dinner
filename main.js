@@ -1,4 +1,3 @@
-
 var sides = [
 'Miso Glazed Carrots',
 'Coleslaw',
@@ -60,29 +59,23 @@ var radioMainsBtn = document.querySelector('.mains-option');
 var radioSidesBtn = document.querySelector('.sides-option');
 var youMake = document.querySelector('.you-make');
 
-
-
 clearBtn.addEventListener('click', pushClearBtn);
 letsCookBtn.addEventListener('click', letsCook);
-
-
 
 function checkRadioButton () {
   if(radioSidesBtn.checked) {
      return sides[getRandomIndex(sides)];
-}
+   }
   if(radioMainsBtn.checked) {
     return mains[getRandomIndex(mains)];
-}
+  }
   if(radioDessertsBtn.checked) {
     return desserts[getRandomIndex(desserts)];
-}
+  }
   if(radioEntireBtn.checked) {
     return `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert`
   }
 }
-
-
 
 function letsCook (event) {
   event.preventDefault()

@@ -15,6 +15,7 @@ var entireMealOption = document.querySelector('#entire-meal-option');
 
 var cookpotImage = document.querySelector('.cookpot-image');
 var youShouldMake = document.querySelector('.you-should-make');
+var youShouldMakeFavs = document.querySelector('.you-should-make-favs');
 var outputRecipe = document.querySelector('.output-recipe');
 var favsList = document.querySelector('.favs-list');
 var favButton = document.querySelector('.fav-button');
@@ -52,6 +53,7 @@ function showRecipe() {
   hide(favsList);
   hide(deleteFavButton);
   hide(backButton);
+  hide(youShouldMakeFavs);
   show(youShouldMake);
   show(outputRecipe);
   show(favButton);
@@ -77,31 +79,18 @@ function getRecipe() {
 
 function addFav() {
   favRecipes.push(currentRecipe);
-  // favsList.innerText = '';
-
-  for (var i = 0; i < favRecipes.length; i++) {
-    // var text = document.createTextNode(favRecipes[i]);
-    checkbox.type = 'checkbox';
-    checkbox.name = 'delete';
-    checkbox.id = 'delete';
-    checkbox.value = i;
-
-    unorderedList.appendChild(listItem);
-    listItem.appendChild(checkbox);
-    listItem.appendChild(label);
-
-    // label.appendChild(text);
-    label.innerHTML = `${favRecipes[i]}`;
-  }
 
   showFavorites();
 }
 
 function deleteFav() {
-  if (checkbox.value > 0) {
-    favRecipes.splice(checkbox.value - 1, 1);
+  listItem.removeChild(label);
+  listItem.removeChild(checkbox);
+  unorderedList.removeChild(listItem);
+
+  if (checkbox.checked) {
+    favRecipes.splice(indexOf(checkbox.value), 1);
   }
-  favRecipes.splice(checkbox.value, 1);
 
   showFavorites();
 }
@@ -113,9 +102,32 @@ function showFavorites() {
   hide(youShouldMake);
   hide(outputRecipe);
   hide(favButton);
+  show(youShouldMakeFavs);
   show(favsList);
   show(deleteFavButton);
   show(backButton);
+
+  label.innerHTML = '';
+
+  for (var i = 0; i < favRecipes.length; i++) {
+    listItem = document.createElement('li');
+    checkbox = document.createElement('input');
+    label = document.createElement('label');
+    checkbox.type = 'checkbox';
+    checkbox.name = 'user-favorites';
+    checkbox.value = favRecipes[i];
+
+    unorderedList.appendChild(listItem);
+    listItem.appendChild(checkbox);
+    listItem.appendChild(label);
+
+    label.innerHTML = `${favRecipes[i]}`;
+  }
+}
+
+function addListItem() {
+  // listItem = document.createElement('li');
+
 }
 
 function getRandomIndex(array) {

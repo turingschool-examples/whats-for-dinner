@@ -54,15 +54,15 @@ section {
 }
 article {
   background-color: rgba(225, 225, 225, .9);
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
 }
 #create-recipe-box {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
   font-size: 1vw;
@@ -86,9 +86,9 @@ form {
 #lets-cook-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-left: 150px;
-  padding-right: 150px;
+  justify-content: space-around;
+  padding-left: 100px;
+  padding-right: 100px;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -100,18 +100,24 @@ form {
   align-self: flex-start;
   font-weight: bold;
   font-style: italic;
-  font-size: 1vw;
+  font-size: 1.25vw;
 }
 .output-recipe {
   align-self: center;
   font-weight: bold;
-  font-size: 1vw;
+  font-size: 1.75vw;
+}
+.you-should-make-favs {
+  align-self: flex-start;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.25vw;
 }
 .favs-list {
   list-style-type: none;
   align-self: center;
   font-weight: bold;
-  font-size: 1vw;
+  font-size: 1.25vw;
 }
 #bottom-buttons {
   align-self: flex-end;
@@ -127,8 +133,8 @@ form {
   margin-right: 50%;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .delete-fav-button {
   background-color: #95a5a6;
@@ -138,8 +144,8 @@ form {
   margin-right: 50%;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .clear-button {
   background-color: #95a5a6;
@@ -169,9 +175,6 @@ ul {
 }
 li {
   padding: 5px;
-}
-#delete {
-  padding: 10px;
 }
 #star {
   color: #ee5253;

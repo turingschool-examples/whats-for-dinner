@@ -65,19 +65,18 @@ function getRandomIndex(array){
 };
 
 function getCurrentDish() {
-  console.log(sideBtn);
-  if (sideBtn) {
+  if (sideBtn.checked) {
     currentDish = sideMenu[getRandomIndex(sideMenu)];
-  } else if (mainDishBtn) {
-    currentDish = mainMenu[getRandomIndex(mainMenu)]
-  } else if (dessertBtn) {
+  } else if (mainDishBtn.checked) {
+    currentDish = mainMenu[getRandomIndex(mainMenu)];
+  } else if (dessertBtn.checked) {
     currentDish = dessertMenu[getRandomIndex(dessertMenu)];
   }
 }
 
 function displayDish() {
   getCurrentDish();
-  recipeBox.innerHTML = `<p class='recipe-text'>${currentDish}</p>`;
+  recipeBox.innerHTML = `<p class='recipe-text'>You should make: ${currentDish}</p>`;
 }
 
 function showSideDish() {

@@ -23,10 +23,6 @@ nav {
   margin-bottom: 10px;
 }
 
-button {
-
-}
-
 .main-area {
   display: flex;
   justify-content: space-around;
@@ -37,6 +33,7 @@ button {
 }
 
 .selection-box {
+  display: flex;
   background-color: rgba(225, 225, 225, .9);
   width: 500px;
   height: 500px;
@@ -44,16 +41,15 @@ button {
 }
 
 .radio-buttons {
+  display: flex;
+  justify-content: space-around;
   flex-direction: column;
 }
 
 .recipe-box {
+  /* display: flex; */
   background-color: rgba(225, 225, 225, .9);
   width: 500px;
   height: 500px;
   margin: 50px;
-}
-
-image {
-  /* viewBox: 0 0 100px 100px; */
 }

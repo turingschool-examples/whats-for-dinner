@@ -1,4 +1,4 @@
-export var sides = [
+var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
     'Garden Salad',
@@ -10,7 +10,7 @@ export var sides = [
     'Garlic Butter Mushrooms',
     'Hush Puppies'
 ];
-export var mains = [
+var mains = [
     'Spaghetti and Meatballs',
     'Pineapple Chicken',
     'Shakshuka',
@@ -25,7 +25,7 @@ export var mains = [
     'Sheet Pan Fajitas',
     'Margarita Pizza'
 ];
-export var desserts = [
+var desserts = [
     'Apple Pie',
     'Lemon Meringue Pie',
     'Black Forest Cake',
@@ -45,4 +45,46 @@ export var desserts = [
     'Croissants',
     'Eclairs'
 ];
-export var allDishes = [sides, mains, desserts];
+var allDishes = [
+    {name: 'Miso Glazed Carrots', type: 'Side'},
+    {name: 'Coleslaw', type: 'Side'},
+    {name: 'Garden Salad', type: 'Side'},
+    {name: 'Crispy Potatoes', type: 'Side'},
+    {name: 'Sweet Potato Tots', type: 'Side'},
+    {name: 'Coconut Rice', type: 'Side'},
+    {name: 'Caeser Salad', type: 'Side'},
+    {name: 'Shrimp Summer Rolls', type: 'Side'},
+    {name: 'Garlic Butter Mushrooms', type: 'Side'},
+    {name: 'Hush Puppies', type: 'Side'},
+    {name: 'Spaghetti and Meatballs', type: 'Main'},
+    {name: 'Pineapple Chicken', type: 'Main'},
+    {name: 'Shakshuka', type: 'Main'},
+    {name: 'Thai Yellow Curry', type: 'Main'},
+    {name: 'Bibimbap', type: 'Main'},
+    {name: 'Chicken Parmesean', type: 'Main'},
+    {name: 'Butternut Squash Soup', type: 'Main'},
+    {name: 'BBQ Chicken Burgers', type: 'Main'},
+    {name: 'Ramen', type: 'Main'},
+    {name: 'Empanadas', type: 'Main'},
+    {name: 'Chicken Fried Rice', type: 'Main'},
+    {name: 'Sheet Pan Fajitas', type: 'Main'},
+    {name: 'Margarita Pizza', type: 'Main'},
+    {name: 'Apple Pie', type: 'Dessert'},
+    {name: 'Lemon Meringue Pie', type: 'Dessert'},
+    {name: 'Black Forest Cake', type: 'Dessert'},
+    {name: 'Banana Bread', type: 'Dessert'},
+    {name: 'Peach Cobbler', type: 'Dessert'},
+    {name: 'Cheesecake', type: 'Dessert'},
+    {name: 'Funfetti Cake', type: 'Dessert'},
+    {name: 'Baklava', type: 'Dessert'},
+    {name: 'Flan', type: 'Dessert'},
+    {name: 'Macarons', type: 'Dessert'},
+    {name: 'Macaroons', type: 'Dessert'},
+    {name: 'Chocolate Cupcakes', type: 'Dessert'},
+    {name: 'Pavlova', type: 'Dessert'},
+    {name: 'Pumpkin Pie', type: 'Dessert'},
+    {name: 'Key Lime Pie', type: 'Dessert'},
+    {name: 'Tart Tatin', type: 'Dessert'},
+    {name: 'Croissants', type: 'Dessert'},
+    {name: 'Eclairs', type: 'Dessert'}
+];

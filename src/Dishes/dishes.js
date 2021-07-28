@@ -88,3 +88,7 @@ var allDishes = [
     {name: 'Croissants', type: 'Dessert'},
     {name: 'Eclairs', type: 'Dessert'}
 ];
+
+// this seems like very WET (Write Everything Twice) code
+// maybe you could have used only the allDishes array for all of your functions and filtered by type
+// rather than have separate arrays for everything

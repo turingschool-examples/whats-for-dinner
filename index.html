@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
@@ -5,18 +6,23 @@
     <script type="text/javascript" src="./src/Dishes/dishes.js"></script>
     <script type="text/javascript" src="./src/Dishes/dish-modification.js"></script>
 
+    <!-- head is actually the head of the browser, not a header -->
+    <!-- only scripts and links can go here -->
+  </head>
+
+  <!-- similar to the comment above, body is the body of the browser, not just the contents of the page -->
+  <!-- this is where all of your visible elements will live! -->
+
+  <body class="background-picture">
     <!--------------- Top Header Content --------------->
-    <div class="header">
+    <header class="header">
       <h2 class="header-title">What's for Dinner?</h2>
       <button class="add-recipe-button" onclick="toggleFooter()">ADD A RECIPE</button>
 
-    </div>
-  </head>
+    <!-- notice that i changed these elements to header and main rather than divs -->
+    <!-- it would be good to look into semantic html elements -->
 
-  <!--------------- Beginning of Body --------------->
-  <body class="background-picture">
-
-    <div class="body-content">
+    <main class="body-content">
       <!--------------- Left Selection Card --------------->
       <div class = "lets-cook-card">
         <h1>What are you looking for?</h1>
@@ -37,30 +43,29 @@
         <img id="pot-img" src="assets/cookpot.svg" width="400px" height="300px"></img>
         <h3 id="make-statement" class="make-statement"><i>You should make:</i></h3>
         <h2 id="result-statement" class="result-statement"></h2>
-        <button id="clear-button" class="clear-button">CLEAR</button>
+        <button id="clear-button" class="clear-button" onclick="clearSelection()">CLEAR</button>
       </div>
-    </div>    
+    </main>
+
+    <!--------------- Add Recipe Footer --------------->
+    <footer class="add-recipe-footer">
+      <div class="add-recipe-tab">
+        <div class="recipe-type">
+          <label>Recipe Type</label>
+          <input id="recipe-type-input" list="type"></input>
+          <datalist id="type">
+            <option value="Side"></option>
+            <option value="Main Dish"></option>
+            <option value="Dessert"></option>
+          </datalist>
+        </div>
+
+        <div class="recipe-name">
+          <label>Recipe Name</label>
+          <input id="recipe-name-input"></input>
+        </div>
+        <button class="add-new-button" onclick="addDish()">ADD NEW</button>
+      </div>
+    </footer>
   </body>
-
-  <!--------------- Add Recipe Footer --------------->
-  <footer class="add-recipe-footer">
-    <div class="add-recipe-tab">
-      <div class="recipe-type">
-        <label>Recipe Type</label>
-        <input id="recipe-type-input" list="type"></input>
-        <datalist id="type">
-          <option value="Side"></option>
-          <option value="Main Dish"></option>
-          <option value="Dessert"></option>
-      </datalist>
-      </div>
-
-      <div class="recipe-name">
-        <label>Recipe Name</label>
-        <input id="recipe-name-input"></input>
-      </div>
-      <button class="add-new-button">ADD NEW</button>
-    </div>
-  </footer>
-
 </html>

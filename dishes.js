@@ -52,4 +52,8 @@ var dessertsArray = [
     'Eclairs'
 ];
 
-export {sidesArray, mainsArray, dessertsArray};
+// export {sidesArray, mainsArray, dessertsArray};
+// javascript is weird and uses module.exports rather than regular exports
+// an easy way to get around this export/import process is to add a script in your html file
+// similar to how you used a script to add your main.js into your html file, i added one for dishes.js
+// this allows all the array variables to be accessible by your main.js because it gets imported first

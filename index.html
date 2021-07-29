@@ -2,82 +2,61 @@
   <head>
     <link rel = "stylesheet" href = "./styles.css">
     <link href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel = "stylesheet">
-
-  <! ------- HTML for the title + Recipe button's Function------- >
-  <div class = "main-title">
-    <h2 class = "title"> What's for Dinner? </h2>
-    <button class = "add-recipe-button" onclick = "displayRecipesTab()"> ADD A RECIPE </button>
-    <script class = "hiddenRecipeButton">
-      function displayRecipesTab() {
-        var displayAddedRecipeTab = document.getElementsByClassName('addedRecipes')[0];
-        
-        if (displayAddedRecipeTab.style.display === 'block') {
-            displayAddedRecipeTab.style.display = 'none';
-        } else {
-            displayAddedRecipeTab.style.display = 'block';
-        }
-        return console.log(displayAddedRecipeTab.style.display);
-      }
-    </script>
-  </div>
   </head>
+
+  <!-- the head and body tags are to hold information for the browser, not the web page
+  heads should pretty much only hold links and a few other metadata attributes
+  maybe check MDN for some information about these! -->
   
-  <! ------- HTML for the background picture ------- >
+  <!-- HTML for the background picture -->
   <body class = "background-picture">
+    <!-- HTML for the title + Recipe button's Function -->
+    <div class = "main-title">
+      <h2 class = "title"> What's for Dinner? </h2>
+      <button class = "add-recipe-button" onclick = "displayRecipesTab()"> ADD A RECIPE </button>
 
-  <! -------  HTML for "What are you looking for?" section ------- >
-  <div class = "selection">
-    <h1> What are you looking for? </h1>
-    <input type = "radio" name="radAnswer" id = "select-option1"> </input>
-    <label> Side </label><br>
-    <input type = "radio" name="radAnswer" id = "select-option2"> </input>
-    <label> Main Dish </label><br>
-    <input type = "radio" name="radAnswer" id = "select-option3" > </input>
-    <label> Dessert </label><br>
-    <input type = "radio" name="radAnswer" id = "select-option4"> </input>
-    <label> Entire Meal </label><br><br>
-    <button class = "display-food" onclick = "hidePotImage()"> LET'S COOK! </button>
-  </div>
-
-  <! ------- HTML for the second box display ------- >  
-  <div class = "second-box">
-    <h3 class = "title"> You should make: </h3>
-    <img id='pot' src="assets/cookpot.svg" width="200px" height="200px"></img>
-  </div>
-  <script class = "hiddenPot">
-    function hidePotImage(){
-      var hideImage = document.getElementById('pot');
-
-      if (hideImage.style.display === 'block'){
-          hideImage.style.display ='none';
-      } else {
-        hideImage.style.display = 'block';
-      }
-      return console.log(hideImage.style.display);
-    }
-  </script>
-  </body>
-
-  <footer>
-    <! ------- HTML for the user to add a recipe ------- >
-    <div class = "addedRecipes">
-      <input id = "recipe-type" list = "type"> Recipe Type </input>
-      <input id = "recipe-name" list = "input"> Recipe Name </input>
-      <button class = "add-a-recipe-button"> ADD NEW </button>
-      <datalist id = "type">
-        <option value = "Side Dishes"></option>
-        <option value = "Main Dishes"></option>
-        <option value = "Dessert Dishes"></option>
-        </datalist>
+      <!-- scripts should really only live in javascript files as a best practice, 
+      so i moved the ones from this file into your main.js :) -->
     </div>
-  </footer>
 
-  <script type="text/javascript" src="main.js"></script>
-  </html>
+    <!--- HTML for "What are you looking for?" section ------->
+    <div class = "selection">
+      <h1> What are you looking for? </h1>
+      <input type = "radio" name="radAnswer" id = "select-option1"> </input>
+      <label> Side </label><br>
+      <input type = "radio" name="radAnswer" id = "select-option2"> </input>
+      <label> Main Dish </label><br>
+      <input type = "radio" name="radAnswer" id = "select-option3" > </input>
+      <label> Dessert </label><br>
+      <input type = "radio" name="radAnswer" id = "select-option4"> </input>
+      <label> Entire Meal </label><br><br>
+      <button class = "display-food" onclick = "displayGeneratedDish()"> LET'S COOK! </button>
+      <!-- I adjusted which function is being called here since the function that hides the pot
+      is now being utilized inside of displayGeneratedDish -->
+    </div>
 
-  <! ------- HTML for the login page ------- >
-  <!-- <div class = "login">
-    <label for="name">Name:</label>
-    <input type="text" id="users-name" name="name">
-    <button class = "add-name"> Submit </button>
-  </div> -->
+    <!------- HTML for the second box display ------->  
+    <div class = "second-box">
+      <h3 class = "title"> You should make: </h3>
+      <img id='pot' src="assets/cookpot.svg" width="200px" height="200px"></img>
+      <p id='dish-text'></p>
+    </div>
+
+    <footer>
+      <!-- HTML for the user to add a recipe -->
+      <div class = "addedRecipes">
+        <input id = "recipe-type" list = "type"> Recipe Type </input>
+        <input id = "recipe-name" list = "input"> Recipe Name </input>
+        <button class = "add-a-recipe-button"> ADD NEW </button>
+        <datalist id = "type">
+          <option value = "Side Dishes"></option>
+          <option value = "Main Dishes"></option>
+          <option value = "Dessert Dishes"></option>
+          </datalist>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="dishes.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

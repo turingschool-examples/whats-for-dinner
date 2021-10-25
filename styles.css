@@ -8,3 +8,25 @@ red - #ee5253
 
 */
 
+.top {
+  background: #0fb9b1;
+  display: flex;
+  height: 60px
+}
+
+.top > .add-a-recipe-button {
+  background: rgba(225, 225, 225, .9);
+  border: none
+  color:
+}
+
+.top > .header {
+  font-family: 'Roboto', sans-serif;
+}
+
+.body {
+  background-image: url('assets/burger-friends.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

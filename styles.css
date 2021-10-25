@@ -7,4 +7,35 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+header{
+    background-color: #0fb9b1;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
 
+.hidden {
+    display: none;
+}
+
+.main-view{
+    display: inline-flex;
+}
+
+.meal-form-view{
+    background-color: #95a5a6;
+}
+.meal-option-button{
+    background-color: #0fb9b1;
+}
+
+.meal-view{
+    background-color: #95a5a6;
+}
+
+.footer{
+    background-color: #95a5a6;
+}
+.add-new-recipe-button{
+    background-color: #0fb9b1;
+}

@@ -41,7 +41,10 @@ red - #ee5253
 .add-a-recipe-button {
   margin: 15px;
   height: 2em;
+  background-color: rgba(225, 225, 225);
   border-radius: 5px;
+  border-color: rgba(225, 225, 225);
+  border-style: solid;
 }
 
 
@@ -56,20 +59,22 @@ red - #ee5253
 }
 
 .container-one {
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 360px;
   margin: 100px;
-  background-color: rgba(225, 225, 225, .9);
-  color: black;
+  padding: 20px;
   opacity: 90%;
+  font-size: 120%;
+  color: black;
+  background-color: rgba(225, 225, 225, .9);
 }
 
 .container-two {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 400px;
   margin: 100px;
   background-color: rgba(225, 225, 225, .9);
   color: black;
@@ -84,16 +89,17 @@ red - #ee5253
 form {
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
 label {
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .what-are-you-looking-for {
-  margin: 50px;
-  padding: 1em;
+  margin-left: 50px;
+  margin-top: 70px;
+  margin-bottom: 0px;
   font-size: 1.5em;
   color: black;
   font-weight: 900;
@@ -102,4 +108,20 @@ label {
 .what-are-you-looking-for::after {
   content: " *";
   color: red;
+}
+
+.lets-cook-btn {
+  background-color: #0fb9b1;
+  margin-top: 20px;
+  width: 175px;
+  height: 35px;
+  font-size: 80%;
+  border-radius: 5px;
+  border-color: #0fb9b1;
+  border-style: solid;
+  font-weight: 900;
+}
+
+.side-label {
+  margin-top: 30px;
 }

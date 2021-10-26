@@ -4,39 +4,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section>
-      <img src="burger-friends.jpeg" alt="Friends eating burgers" />
-      <header>
+    <section id="app">
+      <header id="header">
         <h1>What's for Dinner?</h1>
-        <button>ADD A RECIPE</button>
+        <button id="add-recipe-button">ADD A RECIPE</button>
       </header>
-      <div id="user-input-section">
-        <h3 id="user-input-menu-header">
-        </h3>
-        <input type="radio" id="selection-options">
-          <ul class="selection-list">
-            <li id="first-item">
-              <input type="radio"/>
-            </li>
-            <li id="second-item">
-              <input type="radio"/>
-            </li>
-            <li id="third-item">
-              <input type="radio"/>
-            </li>
-            <li id="fourth-item">
-              <input type="radio"/>
-            </li>
-          </ul>
-        </input>
-      </div>
-      <div id="user-output-section">
-        <h3 id="user-output-header">
-        </h3>
-        <p id="user-output">
-        </p>
-      </div>
+      <section id="input-output-section">
+        <div id="user-input-section" class="display-boxes">
+          <h3 id="user-input-menu-header">What are you looking for?</h3>
+          <div id="selection-options">
+            <ul class="selection-list">
+              <li id="first-item">
+                <input type="radio"/>Side
+              </li>
+              <li id="second-item">
+                <input type="radio"/>Main Dish
+              </li>
+              <li id="third-item">
+                <input type="radio"/>Dessert
+              </li>
+              <li id="fourth-item">
+                <input type="radio"/>Entire Meal
+              </li>
+            </ul>
+          </div>
+          <button>This is a button</button>
+        </div>
+        <div id="user-output-section" class="display-boxes">
+          <h3 id="user-output-header">
+          </h3>
+          <p id="user-output">
+          </p>
+        </div>
+      </section>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
+<!-- src="assets/burger-friends.jpg" alt="Friends eating burgers" -->

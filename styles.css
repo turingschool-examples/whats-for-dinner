@@ -59,3 +59,13 @@ main {
   height: 47%;
   width: 47%;
 }
+
+.recipeSelection {
+  display: flex;
+}
+
+.cook-button{
+  padding: 2% 8%;
+  background-color: #0fb9b1;
+  border: none;
+}

@@ -5,7 +5,8 @@ var addRecipeButton = document.querySelector(".add-recipe-button");
 // Meal Form Variables
 var submitMealButton = document.querySelector(".meal-option-button");
 var mealFormValue = document.querySelector(".meal-form");
-var formValue = mealFormValue['food-option'].value
+var formValue = mealFormValue['food-option'].value;
+var validationText = document.querySelector(".validation-text");
 
 // Meal View Variables
 var mealText = document.querySelector(".meal-text");
@@ -17,13 +18,21 @@ var recipeTypeInput = document.querySelector(".recipe-type");
 var recipeNameInput = document.querySelector(".recipe-name");
 var addNewRecipeButton = document.querySelector(".add-new-recipe-button");
 
+//Event Listeners
+submitMealButton.addEventListener("click",generateRandomFoods);
+
+
 
 function generateRandomFoods() {
-    var side = sides[getRandomIndex()]
-    var mainDish = mains[getRandomIndex()]
-    var dessert = desserts[getRandomIndex()]
-    var entireMeal = `${mainDish} with a side of ${side} and ${dessert} for dessert!`
-    if()
+    event.preventDefault();
+    var side = sides[getRandomIndex(sides)];
+    var mainDish = mains[getRandomIndex(mains)];
+    var dessert = desserts[getRandomIndex(desserts)];
+    var entireMeal = `${mainDish} with a side of ${side} and ${dessert} for dessert!`;
+    console.log(formValue)
+    if(formValue === undefined){
+        validationText.classList.remove("hidden")
+    };
     
 }
 

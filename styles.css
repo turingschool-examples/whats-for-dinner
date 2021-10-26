@@ -15,8 +15,11 @@ header {
 }
 
 main {
+  align-items: center;
   display: grid;
-  justify-content: space-between;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "stack";
 }
 
 img {
@@ -24,23 +27,24 @@ img {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-
-.recipe-selection {
-  border: 10px black solid;
+  grid-area: "stack";
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .recipe-display {
-  border: 10px red solid;
   justify-self: end;
 }
 
 .recipe-selection,
 .recipe-display {
-  height: 33%;
-  width: 38%;
+  height: 35%;
+  width: 35%;
   text-align: left;
   background-color: rgba(225, 225, 225, .9);
+  grid-area: "stack";
+  grid-column: 1;
+  grid-row: 1;
   align-self: center;
+  margin: 10%
 }

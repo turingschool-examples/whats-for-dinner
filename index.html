@@ -10,20 +10,16 @@
     <main>
     <img class="background-image" src="assets/burger-friends.jpg" alt="burger friends">
     <section class="recipe-selection radio-selectors" id="recipeSelection">
-      <h2>What's are you looking for?</h2>
-      <input type="radio" id="side"
-      name="meal" value="side">
-      <label for="side">Side</label>
-      <input type="radio" id="mainDish"
-        name="meal" value="main-dish">
+      <h3>What's are you looking for?</h3>
+      <input type="radio" class="meal-selection" id="side" name="meal" value="side">
+        <label for="side">Side</label>
+      <input type="radio" class="meal-selection" id="mainDish" name="meal" value="main-dish">
         <label for="main-dish">Main Dish</label>
-        <input type="radio" id="dessert"
-        name="meal" value="dessert">
+      <input type="radio" class="meal-selection" id="dessert" name="meal" value="dessert">
         <label for="dessert">Dessert</label>
-        <input type="radio" id="entireMeal"
-          name="meal" value="entire-meal">
-          <label for="entire-meal">Entire Meal</label>
-          <button type="button" class="cook-button">LET'S COOK</button>
+      <input type="radio" class="meal-selection" id="entireMeal" name="meal" value="entire-meal">
+        <label for="entire-meal">Entire Meal</label>
+      <button class="cook-button meal-selection">LET'S COOK</button>
     </section>
     <section class="recipe-display" id="recipeDisplay">
       <img class="cookpot" src="assets/cookpot.svg" alt="cookpot">

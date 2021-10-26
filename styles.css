@@ -10,11 +10,15 @@ red - #ee5253
 
 header {
   background-color: #0fb9b1;
-  height: 14%;
+  height: 12%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
+}
+
+.page-header > h2 {
+  margin-left: 2.5%;
 }
 
 main {
@@ -28,11 +32,25 @@ main {
 .background-image {
   height: 100%;
   width: 100%;
-  background-position: center;
+  background-position: stretch;
   background-repeat: no-repeat;
   grid-area: "stack";
   grid-row: 1;
   grid-column: 1;
+}
+
+.recipe-selection,
+.recipe-display {
+  height: 38%;
+  width: 38%;
+  text-align: left;
+  background-color: rgba(225, 225, 225, .9);
+  grid-area: "stack";
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  margin-top: -30%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .recipe-display {
@@ -40,19 +58,20 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 7%;
 }
 
-.recipe-selection,
-.recipe-display {
-  height: 35%;
-  width: 35%;
-  text-align: left;
-  background-color: rgba(225, 225, 225, .9);
-  grid-area: "stack";
-  grid-column: 1;
-  grid-row: 1;
-  align-self: center;
-  margin: 10%
+.recipe-selection {
+  margin-left: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.recipe-selection > h3 {
+  font-size: 22px;
+  margin-left: 8%;
+  margin-top: 14%;
 }
 
 .cookpot {
@@ -60,12 +79,17 @@ main {
   width: 47%;
 }
 
-.recipeSelection {
-  display: flex;
-}
 
 .cook-button{
-  padding: 2% 8%;
   background-color: #0fb9b1;
   border: none;
+  text-align: center;
+  border-radius: 7px;
+  padding: 2.3% 11%;
+}
+
+
+.meal-selection {
+  margin-top: 1.1%;
+  margin-left: 10%;
 }

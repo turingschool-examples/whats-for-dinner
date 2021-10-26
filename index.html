@@ -4,7 +4,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <div class="header">
+      <h2>What's for dinner?</h2>
+      <button type="button" class="ADD A RECIPE" id="add-recipe">ADD A RECIPE</button>
+    </div>
+    <section class="form-and-recipe">
+      <form id="meal-selection">
+        <input type="radio" name="selection" id="side">
+        <label for="side">side</label><br>
+        <input type="radio" name="selection" id="main-dish">
+        <label for="main-dish">Main Dish</label><br>
+        <input type="radio" name="selection" id="dessert">
+        <label for="dessert">Dessert</label><br>
+        <input type="radio" name="selection" id="entire-meal">
+        <label for="entire-meal">Entire Meal</label><br>
+        <button id="lets-cook">LET'S COOK!</button>
+      </form>        
+      <p class="recipe-box"></p>
+    </section>
+
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

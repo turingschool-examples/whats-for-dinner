@@ -16,7 +16,7 @@
           <h2>What are you looking for?</h2>
           <h4 class="validation-text hidden">Please choose an option</h4>
           <div>
-            <input type="radio" id="side" name="side" value="side">
+            <input type="radio" id="side" name="food-option" value="side">
             <label for="side">Side</label>
           </div>
           <div>
@@ -36,17 +36,21 @@
       </section>
       <section class="meal-view">
         <h3>You should make:</h3>
-        <h2 class="meal-text"></h2>
+        <h5 class="meal-text"></h5>
         <img src="/assets/cookpot.svg" alt="cookpot" class="cookpot-image hidden">
         <button class="clear-button hidden">Clear</button>
       </section>
     </section>
-    <footer class="footer">
+    <footer class="footer hidden">
       <form>
-        <label for="recipe-type">Recipe Type:</label>
-        <input type="text" id="recipe-type" name="recipe-type">
+        <label>Recipe Type:</label>
+        <select id="recipe-type" name="recipe-type">
+          <option value="side">Side</option>
+          <option value="main-dish">Main Dish</option>
+          <option value="dessert">Dessert</option>
+        </select>
 
-        <label for="recipe-name">Recipe Name:</label>
+        <label>Recipe Name:</label>
         <input type="text" id="recipe-name" name="recipe-name">
         <button class="add-new-recipe-button">ADD NEW</button>
       </form>

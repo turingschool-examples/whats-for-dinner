@@ -81,11 +81,14 @@ red - #ee5253
   width: 30%;
 }
 
-
-label {
+form {
   display: flex;
   flex-direction: column;
-  align-items: right;
+  margin-left: 75px;
+}
+
+label {
+  margin-top: 10px;
 }
 
 .what-are-you-looking-for {

@@ -62,7 +62,6 @@ red - #ee5253
   background-color: rgba(225, 225, 225, .9);
   color: black;
   opacity: 70%;
-  
 }
 
 .container-two {
@@ -80,6 +79,13 @@ red - #ee5253
 .cookpot {
   height: 30%;
   width: 30%;
+}
+
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
 }
 
 .what-are-you-looking-for {

@@ -1,10 +1,75 @@
-/* font-family: 'Roboto', sans-serif;
+body{
+  margin:0px;
+  font-family: 'Roboto', sans-serif;
+  background-image: url("assets/burger-friends.jpg")
+}
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0fb9b1
+}
 
-*/
+.navtitle{
+  display:flex;
+  align-items: center;
+  margin: 20px;
+  font-family: 'Roboto', sans-serif;
+}
 
+.addARecipeButton{
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.userInterface{
+  width:100%
+  height: auto;
+  display: flex;
+}
+
+.star{
+  color: #ee5253;
+}
+
+.userSelectorBox{
+  background-color: rgba(225, 225, 225, .9);
+  width: 30%;
+  padding: 5%;
+  margin: 5%;
+}
+
+/*.mealPickerTitle*/
+
+.letsCookButton{
+  margin: 0px;
+  padding: 8px 40px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #0fb9b1
+}
+
+.results{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  padding: 5%;
+  margin: 5%;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.icon{
+  max-width: 40%;
+  height:auto;
+}
+
+.clearButton{
+  background-color: #95a5a6;
+  margin: 3%;
+  padding: 1%;
+  border-radius: 5px;
+  border: 0px;
+}

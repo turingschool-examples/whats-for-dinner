@@ -37,7 +37,9 @@ main {
 
 #rightButt {
     height: 40px;
-    width: 120px;
+    width: 134px;
+    padding: 7px 7px 7px 7px;
+    text-align: center;
     border-radius: 5px;
     border: none;
     font-family: 'Roboto', sans-serif;
@@ -56,11 +58,15 @@ main {
     margin-left: 100px;
     
 }
-
 h2 {
     font-size: 28px;
     padding-left: 50px;
     padding-top: 30px;
+}
+h2::after{
+    content: "*";
+    color: red;
+    padding-left: 7px;
 }
 label {
     display: inline-flex;

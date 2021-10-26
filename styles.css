@@ -8,3 +8,120 @@ red - #ee5253
 
 */
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+
+/*~~~~~NAVIGATION BAR~~~~~*/
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0fb9b1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+}
+
+.whats-for-dinner {
+  margin-left: 10px;
+  font-weight: 900;
+}
+
+.add-a-recipe-button {
+  margin: 15px;
+  height: 2em;
+  background-color: rgba(225, 225, 225);
+  border-radius: 5px;
+  border-color: rgba(225, 225, 225);
+  border-style: solid;
+}
+
+
+/*~~~~~CONTAINERS~~~~~*/
+
+.containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+}
+
+.container-one {
+  width: 550px;
+  height: 360px;
+  margin: 100px;
+  padding: 20px;
+  opacity: 90%;
+  font-size: 120%;
+  color: black;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.container-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  height: 400px;
+  margin: 100px;
+  background-color: rgba(225, 225, 225, .9);
+  color: black;
+  opacity: 90%;
+}
+
+.cookpot {
+  height: 30%;
+  width: 30%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.what-are-you-looking-for {
+  margin-left: 50px;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  font-size: 1.5em;
+  color: black;
+  font-weight: 900;
+}
+
+.what-are-you-looking-for::after {
+  content: " *";
+  color: red;
+}
+
+.lets-cook-btn {
+  background-color: #0fb9b1;
+  margin-top: 20px;
+  width: 175px;
+  height: 35px;
+  font-size: 80%;
+  border-radius: 5px;
+  border-color: #0fb9b1;
+  border-style: solid;
+  font-weight: 900;
+}
+
+.side-label {
+  margin-top: 30px;
+}

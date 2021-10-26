@@ -47,3 +47,7 @@ var desserts = [
   "Croissants",
   "Eclairs",
   ]
+
+function getRandom(array) {
+  return Math.floor(Math.random() * array);
+}

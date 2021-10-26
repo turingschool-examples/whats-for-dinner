@@ -9,7 +9,7 @@ red - #ee5253
 */
 .page-header {
   background-color: #0fb9b1;
-  padding: 3px
+  padding: 3px;
 }
 
 .dinner-intro {
@@ -17,9 +17,13 @@ red - #ee5253
   text-indent: 20px
 }
 
-.recipe-button {
+button {
   font-family: 'Roboto', sans-serif;
-  right: 10px
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 7px;
+  border:  0px;
+  position: absolute;
+  top: 27px;
+  right: 40px
 }
-
-.

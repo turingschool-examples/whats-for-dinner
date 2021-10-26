@@ -21,7 +21,8 @@ var addNewRecipeButton = document.querySelector(".add-new-recipe-button");
 //Event Listeners
 submitMealButton.addEventListener("click", generateRandomFoods);
 addNewRecipeButton.addEventListener("click", addRecipeButtonClicked);
-addRecipeButton.addEventListener("click", addNewRecipeButtonClicked)
+addRecipeButton.addEventListener("click", addNewRecipeButtonClicked);
+clearTextButton.addEventListener("click", clearText);
 
 
 
@@ -41,13 +42,15 @@ function generateRandomFoods() {
     } else if(formValue === "entire-meal"){
         mealText.innerHTML = entireMeal
     };
+    mealText.classList.remove('hidden');
+    cookpotImage.classList.add('hidden');
+    clearTextButton.classList.remove('hidden')
+
 }
 
 function addNewRecipeButtonClicked(){
     event.preventDefault();
-    footer.classList.remove('hidden')
-
-
+    
 }
 
 function addRecipeButtonClicked(){
@@ -55,18 +58,16 @@ function addRecipeButtonClicked(){
     var newRecipeType = document.getElementById("recipe-type");
     var newRecipeTypeValue = newRecipeType.options[newRecipeType.selectedIndex].value;
     var recipeInputValue = recipeNameInput.value;
+    mealText.innerHTML = recipeInputValue
     // push values to array
     // `${newRecipeTypeValue}`.push(recipeNameInput.value)
 }
-
-// var e = document.getElementById("elementId");
-// var value = e.options[e.selectedIndex].value;
-// var text = e.options[e.selectedIndex].text;
-
-
-
-
-
+function clearText(){
+    event.preventDefault();
+    mealText.classList.add('hidden');
+    clearTextButton.classList.add('hidden');
+    cookpotImage.classList.remove('hidden');
+}
 
 
 // Random number function to be used for random sides,mains and dessert

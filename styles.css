@@ -8,10 +8,39 @@ red - #ee5253
 
 */
 
+header {
+  background-color: #0fb9b1;
+  height: 14%;
+  width: 100%;
+}
+
+main {
+  display: grid;
+  justify-content: space-between;
+}
 
 img {
   height: 100%;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+
+.recipe-selection {
+  border: 10px black solid;
+}
+
+.recipe-display {
+  border: 10px red solid;
+  justify-self: end;
+}
+
+.recipe-selection,
+.recipe-display {
+  height: 33%;
+  width: 38%;
+  text-align: left;
+  background-color: rgba(225, 225, 225, .9);
+  align-self: center;
 }

@@ -12,6 +12,9 @@ header {
   background-color: #0fb9b1;
   height: 14%;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 main {
@@ -22,7 +25,7 @@ main {
   grid-template-areas: "stack";
 }
 
-img {
+.background-image {
   height: 100%;
   width: 100%;
   background-position: center;
@@ -34,6 +37,9 @@ img {
 
 .recipe-display {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .recipe-selection,
@@ -47,4 +53,9 @@ img {
   grid-row: 1;
   align-self: center;
   margin: 10%
+}
+
+.cookpot {
+  height: 47%;
+  width: 47%;
 }

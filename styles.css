@@ -27,3 +27,11 @@ button {
   top: 27px;
   right: 40px
 }
+
+.burger-pic {
+  max-width: 100%
+}
+
+.opaque-box {
+  background-color: rgba(225, 225, 225, .9);
+}

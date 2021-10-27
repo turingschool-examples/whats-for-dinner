@@ -12,22 +12,22 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0;
-
-}
-nav {
   background-color: #0fb9b1;
-  width: 100%;
-  margin: 0;
-  align-items:flex-end;
 }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .logo {
   margin: 0;
 }
 
 .recipe-button {
-  text-align: right;
-  margin: 0;
+  margin: 10px;
 }
+
 
 body {
   background-image: url("assets/burger-friends.jpg");

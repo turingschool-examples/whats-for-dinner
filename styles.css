@@ -85,9 +85,11 @@ body{
 }
 
 .clearButton{
+  display: none;
   background-color: #95a5a6;
-  margin: 3%;
-  padding: 1%;
+  margin: 20px;
+  padding: 10px;
   border-radius: 5px;
   border: 0px;
+  color: white;
 }

@@ -1,12 +1,17 @@
 var letsCookButton = document.querySelector(".letsCookButton")
 letsCookButton.addEventListener("click", returnResults);
 
-
+var clearButton = document.querySelector(".clearButton")
+clearButton.addEventListener("click", clearPage);
 
 function returnResults() {
   document.querySelector(".icon").style.display = 'none';
   var choice = document.querySelector('input[name="food"]:checked');
-    if (choice === side) {
+    if (choice === null){
+      alert("Please select an option before clicking the button.");
+      document.querySelector(".icon").style.display = "block";
+      return;
+    } else if (choice === side) {
       choice = returnSide()
     } else if (choice === mainDish) {
       choice = returnMainDish()
@@ -16,9 +21,12 @@ function returnResults() {
   document.querySelector(".icon").style.display = "none";
   document.querySelector(".tagline").style.display = "block";
   document.querySelector(".answer").innerHTML = `${choice}!`
+  document.querySelector(".clearButton").style.display = "block";
 }
 
-//eventually put in form validation: if choice === null OR maybe just else {alert("Please select an option before clicking the button.")
+function clearPage(){
+  location.reload();
+}
 
 // if/then for entire meal. works but conflicts with single code lines below
 // if (choice === "entireMeal") {
@@ -38,13 +46,6 @@ function returnMainDish(){
 function returnDessert(){
   return desserts[Math.floor(Math.random() * sides.length)]
 }
-
-// var clearButton = document.querySelector(".      ")
-// clearButton.addEventListener("click", returnIcon);
-// function returnIcon() {
-// tagline.classList.add("hidden")
-// }
-
 
 var sides = [
 "Miso Glazed Carrots",

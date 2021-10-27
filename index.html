@@ -4,8 +4,29 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  <nav>
+    <h1 class="title">What's for Dinner?</h1>
+    <button>Add a Recipe</button>
+  </nav>
   <body>
-
+    <main>
+      <section class="left-box">
+        <form id="choose-course-button">
+          <input type ="radio" id="side-button">
+          <label for="side">Side</label><br>
+          <input type="radio" id="entree-button">
+          <label for="entree">Entree</label><br>
+          <input type="radio" id="dessert-button">
+          <label for="dessert">Dessert</label><br>
+        </form>
+        <button type="submit" form="choose-course-button">Let's Cook!</button>
+      </section>
+      <section class="right-box">
+        <img class="cook-pot-image" src="./assets/cookpot.svg" alt="Picture of a pot for cooking"/img>
+        <h6 class="you-should-make"><i>You Should Make...</i></h6>
+        <h3 class="insert-recipe"></h3>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

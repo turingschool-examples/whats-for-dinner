@@ -52,6 +52,7 @@ var sideSelection = document.querySelector('#side');
 var mainSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#dessert');
 var cookButton = document.querySelector('#cookButton');
+var recipeDisplayBox = document.querySelector('#recipeDisplay');
 
 cookButton.addEventListener("click", selectRecipe);
 
@@ -70,13 +71,13 @@ function randomMeal(mealOptions) {
 }
 
 function randomSide() {
-  console.log(sides[randomMeal(sides)])
+  recipeDisplayBox.innerHTML = sides[randomMeal(sides)]
 }
 
 function randomMain() {
-  console.log(mains[randomMeal(mains)])
+  recipeDisplayBox.innerHTML = mains[randomMeal(mains)];
 }
 
 function randomDessert() {
-  console.log(desserts[randomMeal(desserts)])
+  recipeDisplayBox.innerHTML = desserts[randomMeal(desserts)];
 }

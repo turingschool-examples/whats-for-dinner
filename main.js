@@ -4,6 +4,7 @@ var mainDishButton = document.querySelector('.main-dish-button');
 var dessertButton = document.querySelector('.dessert-button');
 var entireMealButton = document.querySelector('.entire-meal-button');
 var letsCookButton = document.querySelector('.lets-cook-btn');
+var clearButton = document.querySelector('.clear-btn');
 var dishOutput = document.querySelector('.dish-output');
 var cookpotImage = document.querySelector('.cookpot');
 
@@ -39,6 +40,10 @@ function getRandomFood() {
 
 function hideCookpot() {
   cookpotImage.classList.add('hidden');
+}
+
+function displayCookpot() {
+  cookpotImage.classList.remove('hidden');
 }
 
 function displayFoodChoice(event) {

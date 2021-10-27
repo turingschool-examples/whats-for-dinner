@@ -54,7 +54,6 @@ letsCookButton.addEventListener("click", returnResults);
 clearButton.addEventListener("click", clearPage);
 
 function returnResults() {
-  document.querySelector(".icon").style.display = 'none';
   var choice = document.querySelector('input[name="food"]:checked');
     if (choice === null){
       alert("Please select an option before clicking the button.");

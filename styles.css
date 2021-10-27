@@ -45,8 +45,6 @@ body{
   margin: 5%;
 }
 
-/*.mealPickerTitle*/
-
 .letsCookButton{
   margin: 0px;
   padding: 8px 40px;
@@ -64,7 +62,7 @@ body{
   padding: 5%;
   margin: 5%;
   background-color: rgba(225, 225, 225, .9);
-    strong><p style="font-size:30pt
+  position:relative
 }
 
 .tagline{
@@ -87,6 +85,9 @@ body{
 
 .clearButton{
   display: none;
+  position: absolute;
+  right:    0;
+  bottom:   0;
   background-color: #95a5a6;
   margin: 20px;
   padding: 10px;

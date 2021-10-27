@@ -4,6 +4,8 @@ var mainDishButton = document.querySelector('.main-dish-button');
 var dessertButton = document.querySelector('.dessert-button');
 var entireMealButton = document.querySelector('.entire-meal-button');
 var letsCookButton = document.querySelector('.lets-cook-btn');
+var dishOutput = document.querySelector('.dish-output');
+var cookpotImage = document.querySelector('.cookpot');
 
 // Arrays for Side, Main Dish, Dessert
 var sides = ['Mashed Potatos', 'Green Beans', 'Broccoli', 'Cauliflower', 'French Fries'];
@@ -14,6 +16,9 @@ var desserts = ['Chocolate Lava Cake', 'Peach Pie', 'Creme Brulee', 'Berries Wit
 var side;
 var mainDish;
 var dessert;
+
+// Event Listeners
+letsCookButton.addEventListener('click', displayFoodChoice);
 
 function getRandomIndex(array) {
   return  Math.floor(Math.random() * array.length);
@@ -30,4 +35,8 @@ function getRandomFood() {
     dessert = desserts[getRandomIndex(desserts)];
     return dessert;
   }
+}
+
+function hideCookpot() {
+  cookpotImage.classList.add('hidden');
 }

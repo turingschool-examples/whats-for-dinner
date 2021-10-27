@@ -12,6 +12,10 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .background-image {
   position: fixed;
   top: 0;
@@ -124,4 +128,17 @@ label {
 
 .side-label {
   margin-top: 30px;
+}
+
+.dish-output {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-style: italic;
+}
+
+.display-food {
+  margin: auto;
+  font-size: 40px;
+  font-style: normal;
 }

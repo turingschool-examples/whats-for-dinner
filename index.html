@@ -1,47 +1,3 @@
-<!-- <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="page-header">
-      <h1 class="dinner-intro">What's for Dinner?</h1>
-      <button>ADD A RECIPE</button>
-    </header>
-    <img class="burger-pic" src="assets/burger-friends.jpg" alt="Friends Eating Burgers" >
-    <section class="opaque-box">
-      <h1>What are you looking for?</h1>
-        <li>Side</li>
-        <li>Main Dish</li>
-        <li>Dessert</li>
-        <li>Entire Meal</li>
-    </section>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
-</html> -->
-
-<!-- <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="page-header">
-      <h1 class="dinner-text">What's for Dinner?</h1>
-      <button>ADD A RECIPE</button>
-    </header>
-    <main>
-      <div>
-        <h1>What are you looking for?</h1>
-          <p>Side</p>
-          <p>Main Dish</p>
-          <p>Dessert</p>
-          <p>Entire Meal</p>
-      </div>
-    </main>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
-</html> -->
 
 <html>
   <head>
@@ -55,11 +11,19 @@
     </header>
     <main>
       <div class="white-box">
-        <h1>What are you looking for?</h1>
-        <p>Side</p>
-        <p>Main Dish</p>
-        <p>Dessert</p>
-        <p>Entire Meal</p>
+        <h1>What are you looking for?<span style="color:red">*</span></h1>
+        <p>
+        <input id="side" type="radio" name="looking-for"> Side
+        </p>
+        <p>
+        <input id="main-dish" type="radio" name="looking-for"> Main Dish
+        </p>
+        <p>
+        <input id="dessert" type="radio" name="looking-for"> Dessert
+        </p>
+        <p>
+        <input id="entire-meal" type="radio" name="looking-for"> Entire Meal
+        </p>
       </div>
       <div class="white-box">
         <img src="assets/cookpot.svg" alt="Cookpot">

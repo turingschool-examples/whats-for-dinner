@@ -7,10 +7,6 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-/* .page-header {
-  background-color: #0fb9b1;
-  padding: 3px;
-} */
 
 *{
   margin: 0;
@@ -43,7 +39,6 @@ button {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background: url("assets/burger-friends.jpg");
   background-size: cover;
 }
@@ -51,13 +46,17 @@ body {
 main {
   display: flex;
   justify-content: space-around;
+
 }
 
 .white-box {
   background-color: rgba(225, 225, 225, .9);
+  margin-top: 50px
+
 }
 
 img {
   width: 30%;
   height: auto;
+  justify-content:center
 }

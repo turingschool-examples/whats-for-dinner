@@ -95,3 +95,18 @@ main {
   margin-top: 1%;
   margin-left: 10%;
 }
+
+.meal-text {
+  font-family: 'Roboto', sans-serif, bold;
+  font-size: 35px;
+  text-align: center;
+  word-wrap: normal;
+
+}
+
+.suggestion-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-align: center;
+
+}

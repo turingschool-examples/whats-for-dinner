@@ -14,6 +14,7 @@ red - #ee5253
   background-attachment: fixed;
   background-size: cover;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header-style {
@@ -43,7 +44,16 @@ red - #ee5253
   justify-content: space-around;
 }
 
-.first-box {
+.looking-for {
+
+}
+
+.star {
+  color: #ee5253;
+}
+
+.first-box,
+.second-box {
   margin-left: 0%;
   margin-top: 3%;
   height: 350px;
@@ -53,10 +63,34 @@ red - #ee5253
 }
 
 .second-box {
-  margin-left: 0%;
-  margin-top: 3%;
-  width: 400px;
-  /* height: 200px; */
-  background-color: rgba(225, 225, 225, .9);
-  /* border: 5px solid pink */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pot-image {
+  height: 20%;
+}
+
+/* ---- Form Buttons ---- */
+
+.recipe-form {
+  font-family: 'Roboto', sans-serif;
+}
+
+.side-button {
+
+}
+
+.main-dish-button {
+
+}
+
+.dessert-button {
+
+}
+
+.entire-meal-button {
+
 }

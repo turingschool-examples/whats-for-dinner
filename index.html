@@ -10,14 +10,28 @@
       <button class="add-a-recipe-button">ADD A RECIPE</button>
     </header>
     <section class="what-are-you-looking-for-container">
-      <div class="first-box">What are you looking for?
-        <form>
-          <input type="radio" id="side" name="looking-for" value="Side"
-          checked>
-          <label class="side">Side</label>
+      <div class="first-box"
+        <form class="recipe-form"><span class="looking-for">What are you looking for?<span class="star">*</span></span>
+          <div>
+            <input type="radio" name="food" id="side" class="side-button" checked>
+            <label for="side">Side</label>
+          </div>
+          <div>
+            <input type="radio" name="food" id="mainDish" class="main-dish-button" checked>
+            <label for="mainDish">Main Dish</label>
+          </div>
+            <input type="radio" name="food" id="dessert" class="dessert-button" checked>
+            <label for="dessert">Dessert</label>
+          <div>
+            <input type="radio" name="food" id="entireMeal" class="entire-meal-button" checked>
+            <label for="entireMeal">Entire Meal</label>
+          </div>
+            <button class="lets-cook-button">Lets Cook!</button>
         </form>
       </div>
-      <div class="second-box">Recipe idea populates here</div>
+      <div class="second-box">
+        <img class="pot-image" src="assets/cookpot.svg" alt="Cook Pot">
+      </div>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>

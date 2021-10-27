@@ -5,8 +5,9 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
+
+
 body {
   background-image: url('https://github.com/StevieAmb/whats-for-dinner/blob/main/assets/burger-friends.jpg?raw=true');
   background-position: center;
@@ -15,6 +16,7 @@ body {
 }
 
 nav {
+  margin: 0px 0px 30px 0px;
   background-color: #0fb9b1;
   position: fixed;
     left: 0;
@@ -32,14 +34,22 @@ h6 {
  background-color: rgba(225, 225, 225, .9);
  width: 300px;
  padding: 100px;
- margin: 5px 90px;
+ margin: 100px 90px 0px 30px;
  float: left;
 }
 
 #empty-box {
-  padding: 148px 50px;
+  padding: 182px 182px ;
+  width: 150px;
+  background-image: url("https://raw.githubusercontent.com/StevieAmb/whats-for-dinner/67e88d79a1a292ff3cb3af5f8ba6d7ca1a6fe6eb/assets/cookpot.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150px
 }
 
 button {
-
+ margin: 15px;
+ padding: 3px 20px 3px 20px;
+ background-color: #0fb9b1;
+ border-radius: 3px;
 }

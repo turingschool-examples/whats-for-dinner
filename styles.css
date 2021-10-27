@@ -74,8 +74,9 @@ body{
 }
 
 .answer{
-  font-weight: bold;
+  text-align: center;
   font-size: 30px;
+  align-items: center;
 }
 
 .icon{

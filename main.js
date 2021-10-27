@@ -1,52 +1,5 @@
-var letsCookButton = document.querySelector(".letsCookButton")
-letsCookButton.addEventListener("click", returnResults);
-
-var clearButton = document.querySelector(".clearButton")
-clearButton.addEventListener("click", clearPage);
-
-function returnResults() {
-  document.querySelector(".icon").style.display = 'none';
-  var choice = document.querySelector('input[name="food"]:checked');
-    if (choice === null){
-      alert("Please select an option before clicking the button.");
-      document.querySelector(".icon").style.display = "block";
-      return;
-    } else if (choice === side) {
-      choice = returnSide()
-    } else if (choice === mainDish) {
-      choice = returnMainDish()
-    } else {
-      choice = returnDessert()
-    }
-  document.querySelector(".icon").style.display = "none";
-  document.querySelector(".tagline").style.display = "block";
-  document.querySelector(".answer").innerHTML = `${choice}!`
-  document.querySelector(".clearButton").style.display = "block";
-}
-
-function clearPage(){
-  location.reload();
-}
-
-// if/then for entire meal. works but conflicts with single code lines below
-// if (choice === "entireMeal") {
-//   document.querySelector(".results").innerHTML =
-//     `<i>You should make:</i>
-//     <strong><p style="font-size:30pt">${returnMainDish()}, ${returnSide()}, and ${returnDessert()}!</strong>`
-//   } else if (choice === 'side') {
-
-function returnSide(){
-  return sides[Math.floor(Math.random() * sides.length)]
-}
-
-function returnMainDish(){
-  return mains[Math.floor(Math.random() * sides.length)]
-}
-
-function returnDessert(){
-  return desserts[Math.floor(Math.random() * sides.length)]
-}
-
+var letsCookButton = document.querySelector(".letsCookButton");
+var clearButton = document.querySelector(".clearButton");
 var sides = [
 "Miso Glazed Carrots",
 "Coleslaw",
@@ -96,3 +49,43 @@ var desserts = [
 "Croissants",
 "Eclairs"
 ];
+
+letsCookButton.addEventListener("click", returnResults);
+clearButton.addEventListener("click", clearPage);
+
+function returnResults() {
+  document.querySelector(".icon").style.display = 'none';
+  var choice = document.querySelector('input[name="food"]:checked');
+    if (choice === null){
+      alert("Please select an option before clicking the button.");
+      document.querySelector(".icon").style.display = "block";
+      return;
+    } else if (choice === entireMeal) {
+      document.querySelector(".answer").innerHTML = `${returnMainDish()}, ${returnSide()}, and ${returnDessert()}!`
+    } else if (choice === side) {
+      document.querySelector(".answer").innerHTML = `${returnSide()}!`
+    } else if (choice === mainDish) {
+      document.querySelector(".answer").innerHTML = `${returnMainDish()}!`
+    } else {
+      document.querySelector(".answer").innerHTML = `${returnDessert()}!`
+    };
+  document.querySelector(".icon").style.display = "none";
+  document.querySelector(".tagline").style.display = "block";
+  document.querySelector(".clearButton").style.display = "block";
+};
+
+function clearPage(){
+  location.reload();
+}
+
+function returnSide(){
+  return sides[Math.floor(Math.random() * sides.length)];
+}
+
+function returnMainDish(){
+  return mains[Math.floor(Math.random() * sides.length)];
+}
+
+function returnDessert(){
+  return desserts[Math.floor(Math.random() * sides.length)];
+}

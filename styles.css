@@ -8,10 +8,16 @@ red - #ee5253
 
 */
 
+*{
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-image: burger-friends.j
+  background: url('assets/burger-friends.jpg');
+  background-size: cover;
+
 }
 
 header {

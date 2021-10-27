@@ -2,9 +2,36 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <section class='header'>
+      <h1>
+        What's for Dinner?
+        <button id='add-recipe-button'>Add a Recipe</button>
+      </h1>
+    </section>
+    <section id="boxes">
+
+      <div class="looking-for">
+        <p><input type="radio" id="side" value="side" name="select-option">
+        <label for="side">Side</label></p>
+        <p><input type="radio" id="main-dish" value="main-dish" name="select-option">
+        <label for="side">Main Dish</label></p>
+        <p><input type="radio" id="dessert" value="dessert" name="select-option">
+        <label for="side">Dessert</label></p>
+        <p><input type="radio" id="entire-meal" value="entire-meal" name="select-option">
+        <label for="side">Entire Meal</label>
+        </p>
+        <p>
+        <button id='lets-cook-button'>Let's cook!</button>
+        </p>
+      </div>
+
+      <div class ="recipe-box">
+
+      </div>
+  </section>
   </head>
   <body>
-    
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

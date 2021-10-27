@@ -3,23 +3,41 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <header>
+      <h1 class="header">What's for dinner?
+        <button class="add-recipe-button">ADD A RECIPE</button>
+      </h1>
+    </header>
   </head>
   <body>
-    <nav class="header">What's for dinner?
-      <button class="add-recipe-button">ADD A RECIPE</button>
-    </nav>
-    <img src="/Users/kaicoder/turing/mod1/whats-for-dinner/assets/burger-friends.jpg" alt="Burgers with friends" />
-    <section class="dish">
-      <ul class="dishes">
-        <li class="meal">...</li>
-        <li class="meal">...</li>
-        <li class="meal">...</li>
-        <li class="meal">...</li>
-      <button class="meal-button">LET'S COOK!</button>
-    </section>
-    <section class="pot">
-      <img src="/Users/kaicoder/turing/mod1/whats-for-dinner/assets/cookpot.svg">
-    </section>
+    <style>
+      body {
+      background-image: url("/Users/kaicoder/turing/mod1/whats-for-dinner/assets/burger-friends.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+
+    </style>
+    <main>
+      <section class="dish">
+        <form class="grey-box">
+          <h1 id="looking-for">What are you looking for?*</h1>
+          <input type="radio" value="side">
+            <label for="side">Side</label>
+          <input type="radio" value="main dish">
+            <label for="main dish">Main Dish</label>
+          <input type="radio" value="dessert">
+            <label for="dessert">Dessert</label>
+          <input type="radio" value="entire meal">
+            <label for="entire meal">Entire Meal</label>
+          <button class="meal-button">LET'S COOK!</button>
+        </form>
+      </section>
+      <section class="grey-box">
+        <img src="/Users/kaicoder/turing/mod1/whats-for-dinner/assets/cookpot.svg">
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

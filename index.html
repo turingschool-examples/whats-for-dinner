@@ -6,20 +6,26 @@
   </head>
   <body>
     <header>
-      <h1 class="page-title">What's for Dinner?<h1>
-      <button id="add-recipe">Add Recipe</button>
+      <h1 class="page-title">What's for Dinner?</h1>
+      <button class="hidden" id="add-recipe">Add Recipe</button>
     </header>
     <main>
       <section class="select-recipe">
         <h1 class="section-prompt">What are you looking for?</h1>
         <input type="radio" name="recipe" value"side" /> Side
+        <br />
         <input type="radio" name="recipe" value"mainDish" /> Main Dish
+        <br />
         <input type="radio" name="recipe" value"dessert" /> Dessert
+        <br />
         <input type="radio" name="recipe" value"entireMeal" /> Entire Meal
+        <br />
         <button id="lets-cook" type="submit">Let's Cook!</button>
       </section>
       <section class="show-recipe">
         <img src="assets/cookpot.svg" alt="Cook Pot graphic">
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

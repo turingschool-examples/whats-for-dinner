@@ -7,10 +7,6 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-.hidden {
-  display: none;
-}
-
 body {
   margin: 0;
 }
@@ -26,4 +22,27 @@ header > h1 {
   font-family: 'Roboto', sans-serif;
   padding: 20px;
   margin: 10px;
+}
+
+main {
+  background-image: url("assets/burger-friends.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.select-recipe {
+  background-color: white;
+  display: block;
+}
+
+.show-recipe {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.hidden {
+  display: none;
 }

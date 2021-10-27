@@ -8,3 +8,34 @@ red - #ee5253
 
 */
 
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: burger-friends.j
+}
+
+header {
+  background-color: #0fb9b1
+
+}
+
+.whats-for-dinner {
+  text-align: left;
+  padding: 15px;
+  font-size: 30;
+
+}
+
+header button {
+  float: right;
+  margin-left: -50%;
+  margin-right: 10px;
+  margin-top: 15px;
+  padding: 10px 10px;
+  hight: 100px;
+  width: 125px;
+  border-radius: 8px;
+  border: 0;
+
+
+}

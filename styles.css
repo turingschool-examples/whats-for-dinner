@@ -1,7 +1,12 @@
 body{
   margin:0px;
   font-family: 'Roboto', sans-serif;
-  background-image: url("assets/burger-friends.jpg")
+}
+
+.backgroundImage {
+  background-image: url("assets/burger-friends.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
 }
 
 .hidden{

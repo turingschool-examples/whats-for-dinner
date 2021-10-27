@@ -13,48 +13,95 @@ red - #ee5253
   width: 100%;
   background: url('assets/burger-friends.jpg');
   background-size: 100%;
+  align-items: center;
 }
 
-#background {
-  /* background: url('assets/burger-friends.jpg'); */
-  height: 100%;
-  width: 100vw;
+h1 {
+  font-size: 3.5vh
 }
 
 #header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
   background-color: #0fb9b1;
 }
 
 #add-recipe-button {
-  /* position: absolute; */
+  display: flex;
+  border: 3px solid red;
+  padding: 5px;
   margin: 10px;
-  text-align: center;
-  height: 25px;
-  width: 200px;
+  justify-content: center;
+  height: 30px;
+  width: 150px;
 }
 
 #input-output-section {
   display: flex;
   flex-direction: row;
   /* vertical-align: baseline; */
-  justify-content: center;
-  /* align-items: center; */
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
 }
 
 .display-boxes {
   background-color: rgba(225, 225, 225, .9);
-  width: 400px;
-  height: 300px;
-  text-align: left;
+  width: 30vw;
+  height: 50vh;
+  border-radius: 3px;
+
 }
 
 #user-input-section {
+  display: flex;
+  flex-direction: column;
   border: 1px solid blue;
+  justify-content: space-around;
+}
+
+#user-input-menu-header {
+  font-size: 3vh;
+  text-align: center;
+}
+
+#selection-options {
+  border: 2px solid red;
+  display: flex;
+  justify-content: left;
+  margin: 25px;
+  padding: 1px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 3vh;
+}
+
+#submit-button {
+  width: 50%;
+  font-size: 2vh;
+  float: left;
+  margin: 5% 25% 8% 25%;
+
 }
 
 #user-output-section {
   border: 1px solid cyan;
+  /* display: flex;
+  align-content: center; */
+}
+
+#cookpot {
+  margin: 30% 10% 30% 10%;
+  height: 40%;
+}
+
+#user-output {
+
 }

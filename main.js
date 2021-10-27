@@ -3,11 +3,11 @@
 
 
 //Materials
-var sideRadioInput = document.querySelector('#side');
-var mainRadioInput = document.querySelector('#main');
-var dessertRadioInput = document.querySelector('#dessert');
-var letsCookButton = document.querySelector('button');
-var emptyBoxSpace = document.querySelector('#empty-box');
+var sideRadioInput = document.querySelector('#side').value;
+var mainRadioInput = document.querySelector('#main').value;
+var dessertRadioInput = document.querySelector('#dessert').value;
+var letsCookButton = document.querySelector('button').value;
+var emptyBoxSpace = document.querySelector('#empty-box').value;
 
 
 
@@ -19,6 +19,9 @@ sideRadioInput.addEventListener();
 mainRadioInput.addEventListener();
 dessertRadioInput.addEventListener();
 
+function chooseMealByType() {
+  
+}
 
 
 
@@ -59,7 +62,7 @@ var main = [
 ];
 
 
-var desserts = [
+var dessert = [
 "Apple Pie",
 "Lemon Meringue Pie",
 "Black Forest Cake",

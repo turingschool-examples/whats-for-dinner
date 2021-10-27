@@ -30,18 +30,13 @@ ul {
   border-radius: 4px;
   border: 0;
 }
-.form-and-result-view {
-  display: grid;
-  grid-template-columns: 50% 30%;
-  align-items: baseline;
-  grid-gap: 0 100px;
-  
-  /* display: flex;
+main {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 0px; */
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 25px;
 }
 .radio-button-selector {
   background-color: rgba(225, 225, 225, .9);

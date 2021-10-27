@@ -69,6 +69,10 @@ red - #ee5253
 
 }
 
+.first-box {
+  /* padding-left: 10% */
+}
+
 .pot-image {
   height: 20%;
 }

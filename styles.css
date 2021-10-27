@@ -8,25 +8,93 @@ red - #ee5253
 
 */
 
-.top {
-  background: #0fb9b1;
-  display: flex;
-  height: 60px
-}
-
-.top > .add-a-recipe-button {
-  background: rgba(225, 225, 225, .9);
-  border: none
-  color:
-}
-
-.top > .header {
-  font-family: 'Roboto', sans-serif;
-}
-
 .body {
   background-image: url('assets/burger-friends.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-style {
+  display: flex;
+  background: #0fb9b1;
+  height: 60px
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin-left: 18px;
+  padding-top: 5px;
+}
+
+
+.add-a-recipe-button {
+  background: rgba(225, 225, 225, .9);
+  border: 1px solid black;
+  margin-left: 75%
+}
+
+/* ------- Two box section ------- */
+
+.what-are-you-looking-for-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.looking-for {
+
+}
+
+.star {
+  color: #ee5253;
+}
+
+.first-box,
+.second-box {
+  margin-left: 0%;
+  margin-top: 3%;
+  height: 350px;
+  width: 400px;
+  background-color: rgba(225, 225, 225, .9);
+  /* border: 5px solid pink */
+}
+
+.second-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.first-box {
+  /* padding-left: 10% */
+}
+
+.pot-image {
+  height: 20%;
+}
+
+/* ---- Form Buttons ---- */
+
+.recipe-form {
+  font-family: 'Roboto', sans-serif;
+}
+
+.side-button {
+
+}
+
+.main-dish-button {
+
+}
+
+.dessert-button {
+
+}
+
+.entire-meal-button {
+
 }

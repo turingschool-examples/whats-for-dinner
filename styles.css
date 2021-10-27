@@ -123,7 +123,6 @@ label {
   font-size: 80%;
   border-radius: 5px;
   border-color: #0fb9b1;
-  border-style: solid;
   font-weight: 900;
 }
 
@@ -155,5 +154,4 @@ label {
   font-weight: 900;
   background-color: #95a5a6;
   border-color: #95a5a6;
-  border-style: solid;
 }

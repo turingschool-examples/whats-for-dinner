@@ -48,6 +48,22 @@ var desserts = [
   "Eclairs",
   ]
 
-function getRandom(array) {
-  return Math.floor(Math.random() * array);
+var sideSelection = document.querySelector('#side');
+var mainSelection = document.querySelector('#mainDish');
+var dessertSelection = document.querySelector('#dessert');
+var cookButton = document.querySelector('#cookButton');
+
+cookButton.addEventListener("click", getSide);
+
+
+
+function randomMeal(mealOptions) {
+  console.log(Math.floor(Math.random() * mealOptions.length));
+}
+
+function getSide() {
+  console.log(sides)
+  for (var i = 0; i< sides.length; i++) {
+    return randomMeal(sides[i])
+  }
 }

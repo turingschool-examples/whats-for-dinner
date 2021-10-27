@@ -12,12 +12,11 @@ red - #ee5253
   height: 100%;
   width: 100%;
   background: url('assets/burger-friends.jpg');
-  background-size: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
   align-items: center;
-}
-
-h1 {
-  font-size: 3.5vh
+  margin: 0;
 }
 
 #header {
@@ -25,20 +24,29 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed;
+  position: fixed;
   top: 0;
-  width: 100%; */
+  width: 100%;
   background-color: #0fb9b1;
+}
+
+h1 {
+  margin: 15px;
+  font-family: sans-serif;
+  font-size: 24px;
 }
 
 #add-recipe-button {
   display: flex;
-  border: 3px solid red;
-  padding: 5px;
-  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 15px;
   justify-content: center;
+  align-items: center;
   height: 30px;
-  width: 150px;
+  width: 125px;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 
 #input-output-section {
@@ -48,57 +56,78 @@ h1 {
   justify-content: space-around;
   align-content: center;
   align-items: center;
+  margin-bottom: 20vh;
 }
 
 .display-boxes {
   background-color: rgba(225, 225, 225, .9);
-  width: 30vw;
+  width: 35vw;
   height: 50vh;
   border-radius: 3px;
-
+  margin: 5vw;
 }
 
 #user-input-section {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
-  justify-content: space-around;
+  /* border: 1px solid blue; */
+  justify-content: center;
 }
 
 #user-input-menu-header {
-  font-size: 3vh;
-  text-align: center;
+  font-size: 26px;
+  text-align: left;
+  margin: 12px;
+  margin-left: 50px;
+  font-family: sans-serif;
 }
 
-#selection-options {
-  border: 2px solid red;
+#selection-form {
+  /* border: 2px solid red; */
   display: flex;
   justify-content: left;
-  margin: 25px;
-  padding: 1px;
+  flex-direction: column;
+  margin: 12px;
+  margin-left: 50px;
 }
 
-li {
-  list-style-type: none;
-  font-size: 3vh;
+.selection-options {
+  /* border: 2px solid cyan; */
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.options {
+  font-size: 18px;
+  margin: 4px;
+  margin-left: 0;
+  font-family: sans-serif;
 }
 
 #submit-button {
   width: 50%;
-  font-size: 2vh;
+  font-size: 15px;
+  font-family: sans-serif;
   float: left;
-  margin: 5% 25% 8% 25%;
-
+  background-color: #0fb9b1;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
 }
 
 #user-output-section {
-  border: 1px solid cyan;
+  /* border: 1px solid cyan; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* display: flex;
   align-content: center; */
 }
 
 #cookpot {
-  margin: 30% 10% 30% 10%;
+  margin: auto;
   height: 40%;
 }
 

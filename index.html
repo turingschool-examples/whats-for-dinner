@@ -3,40 +3,30 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <section id="app">
-      <header id="header">
-        <h1>What's for Dinner?</h1>
-        <button id="add-recipe-button">ADD A RECIPE</button>
-      </header>
-      <section id="input-output-section">
-        <div id="user-input-section" class="display-boxes">
-          <h3 id="user-input-menu-header">What are you looking for?</h3>
-          <div id="selection-options">
-            <ul class="selection-list">
-              <li id="first-item">
-                <input type="radio"/>Side
-              </li>
-              <li id="second-item">
-                <input type="radio"/>Main Dish
-              </li>
-              <li id="third-item">
-                <input type="radio"/>Dessert
-              </li>
-              <li id="fourth-item">
-                <input type="radio"/>Entire Meal
-              </li>
-            </ul>
+  <body id="app">
+    <header id="header">
+      <h1>What's for Dinner?</h1>
+      <button id="add-recipe-button">ADD A RECIPE</button>
+    </header>
+    <section id="input-output-section">
+      <div id="user-input-section" class="display-boxes">
+        <h3 id="user-input-menu-header">What are you looking for?</h3>
+        <form id="selection-form">
+          <div class="selection-options">
+            <p class="options"><input type="radio" name="radio-button" value="Side" id="first-item"/>Side</p>
+            <p class="options"><input type="radio" name="radio-button"value="Main Dish" id="second-item"/>Main Dish</p>
+            <p class="options"><input type="radio" name="radio-button" value="Dessert" id="third-item"/>Dessert</p>
+            <p class="options"><input type="radio" name="radio-button" value="Entire Meal" id="fourth-item"/>Entire Meal</p>
           </div>
-          <button id="submit-button">Submit</button>
-        </div>
-        <div id="user-output-section" class="display-boxes">
-          <h3 id="user-output-header"></h3>
-          <p id="user-output">
-            <img id="cookpot" src="assets/cookpot.svg">
-          </p>
-        </div>
-      </section>
+          <button id="submit-button">LET'S COOK!</button>
+        </form="">
+      </div>
+      <div id="user-output-section" class="display-boxes">
+        <h3 id="user-output-header"></h3>
+        <p id="user-output">
+          <img id="cookpot" src="assets/cookpot.svg">
+        </p>
+      </div>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>

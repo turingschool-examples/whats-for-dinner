@@ -71,13 +71,13 @@ function randomMeal(mealOptions) {
 }
 
 function randomSide() {
-  recipeDisplayBox.innerHTML = sides[randomMeal(sides)]
+  recipeDisplayBox.innerHTML = `${sides[randomMeal(sides)]}!`;
 }
 
 function randomMain() {
-  recipeDisplayBox.innerHTML = mains[randomMeal(mains)];
+  recipeDisplayBox.innerHTML = `${mains[randomMeal(mains)]}!`;
 }
 
 function randomDessert() {
-  recipeDisplayBox.innerHTML = desserts[randomMeal(desserts)];
+  recipeDisplayBox.innerHTML = `${desserts[randomMeal(desserts)]}!`;
 }

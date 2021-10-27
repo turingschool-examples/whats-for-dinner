@@ -38,10 +38,60 @@ header button {
   margin-right: 10px;
   margin-top: 15px;
   padding: 10px 10px;
-  hight: 100px;
+  highth: 100px;
   width: 125px;
   border-radius: 8px;
   border: 0;
+}
+
+.form-container {
+  float: left;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 15px;
+  width: 30vw;
+  hight: 30vh;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.radio-buttons {
+  padding: 5px;
+
+}
+
+.form {
+  padding: 15px;
+}
+
+.form-heading {
+  padding: 15px;
+}
+
+.lets-cook {
+  padding: 10px;
+}
+
+#lets-cook {
+    background-color: #0fb9b1;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px;
+    width: 15vw;
+}
+.cook-pot {
+  width: 10vw;
+  padding: 30px 80px;
+  margin: 30px;
+
+}
 
 
+.meal-ideas {
+  float: right;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 15px;
+  width: 30vw
+  hight: 30vh;
+  margin-right: 100px;
+  margin-top: 30px;
 }

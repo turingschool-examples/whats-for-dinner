@@ -53,17 +53,37 @@ var mainSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#dessert');
 var cookButton = document.querySelector('#cookButton');
 
-cookButton.addEventListener("click", getSide);
+cookButton.addEventListener("click", selectRecipe);
 
-
-
-function randomMeal(mealOptions) {
-  console.log(Math.floor(Math.random() * mealOptions.length));
-}
-
-function getSide() {
-  console.log(sides)
-  for (var i = 0; i< sides.length; i++) {
-    return randomMeal(sides[i])
+function selectRecipe() {
+  if (side selected) {
+    randomSide()
+  } else if (main selected) {
+    randomMain()
+  } else if (dessert selected) {
+    randomDessert()
   }
 }
+
+function randomMeal(mealOptions) {
+  return Math.floor(Math.random() * mealOptions.length);
+}
+
+function randomSide() {
+  console.log(sides[randomMeal(sides)])
+}
+
+function randomMain() {
+  console.log(mains[randomMeal(mains)])
+}
+
+function randomDessert() {
+  console.log(desserts[randomMeal(desserts)])
+}
+
+// function getSide() {
+//   console.log(sides)
+//   for (var i = 0; i< sides.length; i++) {
+//     return randomMeal(sides[i])
+//   }
+// }

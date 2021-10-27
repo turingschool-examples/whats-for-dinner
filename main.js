@@ -40,3 +40,14 @@ function getRandomFood() {
 function hideCookpot() {
   cookpotImage.classList.add('hidden');
 }
+
+function displayFoodChoice(event) {
+  var randomFood = getRandomFood();
+
+  event.preventDefault();
+  hideCookpot();
+  dishOutput.innerHTML = 
+  `<section class="dish-output">You should make:</section>
+     <p class="display-food">${randomFood}!</p>
+   </section>`
+}

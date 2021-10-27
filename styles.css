@@ -13,43 +13,63 @@ red - #ee5253 */
 .header {
   font-family: 'Roboto', sans-serif;
   background-color: #0fb9b1;
+  background-size: contain;
   display: flex;
-  justify-content: center;
   align-items: baseline;
+
 }
 
 .add-recipe-button {
   font-family: 'Roboto', sans-serif;
   background-color: rgba(225, 225, 225, .9);
   display: flex;
-  ;
+  margin-left: 73%;
+  margin-bottom: 1%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: baseline;
+
 }
 
-.grey-box {
+.dish {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
   background-color: rgba(225, 225, 225, .9);
-  margin: 45px 750px 45px 20px;
+  margin: 100px 750px 45px 60px;
   width: 450px;
   height: 300px;
   display: flex;
+  padding: 20px 20px;
+  position:relative;
+}
+
+ .grey-box {
+  display: flex;
   flex-direction: column;
-  padding: 20px 20px
+}
+
+
+#cookpot {
+  box-sizing: border-box;
+  display: flex;
+  margin: -345px 10px 45px 750px;
+  background-color: rgba(225, 225, 225, .9);
+  height: 300px;
+  width: 450px;
 }
 
 .meal-button {
-
+  font-family: 'Roboto', sans-serif;
+  background-color: #0fb9b1;
+  padding: 10px 5px 10px 5px;
+  margin: 10px 5px 10px 5px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
 }
 
-img {
-  background-color: rgba(225, 225, 225, .9);
-  display: inline-flex;
-}
 
-
-
-/* .meal-button {
-  border: solid;
-} */
 
 /* .pot {
   background-color: rgba(225, 225, 225, .9);

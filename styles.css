@@ -79,7 +79,7 @@ main {
 .radio-button  {
   margin-left: 12%;
   margin-top: 1.1%;
-  margin-left: 10%;
+  margin-bottom: 2%;
 }
 
 .cookpot {
@@ -93,4 +93,5 @@ main {
   text-align: center;
   border-radius: 7px;
   padding: 2.3% 11%;
+  margin-left: 12%;
 }

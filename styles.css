@@ -9,13 +9,53 @@ red - #ee5253
 */
 
 body {
+ font-family: 'Roboto', sans-serif;
+ background-image: url(assets/burger-friends.jpg);
+ background-size: 100%;
+}
+
+.header {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #0fb9b1
 
 }
 
-header {
+.add-recipe {
+  padding: 5px;
+}
+
+.form-and-recipe {
+border: 1px solid black;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
 
 }
 
-form-and-recipe {
-  
+.select-meal {
+  border: 1px solid green;
+
+  padding: 80px 80px 80px 80px;
+  margin: auto;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.recipe-box {
+  border: 1px solid red;
+
+  padding: 80px 80px 80px 80px;
+  margin: auto;
+  background-color: rgba(225, 225, 225, .9);
+
+}
+
+.img {
+  height: 60%;
+  width: 50%;
 }

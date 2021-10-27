@@ -6,21 +6,29 @@
   <body>
     <div class="header">
       <h2>What's for dinner?</h2>
-      <button type="button" class="ADD A RECIPE" id="add-recipe">ADD A RECIPE</button>
+      <button type="button" class="add-recipe">ADD A RECIPE</button>
     </div>
     <section class="form-and-recipe">
-      <form id="meal-selection">
+      <form class="select-meal">
+        <h3 class="options">What are you looking for?</h3>
+
         <input type="radio" name="selection" id="side">
-        <label for="side">side</label><br>
+        <label for="side">Side</label><br>
+
         <input type="radio" name="selection" id="main-dish">
         <label for="main-dish">Main Dish</label><br>
+
         <input type="radio" name="selection" id="dessert">
         <label for="dessert">Dessert</label><br>
+
         <input type="radio" name="selection" id="entire-meal">
         <label for="entire-meal">Entire Meal</label><br>
+
         <button id="lets-cook">LET'S COOK!</button>
-      </form>        
-      <p class="recipe-box"></p>
+      </form>
+      <div class="recipe-box">
+        <img src="assets/cookpot.svg" alt="cookpot" class="img">
+      </div>
     </section>
 
   </body>

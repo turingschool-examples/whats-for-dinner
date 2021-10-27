@@ -20,6 +20,7 @@ var dessert;
 
 // Event Listeners
 letsCookButton.addEventListener('click', displayFoodChoice);
+clearButton.addEventListener('click', removeFoodOutput);
 
 function getRandomIndex(array) {
   return  Math.floor(Math.random() * array.length);
@@ -55,4 +56,9 @@ function displayFoodChoice(event) {
   `<section class="dish-output">You should make:</section>
      <p class="display-food">${randomFood}!</p>
    </section>`
+}
+
+function removeFoodOutput() {
+  displayCookpot();
+  dishOutput.innerHTML = ``;
 }

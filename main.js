@@ -39,6 +39,6 @@ function randomDessert() {
 }
 
 function suggestionMessage() {
-  recipeDisplayBox.innerHTML = "You should make:"
-  // recipeDisplayBox.classList.add('suggestion-text')
+  recipeDisplayBox.innerHTML = "You should make: "
+  recipeDisplayBox.classList.add('suggestion-text')
 }

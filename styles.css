@@ -12,6 +12,10 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .background-image {
   position: fixed;
   top: 0;
@@ -41,9 +45,9 @@ red - #ee5253
 .add-a-recipe-button {
   margin: 15px;
   height: 2em;
-  background-color: rgba(225, 225, 225);
+  background-color: rgb(225, 225, 225);
   border-radius: 5px;
-  border-color: rgba(225, 225, 225);
+  border-color: rgb(225, 225, 225);
   border-style: solid;
 }
 
@@ -59,8 +63,8 @@ red - #ee5253
 }
 
 .container-one {
-  width: 550px;
-  height: 360px;
+  width: 510px;
+  height: 370px;
   margin: 100px;
   padding: 20px;
   opacity: 90%;
@@ -73,8 +77,9 @@ red - #ee5253
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 550px;
-  height: 400px;
+  height: 420px;
   margin: 100px;
   background-color: rgba(225, 225, 225, .9);
   color: black;
@@ -118,10 +123,35 @@ label {
   font-size: 80%;
   border-radius: 5px;
   border-color: #0fb9b1;
-  border-style: solid;
   font-weight: 900;
 }
 
 .side-label {
   margin-top: 30px;
+}
+
+.dish-output {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-style: italic;
+}
+
+.display-food {
+  margin: auto;
+  font-size: 40px;
+  font-style: normal;
+}
+
+.clear-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; 
+  height: 35px;
+  width: 70px;
+  border-radius: 5px;
+  color: rgb(225, 225, 225);
+  font-weight: 900;
+  background-color: #95a5a6;
+  border-color: #95a5a6;
 }

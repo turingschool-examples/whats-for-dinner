@@ -13,6 +13,7 @@ red - #ee5253
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin: 0;
 }
 
 .header-style {
@@ -23,8 +24,11 @@ red - #ee5253
 
 .title {
   font-family: 'Roboto', sans-serif;
-  margin-left: 0
+  font-size: 18px;
+  margin-left: 18px;
+  padding-top: 5px;
 }
+
 
 .add-a-recipe-button {
   background: rgba(225, 225, 225, .9);
@@ -32,10 +36,11 @@ red - #ee5253
   margin-left: 75%
 }
 
+/* ------- Two box section ------- */
+
 .what-are-you-looking-for-container {
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: space-around;
 }
 
 .first-box {
@@ -43,7 +48,6 @@ red - #ee5253
   margin-top: 3%;
   height: 350px;
   width: 400px;
-  /* flex-grow: 2; */
   background-color: rgba(225, 225, 225, .9);
   /* border: 5px solid pink */
 }
@@ -53,7 +57,6 @@ red - #ee5253
   margin-top: 3%;
   width: 400px;
   /* height: 200px; */
-  /* flex-grow: 2; */
   background-color: rgba(225, 225, 225, .9);
   /* border: 5px solid pink */
 }

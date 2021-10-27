@@ -4,6 +4,10 @@ body{
   background-image: url("assets/burger-friends.jpg")
 }
 
+.hidden{
+  display: none;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,21 +52,35 @@ body{
   padding: 8px 40px;
   border-radius: 5px;
   border: 0px;
-  background-color: #0fb9b1
+  background-color: #0fb9b1;
 }
 
 .results{
-  display:flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 30%;
   padding: 5%;
   margin: 5%;
   background-color: rgba(225, 225, 225, .9);
+    strong><p style="font-size:30pt
+}
+
+.tagline{
+  font-style: italic;
+  display: none;
+  align-items: center;
+}
+
+.answer{
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .icon{
   max-width: 40%;
+  padding: 20%;
   height:auto;
 }
 

@@ -56,11 +56,11 @@ var cookButton = document.querySelector('#cookButton');
 cookButton.addEventListener("click", selectRecipe);
 
 function selectRecipe() {
-  if (side selected) {
+  if (sideSelection.checked) {
     randomSide()
-  } else if (main selected) {
+  } else if (mainSelection.checked) {
     randomMain()
-  } else if (dessert selected) {
+  } else if (dessertSelection.checked) {
     randomDessert()
   }
 }
@@ -80,10 +80,3 @@ function randomMain() {
 function randomDessert() {
   console.log(desserts[randomMeal(desserts)])
 }
-
-// function getSide() {
-//   console.log(sides)
-//   for (var i = 0; i< sides.length; i++) {
-//     return randomMeal(sides[i])
-//   }
-// }

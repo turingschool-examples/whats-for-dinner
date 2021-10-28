@@ -106,3 +106,12 @@ red - #ee5253
 .food-text {
 
 }
+
+.you-should-make {
+  font-style: italic;
+}
+
+.dishes {
+  font-weight: bold;
+  font-size: 20px;
+}

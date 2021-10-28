@@ -13,6 +13,7 @@ function getRandomIndex(array) {
 };
 
 function displayRecipe() {
+    foodText.innerHTML = ``
   if (sideRadioButton.checked === true) {
     foodText.innerText = getRandomIndex(sides)
   } else if (mainDishRadioButton.checked === true) {
@@ -20,7 +21,11 @@ function displayRecipe() {
   } else if (dessertRadioButton.checked === true) {
     foodText.innerText = getRandomIndex(mainDishes)
   } else if (entireMealRadioButton.checked === true) {
-    foodText.innerText = `You Should Make: ${getRandomIndex(mainDishes)} with a side of ${getRandomIndex(sides)} and ${getRandomIndex(desserts)} for dessert!`
+    foodText.innerHTML +=
+    `<p class="you-should-make">You Should Make:</p>
+     <p class="dishes">${getRandomIndex(mainDishes)} with a side of ${getRandomIndex(sides)} and ${getRandomIndex(desserts)} for dessert!
+    </p>
+    `
   }
   potImage.classList.add('hidden')
   foodText.classList.remove('hidden')

@@ -42,8 +42,6 @@ var desserts = [
 "Eclairs",
 ];
 
-var entireMeals = [
 
-];
 
 module.exports = arrays;

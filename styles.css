@@ -20,6 +20,10 @@ body {
 
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   background-color: #0fb9b1
 
@@ -47,9 +51,8 @@ header button {
 .form-container {
   float: left;
   background-color: rgba(225, 225, 225, .9);
-  padding: 15px;
   width: 30vw;
-  hight: 30vh;
+  height: 50vh;
   margin-top: 30px;
   margin-left: 100px;
 }
@@ -78,20 +81,38 @@ header button {
     padding: 10px;
     width: 15vw;
 }
-.cook-pot {
+.cookpot-view {
   width: 10vw;
   padding: 30px 80px;
   margin: 30px;
+  align-items: center;
+  justify-content: center;
 
 }
 
+.intro {
+  text-align: center;
+  justify-content: center;
+  font-style: italic;
+  padding: 3px;
+}
 
-.meal-ideas {
+.meal {
+  text-align: center;
+  justify-content: center;
+  padding: 3px;
+}
+
+.meal-view {
+  margin-top: 70px;
+  margin-left: 20px;
+}
+.right-box {
+  display: flex;
   float: right;
   background-color: rgba(225, 225, 225, .9);
-  padding: 15px;
-  width: 30vw
-  hight: 30vh;
+  height: 50vh;
+  width: 30vw;
   margin-right: 100px;
   margin-top: 30px;
 }

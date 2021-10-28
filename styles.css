@@ -155,3 +155,9 @@ label {
   background-color: #95a5a6;
   border-color: #95a5a6;
 }
+
+.entire-meal {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+}

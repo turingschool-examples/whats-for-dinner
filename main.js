@@ -9,14 +9,9 @@ var dishOutput = document.querySelector('.dish-output');
 var cookpotImage = document.querySelector('.cookpot');
 
 // Arrays for Side, Main Dish, Dessert
-var sides = ['Mashed Potatos', 'Green Beans', 'Broccoli', 'Cauliflower', 'French Fries'];
-var mainDishes = ['Tuna Casserole', 'Rainbow Trout', 'Pork Chop', 'Lasanga', 'Baked Chicken'];
-var desserts = ['Chocolate Lava Cake', 'Peach Pie', 'Creme Brulee', 'Berries With Yogurt', 'Milkshake'];
-
-// Variable declaration for random food items
-var side;
-var mainDish;
-var dessert;
+var sides = ['Mashed Potatoes', 'Green Beans', 'Broccoli', 'Cauliflower', 'French Fries'];
+var mainDishes = ['Tuna Casserole', 'Rainbow Trout', 'Pork Chops', 'Lasanga', 'Baked Chicken'];
+var desserts = ['Chocolate Lava Cake', 'Peach Pie', 'Creme Brulee', 'Berries With Yogurt', 'Milkshakes'];
 
 // Event Listeners
 letsCookButton.addEventListener('click', displayFoodChoice);
@@ -27,6 +22,10 @@ function getRandomIndex(array) {
 }
 
 function getRandomFood() {
+  var side;
+  var mainDish;
+  var dessert;
+
   if (sideButton.checked) {
     side = sides[getRandomIndex(sides)];
     return side;
@@ -47,18 +46,35 @@ function displayCookpot() {
   cookpotImage.classList.remove('hidden');
 }
 
+function removeFoodOutput() {
+  displayCookpot();
+  dishOutput.innerHTML = ``;
+}
+
 function displayFoodChoice(event) {
   var randomFood = getRandomFood();
 
   event.preventDefault();
   hideCookpot();
+
+  if (entireMealButton.checked) {
+    displayEntireMeal();
+    return;
+  }
+
   dishOutput.innerHTML = 
   `<section class="dish-output">You should make:</section>
      <p class="display-food">${randomFood}!</p>
    </section>`
 }
 
-function removeFoodOutput() {
-  displayCookpot();
-  dishOutput.innerHTML = ``;
+function displayEntireMeal() {
+  hideCookpot();
+  dishOutput.innerHTML =
+  `<section class="dish-output">You should make:</section>
+     <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}
+     with a side of ${sides[getRandomIndex(sides)]} and
+     ${desserts[getRandomIndex(desserts)]} for dessert!
+    </p>
+   </section>`
 }

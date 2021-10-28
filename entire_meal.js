@@ -50,16 +50,18 @@ var allMeals = {
     ]
 }
 
-function randomMeal(mealProperties) {
-  return Math.floor(Math.random() * mealProperties.length));
+function randomEntireMeal(mealProperties) {
+  return Math.floor(Math.random() * mealProperties.length);
 }
 
-var entireMeal = [];
+// var entireMeal = [];
 
 function createEntireMeal() {
-  entireMeal.push(allMeals.mealSides[randomEntireMeal(allMeals.mealSides)]),
-  entireMeal.push(allMeals.mealMains[randomEntireMeal(allMeals.mealMains)]),
-  entireMeal.push(allMeals.mealDesserts[randomEntireMeal(allMeals.mealDesserts)])
-
-  console.log(entireMeal);
+  // entireMeal.push(allMeals.mealSides[randomEntireMeal(allMeals.mealSides)]),
+  // entireMeal.push(allMeals.mealMains[randomEntireMeal(allMeals.mealMains)]),
+  // entireMeal.push(allMeals.mealDesserts[randomEntireMeal(allMeals.mealDesserts)])
+  suggestionMessage()
+  recipeDisplayBox.innerHTML += `${mains[randomEntireMeal(mains)]} with a side of ${sides[randomMeal(sides)]},
+  and ${desserts[randomEntireMeal(desserts)]} for dessert!`;
+  recipeDisplayBox.classList.add('meal-text');
 }

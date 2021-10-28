@@ -1,6 +1,7 @@
 var sideSelection = document.querySelector('#side');
 var mainSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#dessert');
+var entireMealSelection = document.querySelector('#entireMeal');
 var cookButton = document.querySelector('#cookButton');
 var recipeDisplayBox = document.querySelector('#recipeDisplay');
 
@@ -13,6 +14,8 @@ function selectRecipe() {
     randomMain()
   } else if (dessertSelection.checked) {
     randomDessert()
+  } else if (entireMealSelection.checked) {
+    createEntireMeal()
   }
 }
 

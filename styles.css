@@ -103,7 +103,7 @@ span {
 }
 
 .meal-text {
-  font-family: 'Roboto', sans-serif, bold;
+  font-style: bold;
   font-size: 35px;
   text-align: center;
   word-wrap: normal;
@@ -111,7 +111,7 @@ span {
 }
 
 .suggestion-text {
-  font-family: 'Roboto', sans-serif;
+  font-style: italic;
   font-size: 12px;
   text-align: center;
 

@@ -14,18 +14,26 @@ red - #ee5253
   padding: 0;
 }
 
-main{
+body{
   background-image: url('assets/burger-friends.jpg');
   background-size: cover;
-  border: 2px solid;
+  /* border: 2px solid; */
   height: 100%;
   width: 100%;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+}
 
+input {
+  margin-top: 8%;
+  margin-left: 15%;
 }
 
 .title-and-button {
   display: flex;
-  height: 10%;
+  height: 9%;
   background-color: #0fb9b1;
   justify-content: space-between;
 }
@@ -44,4 +52,29 @@ main{
   border: none;
   margin-top: 18px;
   margin-right: 2%;
+}
+
+.dish-input-section,
+.dish-output-section {
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 5%;
+  width: 30%;
+  height: 50vh;
+}
+
+.side-dish,
+.main-dish,
+.dessert-dish,
+.entire-meal {
+font-size: 20px;
+font-family: 'Roboto', sans-serif;
+}
+
+
+.looking-for-title {
+  height: 5%;
+  margin-top: 10%;
+  font-size: 28px;
+  font-family:  'Roboto', sans-serif;
+  text-align: center;
 }

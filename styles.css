@@ -8,73 +8,6 @@ red - #ee5253
 
 */
 
-/* *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-.page-header {
-  background-color: #0fb9b1;
-  height:70px
-}
-
-.dinner-text {
-  text-indent: 20px;
-  padding-top: 20px;
-  padding-bottom: 15px;
-}
-
-.recipe-btn {
-  font-size: 15px;
-  padding: 8px 20px;
-  border-radius: 7px;
-  border:  0px;
-  position: absolute;
-  top: 17px;
-  right: 40px
-}
-
-body {
-  background: url("assets/burger-friends.jpg");
-  background-size: cover;
-}
-
-main {
-  display: flex;
-  justify-content: space-around;
-  height: 100%
-
-}
-
-.white-box {
-  background-color: rgba(225, 225, 225, .9);
-  margin-top: 80px;
-  height: 57%;
-  width: 35%
-}
-
-img {
-  width: 20%;
-  height: auto;
-  margin-top: 200px;
-  margin-left: 250px
-}
-
-h1 {
-  margin-top: 70px;
-  margin-left: 50px;
-  font-size: 40px
-}
-
-p {
-  margin-left: 40px;
-  font-size: 25px;
-  padding: 20px
-} */
-
-
 *{
   margin: 0;
   padding: 0;
@@ -104,36 +37,44 @@ body {
 main {
   display: flex;
   justify-content: space-around;
-  /* height: 100% */
 }
 
+/* bigger screen
 .white-box {
   background-color: rgba(225, 225, 225, .9);
   margin-top: 80px;
-  height: 550px;
-  width: 700px
-  /* height: 57%;
-  width: 35% */
-}
-
-.looking-for {
+  height: 60vh;
+  width: 35vw;
+} */
+/* .looking-for {
   margin-top: 80px;
   margin-left: 60px;
   font-size: 40px
+} */
+/* p {
+  margin-left: 50px;
+  font-size: 30px;
+  padding: 20px
+} */
+
+
+.white-box {
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 45px;
+  height: 52vh;
+  width: 38vw;
 }
 
-
-.cookpot {
-  width: 20%;
-  height: auto;
-  margin-top: 200px;
-  margin-left: 260px
+.looking-for {
+  margin-top: 60px;
+  margin-left: 60px;
+  font-size: 30px
 }
 
 p {
   margin-left: 50px;
-  font-size: 30px;
-  padding: 20px
+  font-size: 20px;
+  padding: 12px
 }
 
 .cook-btn {
@@ -142,5 +83,37 @@ p {
   padding: 8px 75px;
   border-radius: 7px;
   border:  0px;
-  margin-left: 60px
+  margin-left: 60px;
+  margin-top: 10px
+}
+
+.hidden {
+  display: none;
+}
+
+.cookpot {
+  width: 20%;
+  height: auto;
+  /* margin-top: 200px;
+  margin-left: 260px; */
+  margin-top: 20vh;
+  margin-left: 13vw;
+}
+
+.should-make {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20vh;
+}
+
+.clear-btn {
+  margin-left: 30vw;
+  margin-top: 20vh;
+  background-color: #95a5a6;
+  color: white;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 7px;
+  padding: 8px 15px
+
 }

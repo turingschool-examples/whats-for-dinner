@@ -1,38 +1,3 @@
-<!--
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="page-header">
-      <h2 class="dinner-text">What's for Dinner?</h2>
-      <button class="recipe-btn">ADD A RECIPE</button>
-    </header>
-    <main>
-      <div class="white-box">
-        <h1>What are you looking for?<span style="color:red">*</span></h1>
-        <p>
-        <input id="side" type="radio" name="looking-for"> Side
-        </p>
-        <p>
-        <input id="main-dish" type="radio" name="looking-for"> Main Dish
-        </p>
-        <p>
-        <input id="dessert" type="radio" name="looking-for"> Dessert
-        </p>
-        <p>
-        <input id="entire-meal" type="radio" name="looking-for"> Entire Meal
-        </p>
-      </div>
-      <div class="white-box">
-        <img src="assets/cookpot.svg" alt="Cookpot">
-      </div>
-    </main>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
-</html> -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -49,21 +14,25 @@
       <section class="white-box">
         <h1 class="looking-for">What are you looking for?<span style="color:red">*</span></h1>
         <p>
-        <input id="side" type="radio" name="looking-for"> Side
+          <input id="side" type="radio" name="looking-for"> Side
         </p>
         <p>
-        <input id="main-dish" type="radio" name="looking-for"> Main Dish
+          <input id="main-dish" type="radio" name="looking-for"> Main Dish
         </p>
         <p>
-        <input id="dessert" type="radio" name="looking-for"> Dessert
+          <input id="dessert" type="radio" name="looking-for"> Dessert
         </p>
         <p>
-        <input id="entire-meal" type="radio" name="looking-for"> Entire Meal
+          <input id="entire-meal" type="radio" name="looking-for"> Entire Meal
         </p>
         <button class="cook-btn">LET'S COOK!</button>
       </section>
+      <section class="white-box hidden">
+        <img class="cookpot " src="assets/cookpot.svg" alt="Cookpot">
+      </section>
       <section class="white-box">
-        <img class="cookpot" src="assets/cookpot.svg" alt="Cookpot">
+        <h1 class="should-make">You should make:</h1>
+        <button class="clear-btn" type=button>CLEAR</button>
       </section>
     </main>
   </body>

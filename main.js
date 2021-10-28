@@ -22,12 +22,44 @@ addRecipeButton.addEventListener('click', addRecipe());
 submitButton.addEventListener('click', selectBasicFoodType());
 clearButton.addEventListener('click', clearResults());
 
+function show(element) {
+  element.classList.remove('hidden');
+};
 
-// function selectBasicFoodType() {
-//   var usersChoice = '';
-//   if (firstSelection.checked) {
-//     usersChoice = 'first-selection';
-//   } else if (secondSelection.checked) {
-//     usersChoice = 'second-selection';
-//   }
-// }
+function hide(element) {
+  element.classList.add('hidden');
+}
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function selectBasicFoodType() {
+  var choice = findUserChoice();
+  selectionOutput.innerText = choice[getRandomIndex(choice)] + '!';
+  hide(cookpot);
+  show(outputPrompt);
+  show(selectionOutput);
+  show(clearButton);
+};
+
+function findUserChoice() {
+  var usersChoice = '';
+  if (firstSelection.checked) {
+    usersChoice = 'sides';
+  } else if (secondSelection.checked) {
+    usersChoice = 'mainDishes';
+  } else if (thirdChoice.checked) {
+    usersChoice = 'desserts';
+  } else if (fourthChoice.checked) {
+    usersChoice = 'entireMeal';
+  }
+  return userChoice;
+};
+
+function clearResults() {
+  hide(outputPromt);
+  hide(selectionOutput);
+  hide(clearButton);
+  show(cookpot);
+}

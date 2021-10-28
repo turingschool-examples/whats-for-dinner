@@ -51,7 +51,7 @@ var allMeals = {
 }
 
 function randomMeal(mealProperties) {
-  return Math.floor(Math.random() * mealProperties.length);)
+  return Math.floor(Math.random() * mealProperties.length));
 }
 
 var entireMeal = [];

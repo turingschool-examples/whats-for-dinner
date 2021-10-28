@@ -1,4 +1,4 @@
-/* font-family: 'Roboto', sans-serif;
+font-family: 'Roboto', sans-serif;
 
 COLORS
 teal - #0fb9b1;
@@ -6,5 +6,25 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
-*/
+.
+body {
+ background-image: url("paper.gif");
+ background-color: #cccccc;
+}
 
+.add-recipe {
+align-items: end;
+background: rgba(225, 225, 225, .9);
+border-color: #846a29;
+border-width: 2px;
+border-radius: 5px;
+width: 120px;
+height: 27px;
+}
+
+.bg-image {
+  height: 100vh;
+  margin: 0vh auto;
+  position: relative;
+  width: 100vw;
+}

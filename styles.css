@@ -8,7 +8,7 @@ red - #ee5253
 
 */
 
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -72,4 +72,75 @@ p {
   margin-left: 40px;
   font-size: 25px;
   padding: 20px
+} */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.page-header {
+  background: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px
+}
+
+.recipe-btn {
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 7px;
+  border:  0px;
+}
+
+body {
+  background: url("assets/burger-friends.jpg");
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  /* height: 100% */
+}
+
+.white-box {
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 80px;
+  height: 550px;
+  width: 700px
+  /* height: 57%;
+  width: 35% */
+}
+
+.looking-for {
+  margin-top: 80px;
+  margin-left: 60px;
+  font-size: 40px
+}
+
+
+.cookpot {
+  width: 20%;
+  height: auto;
+  margin-top: 200px;
+  margin-left: 260px
+}
+
+p {
+  margin-left: 50px;
+  font-size: 30px;
+  padding: 20px
+}
+
+.cook-btn {
+  background-color: #0fb9b1;
+  font-size: 20px;
+  padding: 8px 75px;
+  border-radius: 7px;
+  border:  0px;
+  margin-left: 60px
 }

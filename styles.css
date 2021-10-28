@@ -8,3 +8,111 @@ red - #ee5253
 
 */
 
+*{
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('assets/burger-friends.jpg');
+  background-size: cover;
+
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  background-color: #0fb9b1
+
+}
+
+.whats-for-dinner {
+  text-align: left;
+  padding: 15px;
+  font-size: 30;
+
+}
+
+header button {
+  float: right;
+  margin-left: -50%;
+  margin-right: 10px;
+  margin-top: 15px;
+  padding: 10px 10px;
+  highth: 100px;
+  width: 125px;
+  border-radius: 8px;
+  border: 0;
+}
+
+.form-container {
+  float: left;
+  background-color: rgba(225, 225, 225, .9);
+  width: 30vw;
+  height: 50vh;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.radio-buttons {
+  padding: 5px;
+
+}
+
+.form {
+  padding: 15px;
+}
+
+.form-heading {
+  padding: 15px;
+}
+
+.lets-cook {
+  padding: 10px;
+}
+
+#lets-cook {
+    background-color: #0fb9b1;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px;
+    width: 15vw;
+}
+.cookpot-view {
+  width: 10vw;
+  padding: 30px 80px;
+  margin: 30px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.intro {
+  text-align: center;
+  justify-content: center;
+  font-style: italic;
+  padding: 3px;
+}
+
+.meal {
+  text-align: center;
+  justify-content: center;
+  padding: 3px;
+}
+
+.meal-view {
+  margin-top: 70px;
+  margin-left: 20px;
+}
+.right-box {
+  display: flex;
+  float: right;
+  background-color: rgba(225, 225, 225, .9);
+  height: 50vh;
+  width: 30vw;
+  margin-right: 100px;
+  margin-top: 30px;
+}

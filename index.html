@@ -1,10 +1,39 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's For Dinner?</title>
   </head>
   <body>
-    
+    <nav>
+      <ul>
+        <h3 class="title">What's for Dinner?</h3>
+        <button class="recipe-button">ADD A RECIPE</button>
+      </ul>
+    </nav>
+    <main class="main-screen-view">
+      <section class="main-child" id="form-view">
+        <p class="radio-button-title">What are you looking for?<span>*</span></p>
+        <input checked="checked" type="radio" name="user-choice" id="side" value="1" />
+        <label for="side">Side</label><br/>
+        <input type="radio" name="user-choice" id="maindish" value="2" />
+        <label for="maindish">Main Dish</label><br/>
+        <input type="radio" name="user-choice" id="dessert" value="3" />
+        <label for="dessert">Dessert</label><br/>
+        <input type="radio" name="user-choice" id="entiremeal" value="4" />
+        <label for="entiremeal">Entire Meal</label><br/>
+        <button class="lets-cook-button">LET'S COOK!</button>
+      </section>
+      <section class="main-child" id="recipe-display">
+        <section class="cookpot-view">
+          <img class="cookpot" src="./assets/cookpot.svg">
+        </section>
+        <section class="results-view hidden">
+          <section class="results-section"></section>
+        </section>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

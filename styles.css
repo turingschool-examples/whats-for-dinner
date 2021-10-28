@@ -85,7 +85,6 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   padding: 186px;
-  border-style:dotted;
   height: 20%;
   width: 10%;
   margin-top: 10%;
@@ -108,6 +107,7 @@ body{
 
 #clear-button:hover{
   color: black;
+  border-style: hidden;
   background-color: white; opacity: 40%;
   transform: translateY(-3)
 }

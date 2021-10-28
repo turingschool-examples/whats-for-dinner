@@ -27,10 +27,22 @@ body{
 
 #add-recipe-button{
   margin-left: 38%;
+  margin-bottom: 100%;
   padding: 10px;
-  border-radius: 4px;
+  color: #616161;
+  margin-bottom: 50px;
+  border-radius: 10px;
   border-color: white;
+  border-style: solid;
   transition-duration: 1s;
+}
+
+#add-recipe-button:hover {
+  background-color: #e0e0e0;
+  color: black;
+  border-style: solid;
+  border-color: #e0e0e0;
+  transform: translateY(-2px);
 }
 
 #boxes{
@@ -38,12 +50,6 @@ body{
   flex-direction: row;
   justify-content: space-between;
   align-items: column;
-}
-
-#add-recipe-button:hover {
-  background-color: #e0e0e0;
-  color: #616161;
-  transform: translateY(-2px);
 }
 
 .looking-for{
@@ -63,11 +69,13 @@ body{
     border-color: #5ed6d0;
     width: 255px;
     transition-duration: 0.8s;
+    border-style: solid;
 }
 
 #lets-cook-button:hover {
   background-color: #10B9B1;
-  border-color: #95a5a6;
+  border-color: #10B9B1;
+  border-style: solid;
   transform: translateY(-2px);
 }
 
@@ -76,9 +84,30 @@ body{
   background-color: rgba(225, 225, 225, .9);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 200px;
+  padding: 186px;
+  border-style:dotted;
   height: 20%;
   width: 10%;
   margin-top: 10%;
   margin-right: 10%;
+}
+
+#clear-button{
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  flex-direction: column-reverse;
+  flex: auto;
+  background-color: #95a5a6;
+  border-color: #95a5a6;
+  color: white;
+  width: 85px;
+  transition-duration: 0.5s;
+  border-style: solid;
+}
+
+#clear-button:hover{
+  color: black;
+  background-color: white; opacity: 40%;
+  transform: translateY(-3)
 }

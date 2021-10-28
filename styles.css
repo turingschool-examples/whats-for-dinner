@@ -37,6 +37,8 @@ main {
   width: 100%;
   background-position: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px;
   grid-area: "stack";
   grid-row: 1;
   grid-column: 1;
@@ -44,8 +46,8 @@ main {
 
 .recipe-selection,
 .recipe-display {
-  height: 38%;
-  width: 38%;
+  height: 40%;
+  width: 40%;
   text-align: left;
   background-color: rgba(225, 225, 225, .9);
   grid-area: "stack";
@@ -73,7 +75,7 @@ main {
 .recipe-selection > h3 {
   font-size: 22px;
   margin-left: 8%;
-  margin-top: 14%;
+  margin-top: 13%;
 }
 
 span {
@@ -97,5 +99,31 @@ span {
   text-align: center;
   border-radius: 7px;
   padding: 2.3% 11%;
-  margin-left: 12%;
+}
+
+
+.meal-selection {
+  margin-top: 1%;
+  margin-left: 11%;
+}
+
+.meal-text {
+  font-family: 'Roboto', sans-serif, bold;
+  font-size: 35px;
+  text-align: center;
+  word-wrap: normal;
+
+}
+
+.suggestion-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-align: center;
+
+}
+
+.radio-buttons {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
 }

@@ -9,34 +9,40 @@
 
 <body>
   <header>
-    <h1 class="logo">What's for Dinner?</h1>
-    <nav>
-      <button class="recipe-button">ADD A RECIPE</button>
-    </nav>
+    <h1 class="title">What's for Dinner?</h1>
+    <button class="recipe-button">ADD A RECIPE</button>
   </header>
-  <div class="left-box">
-    <p>What are you looking for?</p>
-    <div>
-      <input type="radio" id="side" value="side">
-      <label for="side">Side</label>
-    </div>
-    <div>
-      <input type="radio" id="main" value="main">
-      <label for="main">Main Dish</label>
-    </div>
-    <div>
-      <input type="radio" id="dessert" value="dessert">
-      <label for="dessert">Dessert</label>
-    </div>
-    <div>
-      <input type="radio" id="entire" value="entire">
-      <label for="entire">Entire Meal</label>
-    </div>
-    <button class="lets-cook">LET'S COOK!</button>
-  </div>
-  <div class="right-box">
-    <img class="pot" src="assets/cookpot.svg" alt="cookpot image"></img>
-  </div>
+
+  <main>
+    <section>
+      <div class="box">
+        <p>What are you looking for?</p>
+        <div>
+          <input type="radio" id="side" value="side">
+          <label for="side">Side</label>
+        </div>
+        <div>
+          <input type="radio" id="main" value="main">
+          <label for="main">Main Dish</label>
+        </div>
+        <div>
+          <input type="radio" id="dessert" value="dessert">
+          <label for="dessert">Dessert</label>
+        </div>
+        <div>
+          <input type="radio" id="entire" value="entire">
+          <label for="entire">Entire Meal</label>
+        </div>
+        <button class="lets-cook">LET'S COOK!</button>
+      </div>
+      </div>
+    </section>
+    <section>
+      <div class="box pot">
+        <img src="assets/cookpot.svg" alt="cookpot image"></img>
+      </div>
+    </section>
+  </main>
 
 </body>
 <script type="text/javascript" src="main.js"></script>

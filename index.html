@@ -3,8 +3,29 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  <nav>
+    <h2>What's for Dinner?</h2>
+    <button class="add-a-recipe">ADD A RECIPE</button>
+  </nav>
   <body>
-    
+      <section class="food-selector">
+        <form>
+          <h1>What are you looking for?<span class="star">*</span></h1><br>
+          <input class="radio" type="radio" id="side" name="meal-type" value="side">
+          <label for="side">Side</label><br>
+          <input class="radio" type="radio" id="main-dish" name="meal-type" value="main-dish">
+          <label for="main-dish">Main Dish</label><br>
+          <input class="radio" type="radio" id="dessert" name="meal-type" value="dessert">
+          <label for="dessert">Dessert</label><br>
+          <input class="radio"type="radio" id="entire-meal" name="meal-type"  value="entire-meal">
+          <label for="entire-meal">Entire Meal</label><br>
+          <button class="lets-cook">LET'S COOK!</button>
+        </form>
+      </section>
+      <section class="food-value">
+        <img class="cook-pot" src="./assets/cookpot.svg">
+      </section>
+      <img class="background-image" src="./assets/burger-friends.jpg">
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

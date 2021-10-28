@@ -4,7 +4,90 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+h2 {
+  position: relative;
+  left: 3%;
+}
 
+nav {
+  background-color: #0fb9b1;
+  width: 100%;
+  margin-bottom: 0;
+  padding: .2%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: inline-block;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  background-color: rgba(225, 225, 225, .9);
+  width: 35%;
+  height: 50%;
+}
+
+form {
+  margin-left: 10%;
+  margin-top: 15%;
+}
+
+button {
+  border-radius: 5px;
+  padding: 6px;
+  border-style: none;
+}
+
+.star {
+  color: #ee5253;
+}
+
+.add-a-recipe {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+
+.cook-pot {
+  width: 25%;
+  padding-left: 35%;
+  padding-top: 25%;
+}
+
+.food-selector {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.food-value {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  margin-top: 0;
+}
+
+.radio {
+  margin-bottom: 5%
+}
+
+.lets-cook {
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color: #0fb9b1;
+}

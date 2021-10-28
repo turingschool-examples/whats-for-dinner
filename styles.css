@@ -8,6 +8,9 @@ red - #ee5253
 
 */
 
+.hidden {
+  display: none;
+}
 
 #app {
   height: 100%;
@@ -57,7 +60,7 @@ h1 {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  margin-bottom: 20vh;
+  margin-top: 20vh;
 }
 
 .display-boxes {
@@ -124,7 +127,7 @@ h1 {
 
 #cookpot {
   margin: auto;
-  height: 40%;
+  height: 20vh;
 }
 
 .user-output {
@@ -156,7 +159,3 @@ h1 {
   border: none;
   padding: 1.2vh;
 }
-
-/* .hidden {
-  display: none;
-} */

@@ -69,7 +69,6 @@ function displayFoodChoice(event) {
 }
 
 function displayEntireMeal() {
-  hideCookpot();
   dishOutput.innerHTML =
   `<section class="dish-output">You should make:</section>
      <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}

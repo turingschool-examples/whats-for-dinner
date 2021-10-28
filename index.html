@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
@@ -5,24 +6,32 @@
     <title>What's for Dinner?</title>
   </head>
   <body>
-    <section class="all-buttons">
-      <button class="side-botton">Side</button>
-      <button class="main-dish-botton">Main Dish</button>
-      <button class="dessert-button">Dessert</button>
-      <button class="entire-meal-button">Entire Meal</button>
-      <button class="let's-cook-botton">LET'S COOK!</button>
 
-
-    </section>
     <section class="main-page">
-      <section class="main-picture">
-      <img class="picture-image" src="./assets/burger-friends.jpg">
+      <section class="question-line">
+
+      <h3 class="main-question">What's for Dinner?</h3>
 
 
+          <form>
+            <h2>What are you looking for?</h2>
+            <input class="side-radio-botton" type="radio" id="side" />
+            <label for="side">Side</label>
+
+            <input class="main-dish-radio-botton" type="radio" id="main-dish" />
+            <label for="main-dish">Main Dish</label>
+
+            <input class="dessert-radio-button" type="radio" id="dessert" />
+            <label for="dessert">Dessert</label>
+
+            <input class="entire-meal-radio-button" type="radio" id="entire-meal" />
+            <label for="entire-meal">Entire Meal</label>
+
+            <button class="let's-cook-botton">LET'S COOK!</button>
+          </form>
+        </section>
     </section>
-
-
+    <script src="./src/data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
-  <script src="./src/data.js"></script>
-  <script type="text/javascript" src="main.js"></script>
 </html>

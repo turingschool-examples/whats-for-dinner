@@ -29,23 +29,32 @@ h6 {
   font-family: sans-serif;
 }
 
+.hidden {
+  display: none;
+}
 
 .boxes {
  background-color: rgba(225, 225, 225, .9);
- width: 300px;
+ width: 250px;
  padding: 100px;
  margin: 100px 90px 0px 30px;
  float: left;
 }
 
 #empty-box {
-  padding: 182px 182px ;
-  width: 150px;
-  background-image: url("https://raw.githubusercontent.com/StevieAmb/whats-for-dinner/67e88d79a1a292ff3cb3af5f8ba6d7ca1a6fe6eb/assets/cookpot.svg");
+  justify-content: center;
+  width: 14vw;
+  height: 21vh;
+  display: flex;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 150px
+  background-size: 150px;
 }
+
+/* img {
+  height: 20px;
+} */
+
 
 button {
  margin: 15px;

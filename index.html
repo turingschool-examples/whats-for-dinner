@@ -4,7 +4,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+     <nav>
+       <h6>What's for Dinner?</h6>
+     </nav>
+     <div class="form box">
+   <section class="boxes">
+     <form>
+       <p>What are you looking for?</p>
+       <input type="radio" id="side" name="looking-for" value="side">
+       <label for="side">Side</label><br>
+       <input type="radio" id="main" name="looking-for" value="main">
+       <label for="main">Main Dish</label><br>
+       <input type="radio" id="dessert" name="looking-for" value="dessert">
+       <label for="dessert">Dessert</label><br>
+       <button type="button">LET'S COOK!</button>
+     </form>
+      <!--this is gonna have the form in the box-->
+    </section>
+    <section class="boxes" id="empty-box">
+      <p class="meal-picked"></p>
+      <img src="https://raw.githubusercontent.com/StevieAmb/whats-for-dinner/67e88d79a1a292ff3cb3af5f8ba6d7ca1a6fe6eb/assets/cookpot.svg">
+      <p class="recipe"></p>
+    </section>
+  </div>
   </body>
+  <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </html>
+
+
+<!--Add sections for the two boxes
+//add the header and the nav bar that's meant to say "What's for Dinner?"
+//-->

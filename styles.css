@@ -7,4 +7,93 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+body {
+  margin: 0;
+  background-image: url("assets/burger-friends.jpg");
+  background-size: cover;
+  background-color: white;
+}
 
+header {
+  height: 7%;
+  background: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 175%;
+  margin-left: 2%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main > section {
+  width: 35vw;
+  height: 50vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40vh;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-around;
+  font-family: 'Roboto', sans-serif;
+}
+
+sup {
+  color: #ee5253;
+}
+
+form > h1, label, button {
+  margin-left: 11%;
+}
+
+form > label, button {
+  margin-top: 5%;
+}
+
+form > h1 {
+  font-size: 200%;
+  margin-bottom: 0px;
+}
+
+form > label {
+  font-size: 125%;
+}
+
+.what-are-you-looking-for > button {
+  background-color: #0fb9b1;
+  border: none;
+  border-radius: 7px;
+  width: 45%;
+  height: 10%;
+  margin-left: 10%;
+  font-size: 100%;
+}
+
+.show-recipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-recipe > img {
+  height: 45%;
+}
+
+.hidden {
+  display: none;
+}

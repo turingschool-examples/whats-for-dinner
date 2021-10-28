@@ -2,9 +2,28 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's For Dinner</title>
   </head>
   <body>
-    
+    <header>
+      <h1 class="page-title">What's for Dinner?</h1>
+      <button class="hidden" id="add-recipe">Add Recipe</button>
+    </header>
+    <main>
+      <section class="select-recipe">
+        <form class="what-are-you-looking-for">
+          <h1 class="section-prompt">What are you looking for?<sup>*</sup></h1>
+          <label><input type="radio" name="recipe" value"Side" required/> Side</label>
+          <label><input type="radio" name="recipe" value"Main Dish"/> Main Dish</label>
+          <label><input type="radio" name="recipe" value"Dessert"/> Dessert</label>
+          <label><input type="radio" name="recipe" value"Entire Meal"/> Entire Meal</label>
+          <button id="lets-cook" type="submit">LET'S COOK!</button>
+        </form>
+      </section>
+      <section class="show-recipe">
+        <img src="assets/cookpot.svg" alt="Cook Pot graphic">
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -49,10 +49,18 @@ main {
   line-height: 35px;
 }
 
-#recipe-display {
+.cookpot-view {
   padding-left: 175px;
   padding-top: 95px;
   padding-bottom: 100px;
+}
+
+.results-section {
+  /* background-color: rgba(225, 225, 225, .1); */
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 160px;
+  padding-bottom: 160px;
 }
 
 .radio-button-title {
@@ -70,6 +78,18 @@ span {
   padding: 5px;
   border: 0;
   border-radius: 4px;
+}
+
+.should-make {
+  font-style: italic;
+}
+
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
 }
 
 .hidden {

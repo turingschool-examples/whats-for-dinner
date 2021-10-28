@@ -8,3 +8,73 @@ red - #ee5253
 
 */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url('assets/burger-friends.jpg');
+  background-size: cover;
+  /* border: 2px solid; */
+  height: 100%;
+  width: 100%;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  margin-top: 8%;
+  margin-left: 15%;
+}
+
+.title-and-button {
+  display: flex;
+  height: 9%;
+  background-color: #0fb9b1;
+  justify-content: space-between;
+}
+.whats-for-dinner {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 150%;
+  padding-top: 20px;
+  padding-left: 2%;
+}
+
+.add-recipe-button {
+  border-radius: 8px;
+  height: 50%;
+  width: 10%;
+  border: none;
+  margin-top: 18px;
+  margin-right: 2%;
+}
+
+.dish-input-section,
+.dish-output-section {
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 5%;
+  width: 30%;
+  height: 50vh;
+}
+
+.side-dish,
+.main-dish,
+.dessert-dish,
+.entire-meal {
+font-size: 20px;
+font-family: 'Roboto', sans-serif;
+}
+
+
+.looking-for-title {
+  height: 5%;
+  margin-top: 10%;
+  font-size: 28px;
+  font-family:  'Roboto', sans-serif;
+  text-align: center;
+}

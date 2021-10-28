@@ -52,17 +52,24 @@ var mainDishButton = document.querySelector('#maindish');
 var dessertButton = document.querySelector('#dessert');
 var cookPotView = document.querySelector('.cookpot-view');
 var resultsView = document.querySelector('.results-view');
+var recipeResult = document.querySelector('.results');
+var clearResult = document.querySelector('.clear-button');
 
 letsCookButton.addEventListener("click", showRecipe);
+clearResult.addEventListener("click", clearRecipe);
 
 function getRandomIndex(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
 
-
-function showRecipe(){
+function showRecipe() {
   cookPotView.classList.add('hidden');
   resultsView.classList.remove('hidden');
-
-}
+  recipeResult.innerText = "Recipe Results Show Here";
+  //if (sideButton.checked === true) ->-> show random side index in the innerText value
+  //need to add a .innerText to add item from whichever button is selected to the results class
+};
+function clearRecipe() {
+  recipeResult.classList.add('hidden');
+};

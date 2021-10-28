@@ -33,20 +33,25 @@ ul {
 main {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-around;
+  align-items: center;
+}
+.main-child {
+  background-color: rgba(225, 225, 225, .9);
+
+}
+#form-view {
+  display: flex;
+  flex-direction: column;
   align-items: baseline;
-  gap: 25px;
-}
-.radio-button-selector {
+  justify-content: center;
   background-color: rgba(225, 225, 225, .9);
-  margin: 10%;
-  padding: 8%;
+  height: 500px;
+  width: 30%;
 }
-.recipe-display {
+#recipe-display {
   background-color: rgba(225, 225, 225, .9);
-  margin: 0;
-  align-self: center;
+
 }
 .radio {
   display: inline-flex;
@@ -56,8 +61,17 @@ main {
 .lets-cook-button {
   background-color: #0fb9b1;
   width: 40%;
-  height: 20%;
+  height: 10%;
   padding: 5px;
   border: 0;
   border-radius: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cookpot {
+  height: 30%;
+  width: 30%;
 }

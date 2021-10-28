@@ -13,26 +13,24 @@
       </ul>
     </nav>
     <main class="main-screen-view">
-      <section class="form-and-result-view">
-        <form class="radio-button-selector">
-          <p class="radio-button-title">What are you looking for?*</p>
-          <input checked="checked" type="radio" name="user-choice" id="side" value="1" />
-          <label for="side">Side</label><br/>
-          <input type="radio" name="user-choice" id="maindish" value="2" />
-          <label for="maindish">Main Dish</label><br/>
-          <input type="radio" name="user-choice" id="dessert" value="3" />
-          <label for="dessert">Dessert</label><br/>
-          <input type="radio" name="user-choice" id="entiremeal" value="4" />
-          <label for="entiremeal">Entire Meal</label><br/>
-          <button class="lets-cook-button">LET'S COOK!</button>
-        </form>
-        <section class="recipe-display">
-          <section class="cookpot-view">
-            <img class="cookpot" src="./assets/cookpot.svg">
-          </section>
-          <section class="results-view hidden">
-            <section class="results-section"></section>
-          </section>
+      <section class="main-child" id="form-view">
+        <p class="radio-button-title">What are you looking for?*</p>
+        <input checked="checked" type="radio" name="user-choice" id="side" value="1" />
+        <label for="side">Side</label><br/>
+        <input type="radio" name="user-choice" id="maindish" value="2" />
+        <label for="maindish">Main Dish</label><br/>
+        <input type="radio" name="user-choice" id="dessert" value="3" />
+        <label for="dessert">Dessert</label><br/>
+        <input type="radio" name="user-choice" id="entiremeal" value="4" />
+        <label for="entiremeal">Entire Meal</label><br/>
+        <button class="lets-cook-button">LET'S COOK!</button>
+      </section>
+      <section class="main-child" id="recipe-display">
+        <section class="cookpot-view">
+          <img class="cookpot" src="./assets/cookpot.svg">
+        </section>
+        <section class="results-view hidden">
+          <section class="results-section"></section>
         </section>
       </section>
     </main>

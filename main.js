@@ -7,10 +7,13 @@ var dessertRadioButton = document.querySelector('.dessert-button')
 var entireMealRadioButton = document.querySelector('.entire-meal-button')
 var favoriteButton = document.querySelector('.favorite-button')
 
+favoritedRecipes = [];
+
 function getRandomIndex(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
+
 
 function displayRecipe() {
     foodText.innerHTML = ``
@@ -19,21 +22,25 @@ function displayRecipe() {
   } else if (mainDishRadioButton.checked === true) {
     foodText.innerText = getRandomIndex(mainDishes)
   } else if (dessertRadioButton.checked === true) {
-    foodText.innerText = getRandomIndex(mainDishes)
+    foodText.innerText = getRandomIndex(desserts)
   } else if (entireMealRadioButton.checked === true) {
     foodText.innerHTML +=
     `<p class="you-should-make">You Should Make:</p>
      <p class="dishes">${getRandomIndex(mainDishes)} with a side of ${getRandomIndex(sides)} and ${getRandomIndex(desserts)} for dessert!
-    </p>
-    `
+    </p>`
   }
   potImage.classList.add('hidden')
   foodText.classList.remove('hidden')
   favoriteButton.classList.remove('hidden')
-
 };
 
 
+function addFavoriteRecipe() {
+  // event.preventDefault();
+  favoritedRecipes.push(foodText)
+
+}
 
 
 letsCookButton.addEventListener('click', displayRecipe)
+favoriteButton.addEventListener('click', addFavoriteRecipe)

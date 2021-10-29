@@ -37,6 +37,10 @@ red - #ee5253
   margin-left: 75%
 }
 
+.display-favorite-recipes-button {
+  
+}
+
 /* ------- Two box section ------- */
 
 .what-are-you-looking-for-container {
@@ -117,5 +121,5 @@ red - #ee5253
 }
 
 .favorite-button {
-  padding-left: 20%;
+  padding-left: 10%;
 }

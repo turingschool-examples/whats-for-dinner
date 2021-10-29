@@ -8,3 +8,7 @@ var buttonLetsCook = document.querySelector("#lets-cook");
 var showRecipeSection = document.querySelector(".show-recipe");
 
 var cookPot = document.querySelector("img")
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}

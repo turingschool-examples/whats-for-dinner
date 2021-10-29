@@ -1,20 +1,14 @@
-var sides = ['Mac n Cheese', 'Coleslaw', 'Pinto Beans', 'Baked Beans', 'Green Beans', 'Fries', 'Fried Pickles', 'Fried Okra', 'Potato Salad', 'Small Salad'];
-
-var mainDishes = ['Ribs', 'Sliced Brisket', 'Chopped Brisket', 'Balogna', 'Pulled Pork', 'Hot Links', 'Chicken'];
-
-var desserts = ['Brownie', 'Cookie', 'Apple Pie', 'Peach Cobbler', 'Ice Cream', 'Banana Pudding', 'Carrot Cake'];
-
-var addRecipeButton = document.querySelector('#add-recipe-button');
-var selectionForm = document.querySelector('#selection-form');
-var firstSelection = document.querySelector('#first-item');
-var secondSelection = document.querySelector('#second-item');
-var thirdSelection = document.querySelector('#third-item');
-var fourthSelection = document.querySelector('#fourth-item');
+var addRecipeButton = document.getElementById('add-recipe-button');
+var selectionForm = document.getElementById('selection-form');
+var firstSelection = document.getElementById('first-item');
+var secondSelection = document.getElementById('second-item');
+var thirdSelection = document.getElementById('third-item');
+var fourthSelection = document.getElementById('fourth-item');
 var submitButton = document.getElementById('submit-button');
-var cookpot = document.querySelector('#cookpot');
-var outputPrompt = document.querySelector('#you-should-make');
-var selectionOutput = document.querySelector('#selection-output');
-var clearButton = document.querySelector('#clear-selection-button');
+var cookpot = document.getElementById('cookpot');
+var outputPrompt = document.getElementById('you-should-make');
+var selectionOutput = document.getElementById('selection-output');
+var clearButton = document.getElementById('clear-selection-button');
 
 submitButton.addEventListener('click', selectBasicFoodType);
 clearButton.addEventListener('click', clearResults);
@@ -39,7 +33,7 @@ function findUserChoice() {
   } else if (thirdSelection.checked) {
     selectionOutput.innerText = desserts[getRandomIndex(desserts)] + '!';
   } else if (fourthSelection.checked) {
-    selectionOutput.innerText = `${sides[getRandomIndex(sides)]}, ${mainDishes[getRandomIndex(mainDishes)]}, and ${desserts[getRandomIndex(desserts)]}!`;
+    selectionOutput.innerText = `${mainDishes[getRandomIndex(mainDishes)]}, ${sides[getRandomIndex(sides)]}, and ${desserts[getRandomIndex(desserts)]}!`;
   }
 };
 
@@ -52,6 +46,10 @@ function selectBasicFoodType() {
 };
 
 function clearResults() {
+  firstSelection.checked = false;
+  secondSelection.checked = false;
+  thirdSelection.checked = false;
+  fourthSelection.checked = false;
   hide(outputPrompt);
   hide(selectionOutput);
   hide(clearButton);

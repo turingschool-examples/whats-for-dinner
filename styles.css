@@ -33,6 +33,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   padding: 0px 23px;
+  font-weight: bold;
 }
 
 /* home page */
@@ -60,11 +61,21 @@ body {
   font-family: 'Roboto';
   font-weight: 300;
   font-size: 16px;
+  font-weight: bold;
   padding: 20px 20px;
   width: 300px;
   height: 200px;
   float: left;
   background-color: rgba(225, 225, 225, .9);
+}
+
+ul {
+  font-size: 14px
+}
+
+.options {
+  border-bottom-width: thick;
+  padding: 4px;
 }
 
 h1.altColor {
@@ -74,7 +85,8 @@ h1.altColor {
 .lets-cook-button {
   background-color: #0fb9b1;
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 100;
   border-width: 0px;
   width: 125px;
   height: 25px;

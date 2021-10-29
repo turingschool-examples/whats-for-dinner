@@ -63,13 +63,23 @@ function getRandomIndex(array) {
   return array[randomIndex];
 };
 
+function chooseRecipe() {
+  if (sideButton.checked) {
+    recipeResult.innerText = getRandomIndex(sides)
+  } else if (mainDishButton.checked) {
+    recipeResult.innerText = getRandomIndex(mains)
+  } else if (dessertButton.checked) {
+    recipeResult.innerText = getRandomIndex(desserts)
+  }
+};
+
 function showRecipe() {
   cookPotView.classList.add('hidden');
   resultsView.classList.remove('hidden');
-  recipeResult.innerText = "Recipe Results Show Here";
-  //if (sideButton.checked === true) ->-> show random side index in the innerText value
-  //need to add a .innerText to add item from whichever button is selected to the results class
+  chooseRecipe();
 };
+
 function clearRecipe() {
   recipeResult.classList.add('hidden');
+  location.reload();
 };

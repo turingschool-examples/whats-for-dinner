@@ -13,5 +13,18 @@ body {
 }
 .navBar {
   background-color: #0fb9b1;
-  padding: 15px;
+  padding: 4px;
+}
+
+.buttonContainer {
+  display:flex;
+  justify-content:flex-end;
+  align-items:right;
+}
+
+.what-are-you-looking-for {
+  background-color: rgba(225, 225, 225, .9);
+  display:flex;
+  justify-content:space-around;
+  align-items:left;
 }

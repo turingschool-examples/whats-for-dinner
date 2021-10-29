@@ -5,15 +5,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="navBar">
-      <h1 class="navigationTitle">What's for Dinner?</h1>
+    <nav class="navBar">
+      <h2 class="navigationTitle">What's for Dinner?</h2>
+    <div class="buttonContainer">
+      <button type="button">ADD A RECIPE</button>
     </div>
+  </nav>
     <div class="applications">
-      <div class="What-are-you-looking-for">
-      </div>
+      <section>
+        <article class="frame1">
+          <h1 class="frame1-title">What are you looking for?</h1>
+            <ul>
+          <input type="radio" class="frame1-radio-button" id="side"></input>
+            <label for="side">Side</label><br>
+          <input type="radio"class="frame1-radio-button" id="main-dish"></input>
+            <label for="main-dish">Main dish</label><br>
+          <input type="radio" class="frame1-radio-button" id="dessert"></input>
+            <label for="dessert">Dessert</label><br>
+          <input type="radio" class="frame1-radio-button" id="entire-meal"></input>
+            <label for="entire-meal">Entire meal</label><br>
+            <ul>
+        </article>
+      </section>
       <div class="menuWindow">
       </div>
     </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
+"

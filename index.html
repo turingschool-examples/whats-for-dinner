@@ -3,15 +3,19 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+  </head>
+  <body>
+
     <section class='header'>
       <h1>
         What's for Dinner?
         <button id='add-recipe-button'>Add a Recipe</button>
       </h1>
     </section>
-    <section id="boxes">
+    <div id="boxes">
 
-      <div class="looking-for">
+      <div class="select-dish-box">
+        <p><h2>What are you looking for?</h2></p>
         <p><input type="radio" id="side" value="side" name="select-option">
         <label for="side">Side</label></p>
         <p><input type="radio" id="main-dish" value="main-dish" name="select-option">
@@ -22,21 +26,17 @@
         <label for="side">Entire Meal</label>
         </p>
         <p>
-        </p>
-        <p>
+          <br>
         <button id='lets-cook-button'>Let's Cook!</button>
         </p>
       </div>
 
       <div class ="recipe-box">
-        <img src=""</img>
-        <div id="clear-box">
-        <button id="clear-button">CLEAR</button>
-         </div>
+        <img class="cook-pot-img" src="assets/cookpot.svg" alt="cookpot">
+        <!-- <button id="clear-button">CLEAR</button> -->
       </div>
-  </section>
-  </head>
-  <body>
-  </body>
+  </div>
+  <img class="background" src="./assets/burger-friends.jpg">
+</body>
   <script type="text/javascript" src="main.js"></script>
 </html>

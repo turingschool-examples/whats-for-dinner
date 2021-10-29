@@ -32,6 +32,7 @@ body {
   font-family: 'Roboto';
   font-weight: 300;
   font-size: 16px;
+  padding: 0px 23px;
 }
 
 /* home page */
@@ -40,14 +41,19 @@ body {
   padding: 10px;
 }
 
-.cook-pot-img {
-  background-image: url("assets/cookpot.svg");
+.cooking {
   padding: 20px 20px;
   width: 300px;
   height: 200px;
   float: right;
   background-color: rgba(225, 225, 225, .9);
   background-repeat: no-repeat;
+}
+
+.cook-pot-img {
+  width: 93px;
+  height: 192px;
+  padding: 5px 100px;
 }
 
 .what-are-you-looking-for {

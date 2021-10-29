@@ -49,6 +49,15 @@ function showFavorites() {
   mainPage.classList.add('hidden')
   showFavoritePage.classList.remove('hidden')
   showFavoriteRecipes.classList.remove('hidden')
+  displaySavedRecipesPage();
+}
+
+function displaySavedRecipesPage() {
+  showFavoriteRecipes.innerHTML = ``;
+  for (var i = 0; i < favoritedRecipes.length; i++) {
+    showFavoriteRecipes.innerHTML +=
+    `<div class="recipe-list">${favoritedRecipes[i]}</div>`
+  }
 }
 
 

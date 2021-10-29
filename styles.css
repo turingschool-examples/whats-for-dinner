@@ -37,8 +37,8 @@ red - #ee5253
   margin-left: 75%
 }
 
-.display-favorite-recipes-button {
-  
+.view-favorites-button {
+
 }
 
 /* ------- Two box section ------- */
@@ -122,4 +122,14 @@ red - #ee5253
 
 .favorite-button {
   padding-left: 10%;
+}
+
+/*----- Favorite Recipe Section ---- */
+
+.favorite-recipes-view {
+
+}
+
+.saved-recipes-section {
+
 }

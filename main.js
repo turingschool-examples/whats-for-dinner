@@ -6,6 +6,10 @@ var mainDishRadioButton = document.querySelector('.main-dish-button')
 var dessertRadioButton = document.querySelector('.dessert-button')
 var entireMealRadioButton = document.querySelector('.entire-meal-button')
 var favoriteButton = document.querySelector('.favorite-button')
+var viewFavoritesButton = document.querySelector('.view-favorites-button')
+var mainPage = document.querySelector('.what-are-you-looking-for-container')
+var showFavoritePage = document.querySelector('.favorite-recipes-view')
+var showFavoriteRecipes = document.querySelector('.saved-recipes-section')
 
 favoritedRecipes = [];
 
@@ -41,6 +45,13 @@ function addFavoriteRecipe() {
 
 }
 
+function showFavorites() {
+  mainPage.classList.add('hidden')
+  showFavoritePage.classList.remove('hidden')
+  showFavoriteRecipes.classList.remove('hidden')
+}
+
 
 letsCookButton.addEventListener('click', displayRecipe)
 favoriteButton.addEventListener('click', addFavoriteRecipe)
+viewFavoritesButton.addEventListener('click', showFavorites)

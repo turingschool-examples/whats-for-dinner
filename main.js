@@ -10,6 +10,7 @@ var viewFavoritesButton = document.querySelector('.view-favorites-button')
 var mainPage = document.querySelector('.what-are-you-looking-for-container')
 var showFavoritePage = document.querySelector('.favorite-recipes-view')
 var showFavoriteRecipes = document.querySelector('.saved-recipes-section')
+var clearButton = document.querySelector('.clear-button')
 
 var favoritedRecipes = [];
 var currentRecipe;
@@ -38,6 +39,7 @@ function displayRecipe() {
   potImage.classList.add('hidden')
   foodText.classList.remove('hidden')
   favoriteButton.classList.remove('hidden')
+  clearButton.classList.remove('hidden')
 };
 
 
@@ -65,7 +67,12 @@ function displaySavedRecipesPage() {
   }
 }
 
+function reloadPage(){
+  location.reload();
+}
+
 
 letsCookButton.addEventListener('click', displayRecipe)
 favoriteButton.addEventListener('click', addFavoriteRecipe)
 viewFavoritesButton.addEventListener('click', showFavorites)
+clearButton.addEventListener('click', reloadPage)

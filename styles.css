@@ -17,35 +17,41 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
 }
 
-.header-style {
+.navbar {
   display: flex;
+  justify-content: space-between;
   background: #0fb9b1;
-  height: 60px
 }
 
 .title {
-  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  /* font-family: 'Roboto', sans-serif;
   font-size: 18px;
   margin-left: 18px;
-  padding-top: 5px;
+  padding-top: 5px; */
 }
 
-
 .add-a-recipe-button {
-  background: rgba(225, 225, 225, .9);
-  border: 1px solid black;
-  margin-left: 75%
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+
 }
 
 .view-favorites-button {
-
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
 }
 
 /* ---- button styling ---- */
 
 .button {
-  border-radius: ;
+  border-radius: 40%;
   font-family: 'Roboto', sans-serif;
+  padding: 10%;
 }
 
 .button-color-white {
@@ -53,6 +59,14 @@ red - #ee5253
 }
 
 .button-color-teal {
+  background-color: #0fb9b1;
+}
+
+.lets-cook-button{
+  margin: 0px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 8px 40px;
   background-color: #0fb9b1;
 }
 
@@ -73,16 +87,17 @@ red - #ee5253
 
 .first-box,
 .second-box {
+  display: flex;
   margin-left: 0%;
   margin-top: 3%;
   height: 350px;
   width: 400px;
   background-color: rgba(225, 225, 225, .9);
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 5%;
+  border: 10px solid pink;
 }
 
 .first-box {
@@ -93,7 +108,8 @@ red - #ee5253
 }
 
 .pot-image {
-  height: 20%;
+  max-width: 40%;
+  padding:
 }
 
 /* ---- Form Buttons ---- */
@@ -137,8 +153,23 @@ red - #ee5253
 }
 
 .favorite-button {
-  padding-left:
+  margin: 0px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 8px 40px;
 }
+
+.clear-button {
+  margin: 0px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 8px 40px;
+  margin-top: 10px;
+  /* position: absolute; */
+  right: 0;
+  bottom: 0;
+}
+
 
 /*----- Favorite Recipe Section ---- */
 

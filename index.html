@@ -11,20 +11,24 @@
     </header>
     <main>
       <section class="select-recipe">
-        <form class="what-are-you-looking-for">
+        <div class="recipe-options-container">
           <h1 class="section-prompt">What are you looking for?<sup>*</sup></h1>
           <label><input id="side" type="radio" name="recipe" value="side" required/> Side</label>
+
           <label><input id="main-dish" type="radio" name="recipe" value="mainDish"/> Main Dish</label>
+
           <label><input id="dessert" type="radio" name="recipe" value="dessert"/> Dessert</label>
+
           <label><input id="entire-meal" type="radio" name="recipe" value="entireMeal"/> Entire Meal</label>
-          <button id="lets-cook" type="submit">LET'S COOK!</button>
-        </form>
+
+          <button id="lets-cook">LET'S COOK!</button>
+        </div>
       </section>
       <section class="show-recipe">
         <img src="assets/cookpot.svg" alt="Cook Pot graphic">
       </section>
     </main>
+    <script src="data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
-  <script src="data.js"></script>
 </html>

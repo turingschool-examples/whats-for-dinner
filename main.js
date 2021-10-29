@@ -31,13 +31,13 @@ function randomSide() {
 
 function randomMain() {
   suggestionMessage()
-  recipeDisplayBox.innerHTML += `${mains[randomMeal(mains)]}!`;
+  recipeDisplayBox.innerHTML += `<span class="meal-text">${mains[randomMeal(mains)]}!</span>`;
   recipeDisplayBox.classList.add('meal-text');
 }
 
 function randomDessert() {
   suggestionMessage()
-  recipeDisplayBox.innerHTML += `${desserts[randomMeal(desserts)]}!`;
+  recipeDisplayBox.innerHTML += `<span class="meal-text">${desserts[randomMeal(desserts)]}!</span>`;
   recipeDisplayBox.classList.add('meal-text');
 }
 

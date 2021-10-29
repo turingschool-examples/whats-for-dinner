@@ -10,6 +10,7 @@ red - #ee5253
 
 body {
   font-family: 'Roboto', sans-serif;
+  max-height: 100vh;
 }
 
 header {
@@ -33,7 +34,6 @@ main {
 }
 
 .background-image {
-  height: 100%;
   width: 100%;
   background-position: cover;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@ main {
   grid-column: 1;
   grid-row: 1;
   align-self: center;
-  margin-top: -30%;
+  margin-bottom: 20%;
 }
 
 .recipe-display {
@@ -79,9 +79,9 @@ main {
   margin-top: 13%;
 }
 
-/* span {
+.star {
   color: red;
-} */
+}
 
 .radio-button,
 .cook-button  {

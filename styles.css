@@ -20,10 +20,7 @@ body{
 }
 
 .navtitle{
-  display:flex;
-  align-items: center;
   margin: 20px;
-  font-family: 'Roboto', sans-serif;
 }
 
 .addARecipeButton{
@@ -44,6 +41,7 @@ body{
 }
 
 .userSelectorBox{
+  flex: 1;
   background-color: rgba(225, 225, 225, .9);
   width: 30%;
   padding: 5%;
@@ -67,7 +65,7 @@ body{
   padding: 5%;
   margin: 5%;
   background-color: rgba(225, 225, 225, .9);
-  position:relative
+  position:relative;
 }
 
 .tagline{
@@ -85,7 +83,7 @@ body{
 .icon{
   max-width: 40%;
   padding: 20%;
-  height:auto;
+  height: auto; */
 }
 
 .clearButton{

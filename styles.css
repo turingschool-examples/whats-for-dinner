@@ -115,3 +115,7 @@ red - #ee5253
   font-weight: bold;
   font-size: 20px;
 }
+
+.favorite-button {
+  padding-left: 20%;
+}

@@ -5,7 +5,7 @@ var sideRadioButton = document.querySelector('.side-button')
 var mainDishRadioButton = document.querySelector('.main-dish-button')
 var dessertRadioButton = document.querySelector('.dessert-button')
 var entireMealRadioButton = document.querySelector('.entire-meal-button')
-
+var favoriteButton = document.querySelector('.favorite-button')
 
 function getRandomIndex(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
@@ -29,6 +29,8 @@ function displayRecipe() {
   }
   potImage.classList.add('hidden')
   foodText.classList.remove('hidden')
+  favoriteButton.classList.remove('hidden')
+
 };
 
 

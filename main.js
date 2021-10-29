@@ -25,7 +25,7 @@ function randomMeal(mealOptions) {
 
 function randomSide() {
   suggestionMessage()
-  recipeDisplayBox.innerHTML += `${sides[randomMeal(sides)]}!`;
+  recipeDisplayBox.innerHTML += `<span class="meal-text">${sides[randomMeal(sides)]}!</span>`;
   recipeDisplayBox.classList.add('meal-text');
 }
 

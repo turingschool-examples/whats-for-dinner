@@ -60,6 +60,7 @@ main {
 .recipe-display {
   justify-self: end;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: 7%;
@@ -78,9 +79,9 @@ main {
   margin-top: 13%;
 }
 
-span {
+/* span {
   color: red;
-}
+} */
 
 .radio-button,
 .cook-button  {
@@ -104,7 +105,7 @@ span {
 
 .meal-text {
   font-style: bold;
-  font-size: 35px;
+  font-size: 32px;
   text-align: center;
   word-wrap: normal;
 

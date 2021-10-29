@@ -17,8 +17,6 @@ This application assists users with choosing what to have for dinner! Users can 
 - Clone this repository down to your local machine
 - Navigate into the directory
 - Run `open index.html` in your terminal
-- ???
-- Profit!
 
 ## Deploy Link
 Feel free to see it in action by clicking [here](https://mr-ryan12.github.io/whats-for-dinner/)  

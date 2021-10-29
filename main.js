@@ -1,11 +1,8 @@
-var radioButtons = document.querySelectorAll("input");
-
 var divRecipeOptions = document.querySelector(".recipe-options-container");
-
-var showRecipeSection = document.querySelector(".show-recipe");
-
+var radioButtons = document.querySelectorAll("input");
 var buttonLetsCook = document.querySelector("#lets-cook");
 
+var showRecipeSection = document.querySelector(".show-recipe");
 var cookPot = document.querySelector("img");
 
 buttonLetsCook.addEventListener('click', displayRecipe);
@@ -27,6 +24,7 @@ function displayRecipe() {
       <h1>${desserts[getRandomIndex(desserts)]}!</h1>`
   }
 }
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }

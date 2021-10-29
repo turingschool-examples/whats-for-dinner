@@ -1,10 +1,84 @@
-/* font-family: 'Roboto', sans-serif;
+body {
+  background-image: url("assets/burger-friends.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Nav bar and title at the top of home page*/
+.topNav {
+  background-color: #0fb9b1;
+  height: 50;
+  max-width: 100%;
+  border: 0;
+  padding: 5;
+}
+
+.add-recipe-button {
+  float: right;
+  font-family: sans-serif;
+  font-size: 12px;
+  border-width: 0px;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px 5px;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/* home page */
+.home-page {
+  margin: 150px;
+  padding: 10px;
+}
+
+.cook-pot-img {
+  background-image: url("assets/cookpot.svg");
+  padding: 20px 20px;
+  width: 300px;
+  height: 200px;
+  float: right;
+  background-color: rgba(225, 225, 225, .9);
+  background-repeat: no-repeat;
+}
+
+.what-are-you-looking-for {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 16px;
+  padding: 20px 20px;
+  width: 300px;
+  height: 200px;
+  float: left;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+h1.altColor {
+  color: #ee5253;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  font-family: sans-serif;
+  font-size: 12px;
+  border-width: 0px;
+  width: 125px;
+  height: 25px;
+  border-radius: 5px 5px;
+}
+
+ font-family: 'Roboto', sans-serif;
 
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
-*/
-

@@ -9,7 +9,7 @@
   </nav>
   <body>
       <section class="food-selector">
-        <form>
+        <div>
           <h1>What are you looking for?<span class="star">*</span></h1><br>
           <input class="radio" type="radio" id="side" name="meal-type" value="side">
           <label for="side">Side</label><br>
@@ -20,10 +20,12 @@
           <input class="radio"type="radio" id="entire-meal" name="meal-type"  value="entire-meal">
           <label for="entire-meal">Entire Meal</label><br>
           <button class="lets-cook">LET'S COOK!</button>
-        </form>
+        </div>
       </section>
       <section class="food-value">
+        <span class="recipe-position"></span>
         <img class="cook-pot" src="./assets/cookpot.svg">
+        <button class="clear hidden">CLEAR</button>
       </section>
       <img class="background-image" src="./assets/burger-friends.jpg">
   </body>

@@ -14,7 +14,7 @@ h2 {
 nav {
   background-color: #0fb9b1;
   width: 100%;
-  margin-bottom: 0;
+  margin: 0;
   padding: .2%;
   font-family: 'Roboto', sans-serif;
 }
@@ -27,7 +27,7 @@ body {
 
 section {
   background-color: rgba(225, 225, 225, .9);
-  width: 35%;
+  width: 32%;
   height: 50%;
 }
 
@@ -37,7 +37,7 @@ form {
 }
 
 button {
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 6px;
   border-style: none;
 }
@@ -50,6 +50,8 @@ button {
   position: absolute;
   right: 3%;
   top: 3%;
+  padding-left: 3px;
+  padding-right:
 }
 
 .cook-pot {
@@ -73,13 +75,10 @@ button {
 
 
 .background-image {
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
   width: 100%;
   object-fit: contain;
-  margin-top: 0;
+  margin: 0;
 }
 
 .radio {
@@ -90,4 +89,17 @@ button {
   padding-left: 7%;
   padding-right: 7%;
   background-color: #0fb9b1;
+}
+
+.hidden {
+  display: none;
+}
+
+.clear {
+  position: relative;
+  left: 22%;
+  top: 18%;
+  background-color: #95a5a6;
+  color: white;
+  padding-left:
 }

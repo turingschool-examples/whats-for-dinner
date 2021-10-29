@@ -39,25 +39,6 @@ main {
   justify-content: space-around;
 }
 
-/* bigger screen
-.white-box {
-  background-color: rgba(225, 225, 225, .9);
-  margin-top: 80px;
-  height: 60vh;
-  width: 35vw;
-} */
-/* .looking-for {
-  margin-top: 80px;
-  margin-left: 60px;
-  font-size: 40px
-} */
-/* p {
-  margin-left: 50px;
-  font-size: 30px;
-  padding: 20px
-} */
-
-
 .white-box {
   background-color: rgba(225, 225, 225, .9);
   margin-top: 45px;
@@ -94,8 +75,6 @@ p {
 .cookpot {
   width: 20%;
   height: auto;
-  /* margin-top: 200px;
-  margin-left: 260px; */
   margin-top: 20vh;
   margin-left: 13vw;
 }
@@ -106,14 +85,19 @@ p {
   margin-top: 20vh;
 }
 
+.random-food {
+  text-align: center;
+  font-size: 30px;
+  padding: 15px
+}
+
 .clear-btn {
   margin-left: 30vw;
-  margin-top: 20vh;
+  margin-top: 10vh;
   background-color: #95a5a6;
   color: white;
   font-size: 20px;
   border: 0px;
   border-radius: 7px;
   padding: 8px 15px
-
 }

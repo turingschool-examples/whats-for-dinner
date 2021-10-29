@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- <title>What's for dinner?</title> -->
   </head>
   <body>
     <header class="page-header">
@@ -32,9 +31,53 @@
       </section>
       <section class="white-box">
         <h1 class="should-make">You should make:</h1>
-        <button class="clear-btn" type=button>CLEAR</button>
+        <h2 class="random-food">put things here!</h2>
+        <button class="clear-btn">CLEAR</button>
       </section>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script src="./src/data.js"></script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- <title>What's for dinner?</title> -->
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>What's for Dinner?</h1>
+      <button class="recipe-btn">ADD A RECIPE</button>
+    </header>
+    <main>
+      <form class="white-box">
+        <h1 class="looking-for">What are you looking for?<span style="color:red">*</span></h1>
+        <p>
+          <input class="side" type="radio" name="looking-for"> Side
+        </p>
+        <p>
+          <input class="main-dish" type="radio" name="looking-for"> Main Dish
+        </p>
+        <p>
+          <input class="dessert" type="radio" name="looking-for"> Dessert
+        </p>
+        <p>
+          <input class="entire-meal" type="radio" name="looking-for"> Entire Meal
+        </p>
+        <button class="cook-btn">LET'S COOK!</button>
+      </form>
+      <section class="white-box">
+        <img class="cookpot " src="assets/cookpot.svg" alt="Cookpot">
+        <h1 class="should-make hidden">You should make:</h1>
+        <h2 class="random-food hidden"></h2>
+        <button class="clear-btn hidden">CLEAR</button>
+      </section>
+    </main>
+  </body>
+  <script type="text/javascript" src="main.js"></script>
+  <script src="data.js"></script>
 </html>

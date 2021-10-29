@@ -11,7 +11,8 @@ var mainPage = document.querySelector('.what-are-you-looking-for-container')
 var showFavoritePage = document.querySelector('.favorite-recipes-view')
 var showFavoriteRecipes = document.querySelector('.saved-recipes-section')
 
-favoritedRecipes = [];
+var favoritedRecipes = [];
+var currentRecipe;
 
 function getRandomIndex(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
@@ -20,7 +21,7 @@ function getRandomIndex(array) {
 
 
 function displayRecipe() {
-    foodText.innerHTML = ``
+    foodText.innerHTML = ``;
   if (sideRadioButton.checked === true) {
     foodText.innerText = getRandomIndex(sides)
   } else if (mainDishRadioButton.checked === true) {
@@ -33,6 +34,7 @@ function displayRecipe() {
      <p class="dishes">${getRandomIndex(mainDishes)} with a side of ${getRandomIndex(sides)} and ${getRandomIndex(desserts)} for dessert!
     </p>`
   }
+  currentRecipe = foodText.innerText;
   potImage.classList.add('hidden')
   foodText.classList.remove('hidden')
   favoriteButton.classList.remove('hidden')
@@ -41,7 +43,10 @@ function displayRecipe() {
 
 function addFavoriteRecipe() {
   // event.preventDefault();
-  favoritedRecipes.push(foodText)
+  //save the innerText of foodtext into an object and then pass that in.
+  console.log(currentRecipe)
+  favoritedRecipes.push(currentRecipe)
+  console.log(currentRecipe)
 
 }
 

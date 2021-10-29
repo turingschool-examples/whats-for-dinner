@@ -41,6 +41,21 @@ red - #ee5253
 
 }
 
+/* ---- button styling ---- */
+
+.button {
+  border-radius: ;
+  font-family: 'Roboto', sans-serif;
+}
+
+.button-color-white {
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.button-color-teal {
+  background-color: #0fb9b1;
+}
+
 /* ------- Two box section ------- */
 
 .what-are-you-looking-for-container {
@@ -63,18 +78,18 @@ red - #ee5253
   height: 350px;
   width: 400px;
   background-color: rgba(225, 225, 225, .9);
-  /* border: 5px solid pink */
-}
-
-.second-box {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex-direction: column;
+  padding: 5%;
 }
 
 .first-box {
-  /* padding-left: 10% */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .pot-image {
@@ -85,10 +100,11 @@ red - #ee5253
 
 .recipe-form {
   font-family: 'Roboto', sans-serif;
+  padding-right: 10%;
 }
 
 .side-button {
-
+  padding-left: 10px;
 }
 
 .main-dish-button {
@@ -121,7 +137,7 @@ red - #ee5253
 }
 
 .favorite-button {
-  padding-left: 10%;
+  padding-left:
 }
 
 /*----- Favorite Recipe Section ---- */

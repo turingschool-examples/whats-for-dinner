@@ -11,7 +11,7 @@ var entireMealBtn = document.querySelector(".entire-meal")
 
 var randomFoodPlacement = document.querySelector(".random-food")
 var letsCookBtn = document.querySelector(".cook-btn");
-var
+
 
 
 function getRandomIndex(array) {
@@ -46,6 +46,9 @@ function generateNewMenuItem() {
   };
   showNewMenuItem();
 };
+
+
+clearBtn.addEventListener("click", returnEmptyBox);
 
 function returnEmptyBox() {
   cookpot.classList.remove("hidden");

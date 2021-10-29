@@ -68,9 +68,8 @@ body{
   position:relative;
 }
 
-.tagline{
+.tagline hidden{
   font-style: italic;
-  display: none;
   align-items: center;
 }
 
@@ -81,9 +80,9 @@ body{
 }
 
 .icon{
-  max-width: 40%;
-  padding: 20%;
-  height: auto; */
+  max-width: 20%;
+  padding: 10%;
+  height: auto;
 }
 
 .clearButton{

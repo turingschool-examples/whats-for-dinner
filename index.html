@@ -13,20 +13,24 @@
     <section class="what-are-you-looking-for-container">
       <div class="first-box"
         <form class="recipe-form"><span class="looking-for">What are you looking for?<span class="star">*</span></span>
-          <div>
-            <input type="radio" name="food" id="side" class="side-button" checked>
-            <label for="side">Side</label>
-          </div>
-          <div>
-            <input type="radio" name="food" id="mainDish" class="main-dish-button" checked>
-            <label for="mainDish">Main Dish</label>
-          </div>
-            <input type="radio" name="food" id="dessert" class="dessert-button" checked>
-            <label for="dessert">Dessert</label>
-          <div>
-            <input type="radio" name="food" id="entireMeal" class="entire-meal-button" checked>
-            <label for="entireMeal">Entire Meal</label>
-          </div>
+          <div class="radio-button-wrapper">
+              <label for="side">
+                <input type="radio" name="food" id="side" class="side-button" checked>
+                Side
+              </label>
+              <label for="mainDish">
+                <input type="radio" name="food" id="mainDish" class="main-dish-button" checked>
+              Main Dish
+              </label>
+              <label for="dessert">
+                <input type="radio" name="food" id="dessert" class="dessert-button" checked>
+              Dessert
+              </label>
+              <label for="entireMeal">
+                <input type="radio" name="food" id="entireMeal" class="entire-meal-button" checked>
+              Entire Meal
+              </label>
+        </div>
             <button class="lets-cook-button">Lets Cook!</button>
         </form>
       </div>
@@ -37,7 +41,7 @@
         <button class="clear-button hidden">CLEAR</button>
       </div>
     </section>
-    <section class="view favorite-recipes-view hidden">
+    <section class="favorite-recipes-view hidden">
       <section class="saved-recipes-section hidden">Something</section>
     </section>
   </body>

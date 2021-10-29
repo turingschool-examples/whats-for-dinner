@@ -38,17 +38,17 @@ function displayRecipe() {
   currentRecipe = foodText.innerText;
   potImage.classList.add('hidden')
   foodText.classList.remove('hidden')
-  favoriteButton.classList.remove('hidden')
   clearButton.classList.remove('hidden')
+
+
+  if (entireMealRadioButton.checked === false) {
+    favoriteButton.classList.remove('hidden')
+  };
 };
 
 
 function addFavoriteRecipe() {
-  // event.preventDefault();
-  //save the innerText of foodtext into an object and then pass that in.
-  console.log(currentRecipe)
   favoritedRecipes.push(currentRecipe)
-  console.log(currentRecipe)
 
 }
 

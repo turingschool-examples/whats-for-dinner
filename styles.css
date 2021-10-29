@@ -43,7 +43,7 @@ main > section {
   margin-bottom: 40vh;
 }
 
-form {
+div {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -57,24 +57,24 @@ sup {
   color: #ee5253;
 }
 
-form > h1, label, button {
+div > h1, label, button {
   margin-left: 11%;
 }
 
-form > label, button {
+div > label, button {
   margin-top: 5%;
 }
 
-form > h1 {
+div > h1 {
   font-size: 200%;
   margin-bottom: 0px;
 }
 
-form > label {
+div > label {
   font-size: 125%;
 }
 
-.what-are-you-looking-for > button {
+div > button {
   background-color: #0fb9b1;
   border: none;
   border-radius: 7px;
@@ -86,8 +86,21 @@ form > label {
 
 .show-recipe {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.show-recipe > p {
+  font-size: 150%;
+}
+
+.show-recipe > h1 {
+  text-align: center;
+  font-size: 300%;
+  margin: 0px;
 }
 
 .show-recipe > img {

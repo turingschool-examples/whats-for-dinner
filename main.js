@@ -1,14 +1,32 @@
-var side = document.querySelector("#side");
-var mainDish = document.querySelector("#main-dish");
-var dessert = document.querySelector("#dessert");
-var entireMeal = document.querySelector("#entire-meal");
+var radioButtons = document.querySelectorAll("input");
 
-var buttonLetsCook = document.querySelector("#lets-cook");
+var divRecipeOptions = document.querySelector(".recipe-options-container");
 
 var showRecipeSection = document.querySelector(".show-recipe");
 
-var cookPot = document.querySelector("img")
+var buttonLetsCook = document.querySelector("#lets-cook");
 
+var cookPot = document.querySelector("img");
+
+buttonLetsCook.addEventListener('click', displayRecipe);
+
+function displayRecipe() {
+  cookPot.classList.add('hidden');
+  showRecipeSection.innerHTML = " ";
+  if (radioButtons[0].checked) {
+    showRecipeSection.innerHTML += `
+      <p><i>You should make:</i></p>
+      <h1>${sides[getRandomIndex(sides)]}!</h1>`
+  } else if (radioButtons[1].checked) {
+    showRecipeSection.innerHTML += `
+      <p><i>You should make:</i></p>
+      <h1>${mainDishes[getRandomIndex(mainDishes)]}!</h1>`
+  } else if (radioButtons[2].checked) {
+    showRecipeSection.innerHTML += `
+      <p><i>You should make:</i></p>
+      <h1>${desserts[getRandomIndex(desserts)]}!</h1>`
+  }
+}
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }

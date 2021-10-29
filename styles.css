@@ -12,7 +12,7 @@ body {
 /* Nav bar and title at the top of home page*/
 .topNav {
   background-color: #0fb9b1;
-  height: 50;
+  height: 40;
   max-width: 100%;
   border: 0;
   padding: 5;
@@ -32,7 +32,8 @@ body {
   font-family: 'Roboto';
   font-weight: 300;
   font-size: 16px;
-  padding: 0px 23px;
+  padding: 0px 27px;
+  margin: 10px;
   font-weight: bold;
 }
 

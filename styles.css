@@ -1,33 +1,63 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
-  background-position: center;
-
+  margin: 0px;
+  background-repeat: no-repeat;
 }
 
 .main-page {
-  height: 100vh;
-  width: 100%;
-
-}
-
-section {
-  font-family: 'Roboto', sans-serif;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .question-line {
-  background: #0fb9b1;
+  display: flex;
+  background-color: #0fb9b1;
+}
 
-  justify-content: flex-start;
+.boxes {
+  display: flex;
+  height: auto;
+  width: 100%;
+
 
 }
 
-svg {
+#left-box {
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  height: 250px;
+  width: 400px;
+  flex-direction: column;
+
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+
+}
+
+#right-box {
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  height: 250px;
+  width: 400px;
+  flex-direction: column;
+
+}
+
+.cookpot {
   width: 100px;
-  color: #95a5a6;
-
+  align-items: center;
+  
 }
+
+
 
 
 /*

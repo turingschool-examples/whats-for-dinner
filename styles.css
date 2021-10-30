@@ -144,6 +144,9 @@ span {
   text-align: center;
 
 }
+.favorites {
+  margin-left: 8%;
+}
 .return-to-main {
   background-color: #95a5a6;
   color: white;

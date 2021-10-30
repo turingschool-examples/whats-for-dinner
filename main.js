@@ -66,7 +66,7 @@ var favoriteRecipies = [];
 var recipe;
 
 letsCookButton.addEventListener("click", showRecipe);
-clearResult.addEventListener("click", returnToMain);
+clearResult.addEventListener("click", clearResultsView);
 mainPageButton.addEventListener("click", returnToMain);
 favoriteButton.addEventListener("click", addRecipe);
 viewFavoritesButton.addEventListener("click", showFavoriteRecipes);
@@ -95,12 +95,22 @@ function showRecipe() {
   chooseRecipe();
 };
 
-function returnToMain() {
+function clearResultsView() {
   location.reload();
 };
 
+function returnToMain() {
+  favoritesView.classList.add('hidden');
+  formView.classList.remove('hidden');
+  cookPotView.classList.remove('hidden');
+};
+
 function addRecipe() {
+  if (favoriteRecipies.includes(recipeResult.innerText)) {
+    return favoriteRecipies
+  } else {
   favoriteRecipies.push(recipeResult.innerText);
+  };
   console.log(favoriteRecipies);
 };
 
@@ -109,5 +119,6 @@ function showFavoriteRecipes() {
   resultsView.classList.add('hidden');
   favoritesView.classList.remove('hidden');
   cookPotView.classList.add('hidden');
+  favoriteRecipeList.innerText = '';
   favoriteRecipeList.innerText += favoriteRecipies;
 }

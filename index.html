@@ -4,40 +4,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="topnav">
+    <header class="topnav">
         <p>What's for Dinner?</p>
         <button id="rightButt">ADD A RECIPE</button>
-      </div>
     </header>
     <main>
-      <div class="box-left">
+      <section class="box-left">
         <h2>What are you looking for?</h2>
-          <div class="options">
+          <form class="options">
             <div>
-              <input type="radio" id="side" name="button" value="Side">
+              <input type="radio" id="side" name="button">
               <label for="side">Side</label>
             </div>
             <div>
-              <input type="radio" id="main-dish" name="button" value="Main Dish">
+              <input type="radio" id="main-dish" name="button">
               <label for="main-dish">Main Dish</label>
             </div>
             <div>
-              <input type="radio" id="dessert" name="button" value="Dessert">
+              <input type="radio" id="dessert" name="button">
               <label for="dessert">Dessert</label>
             </div>
             <div>
-              <input type="radio" id="entire-meal" name="button" value="Entire Meal">
+              <input type="radio" id="entire-meal" name="button">
               <label for="entire-meal">Entire Meal</label>
             </div>
-          </div>
-          <button type="button" id="lets-cook">LET'S COOK!</button>
-      </div>
-      <div class="box-right">
-        <div class="logo">
-        <img src="assets/cookpot.svg">
-        </div>
-      </div>
+          </form>
+          <button class="letsCookButton" id="lets-cook">LET'S COOK!</button>
+        </section>
+
+      <article class="box-right">
+        <img class="stockPotImg" id="iGoAway" src="assets/cookpot.svg">
+          <h3 class="suggestion">You should make:</h3>
+            <h1 class="foodItem">Food Item</h1>
+          <button class="clear-button">CLEAR</button>
+      </article>
+      
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>

@@ -3,7 +3,7 @@ var clearButton = document.querySelector('.clearButton');
 var answer = document.querySelector('.answer');
 var icon = document.querySelector('.icon');
 var tagline = document.querySelector('.tagline');
-var clearButton = document.querySelector('.clearButton');
+var clearButton = document.querySelector(".clearButton");
 var sides = [
 'Miso Glazed Carrots',
 'Coleslaw',
@@ -70,8 +70,8 @@ function returnResults() {
       answer.innerHTML = `${randomizer(desserts)}!`
     };
     icon.classList.add('hidden');
-    clearButton.classList.remove('hidden');
     tagline.classList.remove('hidden');
+    clearButton.style.display = "block";
 };
 
 function clearPage(){

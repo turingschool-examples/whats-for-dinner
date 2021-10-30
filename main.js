@@ -50,24 +50,32 @@ letsCookButton.addEventListener('click', chooseRecipe);
 clearButton.addEventListener('click', clearRecipeForm);
 
 function chooseRecipe() {
-  var recipeName = ""
- if (sideRadioInput.checked) {
-   recipeName = side[getRandomIndex(side)]
- } else if (mainRadioInput.checked) {
-    recipeName = main[getRandomIndex(main)]
- } else if (dessertRadioInput.checked) {
-      recipeName = dessert[getRandomIndex(dessert)]
- } else if (entireMealRadioInput.checked) {
-      recipeName =
-       `${side[getRandomIndex(side)]} with a side of ${main[getRandomIndex(main)]}
-        and ${dessert[getRandomIndex(dessert)]}`
- } else {
-       recipeName = throwError();
-     }
-mealPicked.innerHTML = `<p class="recipe">You Should Make:<br><span class="chosen-meal">${recipeName}</span></p>`;
+insertMealName();
 stopButton();
 showClearButton();
 removePot();
+}
+
+function insertMealName() {
+  var recipeName = ""
+ if (sideRadioInput.checked) {
+   recipeName = getRandomMeal(side);
+ } else if (mainRadioInput.checked) {
+    recipeName = getRandomMeal(main);
+ } else if (dessertRadioInput.checked) {
+      recipeName = getRandomMeal(dessert);
+ } else if (entireMealRadioInput.checked) {
+      recipeName =
+       `<p class="chosen-meal">${getRandomMeal(side)} with a side of
+       ${getRandomMeal(main)} and ${getRandomMeal(dessert)}</p>`
+ } else {
+       recipeName = throwError();
+     }
+mealPicked.innerHTML = `<p class="recipe-intro">You Should Make:</p>
+<p class="chosen-meal">${recipeName}</p>`;
+}
+function getRandomMeal(mealType) {
+  return mealType[getRandomIndex(mealType)];
 }
 
 function stopButton() {

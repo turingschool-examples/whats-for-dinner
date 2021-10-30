@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 body {
   background-image: url("assets/burger-friends.jpg");
   background-size: 100%;
@@ -75,8 +79,8 @@ ul {
 }
 
 .options {
-  border-bottom-width: thick;
   padding: 4px;
+  margins: 2px 2px;
 }
 
 h1.altColor {
@@ -92,7 +96,10 @@ h1.altColor {
   width: 125px;
   height: 25px;
   border-radius: 5px 5px;
+  margin: 26px 2px;
 }
+
+
 
  font-family: 'Roboto', sans-serif;
 

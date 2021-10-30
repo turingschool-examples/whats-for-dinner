@@ -4,37 +4,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav role="add-recipe">
-      <section class="topNav">
-        <h1 class="title">What's for Dinner?
-        <button class="add-recipe-button">ADD A RECIPE</button>
-        </h1>
-      </section>
-    </nav>
+    <section class="topNav">
+      <h1 class="title">What's for Dinner?</h1>
+      <button class="add-recipe-button">ADD A RECIPE</button>
+    </section>
     <section class="home-page">
       <section class="what-are-you-looking-for">
-        <h1 class="options-for-dinner"> What are you looking for?<span class=”altColor”>*</span>
-        </h1>
-        <div>
-          <input type="radio" class="options"
-          unchecked>
-          <label for="side">Side</label>
-        </div>
-        <div>
-          <input type="radio" class="options"
-          unchecked>
-          <label for="main-dish">Main Dish</label>
-        </div>
-        <div>
-          <input type="radio" class="options"
-          unchecked>
-          <label for="dessert">Dessert</label>
-        </div>
-        <div>
-          <input type="radio" class="options"
-          unchecked>
-          <label for="entire-meal">Entire Meal</label>
-        </div>
+        <h1 class="options-for-dinner"> What are you looking for?<span class=”altColor”>*</span></h1>
+        <form>
+          <div><input type="radio" name="options" value="value1"> Side</div>
+          </div><input type="radio" name="options" value="value2"> Main Dish</div>
+          <div><input type="radio" name="options" value="value3"> Dessert</div>
+        </form>
         <button class="lets-cook-button">LET'S COOK!</button>
       </section>
       <section class="cooking">
@@ -43,4 +24,5 @@
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
 </html>

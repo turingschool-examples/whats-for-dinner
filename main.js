@@ -52,8 +52,6 @@ function removeFoodOutput() {
 }
 
 function displayFoodChoice(event) {
-  var randomFood = getRandomFood();
-
   event.preventDefault();
   hideCookpot();
 
@@ -75,6 +73,14 @@ function displayEntireMeal() {
      with a side of ${sides[getRandomIndex(sides)]} and
      ${desserts[getRandomIndex(desserts)]} for dessert!
     </p>
+   </section>`
+}
+
+function displayRandomFood() {
+  var randomFood = getRandomFood();
+  dishOutput.innerHTML =
+    `<section class="dish-output">You should make:</section>
+     <p class="display-food">${randomFood}!</p>
    </section>`
 }
 

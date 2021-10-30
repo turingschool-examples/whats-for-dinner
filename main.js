@@ -9,6 +9,10 @@ var entireMealBtn = document.querySelector(".entire-meal")
 var randomFoodPlacement = document.querySelector(".random-food")
 var letsCookBtn = document.querySelector(".cook-btn");
 var form = document.querySelector(".all-radio-btns")
+var radioBtns = document.getElementsByName("looking-for");
+
+
+form.addEventListener("click", enableLetsCookBtn)
 
 
 letsCookBtn.addEventListener("click", function(event) {
@@ -16,9 +20,18 @@ letsCookBtn.addEventListener("click", function(event) {
   generateNewMenuItem();
 });
 
-clearBtn.addEventListener("click", returnEmptyBox);
 
-form.addEventListener("click", enableLetsCookBtn)
+clearBtn.addEventListener("click", function() {
+  clearRadioBtns(form);
+  returnEmptyBox();
+});
+
+
+function clearRadioBtns() {
+  for (var i = 0; i < radioBtns.length; i++) {
+    radioBtns[i].checked = false;
+  }
+};
 
 
 function getRandomIndex(array) {
@@ -33,13 +46,13 @@ function showNewMenuItem() {
   clearBtn.classList.remove("hidden")
 };
 
+
 function returnEmptyBox() {
   cookpot.classList.remove("hidden");
   youShouldMake.classList.add("hidden");
   randomizedFoodItem.classList.add("hidden");
   clearBtn.classList.add("hidden")
 };
-
 
 
 function generateNewMenuItem() {
@@ -54,6 +67,7 @@ function generateNewMenuItem() {
   };
   showNewMenuItem();
 };
+
 
 function enableLetsCookBtn() {
   if (sideRadioBtn.checked || mainDishRadioBtn.checked || dessertRadioBtn.checked || entireMealBtn.checked) {

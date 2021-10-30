@@ -51,15 +51,6 @@ var letsCookButton = document.querySelector('button');
 var potPic = document.querySelector('img');
 var emptyBoxSpace = document.querySelector('#empty-box');
 
-
-
-
-
-// var meal = {
-//   side: sideRadioInput.value,
-//   main: mainRadioInput.value,
-//   desserts: dessertRadioInput.value,
-//   console.log(side);
 // }
 //EventListeners
 // sideRadioInput.addEventListener();
@@ -70,8 +61,8 @@ var emptyBoxSpace = document.querySelector('#empty-box');
 // function chooseSide(array) {
 //
 // }
-console.log(letsCookButton);
 letsCookButton.addEventListener('click', chooseRecipe);
+letsCookButton.addEventListener('click', stopButton)
 
 function chooseRecipe() {
   var recipeName = ""
@@ -79,19 +70,27 @@ function chooseRecipe() {
    recipeName = side[getRandomIndex(side)]
  } else if (mainRadioInput.checked) {
     recipeName = main[getRandomIndex(main)]
-  } else if (dessertRadioInput.checked) {
+ } else if (dessertRadioInput.checked) {
       recipeName = dessert[getRandomIndex(dessert)]
-    } else if (entireMealRadioInput.checked) {
+ } else if (entireMealRadioInput.checked) {
       recipeName =
        `${side[getRandomIndex(side)]} with a side of ${main[getRandomIndex(main)]}
         and ${dessert[getRandomIndex(dessert)]}`
-     } else {
+ } else {
        recipeName = throwError();
      }
 emptyBoxSpace.innerHTML = `<p class="recipe">You Should Make:<br><span class="chosen-meal">${recipeName}</span></p>`;
 }
 
+function stopButton() {
+  if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked) {
+   letsCookButton.disabled = true;
+ }
+   letsCookButton.disabled = false;
+}
+
 function throwError() {
+
   if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked)
      recipeName = `You need to select an option!`;
      return recipeName;

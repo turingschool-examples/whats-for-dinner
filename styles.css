@@ -44,28 +44,27 @@ main {
 
 #form-view {
   height: 350px;
-  width: 415px;
-  padding-left: 20px;
+  width: 395px;
+  padding-left: 30px;
   line-height: 35px;
 }
 
 .cookpot-view {
-  padding-left: 175px;
-  padding-top: 95px;
-  padding-bottom: 100px;
+  height: 350px;
+  width: 415px;
 }
 
 .results-section {
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  height: 350px;
+  width: 415px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
 }
 
 .radio-button-title {
+  margin-top: 50px;
   font-size: 25px;
 }
 
@@ -80,10 +79,12 @@ span {
   padding: 5px;
   border: 0;
   border-radius: 4px;
+  margin-top: 10px;
 }
 
 .should-make {
   font-style: italic;
+  margin-top: 100px;
 }
 
 .clear-button {
@@ -91,7 +92,10 @@ span {
   color: white;
   border: 0;
   border-radius: 4px;
-  padding: 8px;
+  padding: 8px 12px 8px 12px;
+  margin-top: 70px;
+  margin-right: 25px;
+  align-self: flex-end;
 }
 
 .hidden {
@@ -99,10 +103,14 @@ span {
 }
 
 .cookpot {
+  margin-top: 100px;
+  margin-left: 112px;
   height: 40%;
   width: 40%;
 }
 
 .results {
-  font-size: 50px;
+  font-size: 20px;
+  margin: 0px 40px 0px 55px;
+
 }

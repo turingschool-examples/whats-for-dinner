@@ -11,6 +11,22 @@ body {
   margin: 0px;
   font-family: 'Roboto', sans-serif;
 }
+
+section {
+  display:flex;
+  justify-content: space-evenly;
+
+}
+
+article {
+  background-color: rgba(225, 225, 225, .9);;
+  height: 300px;
+  width: 300px;
+
+
+
+}
+
 .navBar {
   background-color: #0fb9b1;
   padding: 4px;
@@ -27,4 +43,9 @@ body {
   display:flex;
   justify-content:space-around;
   align-items:left;
+}
+
+#cook-button {
+  background-color: #0fb9b1;
+  border-color: #0fb9b1;
 }

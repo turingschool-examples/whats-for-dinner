@@ -12,7 +12,7 @@
     <section id="input-output-section">
       <div id="user-input-section" class="display-boxes">
         <h3 id="user-input-menu-header">What are you looking for?</h3>
-        <div id="selection-form">
+        <form id="selection-form">
           <div class="selection-options">
             <p class="options"><input type="radio" name="radio-button" value="Side" id="first-item"/>Side</p>
             <p class="options"><input type="radio" name="radio-button" value="Main Dish" id="second-item"/>Main Dish</p>
@@ -20,11 +20,12 @@
             <p class="options"><input type="radio" name="radio-button" value="Entire Meal" id="fourth-item"/>Entire Meal</p>
           </div>
           <button id="submit-button">LET'S COOK!</button>
-        </div>
+        </form>
       </div>
       <div id="user-output-section" class="display-boxes">
         <p class="user-output">
           <img id="cookpot" class="cookpot" src="assets/cookpot.svg">
+          <div id="lds-ripple" class="lds-ripple hidden"><div></div><div></div></div>
           <p id="you-should-make" class="hidden">You should make:</p>
           <p id="selection-output" class="hidden">Black Forest Cake!</p>
           <button id="clear-selection-button" class="hidden">CLEAR</button>

@@ -1,10 +1,44 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
   <body>
-    
+
+      <section class="question-line">
+        <h3 class="main-question">What's for Dinner?</h3>
+      </section>
+    <section class="main-page">
+
+      <section id="left-box" class="boxes">
+          <h2>What are you looking for?</h2>
+          <input class="side-radio-button" type="radio" id="side" />
+          <label for="side">Side</label>
+
+          <input class="main-dish-radio-button" type="radio" id="main-dish" />
+          <label for="main-dish">Main Dish</label>
+
+          <input class="dessert-radio-button" type="radio" id="dessert" />
+          <label for="dessert">Dessert</label>
+
+          <input class="entire-meal-radio-button" type="radio" id="entire-meal" />
+          <label for="entire-meal">Entire Meal</label>
+
+          <button class="lets-cook-button">LET'S COOK!</button>
+      </section>
+
+      <section id="right-box" class="boxes">
+
+        <img class="cookpot" src="./assets/cookpot.svg">
+        
+
+        <button class="clear">CLEAR</button>
+      </section>
+
+    </section>
+    <script src="./src/data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
 </html>

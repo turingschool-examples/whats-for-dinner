@@ -63,8 +63,8 @@ body {
   height: 50px;
   color: black;
   bottom: -1.1em;
-  padding: 70px 50px;
-  margin: 285px 0px;
+  padding: 2px 50px;
+  margin: 242px 0px;
   font-size: 14px;
   font-family: 'Roboto';
   font-style: italic;
@@ -77,7 +77,7 @@ body {
   height: 100px;
   color: black;
   padding: 75px 45px;
-  margin: 1px -46px; 
+  margin: 1px -46px;
   font-size: 28px;
   font-family: 'Roboto';
 }
@@ -98,7 +98,7 @@ body {
   width: 70px;
   height: 25px;
   border-radius: 5px 5px;
-  margin: 121px 2px;
+  margin: 147px 2px;
   float: right;
 }
 
@@ -112,11 +112,6 @@ body {
   height: 200px;
   float: left;
   background-color: rgba(225, 225, 225, .9);
-}
-
-.options {
-  padding: 4px;
-  margins: 2px 2px;
 }
 
 h1.altColor {
@@ -140,6 +135,7 @@ h1.altColor {
   margin: 1px 1px;
   font-size: 14px;
 }
+
 input[type=radio] {
     border: 0px;
     width: 3%;

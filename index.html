@@ -10,10 +10,18 @@
     <section class="home-page">
       <section class="what-are-you-looking-for">
         <h1 class="options-for-dinner"> What are you looking for?<span class=”altColor”>*</span></h1>
-          <div class="options"><input type="radio" name="options" value="value1"> Side</div>
-          <div class="options"><input type="radio" name="options" value="value2"> Main Dish</div>
-          <div class="options"><input type="radio" name="options" value="value3"> Dessert</div>
-        <button class="lets-cook-button">LET'S COOK!</button>
+          <form class="dinner-form">
+            <input class="options" type="radio" name="options" value="side">
+            <label class="options" for="side">Side</label>
+            <br />
+            <input class="options" type="radio" name="options" value="mainDish">
+            <label class="options" for="side"> Main Dish</label>
+            <br />
+            <input class="options" type="radio" name="options" value="dessert">
+            <label class="options" for="side">Dessert</label>
+            <br />
+            <button class="lets-cook-button">LET'S COOK!</button>
+          </form>
       </section>
       <section class="view cooking">
         <img class="cook-pot-img" src="assets/cookpot.svg"/>

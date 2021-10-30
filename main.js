@@ -40,23 +40,37 @@ var dessert = [
 
 /* <button class="add-recipe-button">ADD A RECIPE</button> */
 var letsCookButton = document.querySelector('.lets-cook-button')
-var radioButtons = document.querySelectorAll('input[name="options"]')
 var cookPotImage = document.querySelector('.cook-pot-img')
 var viewDishGenerated = document.querySelector('.dish-generated')
 var itemGenerated = document.querySelector('.item-generated')
+var dinnerForm = document.querySelector('.dinner-form')
 
-letsCookButton.addEventListener('click', renderRandomDish)
+dinnerForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  renderRandomDish()
+})
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * (array.length))
 }
 
 function renderRandomDish() {
+  var dishSelect = document.querySelector('input[name="options"]:checked').value
   randomSide = side[getRandomIndex(side)]
   randomMainDish = mainDish[getRandomIndex(mainDish)]
   randomDessert = dessert[getRandomIndex(dessert)]
   cookPotImage.classList.add('hidden')
   viewDishGenerated.classList.remove('hidden')
-  itemGenerated.innerText = randomSide.toUpperCase(randomSide)+"!"
-  console.log(randomSide)
+  console.log(dishSelect)
+  if (dishSelect === 'side') {
+    itemGenerated.innerText = randomSide.toUpperCase(randomSide)+"!"
+  }
+  else if (dishSelect === 'mainDish') {
+    itemGenerated.innerText = randomMainDish.toUpperCase(randomMainDish)+"!"
+  }
+  else if (dishSelect === 'dessert') {
+    itemGenerated.innerText = randomDessert.toUpperCase(randomDessert)+"!"
+  } else {
+    console.log("hi")
+  }
 }

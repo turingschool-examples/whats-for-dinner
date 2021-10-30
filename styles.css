@@ -1,13 +1,3 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
-
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -24,8 +14,8 @@ red - #ee5253
   min-width: 100%;
 }
 
-
 /*~~~~~NAVIGATION BAR~~~~~*/
+
 .navigation-bar {
   display: flex;
   justify-content: space-between;
@@ -51,7 +41,6 @@ red - #ee5253
   border-style: solid;
 }
 
-
 /*~~~~~CONTAINERS~~~~~*/
 
 .containers {
@@ -62,6 +51,8 @@ red - #ee5253
   height: 40%;
 }
 
+/*~~~~~CONTAINER 1~~~~~*/
+
 .container-one {
   width: 510px;
   height: 370px;
@@ -71,24 +62,6 @@ red - #ee5253
   font-size: 120%;
   color: black;
   background-color: rgba(225, 225, 225, .9);
-}
-
-.container-two {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 550px;
-  height: 420px;
-  margin: 100px;
-  background-color: rgba(225, 225, 225, .9);
-  color: black;
-  opacity: 90%;
-}
-
-.cookpot {
-  height: 30%;
-  width: 30%;
 }
 
 form {
@@ -128,6 +101,26 @@ label {
 
 .side-label {
   margin-top: 30px;
+}
+
+/*~~~~~CONTAINER 2~~~~~*/
+
+.container-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 550px;
+  height: 410px;
+  margin: 100px;
+  background-color: rgba(225, 225, 225, .9);
+  color: black;
+  opacity: 90%;
+}
+
+.cookpot {
+  height: 30%;
+  width: 30%;
 }
 
 .dish-output {

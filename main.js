@@ -18,7 +18,7 @@ letsCookButton.addEventListener('click', displayFoodChoice);
 clearButton.addEventListener('click', removeFoodOutput);
 
 function getRandomIndex(array) {
-  return  Math.floor(Math.random() * array.length);
+  return Math.floor(Math.random() * array.length);
 }
 
 function getRandomFood() {
@@ -52,28 +52,40 @@ function removeFoodOutput() {
 }
 
 function displayFoodChoice(event) {
-  var randomFood = getRandomFood();
-
   event.preventDefault();
   hideCookpot();
+  displayRandomFood();
+  displayEntireMeal();
+  errorMessage();
+}
 
+function displayEntireMeal() {
   if (entireMealButton.checked) {
-    displayEntireMeal();
-    return;
+    dishOutput.innerHTML =
+      `<section class="dish-output">You should make:</section>
+         <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}
+           with a side of ${sides[getRandomIndex(sides)]} and
+           ${desserts[getRandomIndex(desserts)]} for dessert!
+         </p>
+       </section>`
   }
+}
 
-  dishOutput.innerHTML = 
-  `<section class="dish-output">You should make:</section>
+function displayRandomFood() {
+  var randomFood = getRandomFood();
+  dishOutput.innerHTML =
+    `<section class="dish-output">You should make:</section>
      <p class="display-food">${randomFood}!</p>
    </section>`
 }
 
-function displayEntireMeal() {
-  dishOutput.innerHTML =
-  `<section class="dish-output">You should make:</section>
-     <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}
-     with a side of ${sides[getRandomIndex(sides)]} and
-     ${desserts[getRandomIndex(desserts)]} for dessert!
-    </p>
-   </section>`
+function errorMessage() {
+  var radioButtons = document.getElementsByTagName('input');
+
+  for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      return true;
+    }
+  }
+  dishOutput.innerText = 'Please make a selection!';
 }

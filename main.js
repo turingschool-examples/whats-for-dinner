@@ -90,8 +90,7 @@ function stopButton() {
 }
 
 function throwError() {
-
-  if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked)
+ if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked)
      recipeName = `You need to select an option!`;
      return recipeName;
 }

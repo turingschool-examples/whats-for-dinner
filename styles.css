@@ -17,6 +17,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 nav {
     background-color: #0fb9b1;
     font-family: 'Roboto', sans-serif;
@@ -25,4 +26,10 @@ nav {
 .navigation-title {
     padding: 13px 10px 10px 10px;
     margin-left: 10px;
+}
+
+.choice-box-button {
+    background-color: #0fb9b1;
+    border-color: #0fb9b1;
+    border-radius: 5px;
 }

@@ -37,8 +37,6 @@ textarea {
 }
 /* end of reset */
 
-
-
 /* font-family: 'Roboto', sans-serif; */
 
 /* COLORS
@@ -46,6 +44,8 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253 */
+
+
 html {
   font-size: 100%;
   background: url(/assets/burger-friends.jpg) no-repeat center center fixed;
@@ -60,7 +60,10 @@ body {
 }
 nav {
   background-color: teal;
-  padding-bottom: 1vh;
+  padding-bottom: 6vh;
+}
+.hidden {
+  display: none;
 }
 .top-left{
   float: left;
@@ -68,14 +71,15 @@ nav {
 }
 .top-right{
   float: right;
-  padding-right: 2%;
+  padding-right: 0%;
 }
 .top-title {
-  font-size: 1.5em;
+  font-size: 4vh;
   font-weight: bold;
-  padding: 1%;
+  padding-right: 0%;
+  padding-top: 2%;
 }
-
+/* Buttons */
 .add-recipe {
     background: rgba(225, 225, 225, .9);
     border-color: #846a29;
@@ -83,20 +87,28 @@ nav {
     width: 10vh;
     height: 3vh;
 }
+
+/* Main panel boxes */
 .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  white-space: nowrap;
   width: 100%;
   height: 100%;
   position: absolute;
   margin: 0%;
 }
 
-.box {
+.form {
+  display:inline-block
+  vertical-align:middle;
   width: 40%;
-  height: 17%;
+  height: 50%;
   position: relative;
-  top: 31vh;
-  left: 12vh;
-  opacity: 0.5;
+  top: 12%;
+  left: -6%;
+  opacity: 0.8;
   background: #ffffff;
 }
 
@@ -105,20 +117,16 @@ nav {
   margin: 0px;
   background: #ffffff;
 }
-.container2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin: 0%;
-}
 
-.box2 {
+.cook {
+  display:inline-block
+  vertical-align:middle;
   width: 40%;
-  height: 17%;
+  height: 50%;
   position: relative;
-  top: 31vh;
-  left: 60vh;
-  opacity: 0.5;
+  top: 12%;
+  left: 3%;
+  opacity: 0.8;
   background: #ffffff;
 }
 

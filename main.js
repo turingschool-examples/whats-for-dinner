@@ -63,7 +63,6 @@ var favoriteRecipeList = document.querySelector('.favorites');
 var mainPageButton = document.querySelector('.return-to-main');
 
 var favoriteRecipies = [];
-var recipe;
 
 letsCookButton.addEventListener("click", showRecipe);
 clearResult.addEventListener("click", clearResultsView);
@@ -77,7 +76,6 @@ function getRandomIndex(array) {
 };
 
 function chooseRecipe() {
-  var recipe = recipeResult.innerText;
   if (sideButton.checked) {
     recipeResult.innerText = getRandomIndex(sides)
   } else if (mainDishButton.checked) {
@@ -111,7 +109,6 @@ function addRecipe() {
   } else {
   favoriteRecipies.push(recipeResult.innerText);
   };
-  console.log(favoriteRecipies);
 };
 
 function showFavoriteRecipes() {
@@ -119,6 +116,9 @@ function showFavoriteRecipes() {
   resultsView.classList.add('hidden');
   favoritesView.classList.remove('hidden');
   cookPotView.classList.add('hidden');
-  favoriteRecipeList.innerText = '';
-  favoriteRecipeList.innerText += favoriteRecipies;
+  favoriteRecipeList.innerHTML = ``;
+  for (var i = 0; i < favoriteRecipies.length; i++) {
+    favoriteRecipeList.innerHTML += `
+      <div id="${favoriteRecipies.length}">${favoriteRecipies[i]}</div>`
+  };
 }

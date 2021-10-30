@@ -25,6 +25,8 @@ red - #ee5253
 
 .title {
   margin: 20px;
+  font-size: 21px;
+  font-weight: bold;
   /* font-family: 'Roboto', sans-serif;
   font-size: 18px;
   margin-left: 18px;
@@ -33,6 +35,7 @@ red - #ee5253
 
 .add-a-recipe-button {
   margin: 20px;
+  margin-left: 650px;
   padding: 10px;
   border-radius: 5px;
   border: 0px;
@@ -68,6 +71,8 @@ red - #ee5253
   border: 0px;
   padding: 8px 40px;
   background-color: #0fb9b1;
+  font-size: 18px;
+  margin-top: 1vw;
 }
 
 /* ------- Two box section ------- */
@@ -78,7 +83,9 @@ red - #ee5253
 }
 
 .looking-for {
-
+  padding-bottom: 3.5vw;
+  font-size: 27px;
+  font-weight: bold;
 }
 
 .star {
@@ -97,14 +104,13 @@ red - #ee5253
   justify-content: center;
   flex-direction: column;
   padding: 5%;
-  border: 10px solid pink;
   position: relative;
 }
 
 .first-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
 }
 
@@ -120,27 +126,41 @@ red - #ee5253
   padding-right: 10%;
 }
 
+.style {
+  padding-bottom: 1vw;
+  font-size: 19px;
+
+}
 .side-button {
-  padding-left: 10px;
+  padding-bottom: 1vw;
+  font-size: 19px;
 }
 
 .main-dish-button {
+  padding-bottom: 1vw;
+  font-size: 19px;
 
 }
 
 .dessert-button {
+  padding-bottom: 1vw;
+  font-size: 19px;
 
 }
 
 .entire-meal-button {
+  padding-bottom: 1vw;
+  font-size: 19px;
 
 }
 
 .food-text {
-
+  font-size: 44px;
+  font-weight: bold;
 }
 
-.you-should-make {
+.you-should-make-text {
+  font-size: 23px;
   font-style: italic;
 }
 
@@ -162,9 +182,10 @@ red - #ee5253
   border: 0px;
   padding: 8px 40px;
   margin-top: 10px;
-  position: absolute;
   right: 0;
   bottom: 0;
+  position: absolute;
+  background-color: #95a5a6;
 }
 
 
@@ -174,6 +195,7 @@ red - #ee5253
   display: flex;
   justify-content: center;
   border: 2px solid red;
+  position: relative;
 
 }
 
@@ -188,11 +210,11 @@ red - #ee5253
   justify-content: center;
   flex-direction: column;
   padding: 5%;
-  border: 2px solid pink;
+  /* border: 10px solid pink; */
+  /* position: relative; */
 }
 
 .recipe-list {
-  padding
   border: 2px solid blue;
 
 }
@@ -200,6 +222,19 @@ red - #ee5253
 .radio-button-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.home-button {
+  margin: 0px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 8px 40px;
+  margin-top: 10px;
+  /* position: absolute; */
+  right: 0;
+  bottom: 0;
+  margin-right: 28vw;
+  margin-bottom: 1.5vw;
 }
 
 .hidden {

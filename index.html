@@ -8,41 +8,43 @@
     <nav class="navbar">
       <p class="title">Whats For Dinner?</p>
       <button class="add-a-recipe-button">ADD A RECIPE</button>
-      <button class="view-favorites-button">View Favorites</button>
+      <button class="view-favorites-button">VIEW FAVORITES</button>
     </nav>
     <section class="what-are-you-looking-for-container">
       <div class="first-box"
         <form class="recipe-form"><span class="looking-for">What are you looking for?<span class="star">*</span></span>
           <div class="radio-button-wrapper">
-              <label for="side">
-                <input type="radio" name="food" id="side" class="side-button" checked>
+              <label class="style" for="side">
+                <input class="side-button" type="radio" name="food" id="side" checked>
                 Side
               </label>
-              <label for="mainDish">
-                <input type="radio" name="food" id="mainDish" class="main-dish-button" checked>
+              <label class="style" for="mainDish">
+                <input class="main-dish-button" type="radio" name="food" id="mainDish" checked>
               Main Dish
               </label>
-              <label for="dessert">
-                <input type="radio" name="food" id="dessert" class="dessert-button" checked>
+              <label class="style" for="dessert">
+                <input class="dessert-button" type="radio" name="food" id="dessert" checked>
               Dessert
               </label>
-              <label for="entireMeal">
-                <input type="radio" name="food" id="entireMeal" class="entire-meal-button" checked>
+              <label class="style" for="entireMeal">
+                <input class="entire-meal-button" type="radio" name="food" id="entireMeal" checked>
               Entire Meal
               </label>
         </div>
-            <button class="lets-cook-button">Lets Cook!</button>
+            <button class="lets-cook-button">LETS COOK!</button>
         </form>
       </div>
       <div class="second-box">
         <img class="pot-image" src="assets/cookpot.svg" alt="Cook Pot">
+        <p class="you-should-make-text hidden">You should make:</p><br/>
         <section class="food-text hidden"></section><br>
-        <button class="favorite-button hidden">Favorite 💛</button>
+        <button class="favorite-button hidden">FAVORITE 💛</button>
         <button class="clear-button hidden">CLEAR</button>
       </div>
     </section>
     <section class="favorite-recipes-view hidden">
       <section class="saved-recipes-section hidden">Something</section>
+      <button class="home-button hidden">Home</button>
     </section>
   </body>
   <script type="text/javascript" src="arrays.js"></script>

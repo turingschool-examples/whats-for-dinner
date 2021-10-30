@@ -95,7 +95,8 @@ function showRecipe() {
 };
 
 function clearResultsView() {
-  location.reload();
+  cookPotView.classList.remove('hidden');
+  resultsView.classList.add('hidden');
 };
 
 function returnToMain() {

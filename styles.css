@@ -129,3 +129,27 @@ span {
   font-size: 20px;
   margin: 0px 40px 40px 55px;
 }
+
+/* favorites view */
+.favorites-view {
+  background-color: rgba(225, 225, 225, .9);
+  margin-left: 20%;
+  margin-top: 20px;
+  height: 400px;
+  width: 400px;
+
+}
+.favorite-recipes {
+  font-size: 25px;
+  text-align: center;
+
+}
+.return-to-main {
+  background-color: #95a5a6;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 12px 0px 12px;
+  margin-left: 38%;
+  text-align: justify;
+}

@@ -60,12 +60,14 @@ var clearResult = document.querySelector('.clear-button');
 var favoriteButton = document.querySelector('.favorite-button');
 var viewFavoritesButton = document.querySelector('.view-favorite-button');
 var favoriteRecipeList = document.querySelector('.favorites');
+var mainPageButton = document.querySelector('.return-to-main');
 
 var favoriteRecipies = [];
 var recipe;
 
 letsCookButton.addEventListener("click", showRecipe);
-clearResult.addEventListener("click", clearRecipe);
+clearResult.addEventListener("click", returnToMain);
+mainPageButton.addEventListener("click", returnToMain);
 favoriteButton.addEventListener("click", addRecipe);
 viewFavoritesButton.addEventListener("click", showFavoriteRecipes);
 
@@ -93,7 +95,7 @@ function showRecipe() {
   chooseRecipe();
 };
 
-function clearRecipe() {
+function returnToMain() {
   location.reload();
 };
 
@@ -106,5 +108,6 @@ function showFavoriteRecipes() {
   formView.classList.add('hidden');
   resultsView.classList.add('hidden');
   favoritesView.classList.remove('hidden');
+  cookPotView.classList.add('hidden');
   favoriteRecipeList.innerText += favoriteRecipies;
 }

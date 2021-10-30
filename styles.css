@@ -12,31 +12,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-section {
-  display:flex;
-  justify-content: space-evenly;
-
-}
-
-article {
-  background-color: rgba(225, 225, 225, .9);;
-  height: 300px;
-  width: 300px;
-
-
-
-}
-
-.frame2 {
-  background-image: url(assets/cookpot.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 30%;
-}
-
 .navBar {
   background-color: #0fb9b1;
-  padding: 4px;
+  padding: 0%;
 }
 
 .buttonContainer {
@@ -45,6 +23,19 @@ article {
   align-items:right;
 }
 
+section {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+article {
+  background-color: rgba(225, 225, 225, .9);;
+  height:300px;
+  width: 350px;
+  margin-top: 11%;
+}
+
+
 .what-are-you-looking-for {
   background-color: rgba(225, 225, 225, .9);
   display:flex;
@@ -52,7 +43,32 @@ article {
   align-items:left;
 }
 
+.frame1-title {
+  display:flex;
+  justify-content: space evenly;
+  margin-top: 10%;
+  margin-left: 12%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.12em;
+}
+
+.frame1-radio-button {
+  margin-bottom: 4%
+}
+
 #cook-button {
+  font-family: 'Roboto', sans-serif;
   background-color: #0fb9b1;
-  border-color: #0fb9b1;
+  border: none;
+  margin-top: 1%;
+  margin-left: 13%;
+  height: 10%;
+  width: 40%;
+}
+
+.frame2 {
+  background-image: url(assets/cookpot.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
 }

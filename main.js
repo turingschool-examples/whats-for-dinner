@@ -79,6 +79,7 @@ function generateNewMenuItem() {
 };
 
 
+
 function enableLetsCookBtn() {
   if (sideRadioBtn.checked || mainDishRadioBtn.checked || dessertRadioBtn.checked || entireMealBtn.checked) {
     letsCookBtn.removeAttribute('disabled');

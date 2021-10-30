@@ -7,7 +7,16 @@
 
 We've all been there! "What's for dinner?" is perhaps not the *hardest* question of all time, but clearly, it's one that can be stress-inducing. It gets asked 365-366 days a year. It wears. It grinds. It requires work. To me, "What's for dinner?" is a very hard question indeed.
 
-Ergo, this app. This app helps users choose recipes and put together meals. Here's how:
+Ergo, this app. This app helps users choose recipes and put together meals. Here's how.
+
+## Setup
+
+- Fork this project to your own Github account if you'd like to play along
+- Clone the repository to your local machine
+- `cd` into the project
+- `open index.html` to view application
+- Read this README thoroughly
+- Have fun!
 
 ## Application Instructions
 
@@ -23,15 +32,6 @@ If a user does not care for that recipe or would like to select a different type
 
 ![Image of Clear Button](assets/clear-button.png)
 
-## Setup
-
-- Fork this project to your own Github account if you'd like to play along
-- Clone the repository to your local machine
-- `cd` into the project
-- `open index.html` to view application
-- Read this README thoroughly
-- Have fun!
-
 ## Contributor
 
 -Lexy Newby
@@ -42,7 +42,7 @@ If a user does not care for that recipe or would like to select a different type
 1. JavaScript
 2. CSS
 3. HTML
-4. Node.js. 
+4. Node.js.
 
 Put the fun back into dinner.  
 

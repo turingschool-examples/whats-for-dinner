@@ -156,6 +156,15 @@ h1 {
   text-align: center;
 }
 
+.fade-in {
+  animation: fadeIn linear 2s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 #clear-selection-button {
   font-size: 2vh;
   font-family: 'Roboto', sans-serif;

@@ -40,7 +40,7 @@ main {
     display: flex;
 }
 
-#rightButt {
+#addRecipe {
     height: 40px;
     width: 134px;
     padding: 7px 7px 7px 7px;
@@ -117,6 +117,11 @@ h3 {
     border-radius: 5px;
     margin-left: 50px;
     margin-top: 25px;
+    box-shadow: 1px 1px 1.5px 1.5px #666;
+}
+.letsCookButton:active {
+    box-shadow: 1px 1px 3px 3px rgb(255, 255, 255);
+    transform: translateY(4px);
 }
 
 .stockPotImg {
@@ -135,6 +140,11 @@ h3 {
     color: white;
     margin-right: -350px;
     margin-bottom: -300px;
+    box-shadow: #92adaf;
+}
+.clear-button:active {
+    box-shadow: 1px 1px 1px 1px rgb(255, 255, 255);
+    transform: translateY(4px);
 }
 .foodItem {
     display: flex;
@@ -146,4 +156,36 @@ h3 {
     justify-content: center;
     font-size: 40px;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+    #addRecipe {
+
+        height: 40px;
+        width: 80px;
+        padding: 7px 7px 7px 7px;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .box-left {
+        display: fixed;
+        flex-direction: column;
+        align-items: stretch;
+        align-content: center;
+        height: 400px;
+        width: 500px;
+        background-color: rgba(225, 225, 225, .9);
+        margin-top: 50px;
+        margin-left: 0px;
+        }
+    .box-right {
+        display: absolute;
+        margin-left: 0px
+    }
+    
 }

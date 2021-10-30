@@ -10,7 +10,7 @@ var outputPrompt = document.getElementById('you-should-make');
 var selectionOutput = document.getElementById('selection-output');
 var clearButton = document.getElementById('clear-selection-button');
 
-submitButton.addEventListener('click', selectBasicFoodType);
+submitButton.addEventListener('click', timedSearch);
 clearButton.addEventListener('click', clearResults);
 
 function show(element) {
@@ -25,17 +25,27 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
+function getRandomFood(array) {
+  return array[getRandomIndex(array)];
+}
+
 function findUserChoice() {
   if (firstSelection.checked) {
-    selectionOutput.innerText = sides[getRandomIndex(sides)] + '!';
+    selectionOutput.innerText = getRandomFood(sides) + "!";
   } else if (secondSelection.checked) {
-    selectionOutput.innerText = mainDishes[getRandomIndex(mainDishes)] + '!';
+    selectionOutput.innerText = getRandomFood(mainDishes) + "!";
   } else if (thirdSelection.checked) {
-    selectionOutput.innerText = desserts[getRandomIndex(desserts)] + '!';
+    selectionOutput.innerText = getRandomFood(desserts) + "!";
   } else if (fourthSelection.checked) {
-    selectionOutput.innerText = `${mainDishes[getRandomIndex(mainDishes)]}, ${sides[getRandomIndex(sides)]}, and ${desserts[getRandomIndex(desserts)]}!`;
+    selectionOutput.innerText = `${getRandomFood(mainDishes)} with ${getRandomFood(sides)}, and ${getRandomFood(desserts)} for dessert!`;
   }
 };
+
+function timedSearch() {
+  event.preventDefault();
+  
+  setTimeout(function(){selectBasicFoodType()}, 1000);
+}
 
 function selectBasicFoodType() {
   findUserChoice();

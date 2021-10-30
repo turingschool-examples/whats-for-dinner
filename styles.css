@@ -13,6 +13,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Roboto';
 }
 
 nav {
@@ -28,14 +29,10 @@ input {
   margin: 9px;
 }
 
-h6 {
-  padding: 3px;
-  font-family: sans-serif;
-}
-
-.chosen-meal {
-  font-size: 1.7rem;
-
+h1 {
+  font-style: bold;
+  padding: 1px;
+  margin-left: .5rem;
 }
 
 .hidden {
@@ -46,41 +43,55 @@ h6 {
  background-color: rgba(225, 225, 225, .9);
  width: 15%;
  padding: 80px;
- margin: 100px 90px 0px 30px;
+ margin: 100px 150px 0px 30px;
  float: left;
 }
 
 #empty-box {
   justify-content: center;
   width: 14vw;
-  height: 21vh;
+  height: 31.4vh;
   display: flex;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 150px;
 }
 
-/* img {
-  height: 20px;
-}*/
+img {
+  margin: 50px;
+  height: 150px;
+}
 
 
 button {
- margin: 20px;
- padding: 7px 35px 7px 35px;
+ margin: 20px 2px;
+ padding: 7px 55px;
  background-color: #0fb9b1;
- border-color: blue;
  border-radius: 4px;
 }
 
 .clear-button {
   position: absolute;
-  margin: 220px 0px 0px 280px;
-  height: 5px;
-  padding: 10px 10px;
+  margin: 300px 0px 0px 280px;
+  height: 6px;
+  padding: 14px 10px;
+  border-color: rgba(225, 225, 225, .9);
   background-color: #95a5a6;
+  justify-content: center;
+  color: rgba(225, 225, 225, .9);
 }
 
-.recipe {
 
+button:hover {
+  border-color: blue;
+}
+
+.recipe-intro {
+font-size: 1rem;
+font-style: italic;
+
+}
+
+.chosen-meal {
+  font-size: 1.5rem;
+  font-style: bold;
+  width: 120%;
+  text-align: center;
 }

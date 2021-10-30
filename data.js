@@ -14,14 +14,13 @@ var side = [
 
 var dessert = [
 "Apple Pie",
-"Lemon Meringue Pie",
+"Lemon Meringue Pie", 
 "Black Forest Cake",
 "Banana Bread",
 "Peach Cobbler",
 "Cheesecake",
 "Funfetti Cake",
 "Baklava"
-"Flan",
 "Macarons",
 "Macaroons"
 ];

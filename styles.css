@@ -42,15 +42,31 @@ section {
   padding-top: 4%;
 }
 
-form {
+div {
   position: absolute;
   left:10%;
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: rgba(225, 225, 225, .9);
 }
 
 button {
   border-radius: 4px;
   padding: 6px;
   border-style: none;
+}
+
+.borders {
+  border: 1px solid blue;
+  outline: 1px solid white;
 }
 
 .you-should-make {

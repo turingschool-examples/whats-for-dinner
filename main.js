@@ -6,19 +6,27 @@ var mainDishSelector = document.getElementById("main-dish");
 var dessertSelector = document.getElementById("dessert");
 var entireMealSelector = document.getElementById("entire-meal");
 var cookPot = document.querySelector(".cook-pot");
+var youShouldMake = document.querySelector(".you-should-make");
+var userCategory = document.querySelector(".recipe-type");
+var userRecipe = document.querySelector(".user-recipe");
+var addSection = document.querySelector(".add-recipe-section");
 
 var letsCookButton = document.querySelector(".lets-cook");
 var clearButton = document.querySelector(".clear");
 var addRecipeButton = document.querySelector(".add-a-recipe");
+var addNewButton =document.querySelector(".add-new");
 
 clearButton.addEventListener('click', clearRecipe);
-// addRecipeButton.addEventListener();
+addRecipeButton.addEventListener('click', );
 letsCookButton.addEventListener('click', displayRecipe);
 
+
+
 function displayRecipe() {
-    recipePosition.innerText =  `${findRandomRecipe()}`
+    recipePosition.innerText =  `${findRandomRecipe()}`;
     hideCookPot();
     displayClearButton();
+    addBorder();
 }
 
 function findRandomRecipe() {
@@ -41,13 +49,26 @@ function hideClearButton() {
   clearButton.classList.add('hidden');
 }
 
+function hideYouMake() {
+  youShouldMake.classList.add('hidden');
+}
+
+function displayYouMake() {
+  youShouldMake.classList.remove('hidden');
+}
+
+function addBorder() {
+  letsCookButton.classList.add('borders')
+}
+
 function showCookPot() {
   cookPot.classList.remove('hidden');
 }
 
 function displayClearButton() {
-  hideCookPot()
+  hideCookPot();
   clearButton.classList.remove('hidden');
+  displayYouMake()
 }
 
 function getRandom(meal) {
@@ -57,7 +78,8 @@ function getRandom(meal) {
 function clearRecipe() {
   recipePosition.innerText =  ``;
   showCookPot();
-  hideClearButton()
+  hideClearButton();
+  hideYouMake();
 }
 
 

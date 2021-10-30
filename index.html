@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
@@ -23,11 +24,19 @@
         </div>
       </section>
       <section class="food-value">
-        <h3 class='you-should-make'>You should make</h3>
+        <h3 class='you-should-make hidden'>You should make</h3>
+        <h4 class="single-dish"></h4>
         <h4 class="recipe-position"></h4>
         <img class="cook-pot" src="./assets/cookpot.svg">
         <button class="clear hidden">CLEAR</button>
       </section>
+      <form class="add-recipe-section">
+        <label for=recipe-type>Recipe Type:</label>
+        <input class="recipe-category" type="text" id="recipe-type"/>
+        <label for=recipe-name>Recipe Name:</label>
+        <input class"user-recipe" type="text" id="recipe-name"/>
+        <button class="add-new">ADD NEW</button>
+      </form>
       <img class="background-image" src="./assets/burger-friends.jpg">
   </body>
   <script type="text/javascript" src="main.js"></script>

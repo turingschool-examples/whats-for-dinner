@@ -1,21 +1,26 @@
 # What's for Dinner?
 ### An online random recipe/meal generator
+![Don't Know What to Eat for Dinner](https://c.tenor.com/h1084Me4iFYAAAAd/i-dont-know-what-to-eat-for-dinner-jill-kendall.gif)
+
 
 ## Description
 
-![Don't Know What to Eat for Dinner](https://c.tenor.com/h1084Me4iFYAAAAd/i-dont-know-what-to-eat-for-dinner-jill-kendall.gif)
+We've all been there! "What's for dinner?" is perhaps not the *hardest* question of all time, but clearly, it's one that can be stress-inducing. It gets asked 365-366 days a year. It wears. It grinds. It requires work. To me, "What's for dinner?" is a very hard question indeed.
 
-What's for dinner? Perhaps not the *hardest* question of all time, but it's definitely up there. It's a question that gets asked 365-366 days a year. It wears. It grinds. It requires work. To me, "What's for dinner?" is a very hard question indeed.
+Ergo, this app. This app helps users choose recipes and put together meals. Here's how:
 
-Ergo, this app. This app helps users choose recipes and put together meals.
+##Application Instructions
 
-Upon opening the app, users have four recipe options to choose from: Side, Main Dish, Dessert, or Entire Meal.
+Upon opening the app, users have four recipe options to choose from: Side, Main Dish, Dessert, or Entire Meal.  
+
 ![Image of Recipe Options](assets/looking-for.png)
 
-Once the user has selected one of these options, they can click the *LET'S COOK* button. A random recipe from the selected category will be generated and displayed on the right side of the screen replacing the empty cook pot.
+Once the user has selected one of these options, they can click the **LET'S COOK** button. A random recipe from the selected category will be generated and displayed on the right side of the screen replacing the empty cook pot.  
+
 ![Image of Recipe Selection Flow](assets/flow-chart.png)
 
-If a user does not care for that recipe or would like to select a different type of dish, they now have the option to clear the randomized recipe clicking the *CLEAR* button. This 'resets' the application, from which point the user can make a new selection.
+If a user does not care for that recipe or would like to select a different type of dish, they now have the option to clear the randomized recipe clicking the **CLEAR** button. This 'resets' the application, from which point the user can make a new selection.  
+
 ![Image of Clear Button](assets/clear-button.png)
 
 ## Setup

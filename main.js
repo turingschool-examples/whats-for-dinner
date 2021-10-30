@@ -77,3 +77,14 @@ function displayEntireMeal() {
     </p>
    </section>`
 }
+
+function errorMessage() {
+  var radioButtons = document.getElementsByTagName('input');
+
+  for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      return true;
+    }
+  }
+  dishOutput.innerText = 'Please make a selection!';
+}

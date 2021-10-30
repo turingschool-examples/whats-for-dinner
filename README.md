@@ -9,7 +9,7 @@ We've all been there! "What's for dinner?" is perhaps not the *hardest* question
 
 Ergo, this app. This app helps users choose recipes and put together meals. Here's how:
 
-##Application Instructions
+## Application Instructions
 
 Upon opening the app, users have four recipe options to choose from: Side, Main Dish, Dessert, or Entire Meal.  
 
@@ -42,6 +42,7 @@ If a user does not care for that recipe or would like to select a different type
 1. JavaScript
 2. CSS
 3. HTML
-4. Node.js
+4. Node.js. 
 
+Put the fun back into dinner.
 ![Eating Excitement](https://media1.giphy.com/media/26gsopKq78rO1q9O0/giphy.gif?cid=ecf05e47mt17f4owzt1kz6q0mhlic161bied7lgerph7ipn4&rid=giphy.gif&ct=g)

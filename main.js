@@ -18,7 +18,7 @@ letsCookButton.addEventListener('click', displayFoodChoice);
 clearButton.addEventListener('click', removeFoodOutput);
 
 function getRandomIndex(array) {
-  return  Math.floor(Math.random() * array.length);
+  return Math.floor(Math.random() * array.length);
 }
 
 function getRandomFood() {

@@ -1,19 +1,24 @@
 var cookpot = document.querySelector(".cookpot");
-
 var youShouldMake = document.querySelector(".should-make");
-var randomFood = document.querySelector(".random-food");
+var randomizedFoodItem = document.querySelector(".random-food");
 var clearBtn = document.querySelector(".clear-btn")
-
 var sideRadioBtn = document.querySelector(".side");
 var mainDishRadioBtn = document.querySelector(".main-dish");
 var dessertRadioBtn = document.querySelector(".dessert");
 var entireMealBtn = document.querySelector(".entire-meal")
-
 var randomFoodPlacement = document.querySelector(".random-food")
 var letsCookBtn = document.querySelector(".cook-btn");
+var form = document.querySelector(".all-radio-btns")
 
-var form = document.querySelector(".radio-btns")
 
+letsCookBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+  generateNewMenuItem();
+});
+
+clearBtn.addEventListener("click", returnEmptyBox);
+
+form.addEventListener("click", enableLetsCookBtn)
 
 
 function getRandomIndex(array) {
@@ -24,24 +29,23 @@ function getRandomIndex(array) {
 function showNewMenuItem() {
   cookpot.classList.add("hidden");
   youShouldMake.classList.remove("hidden");
-  randomFood.classList.remove("hidden");
+  randomizedFoodItem.classList.remove("hidden");
   clearBtn.classList.remove("hidden")
 };
 
+function returnEmptyBox() {
+  cookpot.classList.remove("hidden");
+  youShouldMake.classList.add("hidden");
+  randomizedFoodItem.classList.add("hidden");
+  clearBtn.classList.add("hidden")
+};
 
-
-
-letsCookBtn.addEventListener("click", function(event) {
-  event.preventDefault();
-  generateNewMenuItem();
-});
 
 
 function generateNewMenuItem() {
   if (sideRadioBtn.checked) {
     randomFoodPlacement.innerText = sides[getRandomIndex(sides)];
   } else if (mainDishRadioBtn.checked) {
-    mains[getRandomIndex(mains)];
     randomFoodPlacement.innerText = mains[getRandomIndex(mains)];
   } else if (dessertRadioBtn.checked) {
     randomFoodPlacement.innerText = desserts[getRandomIndex(desserts)];
@@ -50,18 +54,6 @@ function generateNewMenuItem() {
   };
   showNewMenuItem();
 };
-
-clearBtn.addEventListener("click", returnEmptyBox);
-
-function returnEmptyBox() {
-  cookpot.classList.remove("hidden");
-  youShouldMake.classList.add("hidden");
-  randomFood.classList.add("hidden");
-  clearBtn.classList.add("hidden")
-};
-
-
-form.addEventListener("click", enableLetsCookBtn)
 
 function enableLetsCookBtn() {
   if (sideRadioBtn.checked || mainDishRadioBtn.checked || dessertRadioBtn.checked || entireMealBtn.checked) {

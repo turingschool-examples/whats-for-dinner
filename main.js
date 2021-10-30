@@ -54,26 +54,21 @@ function removeFoodOutput() {
 function displayFoodChoice(event) {
   event.preventDefault();
   hideCookpot();
-
-  if (entireMealButton.checked) {
-    displayEntireMeal();
-    return;
-  }
-
-  dishOutput.innerHTML = 
-  `<section class="dish-output">You should make:</section>
-     <p class="display-food">${randomFood}!</p>
-   </section>`
+  displayRandomFood();
+  displayEntireMeal();
+  errorMessage();
 }
 
 function displayEntireMeal() {
-  dishOutput.innerHTML =
-  `<section class="dish-output">You should make:</section>
-     <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}
-     with a side of ${sides[getRandomIndex(sides)]} and
-     ${desserts[getRandomIndex(desserts)]} for dessert!
-    </p>
-   </section>`
+  if (entireMealButton.checked) {
+    dishOutput.innerHTML =
+      `<section class="dish-output">You should make:</section>
+       <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}
+       with a side of ${sides[getRandomIndex(sides)]} and
+       ${desserts[getRandomIndex(desserts)]} for dessert!
+       </p>
+    </section>`
+  }
 }
 
 function displayRandomFood() {

@@ -27,9 +27,30 @@ nav {
     padding: 13px 10px 10px 10px;
     margin-left: 10px;
 }
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+article {
+    background-color: rgba(225, 225, 225, .9);
+    height: 500px;
+    width: 500px;
+}
+
+.choice-box {
+    display: flex;
+    justify-content: space-evenly;
+}
 .choice-box-button {
     background-color: #0fb9b1;
     border-color: #0fb9b1;
     border-radius: 5px;
+}
+
+.cook-box {
+ background-image: url(assets/cookpot.svg);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 30%;
 }

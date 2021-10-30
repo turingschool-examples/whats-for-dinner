@@ -21,6 +21,21 @@ var side = [
 "Shrimp Summer Rolls"
 ];
 
+var dessert = [
+"Apple Pie",
+"Lemon Meringue Pie",
+"Black Forest Cake",
+"Banana Bread",
+"Peach Cobbler",
+"Cheesecake",
+"Funfetti Cake",
+"Baklava",
+"Macarons",
+"Macaroons"
+];
+
+
+
 
 
 // When a user selects a dish option (don’t worry about “Entire Meal”) and then clicks the “Let’s Cook!” button, the user sees a random dish from the list of possible dishes for that category
@@ -31,9 +46,10 @@ var side = [
 var sideRadioInput = document.querySelector('#side');
 var mainRadioInput = document.querySelector('#main');
 var dessertRadioInput = document.querySelector('#dessert');
+var entireMealRadioInput = document.querySelector('#entire-meal');
 var letsCookButton = document.querySelector('button');
 var potPic = document.querySelector('img');
-var emptyBoxSpace = document.querySelector('#empty-box')
+var emptyBoxSpace = document.querySelector('#empty-box');
 
 
 
@@ -58,14 +74,30 @@ console.log(letsCookButton);
 letsCookButton.addEventListener('click', chooseRecipe);
 
 function chooseRecipe() {
-if (sideRadioInput.checked) {
-emptyBoxSpace.innerHTML = `<p class="recipe">${side[getRandomIndex(side)]}</p>`;
-} else if (mainRadioInput.checked) {
-emptyBoxSpace.innerHTML = `<p>${main[getRandomIndex(main)]}</p>`;
-} else if (dessertRadioInput.checked) {
-emptyBoxSpace.innerHTML = `<p>${main[getRandomIndex(main)]}</p>`;
+  var recipeName = ""
+ if (sideRadioInput.checked) {
+   recipeName = side[getRandomIndex(side)]
+ } else if (mainRadioInput.checked) {
+    recipeName = main[getRandomIndex(main)]
+  } else if (dessertRadioInput.checked) {
+      recipeName = dessert[getRandomIndex(dessert)]
+    } else if (entireMealRadioInput.checked) {
+      recipeName =
+       `${side[getRandomIndex(side)]} with a side of ${main[getRandomIndex(main)]}
+        and ${dessert[getRandomIndex(dessert)]}`
+     } else {
+       recipeName = throwError();
+     }
+emptyBoxSpace.innerHTML = `<p class="recipe">You Should Make:<br><span class="chosen-meal">${recipeName}</span></p>`;
 }
+
+function throwError() {
+  if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked)
+     recipeName = `You need to select an option!`;
+     return recipeName;
 }
+
+
 
 //figure out how to disable a button
 //change color of button if disabled

@@ -36,12 +36,6 @@ var dessert = [
 
 
 
-
-
-// When a user selects a dish option (don’t worry about “Entire Meal”) and then clicks the “Let’s Cook!” button, the user sees a random dish from the list of possible dishes for that category
-// When the dish name appears, the cookpot icon disappears
-
-
 //Materials
 var sideRadioInput = document.querySelector('#side');
 var mainRadioInput = document.querySelector('#main');
@@ -49,10 +43,11 @@ var dessertRadioInput = document.querySelector('#dessert');
 var entireMealRadioInput = document.querySelector('#entire-meal');
 var letsCookButton = document.querySelector('button');
 var potPic = document.querySelector('img');
-var emptyBoxSpace = document.querySelector('#empty-box');
-
+var mealPicked = document.querySelector('.meal-picked');
+var clearButton = document.querySelector('.clear-button');
 
 letsCookButton.addEventListener('click', chooseRecipe);
+clearButton.addEventListener('click', clearRecipeForm);
 
 function chooseRecipe() {
   var recipeName = ""
@@ -69,8 +64,10 @@ function chooseRecipe() {
  } else {
        recipeName = throwError();
      }
-emptyBoxSpace.innerHTML = `<p class="recipe">You Should Make:<br><span class="chosen-meal">${recipeName}</span></p>`;
+mealPicked.innerHTML = `<p class="recipe">You Should Make:<br><span class="chosen-meal">${recipeName}</span></p>`;
 stopButton();
+showClearButton();
+removePot();
 }
 
 function stopButton() {
@@ -81,12 +78,24 @@ function stopButton() {
 }
 
 function throwError() {
- if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked)
+ if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked) {
      recipeName = `You need to select an option!`;
      return recipeName;
+  }
 }
 
+function showClearButton() {
+  clearButton.classList.remove('hidden');
+}
+
+function removePot() {
+  potPic.classList.add('hidden');
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+}
+
+function clearRecipeForm() {
+  mealRecipe.innerHTML = "";
 }

@@ -50,6 +50,7 @@ var letsCookButton = document.querySelector('.lets-cook-button');
 var sideButton = document.querySelector('#side');
 var mainDishButton = document.querySelector('#maindish');
 var dessertButton = document.querySelector('#dessert');
+var entireMealButton = document.querySelector('#entiremeal');
 var cookPotView = document.querySelector('.cookpot-view');
 var resultsView = document.querySelector('.results-view');
 var recipeResult = document.querySelector('.results');
@@ -70,6 +71,8 @@ function chooseRecipe() {
     recipeResult.innerText = getRandomIndex(mains)
   } else if (dessertButton.checked) {
     recipeResult.innerText = getRandomIndex(desserts)
+  } else if (entireMealButton.checked) {
+    recipeResult.innerText = `${getRandomIndex(mains)} with a side of ${getRandomIndex(sides)} and ${getRandomIndex(desserts)} for dessert!`;
   }
 };
 

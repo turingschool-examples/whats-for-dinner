@@ -11,34 +11,53 @@ var letsCookButton = document.querySelector(".lets-cook");
 var clearButton = document.querySelector(".clear");
 var addRecipeButton = document.querySelector(".add-a-recipe");
 
-// clearButton.addEventListener();
+clearButton.addEventListener('click', clearRecipe);
 // addRecipeButton.addEventListener();
 letsCookButton.addEventListener('click', displayRecipe);
 
 function displayRecipe() {
-    selectedRecipe.innerText +=
- (`You should make ${findRandomRecipe()}`)
+    recipePosition.innerText =  `${findRandomRecipe()}`
+    hideCookPot();
+    displayClearButton();
 }
 
 function findRandomRecipe() {
   if (sideSelector.checked){
-    return `${sides[getRandom(sides)]}`;
+    return sides[getRandom(sides)];
   } else if (mainDishSelector.checked) {
-    return `${mains[getRandom(sides)]}`;
+    return mains[getRandom(sides)];
   } else if (dessertSelector.checked){
-    return `${desserts[getRandom(sides)]}`;
+    return desserts[getRandom(sides)];
   } else if (entireMealSelector.checked){
     return `${sides[getRandom(sides)]} ${mains[getRandom(sides)]} ${desserts[getRandom(sides)]}`
   }
 }
 
-function hideCookPot(){
+function hideCookPot() {
   cookPot.classList.add('hidden');
 }
 
+function hideClearButton() {
+  clearButton.classList.add('hidden');
+}
+
+function showCookPot() {
+  cookPot.classList.remove('hidden');
+}
+
+function displayClearButton() {
+  hideCookPot()
+  clearButton.classList.remove('hidden');
+}
 
 function getRandom(meal) {
   return Math.floor(Math.random() * meal.length);
+}
+
+function clearRecipe() {
+  recipePosition.innerText =  ``;
+  showCookPot();
+  hideClearButton()
 }
 
 

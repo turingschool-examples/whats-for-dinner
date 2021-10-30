@@ -11,6 +11,15 @@ h2 {
   left: 3%;
 }
 
+h3 {
+  position: fixed;
+}
+
+h4 {
+  font-size: 36px;
+  text-align: center;
+}
+
 nav {
   background-color: #0fb9b1;
   width: 100%;
@@ -42,6 +51,19 @@ button {
   border-radius: 4px;
   padding: 6px;
   border-style: none;
+}
+
+.you-should-make {
+position: absolute;
+left: 35%;
+top: 25%;
+}
+
+.recipe-position {
+ position: absolute;
+ left: 15%;
+ top: 30%;
+ max-width: 70%;
 }
 
 .star {
@@ -98,9 +120,9 @@ button {
 }
 
 .clear {
-  position: relative;
-  left: 22%;
-  top: 26%;
+  position: absolute;
+  right: 22%;
+  bottom: 26%;
   background-color: #95a5a6;
   color: white;
   padding-left:

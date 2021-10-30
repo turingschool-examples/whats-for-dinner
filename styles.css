@@ -27,6 +27,13 @@ article {
 
 }
 
+.frame2 {
+  background-image: url(assets/cookpot.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+}
+
 .navBar {
   background-color: #0fb9b1;
   padding: 4px;

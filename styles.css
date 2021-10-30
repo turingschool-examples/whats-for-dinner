@@ -20,10 +20,17 @@ body {
   background-color: #0fb9b1;
 }
 
+h3 {
+  position: relative;
+  left: 2%;
+}
+
 .boxes {
   display: flex;
   height: auto;
   width: 100%;
+  position: relative;
+  top: 50px;
 
 
 }
@@ -31,21 +38,42 @@ body {
 #left-box {
   display: flex;
   background-color: rgba(225, 225, 225, .9);
-  height: 250px;
+  height: 280px;
   width: 400px;
   flex-direction: column;
 
 }
 
+h2 {
+  position: relative;
+  left: 10%;
+}
+
+#side {
+
+}
+
+
+input, label {
+  vertical-align: top;
+}
+
+
+
 .lets-cook-button {
   background-color: #0fb9b1;
+  width: 40%;
+  height: 10%;
+  position: relative;
+  left: 10%;
+  border-color: blue;
 
 }
 
 #right-box {
   display: flex;
   background-color: rgba(225, 225, 225, .9);
-  height: 250px;
+  height: 280px;
   width: 400px;
   flex-direction: column;
 
@@ -53,11 +81,24 @@ body {
 
 .cookpot {
   width: 100px;
-  align-items: center;
-  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+
+
 }
 
-
+.clear {
+  display: block;
+  background-color: #95a5a6;
+  width: 15%;
+  height: 10%;
+  position: relative;
+  bottom: 7%;
+  left: 80%;
+  border-color: #95a5a6;
+}
 
 
 /*

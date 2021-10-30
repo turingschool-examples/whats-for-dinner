@@ -12,7 +12,7 @@ var form = document.querySelector(".all-radio-btns")
 var radioBtns = document.getElementsByName("looking-for");
 
 
-form.addEventListener("click", enableLetsCookBtn)
+form.addEventListener("click", enableLetsCookBtn);
 
 
 letsCookBtn.addEventListener("click", function(event) {
@@ -39,19 +39,29 @@ function getRandomIndex(array) {
 };
 
 
+function show(element) {
+  element.classList.remove("hidden")
+};
+
+
+function hide(element) {
+  element.classList.add("hidden")
+};
+
+
 function showNewMenuItem() {
-  cookpot.classList.add("hidden");
-  youShouldMake.classList.remove("hidden");
-  randomizedFoodItem.classList.remove("hidden");
-  clearBtn.classList.remove("hidden")
+  hide(cookpot);
+  show(youShouldMake);
+  show(randomizedFoodItem);
+  show(clearBtn)
 };
 
 
 function returnEmptyBox() {
-  cookpot.classList.remove("hidden");
-  youShouldMake.classList.add("hidden");
-  randomizedFoodItem.classList.add("hidden");
-  clearBtn.classList.add("hidden")
+  show(cookpot);
+  hide(youShouldMake);
+  hide(randomizedFoodItem);
+  hide(clearBtn)
 };
 
 

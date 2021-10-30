@@ -68,3 +68,10 @@ button {
  border-color: blue;
  border-radius: 4px;
 }
+
+.clear-button {
+  margin: 100px 0px 10px 0px;
+  height: 5px;
+  padding: 10px 10px;
+  background-color: #95a5a6;
+}

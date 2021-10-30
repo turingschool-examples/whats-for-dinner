@@ -51,18 +51,8 @@ var letsCookButton = document.querySelector('button');
 var potPic = document.querySelector('img');
 var emptyBoxSpace = document.querySelector('#empty-box');
 
-// }
-//EventListeners
-// sideRadioInput.addEventListener();
-// mainRadioInput.addEventListener();
-// dessertRadioInput.addEventListener();
 
-//Functions
-// function chooseSide(array) {
-//
-// }
 letsCookButton.addEventListener('click', chooseRecipe);
-letsCookButton.addEventListener('click', stopButton)
 
 function chooseRecipe() {
   var recipeName = ""
@@ -80,6 +70,7 @@ function chooseRecipe() {
        recipeName = throwError();
      }
 emptyBoxSpace.innerHTML = `<p class="recipe">You Should Make:<br><span class="chosen-meal">${recipeName}</span></p>`;
+stopButton();
 }
 
 function stopButton() {
@@ -95,40 +86,6 @@ function throwError() {
      return recipeName;
 }
 
-
-
-//figure out how to disable a button
-//change color of button if disabled
-console.log(main[getRandomIndex(main)]);
-
-
-console.log(side[getRandomIndex(side)]); //this works, I get the input
-
-
-
-//meal.(userInput)[i]
-//.checked <--- to see if a butting is checked
-//the user clicks and picks a value
-//the value has to make it so
-//it picks a meal from that array
-
-//getRandomIndex functions
-
-//let's cook button is clicked
-//puts one meal from array in other section
-
-//Anything with user statement that requires and output
-
-// Step 1
-// - Add event listeners to all dish options.
-//Maybe all the function that the event listener button does is return the input?
-// Every button clicked, inputs a random dish on the
-// empty box (section of HTML)
-
-//You can also do .value on the query Selector
-
-
-//Arrays of:
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);

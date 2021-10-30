@@ -24,6 +24,10 @@ nav {
     top: 0;
 }
 
+input {
+  margin: 9px;
+}
+
 h6 {
   padding: 3px;
   font-family: sans-serif;
@@ -41,7 +45,7 @@ h6 {
 .boxes {
  background-color: rgba(225, 225, 225, .9);
  width: 15%;
- padding: 100px;
+ padding: 80px;
  margin: 100px 90px 0px 30px;
  float: left;
 }
@@ -70,7 +74,8 @@ button {
 }
 
 .clear-button {
-  margin: 100px 0px 10px 0px;
+  position: absolute;
+  margin: 220px 0px 0px 280px;
   height: 5px;
   padding: 10px 10px;
   background-color: #95a5a6;

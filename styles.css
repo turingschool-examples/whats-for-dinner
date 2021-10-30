@@ -75,6 +75,12 @@ left: 35%;
 top: 25%;
 }
 
+.you-have-added {
+  position: absolute;
+  left: 35%;
+  top: 25%;
+}
+
 .recipe-position {
  position: absolute;
  left: 15%;
@@ -112,13 +118,17 @@ top: 25%;
   top: 20%;
 }
 
-
-
 .background-image {
   background-size: cover;
   width: 100%;
   object-fit: contain;
   margin: 0;
+}
+
+.single-dish {
+  position: relative;
+  top: 20%;
+  right: 5%;
 }
 
 .radio {

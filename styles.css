@@ -63,7 +63,8 @@ p {
   font-size: 20px;
   padding: 8px 75px;
   border-radius: 7px;
-  border:  0px;
+  border:  2px solid blue;
+  outline: 2px solid white;
   margin-left: 60px;
   margin-top: 10px
 }

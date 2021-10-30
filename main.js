@@ -69,6 +69,7 @@ clearResult.addEventListener("click", clearResultsView);
 mainPageButton.addEventListener("click", returnToMain);
 favoriteButton.addEventListener("click", addRecipe);
 viewFavoritesButton.addEventListener("click", showFavoriteRecipes);
+favoriteRecipeList.addEventListener("click", deleteRecipe);
 
 function getRandomIndex(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
@@ -119,6 +120,15 @@ function showFavoriteRecipes() {
   favoriteRecipeList.innerHTML = ``;
   for (var i = 0; i < favoriteRecipies.length; i++) {
     favoriteRecipeList.innerHTML += `
-      <div id="${favoriteRecipies.length}">${favoriteRecipies[i]}</div>`
+      <div id="${favoriteRecipies[i]}">${favoriteRecipies[i]}</div>`
   };
-}
+};
+
+function deleteRecipe() {
+  for(var i = 0; i < favoriteRecipies.length; i++) {
+    if (event.target.id === `${favoriteRecipies[i]}`) {
+      favoriteRecipies.splice(i, 1);
+    }
+  }
+  showFavoriteRecipes();
+};

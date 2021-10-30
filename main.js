@@ -97,5 +97,7 @@ function getRandomIndex(array) {
 }
 
 function clearRecipeForm() {
-  mealRecipe.innerHTML = "";
+  mealPicked.innerHTML = "";
+  clearButton.classList.add('hidden');
+  potPic.classList.remove('hidden');
 }

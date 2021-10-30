@@ -6,20 +6,23 @@
   <body>
     <section class="topNav">
       <h1 class="title">What's for Dinner?</h1>
-      <button class="add-recipe-button">ADD A RECIPE</button>
     </section>
     <section class="home-page">
       <section class="what-are-you-looking-for">
         <h1 class="options-for-dinner"> What are you looking for?<span class=”altColor”>*</span></h1>
-        <form>
-          <div><input type="radio" name="options" value="value1"> Side</div>
-          </div><input type="radio" name="options" value="value2"> Main Dish</div>
-          <div><input type="radio" name="options" value="value3"> Dessert</div>
-        </form>
+          <div class="options"><input type="radio" name="options" value="value1"> Side</div>
+          <div class="options"><input type="radio" name="options" value="value2"> Main Dish</div>
+          <div class="options"><input type="radio" name="options" value="value3"> Dessert</div>
         <button class="lets-cook-button">LET'S COOK!</button>
       </section>
-      <section class="cooking">
+      <section class="view cooking">
         <img class="cook-pot-img" src="assets/cookpot.svg"/>
+      </section>
+      <section class="view dish-generated hidden">
+        <form>
+          <div><h2 class="you-should-make">You should make:</h2></div>
+          <div><h1 class="dish-generated">Chicken Fried Steak!</h1></div>
+        </form>
       </section>
     </section>
   </body>

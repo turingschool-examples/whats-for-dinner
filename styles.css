@@ -56,6 +56,30 @@ body {
   background-repeat: no-repeat;
 }
 
+.you-should-make {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  color: black;
+  bottom: -1.1em;
+  padding: 35px 40px;
+  margin: 6px 1px;
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-style: italic;
+}
+
+.dish-generated {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  color: black;
+  padding: 55px 44px;
+  margin: 2px 2px;
+  font-size: 28px;
+  font-family: 'Roboto';
+}
+
 .cook-pot-img {
   width: 93px;
   height: 192px;
@@ -99,6 +123,15 @@ h1.altColor {
   margin: 26px 2px;
 }
 
+.options {
+  padding: 2px 2px;
+  margin: 1px 1px;
+  font-size: 14px;
+}
+input[type=radio] {
+    border: 0px;
+    width: 3%;
+}
 
 
  font-family: 'Roboto', sans-serif;

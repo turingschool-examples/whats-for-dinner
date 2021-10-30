@@ -63,11 +63,11 @@ function displayEntireMeal() {
   if (entireMealButton.checked) {
     dishOutput.innerHTML =
       `<section class="dish-output">You should make:</section>
-       <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}
-       with a side of ${sides[getRandomIndex(sides)]} and
-       ${desserts[getRandomIndex(desserts)]} for dessert!
-       </p>
-    </section>`
+         <p class="entire-meal">${mainDishes[getRandomIndex(mainDishes)]}
+           with a side of ${sides[getRandomIndex(sides)]} and
+           ${desserts[getRandomIndex(desserts)]} for dessert!
+         </p>
+       </section>`
   }
 }
 

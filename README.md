@@ -44,5 +44,6 @@ If a user does not care for that recipe or would like to select a different type
 3. HTML
 4. Node.js. 
 
-Put the fun back into dinner.
+Put the fun back into dinner.  
+
 ![Eating Excitement](https://media1.giphy.com/media/26gsopKq78rO1q9O0/giphy.gif?cid=ecf05e47mt17f4owzt1kz6q0mhlic161bied7lgerph7ipn4&rid=giphy.gif&ct=g)

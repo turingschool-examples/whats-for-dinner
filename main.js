@@ -9,6 +9,7 @@ var cookpot = document.getElementById('cookpot');
 var outputPrompt = document.getElementById('you-should-make');
 var selectionOutput = document.getElementById('selection-output');
 var clearButton = document.getElementById('clear-selection-button');
+var loader = document.querySelector('#lds-ripple');
 
 submitButton.addEventListener('click', timedSearch);
 clearButton.addEventListener('click', clearResults);
@@ -41,13 +42,19 @@ function findUserChoice() {
   }
 };
 
-function timedSearch() {
-  event.preventDefault();
-  
+function showAnimation() {
+  show(loader);
+  hide(cookpot);
   setTimeout(function(){selectBasicFoodType()}, 1000);
 }
 
+function timedSearch() {
+  event.preventDefault();
+  showAnimation();
+}
+
 function selectBasicFoodType() {
+  hide(loader);
   findUserChoice();
   hide(cookpot);
   show(outputPrompt);

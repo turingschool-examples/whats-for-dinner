@@ -12,6 +12,11 @@ red - #ee5253
     box-sizing: border-box;
     margin: 0;
 }
+body {
+    background-image: url("assets/burger-friends.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 nav {
     background-color: #0fb9b1;
     font-family: 'Roboto', sans-serif;

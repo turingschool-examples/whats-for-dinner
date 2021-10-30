@@ -8,3 +8,10 @@ red - #ee5253
 
 */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+nav {
+    background-color: #0fb9b1;
+}

@@ -51,13 +51,25 @@ var sideButton = document.querySelector('#side');
 var mainDishButton = document.querySelector('#maindish');
 var dessertButton = document.querySelector('#dessert');
 var entireMealButton = document.querySelector('#entiremeal');
+var formView = document.querySelector('#form-view');
 var cookPotView = document.querySelector('.cookpot-view');
 var resultsView = document.querySelector('.results-view');
+var favoritesView = document.querySelector('.favorites-view');
 var recipeResult = document.querySelector('.results');
 var clearResult = document.querySelector('.clear-button');
+var favoriteButton = document.querySelector('.favorite-button');
+var viewFavoritesButton = document.querySelector('.view-favorite-button');
+var favoriteRecipeList = document.querySelector('.favorites');
+var mainPageButton = document.querySelector('.return-to-main');
+
+var favoriteRecipies = [];
 
 letsCookButton.addEventListener("click", showRecipe);
-clearResult.addEventListener("click", clearRecipe);
+clearResult.addEventListener("click", clearResultsView);
+mainPageButton.addEventListener("click", returnToMain);
+favoriteButton.addEventListener("click", addRecipe);
+viewFavoritesButton.addEventListener("click", showFavoriteRecipes);
+favoriteRecipeList.addEventListener("click", deleteRecipe);
 
 function getRandomIndex(array) {
   var randomIndex = Math.floor(Math.random() * array.length);
@@ -73,7 +85,7 @@ function chooseRecipe() {
     recipeResult.innerText = getRandomIndex(desserts)
   } else if (entireMealButton.checked) {
     recipeResult.innerText = `${getRandomIndex(mains)} with a side of ${getRandomIndex(sides)} and ${getRandomIndex(desserts)} for dessert!`;
-  }
+  };
 };
 
 function showRecipe() {
@@ -82,7 +94,41 @@ function showRecipe() {
   chooseRecipe();
 };
 
-function clearRecipe() {
-  recipeResult.classList.add('hidden');
+function clearResultsView() {
   location.reload();
+};
+
+function returnToMain() {
+  favoritesView.classList.add('hidden');
+  formView.classList.remove('hidden');
+  cookPotView.classList.remove('hidden');
+};
+
+function addRecipe() {
+  if (favoriteRecipies.includes(recipeResult.innerText)) {
+    return favoriteRecipies
+  } else {
+  favoriteRecipies.push(recipeResult.innerText);
+  };
+};
+
+function showFavoriteRecipes() {
+  formView.classList.add('hidden');
+  resultsView.classList.add('hidden');
+  favoritesView.classList.remove('hidden');
+  cookPotView.classList.add('hidden');
+  favoriteRecipeList.innerHTML = ``;
+  for (var i = 0; i < favoriteRecipies.length; i++) {
+    favoriteRecipeList.innerHTML += `
+      <div id="${favoriteRecipies[i]}">${favoriteRecipies[i]}</div>`
+  };
+};
+
+function deleteRecipe() {
+  for(var i = 0; i < favoriteRecipies.length; i++) {
+    if (event.target.id === `${favoriteRecipies[i]}`) {
+      favoriteRecipies.splice(i, 1);
+    }
+  }
+  showFavoriteRecipes();
 };

@@ -1,23 +1,42 @@
 # What's for Dinner?
+### An online random recipe/meal generator
 
-## Overview
+## Description
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+![Don't Know What to Eat for Dinner](https://c.tenor.com/h1084Me4iFYAAAAd/i-dont-know-what-to-eat-for-dinner-jill-kendall.gif)
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+What's for dinner? Perhaps not the *hardest* question of all time, but it's definitely up there. It's a question that gets asked 365-366 days a year. It wears. It grinds. It requires work. To me, "What's for dinner?" is a very hard question indeed.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+Ergo, this app. This app helps users choose recipes and put together meals.
 
-## Learning Goals
+Upon opening the app, users have four recipe options to choose from: Side, Main Dish, Dessert, or Entire Meal.
+![Image of Recipe Options](assets/looking-for.png)
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+Once the user has selected one of these options, they can click the *LET'S COOK* button. A random recipe from the selected category will be generated and displayed on the right side of the screen replacing the empty cook pot.
+![Image of Recipe Selection Flow](assets/flow-chart.png)
+
+If a user does not care for that recipe or would like to select a different type of dish, they now have the option to clear the randomized recipe clicking the *CLEAR* button. This 'resets' the application, from which point the user can make a new selection.
+![Image of Clear Button](assets/clear-button.png)
 
 ## Setup
 
-- Fork this project to your own Github account
+- Fork this project to your own Github account if you'd like to play along
 - Clone the repository to your local machine
 - `cd` into the project
-- Read this README thoroughly, then begin working!
+- `open index.html` to view application
+- Read this README thoroughly
+- Have fun!
+
+## Contributor
+
+-Lexy Newby
+[GitHub](https://github.com/anewb87)
+
+## Technologies Used:
+
+1. JavaScript
+2. CSS
+3. HTML
+4. Node.js
+
+![Eating Excitement](https://media1.giphy.com/media/26gsopKq78rO1q9O0/giphy.gif?cid=ecf05e47mt17f4owzt1kz6q0mhlic161bied7lgerph7ipn4&rid=giphy.gif&ct=g)

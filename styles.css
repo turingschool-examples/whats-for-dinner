@@ -8,3 +8,16 @@ red - #ee5253
 
 */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+nav {
+    background-color: #0fb9b1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navigation-title {
+    padding: 13px 10px 10px 10px;
+    margin-left: 10px;
+}

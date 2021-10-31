@@ -1,23 +1,16 @@
 # What's for Dinner?
-
+[See a Site Example](https://imgur.com/KPu5CER)
 ## Overview
+---
+What's for dinner? The ultimate question. This app helps users with this most difficult of all questions. The user can select the type of dish they would like to see and a random dish of that type will appear!
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+Do you long for the perfect side dish? Does your particular hunger lend itself to the sweetness of dessert? If you fancy a piece de resistance, the main dish is only a click away!
+---
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+For those whose desire for answers has reached its fever pitch, the Entire Meal button may be selected and a full meal will magically appear on the side!
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+---
 
-## Learning Goals
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+ [Github](git@github.com:KATIETOLER/whats-for-dinner.git).
+ [Website Address] (https://katietoler.github.io/whats-for-dinner/)

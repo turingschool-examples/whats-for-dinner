@@ -154,7 +154,7 @@ button{
 }
 
 
-.loader{
+/* .loader{
   position: relative;
   margin-left: 30%;
   border: 20px solid #f3f3f3;
@@ -164,14 +164,14 @@ button{
   border-radius: 50%;
   width: 120px;
   height: 120px;
+  animation-duration: 1s;
   animation: spin 2s linear infinite;
-  animation-delay: 2s;
 }
 
 @keyframes spin{
   0% { transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
-}
+} */
 /* #clear-button{
   position: relative;
   padding: 5%;

@@ -15,6 +15,7 @@ var result = document.querySelector('.result')
 var returnMsg = document.querySelector('.return-msg')
 var shouldMake = document.querySelector('.you-should-make')
 var combo = document.querySelector('.combo')
+var loader = document.querySelector('.load')
 //event listeners
 
 letsCookButton.addEventListener('click', showRecipe)
@@ -22,6 +23,8 @@ letsCookButton.addEventListener('click', showRecipe)
 function removePotImage() {
   potImage.classList.add('hidden')
   };
+
+
 
 function showRecipe(event) {
   event.preventDefault();

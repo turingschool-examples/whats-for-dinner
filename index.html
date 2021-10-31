@@ -7,16 +7,16 @@
   </head>
   <body>
 
-      <section class="question-line">
-        <h3 class="main-question">What's for Dinner?</h3>
-      </section>
+    <section class="question-line">
+      <h3 class="main-question">What's for Dinner?</h3>
+    </section>
 
     <section class="main-page">
 
-      <section id="left-box" class="boxes">
+      <section class="boxes" id="left-box">
         <h2>What are you looking for?*</h2>
-        <input class="side-radio-button" type="radio" id="side" />
-        <label for="side">Side</label>
+
+        <label for="side"><input class="side-radio-button" type="radio" id="side">Side</label>
         <input class="main-dish-radio-button" type="radio" id="main-dish" />
         <label for="main-dish">Main Dish</label>
         <input class="dessert-radio-button" type="radio" id="dessert" />
@@ -26,11 +26,17 @@
         <button class="lets-cook-button">LET'S COOK!</button>
       </section>
 
-      <section id="right-box" class="boxes">
+      <section class="boxes" id="right-box">
+        <section class="view cookpot-logo">
+          <img class="cookpot" src="./assets/cookpot.svg" alt="Cookpot Logo" />
 
-        <img class="cookpot" src="./assets/cookpot.svg" alt="Cookpot Logo" />
+          <section class="view new-meal hidden">
+            <p class="random-dish"></p>
+            <p class="random-meal"></p>
 
-        <button class="clear">CLEAR</button>
+            <button class="clear-button hidden">CLEAR</button>
+          </section>
+        </section>
       </section>
 
     </section>

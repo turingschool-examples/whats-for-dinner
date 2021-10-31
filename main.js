@@ -7,13 +7,14 @@ var potImage = document.querySelector('.cook-pot-img');
 var inputSide = document.getElementById('side');
 var inputMainDish = document.getElementById('main-dish');
 var inputDessert = document.getElementById('dessert');
+var inputEntireMeal = document.getElementById('entire-meal')
 var form = document.querySelector("form");
 var log = document.getElementById("log");
 var savedRecipies = [];
 var result = document.querySelector('.result')
 var returnMsg = document.querySelector('.return-msg')
 var shouldMake = document.querySelector('.you-should-make')
-
+var combo = document.querySelector('.combo')
 //event listeners
 
 letsCookButton.addEventListener('click', showRecipe)
@@ -24,7 +25,9 @@ function removePotImage() {
 
 function showRecipe(event) {
   event.preventDefault();
-  removePotImage()
+  removePotImage();
+  clearMainDish();
+  clearEntireMeal();
     if(inputMainDish.checked) {
       return randomMain()
     }
@@ -34,7 +37,18 @@ function showRecipe(event) {
     else if(inputDessert.checked) {
       return randomDessert()
     }
+    else if(inputEntireMeal.checked){
+      return randomEntireMeal()
+    }
 };
+
+function clearMainDish() {
+  returnMsg.innerText = ''
+}
+
+function clearEntireMeal() {
+  combo.innerText = ''
+}
 
 function showMsg() {
   shouldMake.classList.remove('hidden')
@@ -57,6 +71,14 @@ function randomSide() {
 function randomDessert() {
   showMsg()
   returnMsg.innerText = desserts[getRandomIndex(desserts)];
+};
+
+function randomEntireMeal() {
+ showMsg()
+ combo.innerText = `
+  ${mainDishes[getRandomIndex(mainDishes)]} with a side of
+  ${sides[getRandomIndex(sides)]}, and
+  ${desserts[getRandomIndex(desserts)]} for dessert!`
 };
 
 function getRandomIndex(array) {

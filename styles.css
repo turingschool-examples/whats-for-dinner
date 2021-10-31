@@ -35,11 +35,16 @@ red - #ee5253
 
 .add-a-recipe-button {
   margin: 20px;
-  margin-left: 650px;
+  margin-left: 0px;
   padding: 10px;
   border-radius: 5px;
   border: 0px;
+  box-shadow: 5px 10px 18px #0a0909;
 
+}
+.add-a-recipe-button:active {
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .view-favorites-button {
@@ -47,6 +52,13 @@ red - #ee5253
   padding: 10px;
   border-radius: 5px;
   border: 0px;
+  box-shadow: 5px 10px 18px #0a0909;
+
+}
+
+.view-favorites-button:active {
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 /* ---- button styling ---- */
@@ -73,6 +85,13 @@ red - #ee5253
   background-color: #0fb9b1;
   font-size: 18px;
   margin-top: 1vw;
+  box-shadow: 5px 10px 18px #0a0909;
+
+}
+
+.lets-cook-button:active {
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 /* ------- Two box section ------- */
@@ -179,6 +198,13 @@ red - #ee5253
   position: absolute;
   margin-left: 2vw;
   margin-bottom: 1vw;
+  box-shadow: 5px 10px 18px #0a0909;
+
+}
+
+.favorite-button:active {
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .clear-button {
@@ -192,6 +218,13 @@ red - #ee5253
   bottom: 0;
   position: absolute;
   background-color: #95a5a6;
+  box-shadow: 5px 10px 18px #0a0909;
+
+}
+
+.clear-button:active {
+transform: scale(0.98);
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 
@@ -251,6 +284,7 @@ red - #ee5253
   right: 0;
   bottom: 0;
   position: absolute;
+  box-shadow: 5px 10px 18px #0a0909;
   /* background-color: #95a5a6; */
   /* margin: 0px;
   border-radius: 5px;

@@ -2,9 +2,32 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <img class="background-image" src="assets/burger-friends.jpg" alt="Overhead View of Lunch With Friends">
   </head>
   <body>
-    
+    <nav class="navigation-bar">
+      <p class="whats-for-dinner">What's for Dinner?</p>
+      <button class="add-a-recipe-button hidden">ADD A RECIPE</button>
+    </nav>
+    <main>
+      <section class="containers">
+        <section class="container-one">
+          <h1 class="what-are-you-looking-for">What are you looking for?</h1>
+          <form>
+            <label class="side-label" for="side"><input class="side-button" name="choice" type="radio" id="side">Side</label>
+            <label class="main-dish-label" for="main-dish"><input class="main-dish-button" name="choice" type="radio" id="main-dish">Main Dish</label>
+            <label class="dessert-label" for="dessert"><input class="dessert-button" name="choice" type="radio" id="dessert">Dessert</label>
+            <label class="entire-meal-label" for="entire-meal"><input class="entire-meal-button" name="choice" type="radio" id="entire-meal">Entire Meal</label>
+            <button class="lets-cook-btn">LET'S COOK!</button>
+          </form>
+        </section>
+        <section class="container-two">
+          <img class="cookpot" src="assets/cookpot.svg" alt="Cookpot">
+          <section class="dish-output"></section>
+          <button class="clear-btn hidden">CLEAR</button>
+        </section>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

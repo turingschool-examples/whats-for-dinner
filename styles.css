@@ -13,7 +13,9 @@ red - #ee5253
     margin: 0;
 }
 body {
-    background-image: url(assets/burger-friends.jpg);
+
+    background-image: url("assets/burger-friends.jpg");
+
     background-repeat: no-repeat;
     background-size: cover;
 }

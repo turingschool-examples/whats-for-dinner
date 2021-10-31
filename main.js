@@ -34,21 +34,6 @@ function clearRadioBtns() {
 };
 
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-};
-
-
-function show(element) {
-  element.classList.remove("hidden")
-};
-
-
-function hide(element) {
-  element.classList.add("hidden")
-};
-
-
 function showNewMenuItem() {
   hide(cookpot);
   show(youShouldMake);
@@ -67,11 +52,11 @@ function returnEmptyBox() {
 
 function generateNewMenuItem() {
   if (sideRadioBtn.checked) {
-    randomFoodPlacement.innerText = sides[getRandomIndex(sides)];
+    displayDish(sides);
   } else if (mainDishRadioBtn.checked) {
-    randomFoodPlacement.innerText = mains[getRandomIndex(mains)];
+    displayDish(mains);
   } else if (dessertRadioBtn.checked) {
-    randomFoodPlacement.innerText = desserts[getRandomIndex(desserts)];
+    displayDish(desserts);
   } else if (entireMealBtn.checked) {
     randomFoodPlacement.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
   };
@@ -79,9 +64,28 @@ function generateNewMenuItem() {
 };
 
 
+function displayDish(dish) {
+  randomFoodPlacement.innerText = dish[getRandomIndex(dish)]
+};
+
 
 function enableLetsCookBtn() {
   if (sideRadioBtn.checked || mainDishRadioBtn.checked || dessertRadioBtn.checked || entireMealBtn.checked) {
     letsCookBtn.removeAttribute('disabled');
   }
+};
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
+
+
+function show(element) {
+  element.classList.remove("hidden")
+};
+
+
+function hide(element) {
+  element.classList.add("hidden")
 };

@@ -33,6 +33,7 @@ function addRecipe(event){
   display(clearButton);
   hide(addSection);
   hide(youShouldMake);
+  display(youAdded);
   if (userCategory.value === "side") {
     sides.push(userRecipe.value);
     dishPosition.innerText = sides[sides.length - 1];
@@ -43,9 +44,9 @@ function addRecipe(event){
     desserts.push(userRecipe.value);
     dishPosition.innerText = desserts[desserts.length - 1];
   } else {
+    hide(youAdded)
     return recipePosition.innerText = "Oh no!!! Please type side, main or dessert for recipe type."
   }
-  display(youAdded);
 }
 
 
@@ -71,10 +72,9 @@ function findRandomRecipe() {
         recipePosition.innerText = `${mains[getRandom(sides)]} with a side of ${sides[getRandom(sides)]} and ${desserts[getRandom(sides)]} for dessert!`;
     }
   } else {
-  recipePosition.innerText = `Please make a selection`;
+    recipePosition.innerText = `Please make a selection`;
+  }
 }
-}
-
 
 
 function display(element) {
@@ -87,6 +87,10 @@ function hide(element) {
 
 function addBorder() {
   letsCookButton.classList.add('borders');
+}
+
+function removeBorder() {
+  letsCookButton.classList.remove('borders');
 }
 
 function clearMeal() {
@@ -116,6 +120,7 @@ function clearRecipe() {
   hide(clearButton);
   hide(youShouldMake);
   hide(youAdded);
+  removeBorder();
 }
 
 

@@ -9,6 +9,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.hidden {
+  display: none;
+}
+
 .main-page {
   display: flex;
   justify-content: space-around;
@@ -31,8 +35,6 @@ h3 {
   width: 100%;
   position: relative;
   top: 50px;
-
-
 }
 
 #left-box {
@@ -48,16 +50,6 @@ h2 {
   position: relative;
   left: 10%;
 }
-
-#side {
-
-}
-
-
-input, label {
-  vertical-align: top;
-}
-
 
 
 .lets-cook-button {
@@ -85,11 +77,14 @@ input, label {
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 
 }
 
-.clear {
+.clear-button {
   display: block;
   background-color: #95a5a6;
   width: 15%;

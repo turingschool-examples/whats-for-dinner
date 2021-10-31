@@ -78,10 +78,9 @@ span {
   position: absolute;
   margin: 270px 0px 0px 280px;
   height: 6px;
-  padding: 14px 10px;
+  padding: 14px;
   border-color: rgba(225, 225, 225, .9);
   background-color: #95a5a6;
-  justify-content: center;
   color: rgba(225, 225, 225, .9);
 }
 

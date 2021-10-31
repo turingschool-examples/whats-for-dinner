@@ -52,10 +52,12 @@ If user doesn't type one of the three recognized dish types, an error will appea
 
 
 ## How to install and use :   
-in your terminal run:    
+in your terminal run:
+```   
 git clone git@github.com:GraceGardner/whats-for-dinner.git
 cd whats-for-dinner    
 open index.html      
+```
 
 ## Contributors :  
 Repository Contributors :       

@@ -1,11 +1,17 @@
-// class Food {
-//   constructor(side, mainDish, dessert) {
-//     this.id = Date.now();
-//     this.side = side;
-//     this.main = mainDish;
-//     this.dessert = dessert;
-//   }
-// }
+
+var sides = [
+  'Miso Glazed Carrots',
+  'Coleslaw',
+  'Garden Salad',
+  'Crispy Potatoes',
+  'Sweet Potato Tots',
+  'Coconut Rice',
+  'Caeser Salad',
+  'Shrimp Summer Rolls',
+  'Garlic Butter Mushrooms',
+  'Hush Puppies',
+];
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -19,33 +25,40 @@ var entireMealRButton = document.querySelector('.entire-meal-radio-button');
 var letsCookButton = document.querySelector('.lets-cook-button');
 var cookpot = document.querySelector('.cookpot-logo');
 
-var mealText = document.querySelector('.new-meal');
+var newMeal = document.querySelector('.random-dish');
+var openText = document.querySelector('.new-meal');
 
 var clearButton = document.querySelector('.clear-button');
 
 
 letsCookButton.addEventListener('click', randomMeal);
 
-function randomMeal () {
-  mealText.innerHTML = ``;
-  if (sideRButton.checked === true) {
-    mealText.innerText = getRandomIndex(sides);
-  } else if (mainDishRButton.checked === true) {
-    mealText.innerText = getRandomIndex(mains);
-  } else if (dessertRButton.checked === true) {
-    mealText.innerText = getRandomIndex(desserts);
-  } else if (entireMealRButton.checked === true) {
-    mealText.innerHTML +=
+function randomMeal() {
+  showRandomMeal();
+  newMeal.innerText = ``;
+  if (sideRButton.checked) {
+    newMeal.innerText = sides[getRandomIndex(sides)];
+    //return sides;
+  } else if (mainDishRButton.checked) {
+    newMeal.innerText = mains[getRandomIndex(mains)];
+  } else if (dessertRButton.checked) {
+    newMeal.innerText = desserts[getRandomIndex(desserts)];
+  } else if (entireMealRButton.checked) {
+    newMeal.innerHTML +=
     `<p class="random-dish">You should make:</p>
-    <p class="random-meal">${getRandomIndex(mains)} with a side of ${getRandomIndex(sides)} and ${getRandomIndex(desserts)} for dessert!</p>`
+    <p class="random-meal">${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!</p>`
   }
+  //showRandomMeal();
 }
 
-function randomMeal() {
+function showRandomMeal() {
   cookpot.classList.add('hidden');
-  mealText.classList.remove('hidden');
-  clearButton.classList.remove('hidden');
+  openText.classList.remove('hidden');
+
 }
+
+
+
 
 // function randomSide() {
 //   ('button').ready(function() {
@@ -53,10 +66,6 @@ function randomMeal() {
 //   })
 //   side.innerText = sides[getRandomIndex(sides)];
 // };
-
-
-
-
 
 //document.getElementById("#side").checked;
 
@@ -80,4 +89,11 @@ function randomMeal() {
 
 
 
-//-
+// class Food {
+//   constructor(side, mainDish, dessert) {
+//     this.id = Date.now();
+//     this.side = side;
+//     this.main = mainDish;
+//     this.dessert = dessert;
+//   }
+// }

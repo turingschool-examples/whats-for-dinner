@@ -100,7 +100,6 @@ h1 {
   margin: 1.2vw;
   margin-left: 4vw;
   font-family: 'Roboto', sans-serif;
-
   display: flex;
   justify-content: row;
   padding: 0;
@@ -135,7 +134,11 @@ h1 {
 #submit-button:hover {
   background-color: #14938f;
   opacity: 1;
+}
 
+#submit-button:disabled {
+  background-color: #0fb9b1;
+  opacity: .5;
 }
 
 #user-output-section {
@@ -225,7 +228,7 @@ h1 {
   }
 }
 
-/* Lines 230-278 were taken from https://loading.io/css/. I mostly understand the code, but didn't write it and I can't reproduce it on my own. */
+/* Lines 233-281 were taken from https://loading.io/css/. I mostly understand the code, but didn't write it and I can't reproduce it on my own. */
 
 .lds-ripple {
   display: inline-block;

@@ -41,13 +41,14 @@ var sideRadioInput = document.querySelector('#side');
 var mainRadioInput = document.querySelector('#main');
 var dessertRadioInput = document.querySelector('#dessert');
 var entireMealRadioInput = document.querySelector('#entire-meal');
-var letsCookButton = document.querySelector('button');
+var letsCookButton = document.querySelector('.cook');
 var potPic = document.querySelector('img');
 var mealPicked = document.querySelector('.meal-picked');
 var clearButton = document.querySelector('.clear-button');
 
 letsCookButton.addEventListener('click', chooseRecipe);
 clearButton.addEventListener('click', clearRecipeForm);
+window.addEventListener('load', showPot)
 
 function chooseRecipe() {
 insertMealName();
@@ -56,18 +57,22 @@ showClearButton();
 removePot();
 }
 
+function showPot() {
+  potPic.classList.remove('hidden');
+}
+
 function insertMealName() {
   var recipeName = ""
  if (sideRadioInput.checked) {
-   recipeName = getRandomMeal(side);
+   recipeName = getRandomMeal(side) + "!";
  } else if (mainRadioInput.checked) {
-    recipeName = getRandomMeal(main);
+    recipeName = getRandomMeal(main) + "!"
  } else if (dessertRadioInput.checked) {
-      recipeName = getRandomMeal(dessert);
+      recipeName = getRandomMeal(dessert) + "!"
  } else if (entireMealRadioInput.checked) {
       recipeName =
        `<p class="chosen-meal">${getRandomMeal(side)} with a side of
-       ${getRandomMeal(main)} and ${getRandomMeal(dessert)}</p>`
+       ${getRandomMeal(main)} and ${getRandomMeal(dessert)}!</p>`
  } else {
        recipeName = throwError();
      }

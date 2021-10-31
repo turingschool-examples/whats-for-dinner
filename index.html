@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-
+<html class="everything">
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <nav class='header'>
-
-        <h1>
+        <h1 class="what-dinner">
         What's for Dinner?
         <button id='add-recipe-button'>Add a Recipe</button>
         </h1>
-
     </nav>
   </head>
   <body>
-    <form id="boxes">
-      <div class="recipe-form">
-          <p><h2>What are you looking for?</h2></p>
+      <div class="recipe-form select-dish-box">
+        <form id="boxes">
+          <p><h2>What are you looking for?<span class="red-star">*</span></h2></p>
           <p><input type="radio" id="side" value="side" name="select-option">
           <label for="side">Side</label></p>
           <p><input type="radio" id="main-dish" value="main-dish" name="select-option" checked>
@@ -29,17 +27,21 @@
             <br>
             <button id='lets-cook-button'>Let's Cook!</button>
           </p>
+        </form>
       </div>
           <pre id="log">
           </pre>
       <div class ="recipe-box">
         <img class="cook-pot-img" src="assets/cookpot.svg" alt="cookpot">
-        <p class="you-should-make hidden">You should make:</p> 
-        <p class="return-msg"></p>
+        <br /><br /><br />
+        <p class="you-should-make hidden">You should make:</p>
+        <div class="loader"></div>
+
+        <p class="return-msg"><p class="combo"></p></p>
         <!-- <button id="clear-button">CLEAR</button> -->
+
       </div>
       <div class="result"></div>
-  </form>
   <img class="background" src="./assets/burger-friends.jpg">
   <script src="./main.js"></script>
   <script src="./data.js"></script>

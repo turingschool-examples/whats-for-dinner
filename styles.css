@@ -7,29 +7,38 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-html{
-  diplay:
+.everything{
+  margin: 0%;
 }
+
 body{
   font-family: 'Roboto', sans-serif;
-  margin: 0;
+  overflow-y: hidden;
 }
 
 .background{
-  position: absolute;
+  margin: 0;
+  position: fixed;
+  margin-left: -200px;
   background-size: cover;
   object-fit: contain;
-  width: 100%;
+  width: 150%;
   z-index: -5;
 }
 
 .header{
-  position: fixed;
+  margin-left: -.6%;
+  position: absolute;
+  top: 0%;
   background-color: #0fb9b1;
   text-align: left;
   font-size: 20px;
   height: 15%;
   width: 200%;
+}
+
+.what-dinner{
+  margin-left: 1%;
 }
 
 button{
@@ -42,6 +51,7 @@ button{
 
 #add-recipe-button{
   margin-left: 30%;
+  font-size: 20px;
   color: #616161;
   border-radius: 10px;
   top: 10%;
@@ -114,9 +124,54 @@ button{
 }
 
 .you-should-make{
-  
+  text-align: center;
+  vertical-align: middle;
+  font-style: italic;
+  font-size: 20px;
 }
 
+.return-msg{
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: 40px;
+}
+
+.combo{
+  font-size: 30px;
+  position: relative;
+  bottom: 20%;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: sub;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.red-star{
+  color: #ee5253;
+}
+
+
+.loader{
+  position: relative;
+  margin-left: 30%;
+  border: 20px solid #f3f3f3;
+  border-top: 20px solid #ee5253;
+  border-bottom: 20px solid #0fb9b1;
+  border-left: 20px solid #E5B045;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes spin{
+  0% { transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
 /* #clear-button{
   position: relative;
   padding: 5%;

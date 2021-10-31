@@ -1,5 +1,3 @@
-var selectedRecipe ='';
-
 var recipePosition = document.querySelector(".recipe-position");
 var sideSelector = document.getElementById("side");
 var mainDishSelector = document.getElementById("main-dish");
@@ -10,7 +8,8 @@ var youShouldMake = document.querySelector(".you-should-make");
 var userCategory = document.querySelector(".recipe-type");
 var userRecipe = document.getElementById("recipe-name");
 var addSection = document.querySelector(".add-recipe-section");
-var dishPosition = document.querySelector(".single-dish")
+var dishPosition = document.querySelector(".single-dish");
+var youAdded = document.querySelector(".you-have-added");
 
 var letsCookButton = document.querySelector(".lets-cook");
 var clearButton = document.querySelector(".clear");
@@ -20,69 +19,59 @@ var addNewButton =document.querySelector(".add-new");
 clearButton.addEventListener('click', clearRecipe);
 addRecipeButton.addEventListener('click', displayForm);
 letsCookButton.addEventListener('click', displayRecipe);
-addNewButton.addEventListener('click', addRecipe)
+addNewButton.addEventListener('click', addRecipe);
 
 function displayForm() {
   addSection.classList.remove('hidden');
 }
 
 function addRecipe(event){
-  var newFood =``;
   event.preventDefault();
-  hideCookPot();
-  displayClearButton();
+  clearMeal();
+  clearDish();
+  hide(cookPot);
+  display(clearButton);
   hide(addSection);
+  hide(youShouldMake);
   if (userCategory.value === "side") {
     sides.push(userRecipe.value);
     dishPosition.innerText = sides[sides.length - 1];
-  } else if (userCategory.value = "main dish") {
+  } else if (userCategory.value === "main") {
     mains.push(userRecipe.value);
     dishPosition.innerText = mains[mains.length - 1];
-  } else if (userCategory.value = "dessert"){
+  } else if (userCategory.value === "dessert"){
     desserts.push(userRecipe.value);
     dishPosition.innerText = desserts[desserts.length - 1];
+  } else {
+    return recipePosition.innerText = "Oh no!!! Please type side, main or dessert for recipe type."
   }
+  display(youAdded);
 }
 
 
 function displayRecipe() {
+    hide(cookPot);
     findRandomRecipe();
-    hideCookPot();
-    displayClearButton();
+    display(clearButton);
     addBorder();
 }
 
 function findRandomRecipe() {
+    clearMeal()
+    clearDish();
+    display(youShouldMake);
   if (sideSelector.checked){
     dishPosition.innerText = `${sides[getRandom(sides)]}`;
-    recipePosition.innerText =``;
   } else if (mainDishSelector.checked) {
     dishPosition.innerText = `${mains[getRandom(sides)]}`;
-    recipePosition.innerText =``;
   } else if (dessertSelector.checked){
     dishPosition.innerText = `${desserts[getRandom(sides)]}`;
-    recipePosition.innerText =``;
   } else if (entireMealSelector.checked){
     recipePosition.innerText = `${mains[getRandom(sides)]} with a side of ${sides[getRandom(sides)]} and ${desserts[getRandom(sides)]} for dessert!`;
-    dishPosition.innerText =``;
   }
 }
 
-function hideCookPot() {
-  cookPot.classList.add('hidden');
-}
 
-function hideClearButton() {
-  clearButton.classList.add('hidden');
-}
-
-function hideYouMake() {
-  youShouldMake.classList.add('hidden');
-}
-
-function displayYouMake() {
-  youShouldMake.classList.remove('hidden');
-}
 
 function display(element) {
   element.classList.remove('hidden');
@@ -93,17 +82,23 @@ function hide(element) {
 }
 
 function addBorder() {
-  letsCookButton.classList.add('borders')
+  letsCookButton.classList.add('borders');
 }
 
-function showCookPot() {
-  cookPot.classList.remove('hidden');
+function clearMeal() {
+  recipePosition.innerText =``;
 }
+
+function clearDish() {
+  dishPosition.innerText =``;
+}
+
+
 
 function displayClearButton() {
-  hideCookPot();
-  clearButton.classList.remove('hidden');
-  displayYouMake();
+  hide(cookPot);
+  display(clearButton);
+  display(youShouldMake);
 }
 
 function getRandom(meal) {
@@ -111,10 +106,11 @@ function getRandom(meal) {
 }
 
 function clearRecipe() {
-  recipePosition.innerText =  ``;
-  showCookPot();
-  hideClearButton();
-  hideYouMake();
+  recipePosition.innerText = ``;
+  dishPosition.innerText=``;
+  display(cookPot);
+  hide(clearButton);
+  hide(youShouldMake);
 }
 
 

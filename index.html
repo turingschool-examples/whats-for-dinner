@@ -13,30 +13,30 @@
         <div>
           <h1>What are you looking for?<span class="star">*</span></h1><br>
           <input class="radio" type="radio" id="side" name="meal-type" value="side">
-          <label for="side">Side</label><br>
+          <label class="radio-style" for="side">Side</label><br>
           <input class="radio" type="radio" id="main-dish" name="meal-type" value="main-dish">
-          <label for="main-dish">Main Dish</label><br>
+          <label class="radio-style" for="main-dish">Main Dish</label><br>
           <input class="radio" type="radio" id="dessert" name="meal-type" value="dessert">
-          <label for="dessert">Dessert</label><br>
+          <label class="radio-style" for="dessert">Dessert</label><br>
           <input class="radio"type="radio" id="entire-meal" name="meal-type"  value="entire-meal">
-          <label for="entire-meal">Entire Meal</label><br>
+          <label class="radio-style" for="entire-meal">Entire Meal</label><br>
           <button class="lets-cook">LET'S COOK!</button>
         </div>
       </section>
       <section class="food-value">
         <h3 class='you-should-make hidden'>You should make :</h3>
-        <h3 class='you-have-added'>You have added :</h3>
+        <h3 class='you-have-added hidden'>You have added :</h3>
         <h4 class="single-dish"></h4>
         <h4 class="recipe-position"></h4>
         <img class="cook-pot" src="./assets/cookpot.svg">
         <button class="clear hidden">CLEAR</button>
       </section>
       <form class="add-recipe-section hidden">
-        <label for=recipe-category>Recipe Type:</label>
+        <label class="form-position" for=recipe-category>Recipe Type:</label>
         <input class="recipe-type" type="text" id="recipe-category"/>
-        <label for=recipe-name>Recipe Name:</label>
+        <label class="form-position" for=recipe-name>Recipe Name:</label>
         <input class"user-recipe" type="text" id="recipe-name"/>
-        <button class="add-new">ADD NEW</button>
+        <button class="add-new form-position">ADD NEW</button>
       </form>
       <img class="background-image" src="./assets/burger-friends.jpg">
   </body>

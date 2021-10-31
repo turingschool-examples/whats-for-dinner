@@ -12,6 +12,7 @@ h2 {
 }
 
 h3 {
+
   position: fixed;
 }
 
@@ -32,6 +33,7 @@ body {
   display: inline-block;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  overflow-y: hidden;
 }
 
 section {
@@ -64,27 +66,23 @@ button {
   border-style: none;
 }
 
-.borders {
-  border: 1px solid blue;
-  outline: 1px solid white;
-}
 
 .you-should-make {
 position: absolute;
-left: 35%;
-top: 25%;
+left: 32%;
+top: 18%;
 }
 
 .you-have-added {
   position: absolute;
-  left: 35%;
+  left: 33%;
   top: 25%;
 }
 
 .recipe-position {
  position: absolute;
  left: 15%;
- top: 30%;
+ top: 20%;
  max-width: 70%;
 }
 
@@ -96,20 +94,31 @@ top: 25%;
   position: absolute;
   right: 3%;
   top: 3%;
-  padding-left: 3px;
-  padding-right:
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .cook-pot {
   width: 25%;
   padding-left: 35%;
-  padding-top: 20%;
+  padding-top: 8%;
 }
 
 .food-selector {
   position: absolute;
   left: 10%;
   top: 20%;
+}
+
+.lets-cook {
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color: #0fb9b1;
+}
+
+.borders {
+  border: 1px solid blue;
+  outline: 1px solid white;
 }
 
 .food-value {
@@ -120,9 +129,8 @@ top: 25%;
 
 .background-image {
   background-size: cover;
-  width: 100%;
+  width: 110%;
   object-fit: contain;
-  margin: 0;
 }
 
 .single-dish {
@@ -131,15 +139,18 @@ top: 25%;
   right: 5%;
 }
 
+.form-position {
+  margin-left: 2%;
+}
+
 .radio {
   margin-bottom: 5%
 }
 
-.lets-cook {
-  padding-left: 7%;
-  padding-right: 7%;
-  background-color: #0fb9b1;
+.radio-style {
+  font-size: 20px;
 }
+
 
 .hidden {
   display: none;
@@ -147,9 +158,16 @@ top: 25%;
 
 .clear {
   position: absolute;
-  right: 22%;
-  bottom: 26%;
+  right: 6%;
+  bottom: 8%;
   background-color: #95a5a6;
   color: white;
-  padding-left:
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.add-new {
+  background-color: #0fb9b1;
+  padding-left: 2%;
+  padding-right: 2%;
 }

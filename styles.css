@@ -63,8 +63,11 @@ img {
   height: 150px;
 }
 
+span {
+  color: #ee5253;
+}
 
-button {
+.cook {
  margin: 20px 2px;
  padding: 7px 55px;
  background-color: #0fb9b1;
@@ -83,7 +86,7 @@ button {
 }
 
 
-button:hover {
+.cook:hover {
   border-color: blue;
 }
 

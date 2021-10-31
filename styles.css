@@ -12,6 +12,11 @@ red - #ee5253
     box-sizing: border-box;
     margin: 0;
 }
+body {
+    background-image: url(assets/burger-friends.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 nav {
     background-color: #0fb9b1;
     font-family: 'Roboto', sans-serif;
@@ -20,4 +25,32 @@ nav {
 .navigation-title {
     padding: 13px 10px 10px 10px;
     margin-left: 10px;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: space-evenly;
+}
+article {
+    background-color: rgba(225, 225, 225, .9);
+    margin-top: 12%;
+    margin-left: 5%;
+    height: 300px;
+    width: 460px;
+    padding: 3%;
+    font-size: 1.50em;
+}
+.choice-box-title {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7%;
+    margin-bottom: 5%;
+}
+
+.red-star {
+    color: #ee5253;
+}
+
+ul {
+ padding-left: 20px
 }

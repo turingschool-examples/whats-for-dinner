@@ -4,7 +4,126 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+h2 {
+  position: relative;
+  left: 3%;
+}
 
+h3 {
+  position: fixed;
+}
+
+h4 {
+  font-size: 36px;
+  text-align: center;
+}
+
+nav {
+  background-color: #0fb9b1;
+  width: 100%;
+  margin: 0;
+  padding: .2%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: inline-block;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  background-color: rgba(225, 225, 225, .9);
+  width: 32%;
+  height: 45%;
+  padding-left: 2%;
+  padding-top: 4%;
+}
+
+form {
+  position: absolute;
+  left:10%;
+}
+
+button {
+  border-radius: 4px;
+  padding: 6px;
+  border-style: none;
+}
+
+.you-should-make {
+position: absolute;
+left: 35%;
+top: 25%;
+}
+
+.recipe-position {
+ position: absolute;
+ left: 15%;
+ top: 30%;
+ max-width: 70%;
+}
+
+.star {
+  color: #ee5253;
+}
+
+.add-a-recipe {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  padding-left: 3px;
+  padding-right:
+}
+
+.cook-pot {
+  width: 25%;
+  padding-left: 35%;
+  padding-top: 20%;
+}
+
+.food-selector {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.food-value {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+
+
+.background-image {
+  background-size: cover;
+  width: 100%;
+  object-fit: contain;
+  margin: 0;
+}
+
+.radio {
+  margin-bottom: 5%
+}
+
+.lets-cook {
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color: #0fb9b1;
+}
+
+.hidden {
+  display: none;
+}
+
+.clear {
+  position: absolute;
+  right: 22%;
+  bottom: 26%;
+  background-color: #95a5a6;
+  color: white;
+  padding-left:
+}

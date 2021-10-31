@@ -46,6 +46,10 @@ function displayCookpot() {
   cookpotImage.classList.remove('hidden');
 }
 
+function displayClearButton() {
+  clearButton.classList.remove('hidden');
+}
+
 function removeFoodOutput() {
   displayCookpot();
   dishOutput.innerHTML = ``;
@@ -53,6 +57,7 @@ function removeFoodOutput() {
 
 function displayFoodChoice(event) {
   event.preventDefault();
+  displayClearButton();
   hideCookpot();
   displayRandomFood();
   displayEntireMeal();

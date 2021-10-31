@@ -1,42 +1,49 @@
-<html>
+<!DOCTYPE html>
+
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <nav class='header'>
-      <h1 class="header-items">
+
+        <h1>
         What's for Dinner?
         <button id='add-recipe-button'>Add a Recipe</button>
-      </h1>
+        </h1>
+
     </nav>
   </head>
   <body>
-
-    <div id="boxes">
-
-      <div class="select-dish-box">
-        <p><h2>What are you looking for?</h2></p>
-        <p><input type="radio" id="side" value="side" name="select-option">
-        <label for="side">Side</label></p>
-        <p><input type="radio" id="main-dish" value="main-dish" name="select-option">
-        <label for="side">Main Dish</label></p>
-        <p><input type="radio" id="dessert" value="dessert" name="select-option">
-        <label for="side">Dessert</label></p>
-        <p><input type="radio" id="entire-meal" value="entire-meal" name="select-option">
-        <label for="side">Entire Meal</label>
-        </p>
-        <p>
-          <br>
-        <button id='lets-cook-button'>Let's Cook!</button>
-        </p>
+    <form id="boxes">
+      <div class="recipe-form">
+          <p><h2>What are you looking for?</h2></p>
+          <p><input type="radio" id="side" value="side" name="select-option">
+          <label for="side">Side</label></p>
+          <p><input type="radio" id="main-dish" value="main-dish" name="select-option" checked>
+          <label for="side">Main Dish</label></p>
+          <p><input type="radio" id="dessert" value="dessert" name="select-option">
+          <label for="side">Dessert</label></p>
+          <p><input type="radio" id="entire-meal" value="entire-meal" name="select-option">
+          <label for="side">Entire Meal</label>
+          </p>
+          <p>
+            <br>
+            <button id='lets-cook-button'>Let's Cook!</button>
+          </p>
       </div>
-
+          <pre id="log">
+          </pre>
       <div class ="recipe-box">
         <img class="cook-pot-img" src="assets/cookpot.svg" alt="cookpot">
+        <p class="you-should-make hidden">You should make:</p> 
+        <p class="return-msg"></p>
         <!-- <button id="clear-button">CLEAR</button> -->
       </div>
-  </div>
+      <div class="result"></div>
+  </form>
   <img class="background" src="./assets/burger-friends.jpg">
-  <script src="./src/main.js"></script>
+  <script src="./main.js"></script>
+  <script src="./data.js"></script>
+  <!-- <script src="./class.js"></script> -->
 </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

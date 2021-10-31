@@ -62,7 +62,7 @@ function addFavoriteRecipe() {
 function showFavorites() {
   mainPage.classList.add('hidden')
   showFavoritePage.classList.remove('hidden')
-  showFavoriteRecipes.classList.remove('hidden')
+  // showFavoriteRecipes.classList.remove('hidden')
   homeButton.classList.remove('hidden')
   displaySavedRecipesPage();
 }

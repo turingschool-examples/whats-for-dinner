@@ -174,10 +174,16 @@ red - #ee5253
   border-radius: 5px;
   border: 0px;
   padding: 8px 40px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  margin-left: 2vw;
+  margin-bottom: 1vw;
 }
 
 .clear-button {
-  margin: 0px;
+  margin-right: 2vw;
+  margin-bottom: 1vw;
   border-radius: 5px;
   border: 0px;
   padding: 8px 40px;
@@ -193,9 +199,10 @@ red - #ee5253
 
 .favorite-recipes-view {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   border: 2px solid red;
-  position: relative;
+  justify-content: space-around;
+  /* position: relative; */
 
 }
 
@@ -210,8 +217,18 @@ red - #ee5253
   justify-content: center;
   flex-direction: column;
   padding: 5%;
-  /* border: 10px solid pink; */
-  /* position: relative; */
+  position: relative;
+  /* display: flex;
+  margin-left: 0%;
+  margin-top: 3%;
+  height: 350px;
+  width: 400px;
+  background-color: rgba(225, 225, 225, .9);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+  position: relative; */
 }
 
 .recipe-list {
@@ -225,16 +242,27 @@ red - #ee5253
 }
 
 .home-button {
-  margin: 0px;
+  margin-right: 2vw;
+  margin-bottom: 1vw;
   border-radius: 5px;
   border: 0px;
   padding: 8px 40px;
   margin-top: 10px;
-  /* position: absolute; */
   right: 0;
   bottom: 0;
-  margin-right: 28vw;
-  margin-bottom: 1.5vw;
+  position: absolute;
+  /* background-color: #95a5a6; */
+  /* margin: 0px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 8px 40px;
+  margin-top: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0; */
+
+  /* margin-right: 28vw;
+  margin-bottom: 1.5vw; */
 }
 
 .hidden {

@@ -41,7 +41,3 @@ var desserts = [
 "Croissants",
 "Eclairs",
 ];
-
-
-
-module.exports = arrays;

@@ -152,7 +152,27 @@ span {
   color: white;
   border: 0;
   border-radius: 4px;
-  padding: 10px 12px 0px 12px;
+  padding: 12px 12px 0px 12px;
   margin-left: 38%;
   text-align: justify;
+}
+
+/* add recipe view */
+footer {
+  background: rgba(225, 225, 225, .9);
+  position: fixed;
+  bottom:0;
+  left:0;
+  right: 0;
+  padding: 1.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.add-new-recipe-button {
+  background-color: #0fb9b1;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
 }

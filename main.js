@@ -151,28 +151,20 @@ function displayNewRecipe() {
   cookPotView.classList.add('hidden');
   resultsView.classList.remove('hidden');
   addRecipeView.classList.add('hidden');
-  // recipeResult.innerText = userRecipeName.value;
-  // if (userRecipeType.value === "side") {
-  //   sides.push(userRecipeName.value)
-  // } else if (userRecipeType.value === "main dish") {
-  //   mains.push(userRecipeName.value)
-  // } else if (userRecipeType.value === "dessert") {
-  //   desserts.push(userRecipeName.value)
-  // } else {
-  //   recipeResult.innerText
-  // }
   addNewRecipe();
 }
 
 function addNewRecipe () {
-  recipeResult.innerText = userRecipeName.value;
   if (userRecipeType.value === "side") {
-    sides.push(userRecipeName.value)
+    sides.push(userRecipeName.value);
+    recipeResult.innerText = userRecipeName.value;
   } else if (userRecipeType.value === "main dish") {
-    mains.push(userRecipeName.value)
+    mains.push(userRecipeName.value);
+    recipeResult.innerText = userRecipeName.value;
   } else if (userRecipeType.value === "dessert") {
-    desserts.push(userRecipeName.value)
+    desserts.push(userRecipeName.value);
+    recipeResult.innerText = userRecipeName.value;
   } else {
-    recipeResult.innerText
+    recipeResult.innerText = `Sorry, ${userRecipeType.value} isn't available.`
   }
 }

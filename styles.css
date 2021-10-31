@@ -106,7 +106,7 @@ h1 {
 }
 
 #user-input-menu-header::after {
-  content: ' *';
+  content: '*';
   color: #ee5253;
 }
 
@@ -161,7 +161,7 @@ h1 {
 }
 
 #selection-output {
-  font-size: 4.5vh;
+  font-size: 4.2vh;
   font-family: 'Roboto', sans-serif;
   margin: .5vh 3vw .5vh 3vw;
   text-align: center;
@@ -180,8 +180,8 @@ h1 {
   font-size: 2vh;
   font-family: 'Roboto', sans-serif;
   position: absolute;
-  bottom: 6px;
-  right: 6px;
+  bottom: 15px;
+  right: 15px;
   background-color: #95a5a6;
   border-radius: 5px;
   border: none;
@@ -228,7 +228,7 @@ h1 {
   }
 }
 
-/* Lines 233-281 were taken from https://loading.io/css/. I mostly understand the code, but didn't write it and I can't reproduce it on my own. */
+/* Lines 233-281 and associated html were taken from https://loading.io/css/. I mostly understand the code, but didn't write it and I can't reproduce it on my own. */
 
 .lds-ripple {
   display: inline-block;

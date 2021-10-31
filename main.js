@@ -19,19 +19,19 @@ firstSelection.addEventListener('click', enableButton);
 secondSelection.addEventListener('click', enableButton);
 thirdSelection.addEventListener('click', enableButton);
 fourthSelection.addEventListener('click', enableButton);
-document.onload = buttonDisable();
+document.onload = disableButton();
 
 function show(element) {
   element.classList.remove('hidden');
-};
+}
 
 function hide(element) {
   element.classList.add('hidden');
-};
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-};
+}
 
 function getRandomFood(array) {
   return array[getRandomIndex(array)];
@@ -47,7 +47,7 @@ function findUserChoice() {
   } else if (fourthSelection.checked) {
     selectionOutput.innerText = `${getRandomFood(mainDishes)} with ${getRandomFood(sides)}, and ${getRandomFood(desserts)} for dessert!`;
   }
-};
+}
 
 function showAnimation() {
   show(loader);
@@ -55,7 +55,7 @@ function showAnimation() {
   setTimeout(function(){selectBasicFoodType()}, 1500);
 }
 
-function buttonDisable() {
+function disableButton() {
   submitButton.disabled = true;
 }
 
@@ -87,5 +87,7 @@ function clearResults() {
   hide(outputPrompt);
   hide(selectionOutput);
   hide(clearButton);
+  cookpot.classList.add('fade-in');
   show(cookpot);
+  disableButton();
 }

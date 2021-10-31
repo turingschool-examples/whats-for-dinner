@@ -20,6 +20,14 @@ var mainDishes = [
   "Yellow Dahl",
   "Burger",
   "Salad",
+  "Chicken Parmesean",
+  "Butternut Squash Soup",
+  "BBQ Chicken Burgers",
+  "Ramen",
+  "Empanadas",
+  "Chicken Fried Rice",
+  "Sheet Pan Fajitas",
+  "Margarita Pizza",
 ];
 
 var desserts = [

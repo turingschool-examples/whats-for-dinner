@@ -12,7 +12,7 @@ h2 {
 }
 
 h3 {
-
+  font-style: italic;
   position: fixed;
 }
 
@@ -61,6 +61,7 @@ form {
 }
 
 button {
+  font-size: 14px;
   border-radius: 4px;
   padding: 6px;
   border-style: none;
@@ -111,6 +112,7 @@ top: 18%;
 }
 
 .lets-cook {
+  margin-top: 5%;
   padding-left: 7%;
   padding-right: 7%;
   background-color: #0fb9b1;
@@ -144,7 +146,7 @@ top: 18%;
 }
 
 .radio {
-  margin-bottom: 5%
+  margin-bottom: 8%
 }
 
 .radio-style {

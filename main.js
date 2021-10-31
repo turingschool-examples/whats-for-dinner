@@ -57,18 +57,22 @@ function displayRecipe() {
 }
 
 function findRandomRecipe() {
-    clearMeal()
-    clearDish();
-    display(youShouldMake);
-  if (sideSelector.checked){
-    dishPosition.innerText = `${sides[getRandom(sides)]}`;
-  } else if (mainDishSelector.checked) {
-    dishPosition.innerText = `${mains[getRandom(sides)]}`;
-  } else if (dessertSelector.checked){
-    dishPosition.innerText = `${desserts[getRandom(sides)]}`;
-  } else if (entireMealSelector.checked){
-    recipePosition.innerText = `${mains[getRandom(sides)]} with a side of ${sides[getRandom(sides)]} and ${desserts[getRandom(sides)]} for dessert!`;
-  }
+  if (sideSelector.checked || mainDishSelector.checked || dessertSelector.checked || entireMealSelector.checked) {
+      clearMeal()
+      clearDish();
+      display(youShouldMake);
+      if (sideSelector.checked) {
+        dishPosition.innerText = `${sides[getRandom(sides)]}`;
+      } else if (mainDishSelector.checked) {
+        dishPosition.innerText = `${mains[getRandom(sides)]}`;
+      } else if (dessertSelector.checked){
+        dishPosition.innerText = `${desserts[getRandom(sides)]}`;
+      } else if (entireMealSelector.checked){
+        recipePosition.innerText = `${mains[getRandom(sides)]} with a side of ${sides[getRandom(sides)]} and ${desserts[getRandom(sides)]} for dessert!`;
+    }
+  } else {
+  recipePosition.innerText = `Please make a selection`;
+}
 }
 
 
@@ -111,6 +115,7 @@ function clearRecipe() {
   display(cookPot);
   hide(clearButton);
   hide(youShouldMake);
+  hide(youAdded);
 }
 
 

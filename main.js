@@ -45,13 +45,13 @@ function findUserChoice() {
 function showAnimation() {
   show(loader);
   hide(cookpot);
-  setTimeout(function(){selectBasicFoodType()}, 2000);
+  setTimeout(function(){selectBasicFoodType()}, 1500);
 }
 
 function timedSearch() {
+  event.preventDefault();
   hide(selectionOutput);
   hide(outputPrompt);
-  event.preventDefault();
   showAnimation();
 }
 

@@ -12,7 +12,6 @@ This app is a useful tool for choosing what to cook for dinner! You can generate
 
 2) When the user clicks on one of the radio buttons, the "Let's Cook!" button is enabled and changes to a darker, less opaque shade to let the user know that they may now click the button.
 
-
 <img width="1440" alt="Screen Shot 2021-10-31 at 3 09 13 PM" src="https://user-images.githubusercontent.com/65195952/139601403-45fa3ba6-c4ca-4867-a5bf-02114d028b49.png">
 
 3) When the user clicks the button, the cook pot on the right side disappears and a loading image appears for 1.5 seconds, to simulate searching for a recipe. The loading image then disappears and the recommendation fades in. A "Clear" button also appears at the bottom right side of the box.
@@ -23,7 +22,6 @@ This app is a useful tool for choosing what to cook for dinner! You can generate
 
 <img width="1440" alt="Screen Shot 2021-10-31 at 3 09 40 PM" src="https://user-images.githubusercontent.com/65195952/139601407-8fbbc4fa-9405-469f-90c0-03424d549c6c.png">
 
-
 5) The page is responsive to various screen sizes and orientations. When the user views the app on a screen in portrait layout, the boxes are stacked vertically, instead of horizontally.
 
 <img width="379" alt="Screen Shot 2021-10-31 at 3 12 24 PM" src="https://user-images.githubusercontent.com/65195952/139601409-47d9cf4d-8c62-40d2-906a-bcf6bfe0eab1.png">
@@ -31,7 +29,7 @@ This app is a useful tool for choosing what to cook for dinner! You can generate
 ## Contributors
 
 - Turing School of Software & Design Frontend Students
-- Phil Lewis
+   - Phil Lewis
 
 ## Future Feature Additions
 

@@ -4,22 +4,21 @@ var firstSelection = document.getElementById('first-item');
 var secondSelection = document.getElementById('second-item');
 var thirdSelection = document.getElementById('third-item');
 var fourthSelection = document.getElementById('fourth-item');
-var allChoices = document.getElementsByName('radio-button');
 var submitButton = document.getElementById('submit-button');
 var cookpot = document.getElementById('cookpot');
 var outputPrompt = document.getElementById('you-should-make');
-var selectionOutput = document.getElementById('selection-output');
+var selectedFood = document.getElementById('selection-output');
 var clearButton = document.getElementById('clear-selection-button');
 var loader = document.querySelector('#lds-ripple');
 var userInputSection = document.getElementById('user-input-section');
 
+document.onload = disableButton();
 submitButton.addEventListener('click', timedSearch);
 clearButton.addEventListener('click', clearResults);
 firstSelection.addEventListener('click', enableButton);
 secondSelection.addEventListener('click', enableButton);
 thirdSelection.addEventListener('click', enableButton);
 fourthSelection.addEventListener('click', enableButton);
-document.onload = disableButton();
 
 function show(element) {
   element.classList.remove('hidden');
@@ -29,30 +28,13 @@ function hide(element) {
   element.classList.add('hidden');
 }
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function fadeIn(element) {
+  element.classList.add('fade-in');
+  element.classList.remove('hidden');
 }
 
 function getRandomFood(array) {
-  return array[getRandomIndex(array)];
-}
-
-function findUserChoice() {
-  if (firstSelection.checked) {
-    selectionOutput.innerText = getRandomFood(sides) + "!";
-  } else if (secondSelection.checked) {
-    selectionOutput.innerText = getRandomFood(mainDishes) + "!";
-  } else if (thirdSelection.checked) {
-    selectionOutput.innerText = getRandomFood(desserts) + "!";
-  } else if (fourthSelection.checked) {
-    selectionOutput.innerText = `${getRandomFood(mainDishes)} with ${getRandomFood(sides)}, and ${getRandomFood(desserts)} for dessert!`;
-  }
-}
-
-function showAnimation() {
-  show(loader);
-  hide(cookpot);
-  setTimeout(function(){selectBasicFoodType()}, 1500);
+  return array[Math.floor(Math.random() * array.length)];
 }
 
 function disableButton() {
@@ -65,19 +47,34 @@ function enableButton() {
 
 function timedSearch() {
   event.preventDefault();
-  hide(selectionOutput);
   hide(outputPrompt);
-  showAnimation();
+  hide(selectedFood);
+  hide(clearButton);
+  show(loader);
+  hide(cookpot);
+  setTimeout(function(){selectBasicFoodType()}, 1500);
 }
 
 function selectBasicFoodType() {
-  hide(loader);
   findUserChoice();
+  hide(loader);
   hide(cookpot);
-  show(outputPrompt);
-  show(selectionOutput);
-  show(clearButton);
+  fadeIn(outputPrompt);
+  fadeIn(selectedFood);
+  fadeIn(clearButton);
 };
+
+function findUserChoice() {
+  if (firstSelection.checked) {
+    selectedFood.innerText = getRandomFood(sides) + "!";
+  } else if (secondSelection.checked) {
+    selectedFood.innerText = getRandomFood(mainDishes) + "!";
+  } else if (thirdSelection.checked) {
+    selectedFood.innerText = getRandomFood(desserts) + "!";
+  } else if (fourthSelection.checked) {
+    selectedFood.innerText = `${getRandomFood(mainDishes)} with ${getRandomFood(sides)}, and ${getRandomFood(desserts)} for dessert!`;
+  }
+}
 
 function clearResults() {
   firstSelection.checked = false;
@@ -85,9 +82,9 @@ function clearResults() {
   thirdSelection.checked = false;
   fourthSelection.checked = false;
   hide(outputPrompt);
-  hide(selectionOutput);
+  hide(selectedFood);
   hide(clearButton);
   cookpot.classList.add('fade-in');
-  show(cookpot);
+  fadeIn(cookpot);
   disableButton();
 }

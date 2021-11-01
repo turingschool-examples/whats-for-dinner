@@ -59,7 +59,11 @@ article {
 }
 
 .frame1-radio-button {
-  margin-bottom: 4%
+  margin-bottom: 4%;
+}
+
+.frame1-radio-button:after {
+  border-radius: 100%;
 }
 
 #cook-button {

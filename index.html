@@ -3,8 +3,62 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="background-image">
+    <div class="header-color">
+      <header class="header">
+        <h3 class="name-greeting">What's for dinner?</h3>
+        <button class="add-recipe-button">ADD A RECIPE</button>
+      </header>
+    </div>
+
+    <section class="main-view">
+      <div class="meal-form-color"></div>
+      <section class="meal-form-view">
+        <form class="meal-form">
+          <h2>What are you looking for?</h2>
+          <h4 class="validation-text hidden">Please choose an option</h4>
+          <div>
+            <input type="radio" id="side" name="food-option" value="side">
+            <label for="side">Side</label>
+          </div>
+          <div>
+            <input type="radio" id="main-dish" name="food-option" value="main-dish">
+            <label for="main-dish">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" id="dessert" name="food-option" value="dessert">
+            <label for="dessert">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" id="entire-meal" name="food-option" value="entire-meal">
+            <label for="entire-meal">Entire Meal</label>
+          </div>
+          <button type="submit" class="meal-option-button">Let's Cook!</button>
+        </form>
+      </section>
+      <section class="meal-view">
+        <h3>You should make:</h3>
+        <h5 class="meal-text"></h5>
+        <img src="/assets/cookpot.svg" alt="cookpot" class="cookpot-image ">
+        <button class="clear-button hidden">Clear</button>
+      </section>
+    </section>
+    <footer class="footer hidden">
+      <form class="form">
+        <label>Recipe Type:</label>
+        <select id="recipe-type" name="recipe-type">
+          <option value="side">Side</option>
+          <option value="main-dish">Main Dish</option>
+          <option value="dessert">Dessert</option>
+        </select>
+
+        <label>Recipe Name:</label>
+        <input type="text" id="recipe-name" name="recipe-name">
+        <button class="add-new-recipe-button">ADD NEW</button>
+      </form>
+    </footer>
     
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
 </html>

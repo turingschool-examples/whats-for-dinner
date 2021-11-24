@@ -31,7 +31,7 @@ function clearRadioBtns() {
   for (var i = 0; i < radioBtns.length; i++) {
     radioBtns[i].checked = false;
   }
-};
+}
 
 
 function showNewMenuItem() {
@@ -39,7 +39,7 @@ function showNewMenuItem() {
   show(youShouldMake);
   show(randomizedFoodItem);
   show(clearBtn)
-};
+}
 
 
 function returnEmptyBox() {
@@ -47,7 +47,7 @@ function returnEmptyBox() {
   hide(youShouldMake);
   hide(randomizedFoodItem);
   hide(clearBtn)
-};
+}
 
 
 function generateNewMenuItem() {
@@ -58,34 +58,38 @@ function generateNewMenuItem() {
   } else if (dessertRadioBtn.checked) {
     displayDish(desserts);
   } else if (entireMealBtn.checked) {
-    randomFoodPlacement.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
-  };
+    randomFoodPlacement.innerText =
+    `${mains[getRandomIndex(mains)]}
+    with a side of ${sides[getRandomIndex(sides)]}
+    and ${desserts[getRandomIndex(desserts)]} for dessert!`
+  }
   showNewMenuItem();
-};
+}
 
 
 function displayDish(dish) {
   randomFoodPlacement.innerText = dish[getRandomIndex(dish)]
-};
+}
 
 
 function enableLetsCookBtn() {
-  if (sideRadioBtn.checked || mainDishRadioBtn.checked || dessertRadioBtn.checked || entireMealBtn.checked) {
+  if (sideRadioBtn.checked || mainDishRadioBtn.checked ||
+    dessertRadioBtn.checked || entireMealBtn.checked) {
     letsCookBtn.removeAttribute('disabled');
   }
-};
+}
 
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-};
+}
 
 
 function show(element) {
   element.classList.remove("hidden")
-};
+}
 
 
 function hide(element) {
   element.classList.add("hidden")
-};
+}

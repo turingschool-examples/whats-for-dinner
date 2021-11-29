@@ -5,6 +5,99 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
 
+
+body {
+  background-image: url('https://github.com/StevieAmb/whats-for-dinner/blob/main/assets/burger-friends.jpg?raw=true');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto';
+}
+
+form {
+  margin: 1rem;
+}
+
+nav {
+  margin: 0px 0px 30px 0px;
+  background-color: #0fb9b1;
+  position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+input {
+  margin: 9px;
+}
+
+h1 {
+  font-style: bold;
+  padding: 1px;
+  margin-left: .5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.boxes {
+ background-color: rgba(225, 225, 225, .9);
+ width: 15%;
+ padding: 50px;
+ margin: 100px 150px 0px 30px;
+ float: left;
+}
+
+#empty-box {
+  justify-content: center;
+  width: 14vw;
+  height: 31.4vh;
+  display: flex;
+}
+
+img {
+  margin: 50px;
+  height: 150px;
+}
+
+span {
+  color: #ee5253;
+}
+
+.cook {
+ margin: 20px 2px;
+ padding: 7px 55px;
+ background-color: #0fb9b1;
+ border-radius: 4px;
+}
+
+.clear-button {
+  position: absolute;
+  margin: 270px 0px 0px 280px;
+  height: 6px;
+  padding: 14px;
+  border-color: rgba(225, 225, 225, .9);
+  background-color: #95a5a6;
+  color: rgba(225, 225, 225, .9);
+}
+
+
+.cook:hover {
+  border-color: blue;
+}
+
+.recipe-intro {
+font-size: 1rem;
+font-style: italic;
+
+}
+
+.chosen-meal {
+  font-size: 1.5rem;
+  font-style: bold;
+  width: 100%;
+  text-align: center;
+}

@@ -9,18 +9,15 @@ var side = [
 "Shrimp Summer Rolls"
 ];
 
-
-
-
 var dessert = [
 "Apple Pie",
-"Lemon Meringue Pie", 
+"Lemon Meringue Pie",
+"Macarons",
 "Black Forest Cake",
+"Macaroons",
 "Banana Bread",
+"Baklava",
+"Funfetti Cake",
 "Peach Cobbler",
 "Cheesecake",
-"Funfetti Cake",
-"Baklava"
-"Macarons",
-"Macaroons"
 ];

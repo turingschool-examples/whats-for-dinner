@@ -12,71 +12,51 @@ var clearButton = document.getElementById('clear-selection-button');
 var loader = document.querySelector('#lds-ripple');
 var userInputSection = document.getElementById('user-input-section');
 
-document.onload = disableButton();
-submitButton.addEventListener('click', timedSearch);
-clearButton.addEventListener('click', clearResults);
-firstSelection.addEventListener('click', enableButton);
-secondSelection.addEventListener('click', enableButton);
-thirdSelection.addEventListener('click', enableButton);
-fourthSelection.addEventListener('click', enableButton);
+const show = element => element.classList.remove('hidden');
 
-function show(element) {
-  element.classList.remove('hidden');
-}
+const hide = element => element.classList.add('hidden');
 
-function hide(element) {
-  element.classList.add('hidden');
-}
+const getRandomFood = array => array[Math.floor(Math.random() * array.length)];
 
-function fadeIn(element) {
+const disableButton = () => submitButton.disabled = true;
+
+const enableButton = () => submitButton.disabled = false;
+
+const fadeIn = element => {
   element.classList.add('fade-in');
   element.classList.remove('hidden');
 }
 
-function getRandomFood(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
-
-function disableButton() {
-  submitButton.disabled = true;
-}
-
-function enableButton() {
-  submitButton.disabled = false;
-}
-
-function timedSearch() {
+const timedSearch = event => {
   event.preventDefault();
   hide(outputPrompt);
   hide(selectedFood);
   hide(clearButton);
   show(loader);
   hide(cookpot);
+  disableButton();
   setTimeout(function(){selectBasicFoodType()}, 1500);
 }
 
-function selectBasicFoodType() {
+const selectBasicFoodType = () => {
   findUserChoice();
   hide(loader);
   hide(cookpot);
   fadeIn(outputPrompt);
   fadeIn(selectedFood);
   fadeIn(clearButton);
-};
-
-function findUserChoice() {
-  if (firstSelection.checked) {
-    selectedFood.innerText = getRandomFood(sides) + "!";
-  } else if (secondSelection.checked) {
-    selectedFood.innerText = getRandomFood(mainDishes) + "!";
-  } else if (thirdSelection.checked) {
-    selectedFood.innerText = getRandomFood(desserts) + "!";
-  } else if (fourthSelection.checked) {
-    selectedFood.innerText = `${getRandomFood(mainDishes)} with ${getRandomFood(sides)}, and ${getRandomFood(desserts)} for dessert!`;
-  }
+  enableButton();
 }
 
-function clearResults() {
+const findUserChoice = () => {
+  firstSelection.checked ? selectedFood.innerText = getRandomFood(sides) + "!"
+  : secondSelection.checked ? selectedFood.innerText = getRandomFood(mainDishes) + "!"
+  : thirdSelection.checked ? selectedFood.innerText = getRandomFood(desserts) + "!"
+  : fourthSelection.checked ? selectedFood.innerText = `${getRandomFood(mainDishes)} with ${getRandomFood(sides)}, and ${getRandomFood(desserts)} for dessert!`
+  : selectedFood.innerText = '';
+}
+
+const clearResults = () => {
   firstSelection.checked = false;
   secondSelection.checked = false;
   thirdSelection.checked = false;
@@ -84,7 +64,14 @@ function clearResults() {
   hide(outputPrompt);
   hide(selectedFood);
   hide(clearButton);
-  cookpot.classList.add('fade-in');
   fadeIn(cookpot);
   disableButton();
 }
+
+document.onload = disableButton();
+submitButton.addEventListener('click', timedSearch);
+clearButton.addEventListener('click', clearResults);
+firstSelection.addEventListener('click', enableButton);
+secondSelection.addEventListener('click', enableButton);
+thirdSelection.addEventListener('click', enableButton);
+fourthSelection.addEventListener('click', enableButton);

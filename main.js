@@ -48,69 +48,69 @@ var clearButton = document.querySelector('.clear-button');
 
 letsCookButton.addEventListener('click', chooseRecipe);
 clearButton.addEventListener('click', clearRecipeForm);
-window.addEventListener('load', showPot)
+window.addEventListener('load', function() {
+  show([potPic]);
+})
 
-function chooseRecipe() {
-insertMealName();
-stopButton();
-showClearButton();
-removePot();
+const chooseRecipe = () => {
+  insertMealName();
+  stopButton();
+  show([clearButton]);
+  hide([potPic]);
 }
 
-function showPot() {
-  potPic.classList.remove('hidden');
+const clearRecipeForm = () => {
+  mealPicked.innerHTML = "";
+  hide([clearButton]);
+  show([potPic]);
 }
 
-function insertMealName() {
-  var recipeName = ""
- if (sideRadioInput.checked) {
-   recipeName = getRandomMeal(side) + "!";
- } else if (mainRadioInput.checked) {
-    recipeName = getRandomMeal(main) + "!"
- } else if (dessertRadioInput.checked) {
-      recipeName = getRandomMeal(dessert) + "!"
- } else if (entireMealRadioInput.checked) {
-      recipeName =
-       `<p class="chosen-meal">${getRandomMeal(side)} with a side of
-       ${getRandomMeal(main)} and ${getRandomMeal(dessert)}!</p>`
- } else {
-       recipeName = throwError();
-     }
+const insertMealName = () => {
+  const recipeButtons = []
+  var recipeName = "";
+   if (sideRadioInput.checked) {
+    recipeName = getRandomMeal(side) + "!";
+  } else if (mainRadioInput.checked) {
+    recipeName = getRandomMeal(main) + "!";
+  } else if (dessertRadioInput.checked) {
+    recipeName = getRandomMeal(dessert) + "!";
+  } else if (entireMealRadioInput.checked) {
+    recipeName =
+    `<p class="chosen-meal">${getRandomMeal(side)} with a side of
+    ${getRandomMeal(main)} and ${getRandomMeal(dessert)}!</p>`
+  } else {
+    recipeName = throwError();
+  }
 mealPicked.innerHTML = `<p class="recipe-intro">You Should Make:</p>
 <p class="chosen-meal">${recipeName}</p>`;
 }
-function getRandomMeal(mealType) {
+
+const getRandomMeal = (mealType) => {
   return mealType[getRandomIndex(mealType)];
 }
 
-function stopButton() {
+const stopButton = () => {
   if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked) {
    letsCookButton.disabled = true;
- }
+  }
    letsCookButton.disabled = false;
 }
 
-function throwError() {
+const throwError = () => {
  if (!sideRadioInput.checked && !mainRadioInput.checked && !dessertRadioInput.checked && !entireMealRadioInput.checked) {
      recipeName = `You need to select an option!`;
      return recipeName;
   }
 }
 
-function showClearButton() {
-  clearButton.classList.remove('hidden');
+const show = (elements) => {
+  elements.forEach(element => element.classList.remove('hidden'));
 }
 
-function removePot() {
-  potPic.classList.add('hidden');
+const hide = (elements) => {
+  elements.forEach(element => element.classList.add('hidden'));
 }
 
-function getRandomIndex(array) {
+const getRandomIndex = (array) => {
   return Math.floor(Math.random() * array.length);
-}
-
-function clearRecipeForm() {
-  mealPicked.innerHTML = "";
-  clearButton.classList.add('hidden');
-  potPic.classList.remove('hidden');
 }

@@ -8,3 +8,132 @@ red - #ee5253
 
 */
 
+/* * {
+  border: solid 5px yellow;
+} */
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main {
+  /* border: solid 10px black; */
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.asterisk {
+  color: #ee5253;
+}
+
+.hidden {
+  display: none;
+}
+
+.Nav {
+  /* border: solid 5px magenta; */
+  background-color: #0fb9b1;
+  width: 100vw;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10px; */
+}
+
+.Nav-Title {
+  /* border: solid 5px yellow; */
+  width: 500px;
+}
+
+.Whats-For-Dinner {
+  padding-left: 20px;
+}
+
+.Nav-Button-Location {
+  /* border: solid 5px blue; */
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.Nav-Button {
+  border: hidden;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.Looking-For {
+  /* border: solid 5px blue; */
+  background-color: rgba(225, 225, 225, .9);
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px;
+  padding: 20px;
+}
+
+.Recipe {
+  /* border: solid 5px blue; */
+  background-color: rgba(225, 225, 225, .9);
+  height: 300px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  padding: 20px;
+}
+
+.CookPot {
+  height: 150px;
+  width: 150px;
+}
+
+.Form-Title {
+  /* border: solid 5px black; */
+  display: flex;
+  padding-left: 10px;
+}
+
+.Form {
+  /* border: solid 5px red; */
+  padding-left: 10px;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  /* align-content: flex-start; */
+}
+
+.LC-Button-Location {
+  /* border: solid 5px green; */
+  width: 250px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  border: hidden;
+  width: 175px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

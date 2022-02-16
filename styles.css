@@ -1,35 +1,66 @@
-body {
-  background-image: url("https://user-images.githubusercontent.com/70342126/154170960-bb92f196-cf3a-44d5-8c89-ac49e109bb11.png");
+.background {
+  background-image: url("./assets/burger-friends.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header {
+  font-family: 'Roboto', sans-serif;
   background-color: #0fb9b1;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+
 }
 
-.course-selection,
-.ice-box {
-  background-color: grey;
+.course-selection {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  border: solid 1px black;
   display: flex;
     align-items: right;
     justify-content: space-evenly;
     flex-direction: column;
 }
 
-.boil-point {
-  width :50%;
-  margin-left: 75px;
-}
-
-.menu,
-.stove {
-  background-color: white;
-  width: 50%;
+.ice-box {
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 50px;
+  width: auto;
   height: 300px;
   border: solid 1px black;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.boil-point {
+  width: 40%;
+  margin-left: 50px;
+}
+
+.menu {
+  margin: auto;
+  margin-top: 50px;
+  width: 75%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #0fb9b1;
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
 }
 /* font-family: 'Roboto', sans-serif;
 

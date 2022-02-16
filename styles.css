@@ -1,3 +1,31 @@
+nav {
+  max-width: auto;
+  display: flex;
+  background-color: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+body {
+  background-size: cover;
+  margin: 0px;
+}
+
+/* .box-container {
+  background-color: white;
+  opacity: 0.7;
+  display: flex;
+} */
+
+
+
+
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
@@ -7,4 +35,3 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-

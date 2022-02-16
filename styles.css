@@ -8,9 +8,14 @@ red - #ee5253
 
 */
 
-* {
+/* * {
     border: 2px solid rgb(216, 158, 158);
-}
+} */
+
+/* .box-item {
+    background-color: yellow;
+    border: 1px solid black;
+} */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -48,6 +53,11 @@ ul {
     align-items: center;
 }
 
+.required {
+    color:red;
+    font: 10px;
+}
+
 .content-boxes {
     display: flex;
     justify-content: space-around;
@@ -63,14 +73,14 @@ ul {
     justify-content: center;
 }
 
-.box-item {
-    background-color: yellow;
-    border: 1px solid black;
-}
-
 .food-options li {
     font-size: 20px;
     margin: 15px;
+}
+
+.food-image {
+    display: flex;
+    justify-content: center;
 }
 
 #add-recipe-button {
@@ -79,8 +89,8 @@ ul {
 
 #cook-button {
     background-color: #0fb9b1;
-    height: 30px;
-    width: 150px;
+    height: 34px;
+    width: 175px;
     margin-left: 30px;
 }
 

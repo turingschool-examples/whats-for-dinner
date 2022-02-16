@@ -1,27 +1,43 @@
-/* font-family: 'Roboto', sans-serif;
 
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
+
+
 body{
   background-size: 100%;
 }
 
-section{
-  width: 100%;
+button:hover {
+  background-color: #bbeaff
+}
+
+.inlineElements{
   padding-top: 60px;
   display: flex;
   justify-content: space-evenly;
 }
 
 .optionBox{
-  width: 300px;
-  height: 300px;
+  width: 470px;
+  height: 380px;
   background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.optionTitle{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.optionPadding{
+  padding-left: 60px;
 }
 
 .navBar{
@@ -31,24 +47,26 @@ section{
   justify-content: space-between;
   align-items: center;
   padding-right: 20px;
+  margin: -8px;
 }
 
 .addRecipe{
   padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   border-radius: .5rem;
   font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
-button:hover {
-  background-color: #bbeaff
-}
 
 .navText{
   font-family: 'Roboto', sans-serif;
   display: flex;
   font-size: 1.5rem;
   font-weight: 1000;
-  padding: 20px;
+  padding-left: 20px;
 }
 
 .centered{
@@ -59,4 +77,31 @@ button:hover {
 
 .smallBox{
   width:100px;
+}
+
+.letsCook{
+  background-color: #0fb9b1;
+  width: 150px;
+  height: 30px;
+  border-radius: .4rem;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mediumBox{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.verticalCenter{
+  display: flex;
+  justify-content: center;
+
 }

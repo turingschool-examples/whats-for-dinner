@@ -1,3 +1,36 @@
+body {
+  background-image: url("https://user-images.githubusercontent.com/70342126/154170960-bb92f196-cf3a-44d5-8c89-ac49e109bb11.png");
+}
+
+.header {
+  background-color: #0fb9b1;
+}
+
+.course-selection,
+.ice-box {
+  background-color: grey;
+  display: flex;
+    align-items: right;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.boil-point {
+  width :50%;
+  margin-left: 75px;
+}
+
+.menu,
+.stove {
+  background-color: white;
+  width: 50%;
+  height: 300px;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
@@ -7,4 +40,3 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-

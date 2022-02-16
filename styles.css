@@ -7,35 +7,65 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-h1 {
-    /* make smaller */
-}
+/* * {
+    border: 2px solid rgb(216, 158, 158);
+} */
 
-h2{
-    /* make larger */
-}
-
-nav {
-    /* background-color: #0fb9b1; */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("assets/burger-friends.jpg");
+    background-size: 100%;
+    margin: 0px;
 }
 
 main {
-    /* background-image: url("assets/burger-friends.jpg"); */
+    margin: 40px;
 }
 
-.content-box {
-    /* white transparent box */
+h1{
+    font-size: 25px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.navbar {
+    background-color: #0fb9b1;
+    height: 20px;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    background-color: rgba(225, 225, 225, .9);
+    width: 465px;
+    height: 365px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #add-recipe-button {
-    /* make uppercase */
+    text-transform: uppercase;
+    background-color: rgba(225, 225, 225, .9);
 }
 
 #cook-button {
-    /* make uppcase */
+    text-transform: uppercase;
+    background-color: #0fb9b1;
 }
 
 #cook-pot-image {
-    /* resize image */
+    width: 150px;
+    height: 150px;
 }
 

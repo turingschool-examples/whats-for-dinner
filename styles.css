@@ -7,4 +7,40 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+.main-display{
+  display: flex;
+}
+.button-all {
+  border-radius: 2px;
 
+}
+
+.selector{
+  border: solid 2px #ce0058;
+}
+
+
+.page-header {
+  border: solid 2px black;
+
+}
+
+.main-display {
+  border: solid 2px black;
+}
+
+.display {
+  border: solid 2px #81d8d0;
+
+}
+
+
+.crockpot-icon{
+
+}
+.selector-radio{
+
+}
+.bottom-bar{
+  border: solid 2px orange;
+}

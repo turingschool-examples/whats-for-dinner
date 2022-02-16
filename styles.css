@@ -8,3 +8,104 @@ red - #ee5253
 
 */
 
+/* * {
+    border: 2px solid rgb(216, 158, 158);
+} */
+
+/* .box-item {
+    background-color: yellow;
+    border: 1px solid black;
+} */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("assets/burger-friends.jpg");
+    background-size: 100%;
+    margin: 0px;
+}
+
+main {
+    margin: 40px;
+}
+
+h1{
+    font-size: 25px;
+}
+
+button {
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 0px;
+    padding: 8px;
+}
+
+input {
+    padding-left: 0px;
+    margin: 15px;
+    margin-left: 30px;
+}
+
+.navbar {
+    background-color: #0fb9b1;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.required {
+    color:#ee5253;
+    position: relative;
+    top: -9px;
+}
+
+.content-boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    background-color: rgba(225, 225, 225, .9);
+    width: 465px;
+    height: 368px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.food-options {
+    font-size: 20px;
+    /* margin: 15px; */
+    /* margin-left: 20px; */
+}
+
+.food-image {
+    display: flex;
+    justify-content: center;
+}
+
+#add-recipe-button {
+    background-color: whitesmoke;
+}
+
+#cook-button {
+    background-color: #0fb9b1;
+    height: 34px;
+    width: 175px;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+#food-question {
+    font-size: 30px;
+    margin-bottom: 10px; 
+    margin-left: 30px;
+}
+
+#cook-pot-image {
+    width: 150px;
+    height: 150px;
+}
+

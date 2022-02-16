@@ -7,4 +7,56 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+body{
+  background-size: 100%;
+}
 
+section{
+  width: 100%;
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.optionBox{
+  width: 300px;
+  height: 300px;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.navBar{
+  height: 75px;
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.addRecipe{
+  padding: 10px;
+  border-radius: .5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+  background-color: #bbeaff
+}
+
+.navText{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  padding: 20px;
+}
+
+.centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallBox{
+  width:100px;
+}

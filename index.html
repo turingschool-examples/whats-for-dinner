@@ -10,19 +10,26 @@
       <button id="add-recipe-button">Add a recipe</button>
     </nav>
     <main>
-      <section class="content-boxes">
+      <!-- wrapper -->
+      <section class="content-boxes"> 
+        <!-- box -->
         <section class="box">
-          <h2>What are you looking for?*</h2>
-          <ul>
-            <li>Side</li>
-            <li>Main Dish</li>
-            <li>Dessert</li>
-            <li>Entire Meal</li>
-          </ul>
-          <button id="cook-button">Lets cook!</button>
+            <h2 class="box-item" id="food-question">What are you looking for?*</h2>
+          <article class="box-item food-options">
+            <ul>
+              <li>Side</li>
+              <li>Main Dish</li>
+              <li>Dessert</li>
+              <li>Entire Meal</li>
+            </ul>
+          </article>
+          <button class="box-item" id="cook-button">Lets cook!</button>
         </section>
-        <section class="box">
-          <img id="cook-pot-image" src="assets/cookpot.svg" alt="Cook Pot Icon">
+        <!-- box -->
+        <section class="box food-suggestion">
+          <article class="box-item image">
+            <img id="cook-pot-image" src="assets/cookpot.svg" alt="Cook Pot Icon">
+          </article>
         </section>
       </section>
     </main>

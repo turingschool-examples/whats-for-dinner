@@ -7,9 +7,10 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-/* * {
+
+* {
     border: 2px solid rgb(216, 158, 158);
-} */
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -26,14 +27,22 @@ h1{
     font-size: 25px;
 }
 
-h2{
-    font-size: 30px;
+button {
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 0px;
+    padding: 8px;
+}
+
+ul {
+    padding-left: 0px;
+    margin-left: 30px;
 }
 
 .navbar {
     background-color: #0fb9b1;
     height: 20px;
-    padding:20px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,18 +59,35 @@ h2{
     width: 465px;
     height: 365px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.box-item {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.food-options li {
+    font-size: 20px;
+    margin: 15px;
 }
 
 #add-recipe-button {
-    text-transform: uppercase;
-    background-color: rgba(225, 225, 225, .9);
+    background-color: whitesmoke;
 }
 
 #cook-button {
-    text-transform: uppercase;
     background-color: #0fb9b1;
+    height: 30px;
+    width: 150px;
+    margin-left: 30px;
+}
+
+#food-question {
+    font-size: 30px;
+    margin-bottom: 10px; 
+    margin-left: 30px;
 }
 
 #cook-pot-image {

@@ -128,3 +128,7 @@ body{
   max-height: 50%;
   max-width: 50%;
 }
+
+.hide {
+  display: none;
+}

@@ -22,9 +22,6 @@ body {
   padding: 30px;
 }
 
-nav {
-}
-
 .box1 {
   background-color: rgba(225, 225, 225, 0.9);
   opacity: 0.8;
@@ -69,12 +66,12 @@ svg {
   justify-content: center;
   align-items: center;
 }
-footer {
+nav {
   display: flex;
   flex-direction: center;
   justify-content: flex-end;
   align-items: flex-end;
-  color: white;
+  color: #0fb9b1;
   border: 40px;
   margin: 35px;
   padding: 15px 32px;

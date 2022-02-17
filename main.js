@@ -1,7 +1,7 @@
 var buttonLetsCook = document.querySelector(".lets-cook-button");
-var recipeBox = document.querySelector(".Recipe");
+var recipeBox = document.querySelector(".selected-dish");
 var cookpot = document.querySelector(".cookpot");
-var buttonClear = document.getElementById("clear");
+var buttonClear = document.querySelector("#clear");
 
 buttonLetsCook.addEventListener('click', generateRandomDish);
 buttonClear.addEventListener('click', clearInputs);
@@ -11,6 +11,7 @@ return Math.floor(Math.random() * array.length);
 }
 
 function generateRandomDish(){
+  recipeBox.innerHTML = "";
   var selectedDish = document.querySelector('input[name="dish"]:checked');
   var currentRandomDish = "";
   if (selectedDish.value === "side"){
@@ -46,9 +47,9 @@ function hiddenCookPot() {
 }
 
 function clearInputs(){
-  // var selectedDish = document.querySelector('input[name="dish"]:checked');
-  // selectedDish.innertext()
-  console.log("THIS BUTTON WORKS");
+  hiddenCookPot();
+  hiddenClearButton();
+  recipeBox.innerHTML = "";
   var inputs = document.getElementsByName("dish");
    for(var i = 0; i < inputs.length; i++)
       inputs[i].checked = false;

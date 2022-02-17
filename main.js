@@ -3,7 +3,15 @@ var recipeBox = document.querySelector(".selected-dish");
 var cookpot = document.querySelector(".cookpot");
 var buttonClear = document.querySelector("#clear");
 
-buttonLetsCook.addEventListener('click', generateRandomDish);
+buttonLetsCook.addEventListener('click', function(){
+  if (document.querySelector('input[name="dish"]:checked')){
+    buttonLetsCook.innerText = "LET'S COOK!";
+    generateRandomDish()
+  } else {
+    errorAlert();
+  }
+
+});
 buttonClear.addEventListener('click', clearInputs);
 
 function randomDish(array){
@@ -28,8 +36,8 @@ function generateRandomDish(){
     currentRandomDish2 = sides[randomDish(sides)];
     currentRandomDish3 = desserts[randomDish(desserts)];
     recipeBox.innerHTML += `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish1} with a side of ${currentRandomDish2} and ${currentRandomDish3} for dessert!</h2></section>`;
-
   }
+
   showClearButton();
   hideCookPot();
 }
@@ -43,7 +51,7 @@ function showClearButton(){
   clearButton.className = "clear";
 }
 
-function hideCookPot() {
+function hideCookPot(){
   var cookPotImage = document.querySelector("#cookpot");
   cookPotImage.className = "CookPot hidden";
 }
@@ -61,6 +69,22 @@ function clearInputs(){
    for(var i = 0; i < inputs.length; i++)
       inputs[i].checked = false;
 }
+
+function errorAlert(){
+  var inputsCounter = 0;
+  var inputs = document.getElementsByName("dish");
+   for(var i = 0; i < inputs.length; i++){
+     if (inputs[i].checked === false){
+       inputsCounter ++;
+       console.log(inputsCounter)
+     };
+   }
+    if(inputsCounter === 4){
+      buttonLetsCook.innerText = "PLEASE CHOOSE 1!";
+    }
+}
+
+
 
 var sides = [
   "Miso Glazed Carrots",

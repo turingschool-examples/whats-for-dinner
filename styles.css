@@ -36,10 +36,42 @@ border: solid 8px black
 .body {
   margin: 0px;
   background-size: cover;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+}
+
+main {
+  height: 1px;
+  display: flex, block;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.boxes {
+  border: solid 8px white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .meal-choice {
 height: 200px;
 width: 200px;
 border: solid 8px black;
+background-color: rgba(225, 225, 225, .9);
+}
+
+.what-are-you-looking-for {
+  font-family: 'Roboto', sans-serif;
+}
+
+.food-suggestion-box {
+  height: 200px;
+  width: 200px;
+  border: solid 8px purple;
+  background-color: rgba(225, 225, 225, .9);
+
 }

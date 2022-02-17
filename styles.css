@@ -10,27 +10,29 @@ red - #ee5253
 nav {
   font-family: 'Roboto', sans-serif;
   background-color: #0fb9b1;
-  border: solid 8px black;
+  border: solid 8px purple;
   display: flex;
   justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.whats-for-dinner h1 {
-
-font-size: 24px;
-background-color: #0fb9b1;
-border: solid 8px black
+.whats-for-dinner {
+  font-size: 24px;
+  background-color: #0fb9b1;
+  border: solid 8px white;
+  padding: 5;
+  margin: 30;
 }
 
-.add-a-recipe button {
+.add-a-recipe {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   background-color: rgba(225, 225, 225, .9);
-  border-radius: 6px;
-  border: 0;
-  height: 17px;
+  border-radius: 3px;
+  border: solid 4px black;
+  padding: 5;
+  margin: 30;
 }
 
 .body {
@@ -66,6 +68,7 @@ background-color: rgba(225, 225, 225, .9);
 
 .what-are-you-looking-for {
   font-family: 'Roboto', sans-serif;
+  border: solid 8px black;
 }
 
 .food-suggestion-box {
@@ -73,5 +76,16 @@ background-color: rgba(225, 225, 225, .9);
   width: 200px;
   border: solid 8px purple;
   background-color: rgba(225, 225, 225, .9);
+  
+}
+
+.lets-cook {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  background-color: #0fb9b1;
+  border: 0;
+  border-radius: 3px;
+  padding: 5;
+  margin: 5;
 
 }

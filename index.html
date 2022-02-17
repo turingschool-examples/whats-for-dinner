@@ -3,18 +3,46 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+
+
   <body class="body" background="./assets/burger-friends.jpg">
     <nav class="nav">
-      <h1 class="what's-for-dinner">What's for Dinner?</h1>
-      <button class="add-a-recipe">ADD A RECIPE
-      </button>
+      <section class"h1-nav">
+        <h1 class="what's-for-dinner">What's for Dinner?</h1>
+      </section>
+      <section>
+        <button class="add-a-recipe">ADD A RECIPE
+        </button>
+      </section>
     </nav>
     <main>
       <section class="boxes">
-        <form class="meal-choice">
-          <h1 class="what-are-you-looking-for">What Are You Looking For?</h1>
-        </form>
-        <div class="food-suggestion-box"></div>
+          <section class="form">
+            <form class="meal-choice">
+              <div>
+                <h1 class="what-are-you-looking-for">What Are You Looking For?</h1>
+              </div>
+              <div class="radios">
+                <div class="side">
+                  <input type="radio" id="side" value="side">
+                  <label for="side">Side</label>
+                </div>
+                <div class="main">
+                  <input type="radio" id="main-dish" value="main dish">
+                  <label for="main-dish">Main Dish</label>
+                </div>
+                <div class="dessert">
+                  <input type="radio" id="dessert" value="dessert">
+                  <label for="dessert">Dessert</label>
+                </div>
+              </div>
+                <button class="lets-cook">LET'S COOK!</button>
+            </form>
+          </section>
+        <div class="food-suggestion-box">
+          <img src="./assets/cookpot.svg" alt="crock pot icon">
+        </div>
+      </section>
       </section>
     </main>
 

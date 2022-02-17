@@ -14,17 +14,14 @@ function generateRandomDish(){
   var currentRandomDish = "";
   if (selectedDish.value === "side"){
     currentRandomDish = sides[randomDish(sides)];
-    recipeBox.innerHTML = currentRandomDish;
+    recipeBox.innerHTML = `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
   } else if (selectedDish.value === "main dish"){
     currentRandomDish = mains[randomDish(mains)];
-    recipeBox.innerHTML = currentRandomDish;
+    recipeBox.innerHTML = `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
   } else if (selectedDish.value === "dessert"){
     currentRandomDish = desserts[randomDish(desserts)];
-    recipeBox.innerHTML = currentRandomDish;
+    recipeBox.innerHTML = `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
   }
-
-
-  // recipeBox.innerHTML = dishType[getRandomIndex(titles)];
 
 }
 

@@ -23,6 +23,12 @@ function generateRandomDish(){
   } else if (selectedDish.value === "dessert"){
     currentRandomDish = desserts[randomDish(desserts)];
     recipeBox.innerHTML += `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
+  } else if (selectedDish.value === "entire meal"){
+    currentRandomDish1 = mains[randomDish(mains)];
+    currentRandomDish2 = sides[randomDish(sides)];
+    currentRandomDish3 = desserts[randomDish(desserts)];
+    recipeBox.innerHTML += `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish1} with a side of ${currentRandomDish2} and ${currentRandomDish3} for dessert!</h2></section>`;
+
   }
   showClearButton();
   hideCookPot();

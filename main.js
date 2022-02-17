@@ -1,9 +1,10 @@
 var buttonLetsCook = document.querySelector(".lets-cook-button");
 var recipeBox = document.querySelector(".Recipe");
-
+var cookpot = document.querySelector(".cookpot");
+var buttonClear = document.getElementById("clear");
 
 buttonLetsCook.addEventListener('click', generateRandomDish);
-
+buttonClear.addEventListener('click', clearInputs);
 
 function randomDish(array){
 return Math.floor(Math.random() * array.length);
@@ -14,15 +15,43 @@ function generateRandomDish(){
   var currentRandomDish = "";
   if (selectedDish.value === "side"){
     currentRandomDish = sides[randomDish(sides)];
-    recipeBox.innerHTML = `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
+    recipeBox.innerHTML += `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
   } else if (selectedDish.value === "main dish"){
     currentRandomDish = mains[randomDish(mains)];
-    recipeBox.innerHTML = `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
+    recipeBox.innerHTML += `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
   } else if (selectedDish.value === "dessert"){
     currentRandomDish = desserts[randomDish(desserts)];
-    recipeBox.innerHTML = `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
+    recipeBox.innerHTML += `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
   }
+  hiddenClearButton();
+  hiddenCookPot();
+}
 
+function hiddenClearButton(){
+  var clearButton = document.querySelector(".clear");
+    if (clearButton.className === "clear hidden") {
+      clearButton.className = "clear";
+    } else {
+      clearButton.className = "clear hidden";
+    }
+}
+
+function hiddenCookPot() {
+  var cookPotImage = document.querySelector(".CookPot");
+  if (cookPotImage.className === "CookPot hidden") {
+    cookPotImage.className = "CookPot";
+  } else {
+    cookPotImage.className = "CookPot hidden";
+  }
+}
+
+function clearInputs(){
+  // var selectedDish = document.querySelector('input[name="dish"]:checked');
+  // selectedDish.innertext()
+  console.log("THIS BUTTON WORKS");
+  var inputs = document.getElementsByName("dish");
+   for(var i = 0; i < inputs.length; i++)
+      inputs[i].checked = false;
 }
 
 var sides = [

@@ -8,3 +8,22 @@ red - #ee5253
 
 */
 
+* {
+  border: 3px solid blue;
+}
+
+body {
+  background-size: cover;
+  margin: 0;
+}
+
+header {
+  background-color: #0fb9b1;
+  height: 5%;
+  width: 100%;
+  display: flex;
+}
+
+h1  {
+font-family: 'Roboto', sans-serif;
+}

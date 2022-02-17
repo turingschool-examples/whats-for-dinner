@@ -1,5 +1,5 @@
 
-COLORS
+/*COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
@@ -12,10 +12,42 @@ body{
 }
 
 button:hover {
-  background-color: #bbeaff
+  opacity: .6;
 }
 
-.inlineElements{
+span{
+  color: #ee5253;
+}
+
+.navText{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  padding-left: 20px;
+}
+
+.navBar{
+  height: 75px;
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  margin: -8px;
+}
+
+.addRecipe{
+  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: .5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.optionBoxPosition{
   padding-top: 60px;
   display: flex;
   justify-content: space-evenly;
@@ -40,33 +72,23 @@ button:hover {
   padding-left: 60px;
 }
 
-.navBar{
-  height: 75px;
-  background-color: #0fb9b1;
-  display: flex;
+.optionSelections{
+  margin-top: -20px;
+  display:flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding-right: 20px;
-  margin: -8px;
+  height:150px
 }
 
-.addRecipe{
-  padding: 10px;
-  padding-right: 10px;
+.letsCook{
+  background-color: #0fb9b1;
+  width: 150px;
+  height: 30px;
+  border-radius: .4rem;
   padding-left: 10px;
-  border-radius: .5rem;
+  padding-right: 10px;
+  border: 0;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-
-.navText{
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: 1000;
-  padding-left: 20px;
 }
 
 .centered{
@@ -77,31 +99,4 @@ button:hover {
 
 .smallBox{
   width:100px;
-}
-
-.letsCook{
-  background-color: #0fb9b1;
-  width: 150px;
-  height: 30px;
-  border-radius: .4rem;
-}
-
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mediumBox{
-  height: 300px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.verticalCenter{
-  display: flex;
-  justify-content: center;
-
 }

@@ -1,8 +1,30 @@
 var buttonLetsCook = document.querySelector(".lets-cook-button");
+var recipeBox = document.querySelector(".Recipe");
 
-buttonLetsCook.eventListener('click', randomDish);
 
-function randomDish(){
+buttonLetsCook.addEventListener('click', generateRandomDish);
+
+
+function randomDish(array){
+return Math.floor(Math.random() * array.length);
+}
+
+function generateRandomDish(){
+  var selectedDish = document.querySelector('input[name="dish"]:checked');
+  var currentRandomDish = "";
+  if (selectedDish.value === "side"){
+    currentRandomDish = sides[randomDish(sides)];
+    recipeBox.innerHTML = currentRandomDish;
+  } else if (selectedDish.value === "main dish"){
+    currentRandomDish = mains[randomDish(mains)];
+    recipeBox.innerHTML = currentRandomDish;
+  } else if (selectedDish.value === "dessert"){
+    currentRandomDish = desserts[randomDish(desserts)];
+    recipeBox.innerHTML = currentRandomDish;
+  }
+
+
+  // recipeBox.innerHTML = dishType[getRandomIndex(titles)];
 
 }
 

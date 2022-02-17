@@ -24,31 +24,32 @@ function generateRandomDish(){
     currentRandomDish = desserts[randomDish(desserts)];
     recipeBox.innerHTML += `<section class="recipe-container"><h1 class="should-make">You should make:</h1><h2 class="current-dish">${currentRandomDish}!</h2></section>`;
   }
-  hiddenClearButton();
-  hiddenCookPot();
+  showClearButton();
+  hideCookPot();
 }
 
-function hiddenClearButton(){
-  var clearButton = document.querySelector(".clear");
-    if (clearButton.className === "clear hidden") {
-      clearButton.className = "clear";
-    } else {
-      clearButton.className = "clear hidden";
-    }
+function hideClearButton(){
+  var clearButton = document.querySelector("#clear");
+  clearButton.className = "clear hidden";
+}
+function showClearButton(){
+  var clearButton = document.querySelector("#clear");
+  clearButton.className = "clear";
 }
 
-function hiddenCookPot() {
-  var cookPotImage = document.querySelector(".CookPot");
-  if (cookPotImage.className === "CookPot hidden") {
-    cookPotImage.className = "CookPot";
-  } else {
-    cookPotImage.className = "CookPot hidden";
-  }
+function hideCookPot() {
+  var cookPotImage = document.querySelector("#cookpot");
+  cookPotImage.className = "CookPot hidden";
+}
+
+function showCookPot(){
+  var cookPotImage = document.querySelector("#cookpot");
+  cookPotImage.className = "CookPot";
 }
 
 function clearInputs(){
-  hiddenCookPot();
-  hiddenClearButton();
+  showCookPot();
+  hideClearButton();
   recipeBox.innerHTML = "";
   var inputs = document.getElementsByName("dish");
    for(var i = 0; i < inputs.length; i++)

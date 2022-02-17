@@ -93,7 +93,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin: 50px;
   padding: 20px;
 }
@@ -169,8 +169,20 @@ main {
 }
 
 .Clear-Button-Container {
-  width: 250px;
+  width: 400px;
+
   padding-left: 10px;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#clear {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12;
+  height:20px;
+  width: 60px
 }

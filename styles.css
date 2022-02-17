@@ -8,3 +8,80 @@ red - #ee5253
 
 */
 
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: #453d3d;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  background-image: url(./assets/burger-friends.jpg);
+  background-size: cover;
+  padding: 30px;
+}
+
+nav {
+}
+
+.box1 {
+  background-color: rgba(225, 225, 225, 0.9);
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px;
+  margin: 10px;
+}
+
+.box2 {
+  background-color: rgba(225, 225, 225, 0.9);
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  margin: 10px;
+}
+
+button {
+  color: white;
+  border: 40px;
+  margin: 35px;
+  padding: 15px 32px;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  background-color: #b32274;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  display: flex;
+  flex-direction: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+  border: 40px;
+  margin: 35px;
+  padding: 15px 32px;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "YanoneKaffeesatz", sans-serif;
+  background-color: #b32274;
+}

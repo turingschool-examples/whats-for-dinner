@@ -46,6 +46,7 @@ h1 {
   text-decoration-color: none;
   background-color: rgba(225, 225, 225, 0.9);
   color: black;
+  width: 15%;
 }
 body {
   background-image: url(./assets/burger-friends.jpg);
@@ -63,7 +64,7 @@ main {
 
 h2 {
   color: black;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .box1 {
@@ -72,8 +73,8 @@ h2 {
   opacity: 0.95;
   padding: 50px;
   margin: 10px;
-  height: 400px;
-  width: 500px;
+  height: 450px;
+  width: 550px;
   padding: 30;
   margin-top: 90px;
   display: flex;
@@ -82,33 +83,36 @@ h2 {
   align-items: flex-start;
 }
 form {
-  padding: 50px;
   margin: 10px;
   height: 100px;
-  width: 150px;
-  font-size: 25px;
+  width: 100%;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: stretch;
+  padding: 10%;
 }
 #required-question {
   color: #ee5253;
 }
-
+div {
+  padding: 10px;
+}
 .button2 {
   background-color: #0fb9b1;
   opacity: 90%;
   color: black;
   font-size: 20px;
+  width: 40%;
 }
 .box2 {
   background-color: rgba(225, 225, 225, 0.9);
   opacity: 0.95;
   padding: 50px;
   margin: 10px;
-  height: 400px;
-  width: 500px;
+  height: 450px;
+  width: 550px;
   padding: 30;
   margin-top: 90px;
   display: flex;

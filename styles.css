@@ -14,16 +14,11 @@ nav {
   padding-bottom: 5px;
 }
 
-.Add-a-recipe-btn {
-   padding: 10px;
-   margin: 10px;
-   border-radius: 12px;
-}
-
 body {
   background-size: cover;
   margin: 0px;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 #cook-pot {
@@ -77,21 +72,34 @@ form {
   justify-content: space-between;
 }
 
-.lets-cook {
-  margin-top: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15pt;
-  background-color: #0fb9b1;
-   padding: 10px;
-   border-radius: 12px;
-}
-
 input {
   margin: 15px;
+  transform: scale(1.5);
 }
 
 span {
   color: #ee5253
+}
+
+.button {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #0fb9b1;
+}
+
+#Add-a-recipe-btn {
+  margin: 10px;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+#lets-cook {
+  margin-top: 20px;
+  font-size: 15pt;
+}
+
+#lets-cook:hover {
+  cursor: pointer;
+  background-color: #0fa8b9;
 }
 
 /* font-family: 'Roboto', sans-serif;

@@ -7,40 +7,117 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-.main-display{
+body {
+  background-image: url(./assets/burger-friends.jpg);
+  background-size: cover;
+  margin: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
-.button-all {
-  border-radius: 2px;
 
-}
-
-.selector{
-  border: solid 2px #ce0058;
+button {
+  border-radius: 5px;
+  padding: 12;
+  border: none;
 }
 
 
 .page-header {
-  border: solid 2px black;
+  background-color: #0fb9b1;
+  /* border: solid 4px black; */
+  width: 100%;
+  max-height: 65px;
+  /* margin: none;
+  padding: none; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
+}
+
+.title {
+  margin: 15px;
+}
+
+.add-recipe{
+  margin: 15px;
 }
 
 .main-display {
-  border: solid 2px black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  /* border: solid 4px pink; */
+
 }
 
-.display {
-  border: solid 2px #81d8d0;
 
+
+.box{
+  /* aspect-ratio: 6.7 / 5.4; */
+  width: 350;
+  height: 280;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 
-.crockpot-icon{
 
+.content{
+  padding: 30px;
+  width: 100%;
+  aspect-ratio: 11 / 9;
+}
+
+.input-form {
+  /* border: solid 4px #ce0058; */
+  background-color: rgba(225, 225, 225, .9);
+
+}
+.required-field::after {
+  content: "*";
+  color: red;
+  margin-left:2px
+}
+
+.output-display {
+  /* border: solid 4px #81d8d0; */
+  background-color: rgba(225, 225, 225, .9);
+}
+
+
+.lets-cook{
+  background-color: #0fb9b1;
+
+}
+
+.cookpot-icon{
+
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; */
 }
 .selector-radio{
 
 }
 .bottom-bar{
   border: solid 2px orange;
+}
+
+.hidden{
+  display: none;
+}
+
+#F1  {
+  padding: 5px;
 }

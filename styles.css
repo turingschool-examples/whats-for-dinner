@@ -12,12 +12,12 @@ red - #ee5253
 body {
   background-size: cover;
   margin: 0;
+  width: 100%;
 }
 
 header {
   background-color: #0fb9b1;
   height: 5%;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 10px 20px;
@@ -29,6 +29,6 @@ h1  {
 }
 
 button {
-  
+  border-radius: 6px;
   text-transform: uppercase;
 }

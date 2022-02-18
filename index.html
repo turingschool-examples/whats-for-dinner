@@ -14,6 +14,39 @@
         <li class="login">LOGIN</li>
       </ol>
     </nav>
+    <section class="view form-view">
+        <main>
+          <div class="box-container">
+            <div class="box1">
+              <span class="form-header">What are you looking for?</span>
+              <form id="foodForm">
+                <label>
+                  <input id="side" type="radio" name="food" value="side"/>
+                Side
+                </label>
+                <label>
+                  <input id="main" type="radio" name="food" value="main"/>
+                Main Dish
+                </label>
+                <label>
+                  <input id="dessert" type="radio" name="food" value="dessert"/>
+                Dessert
+                </label>
+                <label>
+                  <input id="entire" type="radio" name="food" value="entire"/>
+                Entire Meal
+                </label>
+              </form>
+              <p class="cook-button">LET'S COOK!</p>
+            </div>
+            <div class="box2">
+              <span class="should-make">You should make:</span>
+              <span class="value-display"></span>
+              <span class="clear-button">CLEAR</span>
+            </div>
+          </div>
+      </main>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

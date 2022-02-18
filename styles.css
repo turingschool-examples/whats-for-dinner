@@ -45,10 +45,92 @@ li {
   margin: 10px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  padding-top: 20px;
+  padding-left: 60px;
+}
+
 .right-nav-text {
   float: left;
   margin: 20px;
   padding: 0px;
+}
+
+.box-container {
+  display: flex;
+}
+
+.box1 {
+  background-color: rgba(225, 225, 225, .9);
+  font-size: 28px;
+  width: 700px;
+  height: 500px;
+  margin: 100px;
+  margin-right: 200px;
+  padding-top: 80px;
+}
+
+.form-header {
+  font-size: 30px;
+  margin-left: 60px;
+}
+
+.cook-button {
+  background-color: teal;
+  font-size: 20px;
+  text-align: center;
+  width: 220px;
+  height: 50px;
+  border-radius: 5px;
+  padding-top: 12px;
+  margin-left: 60px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.box2 {
+  background-color: rgba(225, 225, 225, .9);
+  display: grid;
+  font-size: 28px;
+  width: 700px;
+  height: 500px;
+  margin: 100px;
+  line-height: 1.5;
+}
+
+.should-make {
+  text-align: center;
+  font-style: italic;
+  padding-top: 160px;
+}
+
+.value-display {
+  text-align: center;
+  font-size: 50px;
+  margin-top: -70px;
+}
+
+.clear-button {
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-bottom: -50px;
+  padding-top: 8px;
+  width: 100px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.cookpot {
+  height: 200px;
+  width: 200px;
 }
 
 .hidden {

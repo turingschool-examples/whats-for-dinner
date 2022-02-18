@@ -5,38 +5,48 @@
   </head>
   <body>
     <nav class= "Nav">
-        <section class="Nav-Title">
+        <div class="Nav-Title">
           <h3 class="Whats-For-Dinner"> What's for Dinner? </h3>
-        </section>
-        <section class="Nav-Button-Location">
+        </div>
+        <div class="Nav-Button-Location">
           <button class="Nav-Button">ADD A RECIPE</button>
-        </section>
+        </div>
     </nav>
     <main>
       <section class= "Looking-For">
         <h2 class= "Form-Title"> What are you looking for? <span class= "asterisk">*</span></h2>
         <form class= "Form">
-          <label class="Side">
-            <input type="radio">Side</input>
-          </label>
-          <label class="Main Dish">
-            <input type="radio">Main Dish</input>
-          </label>
-          <label class="Dessert">
-            <input type="radio">Dessert</input>
-          </label>
-          <label class="Entire-Meal">
-            <input type="radio">Entire Meal</input>
-          </label>
+          <div class="input-container">
+            <input class="dish-choice" type="radio" id="side" name="dish" value="side" />
+            <label for="side">Side</label>
+          </div>
+          <div class="input-container">
+            <input class="dish-choice" type="radio" id="main-dish" name="dish" value="main dish" />
+            <label for="main-dish">Main Dish</label>
+          </div>
+          <div class="input-container">
+            <input class="dish-choice" type="radio" id="dessert" name="dish" value="dessert" />
+            <label for="dessert">Dessert</label>
+          </div>
+          <div class="input-container">
+            <input class="dish-choice" type="radio" id="entire-meal" name="dish" value="entire meal" />
+            <label for="entire-meal">Entire Meal</label>
+          </div>
         </form>
-        <section class="LC-Button-Location">
+        <div class="LC-Button-Location">
           <button class="lets-cook-button">LET'S COOK!</button>
+        </div>
+      </section>
+      <div class= "Recipe">
+        <img class="CookPot" id="cookpot" src="assets/cookpot.svg";>
+        <section class="selected-dish">
         </section>
-      </section>
-      <section class= "Recipe">
-        <img class="CookPot" src="assets/cookpot.svg";>
-      </section>
+        <div class="Clear-Button-Container">
+          <button class="clear hidden" id="clear">CLEAR</button>
+        </div>
+      </div>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
 </html>

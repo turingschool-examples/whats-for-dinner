@@ -24,7 +24,6 @@ body {
 }
 
 main {
-  /* border: solid 10px black; */
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -40,17 +39,14 @@ main {
 }
 
 .Nav {
-  /* border: solid 5px magenta; */
   background-color: #0fb9b1;
   width: 100vw;
   padding-left: 20px;
   display: flex;
   justify-content: space-between;
-  /* padding: 10px; */
 }
 
 .Nav-Title {
-  /* border: solid 5px yellow; */
   width: 500px;
 }
 
@@ -59,7 +55,6 @@ main {
 }
 
 .Nav-Button-Location {
-  /* border: solid 5px blue; */
   width: 500px;
   display: flex;
   justify-content: flex-end;
@@ -74,7 +69,6 @@ main {
 }
 
 .Looking-For {
-  /* border: solid 5px blue; */
   background-color: rgba(225, 225, 225, .9);
   height: 300px;
   width: 400px;
@@ -86,7 +80,6 @@ main {
 }
 
 .Recipe {
-  /* border: solid 5px blue; */
   background-color: rgba(225, 225, 225, .9);
   height: 300px;
   width: 400px;
@@ -104,13 +97,11 @@ main {
 }
 
 .Form-Title {
-  /* border: solid 5px black; */
   display: flex;
   padding-left: 10px;
 }
 
 .Form {
-  /* border: solid 5px red; */
   padding-left: 10px;
   width: 200px;
   height: 150px;
@@ -118,7 +109,6 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  /* align-content: flex-start; */
 }
 
 .input-container {
@@ -132,7 +122,6 @@ main {
 }
 
 .LC-Button-Location {
-  /* border: solid 5px green; */
   width: 250px;
   padding-left: 10px;
   display: flex;
@@ -151,7 +140,6 @@ main {
 }
 
 .recipe-container {
-  /* border: solid 5px green; */
   height: 300px;
   width: 400px;
   display: flex;

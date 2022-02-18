@@ -8,9 +8,6 @@ red - #ee5253
 
 */
 
-* {
-  border: 3px solid blue;
-}
 
 body {
   background-size: cover;
@@ -22,8 +19,11 @@ header {
   height: 5%;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
 }
 
 h1  {
-font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }

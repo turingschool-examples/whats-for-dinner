@@ -129,6 +129,46 @@ body{
   max-width: 50%;
 }
 
+.dinner-box2 {
+  width: 600px;
+  height: 460px;
+  border: none;
+  background: rgba(225, 225, 225, .9);
+  opacity: 0.8;
+  font: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.should-make-box {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.you-should-make {
+  font-size: 20px;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.answer {
+  font-size: 35px;
+  border: 2px solid green;
+}
+
+.size {
+  font-size: 50px;
+}
+
 .hide {
   display: none;
 }

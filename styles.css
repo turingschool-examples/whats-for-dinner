@@ -8,6 +8,10 @@ red - #ee5253
 
 */
 
+* {
+  border: solid black 1px
+}
+
 
 body {
   background-size: cover;
@@ -31,4 +35,45 @@ h1  {
 button {
   border-radius: 6px;
   text-transform: uppercase;
+}
+
+#wrapper {
+  display: flex;
+  border: blue;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+ #section1 {
+  background-color: rgba(225, 225, 225, .9);
+  height: 50%;
+  width: 30%;
+  margin: 0;
+  display: flex;
+  border-radius: 6px
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+}
+
+#section2 {
+  background-color: rgba(225, 225, 225, .9);
+  height: 50%;
+  width: 30%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+img {
+  height: 40%;
+  width: 40%;
+  display: flex;
 }

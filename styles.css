@@ -121,6 +121,16 @@ main {
   /* align-content: flex-start; */
 }
 
+.input-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.dish-choice {
+  margin-right: 10px;
+}
+
 .LC-Button-Location {
   /* border: solid 5px green; */
   width: 250px;

@@ -10,12 +10,12 @@ buttonLetsCook.addEventListener('click', function(){
   } else {
     errorAlert();
   }
-
 });
+
 buttonClear.addEventListener('click', clearInputs);
 
 function randomDish(array){
-return Math.floor(Math.random() * array.length);
+  return Math.floor(Math.random() * array.length);
 }
 
 function generateRandomDish(){
@@ -46,6 +46,7 @@ function hideClearButton(){
   var clearButton = document.querySelector("#clear");
   clearButton.className = "clear hidden";
 }
+
 function showClearButton(){
   var clearButton = document.querySelector("#clear");
   clearButton.className = "clear";
@@ -73,12 +74,12 @@ function clearInputs(){
 function errorAlert(){
   var inputsCounter = 0;
   var inputs = document.getElementsByName("dish");
-   for(var i = 0; i < inputs.length; i++){
-     if (inputs[i].checked === false){
-       inputsCounter ++;
-     };
-   }
-    if(inputsCounter === 4){
-      buttonLetsCook.innerText = "PLEASE CHOOSE 1!";
-    }
+  for(var i = 0; i < inputs.length; i++){
+   if (inputs[i].checked === false){
+     inputsCounter ++;
+   };
+  }
+  if(inputsCounter === 4){
+    buttonLetsCook.innerText = "PLEASE CHOOSE 1!";
+  }
 }

@@ -47,6 +47,16 @@
           </div>
       </main>
     </section>
+    <section class="view login-view hidden">
+      <h1 class="welcome-message">Welcome. Please Enter Your Login Information Below.</h1>
+      <form id="login-form">
+        <label id="name-label" for="name">First Name:</label>
+        <input type="text" id="name" name="fname">
+        <label id="email-label" for="email">Email Address:</label>
+        <input type="text" id="email" name="lname">
+        <button onclick="submitLoginInfo()" id="login-button" type="submit" form="form-login" value="Submit">Submit</button>
+      </form>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

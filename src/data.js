@@ -9,7 +9,7 @@ var sides = [
   'Shrimp Summer Rolls',
   'Garlic Butter Mushrooms',
   'Hush Puppies',
-  'Roasted Brussel Sprouts
+  'Roasted Brussel Sprouts'
 ];
 
 var mains = [
@@ -21,7 +21,8 @@ var mains = [
 'Chicken Parmesan',
 'Butternut Squash Soup',
 'BBQ Chicken Burgers',
-'Ramen', 'Empanadas',
+'Ramen',
+'Empanadas',
 'Chicken Fried Rice',
 'Sheet Pan Fajitas',
 'Margarita Pizza'
@@ -29,7 +30,7 @@ var mains = [
 
 var desserts = [
   'Apple Pie',
-  'Peach Bellini Sorbet'
+  'Peach Bellini Sorbet',
   'Lemon Meringue Pie',
   'Black Forest Cake',
   'Banana Bread',

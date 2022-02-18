@@ -18,6 +18,10 @@ red - #ee5253
   align-items: center;
 }
 
+.astric {
+  color: #ee5253;
+}
+
 .whats-for-dinner {
   /* border: 2px solid yellow; */
   width: 200px;
@@ -48,9 +52,9 @@ red - #ee5253
 }
 
 .space {
+  /* border: 2px solid yellow; */
   width: 1000px;
   height: 100px;
-  /* border: 2px solid yellow; */
 }
 
 /*LEFT BOX*/
@@ -117,7 +121,6 @@ body{
   height: 460px;
   border: none;
   background: rgba(225, 225, 225, .9);
-  opacity: 0.8;
   font: 40px;
   display: flex;
   justify-content: center;
@@ -125,6 +128,7 @@ body{
 }
 
 .pot {
+  /* border: 2px solid green */
   max-height: 50%;
   max-width: 50%;
 }
@@ -134,7 +138,7 @@ body{
   height: 460px;
   border: none;
   background: rgba(225, 225, 225, .9);
-  opacity: 0.8;
+  opacity: 0.9;
   font: 40px;
   display: flex;
   justify-content: center;
@@ -142,7 +146,7 @@ body{
 }
 
 .should-make-box {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,19 +154,35 @@ body{
 }
 
 .you-should-make {
+  /* border: 2px solid red; */
   font-size: 20px;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 180px;
 
 
 }
 
+.clear-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  height: 27px;
+  width: 70px;
+  margin-left: 510px;
+  margin-top: 120px;
+  border-radius: 4px;
+  border: none;
+  background: rgb(149,165,166);
+  color: white;
+}
+
 .answer {
   font-size: 35px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .size {

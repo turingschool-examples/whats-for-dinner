@@ -25,21 +25,21 @@
   <body background="assets/burger-friends.jpg">
     <section class="body">
       <section class="looking-box">
-        <h3 class="box-question">What are you looking for?</h3>
+        <h3 class="box-question">What are you looking for?<span class="astric">*</span></h3>
         <label class="bullets">
-          <input type="radio" class="side-dish">Side</input>
-          <br>
-          <br>
-        <label class="bullets">
-          <input type="radio" class="main-dish">Main Dish</input>
+          <input type="radio" class="side-dish" name = "input1">Side</input>
           <br>
           <br>
         <label class="bullets">
-          <input type="radio" class="dessert">Dessert</input>
+          <input type="radio" class="main-dish" name = "input1">Main Dish</input>
           <br>
           <br>
         <label class="bullets">
-          <input type="radio" class="all-dishes">Entire Meal</input>
+          <input type="radio" class="dessert" name = "input1">Dessert</input>
+          <br>
+          <br>
+        <label class="bullets">
+          <input type="radio" class="all-dishes" name = "input1">Entire Meal</input>
           <br>
           <br>
         <section class="lets-cook-location">
@@ -47,15 +47,17 @@
         </section>
       </section>
 
-      <section class="dinner-box">
-        <img class = "pot" id="pot1" src=.//assets/cookpot.svg>
+    <section class="dinner-box">
+      <img class = "pot" src=.//assets/cookpot.svg>
+    </section>
+
+    <section class="dinner-box2 hide">
+      <section class="should-make-box">
+        <p class="you-should-make">You should make: <br>
+          <span class="size">Black Forest Cake!</span></p>
+        <p class="family-answer hide">Everything</p>
+        <button class="clear-button" type="button">CLEAR</button>
       </section>
-      <section class="dinner-box2 hide">
-        <section class="should-make-box">
-          <p class="you-should-make">You should make: <br>
-            <span class="size">Black Forest Cake!</span></p>
-          <p class="family-answer hide">Everything</p>
-        </section>
     </section>
   </body>
 

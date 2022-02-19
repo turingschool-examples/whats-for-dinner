@@ -10,8 +10,11 @@ var letsCookButton = document.querySelector("#lets-cook-button")
 // clear button (section 2)
 var clearButton = document.querySelector("#clear")
 // hidden values (section 2)
-var shouldMakeText = document.querySelctor(".should-make-text-hidden")
-var randomMealText = document.querySelctor(".random-meal-text-hidden")
+var shouldMake = document.querySelctor(".should-make-text-hidden")
+var randomMeal = document.querySelctor(".random-meal-text-hidden")
+var cookPotImg = document.querySelctor(".cookPotImg")
+
+
 
 // event listeners
 

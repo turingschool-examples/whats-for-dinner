@@ -6,14 +6,12 @@
   background: #0fb9b1;
   display:flex;
   justify-content: flex-start;
-
 }
 
 .header-title{
   font-size: 20px;
   padding-left: 12px;
 }
-
 
 
 .add-recipe-button{
@@ -47,7 +45,7 @@ main{
   padding-top: 50px;
 }
 
-.article1{
+.selection-box{
   background-color: rgba(225, 225, 225, .9);
   display: flex;
   flex-direction: column;
@@ -78,7 +76,7 @@ main{
 
 }
 
-.article2{
+.pot-box{
   background-color: rgba(225, 225, 225, .9);
   display: flex;
   flex-direction: column;
@@ -96,9 +94,29 @@ main{
   height:130px;
 }
 
+.dish-title{
+  font-style: italic;
+  top: 210px;
+  right: 230px;
+  position: fixed;
+}
+
+.dish-text{
+  font-weight:bold;
+  font-size-adjust: auto;
+  text-align: center;
+  border: solid green;
+}
+
 .hidden{
   display: none;
 }
+
+.clear-button{
+  background-color: #95a5a6;
+  display:flex;
+}
+
 
 /* font-family: 'Roboto', sans-serif;
 

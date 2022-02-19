@@ -55,14 +55,13 @@ function getRandomElement(array) {
 function getRecipe(){
   var grabRadio = document.querySelector('input[name="meal-options"]:checked');
   if(!grabRadio){
-    // return
   }
     if(grabRadio.value === "sideChoices") {
       return `${getRandomElement(sideChoices)}!`
    }
 //take food from an array, but happen when side, main,dessert is chosen
     else if (grabRadio.value === "mainChoices"){
-      return `${getRandomElement(mainChoices)}`
+      return `${getRandomElement(mainChoices)}!`
     }
 //if (side) do getrandomelement(sideChoices)
 //return get random function, putting in values of radio button

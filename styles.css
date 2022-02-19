@@ -7,24 +7,87 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+body {
+  background-image: url(assets/burger-friends.jpg);
+  background-size: cover;
+  margin: 0;
+}
 
-.top {
+input {
+  margin-bottom: 15px;
+}
+
+.star {
+  color: red;
+}
+.crockpot {
+  padding-left: 150px;
+}
+
+.top-bar {
   background-color: #0fb9b1;
+  padding-bottom: 1px;
 }
 
-.burger-friends {
-background-size: cover;
-height: 900px;
-width: 900px;
+h1,
+.title,
+.choice-selected,
+.lets-cook-button {
+  font-family: 'Roboto', sans-serif;
 }
 
-* {
-  border: 2px solid blue;
+.title {
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
-.box1 {
+
+.crockpot {
+  height: 200px;
+  width: auto;
+}
+
+/* this is my radio buttons */
+.box-1 {
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 400px;
+  width: 500px;
   background-color: rgba(225, 225, 225, .9);
+  /* border: 5px solid yellow; */
+}
+
+/* this is my pot */
+
+.box-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  width: 500px;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+.option-selection {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  border-radius: 4px;
+  border: 0;
+  margin-top: 25px;
+  padding: 5px;
+  font-size: 15px;
+  width: 157px;
+
 }

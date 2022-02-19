@@ -28,7 +28,6 @@ var mains = [
 ];
 
 var desserts = [
-'Desserts',
 'Apple Pie',
 'Lemon Meringue Pie',
 'Black Forest Cake',

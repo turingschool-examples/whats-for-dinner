@@ -54,12 +54,43 @@ button {
   width: 30%;
   margin: 0;
   display: flex;
+  align-items: center | space-between;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 6px
 }
+
 h2 {
   font-family: 'Roboto', sans-serif;
   display: flex;
+  margin-left: 20px;
 }
+
+span {
+  color: red;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+
+}
+
+li {
+  font-family: 'Roboto', sans-serif;
+  padding: 3% 0 3%
+}
+
+
+#button {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0fb9b1;
+  height: 9%;
+  width: 40%;
+  margin: 4%;
+  padding:
+}
+
 
 #section2 {
   background-color: rgba(225, 225, 225, .9);

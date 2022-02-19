@@ -9,16 +9,35 @@
       <h1>What's for Dinner?</h1>
       <button>add a recipe</button>
     </header>
-    <main>
-      <section id="wrapper">
-      <section id="section1">
-        <h2>What are you looking for?*</h2>
-      </section>
-      <section id="section2">
-        <img src="./assets/cookpot.svg">
-      </section>
-    </section>
-    </main>
+      <main>
+        <section id="wrapper">
+          <section id="section1">
+            <h2>What are you looking for?<span>*</span></h2>
+            <ul style="list-style-type:none">
+              <li>
+                <input type="radio" id="side" name="drone" value="side">
+                  <label for="side">Side</label>
+              </li>
+              <li>
+                <input type="radio" id="main-dish" name="drone" value="main-dish">
+                  <label for="main-dish">Main Dish</label>
+              </li>
+              <li>
+                <input type="radio" id="dessert" name="drone" value="dessert">
+                  <label for="dessert">Dessert</label>
+              </li>
+              <li>
+                <input type="radio" id="entire-meal" name="drone" value="entire-meal">
+                  <label for="entire-meal">Entire Meal</label>
+              </li>
+            </ul>
+            <button id="button">let's cook!</button>
+          </section>
+          <section id="section2">
+            <img src="./assets/cookpot.svg">
+          </section>
+        </section>
+      </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

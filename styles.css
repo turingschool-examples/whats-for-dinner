@@ -143,15 +143,17 @@ button {
   margin: 0;
 }
 
-.clear{
+.clear {
   background-color: #95a5a6;
   color: white;
+  margin-top:40px;
 }
-.clear-button{
+.clear-button {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+
 
 }
 

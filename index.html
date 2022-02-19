@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title> What's For Dinner? </title>
-    <link rel="shortcut icon" type="image/jpg" href="assets/cookpot.svg"/>
+    <link rel="shortcut icon" type="image/jpg" href="assets/spatula.png"/>
   </head>
   <body>
     <header class="page-header">
@@ -19,7 +19,6 @@
       </section>
     </header>
     <main class="main-display">
-      <!-- <section class="two-boxes"> -->
           <section class="box input-form" >
             <section class="content">
               <section>
@@ -52,13 +51,10 @@
                     LET'S COOK!
                   </button>
                 </form>
-                <pre id ="log">
-                </pre>
-              </section>
 
+              </section>
             </section>
         </section>
-
         <section class="box output-display" >
           <section class="content">
               <div class="cookpot-icon">
@@ -82,12 +78,33 @@
 
           </section>
         </section>
-      <!-- </section> -->
+
+
     </main>
-
     <footer class="bottom-bar">
-    </footer>
+      <section>
+        <form>
+          <div id="F1">
+            <h3 class="required-field" >What are you looking for?</h3>
+          </div>
+          <div id="F1">
+            <input type="text" id="recipe-type"
+             name="dish" value="------">
+            <label for="side-dish">Recipe Type:</label>
+          </div>
+          <div id="F1">
+              <input type="text" id="recipe-name"
+               name="recipe-name" value="-----">
+              <label for="recipe-name">Recipe Name:</label>
+          </div>
 
+          <button type="submit" class="add-new"
+            type="button">
+            ADD NEW
+          </button>
+        </form>
+      </section>
+    </footer>
   </body>
   <script type="text/javascript" src="./src/data.js"></script>
   <script type="text/javascript" src="main.js"></script>

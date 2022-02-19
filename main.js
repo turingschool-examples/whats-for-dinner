@@ -1,47 +1,53 @@
 //global variables
-var letsCookB = document.querySelector(".lets-cook");
 var addRecipeB = document.querySelector(".add-recipe");
 var form = document.querySelector("form");
-// var log = document.querySelector("#log");
-// var radioButtons = document.querySelectorAll("input[name="dish"]");
-
 var sideRadio = document.querySelector("#side-dish");
 var mainRadio = document.querySelector("#main-dish");
 var dessertRadio = document.querySelector("#dessert-dish");
 var mealRadio =  document.querySelector("#entire-meal");
-
 var formOutput = document.querySelector(".form-output");
 var formResult = document.querySelector(".form-result");
-//var clearB = document.querySelector('.clear');
 var cookpotIcon = document.querySelector(".cookpot-icon");
 
-
-
 //event listeners
-// letsCookB.addEventListener('click', displayRecipe)
-// functions and event handlers
 
 form.addEventListener("submit", displayDish);
+addRecipeB.addEventListener('click', openAddRecipeForm);
 
+
+// functions and even handlers
 //
 function displayDish() {
   event.preventDefault();
   viewElement(formResult);
   hideElement(cookpotIcon);
-  console.log("form has been submitted")
     if (sideRadio.checked ) {
-       displayRandomDish(sides)
-
-     }
+      displayRandomDish(sides)
+      }
     else if (mainRadio.checked){
-        // displayRandomMain()
-        displayRandomDish(mains)
-    }
+      displayRandomDish(mains)
+      }
     else if (dessertRadio.checked) {
-        // displayRandomDessert()
-        displayRandomDish(desserts)
-    }
+      displayRandomDish(desserts)
+      }
 };
+
+function displayRandomDish(dishType){
+  var dish = dishType[getRandomIndex(dishType)];
+    formOutput.innerText = `${dish}!`
+    console.log(dish);
+}
+
+function viewElement(classToEdit) {
+  classToEdit.classList.remove("hidden");
+}
+
+function hideElement(classToEdit) {
+  classToEdit.classList.add("hidden");
+}
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
 
 //
 // var selectedDish;
@@ -52,11 +58,7 @@ function displayDish() {
 // }
   // // show the output:
   // output.innerText = selectedSize ? `You selected ${selectedSize}` : `You haven't selected any size`;
-function displayRandomDish(dishType){
-  var dish = dishType[getRandomIndex(dishType)];
-    formOutput.innerText = `${dish}!`
-    console.log(dish);
-}
+
 //
 // function displayRandomSide(){
 //   var dish = sides[getRandomIndex(sides)];
@@ -75,14 +77,3 @@ function displayRandomDish(dishType){
 //     formOutput.innerText = `${dish}!`
 //     console.log(dish);
 // }
-
-function viewElement(classToEdit) {
-  classToEdit.classList.remove("hidden");
-}
-
-function hideElement(classToEdit) {
-  classToEdit.classList.add("hidden");
-}
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-}

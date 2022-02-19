@@ -12,10 +12,9 @@ var dinnerSuggestions = document.querySelector(".suggestions");
 var youShouldMake = document.querySelector(".h3");
 
 letsCookButton.addEventListener("click", showRandomFood);
+//window.onload = showBeforeSelection;
+letsCookButton.addEventListener("click", viewOrHideElement);
 /*------------------------FUNCTIONS-------------------------*/
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-}
 
 function showRandomFood() {
   event.preventDefault();
@@ -26,48 +25,33 @@ function showRandomFood() {
   } else if (dessertsButton.checked) {
     dinnerSuggestions.innerHTML = `${desserts[getRandomIndex(desserts)]}!`;
   }
-  displaySelection();
+  showBox2();
 }
 
 function displaySelection() {
   cookPotImage.classList.add("hidden");
   youShouldMake.classList.remove("hidden");
   dinnerSuggestions.classList.remove("hidden");
-  //clearBtn.classList.remove('hidden');
+  //clearButton.classList.remove('hidden');
+}
+// function showBeforeSelection() {
+//   hideElement(youShouldMake);
+//   hideElement(dinnerSuggestions);
+//   //viewElement(clearButton);
+//   viewElement(cookPotImage);
+// }
+function showBox2() {
+  viewElement(youShouldMake);
+  viewElement(dinnerSuggestions);
+  //viewElement(clearButton);
+  hideElement(cookPotImage);
 }
 
-//Event listeners:
-// letsCookButton.addEventListener("click", displayRandomFood);
-//
-// //Functions:
-// //want to get all 3 functions into one mega-function with if statements...somehow...
-//
-// //toggle event here?
-// //instead of adding a class and removing it
-// //cookPotImage.classList.toggle(" ");
-//
-// function displaySideDish() {
-//   if (sideButton.checked) {
-//     dinnerSuggestions.classList.remove("hidden");
-//     dinnerSuggestions.innerText = `${sides[getRandomIndex(sides)]}`;
-//   }
-// }
-//
-// // function displayRandomFood() {
-// //   event.preventDefault();
-// //   cookPotImage.classList.add("hidden");
-// //   dinnerSuggestions.classList.remove("hidden");
-// // }
-// // displayRandomFood();
-//
-// function displayRandomFood() {
-//   var randomSide = sides[getRandomIndex(sides)];
-//   //var randomMain = main[getRandomIndex(main)];
-//   //var randomDessert = dessert[getRandomIndex(dessert)];
-// }
-// displayRandomFood();
-//
-// function getRandomIndex(array) {
-//   return Math.floor(Math.random() * array.length);
-// }
-//
+function viewOrHideElement(varToView) {
+  varToView.classList.remove("hidden");
+  varToView.classList.add("hidden");
+}
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}

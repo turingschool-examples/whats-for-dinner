@@ -124,6 +124,23 @@ div {
   height: 250px;
   width: 250px;
   position: inherit;
+  /*visibility: hidden;*/
+}
+h3 {
+  font-size: 35px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
 }
 
 button {

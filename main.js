@@ -17,14 +17,17 @@ function getRandomIndex(array) {
 
 
 function populateDish() {
-  if (document.getElementById('side').checked) {
-    dishResult = sides[getRandomIndex(sides)];
-  } else if (document.getElementById('main').checked) {
-    dishResult = mains[getRandomIndex(mains)];
-  } else if (document.getElementById('dessert').checked) {
-    dishResult = desserts[getRandomIndex(desserts)];
-  };
+
   cookpotView.className = 'cookpot-view hidden';
   dishViewHidden.className = 'dish-view';
-  displayedDish.innerText = `${dishResult}!`;
+
+  if (document.getElementById('side').checked) {
+    displayedDish.innerText = `${sides[getRandomIndex(sides)]}!`
+  } else if (document.getElementById('main').checked) {
+    displayedDish.innerText = `${mains[getRandomIndex(mains)]}!`
+  } else if (document.getElementById('dessert').checked) {
+    displayedDish.innerText = `${desserts[getRandomIndex(desserts)]}!`
+  } else if (document.getElementById('entire').checked) {
+    displayedDish.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
+  }
 };

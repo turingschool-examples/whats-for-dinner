@@ -19,7 +19,7 @@
          <label for='main-dish'>Main Dish</label><br>
          <input type='radio' value= 'dessertChoices' id='dessert'name='meal-options'>
          <label for='dessert'>Dessert</label><br>
-         <input type='radio' value= 'entire' id='entire-meal'name='meal-options'>
+         <input type='radio' value= 'entireMeal' id='entire-meal'name='meal-options'>
          <label for='Entire-Meal'>Entire Meal</label><br>
        </p>
        <button class='cook-click'>LET'S COOK!</button>
@@ -28,9 +28,9 @@
     <article class='article2'>
      <img class='cookpot'id= 'cookpot' src="./assets/cookpot.svg">
      <div class='dish-box'>
-       <h2 class='dish-header' id='dish-header'>You should make:</h2>
-       <div class='dish-text' id='dish-text'>XXXX</div>
-       <button class='clear button' id= 'clear-button'>CLEAR</button>
+       <label class='dish-title hidden' id='dish-title'>You should make:</label>
+       <div class='dish-text hidden' id='dish-text'></div>
+       <button class='clear-button hidden' id= 'clear-button'>CLEAR</button>
      </div>
     </article>
   </main>

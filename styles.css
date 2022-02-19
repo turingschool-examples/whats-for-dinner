@@ -96,6 +96,9 @@ main{
   height:130px;
 }
 
+.hidden{
+  display: none;
+}
 
 /* font-family: 'Roboto', sans-serif;
 

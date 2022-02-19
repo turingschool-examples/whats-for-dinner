@@ -57,7 +57,7 @@ main{
 }
 
 .radio-title{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -68,11 +68,11 @@ main{
 
 .cook-click{
   background-color: #0fb9b1;
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
-  width: 200px;
-  font-size: 15px;
-  padding: 10px 10px;
+  width: 170px;
+  font-size: 13px;
+  padding: 8px 10px;
 
 }
 
@@ -96,23 +96,37 @@ main{
 
 .dish-title{
   font-style: italic;
-  top: 210px;
-  right: 230px;
+  top: 200px;
+  right: 200px;
   position: fixed;
 }
 
+.text-container{
+  text-align: center;
+}
 .dish-text{
   text-align: center;
-  border: solid green;
+  font-weight: bold;
+  font-size: 25px;
+
 }
 
 .hidden{
   display: none;
 }
 
+.button-container{
+  position: absolute;
+  top: 400px;
+  right: 50px;
+}
+
 .clear-button{
   background-color: #95a5a6;
-  display:flex;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 9px;
 }
 
 

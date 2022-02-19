@@ -32,7 +32,7 @@ With this app you can generate a randomly selected main dish, side, dessert, or 
 - [Emma Brooke-Davidson](https://github.com/emmacbd)
 
 ### Deployed link
-
+- https://emmacbd.github.io/whats-for-dinner/
 
 ### How to Set Up
 

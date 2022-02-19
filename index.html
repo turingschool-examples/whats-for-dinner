@@ -14,10 +14,12 @@
         <h2>
           What are you looking for?<sup><span>*</span></sup>
         </h2>
-        <p><input type="radio"> Side</p>
-        <p><input type="radio"> Main Dish</p>
-        <p><input type="radio"> Dessert</p>
-        <!-- <p><input type="radio"> Entire Meal</p> -->
+        <form name="dishForm">
+          <div><input type="radio" name="dish"> Side</div>
+          <div><input type="radio" name="dish"> Main Dish</div>
+          <div><input type="radio" name="dish"> Dessert</div>
+          <!-- <div><input type="radio" name="dish"> Entire Meal</div> -->
+        </form>
         <button id="lets-cook">LET'S COOK!</button>
       </section>
       <section class="cookpot-view">

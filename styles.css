@@ -44,6 +44,13 @@ section {
   justify-content: space-around;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+}
+
 .search > button {
   background-color: #0fb9b1;
   width: 160px;

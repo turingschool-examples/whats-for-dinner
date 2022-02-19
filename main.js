@@ -7,4 +7,4 @@ var entireRadio = document.querySelector("entire-meal")
 var recipeButton = document.querySelctor("#recipe-button")
 // let's cook Button
 var letsCookButton = document.querySelector("#lets-cook-button")
-// 
+//

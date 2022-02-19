@@ -32,7 +32,7 @@ h1  {
   margin: 0;
 }
 
-button {
+#recipe-button {
   border-radius: 6px;
   text-transform: uppercase;
 }
@@ -86,8 +86,9 @@ li {
 }
 
 
-#button {
+#lets-cook-button {
   font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
   background-color: #0fb9b1;
   height: 10%;
   width: 40%;
@@ -104,6 +105,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   border-radius: 6px;
 }
 
@@ -111,4 +113,27 @@ img {
   height: 40%;
   width: 40%;
   display: flex;
+}
+
+h2 {
+font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+
+}
+
+#clear {
+font-family: 'Roboto', sans-serif;
+color: white;
+text-transform: uppercase;
+background-color: #95a5a6;
+height: 10%;
+width: 20%;
+border-radius: 6%;
+margin-left: 60%;
+margin-top: 6%;
+
 }

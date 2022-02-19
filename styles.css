@@ -102,8 +102,6 @@ main{
 }
 
 .dish-text{
-  font-weight:bold;
-  font-size-adjust: auto;
   text-align: center;
   border: solid green;
 }

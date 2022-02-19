@@ -22,53 +22,58 @@
             <section class="content">
               <section>
                 <form>
-                <div id="F1">
-                  <h3 class="required-field" >What are you looking for?</h3>
-                </div>
-                <div id="F1">
-                  <input type="radio" id="dishChoice1"
-                   name="dish" value="side">
-                  <label for="dishChoice1">Side</label>
-                </div>
-                <div id="F1">
-                    <input type="radio" id="dishChoice2"
-                     name="dish" value="main-dish">
-                    <label for="dishChoice2">Main Dish</label>
-                </div>
-                <div id="F1">
-                  <input type="radio" id="dishChoice3"
-                   name="dish" value="dessert">
-                  <label for="dishChoice3">Dessert</label>
-                </div>
-                <div id="F1">
-                  <input type="radio" id="dishChoice4"
-                   name="dish" value="entire-meal">
-                  <label for="dishChoice4">Entire Meal</label>
-                </div>
+                  <div id="F1">
+                    <h3 class="required-field" >What are you looking for?</h3>
+                  </div>
+                  <div id="F1">
+                    <input type="radio" id="side-dish"
+                     name="dish" value="side">
+                    <label for="side-dish">Side</label>
+                  </div>
+                  <div id="F1">
+                      <input type="radio" id="main-dish"
+                       name="dish" value="main-dish">
+                      <label for="main-dish">Main Dish</label>
+                  </div>
+                  <div id="F1">
+                    <input type="radio" id="dessert-dish"
+                     name="dish" value="dessert">
+                    <label for="dessert-dish">Dessert</label>
+                  </div>
+                  <div id="F1">
+                    <input type="radio" id="entire-meal"
+                     name="dish" value="entire-meal">
+                    <label for="entire-meal">Entire Meal</label>
+                  </div>
+                  <button type="submit" class="lets-cook"
+                    type="button">
+                    LET'S COOK!
+                  </button>
                 </form>
+                <pre id ="log">
+                </pre>
               </section>
-              <button class="lets-cook"
-                type="button">
-                LET'S COOK!
-              </button>
+
             </section>
         </section>
 
         <section class="box output-display" >
           <section class="content">
-            <div class="cookpot-icon">
-              <img class="cookpot-icon"
-                src="assets/cookpot.svg"
-                alt="Icon of cookpot with cracked lid and drips down the side."
-              >
-              <p class="hidden">placeholder words</p>
-            </div>
-            <!-- <div>
-              <button class="clear"
-                type="button">
-                CLEAR
-              </button>
-            </div> -->
+              <div class="cookpot-icon">
+                <img class="cookpot-icon"
+                  src="assets/cookpot.svg"
+                  alt="Icon of cookpot with cracked lid and drips down the side."
+                >
+              </div>
+              <div class="hidden form-result">
+                <p class=" should-make">You should make:</p>
+                <h2 class=" form-output">placeholder words</h2>
+                <button class="clear"
+                    type="button">
+                    CLEAR
+                </button>
+              </div>
+
           </section>
         </section>
       <!-- </section> -->

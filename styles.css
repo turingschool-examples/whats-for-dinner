@@ -64,6 +64,7 @@ button {
   /* aspect-ratio: 6.7 / 5.4; */
   width: 350;
   height: 280;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -101,6 +102,9 @@ button {
 
 .lets-cook{
   background-color: #0fb9b1;
+  margin: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
 
 }
 
@@ -124,6 +128,14 @@ button {
   display: none;
 }
 
+.should-make {
+  font-style: italic;
+}
+
+.form-output {
+
+}
+
 #F1  {
-  padding: 5px;
+  padding: 8px;
 }

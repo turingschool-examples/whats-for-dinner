@@ -56,7 +56,7 @@ button {
   display: flex;
   align-items: center | space-between;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 6px
 }
 
@@ -64,6 +64,7 @@ h2 {
   font-family: 'Roboto', sans-serif;
   display: flex;
   margin-left: 20px;
+  padding-top: 5%
 }
 
 span {
@@ -73,22 +74,21 @@ span {
 ul {
   display: flex;
   flex-direction: column;
-
 }
 
 li {
   font-family: 'Roboto', sans-serif;
-  padding: 3% 0 3%
+  padding: 2% 0 2%
+  /* margin: 2%; */
 }
 
 
 #button {
   font-family: 'Roboto', sans-serif;
   background-color: #0fb9b1;
-  height: 9%;
+  height: 10%;
   width: 40%;
-  margin: 4%;
-  padding:
+  margin: 2%;
 }
 
 

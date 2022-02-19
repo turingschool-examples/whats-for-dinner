@@ -76,8 +76,8 @@ red - #ee5253
 
 .bullets {
   font-size: 25px;
-  padding-left: 2em;
-  /* display: flex; */
+  padding-left: 50px;
+  font-family: 'Roboto', sans-serif;
   justify-content: space-between;
 }
 
@@ -116,7 +116,6 @@ body{
 
 /*RIGHT BOX*/
 .dinner-box {
-  /* border: 2px solid blue; */
   width: 600px;
   height: 460px;
   border: none;
@@ -128,7 +127,6 @@ body{
 }
 
 .pot {
-  /* border: 2px solid green */
   max-height: 50%;
   max-width: 50%;
 }
@@ -146,7 +144,6 @@ body{
 }
 
 .should-make-box {
-  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,13 +151,12 @@ body{
 }
 
 .you-should-make {
-  /* border: 2px solid red; */
   font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 180px;
+  margin-top: 10px;
 
 
 }
@@ -182,11 +178,16 @@ body{
 
 .answer {
   font-size: 35px;
-  /* border: 2px solid green; */
 }
 
 .size {
-  font-size: 50px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.clear-container {
+  margin-top: 300px;
+  position: absolute
 }
 
 .hide {

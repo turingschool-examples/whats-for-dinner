@@ -1,3 +1,101 @@
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  background-size: 100%;
+}
+
+.header {
+  margin: 0;
+  background-color: #0fb9b1;
+  padding: 15px 30px;
+  margin-bottom: 45px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+
+.button {
+  background: #FFF;
+  color: #000;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border-style: none;
+  padding: 12px;
+}
+
+.button.lets-cook {
+  background: #0fb9b1;
+  width: 185px;
+  text-transform: uppercase;
+}
+
+.body-wrapper {
+  width:90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  background: rgba(225, 225, 225, .9);
+  width: 50%;
+  padding: 40px;
+  margin: 0 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+section.one {
+  align-items: flex-start;
+}
+
+section.two {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.red {
+  color:red;
+}
+
+form.choose-meal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+div.input-group {
+  margin-bottom: 15px;
+}
+
+svg.pot {
+  width: 90px;
+}
+
+.food-item_single {
+  font-size: 42px;
+  line-height: 1;
+  margin:0;
+}
+
+.food-item_single.small {
+  font-size:18px;
+}
+
+/* UTILITY CLASSES */
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
@@ -7,4 +105,3 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-

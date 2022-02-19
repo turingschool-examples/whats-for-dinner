@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
@@ -9,7 +10,7 @@
       What's for Dinner?
     </h1>
     <main>
-      <article class="search">
+      <section class="search">
         <h2>
           What are you looking for?<sup><span>*</span></sup>
         </h2>
@@ -17,17 +18,18 @@
         <p><input type="radio"> Main Dish</p>
         <p><input type="radio"> Dessert</p>
         <!-- <p><input type="radio"> Entire Meal</p> -->
-        <button>LET'S COOK!</button>
-      </article>
-      <article class="cookpot-view hidden">
+        <button id="lets-cook">LET'S COOK!</button>
+      </section>
+      <section class="cookpot-view">
         <img src="./assets/cookpot.svg">
-      </article>
-      <article class="dish-view">
+      </section>
+      <section class="dish-view hidden">
         <p><i>You should make:</i></p>
         <p class="dish-result">Black Forest Cake!</p>
         <button>CLEAR</button>
-      </article>
+      </section>
     </main>
-  </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  </body>
 </html>

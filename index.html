@@ -10,29 +10,30 @@
       <button class='add-recipe-button'>ADD A RECIPE</button>
     </header>
   <main class='main'>
-    <article class='article1'>
+    <article class='selection-box'>
       <h2 class='radio-title'>What are you looking for? <span class='red-asterisk'> * </span><br>
        <p class='radio-choices'>
-         <input type='radio' value= 'side'id='side'>
+         <input type='radio' value= 'sideChoices' id='side' name='meal-options'>
          <label for='side'>Side</label><br>
-         <input type='radio'value= 'main' id='main'>
+         <input type='radio'value= 'mainChoices' id='main' name='meal-options'>
          <label for='main-dish'>Main Dish</label><br>
-         <input type='radio' value= 'dessert' id='dessert'>
+         <input type='radio' value= 'dessertChoices' id='dessert'name='meal-options'>
          <label for='dessert'>Dessert</label><br>
-         <input type='radio' value= 'entire' id='entire-meal'>
+         <input type='radio' value= 'entireMeal' id='entire-meal'name='meal-options'>
          <label for='Entire-Meal'>Entire Meal</label><br>
        </p>
        <button class='cook-click'>LET'S COOK!</button>
       </h2>
       </article>
-    <article class='article2'>
+    <article class='pot-box'>
      <img class='cookpot'id= 'cookpot' src="./assets/cookpot.svg">
      <div class='dish-box'>
-       <h2 class='dish-header' id='dish-header'>You should make:</h2>
-       <div class='dish-text' id='dish-text'>XXXX</div>
-       <button class='clear button' id= 'clear-button'>CLEAR</button>
-     </div>
-    </article>
+        <p class='dish-title hidden'>You should make:</p>
+        <div class='dish-text hidden'></div>
+      </div>
+       <section class= 'button-container'> <button class='clear-button hidden'>CLEAR</button>
+       </section>
+        </article>
   </main>
   </body>
   <script type='text/javascript' src='main.js'></script>

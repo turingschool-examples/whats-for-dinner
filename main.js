@@ -1,71 +1,57 @@
 
 //QUERY SELECTORS//
 
-var cookButton = document.querySelector('cook-click')
+var cookButton = document.querySelector('.cook-click');
+var dishTitle = document.querySelector('.dish-title');
+var dishText = document.querySelector('.dish-text');
+var potImage = document.querySelector('.cookpot');
+var clearButton = document.querySelector('.clear-button')
 
 
 
-//**EVENT LISTENERS**//
-cookButton.addEventListener('click', )
+//**EVENT LISTENER**//
+cookButton.addEventListener('click', displayMeal);
 
 
 
+//**FUNCTIONS**//
 
-var cookTitle = document.getElementById('dish-header');
-var dishText = document.getElementById('dish-text');
-var clearButton = document.getElementById('clear-button');
-var cookPot = document.getElementById('cookpot');
+function displayMeal(){
+  event.preventDefault();
+  dishText.innerText = getRecipe();
+  potImage.classList.add('hidden');
+  dishTitle.classList.remove('hidden');
+  dishText.classList.remove('hidden');
+  clearButton.classList.remove('hidden');
+};
 
-cookTitle.style.visibility = 'hidden';
-dishText.style.visibility = 'hidden';
-clearButton.style.visibility = 'hidden';
-cookPot.style.visibility = 'visible';
+
+function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+};
 
 
-//TOGGLE INSTEAD HERE???
-
-function viewSide(){
-  cookTitle.style.visibility = 'visible';
-  dishText.style.visibility = 'visible';
-  clearButton.style.visibility = 'visible';
-  cookPot.style.visibility = 'hidden';
-}
-
-function viewMain(){
-  cookTitle.style.visibility = 'visible';
-  dishText.style.visibility = 'visible';
-  clearButton.style.visibility = 'visible';
-  cookPot.style.visibility = 'hidden';
-}
-
-function viewDessert(){
-  cookTitle.style.visibility = 'visible';
-  dishText.style.visibility = 'visible';
-  clearButton.style.visibility = 'visible';
-  cookPot.style.visibility = 'hidden';
-}
-
-function viewEntireMeal(){
-  cookTitle.style.visibility = 'visible';
-  dishText.style.visibility = 'visible';
-  clearButton.style.visibility = 'visible';
-  cookPot.style.visibility = 'hidden';
-}
+function getRecipe(){
+  var grabRadio = document.querySelector('input[name="meal-options"]:checked');
+  if(!grabRadio){
+  }
+    if(grabRadio.value === "sideChoices") {
+      return `${getRandomElement(sideChoices)}!`
+   }
+    else if (grabRadio.value === "mainChoices"){
+      return `${getRandomElement(mainChoices)}!`
+    }
+    else if (grabRadio.value === "dessertChoices"){
+      return `${getRandomElement(dessertChoices)}!`
+  }
+    else if (grabRadio.value === "entireMeal")
+      return `${getRandomElement(mainChoices)} with a side of ${getRandomElement(sideChoices)} and ${getRandomElement(dessertChoices)} for dessert!`
+};
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//**MEAL CHOICES**//
 
 var sideChoices = ["Miso Glazed Carrots", "Coleslaw", "Garden Salad", "Crispy Potatoes", "Sweet Potato Tots", "Coconut Rice", "Caesar Salad", "Shrimp Summer Rolls", "Garlic Butter Mushrooms", "Cauli Rice", "Creamed Spinach", "Roasted Broccoli", "Braised Collards", "Hush Puppies"]
 

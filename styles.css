@@ -8,10 +8,8 @@ red - #ee5253
 
 */
 
-/*TOP OF PAGE*/
 .top-of-page {
   display: flex;
-  /* border: 2px solid red; */
   background-color: #0fb9b1;
   justify-content: space-between;
   height: 70px;
@@ -23,14 +21,12 @@ red - #ee5253
 }
 
 .whats-for-dinner {
-  /* border: 2px solid yellow; */
   width: 200px;
   display: flex;
   justify-content: center;
 }
 
 .add-button-box {
-  /* border: 2px solid purple; */
   width: 145px;
   display: flex;
   align-items: center;
@@ -52,14 +48,11 @@ red - #ee5253
 }
 
 .space {
-  /* border: 2px solid yellow; */
   width: 1000px;
   height: 100px;
 }
 
-/*LEFT BOX*/
 .looking-box {
-  /* border: 2px solid blue; */
   width: 600px;
   height: 460px;
   border: none;
@@ -82,7 +75,6 @@ red - #ee5253
 }
 
 .lets-cook-button {
-  /* border: 2px solid blue; */
   background-color: #0fb9b1;
   border: none;
   width: 220px;
@@ -92,13 +84,10 @@ red - #ee5253
 }
 
 .lets-cook-location {
-  /* border: 2px solid red; */
   display: flex;
   margin-right: 100px;
   height: 50px;
   justify-content: flex-end;
-
-
 }
 
 body{
@@ -108,13 +97,11 @@ body{
 }
 
 .body {
-  /* border: 2px solid blue; */
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
 }
 
-/*RIGHT BOX*/
 .dinner-box {
   width: 600px;
   height: 460px;
@@ -158,7 +145,6 @@ body{
   justify-content: center;
   margin-top: 10px;
 
-
 }
 
 .clear-button {
@@ -180,7 +166,7 @@ body{
   font-size: 35px;
 }
 
-.size {
+.foodInput {
   font-size: 35px;
   text-align: center;
 }

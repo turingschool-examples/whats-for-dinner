@@ -30,14 +30,16 @@ function displayDish() {
   hideElement(cookpotIcon);
   console.log("form has been submitted")
     if (sideRadio.checked ) {
-       displayRandomSide()
+       displayRandomDish(sides)
 
      }
     else if (mainRadio.checked){
-        displayRandomMain()
+        // displayRandomMain()
+        displayRandomDish(mains)
     }
     else if (dessertRadio.checked) {
-        displayRandomDessert()
+        // displayRandomDessert()
+        displayRandomDish(desserts)
     }
 };
 
@@ -50,25 +52,29 @@ function displayDish() {
 // }
   // // show the output:
   // output.innerText = selectedSize ? `You selected ${selectedSize}` : `You haven't selected any size`;
-
-
-function displayRandomSide(){
-  var dish = sides[getRandomIndex(sides)];
+function displayRandomDish(dishType){
+  var dish = dishType[getRandomIndex(dishType)];
     formOutput.innerText = `${dish}!`
     console.log(dish);
 }
-
-function displayRandomMain(){
-  var dish = mains[getRandomIndex(mains)];
-    formOutput.innerText = `${dish}!`
-    console.log(dish);
-}
-
-function displayRandomDessert() {
-  var dish = desserts[getRandomIndex(desserts)];
-    formOutput.innerText = `${dish}!`
-    console.log(dish);
-}
+//
+// function displayRandomSide(){
+//   var dish = sides[getRandomIndex(sides)];
+//     formOutput.innerText = `${dish}!`
+//     console.log(dish);
+// }
+//
+// function displayRandomMain(){
+//   var dish = mains[getRandomIndex(mains)];
+//     formOutput.innerText = `${dish}!`
+//     console.log(dish);
+// }
+//
+// function displayRandomDessert() {
+//   var dish = desserts[getRandomIndex(desserts)];
+//     formOutput.innerText = `${dish}!`
+//     console.log(dish);
+// }
 
 function viewElement(classToEdit) {
   classToEdit.classList.remove("hidden");

@@ -130,9 +130,28 @@ button {
 
 .should-make {
   font-style: italic;
+  margin: 0;
+
+}
+
+.form-result {
+  text-align: center;
 }
 
 .form-output {
+  font-size: xx-large;
+  margin: 0;
+}
+
+.clear{
+  background-color: #95a5a6;
+  color: white;
+}
+.clear-button{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
 
 }
 

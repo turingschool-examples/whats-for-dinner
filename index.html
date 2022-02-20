@@ -19,28 +19,43 @@
         <h2>What are you looking for?<span id="required-question">*</span></h2>
         <form class="form" id="form">
           <div>
-            <input type="radio" class="side" id="side" />
+            <input type="radio" name="radiobtn" class="side" id="radiobtn" />
             <label for="side">Side</label>
           </div>
           <div>
-            <input type="radio" class="main-dish" id="main-dish" />
+            <input
+              type="radio"
+              name="radiobtn"
+              class="main-dish"
+              id="radiobtn"
+            />
             <label for="main-dish">Main Dish</label>
           </div>
           <div>
-            <input type="radio" class="dessert" id="dessert" />
+            <input type="radio" name="radiobtn" class="dessert" id="radiobtn" />
             <label for="dessert">Dessert</label>
           </div>
           <div>
-            <input type="radio" class="entire-meal" id="entire-meal" />
+            <input
+              type="radio"
+              name="radiobtn"
+              class="entire-meal"
+              id="radiobtn"
+            />
             <label for="entire-meal">Entire Meal</label>
           </div>
         </form>
         <button class="button2">LET'S COOK!</button>
       </section>
       <section class="box2" id="box2">
-        <img src="./assets/cookpot.svg" alt="cookpot" class="cookpot" />"
+        <article class="box-2-suggestions">
+          <h3 class="h3 hidden">You should make:</h3>
+          <p class="suggestions" id="suggestions"></p>
+        </article>
+        <img src="./assets/cookpot.svg" alt="cookpot" class="cookpot" />
       </section>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="foodlists.js"></script>
 </html>

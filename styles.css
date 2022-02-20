@@ -124,7 +124,7 @@ div {
   height: 250px;
   width: 250px;
   position: inherit;
-  /*visibility: hidden;*/
+  /*display: none;*/
 }
 h3 {
   font-size: 35px;
@@ -160,5 +160,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-.dinner-suggestions {
+
+.hidden {
+  display: none;
 }

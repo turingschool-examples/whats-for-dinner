@@ -64,6 +64,7 @@ button {
   /* aspect-ratio: 6.7 / 5.4; */
   width: 350;
   height: 280;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -101,6 +102,9 @@ button {
 
 .lets-cook{
   background-color: #0fb9b1;
+  margin: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
 
 }
 
@@ -109,9 +113,9 @@ button {
 
   align-items: center;
   display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%''
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 .selector-radio{
 
@@ -124,6 +128,35 @@ width: 50%''
   display: none;
 }
 
+.should-make {
+  font-style: italic;
+  margin: 0;
+
+}
+
+.form-result {
+  text-align: center;
+}
+
+.form-output {
+  font-size: xx-large;
+  margin: 0;
+}
+
+.clear {
+  background-color: #95a5a6;
+  color: white;
+  margin-top:40px;
+}
+.clear-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+
+}
+
 #F1  {
-  padding: 5px;
+  padding: 8px;
 }

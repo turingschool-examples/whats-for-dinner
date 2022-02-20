@@ -81,11 +81,6 @@ div {
   justify-content: center;
   align-items: center;
 }
-.cookpot {
-  height: 250px;
-  width: 250px;
-  position: inherit;
-}
 
 h3 {
   font-size: 35px;
@@ -106,6 +101,7 @@ p {
   background-color: rgba(225, 225, 225, 0.9);
   color: black;
   width: 15%;
+  cursor: pointer;
 }
 
 .button2 {
@@ -114,8 +110,39 @@ p {
   color: black;
   font-size: 20px;
   width: 40%;
+  cursor: pointer;
 }
 
+.button3 {
+  background-color: #95a5a6;
+  opacity: 90%;
+  color: black;
+  font-size: 20px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.box-2-suggestions {
+  margin: 10px;
+  height: 100px;
+  width: 100%;
+  font-size: 30px;
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: center;
+}
+
+.cookpot {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 button {
   border: 40px;
   margin: 35px;

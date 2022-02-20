@@ -2,7 +2,7 @@
 
 What's for dinner? The ultimate question. In this project, we were asked to build an app that helps users choose a side, main, and/or dessert recipe to put together meals.
 
-[What's For Dinner]("https://frontend.turing.edu/projects/module-1/assets/dinner/dinner_2.png")
+[What's For Dinner](assets/whatsForDinner.png)
 
 ## Contributors
 

@@ -1,53 +1,21 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
-
-header {
-  background-color: #0fb9b1;
-  width: 100%;
-  border-radius: 0px;
-  border: 0px;
-  margin: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration-color: rgba(225, 225, 225, 0.9);
-  font-size: 20px;
-  font-family: "Roboto", sans-serif;
-}
 nav {
   background-color: #0fb9b1;
+  font-family: "Roboto", sans-serif;
   height: 100px;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   border: 50px;
-  margin: 0px;
-  border-radius: 10px;
 }
+
 h1 {
   color: black;
   font-size: 35px;
-  font-weight: bolder;
   padding: 10px;
   margin: 20px;
   width: inherit;
 }
-.button1 {
-  text-decoration-color: none;
-  background-color: rgba(225, 225, 225, 0.9);
-  color: black;
-  width: 15%;
-}
+
 body {
   background-image: url(./assets/burger-friends.jpg);
   background-size: cover;
@@ -71,7 +39,6 @@ h2 {
   font-family: "Roboto", sans-serif;
   background-color: rgba(225, 225, 225, 0.9);
   opacity: 0.95;
-  padding: 50px;
   margin: 10px;
   height: 450px;
   width: 550px;
@@ -79,9 +46,8 @@ h2 {
   margin-top: 90px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
+
 form {
   margin: 10px;
   height: 100px;
@@ -93,27 +59,22 @@ form {
   align-items: stretch;
   padding: 10%;
 }
+
 #required-question {
   color: #ee5253;
 }
+
 div {
   padding: 10px;
 }
-.button2 {
-  background-color: #0fb9b1;
-  opacity: 90%;
-  color: black;
-  font-size: 20px;
-  width: 40%;
-}
+
 .box2 {
   background-color: rgba(225, 225, 225, 0.9);
   opacity: 0.95;
-  padding: 50px;
   margin: 10px;
   height: 450px;
   width: 550px;
-  padding: 30;
+  padding: 30px;
   margin-top: 90px;
   display: flex;
   flex-direction: column;
@@ -124,8 +85,8 @@ div {
   height: 250px;
   width: 250px;
   position: inherit;
-  /*display: none;*/
 }
+
 h3 {
   font-size: 35px;
   font-family: "Roboto", sans-serif;
@@ -134,6 +95,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
 p {
   font-size: 25px;
   font-family: "Roboto", sans-serif;
@@ -143,22 +105,25 @@ p {
   align-items: center;
 }
 
+.button1 {
+  background-color: rgba(225, 225, 225, 0.9);
+  color: black;
+  width: 15%;
+}
+
+.button2 {
+  background-color: #0fb9b1;
+  opacity: 90%;
+  color: black;
+  font-size: 20px;
+  width: 40%;
+}
+
 button {
-  border: 10px solid red;
-  color: white;
   border: 40px;
   margin: 35px;
   padding: 15px 32px;
-  text-align: center;
   border-radius: 10px;
-  display: inline-block;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  background-color: #b32274;
-  display: flex;
-  flex-direction: center;
-  justify-content: center;
-  align-items: center;
 }
 
 .hidden {

@@ -11,6 +11,7 @@ var sides = [
   "Shrimp Summer Rolls",
   "Garlic Butter Mushrooms",
   "Hush Puppies",
+  "New Zealand sausage rolls",
 ];
 
 var mains = [
@@ -31,6 +32,7 @@ var mains = [
   "Margarita Pizza",
   "Zuppa Toscana",
   "Corn and Pepper Fritters",
+  "Buffalo Chicken Wings",
 ];
 
 var desserts = [

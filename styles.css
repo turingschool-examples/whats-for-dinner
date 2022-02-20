@@ -8,3 +8,136 @@ red - #ee5253
 
 */
 
+* {
+  border: solid black 1px
+}
+
+.hidden {
+  display: none;
+}
+
+
+body {
+  background-size: cover;
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  background-color: #0fb9b1;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+}
+
+h1  {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+#recipe-button {
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+#wrapper {
+  display: flex;
+  border: blue;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+ #section1 {
+  background-color: rgba(225, 225, 225, .9);
+  height: 50%;
+  width: 30%;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 6px
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+   margin-left: 10%;
+   margin-top: 10%;
+}
+
+span {
+  color: red;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 50%;
+}
+
+li {
+  font-family: 'Roboto', sans-serif;
+  /* padding: 2% 0 2% */
+  /* margin: 2%; */
+}
+
+
+#lets-cook-button {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  background-color: #0fb9b1;
+  height: 10%;
+  width: 40%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+
+#section2 {
+  background-color: rgba(225, 225, 225, .9);
+  height: 50%;
+  width: 30%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+img {
+  height: 40%;
+  width: 40%;
+  display: flex;
+}
+
+h2 {
+font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+
+}
+
+#clear {
+font-family: 'Roboto', sans-serif;
+color: white;
+text-transform: uppercase;
+background-color: #95a5a6;
+height: 10%;
+width: 20%;
+border-radius: 6%;
+margin-left: 60%;
+margin-top: 6%;
+
+}

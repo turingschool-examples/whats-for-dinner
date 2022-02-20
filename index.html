@@ -2,9 +2,46 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
-  <body>
-    
+  <body background="./assets/burger-friends.jpg" alt="Burger With Friends">
+    <header>
+      <h1>What's for Dinner?</h1>
+      <button id="recipe-button">add a recipe</button>
+    </header>
+      <main>
+        <section id="wrapper">
+          <section id="section1">
+            <h2>What are you looking for?<span>*</span></h2>
+            <ul style="list-style-type:none">
+              <li>
+                <input type="radio" id="side" name="drone" value="sides">
+                  <label for="side">Side</label>
+              </li>
+              <li>
+                <input type="radio" id="main-dish" name="drone" value="mains">
+                  <label for="main-dish">Main Dish</label>
+              </li>
+              <li>
+                <input type="radio" id="dessert" name="drone" value="desserts">
+                  <label for="dessert">Dessert</label>
+              </li>
+              <li>
+                <input type="radio" id="entire-meal" name="drone" value="entireMeal">
+                  <label for="entire-meal">Entire Meal</label>
+              </li>
+            </ul>
+            <button id="lets-cook-button">let's cook!</button>
+          </section>
+          <section id="section2">
+            <h2 class="should-make-text-hidden">You should make:</h2>
+            <p class="random-meal-text-hidden"></p>
+            <img class="cookPotImg" src="./assets/cookpot.svg">
+            <button id="clear">clear</button>
+          </section>
+        </section>
+      </main>
   </body>
+  <script typse="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -4,7 +4,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header class="top-bar">
+      <h3 class="title">Whats for Dinner?</h3>
+    </header>
+    <div class="box-container">
+    <section class="box-1">
+      <div>
+      <form class="option-selection">
+        <h1>What are you looking for?<span class="star">*</span></h1>
+          <div>
+            <input type="radio" id="side-selected" name="radio">
+            <label for="side-selected" class="choice-selected">Side</label>
+          </div>
+          <div>
+            <input type="radio" id="main-selected" name="radio">
+            <label for="main-selected" class="choice-selected">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" id="dessert-selected" name="radio">
+            <label for="dessert-selected" class="choice-selected">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" id="entire-meal-selected" name="radio">
+            <label class="choice-selected">Entire Meal</label>
+          </div>
+      </form>
+      <button class="lets-cook-button">Let's Cook!</button>
+    </div>
+    </section>
+    <section class="box-2">
+        <img class="crockpot" src="assets/cookpot.svg" alt="picture of crockpot">
+        <h3 class="recipe-suggestion hidden"></h3>
+        <div>
+        <h2 class="should-make-text hidden">You should make:</h2>
+        <p class="food-suggestion" id="recipe-display"></p>
+      </div>
+    </section>
+  </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -1,10 +1,101 @@
-/* font-family: 'Roboto', sans-serif;
+body {
+  background-image: url(assets/burger-friends.jpg);
+  background-size: cover;
+  margin: 0;
+}
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
+input {
+  margin-bottom: 15px;
+}
 
-*/
+.star {
+  color: red;
+}
+.crockpot {
+  padding-left: 150px;
+}
 
+.top-bar {
+  background-color: #0fb9b1;
+  padding-bottom: 1px;
+}
+
+h1,
+.title,
+.choice-selected,
+.lets-cook-button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+
+.crockpot {
+  height: 200px;
+  width: auto;
+}
+
+.box-1 {
+  display: flex;
+  align-items: center;
+  height: 400px;
+  width: 500px;
+  margin-top: 80px;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.box-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  width: 500px;
+  margin-top: 80px;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+.option-selection {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  border-radius: 4px;
+  border: 0;
+  margin-top: 25px;
+  margin-left:50px;
+  padding: 5px;
+  font-size: 15px;
+  width: 157px;
+}
+
+.should-make-text {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  margin-left: 170px;
+}
+
+.food-suggestion {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+.hidden {
+  display: none;
+}

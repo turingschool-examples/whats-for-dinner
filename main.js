@@ -53,14 +53,9 @@ var entireMealButton = document.querySelector('#entire-meal-selected');
 var letsCookButton = document.querySelector('.lets-cook-button');
 var recipeDisplay = document.getElementById('recipe-display');
 var shouldMake = document.querySelector('.should-make-text');
-//Event Listeners
 
 letsCookButton.addEventListener('click', letsCook);
 
-
-
-
-//Functions
 function letsCook() {
   removeCrockPot()
   var sideOption = sides[getRandomIndex(sides)];
@@ -73,7 +68,7 @@ function letsCook() {
   } else if (dessertButton.checked) {
     recipeDisplay.innerText = dessertOption;
   } else if (entireMealButton.checked) {
-    recipeDisplay.innerText = `${sideOption} with a side of ${mealOption} and a ${dessertOption} for dessert!`;
+    recipeDisplay.innerText = `${mealOption} with a side of ${sideOption} and a ${dessertOption} for dessert!`;
   }
 }
 

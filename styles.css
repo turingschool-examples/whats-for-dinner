@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Roboto';
   background-size: 100%;
+
 }
 
 .header {
@@ -12,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content:space-between;
+
 }
 
 
@@ -30,11 +32,22 @@ body {
   text-transform: uppercase;
 }
 
+.button.clear {
+  background: #95A6A6;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+}
+
 .body-wrapper {
-  width:90%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+
 }
 
 section {
@@ -54,10 +67,11 @@ section.two {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 
 .red {
-  color:red;
+  color: #ee5253;
 }
 
 form.choose-meal {
@@ -82,6 +96,29 @@ svg.pot {
 
 .food-item_single.small {
   font-size:18px;
+  line-height: 1.2;
+}
+
+.food-item_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+em {
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin: 0;
+  background: rgba(225, 225, 225, .9);
+  padding: 15px 30px;
+  margin-bottom: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
 }
 
 /* UTILITY CLASSES */

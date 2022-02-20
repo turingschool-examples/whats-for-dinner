@@ -31,7 +31,8 @@ function findRandomSelection() {
   var selected = document.querySelector('input[type="radio"]:checked')
   var randomIndex = getRandomIndex(meal[selected.value])
   results.innerHTML = meal[selected.value][randomIndex]
-}
+  hideCrocPot()
+};
 
 // clearButton.addEventListener('click',)
 // recipeButton.addEventListener('click',)
@@ -44,9 +45,8 @@ function getRandomIndex(array) {
 };
 
 
-function hidden() {
-
-
+function hideCrocPot() {
+  cookPotImg.classList.add("hidden");
 }
 
 function notHidden() {

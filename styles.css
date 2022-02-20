@@ -86,8 +86,28 @@ h1,
   border-radius: 4px;
   border: 0;
   margin-top: 25px;
+  margin-left:50px;
   padding: 5px;
   font-size: 15px;
   width: 157px;
+}
 
+.should-make-text {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  margin-left: 170px;
+}
+
+.food-suggestion {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  margin-left: 120px;
+  margin-top: -10px;
+}
+
+.hidden {
+  display: none;
 }

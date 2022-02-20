@@ -13,32 +13,34 @@
       <form class="option-selection">
         <h1>What are you looking for?<span class="star">*</span></h1>
           <div>
-            <input type="radio">
-            <label class="choice-selected">Side</label>
+            <input type="radio" id="side-selected" name="radio">
+            <label for="side-selected" class="choice-selected">Side</label>
           </div>
           <div>
-            <input type="radio">
-            <label class="choice-selected">Main Dish</label>
+            <input type="radio" id="main-selected" name="radio">
+            <label for="main-selected" class="choice-selected">Main Dish</label>
           </div>
           <div>
-            <input type="radio">
-            <label class="choice-selected">Dessert</label>
+            <input type="radio" id="dessert-selected" name="radio">
+            <label for="dessert-selected" class="choice-selected">Dessert</label>
           </div>
           <div>
-            <input type="radio">
-            <label class="choice-selected">Entire Meal</label>
+            <input type="radio" name="radio">
+            <label class="choice-selected" id= entire-meal-selected>Entire Meal</label>
           </div>
-          <button class="lets-cook-button">Let's Cook!</button>
       </form>
+      <button class="lets-cook-button">Let's Cook!</button>
     </div>
     </section>
     <section class="box-2">
         <img class="crockpot" src="assets/cookpot.svg" alt="picture of crockpot">
+        <h3 class="recipe-suggestion hidden"></h3>
+        <div class="suggestion">
+        <p class="should-make-text hidden">You should make:</p>
+        <p class="food-suggestion" id="recipe-display"></p>
+      </div>
     </section>
   </div>
-    <!-- <section class="recipe-output">
-      <h3 class="recipe-suggestion hidden">You should make</h3>
-    </section> -->
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

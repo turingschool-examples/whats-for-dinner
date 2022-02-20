@@ -22,6 +22,12 @@ function showRandomFood() {
     dinnerSuggestions.innerHTML = `${mains[getRandomIndex(mains)]}!`;
   } else if (dessertsButton.checked) {
     dinnerSuggestions.innerHTML = `${desserts[getRandomIndex(desserts)]}!`;
+  } else if (entireMealButton.checked) {
+    dinnerSuggestions.innerHTML = `${
+      mains[getRandomIndex(mains)]
+    } with a side of ${sides[getRandomIndex(sides)]}, and ${
+      desserts[getRandomIndex(desserts)]
+    } for dessert!`;
   }
 
   hide(cookPotImage);

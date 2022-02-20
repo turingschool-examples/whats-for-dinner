@@ -21,9 +21,6 @@ var meal = {
   entireMeal: [sides, mains, desserts]
 }
 
-//radio button checking
-
-
 // event listeners
 letsCookButton.addEventListener('click', findRandomSelection)
 
@@ -34,21 +31,12 @@ function findRandomSelection() {
   hideCrocPot()
 };
 
-// clearButton.addEventListener('click',)
-// recipeButton.addEventListener('click',)
-
-
 
 // random number generator
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-
 function hideCrocPot() {
   cookPotImg.classList.add("hidden");
-}
-
-function notHidden() {
-
 }

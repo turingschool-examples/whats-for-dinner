@@ -12,7 +12,9 @@ red - #ee5253
   border: solid black 1px
 }
 
-
+.hidden {
+  display: none;
+}
 
 
 body {

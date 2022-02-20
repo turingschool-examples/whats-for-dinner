@@ -8,7 +8,7 @@ var sides = [
 'Caeser Salad',
 'Shrimp Summer Rolls',
 'Garlic Butter Mushrooms',
-'Hush Puppies']
+'Hush Puppies'];
 
 var mainDish = [
 'Spaghetti and Meatballs',
@@ -23,26 +23,26 @@ var mainDish = [
 'Empanadas',
 'Chicken Fried Rice',
 'Sheet Pan Fajitas',
-'Margarita Pizza']
+'Margarita Pizza'];
 
 var desserts = [
-'Apple Pie!',
-'Lemon Meringue Pie!',
-'Black Forest Cake!',
-'Banana Bread!',
-'Peach Cobbler!',
-'Cheesecake!',
-'Funfetti Cake!',
-'Baklava!',
-'Flan!',
-'Macaroons!',
-'Chocolate Cupcakes!',
-'Pavlova!',
-'Pumpkin Pie!',
-'Key Lime Pie!',
-'Tart Tatin!',
-'Croissants!',
-'Eclairs!']
+'Apple Pie',
+'Lemon Meringue Pie',
+'Black Forest Cake',
+'Banana Bread',
+'Peach Cobbler',
+'Cheesecake',
+'Funfetti Cake',
+'Baklava',
+'Flan',
+'Macaroons',
+'Chocolate Cupcakes',
+'Pavlova',
+'Pumpkin Pie',
+'Key Lime Pie',
+'Tart Tatin',
+'Croissants',
+'Eclairs'];
 
 //Query Selectors
 var crockpot = document.querySelector('.crockpot');
@@ -52,7 +52,7 @@ var dessertButton = document.querySelector('#dessert-selected');
 var entireMealButton = document.querySelector('#entire-meal-selected');
 var letsCookButton = document.querySelector('.lets-cook-button');
 var recipeDisplay = document.getElementById('recipe-display');
-var shouldMake = document.querySelector('.should-make-text')
+var shouldMake = document.querySelector('.should-make-text');
 //Event Listeners
 
 letsCookButton.addEventListener('click', letsCook);
@@ -62,26 +62,25 @@ letsCookButton.addEventListener('click', letsCook);
 
 //Functions
 function letsCook() {
-  event.preventDefault()
   removeCrockPot()
+  var sideOption = sides[getRandomIndex(sides)];
+  var mealOption = mainDish[getRandomIndex(mainDish)];
+  var dessertOption = desserts[getRandomIndex(desserts)];
   if (sideButton.checked) {
-    recipeDisplay.innerText = sides[getRandomIndex(sides)]
+    recipeDisplay.innerText = sideOption;
   } else if (mainButton.checked) {
-    recipeDisplay.innerText = mainDish[getRandomIndex(mainDish)]
+    recipeDisplay.innerText = mealOption;
   } else if (dessertButton.checked) {
-    recipeDisplay.innerText = desserts[getRandomIndex(desserts)]
+    recipeDisplay.innerText = dessertOption;
+  } else if (entireMealButton.checked) {
+    recipeDisplay.innerText = `${sideOption} with a side of ${mealOption} and a ${dessertOption} for dessert!`;
   }
 }
-
-
-
-
 
 function removeCrockPot() {
   crockpot.classList.add('hidden');
   shouldMake.classList.remove('hidden');
 }
-
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);

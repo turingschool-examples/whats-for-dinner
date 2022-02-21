@@ -5,7 +5,7 @@
     <title> What's For Dinner? </title>
     <link rel="shortcut icon" type="image/jpg" href="assets/spatula.png"/>
   </head>
-  <body>
+  <body class="wrapper">
     <header class="page-header">
       <section class="title">
         <h2>What's for Dinner?
@@ -22,29 +22,25 @@
           <section class="box input-form" >
             <section class="content">
               <section>
-                <form>
+                <form class="random-recipe-form">
                   <div id="F1">
                     <h3 class="required-field" >What are you looking for?</h3>
                   </div>
                   <div id="F1">
-                    <input type="radio" id="side-dish"
-                     name="dish" value="side">
+                    <input type="radio" id="side-dish" name="dish" value="side">
                     <label for="side-dish">Side</label>
                   </div>
                   <div id="F1">
-                      <input type="radio" id="main-dish"
-                       name="dish" value="main-dish">
+                      <input type="radio" id="main-dish" name="dish" value="main-dish">
                       <label for="main-dish">Main Dish</label>
                   </div>
                   <div id="F1">
-                    <input type="radio" id="dessert-dish"
-                     name="dish" value="dessert">
+                    <input type="radio" id="dessert-dish" name="dish" value="dessert">
                     <label for="dessert-dish">Dessert</label>
                   </div>
-                  <div id="F1">
-                    <input type="radio" id="entire-meal"
-                     name="dish" value="entire-meal">
-                    <label for="entire-meal">Entire Meal</label>
+                  <div id="F1" class="hidden added-dish">
+                    <input type="radio" id="added-dish" name="dish" value="added-dish">
+                    <label for="added-dish">Other Dishes</label>
                   </div>
                   <button type="submit" class="lets-cook"
                     type="button">
@@ -81,23 +77,18 @@
 
 
     </main>
-    <footer class="bottom-bar">
-      <section>
-        <form>
-          <div id="F1">
-            <h3 class="required-field" >What are you looking for?</h3>
-          </div>
-          <div id="F1">
-            <input type="text" id="recipe-type"
-             name="dish" value="------">
-            <label for="side-dish">Recipe Type:</label>
-          </div>
-          <div id="F1">
-              <input type="text" id="recipe-name"
-               name="recipe-name" value="-----">
-              <label for="recipe-name">Recipe Name:</label>
-          </div>
+    <footer class="hidden">
+      <section >
+        <form class="add-new-form bottom-bar">
 
+          <div id="F1">
+            <label for="side-dish">Recipe Type:</label>
+            <input class="user-input-type" type="text" id="recipe-type" name="dish" value="">
+          </div>
+          <div id="F1">
+            <label for="recipe-name">Recipe Name:</label>
+            <input class="user-input-dish" type="text" id="recipe-name" name="recipe-name" value="">
+          </div>
           <button type="submit" class="add-new"
             type="button">
             ADD NEW

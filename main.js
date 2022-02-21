@@ -1,22 +1,28 @@
-//global variables
 var addRecipeB = document.querySelector(".add-recipe");
 var form = document.querySelector("form");
 var sideRadio = document.querySelector("#side-dish");
 var mainRadio = document.querySelector("#main-dish");
 var dessertRadio = document.querySelector("#dessert-dish");
-var mealRadio =  document.querySelector("#entire-meal");
+var otherRadio =  document.querySelector("#added-dish");
+var addedDishes = document.querySelector(".added-dish");
 var formOutput = document.querySelector(".form-output");
 var formResult = document.querySelector(".form-result");
 var cookpotIcon = document.querySelector(".cookpot-icon");
+var footer = document.querySelector("footer");
+var addNewB = document.querySelector(".add-new");
+var newDishType = document.querySelector(".user-input-type");
+var newDish = document.querySelector(".user-input-dish");
+var clear = document.querySelector(".clear");
+var recipeForm = document.querySelector(".random-recipe-form");
+var newForm = document.querySelector(".add-new-form");
 
-//event listeners
 
 form.addEventListener("submit", displayDish);
-addRecipeB.addEventListener('click', openAddRecipeForm);
+addRecipeB.addEventListener('click', showAddRecipeForm);
+addNewB.addEventListener('click', addRecipe);
+clear.addEventListener('click', clearResult);
 
 
-// functions and even handlers
-//
 function displayDish() {
   event.preventDefault();
   viewElement(formResult);
@@ -30,13 +36,58 @@ function displayDish() {
     else if (dessertRadio.checked) {
       displayRandomDish(desserts)
       }
+    else if (otherRadio.checked) {
+      displayRandomDish(otherDishes)
+      }
+
 };
 
 function displayRandomDish(dishType){
   var dish = dishType[getRandomIndex(dishType)];
     formOutput.innerText = `${dish}!`
-    console.log(dish);
 }
+
+function showAddRecipeForm() {
+   viewElement(footer);
+}
+
+function addRecipe() {
+  event.preventDefault();
+  saveRecipe();
+  displayRecipe();
+}
+
+function saveRecipe() {
+  if (newDishType.value.includes('ide')) {
+    sides.unshift(newDish.value);
+  }
+  else if (newDishType.value.includes('ain')) {
+    mains.unshift(newDish.value);
+  }
+  else if (newDishType.value.includes('essert')) {
+    desserts.unshift(newDish.value);
+  }
+  else {
+    otherDishes.unshift(newDish.value);
+    viewElement(addedDishes)
+  }
+}
+
+function displayRecipe() {
+  formOutput.innerText = `${newDish.value}!`
+  hideElement(cookpotIcon);
+  viewElement(formResult);
+  hideElement(footer);
+
+}
+
+function clearResult(){
+  recipeForm.reset();
+  hideElement(formResult);
+  viewElement(cookpotIcon);
+  newForm.reset();
+}
+
 
 function viewElement(classToEdit) {
   classToEdit.classList.remove("hidden");
@@ -48,32 +99,3 @@ function hideElement(classToEdit) {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
-
-//
-// var selectedDish;
-// for (const radioButton of radioButtons) {
-//   if (radioButton.checked) {
-//     selectedDish = radioButton.value;
-//   }
-// }
-  // // show the output:
-  // output.innerText = selectedSize ? `You selected ${selectedSize}` : `You haven't selected any size`;
-
-//
-// function displayRandomSide(){
-//   var dish = sides[getRandomIndex(sides)];
-//     formOutput.innerText = `${dish}!`
-//     console.log(dish);
-// }
-//
-// function displayRandomMain(){
-//   var dish = mains[getRandomIndex(mains)];
-//     formOutput.innerText = `${dish}!`
-//     console.log(dish);
-// }
-//
-// function displayRandomDessert() {
-//   var dish = desserts[getRandomIndex(desserts)];
-//     formOutput.innerText = `${dish}!`
-//     console.log(dish);
-// }

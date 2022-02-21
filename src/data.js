@@ -50,3 +50,5 @@ var desserts = [
   'Croissants',
   'Eclairs'
 ];
+
+var otherDishes = [];

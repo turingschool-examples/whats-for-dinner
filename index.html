@@ -1,10 +1,62 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
+  <title>What's for Dinner?</title>
+  <header class="header" id="header">
+    <nav class="navigation" id="navigation">
+      <h1 class="pagename">What's for Dinner?</h1>
+      <button class="button1">ADD A RECIPE</button>
+    </nav>
+  </header>
   <body>
-    
+    <main>
+      <section class="box1" id="box1">
+        <h2>What are you looking for?<span id="required-question">*</span></h2>
+        <form class="form" id="form">
+          <div>
+            <input type="radio" name="radiobtn" class="side" id="radiobtn" />
+            <label for="side">Side</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="radiobtn"
+              class="main-dish"
+              id="radiobtn"
+            />
+            <label for="main-dish">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" name="radiobtn" class="dessert" id="radiobtn" />
+            <label for="dessert">Dessert</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="radiobtn"
+              class="entire-meal"
+              id="radiobtn"
+            />
+            <label for="entire-meal">Entire Meal</label>
+          </div>
+        </form>
+        <button class="button2">LET'S COOK!</button>
+      </section>
+      <section class="box2" id="box2">
+        <article class="box-2-suggestions">
+          <h3 class="h3 hidden">You should make:</h3>
+          <p class="suggestions" id="suggestions"></p>
+          <button class="button3 hidden" id="button3">CLEAR</button>
+        </article>
+        <img src="./assets/cookpot.svg" alt="cookpot" class="cookpot" />
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="foodlists.js"></script>
 </html>

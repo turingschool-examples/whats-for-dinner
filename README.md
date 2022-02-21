@@ -1,4 +1,4 @@
-I Ú◊¬√Ú k''k /#jm/ m What's for Dinner?
+What's for Dinner?
 
 ## Overview
 
@@ -8,7 +8,7 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 
 ## Deploy link
 
-View page [here](https://grantbeard.github.io/whats-for-dinner/)
+View page [here](https://grantxbeard.github.io/whats-for-dinner/)
 
 ## Learning Goals
 

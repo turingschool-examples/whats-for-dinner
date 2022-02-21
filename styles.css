@@ -33,7 +33,7 @@ nav { /*parent to h1 nav, whats for dinner, button add a recipe*/
 
 h1 { /*h1-nav*/
   font-family: 'Roboto', sans-serif;
-  font-size: 24px;
+  font-size: 24pt;
   border: solid 4px white;
   padding: 5;
   margin: 30;
@@ -100,7 +100,7 @@ h1 { /*h1-nav*/
 
 .what-are-you-looking-for { /*h1*/
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 20pt;
   border: solid 4px black;
   margin: 5;
 }
@@ -114,7 +114,7 @@ h1 { /*h1-nav*/
 
 .lets-cook { /*button*/
   font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-size: 12pt;
   background-color: #0fb9b1;
   width: 45%;
   border: 0;
@@ -135,7 +135,7 @@ h1 { /*h1-nav*/
   background-color: rgba(225, 225, 225, .9);
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   padding: 30;
   margin-top: 10;
@@ -147,4 +147,20 @@ h1 { /*h1-nav*/
   border: solid 4px black;
   height: 40%;
   width: 20%;
+}
+
+.youShouldMake {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  border: solid 4px green;
+}
+
+.displayRandomFood {
+  font-family: 'Roboto', sans-serif;
+  font-size: 27pt;
+  border: solid 4px pink;
+}
+
+.hidden {
+  display: none;
 }

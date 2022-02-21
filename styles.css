@@ -7,18 +7,18 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-body { /*parent to nav, main*/
+
+body {
   margin: 0px;
   background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* align-items: center; */
 }
-nav { /*parent to h1 nav, whats for dinner, button add a recipe*/
+
+nav {
   font-family: 'Roboto', sans-serif;
   background-color: #0fb9b1;
-  border: solid 4px purple;
   height: 10%;
   display: flex;
   justify-content: space-between;
@@ -26,31 +26,25 @@ nav { /*parent to h1 nav, whats for dinner, button add a recipe*/
   padding-right: 15px;
 }
 
-#WFD {
-  border: solid 4px black;
-  display: flex;
-}
-
-h1 { /*h1-nav*/
+h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 24pt;
-  border: solid 4px white;
   padding: 5;
   margin: 30;
   margin-top: 20;
 }
-.add-a-recipe { /*button*/
+
+.add-a-recipe {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   background-color: rgba(225, 225, 225, .9);
+  border: 0;
   border-radius: 3px;
-  border: solid 4px black;
   padding: 5;
   margin: 30;
 }
 
- main { /*parent to boxes */
-  border: solid 4px purple;
+ main {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -58,32 +52,24 @@ h1 { /*h1-nav*/
   padding-bottom: 5%
 }
 
-.boxes { /*parent to box1, box2;*/
-  border: solid 8px white;
-
+.boxes {
   height: 50%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2%;
+  padding-top: 5%;
   padding-bottom: 15%;
   margin: 75;
-  margin-top: 15;
+  margin-top: 45;
   margin-bottom: 75;
 }
 
-/* .box1 { /*parent to form .meal-choice*
-  height: 100%;
-  width: 25%;
-} */
-
-.meal-choice { /*form and parent to h1 what looking for, .radios, button lets cook*/
+.meal-choice {
   font-family: 'Roboto', sans-serif;
   height: 75%;
   width: 35%;
-  border: solid 8px black;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -94,25 +80,20 @@ h1 { /*h1-nav*/
   margin-bottom: 10;
 }
 
-.WAYLF {
-  padding-left: 0;
-}
-
-.what-are-you-looking-for { /*h1*/
+.what-are-you-looking-for {
   font-family: 'Roboto', sans-serif;
   font-size: 20pt;
-  border: solid 4px black;
   margin: 5;
 }
 
-.radios { /*div  25*/
+.radios {
   height: 50%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
 
-.lets-cook { /*button*/
+.lets-cook {
   font-family: 'Roboto', sans-serif;
   font-size: 12pt;
   background-color: #0fb9b1;
@@ -122,16 +103,11 @@ h1 { /*h1-nav*/
   padding: 2%;
   margin-top: 10;
   margin-bottom: 10;
-
 }
 
-
-
-
-.box2 { /*parent to img*/
+.box2 { 
   height: 75%;
   width:35%;
-  border: solid 8px purple;
   background-color: rgba(225, 225, 225, .9);
   display: flex;
   justify-content: center;
@@ -144,7 +120,6 @@ h1 { /*h1-nav*/
 }
 
 .crock {
-  border: solid 4px black;
   height: 40%;
   width: 20%;
 }
@@ -152,13 +127,12 @@ h1 { /*h1-nav*/
 .youShouldMake {
   font-family: 'Roboto', sans-serif;
   font-size: 12pt;
-  border: solid 4px green;
 }
 
 .displayRandomFood {
   font-family: 'Roboto', sans-serif;
-  font-size: 27pt;
-  border: solid 4px pink;
+  font-size: 20pt;
+  text-align: center;
 }
 
 .hidden {

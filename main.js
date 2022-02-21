@@ -1,6 +1,8 @@
 var sideRadio = document.querySelector('.side');
 var mainRadio = document.querySelector('.main');
-var dessertRadio = document.querySelector('.dessert')
+var dessertRadio = document.querySelector('.dessert');
+var entireMealRadio =
+document.querySelector('.entireMeal');
 var letsCook = document.querySelector('.lets-cook');
 var crock = document.querySelector('.crock');
 var youShouldMake = document.querySelector('.youShouldMake');
@@ -12,6 +14,7 @@ var showWords = {};
 sideRadio.addEventListener('click', generateRandomSide);
 mainRadio.addEventListener('click', generateRandomMainDish);
 dessertRadio.addEventListener('click', generateRandomDessert);
+entireMealRadio.addEventListener('click', generateRandomEntireMeal)
 letsCook.addEventListener('click', hideCrockPot);
 
 
@@ -63,6 +66,12 @@ function generateRandomDessert() {
   showCrockPot();
   hideDisplayRandomFood();
   displayRandomFood.innerText = `${dessertsArray[getRandomIndex(dessertsArray)]}!`
+}
+
+function generateRandomEntireMeal() {
+  showCrockPot();
+  hideDisplayRandomFood();
+   displayRandomFood.innerText = `${sideArray[getRandomIndex(sideArray)]}, ${mainsArray[getRandomIndex(mainsArray)]}, and  ${dessertsArray[getRandomIndex(dessertsArray)]}!`
 }
 
 hideDisplayRandomFood();

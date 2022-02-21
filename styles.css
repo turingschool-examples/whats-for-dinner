@@ -8,3 +8,133 @@ red - #ee5253
 
 */
 
+body {
+  margin: 0px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0fb9b1;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24pt;
+  padding: 5;
+  margin: 30;
+  margin-top: 20;
+}
+
+.add-a-recipe {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  background-color: rgba(225, 225, 225, .9);
+  border: 0;
+  border-radius: 3px;
+  padding: 5;
+  margin: 30;
+}
+
+ main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
+  padding-bottom: 5%
+}
+
+.boxes {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 15%;
+  margin: 75;
+  margin-top: 45;
+  margin-bottom: 75;
+}
+
+.meal-choice {
+  font-family: 'Roboto', sans-serif;
+  height: 75%;
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 30;
+  margin-top: 10;
+  margin-bottom: 10;
+}
+
+.what-are-you-looking-for {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20pt;
+  margin: 5;
+}
+
+.radios {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.lets-cook {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  background-color: #0fb9b1;
+  width: 45%;
+  border: 0;
+  border-radius: 5px;
+  padding: 2%;
+  margin-top: 10;
+  margin-bottom: 10;
+}
+
+.box2 { 
+  height: 75%;
+  width:35%;
+  background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30;
+  margin-top: 10;
+  margin-bottom: 10;
+
+}
+
+.crock {
+  height: 40%;
+  width: 20%;
+}
+
+.youShouldMake {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+}
+
+.displayRandomFood {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,5 +1,5 @@
 // Button variables
-var addRecipeButton = document.querySelector('.add-recipe');
+var addRecipeButton = document.querySelector('.addrecipe');
 var sideButton = document.querySelector('input[value="sides"]');
 var mainDishButton = document.querySelector('input[value="mains"]');
 var dessertButton = document.querySelector('input[value="desserts"]');
@@ -10,6 +10,7 @@ var pot = document.querySelector('.pot');
 var foodItemSingle = document.querySelector('.food-item_single');
 var foodItemWrapper = document.querySelector('.food-item_wrapper');
 var errorMessage = document.querySelector('.menu-error');
+var footer = document.querySelector('.footer')
 
 // Randomizer function
 function getRandomIndex(array) {
@@ -59,8 +60,13 @@ function clearScreen() {
   errorMessage.classList.add('hidden');
   foodItemWrapper.classList.add('hidden');
   pot.classList.remove('hidden');
+  clearButton.classList.add('hidden');
+
 }
 
+function showAddRecipe() {
+  footer.classList.remove('hidden')
+}
 
 // Food arrays
 var sides = [
@@ -111,6 +117,6 @@ var desserts = [
 'Eclairs']
 
 // EventListeners
-// addRecipeButton.addEventListener('click',);
+addRecipeButton.addEventListener('click', showAddRecipe);
 letsCookButton.addEventListener('click', clickedLetsCook);
 clearButton.addEventListener('click', clearScreen);

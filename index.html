@@ -3,10 +3,10 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body background="./assets/burger-friends.jpg">
+  <body>
     <header class="header">
       <h1>What's for dinner?</h1>
-      <button class="button">Add a Recipe</button>
+      <button class="button addrecipe">Add a Recipe</button>
     </header>
         <main class="body-wrapper">
           <section class="one">
@@ -43,16 +43,19 @@
             </svg>
           </section>
         </main>
-      <footer class="footer">
+      <footer class="footer hidden">
         <h1></h1>
-        <form action="/action_page.php">
-            <label for="cars">Choose a car:</label>
-            <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-            </select>    
-        <button class="button">add new</button>
+        <form class="add-form" action="/action_page.php">
+            <label for="recipe">Recipe Type:</label>
+            <select name="food-items">
+                <option value="sides">Side</option>
+                <option value="mains">Main Dish</option>
+                <option value="desserts">Dessert</option>
+            </select>
+            <label for="recipename">Recipe Name:</label>
+            <input class="recipe" type="text">
+
+        <button class="button addnew">add new</button>
       </footer>
   </body>
   <script type="text/javascript" src="main.js"></script>

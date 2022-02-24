@@ -1,9 +1,12 @@
-var letsCookButton = document.querySelector('#lets-cook');
+var letsCookButton = document.querySelector('#lets-cook-button');
+var clearButton = document.querySelector('#clear-button')
 var cookpotView = document.querySelector('.cookpot-view');
 var dishViewHidden = document.querySelector('.dish-view.hidden');
 var displayedDish = document.querySelector('.dish-result');
 
+
 letsCookButton.addEventListener('click', populateDish);
+clearButton.addEventListener('click', clearDish);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -22,4 +25,9 @@ function populateDish() {
     displayedDish.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
     displayedDish.classList.add('entire-meal')
   }
+};
+
+function clearDish() {
+  dishViewHidden.classList.add('hidden')
+  cookpotView.classList.remove('hidden')
 };

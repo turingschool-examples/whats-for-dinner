@@ -104,11 +104,11 @@ main{
 .text-container{
   text-align: center;
 }
+
 .dish-text{
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-
 }
 
 .hidden{

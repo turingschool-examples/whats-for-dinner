@@ -1,20 +1,24 @@
 
 //QUERY SELECTORS//
-
-var cookButton = document.querySelector('.cook-click');
-var dishTitle = document.querySelector('.dish-title');
-var dishText = document.querySelector('.dish-text');
-var potImage = document.querySelector('.cookpot');
-var clearButton = document.querySelector('.clear-button')
-
+const cookButton = document.querySelector('.cook-click');
+let dishTitle = document.querySelector('.dish-title');
+let dishText = document.querySelector('.dish-text');
+const potImage = document.querySelector('.cookpot');
+const clearButton = document.querySelector('.clear-button')
 
 
 //**EVENT LISTENER**//
 cookButton.addEventListener('click', displayMeal);
-
-
+clearButton.addEventListener('click', resetPage);
 
 //**FUNCTIONS**//
+function resetPage(){
+  event.preventDefault();
+  potImage.classList.remove('hidden');
+  dishTitle.classList.add('hidden');
+  dishText.classList.add('hidden');
+  clearButton.classList.add('hidden');
+}
 
 function displayMeal(){
   event.preventDefault();
@@ -25,31 +29,25 @@ function displayMeal(){
   clearButton.classList.remove('hidden');
 };
 
-
-function getRandomElement(array) {
-  return array[Math.floor(Math.random() * array.length)];
-};
-
+const getRandomElement = (array) => array[Math.floor(Math.random() * array.length)];
 
 function getRecipe(){
-  var grabRadio = document.querySelector('input[name="meal-options"]:checked');
-  if(!grabRadio){
-  }
-    if(grabRadio.value === "sideChoices") {
+  let grabRadio = document.querySelector('input[name="meal-options"]:checked');
+  switch(grabRadio.value) {
+    case 'sideChoices':
       return `${getRandomElement(sideChoices)}!`
-   }
-    else if (grabRadio.value === "mainChoices"){
+      break;
+    case 'mainChoices':
       return `${getRandomElement(mainChoices)}!`
-    }
-    else if (grabRadio.value === "dessertChoices"){
+      break;
+    case 'dessertChoices':
       return `${getRandomElement(dessertChoices)}!`
-  }
-    else if (grabRadio.value === "entireMeal")
+      break;
+    case 'entireMeal':
       return `${getRandomElement(mainChoices)} with a side of ${getRandomElement(sideChoices)} and ${getRandomElement(dessertChoices)} for dessert!`
-};
-
-
-
+      break;
+  }
+}
 
 //**MEAL CHOICES**//
 

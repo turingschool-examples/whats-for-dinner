@@ -1,6 +1,4 @@
 
-
-
 .header{
   font-family: 'Roboto', sans-serif;
   background: #0fb9b1;
@@ -12,7 +10,6 @@
   font-size: 20px;
   padding-left: 12px;
 }
-
 
 .add-recipe-button{
   position: absolute;
@@ -73,7 +70,18 @@ main{
   width: 170px;
   font-size: 13px;
   padding: 8px 10px;
+}
 
+.cook-click:hover,.clear-button:hover{
+  cursor:pointer;
+}
+
+.clear-button{
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 9px;
 }
 
 .pot-box{
@@ -85,7 +93,6 @@ main{
   width: 450px;
   height: 350px;
 }
-
 
 .cookpot{
   padding-top: 60px;
@@ -120,22 +127,3 @@ main{
   top: 400px;
   right: 50px;
 }
-
-.clear-button{
-  background-color: #95a5a6;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 4px 9px;
-}
-
-
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/

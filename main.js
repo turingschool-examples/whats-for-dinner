@@ -6,7 +6,6 @@ let dishText = document.querySelector('.dish-text');
 const potImage = document.querySelector('.cookpot');
 const clearButton = document.querySelector('.clear-button')
 
-
 //**EVENT LISTENER**//
 cookButton.addEventListener('click', displayMeal);
 clearButton.addEventListener('click', resetPage);

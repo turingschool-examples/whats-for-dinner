@@ -1,10 +1,39 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header class ='header'>
+      <h1 class='header-title'> What's for Dinner?</h1>
+      <button class='add-recipe-button'>ADD A RECIPE</button>
+    </header>
+  <main class='main'>
+    <article class='selection-box'>
+      <h2 class='radio-title'>What are you looking for? <span class='red-asterisk'> * </span></h2>
+       <p class='radio-choices'>
+         <input type='radio' value= 'sideChoices' id='side' name='meal-options'>
+         <label for='side'>Side</label><br>
+         <input type='radio'value= 'mainChoices' id='main' name='meal-options'>
+         <label for='main-dish'>Main Dish</label><br>
+         <input type='radio' value= 'dessertChoices' id='dessert'name='meal-options'>
+         <label for='dessert'>Dessert</label><br>
+         <input type='radio' value= 'entireMeal' id='entire-meal'name='meal-options'>
+         <label for='Entire-Meal'>Entire Meal</label><br>
+       </p>
+       <button class='cook-click'>LET'S COOK!</button>
+      </article>
+    <article class='pot-box'>
+        <img class='cookpot'id= 'cookpot' src="./assets/cookpot.svg">
+        <div class='dish-box'>
+        <p class='dish-title hidden'>You should make:</p>
+        <div class='dish-text hidden'></div>
+        </div>
+        <section class= 'button-container'> <button class='clear-button hidden'>CLEAR</button>
+        </section>
+        </article>
+  </main>
   </body>
-  <script type="text/javascript" src="main.js"></script>
+  <script type='text/javascript' src='main.js'></script>
 </html>

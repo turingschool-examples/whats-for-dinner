@@ -1,23 +1,46 @@
 # What's for Dinner?
 
-## Overview
+## Table of Contents
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Contributors](#contributors)
+- [Deployed Link](#deployed-link)
+- [How to Set Up](#how-to-set-up)
+- [Future Features](#future-features)
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+### Introduction
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+Do you struggle with making decisions? Have you wasted countless minutes of your life
+stuck in the "What do you wanna eat?", "I don't know,
+what do you want?" loop with family and friends? Do you wish a button could just answer that question for you so you can turn your attention to more important things, like actually making the food? Well, friend, you've come to the right place!
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+<img width="1280" alt="Screen Shot 2022-02-19 at 8 48 43 AM" src="https://user-images.githubusercontent.com/93603551/154805964-69ee70d2-8cbe-4b8d-9b00-0d5b67de6607.png">
 
-## Learning Goals
+Welcome to **What's for Dinner**!
+With this app you can generate a randomly selected main dish, side, dessert, or if you need an entire meal, you can get all three at once!
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+<img width="1280" alt="Screen Shot 2022-02-19 at 8 53 10 AM" src="https://user-images.githubusercontent.com/93603551/154806065-326e8957-d12e-41fe-8dc1-defdfbfcad2c.png">
 
-## Setup
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+### Technologies Used
+
+- JavaScript
+- HTML
+- CSS
+
+## Contributors
+- [Emma Brooke-Davidson](https://github.com/emmacbd)
+
+### Deployed link
+- https://emmacbd.github.io/whats-for-dinner/
+
+### How to Set Up
+
+-  clone this repo
+- `cd` into the directory
+- run `open index.html`
+
+### Future Features
+- Add functionality to Clear button
+- Add functionality to Add Recipe button, so user could fill in a form with their favorite foods and generate new meal combinations
+- Add a Favorite button and a Favorites section so users can keep track of their most loved creations and combos

@@ -4,7 +4,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header><h1>What's for Dinner???</h1></header>
+    <section class="looking-for-box" id="looking-for-box">
+      <h3>What are you looking for?<h3>
+      <form action="/main.js" method="POST">
+        <input type="radio" id="side" name="answer" value="side">
+        <label for="side">Side<label>
+          <br>
+        <input type="radio" id="main-dish" name="answer" value="main-dish">
+        <label for="main-Dish">Main Dish<label>
+          <br>
+        <input type="radio" id="dessert" name="answer" value="dessert">
+        <label for="dessert">Dessert<label>
+          <br>
+        <input type="radio" id="entire-meal" name="answer" value="entire-meal">
+        <label for="entire-meal">Entire Meal<label>
+        <br>
+        <input type="submit" value="LET'S COOK!">
+      </form>
+     </section>
+      <section class="result-box">
+        <img class="cookpot" src="./assets.cookpot.svg" alt="cookpot">
+      </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
@@ -18,19 +19,19 @@
   <!-- USER INPUT FORM-->
   <article class="main userInputForm">
     <h2>What are you looking for?</h2>
-    <form input type="radio">
+    <form id="userForm" input type="radio">
 
-      <input type="radio" name ="userSelection" value="">
+      <input type="radio" name="userSelection" class="radioButtons" id="button0" value="side">
       <label for="side">Side</label><br>
-      <input type="radio" name ="userSelection" value="">
+      <input type="radio" name="userSelection" class="radioButtons" id="button1" value="main">
       <label for="main-dish">Main Dish</label><br>
-      <input type="radio" name ="userSelection" value="">
+      <input type="radio" name="userSelection" class="radioButtons" id="button2" value="dessert">
       <label for="side">Dessert</label><br>
-      <input type="radio" name ="userSelection" value="">
+      <input type="radio" name="userSelection" class="radioButtons" id="button3" value="entire-meal">
       <label for="main-dish">Entire Meal</label><br>
 
 
-      <button>Let's Cook!</button>
+      <button id="submit">Let's Cook!</button>
     </form>
   </article>
   <!--END FORM -->

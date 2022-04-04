@@ -1,10 +1,64 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
+/* COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253;
 
 */
 
+body {
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  display: flex;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 50px;
+
+  background-color: #0fb9b1;
+}
+
+.title {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 50px;
+  height: 400px;
+  width: 400px;
+  margin: 50px;
+
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.userInputForm {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.recipeDisplay {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.cookpot {
+  display: flex;
+}

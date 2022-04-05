@@ -58,3 +58,12 @@ var desserts = [
 "Croissants",
 "Eclairs",
 ]
+
+
+
+
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}

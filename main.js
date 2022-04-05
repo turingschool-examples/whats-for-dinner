@@ -15,7 +15,7 @@ let mainrecipes = ["Spaghetti and Meatballs",
 
 let userInputForm = document.querySelectorAll(".radioButtons");
 let submitButton = document.getElementById("submit");
-let resultsWindow = document.querySelector(".recipeDisplay");
+let resultsWindow = document.querySelector(".recipeDisplayContainer");
 
 submitButton.addEventListener("click", formHandler);
 

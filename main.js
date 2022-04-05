@@ -15,9 +15,10 @@ let mainrecipes = ["Spaghetti and Meatballs",
 
 let userInputForm = document.querySelectorAll(".radioButtons");
 let submitButton = document.getElementById("submit");
+let resultsWindow = document.querySelector(".recipeDisplay");
 
 submitButton.addEventListener("click", formHandler);
-submitButton.addEventListener("click", returnRecipe);
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -34,17 +35,19 @@ function formHandler(){
   for (let i = 0; i < 4; i++) {
     if (userInputForm[i].checked) {
       let selection = userInputForm[i].value;
-      console.log(selection);
-      returnRecipe(selection);
+      let randomRecipe = returnRecipe(selection);
+      displayResults(randomRecipe);
     }
   }
 }
 
-
 function returnRecipe(selection) {
   if (selection == "main") {
     let recipe = getRandomElement(mainrecipes);
-    console.log(recipe)
     return recipe
   }
+}
+
+function displayResults(randomRecipe) {
+  resultsWindow.innerText = randomRecipe;
 }

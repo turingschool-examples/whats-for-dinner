@@ -1,10 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset='utf-8'>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    
+  <body class='main-page'>
+    <section class='header-container'>
+        <h1 class='header-text'>What's For Dinner?</h1>
+          <div class='align-right'>
+            <button class='recipe-button'>Add A Recipe!</button>
+          </div>
+    </section>
+    <section class='box-one'>
+      <div class='box'>
+        <div class ='box-content'>
+            <form id='form'>
+            <p>
+              <p id='form-prompt'>
+                <h3 class='box-title'>What are you looking for?</h3>
+              <input type="radio" name='side-dish' id='side'>
+                <label for='side'>Side</label><br>
+              <input type='radio' name='main-dish' id='main'>
+                <label for='main'>Main Dish</label><br>
+              <input type='radio' name='dessert' id='dessert'>
+                <label for='dessert'>Dessert</label><br>
+              <input type='radio' name='entire-meal' id='meal'>
+                <label for='meal'>Entire Meal</label><br>
+                <button class='cook-button'>Let's Cook!</button>
+            </p>
+          </form>
+        </div>
+    </section>
+    <section class='box-two'>
+      <div class='box'>
+        <div class='box-content'>
+          <img src="assets/cookpot.svg"
+          height="87"
+          width="100">
+        </div>
+      </div>
+    <script type="text/javascript" src="main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
 </html>

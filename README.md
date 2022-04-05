@@ -1,23 +1,42 @@
-# What's for Dinner?
+# Hang In There!
 
-## Overview
+## Table of Contents
+- [Introduction](#introduction)
+- [Technologies](#technologies)
+- [Set Up](#set-up)
+- [Deployment Link](#deployment-link)
+- [Features](#features)
+- [Reflection](#reflection)
+- [Future Features](#future-features)
+- [Contributors](#contributors)
+- [Project Specifications](#project-specifications)
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+### Introduction
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+### Technologies
+- JavaScript
+- HTML
+- CSS
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+### Set Up
+1.  Clone this [repository](https://github.com/davidhdaw/hang-in-there-project).
+2. `cd` into the directory.
+3. Run `open index.html`.
 
-## Learning Goals
+### Deployment Link
+- Simply go to: https://davidhdaw.github.io/whats-for-dinner/
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+### Features
 
-## Setup
+### Reflection
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+### Future Features
+
+### Organizational Resources
+- [Google Sheet](https://docs.google.com/spreadsheets/d/1TArYW4BWjuTwoOI70uaKfKOVwcMoaMXObhMUaFirziw/edit?usp=sharing)
+
+### Contributors
+- [David Daw](https://github.com/davidhdaw)
+
+### Project Specifications
+- Project specs can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html).

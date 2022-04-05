@@ -49,5 +49,14 @@ function returnRecipe(selection) {
 }
 
 function displayResults(randomRecipe) {
-  resultsWindow.innerText = randomRecipe;
+
+  let thing = document.getElementById("this");
+  thing.innerText = "You should have: "
+  resultsWindow.innerText = randomRecipe
+
+
+  //let container = document.getElementById("recipeDisplayContainer");
+  //container.appendChild("div")
+
+
 }

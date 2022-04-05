@@ -21,14 +21,14 @@
     <h2>What are you looking for?</h2>
     <form id="userForm" input type="radio">
 
-      <input type="radio" name="userSelection" class="radioButtons" id="button0" value="side">
-      <label for="side">Side</label><br>
-      <input type="radio" name="userSelection" class="radioButtons" id="button1" value="main">
-      <label for="main-dish">Main Dish</label><br>
-      <input type="radio" name="userSelection" class="radioButtons" id="button2" value="dessert">
-      <label for="side">Dessert</label><br>
-      <input type="radio" name="userSelection" class="radioButtons" id="button3" value="entire-meal">
-      <label for="main-dish">Entire Meal</label><br>
+      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button0" value="side">
+      <label for="side">Side</label></div><br>
+      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button1" value="main">
+      <label for="main-dish">Main Dish</label></div><br>
+      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button2" value="dessert">
+      <label for="side">Dessert</label></div><br>
+      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button3" value="entire-meal">
+      <label for="main-dish">Entire Meal</label></div><br>
 
 
       <button id="submit">Let's Cook!</button>
@@ -38,11 +38,14 @@
 
 
   <!-- RECIPE DISPlAY-->
-  <article class="main recipeDisplayContainer">
-  <!--   <div class="recipeDisplay"> -->
-      <img class="cookpot" src="cookpot.svg">
-  <!--   </div> -->
+  <div class="main contain">
+  <div id="this"></div>
+  <article class="recipeDisplayContainer" id="recipeDisplayContainer">
+    <img class="cookpot" id="cookpot" src="cookpot.svg">
   </article>
+</div>
+
+
   <!--END DISPLAY-->
   </div>
 

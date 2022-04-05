@@ -45,7 +45,8 @@ button {
 .main {
   display: flex;
   background-color: rgba(225, 225, 225, .9);
-  padding: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
   height: 400px;
   width: 400px;
   margin-top: 200px;
@@ -60,9 +61,19 @@ button {
 .userInputForm {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-right: 25px;
 
 }
 
+.this {
+  display: flex;
+}
+
+
+.userSelection {
+  display: flex;
+}
 
 .recipeDisplayContainer {
   display: flex;
@@ -71,7 +82,16 @@ button {
 
 }
 
-
-.cookpot {
+.text {
   display: flex;
+}
+
+.contain {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cookpot {
+  display: flex;
+  height: 300px;
 }

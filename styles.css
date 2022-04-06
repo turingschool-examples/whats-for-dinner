@@ -8,31 +8,62 @@ red - #ee5253
 
 */
 * {
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 html {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   background: url(assets/burger-friends.jpg);
   background-size: cover;
   margin:0;
-}
-header {
-  background-color: #0fb9b1;
-  padding: 2px;
+  padding: 0;
 }
 
-button{
-  padding: 7px;
+header {
+  background-color: #0fb9b1;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0;
+  padding: 0;
+}
+
+button {
+  height: 30px;
+  padding: 3px;
+  margins: 10px;
   border-radius: 5px;
+}
+form {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.main-title{
+width: 200px;
+height:25px;
+font-size: large;
 }
 
 .button-position {
+  width: 200px;
+  height: 30px;
+  margin:0;
+  padding:0;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-end;
 }
+
+.button-position div{
+
+}
+
 
 .wrapper {
   width: 100%;
@@ -50,8 +81,8 @@ button{
 }
 
 .cookpot {
-  width: 50%;
-  height: 50%;
+  width: 45%;
+  height: 45%;
 }
 
 .cookpot-container{

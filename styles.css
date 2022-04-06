@@ -8,8 +8,11 @@ red - #ee5253
 
 */
 * {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   font-family: 'Roboto', sans-serif;
+}
+span {
+  color: red;
 }
 html {
   height: 100%;

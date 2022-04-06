@@ -6,12 +6,9 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253 */
 
-/* */
-* {
-/* background-image: url("./assets/burger-friends.jpg"); */
-}
 
 body {
+  /* display: flex; */
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,6 +18,8 @@ body {
   overflow-y: hidden;
 }
 
+/* NAVIGATION BAR */
+
 nav {
   display: flex;
   background-color: #0fb9b1;
@@ -28,6 +27,12 @@ nav {
   padding-left: 20px;
   padding-right: 20px;
   font-family: 'Roboto', sans-serif;
+  /* position: absolute;
+  top: 0,auto;
+  left: 0,auto;
+  right: 0,auto;
+  height: 50px;
+  width: 100%; */
 }
 
 .navbar-button {
@@ -37,3 +42,59 @@ nav {
   padding: 10px 24px;
 
 }
+
+/* DISH SELECTOR SECTIONS */
+
+main {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: blue; */
+  height: 50%;
+  width: 100%;
+}
+
+.dish-displays {
+  border: solid black;
+  height: 300px;
+  width: 400px;
+  background-color: rgba(225, 225, 225, .9);
+
+}
+
+
+
+/* main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+} */
+
+
+
+/* .dish-selector:nth-child(1) {
+
+} */
+
+
+
+
+
+
+
+
+
+
+/* .meal-displays {
+  display: flex;
+  justify-content: space-evenly;
+  height: 400px;
+  width: 400px;
+  background-color: rgba(225, 225, 225, .9);
+} */
+/*
+.buttons {
+
+} */

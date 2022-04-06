@@ -59,7 +59,17 @@ function letsCookInput(){
   for (var i = 0; i < menuItemChoice.length; i++){
     if (menuItemChoice[i].checked){
       choice = menuItemChoice[i].value;
+      }
     }
+    randomMenuChoice(choice);
   }
 
+
+function randomMenuChoice(category) {
+  if(category === "Main Dish") {
+    category = mainDish;
+  }
+  console.log(category[2]);
+  var result = category[getRandomIndex(category)];
+  console.log(result);
 }

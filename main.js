@@ -56,7 +56,9 @@ function addARecipe(){
   var choice = "";
 
 function letsCookInput(){
-
+  for (var i = 0; i < menuItemChoice.length; i++){
+    if (menuItemChoice[i].checked){
+      choice = menuItemChoice[i].value;
     }
   }
 

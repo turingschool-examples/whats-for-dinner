@@ -1,10 +1,48 @@
+
+
+
+header {
+  border: none;
+  background-color: teal;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: flex-start;
+  padding-left: 10px
+
+}
+
+style {
+  display: flex
+}
+
+
+body {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+
+
+
+
+
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
-
+/*
+<img src="image: url (https://raw.githubusercontent.com/cleveland231/whats-for-dinner/eb7f8b570fb1e0aaa9365ca0545dcedc8e0beb76/assets/cookpot.svg alt="cookpot digital")">
+</section> */

@@ -17,9 +17,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* .hidden {
+.hidden {
   display: none!important;
-} */
+}
 
 .header-container {
   background-color: #0fb9b1;

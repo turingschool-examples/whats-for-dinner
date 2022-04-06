@@ -3,7 +3,9 @@ var recipePickForm = document.querySelector('.recipe-item-form');
 var letsCookButton = document.querySelector('.lets-cook-button');
 var addARecipeButton = document.querySelector('.add-a-recipe');
 var menuItemChoice = document.getElementsByName('options');
-
+var displayRecipeItem = document.querySelector('.random-recipe');
+var presentRecipeText = document.querySelector('.recipe-intro');
+var cookPot = document.querySelector('.cookpot');
 //event listeners
 letsCookButton.addEventListener('click', letsCookInput);
 addARecipeButton.addEventListener('click', addARecipe);
@@ -46,16 +48,8 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-function randomRecipe(){
-
-}
-
-function addARecipe(){
-
-}
-  var choice = "";
-
 function letsCookInput(){
+  var choice = '';
   for (var i = 0; i < menuItemChoice.length; i++){
     if (menuItemChoice[i].checked){
       choice = menuItemChoice[i].value;
@@ -66,10 +60,21 @@ function letsCookInput(){
 
 
 function randomMenuChoice(category) {
-  if(category === "Main Dish") {
+  if(category === 'Main Dish') {
     category = mainDish;
   }
-  console.log(category[2]);
   var result = category[getRandomIndex(category)];
-  console.log(result);
+  displayRecipe(result);
+}
+
+function displayRecipe(recipe) {
+  displayRecipeItem.classList.remove('hidden');
+  presentRecipeText.classList.remove('hidden');
+  cookPot.classList.add('hidden');
+
+  displayRecipeItem.innerText = recipe;
+}
+
+function addARecipe(){
+
 }

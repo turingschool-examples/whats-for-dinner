@@ -1,12 +1,13 @@
 // button vars
-var cookButton = document.querySelector('.cook-button')
-var recipeButton = document.querySelector('.recipe-button')
+var cookButton = document.querySelector('.cook-button');
+var recipeButton = document.querySelector('.recipe-button');
+var cookpotImage = document.querySelector('.cookpot-image');
+var radioButtons = document.getElementsByName('food-option');
+// var radioButtons = document.querySelector('input[name = "food-option"]:checked');
 
-
-
-// event listeners
-// cookButton.addEventListener('click', )
-// recipeButton.addEventListener('click', )
+// // event listeners
+// window.addEventListener('load', homeView)
+// cookButton.addEventListener('click', getRadioValue);
 
 // arrays
 var sides = [
@@ -59,11 +60,26 @@ var desserts = [
 "Eclairs",
 ]
 
+// function hideCookpot() {
+//   cookpotImage.classList.add('hidden')
+// }
+//
+// function homeView() {
+//   console.log('bob')
+// }
+// //
+//
+function getRadioValue() {
+  if (document.getElementsById('side').checked) {
 
-
+  }
+//   for (var i = 0; i < radioButtons.length; i++) {
+//     if(radioButtons[i].checked)
+//     alert(radioButtons[i].value);
+//   }
+// }
 
 
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-}

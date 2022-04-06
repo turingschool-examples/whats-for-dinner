@@ -7,32 +7,39 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+html {
+  height: 100%;
+}
 
 body {
   background-image: url("assets/burger-friends.jpg");
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
+/* .hidden {
+  display: none!important;
+} */
+
 .header-container {
+  background-color: #0fb9b1;
+  padding: 5px;
+  display: flex;
+  align-content: center;
 }
 
 .header-text {
-  margin: 0;
-  padding: 0;
-  background-color: #0fb9b1;
+  padding: 5px:
 }
-
-/* .recipe-button {
-  display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-} */
 
 .recipe-button,
 .recipe-button:visited {
       display: header-text;
       padding: 5px 10px;
       border: 2px solid #FFF;
+      font-family: 'Roboto';
+      height: 29px;
+
 }
 
 .recipe-button:hover {
@@ -40,18 +47,63 @@ body {
       color: #FFF;
 }
 
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+#form {
+  font-family: 'Roboto', sans-serif;
+}
+
+.box-one-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .box-one {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
+  width: 400px;
+  height: 350px;
+  margin-right: 50px;
   padding: 25px;
-  background-color: white;
+  background: rgba(255,255,255, 0.7);
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.cook-button {
+
 }
 
 .box-two {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  background-color: white;
+  width: 400px;
+  height: 350px;
+  margin-left: 50px;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: rgba(255,255,255, 0.7);
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  height: 800px;
+  width: auto;
+  margin: auto;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

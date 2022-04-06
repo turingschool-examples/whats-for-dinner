@@ -1,10 +1,45 @@
-/* font-family: 'Roboto', sans-serif;
+html {
+  background: url("assets/burger-friends.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
 
-COLORS
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0fb9b1;
+  font-size: 25px;
+  margin: 0;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.recipe {
+  background-color: white;
+  color: black;
+  font-size: 90%;
+  border: none;
+  position: fixed;
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin-top: 5px;
+  top:10px;
+  right:10px;
+}
+
+
+
+
+
+
+/* COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
-
-*/
-
+red - #ee5253 */

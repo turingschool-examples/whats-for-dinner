@@ -9,7 +9,7 @@
     <section class='header-container'>
         <h1 class='header-text'>What's For Dinner?</h1>
           <div class='align-right'>
-            <button class='recipe-button'>Add A Recipe!</button>
+            <button class='recipe-button'>ADD A RECIPE!</button>
           </div>
     </section>
   <section class='white-boxes'>
@@ -21,14 +21,16 @@
                 <h3 class='box-title'>What are you looking for?</h3>
               <input type="radio" name='food-option' value="side" id='side'>
                 <label for='side'>Side</label><br>
-              <input type='radio' name='food-option' value="main-dish" id='main'>
+              <input type='radio' name='food-option' value="maindish" id='main'>
                 <label for='main'>Main Dish</label><br>
               <input type='radio' name='food-option' value="dessert" id='dessert'>
                 <label for='dessert'>Dessert</label><br>
               <input type='radio' name='food-option' value="entire-meal" id='meal'>
                 <label for='meal'>Entire Meal</label><br>
                 <br>
-                <button type='submit'>Let's Cook!</button>
+              <div class='cook-submit'>
+                <button type='submit' class='cook-button'>LET'S COOK!</button>
+              </div>
               </p>
             </form>
         </div>
@@ -42,7 +44,7 @@
         </div>
       </div>
       <div>
-        <p class='recipe-text'>You should make:</p>
+        <p class='recipe-text hidden'>You should make:</p>
       </div>
     </section>
   </section>

@@ -6,10 +6,9 @@ var radioButtons = document.getElementsByName('food-option');
 var recipeText = document.querySelector('.recipe-text')
 var form = document.getElementById('form')
 // var radioButtons = document.querySelector('input[name = "food-option"]:checked');
-var x = document.querySelector('.cook-button').value
 // // event listeners
 // window.addEventListener('load', homeView)
-form.addEventListener('submit', getRadioValue);
+radioButtons.addEventListener('submit', getRadioValue);
 
 // arrays
 var sides = [
@@ -72,14 +71,14 @@ var desserts = [
 // //
 //
 function getRadioValue() {
-  if (document.getElementsById('side').checked) {
+  if (document.getElementById('side').checked) {
     randomSide()
-  } else if (document.getElementsById('main-dish').checked) {
+  } else if (document.getElementById('maindish').checked) {
     randomMainDish()
-  } else if (document.getElementsById('dessert').checked) {
+  } else if (document.getElementById('dessert').checked) {
     randomDessert()
     event.PreventDefault()
-}
+  }
 }
 
 function randomSide() {

@@ -11,35 +11,45 @@ html {
   height: 100%;
 }
 
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url("assets/burger-friends.jpg");
   background-size: cover;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.hidden {
+/* .hidden {
   display: none!important;
-}
+} */
 
 .header-container {
   background-color: #0fb9b1;
-  padding: 5px;
   display: flex;
   align-content: center;
+  height: 58px;
 }
 
 .header-text {
-  padding: 5px:
+  padding: 5px;
+  margin: 10px;
 }
 
 .recipe-button,
 .recipe-button:visited {
-      display: header-text;
       padding: 5px 10px;
       border: 2px solid #FFF;
       font-family: 'Roboto';
       height: 29px;
-
+      position: absolute;
+      top:15px;
+      right:20px;
 }
 
 .recipe-button:hover {
@@ -48,12 +58,24 @@ body {
 }
 
 h3 {
-  font-family: 'Roboto', sans-serif;
+  font-size: 1.7em;
 }
 
 #form {
-  font-family: 'Roboto', sans-serif;
 }
+
+#form-prompt {
+  margin: 5px;
+}
+
+.box-title {
+  padding: 20px;
+}
+
+label {
+
+}
+
 
 .box-one-content {
   display: flex;
@@ -64,7 +86,7 @@ h3 {
 .box-one {
   width: 400px;
   height: 350px;
-  margin-right: 50px;
+  margin-right: 70px;
   padding: 25px;
   background: rgba(255,255,255, 0.7);
   border-radius: 10px 10px 10px 10px;
@@ -73,13 +95,21 @@ h3 {
 }
 
 .cook-button {
-
+  background-color: #0fb9b1;
+  border-color: cornflowerblue;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  height: 40px;
+  border-radius: 1px solid;
+  width: 200px;
+  font-size: 15px;
+  opacity: .9;
 }
 
 .box-two {
   width: 400px;
   height: 350px;
-  margin-left: 50px;
+  margin-left: 70px;
   display: inline-block;
   padding-top: 1rem;
   padding-bottom: 1rem;

@@ -1,3 +1,78 @@
+body {
+  font-family: 'Redressed', sans-serif;
+  background-size: cover;
+  text-align: center;
+  background-image: url("./assets/shop.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.purple-background {
+  background: rgba(211, 164, 237, 0.8);
+  border-radius: 25px;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 10%;
+}
+.tagline {
+  width: 500px;
+  overflow-wrap: anywhere;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 13%;
+  margin: 15px;
+  padding: 5px;
+}
+.boxes{
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+	align-items: center;
+  margin : 20px;
+}
+.looking-for-box {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.result-box {
+  height: 300px;
+  width: 300px;
+}
+label {
+  font-size: 20px;
+}
+button {
+  background: rgba(212, 156, 28);
+  padding: 15px 50px 15px;
+  font-family: 'Redressed', sans-serif;
+  border-radius: 5px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background 0.8s ease-in-out;
+  border: 0;
+}
+button:hover {
+
+  background-color: #508c76;
+}
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
@@ -7,4 +82,3 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-

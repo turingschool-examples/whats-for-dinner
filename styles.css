@@ -117,6 +117,10 @@ font-size: large;
   align-items: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .lets-cook-button {
   background-color: #0fb9b1;
   padding-left: 40px;

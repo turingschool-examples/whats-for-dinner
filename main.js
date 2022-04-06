@@ -1,11 +1,11 @@
 //querySelectors
-var recipePickForm = document.querySelector('input');
+var recipePickForm = document.querySelector('.recipe-item-form');
 var letsCookButton = document.querySelector('.lets-cook-button');
 var addARecipeButton = document.querySelector('.add-a-recipe');
+var menuItemChoice = document.getElementsByName('options');
 
 //event listeners
-recipePickForm.addEventListener('click',takeInInput(event));
-letCookButton.addEventListener('click', randomRecipe);
+letsCookButton.addEventListener('click', letsCookInput);
 addARecipeButton.addEventListener('click', addARecipe);
 
 
@@ -51,5 +51,13 @@ function randomRecipe(){
 }
 
 function addARecipe(){
+
+}
+  var choice = "";
+
+function letsCookInput(){
+
+    }
+  }
 
 }

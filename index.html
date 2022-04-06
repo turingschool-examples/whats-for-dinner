@@ -12,34 +12,38 @@
             <button class='recipe-button'>Add A Recipe!</button>
           </div>
     </section>
+  <section class='white-boxes'>
     <section class='box-one'>
-      <div class='box'>
-        <div class ='box-content'>
+      <!-- <div class='box'> -->
+        <div class ='box-one-content'>
             <form id='form'>
-            <p>
               <p id='form-prompt'>
                 <h3 class='box-title'>What are you looking for?</h3>
-              <input type="radio" name='side-dish' id='side'>
+              <input type="radio" name='food-option' value="side" id='side'>
                 <label for='side'>Side</label><br>
-              <input type='radio' name='main-dish' id='main'>
+              <input type='radio' name='food-option' value="main-dish" id='main'>
                 <label for='main'>Main Dish</label><br>
-              <input type='radio' name='dessert' id='dessert'>
+              <input type='radio' name='food-option' value="dessert" id='dessert'>
                 <label for='dessert'>Dessert</label><br>
-              <input type='radio' name='entire-meal' id='meal'>
+              <input type='radio' name='food-option' value="entire-meal" id='meal'>
                 <label for='meal'>Entire Meal</label><br>
-                <button class='cook-button'>Let's Cook!</button>
-            </p>
-          </form>
+                <br>
+                <button onclick='getRadioValue()' id='btn1' class='cook-button'>Let's Cook!</button>
+              </p>
+            </form>
         </div>
     </section>
     <section class='box-two'>
       <div class='box'>
-        <div class='box-content'>
+        <div class='cookpot-image hidden'>
           <img src="assets/cookpot.svg"
-          height="87"
-          width="100">
+          height="150px"
+          width="150px">
         </div>
       </div>
+    </section>
+  </section>
+    <section class="recipe-box hidden"
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

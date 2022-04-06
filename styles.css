@@ -8,7 +8,8 @@ red - #ee5253
 
 */
 * {
-  /* border: 2px solid red; */
+  border: 2px solid red;
+  font-family: 'Roboto', sans-serif;
 }
 html {
   height: 100%;
@@ -34,15 +35,31 @@ header {
 
 button {
   height: 30px;
-  padding: 3px;
-  margins: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
   border-radius: 5px;
+  text-transform: uppercase;
+  border: 0;
 }
+
 form {
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
+
+label {
+
+  width: 80px;
+  height: auto;
+  margin-right: -20px;
+  padding-left: 20px;
+  margin-top: -30px;
+}
+
 .main-title{
 width: 200px;
 height:25px;
@@ -60,14 +77,9 @@ font-size: large;
   align-items:flex-end;
 }
 
-.button-position div{
-
-}
-
-
 .wrapper {
   width: 100%;
-  height: 50%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -75,9 +87,20 @@ font-size: large;
 
 .box {
   background-color: rgba(225, 225, 225, .9);
-  text-align: center;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 30%;
-  height: 80%;
+  height: 60%;
+}
+
+.box form {
+  text-align: left;
+}
+
+.box h1{
+  font-size: x-large;
 }
 
 .cookpot {
@@ -89,4 +112,12 @@ font-size: large;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  right: 75px;
 }

@@ -4,7 +4,140 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
-
+red - #ee5253 */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+
+body {
+  height: 100vh;
+  background-image: url("assets/burger-friends.jpg");
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0fb9b1;
+  height: 8%;
+  width: 100%;
+  background: #0fb9b1;
+  color: black;
+  border: 2px solid red;
+}
+
+
+h1 {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  border: 2px solid green;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid pink;
+}
+/* section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+} */
+
+.selection-box {
+  display: flex;
+  flex-direction: column;
+  background: rgba(225, 225, 225, .9);
+  text-align: left;
+  width: 475px;
+  height: 380px;
+  padding: 150px;
+  box-sizing: border-box;
+  border: 2px solid blue;
+}
+
+.you-should-make-box {
+  background: rgba(225, 225, 225, .9);
+  width: 475px;
+  height: 380px;
+  padding: 25px;
+  box-sizing: border-box;
+  border: 2px solid black;
+
+
+}
+.pot {
+  width: 90px;
+  border: 2px solid magenta;
+
+}
+button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 14px;
+  color: black;
+  height: 50%;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5px;
+
+}

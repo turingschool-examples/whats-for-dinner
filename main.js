@@ -51,6 +51,7 @@ function getRandomIndex(array) {
 };
 
 function letsCookInput(){
+  event.preventDefault();
   var choice = '';
   for (var i = 0; i < menuItemChoice.length; i++){
     if (menuItemChoice[i].checked){
@@ -66,7 +67,7 @@ function displayRecipe(recipe) {
   presentRecipeText.classList.remove('hidden');
   cookPot.classList.add('hidden');
 
-  displayRecipeItem.innerText = recipe;
+  displayRecipeItem.innerText = recipe + '!';
 }
 
 function addARecipe(){

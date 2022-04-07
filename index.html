@@ -14,7 +14,7 @@
     <section class= "wrapper">
       <section class= "box">
         <form class="block recipe-item-form" name= "Whats for Dinner">
-          <h1>What are you looking for?<span>*</span></h1>
+          <h1 class= "prompt">What are you looking for?<span>*</span></h1>
           <input type="radio" name="options" value = "sides" id="side"></input>
           <label name="options" for= "side">Side</label>
           <input type="radio" name="options" value="mainDish" id="main-dish"></input>
@@ -23,11 +23,11 @@
           <label name="options" for="dessert">Dessert</label>
           <input type="radio" name="options" value="Entire Meal" id="entire-meal"></input>
           <label name="options" for= "entire-meal">Entire Meal</label>
+          <button class="lets-cook-button">Lets Cook!</button>
         </form>
-        <button class="lets-cook-button">Lets Cook!</button>
       </section>
       <section class= "box cookpot-container">
-        <h1 class="recipe-intro hidden"> You should make... </h1>
+        <h1 class="recipe-intro hidden"> You should make: </h1>
         <h2 class="random-recipe hidden"></h2>
         <img src = "assets/cookpot.svg" class= "cookpot"></img>
       </section>

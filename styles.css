@@ -38,6 +38,7 @@ header {
 
 button {
   height: 30px;
+  padding: 20px
   padding-left: 10px;
   padding-right: 10px;
   margin: 10px;
@@ -47,25 +48,27 @@ button {
 }
 
 form {
-  height: 200px;
-  width: 300px;
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 label {
-
-  width: 80px;
-  height: auto;
+  width: 100px;
+  height: 40px;
   margin-right: -20px;
   padding-left: 20px;
-  margin-top: -30px;
+  margin-top: -19px;
+  text-align: left;
+  font-size: large;
 }
 
 .main-title{
 width: 200px;
 height:25px;
+margin-left: 5px;
 font-size: large;
 }
 
@@ -93,17 +96,17 @@ font-size: large;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 30%;
-  height: 60%;
+  width: 550px;
+  height: 65%;
 }
 
 .box form {
   text-align: left;
 }
 
-.box h1{
-  font-size: x-large;
+.prompt{
+  margin-top: 50px;
+  font-size: xx-large;
 }
 
 .cookpot {
@@ -120,11 +123,27 @@ font-size: large;
 .hidden {
   display: none;
 }
+.recipe-intro {
+  font-style: italic;
+  font-size: x-large;
+  margin: 0;
+}
+
+.random-recipe {
+  font-size: xxx-large;
+  text-align: center;
+  margin: 0;
+}
 
 .lets-cook-button {
   background-color: #0fb9b1;
-  padding-left: 40px;
-  padding-right: 40px;
-  position: relative;
-  right: 75px;
+      width: 250px;
+      margin-left: 0px;
+      margin-top: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: large;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }

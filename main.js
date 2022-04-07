@@ -52,10 +52,14 @@ function getRandomIndex(array) {
 
 function letsCookInput(){
   event.preventDefault();
-  var choice = '';
+
   for (var i = 0; i < menuItemChoice.length; i++){
+
     if (menuItemChoice[i].checked){
-      choice = menuItemChoice[i].value;
+    var choice = menuItemChoice[i].value;
+      }
+      if(choice === "Entire Meal") {
+        displayFullMeal();
       }
     }
     var result = menuOptions[choice][getRandomIndex(menuOptions[choice])];
@@ -68,6 +72,15 @@ function displayRecipe(recipe) {
   cookPot.classList.add('hidden');
 
   displayRecipeItem.innerText = recipe + '!';
+}
+
+function displayFullMeal() {
+  var result = '';
+  result += `${mainDish[getRandomIndex(mainDish)]} with a side of `;
+  result += `${sides[getRandomIndex(sides)]} and `;
+  result += `${desserts[getRandomIndex(desserts)]} for dessert`;
+
+  displayRecipe(result);
 }
 
 function addARecipe(){

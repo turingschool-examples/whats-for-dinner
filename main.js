@@ -68,6 +68,7 @@ function homeView() {
   event.preventDefault()
   cookpotImage.classList.remove('hidden')
   recipeText.classList.add('hidden')
+  clearButton.classList.add('hidden')
 }
 
 
@@ -77,10 +78,21 @@ function showRecipe() {
   cookpotImage.classList.add('hidden')
   recipeText.classList.remove('hidden')
   headerThree.classList.remove('hidden')
+  clearButton.classList.remove('hidden')
 }
 
+// 'clear' event
+var clearButton = document.querySelector('.clear-button')
 
+clearButton.addEventListener('click', clearInput)
 
+function clearInput() {
+  for(var i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].checked = false;
+    recipeText.innerText = 'Oops, please select your dish!'
+    headerThree.classList.add('hidden')
+  }
+}
 
 
 // radioButtons functionality

@@ -1,3 +1,8 @@
+/* *{
+  border: 2px solid blue;
+} */
+
+
 html {
   background: url("assets/burger-friends.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -25,15 +30,106 @@ h1 {
   color: black;
   font-size: 90%;
   border: none;
+  border-radius: 4px;
   position: fixed;
   padding: 10px 12px;
-  border-radius: 4px;
   margin-top: 5px;
   top:10px;
   right:10px;
 }
 
+.recipe:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+
+
+.box {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(225, 225, 225, .9);
+  margin: 60px;
+  width: 350px;
+  height: 300px;
+  padding: 50px;
+  box-shadow: 5px 5px 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.cookpot {
+  padding-top: 90px;
+  padding-left: 80px;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.asterisk {
+  color: red;
+}
+
+.hidden {
+  display: none!important;
+}
+
+p {
+  margin: auto;
+}
+
+.results {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+.mealresults {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+#mealbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cook {
+  background-color: #0fb9b1;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 25px;
+}
+
+.cook:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 
 

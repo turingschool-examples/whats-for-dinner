@@ -11,15 +11,30 @@
     <section>
       <h1>What's for Dinner?</h1>
         <button type="submit" class="recipe">ADD A RECIPE</button>
-      <h2>What are you looking for?</h2>
-        <ul>
-         <li>Side</li>
-         <li>Main Dish</li>
-         <li>Dessert</li>
-         <li>Entire Meal</li>
-        </ul>
-        <button type="submit" class="cook">LET'S COOK</button>
+    <section class="container">
+      <section class="box" id="dishbox">
+        <form>
+          <h2>What are you looking for?<label class="asterisk">*</label></h2>
+          <ul>
+          <li><input type="radio" id="side" name="looking" value="sides">
+          <label for="side">Side</label></li><br>
+          <li><input type="radio" id="main" name="looking" value="mains">
+          <label for="main">Main Dish</label></li><br>
+          <li><input type="radio" id="dessert" name="looking" value="desserts">
+          <label for="dessert">Dessert</label></li><br>
+          <li><input type="radio" id="meal" name="looking" value="meal">
+          <label for="meal">Entire Meal</label></li><br>
+          </ul>
+        </form>
+          <button type="submit" class="cook">LET'S COOK</button>
+       </section>
+      <section class="box" id="mealbox">
+        <img class="cookpot" id="cookpot" src="assets/cookpot.svg">
+        <p class="results"></p>
+        <p class="mealresults"></p>
+      </section>
    </section>
+ </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -1,7 +1,11 @@
 // querySelector variables
-
-
-
+// var randomSide = document.querySelector("#side");
+// var randomMainDish = document.querySelector("#main");
+// var randomDessert = document.querySelector("#dessert");
+var letsCookButton = document.querySelector(".cook");
+var results = document.querySelector(".results");
+var mealResults = document.querySelector(".mealresults");
+var removeCookBoxLogo = document.querySelector("#cookpot");
 
 
 var sides = [
@@ -53,12 +57,52 @@ var desserts = [
 ];
 
 // addEventListener here
-
-
-
-
-
+letsCookButton.addEventListener('click', removeLogo);
 
 
 
 // functions & event handlers
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+// random Side, Main Dish, Dessert
+function hideCookpot() {
+  removeCookBoxLogo.classList.add("hidden");
+}
+
+
+function getCooking() {
+    var radio = document.querySelector('input[type=radio]:checked');
+    var randomMealIndex = getRandomIndex(foodsArrays[radio.value]);
+    results.innerText = `You should make: `;
+    mealResults.innerText = `${foodsArrays[radio.value][randomMealIndex]}!`;
+}
+
+function entireMeal() {
+  var radio = document.querySelector('input[type=radio]:checked');
+  var randomMealIndex = getRandomIndex(foodsArrays[radio.value]);
+  results.innerText = `You should make: `;
+  mealResults.innerText = `${foodsArrays[radio.sides][radio.mains][radio.desserts][randomMealIndex]}!`;
+}
+
+
+function removeLogo() {
+  event.preventDefault();
+  hideCookpot();
+  getCooking();
+  entireMeal();
+}
+
+var foodsArrays = {
+  sides: sides,
+  mains: mains,
+  desserts: desserts,
+  meal: meal,
+}
+
+
+// document.getElementById('#side').onclick = function() {
+//     var radio = document.querySelector('input[type=radio]:checked');
+//     radio.checked = true;
+// }

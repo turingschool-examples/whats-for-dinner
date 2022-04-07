@@ -58,7 +58,9 @@ main {
   width: 490px;
   display: flex;
   align-items: flex-start;
-  margin: 10px 40px;
+  flex-direction: column;
+  /* margin: 10px 40px; */
+  padding: 30px;
   justify-content: center;
   font-size: 18px;
 }

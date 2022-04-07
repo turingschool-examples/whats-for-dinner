@@ -11,26 +11,10 @@ red - #ee5253
   /* border: 2px solid red; */
   font-family: 'Roboto', sans-serif;
 }
-span {
-  color: red;
-}
-html {
-  height: 100%;
-}
 
 body {
   background: url(assets/burger-friends.jpg);
   background-size: cover;
-  margin:0;
-  padding: 0;
-}
-
-header {
-  background-color: #0fb9b1;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin:0;
   padding: 0;
 }
@@ -51,21 +35,30 @@ form {
   flex-direction: column;
 }
 
+header {
+  background-color: #0fb9b1;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 label {
   width: 100px;
   height: 40px;
-  margin-right: -20px;
   padding-left: 20px;
   margin-top: -19px;
-  text-align: left;
   font-size: large;
 }
 
-.main-title{
-width: 200px;
-height:25px;
-margin-left: 5px;
-font-size: large;
+span {
+  color: #ee5253;
 }
 
 .button-position {
@@ -79,14 +72,6 @@ font-size: large;
   align-items:flex-end;
 }
 
-.wrapper {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .box {
   background-color: rgba(225, 225, 225, .9);
   margin-bottom: 100px;
@@ -94,11 +79,6 @@ font-size: large;
   flex-direction: column;
   width: 550px;
   height: 65%;
-}
-
-.prompt{
-  margin-top: 50px;
-  font-size: xx-large;
 }
 
 .cookpot {
@@ -114,6 +94,32 @@ font-size: large;
 .hidden {
   display: none;
 }
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  width: 250px;
+  margin-left: 0px;
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  width: 200px;
+  height:25px;
+  margin-left: 5px;
+  font-size: large;
+}
+
+.prompt{
+  margin-top: 50px;
+  font-size: xx-large;
+}
+
 .recipe-intro {
   font-style: italic;
   font-size: x-large;
@@ -126,15 +132,10 @@ font-size: large;
   margin: 0;
 }
 
-.lets-cook-button {
-  background-color: #0fb9b1;
-      width: 250px;
-      margin-left: 0px;
-      margin-top: 0px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      font-size: large;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+.wrapper {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

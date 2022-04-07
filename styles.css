@@ -8,7 +8,6 @@ red - #ee5253 */
 
 
 body {
-  /* display: flex; */
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,9 +15,19 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-y: hidden;
+  max-width: 100%;
 }
 
+
 /* NAVIGATION BAR */
+
+div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
 
 nav {
   display: flex;
@@ -27,19 +36,16 @@ nav {
   padding-left: 20px;
   padding-right: 20px;
   font-family: 'Roboto', sans-serif;
-  /* position: absolute;
-  top: 0,auto;
-  left: 0,auto;
-  right: 0,auto;
-  height: 50px;
-  width: 100%; */
+  font-size: 14;
 }
 
 .navbar-button {
   border-radius: 5%;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  padding: 10px 24px;
+  margin: 15px;
+  border-radius: 4px;
+  border: none;
+  width: 115px;
+  background-color: rgba(225, 225, 225, .9);
 
 }
 
@@ -48,16 +54,16 @@ nav {
 main {
   display: inline-flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   /* background-color: blue; */
-  height: 50%;
+  height: 60%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
 .dish-displays {
-  height: 250px;
-  width: 350px;
+  height: 275px;
+  width: 375px;
   background-color: rgba(225, 225, 225, .9);
   padding: 40px;
 }
@@ -79,9 +85,11 @@ h2 {
   font-weight: bolder;
 }
 
+
+
 svg {
   height: 120px;
-  length: 155px;
+  width: 100px;
   padding: 60px;
   padding-left: 120px;
   padding-right: 120px;

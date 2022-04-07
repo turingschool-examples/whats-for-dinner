@@ -5,6 +5,10 @@ grey - #95a5a6;
 red - #ee5253;
 
 */
+@font-face {
+	font-family: "cloud";
+	src: url("assets/CottonCloud.ttf");
+}
 
 body {
   display: flex;
@@ -19,11 +23,17 @@ body {
 button {
   display: flex;
   padding: 10px;
+  font-family: inherit;
+}
+
+button.pink {
+  
 }
 
 .navbar.pink {
   background-color: #D5F5E3;
   border-bottom: 4px #ABEBC6 solid;
+  font-family: "cloud"
 }
 
 

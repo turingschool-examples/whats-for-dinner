@@ -103,6 +103,7 @@ function displayResults(randomRecipe) {
 }
 
 function displayCustomizedFeatures() {
+  if (localStorage.getItem()){
   let username = localStorage.getItem("username")
   userTitle.innerText = `What's for dinner, ${username}?`
 
@@ -110,5 +111,6 @@ function displayCustomizedFeatures() {
   if (theme == "pink") {
     navbar.className = "navbar pink"
     bodyImage.className = "main-container pink"
-}
+    }
+  }
 }

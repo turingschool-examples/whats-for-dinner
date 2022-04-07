@@ -20,7 +20,6 @@ var desserts = [
   "Rice Pudding",
   "Strawberry Champagne Cake"
 ];
-
 var sides = [
 "Miso Glazed Carrots",
 "Coleslaw",
@@ -33,7 +32,6 @@ var sides = [
 "Garlic Butter Mushrooms",
 "Hush Puppies"
 ];
-
 var mainDish = [
   "Ramen",
   "Nachos",
@@ -41,6 +39,10 @@ var mainDish = [
   "Tofu Potato Curry",
   "Lemon Seared Salmon",
 ];
+var menuOptions = {
+  desserts: desserts,
+  sides: sides,
+  mainDish: mainDish};
 
 //functions
 // Build out own random function
@@ -55,17 +57,9 @@ function letsCookInput(){
       choice = menuItemChoice[i].value;
       }
     }
-    randomMenuChoice(choice);
+    var result = menuOptions[choice][getRandomIndex(menuOptions[choice])];
+    displayRecipe(result);
   }
-
-
-function randomMenuChoice(category) {
-  if(category === 'Main Dish') {
-    category = mainDish;
-  }
-  var result = category[getRandomIndex(category)];
-  displayRecipe(result);
-}
 
 function displayRecipe(recipe) {
   displayRecipeItem.classList.remove('hidden');

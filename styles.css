@@ -25,9 +25,9 @@ body {
   padding: 0;
 }
 
-/* .hidden {
-  display: none!important;
-} */
+.hidden {
+  display: none;
+}
 
 .header-container {
   background-color: #0fb9b1;

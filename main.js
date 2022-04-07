@@ -1,24 +1,20 @@
 // // button vars
-function happy() {
-  console.log('bob')
-}
-happy()
-// var cookButton = document.querySelector('.cook-button');
-// var recipeButton = document.querySelector('.recipe-button');
-// //
-// // //box two vars
-// var cookpotImage = document.querySelector('.cookpot-image');
-// var recipeText = document.querySelector('.recipe-text')
-//
-// // var radioButtons = document.getElementsByName('food-option');
-// var form = document.getElementById('form')
+// var potato = document.querySelector('#cookPot')
+// console.log(potato.classList.remove('hidden'))
+// console.log(potato.classList.add('hotdog'))
+// console.log('potato variable', potato)
+var cookButton = document.querySelector('.cook-button');
+var recipeButton = document.querySelector('.recipe-button');
+
+var radioButtons = document.getElementsByName('food-option');
+var form = document.getElementById('form')
 // //
 // // // // event listeners
-// radioButtons.addEventListener('click', recipeInput);
+// recipeButton.addEventListener('click', getRadioValue);
 //
 // var sideSelection =
-// // //
-// // arrays
+
+// arrays
 var sides = [
 "Miso Glazed Carrots",
 "Coleslaw",
@@ -69,61 +65,51 @@ var desserts = [
 "Eclairs",
 ]
 
-// window.addEventListener('load', )
-//
-// function displayHomePage() {
-//
-// }
-//
-//
-//
-// // // function hideCookpot() {
-// // //   cookpotImage.classList.add('hidden')
-// // // }
-// // //
-// // // function homeView() {
-// // //   console.log('bob')
-// // // }
-// // // //
-// // //
-// function getRadioValue() {
-//   if (document.getElementById('side').checked) {
-//     randomSide()
-//   } else if (document.getElementById('maindish').checked) {
-//     randomMainDish()
-//   } else if (document.getElementById('dessert').checked) {
-//     randomDessert()
-//     event.PreventDefault()
-//   }
-// }
-//
-// function randomSide() {
-//   recipeText.innerText = sides[getRandomIndex(sides)];
-// }
-//
-// function randomMainDish() {
-//   recipeText.innerText = mainDishes[getRandomIndex(mainDishes)];
-// }
-//
-// function randomDessert() {
-//   recipeText.innerText = desserts[getRandomIndex(desserts)];
-// }
-//
-//
-// function recipeInput() {
-//             var radioButtons = document.getElementsByName('food-option');
-//             for(i = 0; i < radioButtons.length; i++) {
-//                 if(radioButtons[i].checked)
-//                 dishSelection = radioButtons[i].value;
-//             }
-//           randomFoodPick(dishSelection)
-//         }
-// randomFoodPick() {
-//   if (dishSelection.value === 'side') {
-//     recipeText.innerText = sides[getRandomIndex(sides)];
-//   } else if (dishSelection.value ===)
-// }
-//
-// function getRandomIndex(array) {
-//   return Math.floor(Math.random() * array.length);
-// }
+var cookpotImage = document.querySelector('.cookpot-image');
+var recipeText = document.querySelector('.recipe-text')
+var boxTwoView = document.querySelector('.box-two')
+
+window.addEventListener('load', homeView)
+
+function homeView() {
+  event.preventDefault()
+  cookpotImage.classList.remove('hidden')
+  recipeText.classList.add('hidden')
+}
+
+var cookButton = document.querySelector('.cook-button');
+
+cookButton.addEventListener('click', showRecipe)
+
+function showRecipe() {
+  cookpotImage.classList.add('hidden')
+  recipeText.classList.remove('hidden')
+}
+
+// radioButtons functionality
+
+var radioButtons = document.getElementsByName('food-option');
+
+function assessValue() {
+  for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      checkedSelection = radioButtons[i].value
+    }
+    returnRecipe(checkedSelection)
+    console.log(bob)
+  }
+}
+
+function returnRecipe(checkedSelection) {
+  if (checkedSelection === 'side') {
+    recipeText.innerText = sides[getRandomIndex(sides)];
+  } else if (checkedSelection === 'maindish') {
+    recipeText.innerText = mainDishes[getRandomIndex(mainDishes)];
+  } else if (checkedSelection === 'dessert') {
+    recipeText.innerText = desserts[getRandomIndex(desserts)];
+  }
+}
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}

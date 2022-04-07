@@ -52,16 +52,40 @@ main {
   /* background-color: blue; */
   height: 50%;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .dish-displays {
-  border: solid black;
-  height: 300px;
-  width: 400px;
+  height: 250px;
+  width: 350px;
   background-color: rgba(225, 225, 225, .9);
-
+  padding: 40px;
 }
 
+input[type="radio"] {
+  margin: 10px;
+}
+
+.dish-selector-button {
+  background-color: #0fb9b1;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  width: 175px;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+svg {
+  height: 120px;
+  length: 155px;
+  padding: 60px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
 
 
 /* main {

@@ -1,10 +1,55 @@
+
+
 <html>
   <head>
+    <meta charset='utf-8'>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    
+  <body class='main-page'>
+    <section class='header-container'>
+        <h1 class='header-text'>What's For Dinner?</h1>
+            <button class='recipe-button'>ADD A RECIPE!</button>
+    </section>
+  <section class='white-boxes'>
+    <section class='box-one'>
+        <div class ='box-one-content'>
+            <form id='form'>
+              <p id='form-prompt'>
+                <h3 class='box-title'>What are you looking for?</h3>
+              <input type="radio" name='food-option' value="side" id='side'>
+                <label for='side'>Side</label><br>
+              <input type='radio' name='food-option' value="maindish" id='main'>
+                <label for='main'>Main Dish</label><br>
+              <input type='radio' name='food-option' value="dessert" id='dessert'>
+                <label for='dessert'>Dessert</label><br>
+              <input type='radio' name='food-option' value="entire-meal" id='meal'>
+                <label for='meal'>Entire Meal</label><br>
+                <br>
+              <div class='cook-submit'>
+                <button type='submit' class='cook-button'>LET'S COOK!</button>
+              </div>
+              </p>
+            </form>
+        </div>
+    </section>
+    <section class='box-two'>
+      <div class='two-contents'>
+        <section class='box-two-content'>
+        <p class ='header-two hidden'>You should make:</p>
+        <h2 class='recipe-text hidden'></h2>
+      </div>
+      <p>
+      <div class='cookpot-image hidden' id='cookPot'>
+          <img src="assets/cookpot.svg"
+          height="150px"
+          width="150px">
+      </div>
+    </p>
+  </section>
+    </section>
+  </section>
+    <section class="recipe-box hidden">
+    <script type="text/javascript" src="main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
 </html>

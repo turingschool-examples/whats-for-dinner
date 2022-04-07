@@ -1,4 +1,5 @@
-let mainrecipes = ["Spaghetti and Meatballs",
+let mainrecipes = [
+"Spaghetti and Meatballs",
 "Pineapple Chicken",
 "Shakshuka",
 "Thai Yellow Curry",
@@ -12,10 +13,48 @@ let mainrecipes = ["Spaghetti and Meatballs",
 "Sheet Pan Fajitas",
 "Margarita Pizza"]
 
+let siderecipes = [
+"Miso Glazed Carrots",
+"Coleslaw",
+"Garden Salad",
+"Crispy Potatoes",
+"Sweet Potato Tots",
+"Coconut Rice",
+"Caeser Salad",
+"Shrimp Summer Rolls",
+"Garlic Butter Mushrooms",
+"Hush Puppies"]
+
+let desserts = [
+"Desserts",
+"Apple Pie",
+"Lemon Meringue Pie",
+"Black Forest Cake",
+"Banana Bread",
+"Peach Cobbler",
+"Cheesecake",
+"Funfetti Cake",
+"Baklava",
+"Flan",
+"Macarons",
+"Macaroons",
+"Chocolate Cupcakes",
+"Pavlova",
+"Pumpkin Pie",
+"Key Lime Pie",
+"Tart Tatin",
+"Croissants",
+"Eclairs"]
+
+window.addEventListener("load", displayCustomizedFeatures);
+
+let favoriteRecipes = [];
+
 
 let userInputForm = document.querySelectorAll(".radioButtons");
 let submitButton = document.getElementById("submit");
 let resultsWindow = document.querySelector(".recipeDisplayContainer");
+let userTitle = document.getElementById("title")
 
 submitButton.addEventListener("click", formHandler);
 
@@ -44,19 +83,25 @@ function formHandler(){
 function returnRecipe(selection) {
   if (selection == "main") {
     let recipe = getRandomElement(mainrecipes);
-    return recipe
+    return recipe;
+  } else if (selection == "side") {
+    let recipe = getRandomElement(siderecipes);
+    return recipe;
+  } else if (selection == "dessert") {
+    let recipe = getRandomElement(desserts);
+    return recipe;
   }
 }
 
 function displayResults(randomRecipe) {
 
-  let thing = document.getElementById("this");
+  let thing = document.getElementById("results-string-container");
   thing.innerText = "You should have: "
-  resultsWindow.innerText = randomRecipe
+  resultsWindow.innerText = randomRecipe;
+}
 
-
-  //let container = document.getElementById("recipeDisplayContainer");
-  //container.appendChild("div")
-
-
+function displayCustomizedFeatures() {
+  let username = localStorage.getItem("username")
+  console.log(localStorage.getItem("username"))
+  userTitle.innerText = `What's for dinner, ${username}?`
 }

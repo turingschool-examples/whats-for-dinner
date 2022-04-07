@@ -8,7 +8,7 @@
       <h1>
         What's for dinner?
       </h1>
-      <button>
+      <button class='add-a-recipe'>
         ADD A RECIPE
       </button>
     </header>
@@ -18,17 +18,19 @@
           What are you looking for?<span>*</span>
         </h2>
         <form>
-          <input type="radio" name="radio-btn">Side</input><br>
-          <input type="radio" name="radio-btn">Main Dish</input><br>
-          <input type="radio" name="radio-btn">Dessert</input><br>
+          <input type="radio" name="radio-btn" value=1>Side</input><br>
+          <input type="radio" name="radio-btn" value=2>Main Dish</input><br>
+          <input type="radio" name="radio-btn" value=3>Dessert</input><br>
           <input type="radio" name="radio-btn">Entire Meal</input><br>
         </form>
-        <button>
+        <button class="lets-cook">
           LET'S COOK!
         </button>
       </article>
-      <article>
-        <img src='cookpot.svg' alt='pot image'>
+      <article class = "cookpot-container">
+
+          <img src='./assets/cookpot.svg' alt='pot image' class ='cook-pot' >
+
       </article>
     </section>
 

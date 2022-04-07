@@ -12,7 +12,7 @@ var sides = [
 "Crispy Potatoes",
 "Sweet Potato Tots",
 "Coconut Rice",
-"Caeser Salad",
+"Caesar Salad",
 "Shrimp Summer Rolls",
 "Garlic Butter Mushrooms",
 "Hush Puppies",
@@ -60,6 +60,8 @@ var recipeText = document.querySelector('.recipe-text')
 var boxTwoView = document.querySelector('.box-two')
 var headerThree = document.querySelector('.header-two')
 
+
+// different views using hidden
 window.addEventListener('load', homeView)
 
 function homeView() {
@@ -68,15 +70,18 @@ function homeView() {
   recipeText.classList.add('hidden')
 }
 
-var cookButton = document.querySelector('.cook-button');
 
-// cookButton.addEventListener('click', showRecipe)
+var cookButton = document.querySelector('.cook-button');
 
 function showRecipe() {
   cookpotImage.classList.add('hidden')
   recipeText.classList.remove('hidden')
   headerThree.classList.remove('hidden')
 }
+
+
+
+
 
 // radioButtons functionality
 cookButton.addEventListener('click', function() {
@@ -103,7 +108,15 @@ function returnRecipe(checkedSelection) {
     recipeText.innerText = `${mainDishes[getRandomIndex(mainDishes)]}!`;
   } else if (checkedSelection === 'dessert') {
     recipeText.innerText = `${desserts[getRandomIndex(desserts)]}!`;
+  } else if (checkedSelection === 'entire-meal') {
+    displayMeal()
   }
+}
+
+function displayMeal() {
+  recipeText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a
+  side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}
+  for dessert!`
 }
 
 function getRandomIndex(array) {

@@ -101,7 +101,8 @@ input[name='food-option']{
   height: 40px;
   width: 200px;
   font-size: 15px;
-  border: none;
+  border: solid;
+  border-color: cornflowerblue;
 }
 
 .two-contents {

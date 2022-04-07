@@ -1,10 +1,11 @@
 let display = document.querySelector(".display");
 let username = document.getElementById("input0");
+let theme = document.getElementById("input1");
 let submitButton = document.getElementById("submit");
 
-addEventListener('storage', function(e){
-   console.log(`The value of the ${e.key} changed for the ${e.domain}.`);
-});
+//addEventListener('storage', function(e){
+//   console.log(`The value of the ${e.key} changed for the ${e.domain}.`);
+//});
 
 submitButton.addEventListener("click", storeData)
 
@@ -28,4 +29,6 @@ submitButton.addEventListener("click", storeData)
 function storeData() {
   let inputUserName = username.value
   window.localStorage.setItem("username", inputUserName)
+  let inputColorTheme = theme.value
+  window.localStorage.setItem("theme", inputColorTheme)
 }

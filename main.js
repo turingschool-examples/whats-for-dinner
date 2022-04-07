@@ -54,7 +54,9 @@ let favoriteRecipes = [];
 let userInputForm = document.querySelectorAll(".radioButtons");
 let submitButton = document.getElementById("submit");
 let resultsWindow = document.querySelector(".recipeDisplayContainer");
-let userTitle = document.getElementById("title")
+let userTitle = document.getElementById("title");
+let navbar = document.querySelector(".navbar")
+let bodyImage = document.querySelector(".main-container")
 
 submitButton.addEventListener("click", formHandler);
 
@@ -102,6 +104,11 @@ function displayResults(randomRecipe) {
 
 function displayCustomizedFeatures() {
   let username = localStorage.getItem("username")
-  console.log(localStorage.getItem("username"))
   userTitle.innerText = `What's for dinner, ${username}?`
+
+  let theme = localStorage.getItem("theme")
+  if (theme == "pink") {
+    navbar.className = "navbar pink"
+    bodyImage.className = "main-container pink"
+}
 }

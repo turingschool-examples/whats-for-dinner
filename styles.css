@@ -9,6 +9,8 @@ red - #ee5253;
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: 'Roboto', sans-serif;
   background-image: url("assets/burger-friends.jpg");
   background-size: cover;
@@ -18,6 +20,12 @@ button {
   display: flex;
   padding: 10px;
 }
+
+.navbar.pink {
+  background-color: #D5F5E3;
+  border-bottom: 4px #ABEBC6 solid;
+}
+
 
 .navbar {
   display: flex;
@@ -56,7 +64,15 @@ button {
 
 .main-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.main-container.pink {
+  background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__480.jpg");
+  background-size: cover;
+  height: 1500px;
+  width: 2000px;
+  font-family:
 }
 
 .userInputForm {

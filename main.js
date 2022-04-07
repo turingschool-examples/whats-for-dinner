@@ -1,8 +1,6 @@
 
-var cookButton = document.querySelector('.cook-button');
-var recipeButton = document.querySelector('.recipe-button');
 
-var radioButtons = document.getElementsByName('food-option');
+var recipeButton = document.querySelector('.recipe-button');
 var form = document.getElementById('form')
 
 
@@ -60,6 +58,7 @@ var desserts = [
 var cookpotImage = document.querySelector('.cookpot-image');
 var recipeText = document.querySelector('.recipe-text')
 var boxTwoView = document.querySelector('.box-two')
+var headerThree = document.querySelector('.header-two')
 
 window.addEventListener('load', homeView)
 
@@ -76,6 +75,7 @@ var cookButton = document.querySelector('.cook-button');
 function showRecipe() {
   cookpotImage.classList.add('hidden')
   recipeText.classList.remove('hidden')
+  headerThree.classList.remove('hidden')
 }
 
 // radioButtons functionality
@@ -98,11 +98,11 @@ function assessValue() {
 
 function returnRecipe(checkedSelection) {
   if (checkedSelection === 'side') {
-    recipeText.innerText = sides[getRandomIndex(sides)];
+    recipeText.innerText = `${sides[getRandomIndex(sides)]}!`;
   } else if (checkedSelection === 'maindish') {
-    recipeText.innerText = mainDishes[getRandomIndex(mainDishes)];
+    recipeText.innerText = `${mainDishes[getRandomIndex(mainDishes)]}!`;
   } else if (checkedSelection === 'dessert') {
-    recipeText.innerText = desserts[getRandomIndex(desserts)];
+    recipeText.innerText = `${desserts[getRandomIndex(desserts)]}!`;
   }
 }
 

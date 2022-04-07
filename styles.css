@@ -55,7 +55,6 @@ main {
   display: inline-flex;
   justify-content: space-around;
   align-items: flex-end;
-  /* background-color: blue; */
   height: 60%;
   width: 100%;
   font-family: 'Roboto', sans-serif;

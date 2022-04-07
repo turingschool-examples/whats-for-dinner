@@ -7,4 +7,117 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+* {
+  border: 2px solid red;
+  font-family: 'Roboto', sans-serif;
+}
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
 
+body {
+  background: url(assets/burger-friends.jpg);
+  background-size: cover;
+  margin:0;
+  padding: 0;
+}
+
+header {
+  background-color: #0fb9b1;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0;
+  padding: 0;
+}
+
+button {
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 0;
+}
+
+form {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+label {
+
+  width: 80px;
+  height: auto;
+  margin-right: -20px;
+  padding-left: 20px;
+  margin-top: -30px;
+}
+
+.main-title{
+width: 200px;
+height:25px;
+font-size: large;
+}
+
+.button-position {
+  width: 200px;
+  height: 30px;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-end;
+}
+
+.wrapper {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box {
+  background-color: rgba(225, 225, 225, .9);
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 60%;
+}
+
+.box form {
+  text-align: left;
+}
+
+.box h1{
+  font-size: x-large;
+}
+
+.cookpot {
+  width: 45%;
+  height: 45%;
+}
+
+.cookpot-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  right: 75px;
+}

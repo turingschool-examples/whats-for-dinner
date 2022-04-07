@@ -89,44 +89,8 @@ h2 {
 
 svg {
   height: 120px;
-  width: 100px;
+  width: 120px;
   padding: 60px;
   padding-left: 120px;
   padding-right: 120px;
 }
-
-
-/* main {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 300px;
-  width: 300px;
-} */
-
-
-
-/* .dish-selector:nth-child(1) {
-
-} */
-
-
-
-
-
-
-
-
-
-
-/* .meal-displays {
-  display: flex;
-  justify-content: space-evenly;
-  height: 400px;
-  width: 400px;
-  background-color: rgba(225, 225, 225, .9);
-} */
-/*
-.buttons {
-
-} */

@@ -47,7 +47,6 @@ button {
 form {
   margin-top: 20px;
   margin-left: 40px;
-  width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -108,7 +107,6 @@ font-size: large;
 }
 
 .cookpot-container{
-  display: flex;
   justify-content: center;
   align-items: center;
 }

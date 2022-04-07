@@ -5,10 +5,16 @@ grey - #95a5a6;
 red - #ee5253;
 
 */
+@font-face {
+	font-family: "cloud";
+	src: url("assets/CottonCloud.ttf");
+}
 
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: 'Roboto', sans-serif;
   background-image: url("assets/burger-friends.jpg");
   background-size: cover;
@@ -17,7 +23,19 @@ body {
 button {
   display: flex;
   padding: 10px;
+  font-family: inherit;
 }
+
+button.dreamy {
+
+}
+
+.navbar.dreamy {
+  background-color: #D5F5E3;
+  border-bottom: 4px #ABEBC6 solid;
+  font-family: "cloud"
+}
+
 
 .navbar {
   display: flex;
@@ -56,7 +74,15 @@ button {
 
 .main-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.main-container.dreamy {
+  background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__480.jpg");
+  background-size: cover;
+  height: 1500px;
+  width: 2000px;
+  font-family:
 }
 
 .userInputForm {
@@ -64,7 +90,14 @@ button {
   flex-direction: column;
   justify-content: center;
   margin-right: 25px;
+}
 
+.userInputForm.dreamy {
+  background-color: #FFF9FE;
+}
+
+.main.contain.dreamy {
+  background-color: #FFF9FE;
 }
 
 .this {

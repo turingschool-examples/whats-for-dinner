@@ -16,7 +16,6 @@ span {
 }
 html {
   height: 100%;
-  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -38,8 +37,6 @@ header {
 
 button {
   height: 30px;
-  padding: 20px
-  padding-left: 10px;
   padding-right: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -98,10 +95,6 @@ font-size: large;
   flex-direction: column;
   width: 550px;
   height: 65%;
-}
-
-.box form {
-  text-align: left;
 }
 
 .prompt{

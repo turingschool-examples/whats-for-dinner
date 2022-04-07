@@ -84,12 +84,26 @@ h2 {
   font-weight: bolder;
 }
 
-
-
 svg {
+  display: block;
   height: 120px;
   width: 120px;
   padding: 60px;
   padding-left: 120px;
   padding-right: 120px;
+  padding-top: 75px;
+}
+
+.selected-dish {
+  display: none;
+  text-align: center;
+  padding-top: 15%;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 2em;
 }

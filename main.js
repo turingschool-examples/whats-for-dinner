@@ -1,18 +1,10 @@
-// // button vars
-// var potato = document.querySelector('#cookPot')
-// console.log(potato.classList.remove('hidden'))
-// console.log(potato.classList.add('hotdog'))
-// console.log('potato variable', potato)
+
 var cookButton = document.querySelector('.cook-button');
 var recipeButton = document.querySelector('.recipe-button');
 
 var radioButtons = document.getElementsByName('food-option');
 var form = document.getElementById('form')
-// //
-// // // // event listeners
-// recipeButton.addEventListener('click', getRadioValue);
-//
-// var sideSelection =
+
 
 // arrays
 var sides = [
@@ -79,7 +71,7 @@ function homeView() {
 
 var cookButton = document.querySelector('.cook-button');
 
-cookButton.addEventListener('click', showRecipe)
+// cookButton.addEventListener('click', showRecipe)
 
 function showRecipe() {
   cookpotImage.classList.add('hidden')
@@ -87,16 +79,20 @@ function showRecipe() {
 }
 
 // radioButtons functionality
+cookButton.addEventListener('click', function() {
+  event.preventDefault();
+  showRecipe();
+  assessValue();
+});
 
 var radioButtons = document.getElementsByName('food-option');
 
 function assessValue() {
   for (var i = 0; i < radioButtons.length; i++) {
     if (radioButtons[i].checked) {
-      checkedSelection = radioButtons[i].value
+      var checkedSelection = radioButtons[i].value
     }
     returnRecipe(checkedSelection)
-    console.log(bob)
   }
 }
 

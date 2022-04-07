@@ -55,8 +55,9 @@ let userInputForm = document.querySelectorAll(".radioButtons");
 let submitButton = document.getElementById("submit");
 let resultsWindow = document.querySelector(".recipeDisplayContainer");
 let userTitle = document.getElementById("title");
-let navbar = document.querySelector(".navbar")
-let bodyImage = document.querySelector(".main-container")
+let navbar = document.querySelector(".navbar");
+let bodyImage = document.querySelector(".main-container");
+let boxes = document.querySelectorAll(".main");
 
 submitButton.addEventListener("click", formHandler);
 
@@ -103,14 +104,16 @@ function displayResults(randomRecipe) {
 }
 
 function displayCustomizedFeatures() {
-  if (localStorage.getItem()){
+  if (localStorage.length >= 1){
   let username = localStorage.getItem("username")
   userTitle.innerText = `What's for dinner, ${username}?`
 
   let theme = localStorage.getItem("theme")
-  if (theme == "pink") {
-    navbar.className = "navbar pink"
-    bodyImage.className = "main-container pink"
+  if (theme == "dreamy") {
+    navbar.className = "navbar dreamy"
+    bodyImage.className = "main-container dreamy"
+    boxes[0].className = "main userInputForm dreamy"
+    boxes[1].className = "main contain dreamy"
     }
   }
 }

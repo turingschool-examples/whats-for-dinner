@@ -26,11 +26,11 @@ button {
   font-family: inherit;
 }
 
-button.pink {
-  
+button.dreamy {
+
 }
 
-.navbar.pink {
+.navbar.dreamy {
   background-color: #D5F5E3;
   border-bottom: 4px #ABEBC6 solid;
   font-family: "cloud"
@@ -77,7 +77,7 @@ button.pink {
   justify-content: center;
 }
 
-.main-container.pink {
+.main-container.dreamy {
   background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__480.jpg");
   background-size: cover;
   height: 1500px;
@@ -90,7 +90,14 @@ button.pink {
   flex-direction: column;
   justify-content: center;
   margin-right: 25px;
+}
 
+.userInputForm.dreamy {
+  background-color: #FFF9FE;
+}
+
+.main.contain.dreamy {
+  background-color: #FFF9FE;
 }
 
 .this {

@@ -1,14 +1,35 @@
 /* font-family: 'Roboto', sans-serif;
 
+
+
 COLORS
-teal - #0fb9b1;
+teal - #0fb9b1; nav bar/lets cook button
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
 */
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+h1 {
+
+}
+
 body {
   background-position: center;
   background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  justify-content: space-evenly;
+  
 }

@@ -1,10 +1,47 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
+<head>
+  <title>What's For Dinner?</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1> What's for dinner? </h1>
+    <form>
+      <input type="button" id="recipe-button" value="Add a recipe">
+    </form>
+  </header>
+  <main>
+    <!-- <section>
+    <article class="image">
+      <img class="burger-friends" src="./assets/burger-friends.jpg" alt="Let/s eat burger with friends">
+    </section> -->
+    <section>
+      <h2>What are you looking for?<span>*</span></h2>
+      <form>
+        <div>
+          <input type="radio" id="radio-side" name="decide" value="side" >
+          <label for="radio-side">Side</label>
+        </div>
+        <div>
+          <input type="radio" id="radio-main-dish" name="decide" value="main dish">
+          <label type="radio-main-dish">Main Dish</label>
+        </div>
+        <div>
+          <input type="radio" id="radio-dessert" name="decide" value="dessert" >
+          <label for="radio-dessert">Dessert</label>
+        </div>
+        <div>
+          <input type="radio" id="radio-entire-meal" name="decide" value="entire meal" >
+          <label for="radio-entire-meal">Entire Meal</label>
+        </div>
+        <input type="button" id="lets-cook" value="LET'S COOK">
+      </form>
+    </section>
+    <section>
+      <img class="cookpot" src="./assets/cookpot.svg" alt="cookpot">
+    </section>
+  </main>
+</body>
   <script type="text/javascript" src="main.js"></script>
 </html>

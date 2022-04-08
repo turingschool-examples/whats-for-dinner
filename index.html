@@ -3,19 +3,29 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>What's For Dinner</title>
+    <title>What's For Dinner?</title>
   </head>
-  <body class="body">
+  <body>
     <section class="nav">
-      <h1 class="title">What's For Dinner</h1>
-      <button class="h1button">ADD A RECIPE!</button>
+      <h1 class="title">What's For Dinner?</h1>
+      <button class="add-recipe-button">ADD A RECIPE!</button>
     </section>
-    <section class='wrapper'>
-      <div class="box">
-        <h1>What are you looking for?</h1>
-        <button class="content">Let's Cook!</button>
+    <section class="main">
+      <div class="box1">
+        <h1 class="box1-title">What are you looking for?</h1>
+      <section class="radio-buttons">
+        <input class="radio" type="radio" name="meal-category" id="side" value="side">
+          <label for="side">Side</label>
+        <input class="radio" type="radio" name="meal-category" id="main-dish" value="mainDish">
+          <label for="side">Main Dish</label>
+        <input class="radio" type="radio" name="meal-category" id="dessert" value="dessert">
+          <label for="side">Dessert</label>
+        <input class="radio" type="radio" name="meal-category" id="entire-meal" value="entireMeal">
+          <label for="side">EntireMeal</label>
+        <button class="lets-cook-button">LET'S COOK!</button>
       </div>
-      <div class="box">
+      <div class="box2">
+        <img class="crockpot" src="assets/cookpot.svg">
       </div>
     </section>
   </body>

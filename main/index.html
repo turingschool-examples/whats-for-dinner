@@ -4,21 +4,21 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="body customizable">
 
   <!-- NAVBAR -->
     <header class="navbar customizable">
   <!--    <div class="navbar-container"> -->
-        <h1 class="title" id="welcome-message">What's for Dinner?</h1>
+        <h1 class="welcome-message customizable" id="welcome-message">What's for dinner?</h1>
         <button class="button" id="header-button">ADD A RECIPE</button>
   <!--    </div> -->
     </header>
   <!-- END NAVBAR -->
 
-  <div class="display-container customizable">
+  <div class="container customizable">
   <!-- USER INPUT FORM-->
   <article class="display customizable" id="userInputForm">
-    <h2>What are you looking for?</h2>
+    <h2>Whatcha hungry for?</h2>
     <form id="userForm" input type="radio">
 
       <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button0" value="side">
@@ -43,7 +43,7 @@
   <article id="recipeDisplayContainer">
     <img class="cookpot" id="cookpot" src="../assets/cookpot.svg">
   </article>
-</div>
+  </div>
 
 
   <!--END DISPLAY-->

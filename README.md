@@ -12,4 +12,10 @@ Please, visit my website: [What's For Dinner?](https://jfarelli.github.io/whats-
 
 * Is that option not for you??? Just keep on hitting that **"Get Cooking" button and see which meal "tickles your fancy"!
 
-![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/burger-friends.jpg)
+![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/what's for dinner_side.png)
+
+![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/what's for dinner_main.png)
+
+![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/what's for dinner_dessert.png)
+
+![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/What's for Dinner?.png)

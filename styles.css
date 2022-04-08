@@ -9,7 +9,10 @@ red - #ee5253 */
    v2.0 | 20110126
    License: none (public domain)
 */
-
+* {
+  font-family: 'Roboto', sans-serif;
+	color: black;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,7 +33,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -55,7 +58,7 @@ table {
 }
 * {
   font-family: 'Roboto', sans-serif;
-  color: black;
+	color: black;
 }
 
 
@@ -70,74 +73,108 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #0fb9b1;
-  height: 8%;
+  height: 10%;
   width: 100%;
   background: #0fb9b1;
-  color: black;
-  border: 2px solid red;
 }
 
 
 h1 {
-  display: flex;
+  /* display: flex; */
   margin-left: 20px;
   align-items: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  border: 2px solid green;
+  font-size: 23px;
 }
 
-.box-wrapper {
-  display: flex;
-  flex-direction: row;
-  height: 90%;
-  justify-content: space-evenly;
-  align-items: center;
-  border: 2px solid pink;
-}
-/* section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-} */
-
-.selection-box {
-  display: flex;
-  flex-direction: column;
-  background: rgba(225, 225, 225, .9);
-  text-align: left;
-  width: 475px;
-  height: 380px;
-  padding: 150px;
-  box-sizing: border-box;
-  border: 2px solid blue;
-}
-
-.you-should-make-box {
-  background: rgba(225, 225, 225, .9);
-  width: 475px;
-  height: 380px;
-  padding: 25px;
-  box-sizing: border-box;
-  border: 2px solid black;
-
-
-}
-.pot {
-  width: 90px;
-  border: 2px solid magenta;
-
-}
-button {
+.add-a-recipe-button {
   display: flex;
   align-items: center;
   background-color: white;
   padding: 14px;
+  font-family: 'Roboto', sans-serif;
   color: black;
   height: 50%;
   margin-right: 20px;
   border: none;
   border-radius: 5px;
+
+}
+.box-wrapper {
+  display: flex;
+	flex-direction: column;
+
+  flex-direction: row;
+  height: 90%;
+  justify-content: space-evenly;
+	padding: 50px;
+}
+
+
+.selection-form-box{
+	display: flex;
+  flex-direction: column;
+	justify-content: flex-start;
+	align-items: start;
+  background: rgba(225, 225, 225, .9);
+  text-align: left;
+  width: 475px;
+  height: 380px;
+  padding: 60px;
+  box-sizing: border-box;
+
+}
+
+ h2 {
+	display: flex;
+  /* flex-direction: column; */
+	align-items: flex-start;
+  font-family: 'Roboto', sans-serif;
+	padding: 7px;
+  font-size: 25px;
+	width: 100%;
+}
+
+span {
+	color: red;
+}
+
+div {
+	margin-top: 10px;
+	font-size: 18px;
+
+}
+
+.lets-cook-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0fb9b1;
+	padding: 14px;
+	font-family: 'Roboto', sans-serif;
+  color: black;
+	border-radius: 10px;
+	height: 15%;
+	width: 60%;
+	margin-top: 25px;
+}
+
+.pot-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  background: rgba(225, 225, 225, .9);
+  width: 475px;
+  height: 380px;
+  padding: 25px;
+  box-sizing: border-box;
+
+}
+
+.pot-image {
+  display: flex;
+	justify-content: center;
+	width: 160px;
+	height: 160px;
 
 }

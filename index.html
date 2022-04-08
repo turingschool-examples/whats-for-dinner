@@ -5,26 +5,36 @@
   </head>
   <body>
     <header>
-    <h1> What's for dinner? </h1>
-    <button class="recipe-button">Add a recipe</button> </header>
-    <h2> What are you looking for? </h2>
+      <h1> What's for dinner? </h1>
+      <form>
+        <input type="button" id="recipe-button" value="Add a recipe">
+      </form>
+    </header>
+  <main>
+    <section>
+      <h2>What are you looking for?<span>*</span></h2>
+      <form>
+       <div>
+        <input type="radio" id="radio-side" name="decide" value="side" >
+        <label for="radio-side">Side</label>
+        <input type="radio" id="radio-main-dish" name="decide" value="main dish">
+        <label type="radio-main-dish">Main Dish</label>
+        <input type="radio" id="radio-dessert" name="decide" value="dessert" >
+        <label for="radio-dessert">Dessert</label>
+        <input type="radio" id="radio-entire-meal" name="decide" value="entire meal" >
+        <label for="radio-entire-meal">Entire Meal</label>
+          <form>
+            <input type="button" id="lets-cook" value="LET'S COOK">
+          </form>
+        </div>
+      </form>
+    </section>
+    <section>
+      <form>
+        <img class="cookpot" src="./assets/cookpot.svg" alt="cookpot">
+      </form>
+    </section>
+  </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
-<!-- grey boxes should be boxes
-<body>
-  <header>
-    <h1>
-    <button>
-  </header>
-  <main>
-    <section>
-      first grey box goes here
-      radio button kucuk beyaz buttonlar
-    </section>
-    <section>
-      second grey box goes here
-    </section>
-  </main>
-</body>
-bu icine soakcagijm zimpirtilar -->

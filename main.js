@@ -77,6 +77,7 @@ function checkRadioStatus() {
   var sideDishStatus = document.getElementById('side');
   var mainDishStatus = document.getElementById('mainDish');
   var dessertStatus = document.getElementById('dessert');
+  var entireMealStatus = document.getElementById('entireMeal');
 
   if (sideDishStatus.checked) {
     displaySide()
@@ -84,6 +85,8 @@ function checkRadioStatus() {
     displayMain()
   } else if (dessertStatus.checked) {
     displayDessert()
+  } else if (entireMealStatus.checked) {
+    displayEntireMeal()
   }
 }
 
@@ -107,7 +110,11 @@ document.querySelector('svg').style.display = "none";
 document.querySelector('.selected-Dish').style.display = "block";
 }
 
-
+function displayEntireMeal() {
+document.querySelector('h4').innerHTML = `${randomMain} with a side of ${randomSide} and a ${randomDessert} for dessert!`;
+document.querySelector('svg').style.display = "none";
+document.querySelector('.selected-Dish').style.display = "block";
+}
 
 
 //Access random Element

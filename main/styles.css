@@ -55,7 +55,7 @@ button {
 }
 
 /* ---- MAIN DISPLAY ---- */
-.containers {
+.container {
   display: flex;
   justify-content: center;
 

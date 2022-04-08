@@ -10,7 +10,7 @@ Please, visit my website: [What's For Dinner?](https://jfarelli.github.io/whats-
 
 * That little stove pot on the right will disappear and be replaced with a random meal!
 
-* Is that option not for you??? Just keep on hitting that **"Get Cooking" button and see which meal "tickles your fancy"!
+* Is that option not for you??? Just keep on hitting that **"Get Cooking"** button and see which meal "tickles your fancy"!
 
 * BON APPETIT!!
 

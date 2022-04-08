@@ -14,10 +14,10 @@ Please, visit my website: [What's For Dinner?](https://jfarelli.github.io/whats-
 
 * BON APPETIT!!
 
-![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/what's%20for%20dinner_side.png)
+![Alt text](assets/what's for dinner_side.png)
 
-![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/what's%20for%20dinner_main.png)
+![Alt text](assets/what's for dinner_main.png)
 
-![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/what's%20for%20dinner_dessert.png)
+![Alt text](assets/what's for dinner_dessert.png)
 
-![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/What's%20for%20Dinner%3F.png)
+![Alt text](assets/What's for Dinner?.png)

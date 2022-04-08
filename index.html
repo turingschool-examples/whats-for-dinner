@@ -1,54 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- NAVBAR -->
+      <header class="navbar">
+    <!--    <div class="navbar-container"> -->
+          <h1 class="title" id="title">What's for Dinner?</h1>
+          <button class="button" id="header-button">ADD A RECIPE</button>
+    <!--    </div> -->
+      </header>
+    <!-- END NAVBAR -->
 
-  <!-- NAVBAR -->
-    <header class="navbar">
-  <!--    <div class="navbar-container"> -->
-        <h1 class="title" id="title">What's for Dinner?</h1>
-        <button class="button" id="header-button">ADD A RECIPE</button>
-  <!--    </div> -->
-    </header>
-  <!-- END NAVBAR -->
-
-  <div class="main-container">
-  <!-- USER INPUT FORM-->
-  <article class="main userInputForm">
-    <h2>What are you looking for?</h2>
-    <form id="userForm" input type="radio">
-
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button0" value="side">
-      <label for="side">Side</label></div><br>
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button1" value="main">
-      <label for="main-dish">Main Dish</label></div><br>
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button2" value="dessert">
-      <label for="side">Dessert</label></div><br>
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button3" value="entire-meal">
-      <label for="main-dish">Entire Meal</label></div><br>
-
-
-      <button id="submit">Let's Cook!</button>
-    </form>
-  </article>
-  <!--END FORM -->
-
-
-  <!-- RECIPE DISPlAY-->
-  <div class="main contain">
-  <div id="results-string-container"></div>
-  <article class="recipeDisplayContainer" id="recipeDisplayContainer">
-    <img class="cookpot" id="cookpot" src="cookpot.svg">
-  </article>
+    <!-- FORM -->
+<div class="box display">
+  <section class="log-in-form">
+  <div class="input"><input type="text" name="user-log-in" class="input-field" id="input0" value="">
+  <label for="name">Username: </label></div>
+  <div class="input"><input type="text" name="user-log-in" class="input-field" id="input1" value="">
+  <label for="theme">Choose a Theme: </label></div>
+  </section>
+  <a href="./main/index.html"><button id="submit">Let's Go!</button></a>
 </div>
 
+    <!-- END FORM -->
 
-  <!--END DISPLAY-->
-
-</div>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+</body>
+<script src="loginmain.js"></script>
 </html>
+
+
+<!-- <input type="radio" name="userSelection" class="radioButtons" id="button0" value="side">
+<label for="side">Side</label>  -->

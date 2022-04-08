@@ -14,10 +14,11 @@ Please, visit my website: [What's For Dinner?](https://jfarelli.github.io/whats-
 
 * BON APPETIT!!
 
-![Alt text](assets/what's for dinner_side.png)
 
-![Alt text](assets/what's for dinner_main.png)
+<img width="1431" alt="Screen Shot 2022-04-08 at 3 01 47 PM" src="https://user-images.githubusercontent.com/97558758/162529965-a9644222-7551-4aad-9ed0-8f374b6e008d.png">
 
-![Alt text](assets/what's for dinner_dessert.png)
+<img width="1430" alt="Screen Shot 2022-04-08 at 3 02 18 PM" src="https://user-images.githubusercontent.com/97558758/162530109-d6487011-c684-4f56-a1d2-1f8913889acd.png">
 
-![Alt text](assets/What's for Dinner?.png)
+<img width="1432" alt="Screen Shot 2022-04-08 at 3 02 39 PM" src="https://user-images.githubusercontent.com/97558758/162530246-c9a117ac-61cd-4a7a-8193-43f43fbce9b9.png">
+
+![what's for dinner_entire](https://user-images.githubusercontent.com/97558758/162529652-a6715de8-5f3d-4035-8b86-33d71a1c932e.png))

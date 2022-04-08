@@ -7,7 +7,7 @@ var entireMealButton = document.querySelector("#entireMeal");
 
 //Query selector other buttons
 
-var cookButton = document.querySelector("#letsCook");
+var cookButton = document.getElementById("letsCook");
 
 
 //Dish arrays
@@ -65,7 +65,7 @@ var dessertArray = [
 var radioArray = [
   sideButton,
   mainButton,
-  dessertButton,
+  dessertButton
 ]
 
 //Event listeners and handlers
@@ -86,33 +86,32 @@ function checkRadioStatus() {
     displayDessert()
   }
 }
-//
-// displaySide() {
-//   //first select random side dish from the array (will need random function)
-//   //next, will need to take random selection and replace the inner html
-//   //of the selected dish section to display this
-//   //finally will need to toggle the cookpot to be not displayed, and the
-//   //selected dish to display instead
-// }
-//
-// displayMain() {
-//
-// }
-//
-// displayDessert() {
 
-// }
+//DOM display functions
+
+function displaySide() {
+document.querySelector('h4').innerHTML = `${randomSide}`;
+document.querySelector('svg').style.display = "none";
+document.querySelector('.selected-Dish').style.display = "block";
+}
+
+function displayMain() {
+document.querySelector('h4').innerHTML = `${randomMain}`;
+document.querySelector('svg').style.display = "none";
+document.querySelector('.selected-Dish').style.display = "block";
+}
+
+function displayDessert() {
+document.querySelector('h4').innerHTML = `${randomDessert}`;
+document.querySelector('svg').style.display = "none";
+document.querySelector('.selected-Dish').style.display = "block";
+}
+
+
+
 
 //Access random Element
 
 var randomSide = sidesArray[Math.floor(Math.random() * sidesArray.length)];
 var randomMain = mainsArray[Math.floor(Math.random() * mainsArray.length)];
 var randomDessert = dessertArray[Math.floor(Math.random() * dessertArray.length)];
-
-
-//First, function needs to see which radio button IS selected
-//Once the function has the value of the selected button,
-//it needs to go through the array that corresponds to the button
-//and select one random element from that array
-//then it needs to display that element on the page and
-//hide the cookpot icon

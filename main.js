@@ -1,13 +1,11 @@
 // querySelector variables
-// var randomSide = document.querySelector("#side");
-// var randomMainDish = document.querySelector("#main");
-// var randomDessert = document.querySelector("#dessert");
 var letsCookButton = document.querySelector(".cook");
 var results = document.querySelector(".results");
 var mealResults = document.querySelector(".mealresults");
 var removeCookBoxLogo = document.querySelector("#cookpot");
 
 
+// Global variables
 var sides = [
   "Miso Glazed Carrots",
   "Coleslaw",
@@ -56,53 +54,40 @@ var desserts = [
   "Eclairs",
 ];
 
+var foodsArrays = {
+  sides: sides,
+  mains: mains,
+  desserts: desserts,
+}
+
 // addEventListener here
 letsCookButton.addEventListener('click', removeLogo);
 
-
-
-// functions & event handlers
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-// random Side, Main Dish, Dessert
 function hideCookpot() {
   removeCookBoxLogo.classList.add("hidden");
 }
 
+function getRandomElement(arr) {
+  var randomIndex = getRandomIndex(arr);
+  return arr[randomIndex];
+}
 
 function getCooking() {
     var radio = document.querySelector('input[type=radio]:checked');
-    var randomMealIndex = getRandomIndex(foodsArrays[radio.value]);
-    results.innerText = `You should make: `;
-    mealResults.innerText = `${foodsArrays[radio.value][randomMealIndex]}!`;
+    results.innerText = `You should make:`;
+    if (radio.value === "meal") {
+      mealResults.innerText = `${getRandomElement(foodsArrays.sides)} with a side of ${getRandomElement(foodsArrays.mains)} and ${getRandomElement(foodsArrays.desserts)} for dessert!`;
+    } else {
+      mealResults.innerText = `${getRandomElement(foodsArrays[radio.value])}!`;
+    }
 }
-
-function entireMeal() {
-  var radio = document.querySelector('input[type=radio]:checked');
-  var randomMealIndex = getRandomIndex(foodsArrays[radio.value]);
-  results.innerText = `You should make: `;
-  mealResults.innerText = `${foodsArrays[radio.sides][radio.mains][radio.desserts][randomMealIndex]}!`;
-}
-
 
 function removeLogo() {
   event.preventDefault();
   hideCookpot();
   getCooking();
-  entireMeal();
 }
-
-var foodsArrays = {
-  sides: sides,
-  mains: mains,
-  desserts: desserts,
-  meal: meal,
-}
-
-
-// document.getElementById('#side').onclick = function() {
-//     var radio = document.querySelector('input[type=radio]:checked');
-//     radio.checked = true;
-// }

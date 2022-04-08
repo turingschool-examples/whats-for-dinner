@@ -1,7 +1,7 @@
 
 
 var recipeButton = document.querySelector('.recipe-button');
-var form = document.getElementById('form')
+var form = document.getElementById('#form')
 
 
 // arrays
@@ -89,18 +89,39 @@ clearButton.addEventListener('click', clearInput)
 function clearInput() {
   for(var i = 0; i < radioButtons.length; i++) {
     radioButtons[i].checked = false;
-    recipeText.innerText = 'Oops, please select your dish!'
+    recipeText.innerText= ''
     headerThree.classList.add('hidden')
+    cookpotImage.classList.remove('hidden')
+    clearButton.classList.add('hidden')
   }
 }
 
 
 // radioButtons functionality
+
+
+
 cookButton.addEventListener('click', function() {
   event.preventDefault();
   showRecipe();
   assessValue();
 });
+
+// cookButton.disabled = true;
+
+// radioValues.addEventListener('change', enableButton);
+// var radioValues = document.querySelector('[name="food-option"]:checked').value;
+// function enableButton() {
+  // radioValues = document.querySelector('[name="food-option"]:checked').value;
+// }
+//
+// function enableButton() {
+//   if (radioButtons.value === '') {
+//     cookButton.disabled = true;
+//   } else {
+//     cookButton.disabled = false;
+//   }
+// }
 
 var radioButtons = document.getElementsByName('food-option');
 
@@ -108,10 +129,20 @@ function assessValue() {
   for (var i = 0; i < radioButtons.length; i++) {
     if (radioButtons[i].checked) {
       var checkedSelection = radioButtons[i].value
+      }
     }
     returnRecipe(checkedSelection)
   }
-}
+
+
+
+var boxTwoContents = document.querySelector('.two-contents')
+
+// function errorAlert() {
+//   // event.preventDefault()
+//   window.alert('Oops, please select a dish!')
+// }
+
 
 function returnRecipe(checkedSelection) {
   if (checkedSelection === 'side') {
@@ -124,6 +155,7 @@ function returnRecipe(checkedSelection) {
     displayMeal()
   }
 }
+
 
 function displayMeal() {
   recipeText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a

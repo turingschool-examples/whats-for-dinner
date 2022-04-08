@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
 
   <!-- NAVBAR -->
-    <header class="navbar">
+    <header class="navbar customizable">
   <!--    <div class="navbar-container"> -->
-        <h1 class="title" id="title">What's for Dinner?</h1>
+        <h1 class="title" id="welcome-message">What's for Dinner?</h1>
         <button class="button" id="header-button">ADD A RECIPE</button>
   <!--    </div> -->
     </header>
   <!-- END NAVBAR -->
 
-  <div class="main-container">
+  <div class="display-container customizable">
   <!-- USER INPUT FORM-->
-  <article class="main userInputForm">
+  <article class="display customizable" id="userInputForm">
     <h2>What are you looking for?</h2>
     <form id="userForm" input type="radio">
 
@@ -38,10 +38,10 @@
 
 
   <!-- RECIPE DISPlAY-->
-  <div class="main contain">
+  <div class="display customizable" id="recipeResultsContainer">
   <div id="results-string-container"></div>
-  <article class="recipeDisplayContainer" id="recipeDisplayContainer">
-    <img class="cookpot" id="cookpot" src="../cookpot.svg">
+  <article id="recipeDisplayContainer">
+    <img class="cookpot" id="cookpot" src="../assets/cookpot.svg">
   </article>
 </div>
 

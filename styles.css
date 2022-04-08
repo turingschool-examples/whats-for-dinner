@@ -74,10 +74,10 @@ span {
 
 .box {
   background-color: rgba(225, 225, 225, .9);
-  margin-bottom: 100px;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
-  width: 550px;
+  width: 38%;
   height: 65%;
 }
 
@@ -97,7 +97,7 @@ span {
 
 .lets-cook-button {
   background-color: #0fb9b1;
-  width: 250px;
+  width: 52%;
   margin-left: 0px;
   margin-top: 0px;
   padding-top: 20px;

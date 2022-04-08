@@ -1,10 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header>
+      <h1>What's for Dinner?</h1>
+      <button class="add-a-recipe-button">ADD A RECIPE</button>
+    </header>
+    <main class="box-wrapper">
+      <form class="selection-form-box">
+        <h2>What are you looking for? <span class="asterisk">*</span></h2>
+          <div><input type="radio" name="options" value="Side" id="side">
+          <label name="options" for="side">Side</label></div>
+          <div><input type="radio" name="options" value="Main Dish" id="main dish">
+          <label name="options" for="main dish">Main Dish</label></div>
+          <div><input type="radio" name="options" value="Dessert" id="dessert">
+          <label name="options" for="dessert">Dessert</label></div>
+          <div><input type="radio" name="options" value="Entire Meal" id="entire meal">
+          <label name="options" for="side">Entire Meal</label></div>
+          <button class="lets-cook-button">LET'S COOK!</button>
+      </form>
+      <section class="pot-box">
+        <img src= "assets/cookpot.svg" class="pot-image"></img>
+        <section class="dish-suggestion-hidden">
+          <h3 classYou should make:</h3>
+            <p></p>
+        </section>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -4,7 +4,177 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
-
+red - #ee5253 */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
+* {
+  font-family: 'Roboto', sans-serif;
+	color: black;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+	color: black;
+}
 
+
+body {
+  height: 100vh;
+  background-image: url("assets/burger-friends.jpg");
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0fb9b1;
+  height: 10%;
+  width: 100%;
+  background: #0fb9b1;
+}
+
+
+h1 {
+  /* display: flex; */
+  margin-left: 20px;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 23px;
+}
+
+.add-a-recipe-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  height: 50%;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5px;
+
+}
+.box-wrapper {
+  display: flex;
+	flex-direction: column;
+
+  flex-direction: row;
+  height: 90%;
+  justify-content: space-evenly;
+	padding: 50px;
+}
+
+
+.selection-form-box{
+	display: flex;
+  flex-direction: column;
+	justify-content: flex-start;
+	align-items: start;
+  background: rgba(225, 225, 225, .9);
+  text-align: left;
+  width: 475px;
+  height: 380px;
+  padding: 60px;
+  box-sizing: border-box;
+
+}
+
+ h2 {
+	display: flex;
+  /* flex-direction: column; */
+	align-items: flex-start;
+  font-family: 'Roboto', sans-serif;
+	padding: 7px;
+  font-size: 25px;
+	width: 100%;
+}
+
+span {
+	color: red;
+}
+
+div {
+	margin-top: 10px;
+	font-size: 18px;
+
+}
+
+.lets-cook-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0fb9b1;
+	padding: 14px;
+	font-family: 'Roboto', sans-serif;
+  color: black;
+	border-radius: 10px;
+	height: 15%;
+	width: 60%;
+	margin-top: 25px;
+}
+
+.pot-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  background: rgba(225, 225, 225, .9);
+  width: 475px;
+  height: 380px;
+  padding: 25px;
+  box-sizing: border-box;
+
+}
+
+.pot-image {
+  display: flex;
+	justify-content: center;
+	width: 160px;
+	height: 160px;
+
+}

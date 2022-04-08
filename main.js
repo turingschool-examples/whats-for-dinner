@@ -1,14 +1,14 @@
 //querySelectors
 var recipePickForm = document.querySelector('.recipe-item-form');
 var letsCookButton = document.querySelector('.lets-cook-button');
-var addARecipeButton = document.querySelector('.add-a-recipe');
+
 var menuItemChoice = document.getElementsByName('options');
 var displayRecipeItem = document.querySelector('.random-recipe');
 var presentRecipeText = document.querySelector('.recipe-intro');
 var cookPot = document.querySelector('.cookpot');
 //event listeners
 letsCookButton.addEventListener('click', letsCookInput);
-addARecipeButton.addEventListener('click', addARecipe);
+
 
 
 //global variables
@@ -86,6 +86,9 @@ function displayFullMeal() {
   displayRecipe(result);
 }
 
-function addARecipe(){
-
+function clearPanel() {
+  displayRecipeItem.classList.add('hidden');
+  presentRecipeText.classList.add('hidden');
+  cookPot.classList.remove('hidden');
+  displayRecipeItem.innerText = '';
 }

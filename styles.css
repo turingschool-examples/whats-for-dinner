@@ -86,6 +86,15 @@ span {
   height: 65%;
 }
 
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+  width: 15%;
+  height: 8%;
+  font-size: large;
+
+}
+
 .cookpot {
   width: 45%;
   height: 45%;

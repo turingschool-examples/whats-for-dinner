@@ -39,6 +39,7 @@ var mainDish = [
   "Tofu Potato Curry",
   "Lemon Seared Salmon",
 ];
+
 var menuOptions = {
   desserts: desserts,
   sides: sides,
@@ -48,7 +49,7 @@ var menuOptions = {
 // Build out own random function
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
-};
+}
 
 function letsCookInput(){
   event.preventDefault();
@@ -59,6 +60,8 @@ function letsCookInput(){
     var choice = menuItemChoice[i].value;
       }
       if(choice === "Entire Meal") {
+        displayRecipeItem.classList.remove('random-recipe');
+        displayRecipeItem.classList.add('random-recipe-smaller');
         displayFullMeal();
       }
     }
@@ -76,8 +79,8 @@ function displayRecipe(recipe) {
 
 function displayFullMeal() {
   var result = '';
-  result += `${mainDish[getRandomIndex(mainDish)]} with a side of `;
-  result += `${sides[getRandomIndex(sides)]} and `;
+  result += `${mainDish[getRandomIndex(mainDish)]} with a side `;
+  result += `of ${sides[getRandomIndex(sides)]} and `;
   result += `${desserts[getRandomIndex(desserts)]} for dessert`;
 
   displayRecipe(result);

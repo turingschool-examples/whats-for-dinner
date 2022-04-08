@@ -27,9 +27,14 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-evenly;
+
 }
 
 .box {
   justify-content: space-evenly;
-  
+
+}
+
+.cookpot {
+
 }

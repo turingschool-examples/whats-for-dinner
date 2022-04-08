@@ -2,6 +2,7 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
@@ -13,14 +14,14 @@
       </button>
     </header>
     <section>
-      <article>
+      <article class = 'dishes'>
         <h2>
           What are you looking for?<span>*</span>
         </h2>
         <form>
-          <input type="radio" name="radio-btn" value=1>Side</input><br>
-          <input type="radio" name="radio-btn" value=2>Main Dish</input><br>
-          <input type="radio" name="radio-btn" value=3>Dessert</input><br>
+          <input type="radio" name="radio-btn" value='sides'>Side</input><br>
+          <input type="radio" name="radio-btn" value='mainDishes'>Main Dish</input><br>
+          <input type="radio" name="radio-btn" value='desserts'>Dessert</input><br>
           <input type="radio" name="radio-btn">Entire Meal</input><br>
         </form>
         <button class="lets-cook">
@@ -30,6 +31,7 @@
       <article class = "cookpot-container">
 
           <img src='./assets/cookpot.svg' alt='pot image' class ='cook-pot' >
+          <div class = 'loader'></div>
 
       </article>
     </section>

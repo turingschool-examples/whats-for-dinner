@@ -49,27 +49,18 @@ var desserts = ['Apple Pie',
 //event listeners
 cookButton.addEventListener('click', randomFood )
 //event handlers
-var radios = document.getElementsByName('radio-btn')
 
 function randomFood(){
-  for (var i = 0; i<radios.length;i++)
-  if (radios[i].checked && radios[i].value==1 ){
+  var allFoods ={sides:sides,
+    mainDishes:mainDishes,
+    desserts:desserts};
 
-    var randomSide = sides[Math.floor(Math.random()*sides.length)]
-    showFoodArea.innerHTML= `<h4> You should make </h4>
-                              <h2>${randomSide}</h2>`
+  selectedBtn = document.querySelector('input[name="radio-btn"]:checked').value;
+  randomItem(allFoods[selectedBtn])
+}
 
-  }else if (radios[i].checked && radios[i].value==2){
-
-    var randomMain = mainDishes[Math.floor(Math.random()*mainDishes.length)]
-    showFoodArea.innerHTML= `<h4> You should make </h4>
-                              <h2>${randomMain}</h2>`
-
-}else if(radios[i].checked && radios[i].value==3){
-
-  var randomDessert = desserts[Math.floor(Math.random()*desserts.length)]
+function randomItem(food){
+  var randomItem = food[Math.floor(Math.random()*food.length)]
   showFoodArea.innerHTML= `<h4> You should make </h4>
-                            <h2>${randomDessert}</h2>`
-
-}
-}
+                            <h2>${randomItem}</h2>`
+  }

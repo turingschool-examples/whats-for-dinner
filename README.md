@@ -6,16 +6,18 @@ If this is a question that lingers in *YOUR* brain at the end of the night, then
 
 Please, visit my website: [What's For Dinner?](https://jfarelli.github.io/whats-for-dinner/)
 
-* Whether you need an idea for a **Side**, a **Main Dish**, a **Dessert**, or ALL OF THEM, just select what you need and hit that **"Get Cooking"** button!
+* Whether you need an idea for a **Side**, a **Main Dish**, a **Dessert**, or **ALL OF THEM**, just select what you need and hit that **"Get Cooking"** button!
 
-* That little stove pot on the right will disappear and be replaced with a random meal.
+* That little stove pot on the right will disappear and be replaced with a random meal!
 
 * Is that option not for you??? Just keep on hitting that **"Get Cooking" button and see which meal "tickles your fancy"!
 
-![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/what's for dinner_side.png)
+* BON APPETIT!!
 
-![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/what's for dinner_main.png)
+![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/what's%20for%20dinner_side.png)
 
-![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/what's for dinner_dessert.png)
+![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/what's%20for%20dinner_main.png)
 
-![Alt text](/Users/jordanfarelli/turing/whats-for-dinner/assets/What's for Dinner?.png)
+![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/what's%20for%20dinner_dessert.png)
+
+![Alt text](https://github.com/jfarelli/whats-for-dinner/blob/main/assets/What's%20for%20Dinner%3F.png)

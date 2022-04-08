@@ -39,6 +39,11 @@ margin-top: 100px;
   flex-direction: column;
 }
 
+#title {
+  display: flex;
+  margin-left: 50px;
+  font-size: 20px;
+}
 /*.input-field {
   display: flex;
   margin: 20px;
@@ -49,4 +54,5 @@ margin-top: 100px;
   flex-direction: row-reverse;
   align-items: center;
   margin: 10px;
+
 }

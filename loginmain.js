@@ -1,6 +1,6 @@
 let display = document.querySelector(".display");
 let username = document.getElementById("input0");
-let theme = document.getElementById("input1");
+let theme = document.getElementById("customizeTheme");
 let submitButton = document.getElementById("submit");
 
 //addEventListener('storage', function(e){

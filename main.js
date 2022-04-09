@@ -72,10 +72,6 @@ function letsCookInput(choice){
     displayRecipe(result);
   }
 
-function errorDisplay() {
-  required.classList.remove('hidden');
-}
-
 function displayRecipe(recipe) {
   displayRecipeItem.classList.remove('hidden');
   presentRecipeText.classList.remove('hidden');

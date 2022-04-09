@@ -6,6 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-image: url("assets/burger-friends.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 button {
@@ -18,9 +19,10 @@ button:hover {
   cursor: pointer;
 }
 
-.button.header {
-  margin-right: 50px;
+option:hover {
+  cursor: pointer;
 }
+
 
 
 .navbar {
@@ -37,15 +39,22 @@ button:hover {
 .box {
 display: flex;
 flex-direction: column;
+align-items: center;
 background-color: rgba(225, 225, 225, .9);
 padding: 100px 100px;
 margin-top: 250px;
 margin-bottom: 200px;
 }
 
-.login-form {
+.log-in-form {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown {
+  display: flex;
+  margin-bottom: 10px;
 }
 
 #title {
@@ -53,15 +62,11 @@ margin-bottom: 200px;
   margin-left: 50px;
   font-size: 20px;
 }
-/*.input-field {
-  display: flex;
-  margin: 20px;
-}*/
 
 .input {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 10px;
+  margin-bottom: 10px;
 
 }

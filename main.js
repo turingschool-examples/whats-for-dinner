@@ -6,8 +6,11 @@ var menuItemChoice = document.getElementsByName('options');
 var displayRecipeItem = document.querySelector('.random-recipe');
 var presentRecipeText = document.querySelector('.recipe-intro');
 var cookPot = document.querySelector('.cookpot');
+var clearButton = document.querySelector('.clear-button');
+var required = document.querySelector('.required');
 //event listeners
 letsCookButton.addEventListener('click', letsCookInput);
+clearButton.addEventListener('click', clearPanel);
 
 
 
@@ -53,15 +56,16 @@ function getRandomIndex(array) {
 
 function letsCookInput(){
   event.preventDefault();
-
   for (var i = 0; i < menuItemChoice.length; i++){
-
+    var choice = '';
     if (menuItemChoice[i].checked){
     var choice = menuItemChoice[i].value;
-      }
+    if (choice === '') {
+      errorDisplay();
+    }
+  }
+
       if(choice === "Entire Meal") {
-        displayRecipeItem.classList.remove('random-recipe');
-        displayRecipeItem.classList.add('random-recipe-smaller');
         displayFullMeal();
       }
     }
@@ -69,15 +73,23 @@ function letsCookInput(){
     displayRecipe(result);
   }
 
+function errorDisplay() {
+  required.classList.remove('hidden');
+}
+
 function displayRecipe(recipe) {
   displayRecipeItem.classList.remove('hidden');
   presentRecipeText.classList.remove('hidden');
   cookPot.classList.add('hidden');
+  clearButton.classList.remove('hidden');
 
   displayRecipeItem.innerText = recipe + '!';
 }
 
 function displayFullMeal() {
+  displayRecipeItem.classList.remove('random-recipe');
+  displayRecipeItem.classList.add('random-recipe-smaller');
+
   var result = '';
   result += `${mainDish[getRandomIndex(mainDish)]} with a side `;
   result += `of ${sides[getRandomIndex(sides)]} and `;
@@ -90,5 +102,6 @@ function clearPanel() {
   displayRecipeItem.classList.add('hidden');
   presentRecipeText.classList.add('hidden');
   cookPot.classList.remove('hidden');
+  clearButton.classList.add('hidden');
   displayRecipeItem.innerText = '';
 }

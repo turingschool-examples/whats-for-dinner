@@ -50,6 +50,11 @@ header {
   padding: 0;
 }
 
+.required {
+  color: red;
+  font-size: medium;
+}
+
 html {
   height: 100%;
 }
@@ -91,6 +96,9 @@ span {
   color: white;
   width: 15%;
   height: 8%;
+  position: relative;
+  left: 30%;
+  top: 17%;
   font-size: large;
 
 }

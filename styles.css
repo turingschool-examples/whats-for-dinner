@@ -8,7 +8,7 @@
 
 header {
   border: none;
-  background-color: teal;
+  background-color: #0fb9b1;
   display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -72,6 +72,10 @@ img {
 
 .image-box{
   align-items: center
+}
+
+.box image-button {
+  background-color: #0fb9b1;
 }
 
 /*

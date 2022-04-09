@@ -1,0 +1,170 @@
+
+
+/* COLORS
+teal - #0fb9b1;
+frosted white - rgba(225, 225, 225, .9);
+grey - #95a5a6;
+red - #ee5253;
+
+*/
+
+@font-face {
+	font-family: "cloud";
+	src: url("../assets/CottonCloud.ttf");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-image: url("../assets/burger-friends.jpg");
+  background-size: cover;
+	background-position: center top;
+}
+
+button {
+  display: flex;
+  padding: 10px;
+}
+
+/* ---- HEADER ---- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #0fb9b1;
+}
+
+.welcome-message {
+  display: flex;
+  margin-left: 50px;
+  font-size: 35px;
+}
+
+#header-button {
+  margin-right: 50px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ---- MAIN DISPLAY ---- */
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.display {
+  display: flex;
+  background-color: rgba(225, 225, 225, .9);
+  padding-right: 50px;
+  padding-left: 50px;
+	height: 400px;
+  width: 400px;
+	margin: 250px 100px 250px 100px;
+}
+
+/* ---- LEFT BOX ---- */
+
+#userInputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+/* ---- RIGHT BOX ---- */
+
+#recipeResultsContainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#recipeDisplayContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HOLDS INNERHTML */
+#results-string-container {
+  display: flex;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+/*    --------    */
+
+.dish-title {
+  display: flex;
+}
+
+.dishes {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-size: 25px;
+}
+
+#cookpot {
+  display: flex;
+  height: 300px;
+}
+
+/* THEMES */
+
+/* DREAMY */
+
+.body.dreamy {
+	background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__480.jpg");
+}
+
+.navbar.dreamy {
+  background-color: #D5F5E3;
+  border-bottom: 4px #ABEBC6 solid;
+  font-family: "cloud"
+}
+
+.display.dreamy {
+background-color: #FFF9FE;
+}
+
+/* LUNA */
+
+.body.luna {
+	background-image: url("https://media.istockphoto.com/photos/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-picture-id971578384?b=1&k=20&m=971578384&s=170667a&w=0&h=Rpn3K4UC9rKyFjYj4_zXr7eR57nEn2iS1GFcmXYs3iI=");
+}
+
+.navbar.luna {
+  background-color: #021631;
+  border-bottom: 4px #1F2B6A solid;
+  font-family: "cloud"
+}
+
+.welcome-message.luna {
+	color: white;
+}
+
+.display.luna {
+background-color: #FFF9FE;
+}
+/* Colors:
+
+Midnight Blue: #1F2B6A
+Very Dark Blue: #021631
+Off-White: #e5e5e5
+
+
+Backgrounds:
+
+Nighttime scene: https://ae01.alicdn.com/kf/HTB1SVI.SpXXXXaqXFXXq6xXFXXXO/7x5FT-Dark-Blue-Space-Clouds-Sky-Stars-Night-Time-Custom-Photo-Studio-Backdrop-Background-Banner-Vinyl.jpg_Q90.jpg_.webp
+Starry sky: https://cache.desktopnexus.com/thumbseg/1100/1100271-bigthumbnail.jpg
+Stars: https://media.istockphoto.com/photos/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-picture-id971578384?b=1&k=20&m=971578384&s=170667a&w=0&h=Rpn3K4UC9rKyFjYj4_zXr7eR57nEn2iS1GFcmXYs3iI=
+Best: https://wallpapercave.com/wp/wp3258574.png

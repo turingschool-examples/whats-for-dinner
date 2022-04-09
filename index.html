@@ -1,10 +1,41 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+    <!-- NAVBAR -->
+      <header class="navbar">
+    <!--    <div class="navbar-container"> -->
+          <h1 class="title" id="title">What's For Dinner?</h1>
+          <button class="button header" id="header-button">ADD A RECIPE</button>
+    <!--    </div> -->
+      </header>
+    <!-- END NAVBAR -->
+
+    <!-- FORM -->
+      <div class="box display">
+        <section class="log-in-form">
+          <div class="input"><input type="text" name="user-log-in" class="input-field" id="input0" value="">
+            <label for="name">Username: </label>
+          </div>
+    <!-- DROPDOWN MENU -->
+        <div class="dropdown">
+          <label for="customizeTheme">Choose a theme:</label>
+            <select name="customizeTheme" id="customizeTheme">
+              <option value="standard">Standard</option>
+              <option value="dreamy">Dreamy</option>
+              <option value="luna">Luna</option>
+            </select>
+        </div>
+    <!-- END DROPDOWN -->
+        </section>
+        <a href="./main/index.html"><button id="submit">Let's Go!</button></a>
+      </div>
+    <!-- END FORM -->
+
+</body>
+<script src="loginmain.js"></script>
 </html>

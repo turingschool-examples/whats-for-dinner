@@ -7,6 +7,7 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+
 * {
   /* border: 2px solid red; */
   font-family: 'Roboto', sans-serif;
@@ -179,4 +180,55 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media screen and (max-width: 480px) {
+  .wrapper { flex-direction: column;
+              margin-top: 20px;}
+
+  .box { width: 80%;
+        height: 45%;
+      }
+
+  .lets-cook-button {
+    width: 80%;
+    margin-top: 5px;
+    font-size: medium;
+}
+
+  label {
+    font-size: small;
+    height: 50px;
+    margin-top: -14px
+  }
+
+  form {
+      width: 75%;
+      height: 85%;
+  }
+
+.required {
+  font-size: small;
+  bottom: 79%
+}
+
+.prompt {
+  margin-top: 0px;
+  font-size: large;
+}
+.random-recipe {
+  margin-top: 0px;
+  font-size: x-large;
+
+}
+
+.random-recipe-smaller {
+  font-size: large;
+  margin-top: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.recipe-intro {
+  font-size: medium;
+  margin-top: 15%;
 }

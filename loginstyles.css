@@ -14,6 +14,14 @@ button {
   border-radius: 10px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+.button.header {
+  margin-right: 50px;
+}
+
 
 .navbar {
   display: flex;
@@ -31,7 +39,8 @@ display: flex;
 flex-direction: column;
 background-color: rgba(225, 225, 225, .9);
 padding: 100px 100px;
-margin-top: 100px;
+margin-top: 250px;
+margin-bottom: 200px;
 }
 
 .login-form {

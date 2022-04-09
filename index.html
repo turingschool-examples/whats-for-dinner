@@ -12,12 +12,14 @@
     </nav>
     <main>
       <form>
-        <h2>What are you looking for?</h2>
-        <input type="radio" name="food" value="Side"><label for="food">Side</label>
-        <input type="radio" name="food" value="Main Dish"><label for="food">Main Dish</label>
-        <input type="radio" name="food" value="Dessert"><label for="food">Dessert</label>
-        <input type="radio" name="food" value="Entire Meal"><label for="food">Entire Meal</label>
-        <button type="submit" class="cook">Let's Cook!</button>
+        <h2>What are you looking for?<span class="red-asterisk">*</span></h2>
+            <div>
+              <input type="radio" name="food" value="Side"/><label for="food">Side</label><br><br>
+              <input type="radio" name="food" value="Main Dish"/><label for="food">Main Dish</label><br><br>
+              <input type="radio" name="food" value="Dessert"/><label for="food">Dessert</label><br><br>
+              <input type="radio" name="food" value="Entire Meal"/><label for="food">Entire Meal</label><br><br>
+              <button type="submit" class="cook">Let's Cook!</button>
+            </div>
       </form>
       <section class="box">
         <img src="assets/cookpot.svg" class="cookpot"></img>

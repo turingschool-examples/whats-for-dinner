@@ -1,3 +1,4 @@
+
 /* font-family: 'Roboto', sans-serif;
 
 
@@ -14,6 +15,7 @@ red - #ee5253
 
 * {
   font-family: 'Roboto', sans-serif;
+  /* border: 2px solid red; */
 }
 
 
@@ -30,7 +32,6 @@ body {
 }
 
 h1 {
-  border: solid 1px black;
   padding: 10px;
 }
 
@@ -50,28 +51,8 @@ form {
   display: flex;
   flex-direction: column;
   background-color: rgba(225, 225, 225, .9);
-  width: 300px;
+  width: 400px;
   height: 312px;
-
-}
-
-
-input {
-  display: flex;
-}
-
-.add {
-  background-color: white;
-  font-size: 14px;
-  margin-left: auto;
-  padding: 11px;
-  justify-content: space-evenly;
-  border-radius: 2px;
-  height: 100%;
-  border: solid 1px red;
-}
-
-.cook {
 
 }
 
@@ -79,12 +60,69 @@ main {
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
+padding: 50px;
+}
 
+
+div {
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 5px;
+}
+
+h2 {
+  margin: 10px;
+}
+
+.add {
+  display: flex;
+  background-color: white;
+  font-size: 14px;
+  margin-left: auto;
+  padding: 15px;
+  border: 10px;
+  justify-content: space-evenly;
+  border-radius: 2px;
+  height: 100%;
+  border-radius: 10px
+
+}
+
+
+
+.red-asterisk {
+  color: red;
+}
+
+/* label[for="food"] {
+  display: flex;
+  margin-bottom: 2px;
+  margin-right: 1px;
+  align-items: baseline;
+} */
+
+.cook {
+  background-color: #0fb9b1 ;
+  border-radius: 10px;
+  margin: 10px;
+  width: 175px;
+  height: 30px;
+
+}
+
+.cookpot {
+  height: 100px;
+  width: 100px;
 }
 
 
 .box {
   background-color: rgba(225, 225, 225, .9);
-  width: 300px;
+  width: 400px;
   height: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

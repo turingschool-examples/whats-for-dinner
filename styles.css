@@ -67,7 +67,6 @@ input[name='food-option']{
   margin: 10px;
 }
 
-
 .box-one-content {
   display: flex;
   justify-content: center;
@@ -79,7 +78,7 @@ input[name='food-option']{
   height: 380px;
   margin-right: 70px;
   padding: 25px;
-  background: rgba(255,255,255, 0.7);
+  background: rgba(255,255,255, 0.9);
   border-radius: 10px 10px 10px 10px;
   display: flex;
   justify-content: center;
@@ -103,6 +102,11 @@ input[name='food-option']{
   font-size: 15px;
   border: solid;
   border-color: cornflowerblue;
+  display: none;
+}
+
+input[type='radio']:checked ~ * .cook-button {
+  display:block;
 }
 
 .two-contents {
@@ -120,7 +124,7 @@ font-size: 50px;
   height: 380px;
   margin-left: 70px;
   padding: 25px;
-  background: rgba(255,255,255, 0.7);
+  background: rgba(255,255,255, 0.9);
   border-radius: 10px 10px 10px 10px;
   display: flex;
   justify-content: center;
@@ -146,8 +150,6 @@ font-size: 50px;
   justify-content: flex-end;
   display: flex;
 }
-
-
 
 .white-boxes {
   display: flex;

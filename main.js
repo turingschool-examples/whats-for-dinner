@@ -107,22 +107,6 @@ cookButton.addEventListener('click', function() {
   assessValue();
 });
 
-// cookButton.disabled = true;
-
-// radioValues.addEventListener('change', enableButton);
-// var radioValues = document.querySelector('[name="food-option"]:checked').value;
-// function enableButton() {
-  // radioValues = document.querySelector('[name="food-option"]:checked').value;
-// }
-//
-// function enableButton() {
-//   if (radioButtons.value === '') {
-//     cookButton.disabled = true;
-//   } else {
-//     cookButton.disabled = false;
-//   }
-// }
-
 var radioButtons = document.getElementsByName('food-option');
 
 function assessValue() {
@@ -138,10 +122,6 @@ function assessValue() {
 
 var boxTwoContents = document.querySelector('.two-contents')
 
-// function errorAlert() {
-//   // event.preventDefault()
-//   window.alert('Oops, please select a dish!')
-// }
 
 
 function returnRecipe(checkedSelection) {

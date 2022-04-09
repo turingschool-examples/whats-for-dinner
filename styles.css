@@ -53,6 +53,7 @@ header {
 .required {
   color: red;
   font-size: medium;
+  position:fixed;
 }
 
 html {
@@ -144,7 +145,7 @@ span {
   width: 200px;
   height:25px;
   margin-left: 5px;
-  font-size: large;
+  font-size: x-large;
 }
 
 .prompt{

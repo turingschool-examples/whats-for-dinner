@@ -9,7 +9,7 @@ var cookPot = document.querySelector('.cookpot');
 var clearButton = document.querySelector('.clear-button');
 var required = document.querySelector('.required');
 //event listeners
-letsCookButton.addEventListener('click', letsCookInput);
+letsCookButton.addEventListener('click', check);
 clearButton.addEventListener('click', clearPanel);
 
 
@@ -54,21 +54,20 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function letsCookInput(){
-  event.preventDefault();
-  for (var i = 0; i < menuItemChoice.length; i++){
-    var choice = '';
-    if (menuItemChoice[i].checked){
-    var choice = menuItemChoice[i].value;
-    if (choice === '') {
-      errorDisplay();
+function check(){
+event.preventDefault();
+    for (var i = 0; i < menuItemChoice.length; i++) {
+         if (menuItemChoice[i].checked) {
+             letsCookInput(menuItemChoice[i].value);
+         }
     }
-  }
+    required.classList.remove('hidden');
+}
 
+function letsCookInput(choice){
       if(choice === "Entire Meal") {
         displayFullMeal();
       }
-    }
     var result = menuOptions[choice][getRandomIndex(menuOptions[choice])];
     displayRecipe(result);
   }

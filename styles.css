@@ -120,7 +120,7 @@ h1 {
   text-align: left;
   width: 475px;
   height: 380px;
-  padding: 60px;
+  padding: 90px;
   box-sizing: border-box;
 
 }
@@ -176,5 +176,15 @@ div {
 	justify-content: center;
 	width: 160px;
 	height: 160px;
+}
+h3 {
+  font-style: italic;
+}
 
+h4 {
+  font-size: 32px;
+
+}
+.hidden {
+  display: none!important;
 }

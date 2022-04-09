@@ -12,21 +12,21 @@
     <main class="box-wrapper">
       <form class="selection-form-box">
         <h2>What are you looking for? <span class="asterisk">*</span></h2>
-          <div><input type="radio" name="options" value="Side" id="side">
+          <div><input type="radio" class="side-option" name="options" value="side" id="side">
           <label name="options" for="side">Side</label></div>
-          <div><input type="radio" name="options" value="Main Dish" id="main dish">
+          <div><input type="radio" class="main-option" name="options" value="main-dish" id="main-dish">
           <label name="options" for="main dish">Main Dish</label></div>
-          <div><input type="radio" name="options" value="Dessert" id="dessert">
+          <div><input type="radio" class="dessert-option" name="options" value="dessert" id="dessert">
           <label name="options" for="dessert">Dessert</label></div>
-          <div><input type="radio" name="options" value="Entire Meal" id="entire meal">
-          <label name="options" for="side">Entire Meal</label></div>
+          <!-- <div><input type="radio" name="options" value="Entire Meal" id="entire meal">
+          <label name="options" for="side">Entire Meal</label></div> -->
           <button class="lets-cook-button">LET'S COOK!</button>
       </form>
       <section class="pot-box">
         <img src= "assets/cookpot.svg" class="pot-image"></img>
-        <section class="dish-suggestion-hidden">
-          <h3 classYou should make:</h3>
-            <p></p>
+        <section class="dish-suggestion-hidden hidden">
+          <h3 class="you-should-make">You should make:</h3>
+          <h4 class="generated-meals hidden"></h4>
         </section>
       </section>
     </main>

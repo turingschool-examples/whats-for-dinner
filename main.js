@@ -58,13 +58,17 @@ var dishKey = {
 //querySelectors
 var letsCookButton = document.querySelector(".lets-cook-button")
 var addRecipeButton = document.querySelector(".add-recipe-button")
+var clearButton = document.querySelector(".clear-button")
+var addRecipeButton = document.querySelector(".add-recipe-button")
+
 var crockpotBox = document.querySelector("#crockpot-box")
 var dishResultBox = document.querySelector("#dish-result-box")
 
 
 // Event Listeners
 letsCookButton.addEventListener('click', populateMealOutput)
-
+clearButton.addEventListener('click', clearMealSuggestion)
+addRecipeButton.addEventListener('click', addRecipe)
 
 // Functions & Event Handlers
 function getRandomIndex(array) {
@@ -91,17 +95,32 @@ function generateEntireMeal() {
   dishTag.innerText = `${randomMain} with a side of ${randomSide} and ${randomDessert} for dessert!`
 }
 
-function populateMealOutput() {
-  var dishKeyValue = document.querySelector('input[name="meal-category"]:checked').value
-  if (dishKeyValue === "entireMeal") {
-    generateEntireMeal()
-  } else {
-    generateSingleDish(dishKeyValue)
-  }
-  toggleCrockPotAndDish()
-}
-
 function toggleCrockPotAndDish() {
   crockpotBox.classList.toggle("hidden")
   dishResultBox.classList.toggle("hidden")
 }
+
+function populateMealOutput() {
+  var inputTag = document.querySelector('input[name="meal-category"]:checked')
+  if (inputTag === null) {
+    return alert("Please select an option")
+  } else if (inputTag.value === "entireMeal") {
+    generateEntireMeal()
+  } else {
+    generateSingleDish(inputTag.value)
+  }
+
+  if (dishResultBox.classList.contains("hidden")) {
+    toggleCrockPotAndDish()
+  }
+}
+
+// function clearMealSuggestion() {
+//   dishResultBox.clear(populateMealOutput())
+  // if (dishResultBox.classList.contains("hidden")
+  //toggleCrockPotAndDish()
+// }
+
+function addRecipe() {
+  addRecipeButton.innerText = "JUST KIDDING!"
+  }

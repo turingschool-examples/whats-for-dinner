@@ -1,10 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
   <body>
-    
+    <header>
+      <h1>What's for Dinner?</h1>
+    </header>
+    <main>
+        <section class="text-box">
+          <h2>What are you looking for?</h2><br>
+            <form class="form">
+              <input type="radio" value="side" name="food">
+              <label var="food" class="radioB">Side</label><br>
+              <input type="radio" value="main-dish" name="food">
+              <label var="food" class="radioB">Main Dish</label><br>
+              <input type="radio" value="dessert" name="food">
+              <label var="food" class="radioB">Dessert</label><br>
+              <input type="radio" value="entire-meal" name="food">
+              <label var="food" class="radioB">Entire Meal</label>
+            </form><br>
+            <button class ="lets-cook-button">LET'S COOK!</button>
+        </section>
+      <section class="image-box">
+        <img src="assets/cookpot.svg" alt="cookpot digital" />
+      </section>
+      <section class="you-should-make hidden">
+        <h2> You should make: </h2>
+        <p></p>
+      </section>
+    </main>
+    <footer>
+    </footer>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

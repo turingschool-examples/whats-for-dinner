@@ -1,21 +1,12 @@
-//query selectors go here 🤡
-//buttons
 var btnAdd = document.querySelector('.add');
 var btnSubmit = document.querySelector('.cook');
 var radioVal = document.querySelectorAll('input[type="radio"]');
 var pot = document.querySelector('.cookpot');
 var insertText = document.querySelector('.text-hidden');
-
-// var radioVal = document.getElementsByName('food');
 var boxImage = document.querySelector('.box');
-
-var theSide = document.querySelector('.generated-meals');
-
+var theSide = document.querySelector('.made-meals');
 
 
-//document.query each radio button
-// var sides = document.querySelector()
-// array list here
 
 var sidesArr = [
   "Miso Glazed Carrots",
@@ -68,42 +59,26 @@ var dessertsArr = [
 ];
 
 
-
-
-
-//event listeners go here 🤮
-// btnSubmit.addEventListener('click', getRandSide);
-
-
-
 btnSubmit.addEventListener('click', potHide);
-// btnSubmit.addEventListener('click', getFood);
-//functions go here
-// btnSubmit.addEventListener('click', console.log(radioVal));
 
-
-
-
-//Hide the page
 
 function getCheckedProperty() {
   var output = '';
 
   for (var i = 0; i < radioVal.length; i++) {
     if (radioVal[i].checked) {
-      console.log(radioVal[i].value);
       if (radioVal[i].value === 'Side') {
-          output = getRandSide()
-          getFood(output);
+        output = getRandSide();
       } else if (radioVal[i].value === 'Main Dish') {
-        output = getRandMain()
-        getFood(output);
+        output = getRandMain();
       } else if (radioVal[i].value === "Dessert") {
         output = getRandDessert();
-        getFood(output);
+      } else {
+        output = getRandMain() + " with a side of " + getRandSide() + " and " + getRandDessert() + " for dessert!";
       }
     }
   }
+  getFood(output);
 }
 
 function potHide() {
@@ -113,7 +88,6 @@ function potHide() {
   getCheckedProperty();
 }
 
-//randomize food functions
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -135,14 +109,8 @@ function getRandDessert() {
   return randDess;
 }
 
-
-
-//workable functions for buttons
-
 function getFood(btnSide) {
-  // var btnSide = getRandSide();
-  theSide.innerText = `${btnSide}`;
+  theSide.innerHTML = `You should make: <br>${btnSide}`;
   boxImage.classList.add('hidden');
   insertText.classList.remove('hidden');
-
 }

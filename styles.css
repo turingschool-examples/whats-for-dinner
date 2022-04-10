@@ -96,12 +96,6 @@ h2 {
   color: red;
 }
 
-/* label[for="food"] {
-  display: flex;
-  margin-bottom: 2px;
-  margin-right: 1px;
-  align-items: baseline;
-} */
 
 .cook {
   background-color: #0fb9b1 ;
@@ -139,4 +133,16 @@ h2 {
 
 .hidden {
   display: none!important;
+}
+
+
+.made-meals {
+  text-align: center;
+  font-size: 24px;
+  background-color: rgba(225, 225, 225, .9);
+  width: 400px;
+  height: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

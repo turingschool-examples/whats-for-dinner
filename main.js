@@ -1,10 +1,10 @@
 
 
-var recipeButton = document.querySelector('.recipe-button');
+var recipeButton = document.querySelector('.recipe-button')
 var form = document.getElementById('#form')
 
 
-// arrays
+
 var sides = [
 "Miso Glazed Carrots",
 "Coleslaw",
@@ -55,13 +55,21 @@ var desserts = [
 "Eclairs",
 ]
 
-var cookpotImage = document.querySelector('.cookpot-image');
+
+
+
+
+var cookpotImage = document.querySelector('.cookpot-image')
 var recipeText = document.querySelector('.recipe-text')
 var boxTwoView = document.querySelector('.box-two')
 var headerThree = document.querySelector('.header-two')
 
 
-// different views using hidden
+
+
+
+
+
 window.addEventListener('load', homeView)
 
 function homeView() {
@@ -72,7 +80,7 @@ function homeView() {
 }
 
 
-var cookButton = document.querySelector('.cook-button');
+var cookButton = document.querySelector('.cook-button')
 
 function showRecipe() {
   cookpotImage.classList.add('hidden')
@@ -81,7 +89,10 @@ function showRecipe() {
   clearButton.classList.remove('hidden')
 }
 
-// 'clear' event
+
+
+
+
 var clearButton = document.querySelector('.clear-button')
 
 clearButton.addEventListener('click', clearInput)
@@ -97,17 +108,17 @@ function clearInput() {
 }
 
 
-// radioButtons functionality
+
 
 
 
 cookButton.addEventListener('click', function() {
-  event.preventDefault();
-  showRecipe();
-  assessValue();
+  event.preventDefault()
+  showRecipe()
+  assessValue()
 });
 
-var radioButtons = document.getElementsByName('food-option');
+var radioButtons = document.getElementsByName('food-option')
 
 function assessValue() {
   for (var i = 0; i < radioButtons.length; i++) {
@@ -117,6 +128,7 @@ function assessValue() {
     }
     returnRecipe(checkedSelection)
   }
+
 
 
 
@@ -144,5 +156,5 @@ function displayMeal() {
 }
 
 function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+  return Math.floor(Math.random() * array.length)
 }

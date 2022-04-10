@@ -1,10 +1,148 @@
+
 /* font-family: 'Roboto', sans-serif;
 
+
+
 COLORS
-teal - #0fb9b1;
+teal - #0fb9b1; nav bar/lets cook button
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
 */
 
+
+
+* {
+  font-family: 'Roboto', sans-serif;
+  /* border: 2px solid red; */
+}
+
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url("assets/burger-friends.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  padding: 10px;
+}
+
+
+nav {
+  display: flex;
+  background-color: #0fb9b1;
+  width: auto;
+  justify-content: space-evenly;
+  border: solid 1px black;
+  text-align: center;
+  align-items: center;
+  border: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(225, 225, 225, .9);
+  width: 400px;
+  height: 312px;
+
+}
+
+main {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding: 50px;
+}
+
+
+div {
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 5px;
+}
+
+h2 {
+  margin: 10px;
+}
+
+.add {
+  display: flex;
+  background-color: white;
+  font-size: 14px;
+  margin-left: auto;
+  padding: 15px;
+  border: 10px;
+  justify-content: space-evenly;
+  border-radius: 2px;
+  height: 100%;
+  border-radius: 10px
+
+}
+
+
+
+.red-asterisk {
+  color: red;
+}
+
+
+.cook {
+  background-color: #0fb9b1 ;
+  border-radius: 10px;
+  margin: 10px;
+  width: 175px;
+  height: 30px;
+
+}
+
+.cookpot {
+  height: 100px;
+  width: 100px;
+}
+
+
+.box {
+  background-color: rgba(225, 225, 225, .9);
+  width: 400px;
+  height: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.text {
+  background-color: rgba(225, 225, 225, .9);
+  width: 400px;
+  height: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hidden {
+  display: none!important;
+}
+
+
+.made-meals {
+  text-align: center;
+  font-size: 24px;
+  background-color: rgba(225, 225, 225, .9);
+  width: 400px;
+  height: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

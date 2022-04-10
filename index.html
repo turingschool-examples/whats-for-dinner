@@ -2,9 +2,34 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    
-  </body>
+    <nav>
+      <h1>What's for dinner?</h1>
+        <button type="submit" class="add">ADD A RECIPE</button>
+    </nav>
+    <main>
+      <form>
+        <h2>What are you looking for?<span class="red-asterisk">*</span></h2>
+            <div>
+              <input type="radio" name="food" value="Side" id="Side"/><label for="food">Side</label><br><br>
+              <input type="radio" name="food" value="Main Dish" id="Main Dish"/><label for="food">Main Dish</label><br><br>
+              <input type="radio" name="food" value="Dessert" id="Dessert"/><label for="food">Dessert</label><br><br>
+              <input type="radio" name="food" value="Entire Meal"id= "Entire Meal"/><label for="food">Entire Meal</label><br><br>
+              <button type="submit" class="cook">Let's Cook!</button>
+            </div>
+      </form>
+      <section class="box">
+        <img src="assets/cookpot.svg" class="cookpot"></img>
+      </section>
+      <section class="text-hidden hidden box">
+        <h3 class="dish-suggestion-hidden"></h3>
+        <h4 class="made-meals"></h4>
+      </section>
+    </main>
   <script type="text/javascript" src="main.js"></script>
+  </body>
+
 </html>

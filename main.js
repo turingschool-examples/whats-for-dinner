@@ -5,7 +5,7 @@ var hiddenDishSuggestion = document.querySelector('.dish-suggestion-hidden');
 var sideRadioButton = document.querySelector('.side-option');
 var mainRadioButton = document.querySelector('.main-option');
 var dessertRadioButton = document.querySelector('.dessert-option');
-
+var entireMealRadioButton = document.querySelector('.entire-meal-option');
 
 var letsCookButton = document.querySelector('.lets-cook-button');
 
@@ -64,7 +64,7 @@ letsCookButton.addEventListener('click', displayMeal);
 sideRadioButton.addEventListener('click', randomizeSideDishes);
 mainRadioButton.addEventListener('click', randomizeMainDishes);
 dessertRadioButton.addEventListener('click', randomizeDesserts);
-
+entireMealRadioButton.addEventListener('click', randomizeEntireMeal);
 // functions and event handlers
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -95,6 +95,12 @@ function randomizeDesserts() {
   return makeContent(desserts)
 };
 
+function randomizeEntireMeal() {
+  randomizeSideDishes();
+  randomizeMainDishes();
+  randomizeDesserts();
+};
+
 function displayMeal() {
   var dishTypeSelection = document.querySelector('input[name="options"]:checked');
 
@@ -108,6 +114,8 @@ function displayMeal() {
     generatedMeals.innerText = randomMainReturn + '!';
   } else if (dishTypeSelection.value === "dessert") {
     generatedMeals.innerText = randomDessertReturn + '!';
+  } else if (dishTypeSelection.value === "entire-meal") {
+    generatedMeals.innerText = `${randomMainReturn} with a side of ${randomSideReturn} and ${randomDessertReturn} for dessert!`;
   }
   hideCookPot();
 

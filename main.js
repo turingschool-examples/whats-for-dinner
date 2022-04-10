@@ -1,17 +1,7 @@
 var letsCookButton = document.querySelector('.lets-cook-button');
 var radioButtons = document.querySelectorAll('input[name="food"]')
 
-// var radioButtons = document.querySelectorAll('input[name="food"]:checked')
-
-// var radioButtons = document.querySelectAll('.light');
-// var form = document.querySelector("form");
-// radioButtons.addEventListener()
-// letsCookButton.addEventListener('click', );
-
-// letsCookButton.addEventListener('click', );
-
 letsCookButton.addEventListener(event, findRadioValue)
-
 
 var sidesArray = [
 "Miso Glazed Carrots",
@@ -89,54 +79,3 @@ function findRadioValue() {
     }
   }
 }
-
-// function () {
-  //choose radio button
-
-  //click lets cook button
-  //randomize, and show
-  //then shows random array item
-  //then hide cookpot image
-// }
-
-// function findRadioValue() {
-//   for (i = 0; i < radioButtons.length; i++) {
-//     if (radioButtons[i].checked) {
-//     return radioButtons[i].value
-//     }
-//   }
-// }
-//
-// function getIrmaksDessert() {
-//   for (i = 0; i < radioButtons.length; i++) {
-//     if (radioButtons[i].value === 'dessert') {
-//       return `${getRandomDesserts()}`
-//     }
-//   }
-// }
-
-//if value is desserts i need to
-//run getrandomdesserts function
-
-// function getIrmaksDessert() {
-//   for (i = 0; i < radioButtons.length; i++) {
-//     if (radioButtons[i].value === 'dessert') {
-//       getRandomDesserts();
-//     }
-//   }
-// }
-
-// function showDish() {
-//   if () {
-//     return innerHTML = <h1>`${}`</h1>
-//   }
-// }
-//
-// function replacePot() {
-//   showDish.toggle(img);
-//   img.toggle(showDish);
-// }
-//
-// function preventDefault() {
-// event.preventDefault();
-// };

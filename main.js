@@ -2,9 +2,16 @@
 //buttons
 var btnAdd = document.querySelector('.add');
 var btnSubmit = document.querySelector('.cook');
-var radioVal = document.querySelector('input[name="food"]:checked');
+var radioVal = document.querySelectorAll('input[type="radio"]');
 var pot = document.querySelector('.cookpot');
-var insertText = document.querySelector('.text');
+var insertText = document.querySelector('.text-hidden');
+
+// var radioVal = document.getElementsByName('food');
+var boxImage = document.querySelector('.box');
+
+var theSide = document.querySelector('.generated-meals');
+
+
 
 //document.query each radio button
 // var sides = document.querySelector()
@@ -65,24 +72,48 @@ var dessertsArr = [
 
 
 //event listeners go here 🤮
-// btnAdd.addEventListener('click', randomFood)
+// btnSubmit.addEventListener('click', getRandSide);
+
+
 
 btnSubmit.addEventListener('click', potHide);
-
+// btnSubmit.addEventListener('click', getFood);
 //functions go here
+// btnSubmit.addEventListener('click', console.log(radioVal));
 
 
 
 
-//Really solid function to work with so here we are utilizing it again
+//Hide the page
+
+function getCheckedProperty() {
+  var output = '';
+
+  for (var i = 0; i < radioVal.length; i++) {
+    if (radioVal[i].checked) {
+      console.log(radioVal[i].value);
+      if (radioVal[i].value === 'Side') {
+          output = getRandSide()
+          getFood(output);
+      } else if (radioVal[i].value === 'Main Dish') {
+        output = getRandMain()
+        getFood(output);
+      } else if (radioVal[i].value === "Dessert") {
+        output = getRandDessert();
+        getFood(output);
+      }
+    }
+  }
+}
 
 function potHide() {
   event.preventDefault();
-  pot.classList.remove('hidden');
-  insertText.classList.add('hidden');
+  pot.classList.add('hidden');
+  insertText.classList.remove('hidden');
+  getCheckedProperty();
 }
 
-
+//randomize food functions
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -106,4 +137,12 @@ function getRandDessert() {
 
 
 
-//functions to randomize all the food
+//workable functions for buttons
+
+function getFood(btnSide) {
+  // var btnSide = getRandSide();
+  theSide.innerText = `${btnSide}`;
+  boxImage.classList.add('hidden');
+  insertText.classList.remove('hidden');
+
+}

@@ -115,11 +115,10 @@ function populateMealOutput() {
   }
 }
 
-// function clearMealSuggestion() {
-//   dishResultBox.clear(populateMealOutput())
-  // if (dishResultBox.classList.contains("hidden")
-  //toggleCrockPotAndDish()
-// }
+function clearMealSuggestion() {
+  dishTag.innerText = '';
+  toggleCrockPotAndDish()
+}
 
 function addRecipe() {
   addRecipeButton.innerText = "JUST KIDDING!"

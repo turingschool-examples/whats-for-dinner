@@ -1,6 +1,3 @@
-
-
-
 * {
   font-family: 'Roboto', sans-serif;
   /* border: solid 2px red; */
@@ -16,19 +13,6 @@ header {
 	align-items: flex-start;
 	align-content: flex-start;
   padding-left: 30px;
-
-
-}
-
-
-section  {
-  /* display: flex; */
-	/* flex-direction: row; */
-	/* flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-  border: red; */
 }
 
 body {
@@ -52,40 +36,55 @@ main {
   align-items: center;
 }
 
-.box {
+.text-box {
   background-color: rgba(225, 225, 225, .9);
-  height: 390px;
-  width: 490px;
+  height: 290px;
+  width: 390px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+
+.form {
+
+}
+
+.lets-cook-button {
+  background-color: #0fb9b1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px
+}
+
+.image-box {
+  background-color: rgba(225, 225, 225, .9);
+  height: 290px;
+  width: 390px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   /* margin: 10px 40px; */
   padding: 30px;
   justify-content: center;
-  font-size: 18px;
-}
-
-img {
-  height: 290px;
-  width: 290px;
 }
 
 .image-box{
   align-items: center
 }
 
-.box image-button {
-  background-color: #0fb9b1;
+img {
+  height: 190px;
+  width: 190px;
 }
 
-/*
-.display {
-  background-color: rgba(225, 225, 225, .9);
-  height: 390px;
-  width: 490px;
-  border-color: red;
-  display: flex;
-} */
+
+
+
+
+
 
 
 

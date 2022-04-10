@@ -1,10 +1,9 @@
-var letsCookButton = document.querySelector('.lets-cook-button');
+// var letsCookButton = document.querySelector('.lets-cook-button');
+//
+// var radioButtons = document.querySelectAll('.light');
 
-var radioButtons = document.querySelectAll('.light');
+// .addEventListener('click', );
 
-.addEventListener('click')
-
-var randomSides = sidesArray[Math.floor(math.random() * myArray.length)];
 
 var sidesArray = [
 "Miso Glazed Carrots",
@@ -56,6 +55,28 @@ var dessertsArray = [
 "Eclairs"
 ];
 
-var randomSides = sidesArray[Math.floor(math.random() * myArray.length)];
-var randomMains = mainsArray[Math.floor(math.random() * myArray.length)];
-var randomSides = dessertsArray[Math.floor(math.random() * myArray.length)];
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function getRandomSides() {
+  var randomSides = sidesArray[getRandomIndex(sidesArray)];
+  return randomSides;
+}
+
+function getRandomMains() {
+  var randomMains = mainsArray[getRandomIndex(mainsArray)];
+  return randomMains;
+}
+
+function getRandomDesserts() {
+var randomDesserts = dessertsArray[getRandomIndex(dessertsArray)];
+  return randomDesserts;
+}
+
+// var randomSides = sidesArray[Math.floor(math.random() * myArray.length)];
+// var randomMains = mainsArray[Math.floor(math.random() * myArray.length)];
+// var randomSides = dessertsArray[Math.floor(math.random() * myArray.length)];
+
+// function showDish =

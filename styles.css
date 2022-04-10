@@ -1,10 +1,171 @@
-/* font-family: 'Roboto', sans-serif;
 
-COLORS
-teal - #0fb9b1;
+/* COLORS */
+/* teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('./assets/burger-friends.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
 
+.title {
+  margin-left: 30px;
+}
+
+.nav {
+  background-color: #0fb9b1;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-recipe-button {
+  padding: 0;
+  margin-right: 30px;
+  width: 125px;
+  height: 40px;
+  background-color: #EFEFEF;
+  border-radius: 5px;
+}
+
+.main {
+  width: 80%;
+  margin-top: 50px;
+  /* border: solid 2px red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box1-content {
+  font-size: 20px;
+  /* border: 2px solid blue; */
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.box1-title {
+  margin: 0;
+  padding: 0;
+}
+
+.lets-cook-button {
+  padding: 0;
+  width: 190px;
+  height: 40px;
+  background-color: #0fb9b1;
+  border-radius: 5px;
+}
+
+.red {
+  color: red;
+}
+.box1 {
+  background-color: rgba(225, 225, 225, .8);
+  /* border: solid 2px black; */
+  width: 480px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  background-color: rgba(225, 225, 225, .8);
+  width: 480px;
+  height: 380px;
+}
+
+.hidden {
+  display: none!important;
+}
+
+#crockpot-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dish-result-box {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  Justify-content: space-between;
+  align-items: center;
+}
+
+.suggestion {
+  font-size: 20px;
+  font-style: italic;
+  margin: 0;
+}
+
+#dish-name {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.crockpot {
+  height: 200px;
+  width: 150px;
+}
+
+.dish-container {
+  /* border: 2px solid purple; */
+  width: 300px;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  Justify-content: center;
+  align-items: center;
+}
+
+.clear-button-container {
+  /* border: 2px solid red; */
+  margin: 0;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.clear-button {
+  color: white;
+  background-color: #95A5A6;
+  border: 0px solid #95A5A6;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  height: 40px;
+
+}
+
+.inputs {
+  /* border: 2px solid pink; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  }

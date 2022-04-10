@@ -1,10 +1,51 @@
-<html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's For Dinner?</title>
   </head>
   <body>
-    
+    <section class="nav">
+      <h1 class="title">What's For Dinner?</h1>
+      <button class="add-recipe-button">ADD A RECIPE!</button>
+    </section>
+    <section class="main">
+      <section class="box1">
+        <section class="box1-content">
+          <h1 class="box1-title">What are you looking for?<span class="red">*</span></h1>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="side" value="sides">
+            <label for="side">Side</label>
+          </div>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="main-dish" value="mains">
+            <label for="side">Main Dish</label>
+          </div>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="dessert" value="desserts">
+            <label for="side">Dessert</label>
+          </div>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="entire-meal" value="entireMeal">
+            <label for="side">Entire Meal</label>
+          </div>
+          <button class="lets-cook-button">LET'S COOK!</button>
+        </section>
+      </section>
+      <section class="box2" id="crockpot-box">
+        <img class="crockpot" src="assets/cookpot.svg">
+      </section>
+      <section class="box2 hidden" id="dish-result-box">
+        <div class="dish-container">
+          <p class="suggestion">You should make:</p>
+          <h1 id="dish-name"></h1>
+        </div>
+        <div class="clear-button-container">
+          <button class="clear-button">CLEAR</button>
+        </div>
+      </section>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

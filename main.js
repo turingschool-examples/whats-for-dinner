@@ -1,8 +1,12 @@
-// var letsCookButton = document.querySelector('.lets-cook-button');
-//
-// var radioButtons = document.querySelectAll('.light');
+var letsCookButton = document.querySelector('.lets-cook-button');
+var radioButtons = document.querySelectorAll('input[name="food"]')
 
-// .addEventListener('click', );
+// var radioButtons = document.querySelectAll('.light');
+// var form = document.querySelector("form");
+// radioButtons.addEventListener()
+// letsCookButton.addEventListener('click', );
+
+form.addEventListener('click', );
 
 
 var sidesArray = [
@@ -75,8 +79,27 @@ var randomDesserts = dessertsArray[getRandomIndex(dessertsArray)];
   return randomDesserts;
 }
 
-// var randomSides = sidesArray[Math.floor(math.random() * myArray.length)];
-// var randomMains = mainsArray[Math.floor(math.random() * myArray.length)];
-// var randomSides = dessertsArray[Math.floor(math.random() * myArray.length)];
+function loopRadio() {
+  for (i = 0; i < form.length; i++) {
+    if (form[i].checked) {
+    return form[i].value
+    }
+  }
+}
 
-// function showDish =
+function
+
+function showDish() {
+  if () {
+    return innerHTML = <h1>`${}`</h1>
+  }
+}
+
+function replacePot() {
+  showDish.toggle(img);
+  img.toggle(showDish);
+}
+
+function preventDefault() {
+event.preventDefault();
+};

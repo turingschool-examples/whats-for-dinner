@@ -1,13 +1,16 @@
 //query selectors go here 🤡
+//buttons
+var btnAdd = document.querySelector('.add');
+var btnSubmit = document.querySelector('.cook');
+var radioVal = document.querySelector('input[name="food"]:checked');
+var pot = document.querySelector('.cookpot');
+var insertText = document.querySelector('.text');
 
-
-
-
-
-
+//document.query each radio button
+// var sides = document.querySelector()
 // array list here
 
-var sides = [
+var sidesArr = [
   "Miso Glazed Carrots",
  "Coleslaw",
  "Garden Salad",
@@ -20,7 +23,7 @@ var sides = [
  "Hush Puppies"
 ];
 
-var mains = [
+var mainsArr = [
 "Spaghetti and Meatballs",
 "Pineapple Chicken",
 "Shakshuka",
@@ -36,7 +39,7 @@ var mains = [
 "Margarita Pizza"
 ];
 
-var desserts = [
+var dessertsArr = [
   "Apple Pie",
   "Lemon Meringue Pie",
   "Black Forest Cake",
@@ -62,14 +65,45 @@ var desserts = [
 
 
 //event listeners go here 🤮
+// btnAdd.addEventListener('click', randomFood)
 
-
-
-
-
-
-
-
-
+btnSubmit.addEventListener('click', potHide);
 
 //functions go here
+
+
+
+
+//Really solid function to work with so here we are utilizing it again
+
+function potHide() {
+  event.preventDefault();
+  pot.classList.remove('hidden');
+  insertText.classList.add('hidden');
+}
+
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+
+function getRandSide() {
+  var randSide = sidesArr[getRandomIndex(sidesArr)];
+  return randSide;
+}
+
+function getRandMain() {
+  var randMain = mainsArr[getRandomIndex(mainsArr)];
+  return randMain;
+}
+
+function getRandDessert() {
+  var randDess = dessertsArr[getRandomIndex(dessertsArr)];
+  return randDess;
+}
+
+
+
+//functions to randomize all the food

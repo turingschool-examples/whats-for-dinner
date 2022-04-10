@@ -126,3 +126,17 @@ h2 {
   align-items: center;
   justify-content: space-around;
 }
+
+
+.text {
+  background-color: rgba(225, 225, 225, .9);
+  width: 400px;
+  height: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hidden {
+  display: none!important;
+}

@@ -11,22 +11,35 @@
       <button class="add-recipe-button">ADD A RECIPE!</button>
     </section>
     <section class="main">
-      <div class="box1">
-        <h1 class="box1-title">What are you looking for?</h1>
-      <section class="radio-buttons">
-        <input class="radio" type="radio" name="meal-category" id="side" value="side">
-          <label for="side">Side</label>
-        <input class="radio" type="radio" name="meal-category" id="main-dish" value="mainDish">
-          <label for="side">Main Dish</label>
-        <input class="radio" type="radio" name="meal-category" id="dessert" value="dessert">
-          <label for="side">Dessert</label>
-        <input class="radio" type="radio" name="meal-category" id="entire-meal" value="entireMeal">
-          <label for="side">EntireMeal</label>
-        <button class="lets-cook-button">LET'S COOK!</button>
-      </div>
-      <div class="box2">
+      <section class="box1">
+        <section class="box1-content">
+          <h1 class="box1-title">What are you looking for?<span class="red">*</span></h1>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="side" value="sides">
+            <label for="side">Side</label>
+          </div>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="main-dish" value="mains">
+            <label for="side">Main Dish</label>
+          </div>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="dessert" value="desserts">
+            <label for="side">Dessert</label>
+          </div>
+          <div class="inputs">
+            <input class="radio" type="radio" name="meal-category" id="entire-meal" value="entireMeal">
+            <label for="side">Entire Meal</label>
+          </div>
+          <button class="lets-cook-button">LET'S COOK!</button>
+        </section>
+      </section>
+      <section class="box2" id="crockpot-box">
         <img class="crockpot" src="assets/cookpot.svg">
-      </div>
+      </section>
+      <section class="box2 hidden" id="dish-result-box">
+        <p class="suggestion">You should make:</p>
+        <h1 id="dish-name"></h1>
+      </section>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>

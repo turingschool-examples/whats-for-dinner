@@ -1,18 +1,16 @@
 //querySelectors
 var recipePickForm = document.querySelector('.recipe-item-form');
 var letsCookButton = document.querySelector('.lets-cook-button');
-
 var menuItemChoice = document.getElementsByName('options');
 var displayRecipeItem = document.querySelector('.random-recipe');
 var presentRecipeText = document.querySelector('.recipe-intro');
 var cookPot = document.querySelector('.cookpot');
 var clearButton = document.querySelector('.clear-button');
 var required = document.querySelector('.required');
+
 //event listeners
 letsCookButton.addEventListener('click', check);
 clearButton.addEventListener('click', clearPanel);
-
-
 
 //global variables
 var desserts = [
@@ -46,23 +44,24 @@ var mainDish = [
 var menuOptions = {
   desserts: desserts,
   sides: sides,
-  mainDish: mainDish};
+  mainDish: mainDish
+};
 
 //functions
-// Build out own random function
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 function check(){
-event.preventDefault();
+  event.preventDefault();
     for (var i = 0; i < menuItemChoice.length; i++) {
          if (menuItemChoice[i].checked) {
-             letsCookInput(menuItemChoice[i].value);
+              menuItemChoice[i].checked = false;
+              return letsCookInput(menuItemChoice[i].value);
          }
-    }
-    required.classList.remove('hidden');
-}
+       }
+       required.classList.remove('hidden');
+     }
 
 function letsCookInput(choice){
       if(choice === "Entire Meal") {
@@ -72,7 +71,9 @@ function letsCookInput(choice){
     displayRecipe(result);
   }
 
+
 function displayRecipe(recipe) {
+  required.classList.add('hidden')
   displayRecipeItem.classList.remove('hidden');
   presentRecipeText.classList.remove('hidden');
   cookPot.classList.add('hidden');

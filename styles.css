@@ -7,7 +7,7 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-@media screen and (max-width: 2200px) {
+@media (max-width: 2200px) {
   * {
     /* border: 2px solid red; */
     font-family: 'Roboto', sans-serif;
@@ -182,7 +182,7 @@ red - #ee5253
     justify-content: space-around;
   }
 }
-@media screen and (max-width: 1980px) {
+@media (max-width: 1980px) {
   * {
     /* border: 2px solid red; */
     font-family: 'Roboto', sans-serif;
@@ -357,7 +357,7 @@ red - #ee5253
     justify-content: space-around;
   }
 }
-@media screen and (max-width: 820px) {
+@media (max-width: 820px) {
 
   .clear-button {
     width: 17%;
@@ -423,7 +423,7 @@ red - #ee5253
 
 
   }
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 
   .clear-button {
     width: 20%;

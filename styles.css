@@ -8,3 +8,41 @@ red - #ee5253
 
 */
 
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: contain;
+}
+
+.box-1 {
+  background-color: rgba(225, 225, 225, .9);
+  opacity: 0.9;
+  margin: 450px;
+}
+
+.box-2 {
+    background-color: rgba(225, 225, 225, .9);
+    opacity: 0.9;
+    margin: 450px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-1 {
+  background-color: #0fb9b1;
+  display: flex;
+  flex-direction: row;
+  margin: 15px 20px 15px 50px;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.add-button {
+  margin-left: 650px;
+  padding: 20px;
+  margin-block: 10px;
+}

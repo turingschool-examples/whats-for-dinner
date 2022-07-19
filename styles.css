@@ -41,18 +41,50 @@ header {
   border-radius: 5px;
 }
 
+.letsCookButton {
+  /* align-self: center; */
+  background-color: #0fb9b1;
+  border-style: none;
+  border-radius: 5px;
+  /* margin: auto; */
+}
+
 /* ****** */
 
+main {
+  border: 4px solid blue;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .userInputContainer {
-  background-color: white;
+  background-color: rgba(225, 225, 225, .9);
+  opacity: 0.95;
+  width: 450px;
+  height: 350px;
+  margin: 50px 0px 50px 0px;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
 }
 
 .suggestionsContainer {
-  background-color: white;
-  margin-top: 10px;
+  background-color: rgba(225, 225, 225, .9);
+  opacity: 0.95;
+  width: 450px;
+  height: 350px;
+  margin: 50px 0px 50px 0px;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
+.cookpotImgContainer {
+  height: 100px;
+  width: 100px;
+  border: 2px solid purple;
+}
 
 /* you'll want a container surrounding your two cards
 or boxes that have the form and the pot picture! */

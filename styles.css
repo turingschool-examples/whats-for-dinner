@@ -8,3 +8,41 @@ red - #ee5253
 
 */
 
+html { /*html > body element, bc it is always at least the height of the browser window*/
+  background: url(assets/burger-friends.jpg);
+  background-attachment: fixed;
+  /* fixed, bc the initial value is scroll, and we want the image fixed!*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /* no-repeat, bc background-repeat's initial value is repeat */
+  background-size: cover;
+  /* specifices size of the background image, the cover value,
+  "scales the image (while preserving its ratio) to the smallest
+  possible size to fill the container (that is: both its height
+  and width completely cover the container), leaving no empty space" */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+header {
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.wrapper {
+  background-color: white;
+  borderL solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justifty-content: space-evenly;
+  align-items: center;
+}

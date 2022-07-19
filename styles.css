@@ -48,20 +48,18 @@ header {
   margin-top: 5px;
 }
 
-/* ****** */
-
 main {
-  border: 4px solid blue;
+  /* border: 4px solid blue; */
   display: flex;
   justify-content: space-evenly;
 }
 
 .userInputContainer {
+  /* border: 2px solid red; */
   background-color: rgba(225, 225, 225, .9);
   width: 450px;
   height: 350px;
   margin: 50px 0px 50px 0px;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,9 +67,9 @@ main {
 }
 
 .interfaceContainer {
+  /* border: 2px solid purple; */
   width: 350px;
   height: 275px;
-  border: 2px solid purple;
 }
 
 .questionContainer {
@@ -79,11 +77,11 @@ main {
 }
 
 .lookingForContainer {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .astericksContainer {
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
   height: 25px;
   width: 25px;
   display: flex;
@@ -93,28 +91,28 @@ main {
 
 .astericks {
   color: red;
-  margin-top: 50px;
-  margin-right: 20px;
+  margin-top: 45px;
+  margin-right: 18px;
 }
 
 .radioButton {
-  border: 2px solid orange;
-  margin-bottom: 10px;
+  /* border: 2px solid orange; */
+  margin-bottom: 15px;
 }
 
 .suggestionsContainer {
+  /* border: 2px solid red; */
   background-color: rgba(225, 225, 225, .9);
   width: 450px;
   height: 350px;
   margin: 50px 0px 50px 0px;
-  border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .cookpotImgContainer {
+  /* border: 2px solid purple; */
   height: 100px;
   width: 100px;
-  border: 2px solid purple;
 }

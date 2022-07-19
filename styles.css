@@ -8,3 +8,111 @@ red - #ee5253
 
 */
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(assets/burger-friends.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #0fb9b1;
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.addRecipeButton {
+  align-self: center;
+  background-color: rgba(225, 225, 225);
+  padding: 10px 10px 10px 10px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.letsCookButton {
+  background-color: #0fb9b1;
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px 50px 10px 50px;
+  margin-top: 5px;
+}
+
+main {
+  /* border: 4px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.userInputContainer {
+  /* border: 2px solid red; */
+  background-color: rgba(225, 225, 225, .9);
+  width: 450px;
+  height: 350px;
+  margin: 50px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.interfaceContainer {
+  /* border: 2px solid purple; */
+  width: 350px;
+  height: 275px;
+}
+
+.questionContainer {
+  display: flex;
+}
+
+.lookingForContainer {
+  /* border: 2px solid blue; */
+}
+
+.astericksContainer {
+  /* border: 2px solid pink; */
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.astericks {
+  color: red;
+  margin-top: 45px;
+  margin-right: 18px;
+}
+
+.radioButton {
+  /* border: 2px solid orange; */
+  margin-bottom: 15px;
+}
+
+.suggestionsContainer {
+  /* border: 2px solid red; */
+  background-color: rgba(225, 225, 225, .9);
+  width: 450px;
+  height: 350px;
+  margin: 50px 0px 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookpotImgContainer {
+  /* border: 2px solid purple; */
+  height: 100px;
+  width: 100px;
+}

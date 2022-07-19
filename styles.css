@@ -40,14 +40,6 @@ header {
   border-radius: 5px;
 }
 
-.letsCookButton {
-  background-color: #0fb9b1;
-  border-style: none;
-  border-radius: 5px;
-  padding: 10px 50px 10px 50px;
-  margin-top: 5px;
-}
-
 main {
   /* border: 4px solid blue; */
   display: flex;
@@ -98,6 +90,14 @@ main {
 .radioButton {
   /* border: 2px solid orange; */
   margin-bottom: 15px;
+}
+
+.letsCookButton {
+  background-color: #0fb9b1;
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px 50px 10px 50px;
+  margin-top: 5px;
 }
 
 .suggestionsContainer {

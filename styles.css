@@ -8,22 +8,77 @@ red - #ee5253
 
 */
 
-html { /*html > body element, bc it is always at least the height of the browser window*/
-  background: url(assets/burger-friends.jpg);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(assets/burger-friends.jpg);
   background-attachment: fixed;
-  /* fixed, bc the initial value is scroll, and we want the image fixed!*/
   background-position: center;
   background-repeat: no-repeat;
-  /* no-repeat, bc background-repeat's initial value is repeat */
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #0fb9b1;
+  margin-top: -10px;
+  margin-right: -10px;
+  margin-left: -10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.addRecipeButton {
+  align-self: center;
+  background-color: rgba(225, 225, 225, .9);
+  /* font-family: 'Roboto', sans-serif; */
+  padding: 10px 10px 10px 10px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+/* ****** */
+
+.userInputContainer {
+  background-color: white;
+}
+
+.suggestionsContainer {
+  background-color: white;
+  margin-top: 10px;
+}
+
+
+
+/* you'll want a container surrounding your two cards
+or boxes that have the form and the pot picture! */
+
+
+
+/* //////// */
+
+/* html { /*html > body element, bc it is always at least the height of the browser window*/
+  /* background: url(assets/burger-friends.jpg);
+  background-attachment: fixed;
+  /* fixed, bc the initial value is scroll, and we want the image fixed!*/
+  /* background-position: center;
+  background-repeat: no-repeat;
+  /* no-repeat, bc background-repeat's initial value is repeat */
+  /* background-size: cover;
   /* specifices size of the background image, the cover value,
   "scales the image (while preserving its ratio) to the smallest
   possible size to fill the container (that is: both its height
   and width completely cover the container), leaving no empty space" */
-}
+/* }
+
+/*
 
 body {
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -46,3 +101,5 @@ header {
   justifty-content: space-evenly;
   align-items: center;
 }
+
+*/

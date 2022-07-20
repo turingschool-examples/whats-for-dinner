@@ -42,7 +42,6 @@ article {
   display: flex;
 }
 
-
 article button {
   background-color: #0fb9b1;
   border: none;
@@ -52,6 +51,10 @@ article button {
 }
 
 .cookpot {
-  justify-content: space-around;
+  position: relative;
+  left: 35%;
+  /* top: 1%; */
+  justify-content: center;
+  /* align-items: center; */
   width: 25%;
 }

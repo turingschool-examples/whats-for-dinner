@@ -32,12 +32,21 @@ header {
   padding-right: 30px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .addRecipeButton {
   align-self: center;
   background-color: rgba(225, 225, 225);
   padding: 10px 10px 10px 10px;
   border-style: none;
   border-radius: 5px;
+  transition: 0.5s;
+}
+
+.addRecipeButton:hover{
+  background-color: #c7c5c5;
 }
 
 main {
@@ -98,6 +107,11 @@ main {
   border-radius: 5px;
   padding: 10px 50px 10px 50px;
   margin-top: 5px;
+  transition: 0.5s;
+}
+
+.letsCookButton:hover {
+  background-color: #0fa8a1;
 }
 
 .suggestionsContainer {

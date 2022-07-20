@@ -22,37 +22,45 @@ var suggestionsSection = document.querySelector('.suggestionsContainer');
 window.addEventListener('load', displayCookpot);
 letsCookButton.addEventListener('click', displaySuggestion);
 
-
 // Display functions
-
 function displayCookpot() {
   suggestionsSection.innerHTML += `
   <div class="cookpotImgContainer">
     <img src="assets/cookpot.svg">
   </div>
   `
-}
-
-//
+};
 
 function displaySuggestion() {
   suggestionsSection.innerHTML = '';
-  var newSide = sides[getRandomIndex(sides)];
-  var newMain = mains[getRandomIndex(mains)];
-  var newDessert = desserts[getRandomIndex(desserts)];
   var userSelectedDish = document.querySelector('input[name="dish"]:checked').value;
   if (userSelectedDish === 'side') {
-    // grab a random index of the sides array and display it on the page;
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 class="foodSuggestion">${newSide}</h1>
+      <h1 class="foodSuggestion">${sides[getRandomIndex(sides)]}</h1>
     </div>
     `
   }
-  console.log('this function ran');
-}
+  else if (userSelectedDish === 'main') {
+    suggestionsSection.innerHTML += `
+    <div class="suggestion">
+      <p class="youShouldMake">You should make:</p>
+      <h1 class="foodSuggestion">${mains[getRandomIndex(mains)]}</h1>
+    </div>
+    `
+  }
+  else if (userSelectedDish === 'dessert') {
+    suggestionsSection.innerHTML += `
+    <div class="suggestion">
+      <p class="youShouldMake">You should make:</p>
+      <h1 class="foodSuggestion">${desserts[getRandomIndex(desserts)]}</h1>
+    </div>
+    `
+  }
+};
 
+// Nondisplay functions 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }

@@ -130,3 +130,27 @@ main {
   height: 100px;
   width: 100px;
 }
+
+.suggestion {
+  /* border: 2px solid red; */
+  display: flex column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.youShouldMake {
+  /* border: 2px solid purple; */
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.foodSuggestion {
+  /* border: 2px solid blue; */
+  font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

@@ -58,6 +58,16 @@ function displaySuggestion() {
     </div>
     `
   }
+  else {
+    suggestionsSection.innerHTML += `
+    <div class="suggestion">
+      <p class="youShouldMake">You should make:</p>
+      <h1>${mains[getRandomIndex(mains)]} with
+      a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}
+      for dessert!</h1>
+    </div>
+    `
+  }
 };
 
 // Nondisplay functions

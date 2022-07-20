@@ -42,19 +42,34 @@ article {
   display: flex;
 }
 
-article button {
+article section {
+  flex-direction: row;
+  width: 375px;
+  height: 200px;
+  margin: 100px 50px;
+}
+
+label {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.required:after {
+  content: "*";
+  color: #ee5253;
+}
+
+.lets-cook {
   background-color: #0fb9b1;
   border: none;
-  border-radius: 5px;
-  padding: 5px 50px 5px 50px;
-  margin: 300px 150px 60px 30px;
+  border-radius: 3px;
+  padding: 8px 53px 8px 53px;
 }
 
 .cookpot {
   position: relative;
   left: 35%;
-  /* top: 1%; */
   justify-content: center;
-  /* align-items: center; */
   width: 25%;
 }

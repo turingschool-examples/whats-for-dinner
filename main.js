@@ -60,7 +60,7 @@ function displaySuggestion() {
   }
 };
 
-// Nondisplay functions 
+// Nondisplay functions
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }

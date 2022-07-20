@@ -11,6 +11,7 @@ red - #ee5253
 body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: contain;
+  font-family: 'Roboto', sans-serif;
 }
 
 .box-1 {
@@ -34,15 +35,19 @@ img {
   background-color: #0fb9b1;
   display: flex;
   flex-direction: row;
-  margin: 15px 20px 15px 50px;
+  margin: -10px;
 }
 
-h1 {
-  padding: 20px;
+h2 {
+  padding: 15px;
+  margin: 5px;
+  width: 210px;
 }
 
-.add-button {
-  margin-left: 650px;
-  padding: 20px;
-  margin-block: 10px;
+#add-recipe-button {
+
+  border-radius: 8px;
+  text-align: center;
+  height: 40px;
+  border: 0;
 }

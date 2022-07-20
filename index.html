@@ -1,10 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <title>What's for Dinner?</title>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header>
+      <div class="teal-nav-bar">
+        <h1 id="corner-title" class="left-corner-title">What's for Dinner?</h1>
+        <button id="corner-add-button" class="corner-button">ADD A RECIPE</button>
+      </div>
+    </header>
+    <main id="main-page" class="main-page-area">
+      <section id="q-and-a" class="input-output">
+          <div id="input-box" class="input-box">
+            <h2 id="main-question" class="main-question">What are you looking for?</h2>
+            <form id="choices" class ="choices" method="get">
+              <input type="radio" name="dish-type" id="side" value="side">
+              <label for="side">Side</label>
+              <input type="radio" name="dish-type" id="main-dish" value="main-dish">
+              <label for="main-dish">Main Dish</label>
+              <input type="radio" name="dish-type" id="dessert" value="dessert">
+              <label for="dessert">Dessert</label>
+              <input type="radio" name="dish-type" id="entire-meal" value="entire-meal">
+              <label for="entire-meal">Entire Meal</label>
+            </div>
+      </section>
+          <div id="output-box-main" class="output-box">
+            <img src="./assets/cookpot.svg" alt="Simple line drawing of a cookpot">
+          </div>
+          <div id="output-box-hidden" class="output-box-hidden">
+            <p><i>You should make:</i></p>
+            <h1 id="results" class="results"></h1>
+          </div>
+      </div>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

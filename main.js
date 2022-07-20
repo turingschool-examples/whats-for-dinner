@@ -67,7 +67,7 @@ function displaySuggestion() {
       for dessert!</h1>
     </div>
     `
-  }
+  } 
 };
 
 // Nondisplay functions

@@ -4,11 +4,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section id="top-row">
+    <section class="top-row">
     <h1>What's for Dinner?</h1>
-    <button id="button">Add a Recipe!</button>
+    <button class="button">Add a Recipe</button>
   </section>
-<img src="assets/burger-friends.jpg" width="1500" height="1000" alt="people eating burger and fries"/>
+  <section class="container">
+    <img src="assets/burger-friends.jpg" width="100%" height="auto" alt="people eating burger and fries" />
+    <div class="text-block">
+    <h3 class="question"><b>What are you looking for?</b></h3>
+      <br />
+      <input type="radio" name="food type" value="Side"
+        checked="checked" /> Side
+      <input type="radio" name="food type" value="Main Dish"
+        checked="checked" /> Main Dish
+      <input type="radio" name="food type" value="Dessert"
+        checked="checked" /> Dessert
+      <input type="radio" name="food type" value="Entire Meal"
+        checked="checked" /> Entire Meal
+      <button class="button-2">LET'S COOK!</button>
+  </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

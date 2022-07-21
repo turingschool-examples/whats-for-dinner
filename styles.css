@@ -6,29 +6,61 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
-*/html {
-  height: 100%;
-}
+*/
+
 body {
   font-family:'Roboto', sans-serif;
   background-color: #0fb9b1;
   background-size: cover;
 }
+
 h1 {
   margin: 0;
   display: inline-block;
+  padding: 5px
 
 }
 
-section {
+.top-row {
   box-sizing: border-box;
   background: #0fb9b1;
   font-size: small;
-  padding: 10px 20px 20px;
+  padding-bottom: 15px;
 }
 
-button {
+.button {
+  display: block;
   float: right;
   font-size: 15px;
-  padding: 5px 2.5px 5px 2.5px;
+  padding: 7px 5px;
+  border-radius: 8px;
+  border-style: outset;
+}
+
+.button-2 {
+  display: block;
+  float: inherit;
+  font-size: 15px;
+  background-color: #0fb9b1;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 35px;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.text-block {
+  position: absolute;
+  border: 1px solid white;
+  background-color: rgba(225, 225, 225, .9);
 }

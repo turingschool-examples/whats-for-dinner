@@ -29,39 +29,45 @@ var favoriteRecipesDisplay = document.querySelector('.favoriteRecipesDisplay');
 
 // Event listeners
 window.addEventListener('load', displayCookpot);
-letsCookButton.addEventListener('click', displaySuggestion);
-viewFavoritesButton.addEventListener('click', toggleHome);
+
+favoritesSection.addEventListener('dblclick', function(event) {
+  deleteRecipe(event);
+});
 homeButton.addEventListener('click', toggleHome);
+letsCookButton.addEventListener('click', displaySuggestion);
 suggestionsSection.addEventListener('click', function(event) {
   addRecipeToFavorites(event);
 });
+viewFavoritesButton.addEventListener('click', toggleHome);
 
 // Data model manipulation functions
 function addRecipeToFavorites(event) {
   if (event.target.classList.contains('mainButton')) {
     var foodSuggestion = document.getElementById('foodSuggestion')
     favorites.push(foodSuggestion.innerText);
-
-    console.log(favorites);
+    alert(`This recipe was added to your favorites!`)
     addRecipeToFavDisplay(favorites[favorites.length - 1]);
   }
 };
 
+// Display functions
 function addRecipeToFavDisplay(recipe) {
   favoriteRecipesDisplay.innerHTML += `
   <p class="savedRecipe">${recipe}</p>
   `
 }
 
-// favoritesSection.innerHTML = '';
+function deleteRecipe(event) {
+  event.target.closest('.savedRecipe').remove();
+}
 
-// for (var i = 0; i < favorites.length; i++) {
-//   favoriteRecipesDisplay.innerHTML += `
-//     <p class="savedRecipe">${favorites[i]}</p>
-//     `
-//   }
+/* eek! I know that this only updates the DOM and not my
+data model... I think I would've needed to create an
+array of objects, instead of an array of strings, where
+each recipe instance had a unique ID, where I could use
+that that ID to update my data model/favorites array AND
+the DOM! */
 
-// Display functions
 function displayCookpot() {
   suggestionsSection.innerHTML += `
   <div class="cookpotImgContainer">
@@ -125,7 +131,3 @@ function toggleHome() {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
-
-/*
-Users should be able to remove a recipe from their list of favorites, by clicking a button.
-*/

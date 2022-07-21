@@ -53,8 +53,15 @@ letsCookButton.addEventListener("click", displayADish);
 function displayADish() {
   var selectedType = selectAType();
   var retrievedDish = retrieveADish(selectedType);
-  console.log(retrievedDish)
   var suggestedDish = document.querySelector(".suggestions");
+  suggestedDish.innerHTML = `
+    <article class="suggestions">
+      <label class="dish-suggestions">
+        <h3>You should make:</h3>
+        <h1>${retrievedDish}</h1>
+      </label>
+      </article>`
+  console.log(suggestedDish)
 }
 
 function selectAType() {

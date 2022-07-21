@@ -6,10 +6,13 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
-*/
+*/html {
+  height: 100%;
+}
 body {
   font-family:'Roboto', sans-serif;
   background-color: #0fb9b1;
+  background-size: cover;
 }
 h1 {
   margin: 0;
@@ -21,16 +24,11 @@ section {
   box-sizing: border-box;
   background: #0fb9b1;
   font-size: small;
-  border-bottom: solid black;
   padding: 10px 20px 20px;
 }
 
-.button {
+button {
   float: right;
   font-size: 15px;
-}
-
-
-button {
-padding: 5px 2.5px 5px 2.5px;
+  padding: 5px 2.5px 5px 2.5px;
 }

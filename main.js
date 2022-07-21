@@ -48,7 +48,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 class="foodSuggestion">${sides[getRandomIndex(sides)]}</h1>
+      <h1 id="foodSuggestion">${sides[getRandomIndex(sides)]}</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
@@ -57,7 +57,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 class="foodSuggestion">${mains[getRandomIndex(mains)]}</h1>
+      <h1 id="foodSuggestion">${mains[getRandomIndex(mains)]}</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
@@ -66,7 +66,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 class="foodSuggestion">${desserts[getRandomIndex(desserts)]}</h1>
+      <h1 id="foodSuggestion">${desserts[getRandomIndex(desserts)]}</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
@@ -102,7 +102,6 @@ function getRandomIndex(array) {
 }
 
 /*
-When a recipe appears, it should appear with a “Favorite” button.
 When the “Favorite” button is clicked, that recipe should be added to a new list of favorite recipes.
 
 Users should be able to remove a recipe from their list of favorites, by clicking a button.

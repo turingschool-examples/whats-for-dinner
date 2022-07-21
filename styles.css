@@ -159,11 +159,11 @@ header {
   margin-bottom: 0px;
 }
 
-.foodSuggestion {
+#foodSuggestion {
   /* border: 2px solid blue; */
   font-size: 40px;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
 }
 
 /* Favorites Section */
@@ -186,3 +186,14 @@ header {
   align-items: center;
   text-align: center;
 }
+
+/*
+.favoriteButtonTrial {
+  border: 2px solid red;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+*/

@@ -89,6 +89,7 @@ function makeInnerHtml(){
     potImg.classList.remove('hidden');
   }else if(dishRecipes.value === 'Side'){
     potImg.classList.add('hidden');
+    potButton.classList.remove('hidden');
     jsElements.innerHTML +=`
       <h1> You should cook: </h1>
       <h3 class="js-h1"> ${sides[sidesRandomNumber]} </h3>`;

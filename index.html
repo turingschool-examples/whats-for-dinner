@@ -13,9 +13,8 @@
         <section class="Container">
           <section class="Container-a">
             <h3>What are you looking for?<sup>*</sup></h3>
-            <form action="http://www.example.com/whatsfordinner.php"
+            <form class="question">
               <br />
-              <div>
               <input type="radio" name="Dish" value="Side" checked="checked" /> Side
               </div>
               <div>
@@ -23,14 +22,15 @@
               </div>
               <input type="radio" name="Dish" value="Dessert"/> Dessert
               <div>
-              <button class="lets cook">LET'S COOK</button>
+              <input type="radio" name="Dish" value="Entire Meal"/> Entire Meal
+              <button class="lets-cook">LET'S COOK</button>
             </div>
             </form>
           </section>
           <section class="Container-b">
-            <img id="cookpot" src=".assets/cookpot.svg" alt="a cookpot"/>
-            <p class="idea hidden">You should make:</p>
-            <h1></h2>
+            <svg id="cookpot" src=".assets/cookpot.svg" alt="a cookpot"/>
+              <p class="idea hidden">You should make:</p>
+              <h1></h2>
             <button class="clear">CLEAR</button>
           </section>
         </section>

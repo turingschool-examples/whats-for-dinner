@@ -11,12 +11,39 @@ red - #ee5253
   display: flex;
   background-color: #0fb9b1;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 5px 20px;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 .add-recipe {
   background-color: rgba(225, 225, 225, .9);
   border-radius: 5px;
   padding: 0px 10px;
   border: none;
+}
+.Container {
+  display: flex;
+  border: none;
+  justify-content: space-around;
+  margin: 20px 20px;
+  padding: 30px 30px;
+}
+.Container-a {
+  /* display: flex;
+  flex-direction: column; */
+  border: none;
+  padding: 0px 20px;
+  background-color: rgba(225, 225, 225, .9);
+}
+.Container-b {
+  border: none;;
+  padding: 20px;
+  background-color: rgba(225, 225, 225, .9);
+}
+#background-img {
+  background-image: url(assets/burger-friends.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

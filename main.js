@@ -1,3 +1,5 @@
+var letsCookButton = document.querySelector(".lets-cook");
+
 var sides = [
   "Miso Glazed Carrot",
   "Coleslaw",
@@ -46,28 +48,48 @@ var desserts = [
   "Eclairs"
 ]
 
+letsCookButton.addEventListener("click", displayADish);
+
+function displayADish() {
+  var inputSide = document.querySelector("#side");
+  var inputMain = document.querySelector("#main");
+  var inputDessert = document.querySelector("#dessert");
+  if (inputSide.value === "side") {
+    getRandomSide(sides);
+  } else if (inputMain.value === "main") {
+    getRandomMain(mains);
+  } else if (inputDessert.value === "dessert") {
+    getRandomDesert(desserts);
+  }
+}
+
 function getRandomNumber(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 function getRandomSide(array) {
   var sideIndex = getRandomNumber(array);
-  console.log(sideIndex);
-}
+    for (var i = 0; i < sides.length; i++) {
+      console.log(sides[sideIndex])
+    }
+  }
+
 
 function getRandomMain(array) {
   var mainIndex = getRandomNumber(array);
-  console.log(mainIndex);
+  for (var i = 0; i < mains.length; i++) {
+    console.log(mains[mainIndex])
+  }
 }
 
 function getRandomDessert(array) {
   var dessertIndex = getRandomNumber(array);
-  console.log(dessertIndex);
+  for (var i = 0; i < desserts.length; i++) {
+    console.log(desserts[dessertIndex])
+  }
 }
 
-getRandomSide(sides);
-getRandomMain(mains);
-getRandomDessert(desserts);
+console.log
 
 //click lets cook,
 //take input value and generate the coresponding random index

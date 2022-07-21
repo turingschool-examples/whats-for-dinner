@@ -42,15 +42,16 @@ body {
   align-items: center;
 }
 
-/*menu section*/
+/*menu section cookpot-section*/
 .recipes-section, .cookpot-section {
   display: flex;
   align-items: center;
   width: 550px;
   height: 370px;
-  margin-top: 10%;
+  margin-top: 2%;
+  margin-bottom: 5%
 }
-
+/*menu section*/
   .recipes-section {
   background: rgba(225, 225, 225, .9);
 }
@@ -71,7 +72,7 @@ body {
 
 /*button for menu section*/
 .lets-cook button {
-  padding: 8px 50px;
+  padding: 8px 40px;
   background-color: #0fb9b1;
 }
 
@@ -85,9 +86,11 @@ body {
   background: rgba(225, 225, 225, .9);
   display: flex;
   justify-content: center;
+
 }
 
 .pot-img {
+  margin-left: 18%;
   width: 100px;
   color: #95a5a6;
   align-self: center;
@@ -102,13 +105,17 @@ body {
 
 /*clear button*/
 .pot-button {
-  position: fixed;
-  right: 11%;
-  top: 65%;
+
+  align-self:  flex-end;
+  margin-bottom: 4%;
+  margin-right: 2%;
+
+
 }
 
 .pot-button button {
-  padding: 10% 60% 10% 60%;
+  color: white;
+  padding: 10% 40% 10% 40%;
   border-radius: .5rem;
   background-color: #95a5a6;
 }
@@ -122,7 +129,7 @@ body {
 /*js html tags*/
 .js-element {
   position: relative;
-  left: 10%;
+  left: 20%;
   text-align: center;
 }
 

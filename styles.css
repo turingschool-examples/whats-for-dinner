@@ -89,11 +89,11 @@ body {
 
 }
 
-.pot-img {
+.pot-img {pos
   margin-left: 18%;
   width: 100px;
   color: #95a5a6;
-  align-self: center;
+  position: absolute;
 }
 
 /*hidden class*/
@@ -108,9 +108,7 @@ body {
 
   align-self:  flex-end;
   margin-bottom: 4%;
-  margin-right: 2%;
-
-
+  margin-right: 10%;
 }
 
 .pot-button button {
@@ -129,8 +127,9 @@ body {
 /*js html tags*/
 .js-element {
   position: relative;
-  left: 20%;
+  left: 10%;
   text-align: center;
+  width: 100%;
 }
 
 .js-h1 {

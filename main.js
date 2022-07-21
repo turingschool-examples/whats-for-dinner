@@ -65,10 +65,11 @@ botton.addEventListener('click', handleClick);
 clearButton.addEventListener('click', innerHTMLClear);
 
 
-function handleClick(){
-    makeInnerHtml();
+function handleClick() {
+  makeInnerHtml();
 }
-function innerHTMLClear(){
+
+function innerHTMLClear() {
   //getting random number for all arrays
   potButton.classList.add('hidden');
   potImg.classList.remove('hidden');
@@ -76,7 +77,7 @@ function innerHTMLClear(){
 
 }
 
-function makeInnerHtml(){
+function makeInnerHtml() {
   var sidesRandomNumber = getRedomNumber(sides);
   var mainsRandomNumber = getRedomNumber(mains);
   var dessertsRandomNumber = getRedomNumber(desserts);
@@ -84,35 +85,33 @@ function makeInnerHtml(){
   var dishRecipes = document.querySelector('input[name="dish-item"]:checked');
   var clearForm = document.querySelector('#radio-form').reset();
   jsElements.innerHTML = ``
-  if(dishRecipes === null){
+  if (dishRecipes === null) {
     alert("Please Select An Option")
     potImg.classList.remove('hidden');
-  }else if(dishRecipes.value === 'Side'){
+    potButton.classList.add('hidden');
+  } else if (dishRecipes.value === 'Side') {
     potImg.classList.add('hidden');
     potButton.classList.remove('hidden');
-    jsElements.innerHTML +=`
+    jsElements.innerHTML += `
       <h1> You should cook: </h1>
       <h3 class="js-h1"> ${sides[sidesRandomNumber]} </h3>`;
-
-  }else if(dishRecipes.value === 'Main Dish'){
-    jsElements.innerHTML +=`
+  } else if (dishRecipes.value === 'Main Dish') {
+    jsElements.innerHTML += `
       <h1> You should cook: </h1>
       <h3 class="js-h1"> ${mains[mainsRandomNumber]} </h3>`;
     potImg.classList.add('hidden');
     potButton.classList.remove('hidden');
-  }else if(dishRecipes.value === 'Desert'){
-    jsElements.innerHTML +=`
+  } else if (dishRecipes.value === 'Desert') {
+    jsElements.innerHTML += `
       <h1> You should cook: </h1>
       <h3 class="js-h1"> ${desserts[dessertsRandomNumber]} </h3>`;
     potImg.classList.add('hidden');
     potButton.classList.remove('hidden');
-  }else if(dishRecipes.value === 'Entire Meal'){
-    jsElements.innerHTML +=`
+  } else if (dishRecipes.value === 'Entire Meal') {
+    jsElements.innerHTML += `
       <h1> You should cook: </h1>
       <h2 class="js-h1"> ${sides[sidesRandomNumber]} <br> ${mains[mainsRandomNumber]} <br> ${desserts[dessertsRandomNumber]} <br> </h2>`;
     potImg.classList.add('hidden');
     potButton.classList.remove('hidden');
   }
-
-
 }

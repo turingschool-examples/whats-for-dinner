@@ -21,6 +21,22 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  /* border: 4px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none!important;
+}
+
+/* Header Section */
+
 header {
   background-color: #0fb9b1;
   margin-top: -10px;
@@ -32,10 +48,6 @@ header {
   padding-right: 30px;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 .headerButton {
   align-self: center;
   background-color: rgba(225, 225, 225);
@@ -45,17 +57,13 @@ button:hover {
   transition: 0.5s;
 }
 
-.addRecipeButton:hover{
+.headerButton:hover{
   background-color: #c7c5c5;
 }
 
-main {
-  /* border: 4px solid blue; */
-  display: flex;
-  justify-content: space-evenly;
-}
+/* User Input Section */
 
-.userInputContainer {
+.userInputSection {
   /* border: 2px solid red; */
   background-color: rgba(225, 225, 225, .9);
   width: 450px;
@@ -114,7 +122,9 @@ main {
   background-color: #0fa8a1;
 }
 
-.suggestionsContainer {
+/* Suggestions Section */
+
+.suggestionsSection {
   /* border: 2px solid red; */
   background-color: rgba(225, 225, 225, .9);
   width: 450px;

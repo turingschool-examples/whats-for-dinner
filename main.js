@@ -1,7 +1,7 @@
 var letsCookButton = document.querySelector(".lets-cook");
 
 var sides = [
-  "Miso Glazed Carrot",
+  "Miso Glazed Carrots",
   "Coleslaw",
   "Garden Salad",
   "Crispy Potatoes",
@@ -54,11 +54,9 @@ function displayADish() {
   var selectedType = selectAType();
   var retrievedDish = retrieveADish(selectedType);
   var suggestedDish = document.querySelector(".suggestions");
-  suggestedDish.innerHTML = `
-    <article class="suggestions">
-      <h3 class="you-should-make">You should make:</h3>
-      <h1 class="dish">${retrievedDish}!</h1>
-    </article>`
+  suggestedDish.innerHTML = 
+      `<h3 class="you-should-make">You should make:</h3>
+      <h1 class="dish">${retrievedDish}!</h1>`
 }
 
 function selectAType() {

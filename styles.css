@@ -49,6 +49,12 @@ article section {
   margin: 100px 50px;
 }
 
+label {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
 .required:after {
   content: "*";
   color: #ee5253;
@@ -66,7 +72,7 @@ article section {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 5px;
+  /* column-gap: 5px; */
 }
 
 .cookpot {

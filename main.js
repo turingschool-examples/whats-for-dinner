@@ -30,8 +30,8 @@ var favoriteRecipesDisplay = document.querySelector('.favoriteRecipesDisplay');
 // Event listeners
 window.addEventListener('load', displayCookpot);
 letsCookButton.addEventListener('click', displaySuggestion);
-viewFavoritesButton.addEventListener('click', displayFavorites);
-homeButton.addEventListener('click', displayHome);
+viewFavoritesButton.addEventListener('click', toggleHome);
+homeButton.addEventListener('click', toggleHome);
 suggestionsSection.addEventListener('click', function(event) {
   addRecipeToFavorites(event);
 });
@@ -41,7 +41,7 @@ function addRecipeToFavorites(event) {
   if (event.target.classList.contains('mainButton')) {
     var foodSuggestion = document.getElementById('foodSuggestion')
     favorites.push(foodSuggestion.innerText);
-    
+
     console.log(favorites);
     addRecipeToFavDisplay(favorites[favorites.length - 1]);
   }
@@ -113,16 +113,12 @@ function displaySuggestion() {
   }
 };
 
-function displayFavorites() {
+function toggleHome() {
   homeHeader.classList.toggle('hidden');
   favoritesHeader.classList.toggle('hidden');
   userInputSection.classList.toggle('hidden');
   suggestionsSection.classList.toggle('hidden');
   favoritesSection.classList.toggle('hidden');
-}
-
-function displayHome() {
-  displayFavorites()
 }
 
 // Nondisplay functions

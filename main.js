@@ -51,23 +51,23 @@ var desserts = [
 letsCookButton.addEventListener("click", displayADish);
 
 function displayADish() {
-  findADish();
-  var cookpotImg = document.querySelector(".cookpot");
-  cookpotImg.innerHTML = `<img class='cookpot' id='hide-me' src='assets/cookpot.svg' alt='a graphic of a pot boiing over' />`;
-  console.log(cookpotImg);
-}
-//cookpotImg is pulling correct HTML element, but innerHTML isn't updating as expected
-
-function findADish() {
-  var inputSide = document.querySelector("#side");
-  var inputMain = document.querySelector("#main");
-  var inputDessert = document.querySelector("#dessert");
-  if (inputSide.value === "side") {
+  var selectedDish = selectADish();
+  console.log(selectedDish);
+  if (selectedDish === "side") {
     getRandomSide(sides);
-  } else if (inputMain.value === "main") {
+  } else if (selectedDish === "main") {
     getRandomMain(mains);
-  } else if (inputDessert.value === "dessert") {
-    getRandomDesert(desserts);
+  } else if (selectedDish === "dessert") {
+    getRandomDessert(desserts)
+  }
+}
+
+function selectADish() {
+  var input = document.querySelectorAll('input[name="dish"]');
+  for (var i = 0; i < input.length; i++) {
+    if (input[i].checked) {
+      return input[i].value;
+    }
   }
 }
 
@@ -78,21 +78,24 @@ function getRandomNumber(array) {
 function getRandomSide(array) {
   var sideIndex = getRandomNumber(array);
     for (var i = 0; i < sides.length; i++) {
-      console.log(sides[sideIndex])
+    var sideDish = sides[sideIndex];
+    console.log(sideDish)
     }
   }
 
 function getRandomMain(array) {
   var mainIndex = getRandomNumber(array);
   for (var i = 0; i < mains.length; i++) {
-    console.log(mains[mainIndex])
+    var mainDish = mains[mainIndex];
+    console.log(mainDish)
   }
 }
 
 function getRandomDessert(array) {
   var dessertIndex = getRandomNumber(array);
   for (var i = 0; i < desserts.length; i++) {
-    console.log(desserts[dessertIndex])
+  var dessertDish = desserts[dessertIndex];
+  console.log(dessertDish)
   }
 }
 

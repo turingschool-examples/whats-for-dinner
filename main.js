@@ -20,6 +20,7 @@ var letsCookButton = document.querySelector('.letsCookButton');
 var viewFavoritesButton = document.querySelector('#viewFavoritesButton');
 var homeHeader = document.querySelector('.homeHeader');
 var favoritesHeader = document.querySelector('.favoritesHeader');
+var homeButton = document.querySelector('#homeButton');
 var userInputSection = document.querySelector('.userInputSection');
 var suggestionsSection = document.querySelector('.suggestionsSection');
 
@@ -92,7 +93,6 @@ function getRandomIndex(array) {
 When a recipe appears, it should appear with a “Favorite” button.
 When the “Favorite” button is clicked, that recipe should be added to a new list of favorite recipes.
 
-When the “View Favorites” button is clicked, users should be taken to a new page that displays all of their favorite recipes.
 Users should be able to navigate back to the main page by clicking a button.
 Users should be able to remove a recipe from their list of favorites, by clicking a button.
 As you add these new elements to the page, be sure to match the style of existing elements.

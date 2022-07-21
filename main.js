@@ -13,6 +13,8 @@ var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake',
 'Flan', 'Macarons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie',
 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs']
 
+var favorites = [];
+
 // DOM elements
 var letsCookButton = document.querySelector('.letsCookButton');
 var addRecipeButton = document.querySelector('.addRecipeButton');
@@ -67,7 +69,7 @@ function displaySuggestion() {
       for dessert!</h1>
     </div>
     `
-  } 
+  }
 };
 
 // Nondisplay functions

@@ -17,6 +17,7 @@ var favorites = [];
 
 // DOM elements
 var letsCookButton = document.querySelector('#letsCookButton');
+// var favoriteButton = document.querySelector('#favoriteButton')
 var viewFavoritesButton = document.querySelector('#viewFavoritesButton');
 var homeHeader = document.querySelector('.homeHeader');
 var favoritesHeader = document.querySelector('.favoritesHeader');
@@ -48,6 +49,7 @@ function displaySuggestion() {
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
       <h1 class="foodSuggestion">${sides[getRandomIndex(sides)]}</h1>
+      <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
   }
@@ -56,6 +58,7 @@ function displaySuggestion() {
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
       <h1 class="foodSuggestion">${mains[getRandomIndex(mains)]}</h1>
+      <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
   }
@@ -64,6 +67,7 @@ function displaySuggestion() {
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
       <h1 class="foodSuggestion">${desserts[getRandomIndex(desserts)]}</h1>
+      <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
   }
@@ -74,6 +78,7 @@ function displaySuggestion() {
       <h1>${mains[getRandomIndex(mains)]} with
       a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}
       for dessert!</h1>
+      <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
   }

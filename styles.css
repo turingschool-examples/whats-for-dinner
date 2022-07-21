@@ -67,9 +67,14 @@ label {
   padding: 8px 53px 8px 53px;
 }
 
-.cookpot {
-  position: relative;
-  left: 35%;
+.suggestions {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  width: 25%;
+}
+
+.cookpot {
+  display: block;
+  width: 150px;
+  height: 150px;
 }

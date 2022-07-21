@@ -28,6 +28,7 @@ var suggestionsSection = document.querySelector('.suggestionsSection');
 window.addEventListener('load', displayCookpot);
 letsCookButton.addEventListener('click', displaySuggestion);
 viewFavoritesButton.addEventListener('click', displayFavorites);
+homeButton.addEventListener('click', displayHome);
 
 // Display functions
 function displayCookpot() {
@@ -84,6 +85,10 @@ function displayFavorites() {
   suggestionsSection.classList.toggle('hidden');
 }
 
+function displayHome() {
+  displayFavorites()
+}
+
 // Nondisplay functions
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -92,8 +97,6 @@ function getRandomIndex(array) {
 /*
 When a recipe appears, it should appear with a “Favorite” button.
 When the “Favorite” button is clicked, that recipe should be added to a new list of favorite recipes.
-
-Users should be able to navigate back to the main page by clicking a button.
 Users should be able to remove a recipe from their list of favorites, by clicking a button.
 As you add these new elements to the page, be sure to match the style of existing elements.
 */

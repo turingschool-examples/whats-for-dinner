@@ -51,6 +51,14 @@ var desserts = [
 letsCookButton.addEventListener("click", displayADish);
 
 function displayADish() {
+  findADish();
+  var cookpotImg = document.querySelector(".cookpot");
+  cookpotImg.innerHTML = `<img class='cookpot' id='hide-me' src='assets/cookpot.svg' alt='a graphic of a pot boiing over' />`;
+  console.log(cookpotImg);
+}
+//cookpotImg is pulling correct HTML element, but innerHTML isn't updating as expected
+
+function findADish() {
   var inputSide = document.querySelector("#side");
   var inputMain = document.querySelector("#main");
   var inputDessert = document.querySelector("#dessert");
@@ -74,7 +82,6 @@ function getRandomSide(array) {
     }
   }
 
-
 function getRandomMain(array) {
   var mainIndex = getRandomNumber(array);
   for (var i = 0; i < mains.length; i++) {
@@ -88,8 +95,6 @@ function getRandomDessert(array) {
     console.log(desserts[dessertIndex])
   }
 }
-
-console.log
 
 //click lets cook,
 //take input value and generate the coresponding random index

@@ -38,10 +38,10 @@ suggestionsSection.addEventListener('click', function(event) {
 // Data model manipulation functions
 function addRecipeToFavorites(event) {
   if (event.target.classList.contains('mainButton')) {
-    // console.log('You clicked the button');
+    console.log('You clicked the button');
     var foodSuggestion = document.getElementById('foodSuggestion')
     favorites.push(foodSuggestion.innerText);
-    // console.log(favorites);
+    console.log(favorites);
   }
 };
 
@@ -61,7 +61,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 id="foodSuggestion">${sides[getRandomIndex(sides)]}</h1>
+      <h1 class="foodSuggestionClass" id="foodSuggestion">${sides[getRandomIndex(sides)]}</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
@@ -70,7 +70,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 id="foodSuggestion">${mains[getRandomIndex(mains)]}</h1>
+      <h1 class="foodSuggestionClass" id="foodSuggestion">${mains[getRandomIndex(mains)]}</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
@@ -79,7 +79,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 id="foodSuggestion">${desserts[getRandomIndex(desserts)]}</h1>
+      <h1 class="foodSuggestionClass" id="foodSuggestion">${desserts[getRandomIndex(desserts)]}</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>
     </div>
     `
@@ -88,7 +88,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1 id="foodSuggestion">${mains[getRandomIndex(mains)]} with
+      <h2 id="foodSuggestion">${mains[getRandomIndex(mains)]} with
       a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}
       for dessert!</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>

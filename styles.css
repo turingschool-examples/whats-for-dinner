@@ -159,7 +159,7 @@ header {
   margin-bottom: 0px;
 }
 
-#foodSuggestion {
+.foodSuggestionClass {
   /* border: 2px solid blue; */
   font-size: 40px;
   margin-top: 0px;
@@ -186,14 +186,3 @@ header {
   align-items: center;
   text-align: center;
 }
-
-/*
-.favoriteButtonTrial {
-  border: 2px solid red;
-  width: 400px;
-  height: 300px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-*/

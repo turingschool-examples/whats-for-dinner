@@ -31,6 +31,15 @@ window.addEventListener('load', displayCookpot);
 letsCookButton.addEventListener('click', displaySuggestion);
 viewFavoritesButton.addEventListener('click', displayFavorites);
 homeButton.addEventListener('click', displayHome);
+suggestionsSection.addEventListener('click', function(event) {
+  addRecipeToFavorites(event);
+});
+
+// Data model manipulation functions
+function addRecipeToFavorites(event) {
+  console.log('You clicked somewhere');
+
+};
 
 // Display functions
 function displayCookpot() {

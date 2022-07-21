@@ -53,36 +53,65 @@ function getRedomNumber(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-//getting random number for all arrays
-var sidesRandomNumber = getRedomNumber(sides);
-var mainsRandomNumber = getRedomNumber(mains);
-var dessertsRandomNumber = getRedomNumber(desserts);
 
 
-var cookPot = document.querySelector('.cookpot')
+
+var potContent = document.querySelector('.cookpot-section');
 var potImg = document.querySelector('.pot-img');
 var botton = document.querySelector('#cook-button');
-var dishMenu = document.querySelectorAll('.dish');
-console.log(dishMenu);
+
+
+var clearButton = document.querySelector('#clear-button')
+var jsElements = document.querySelector('.js-element');
 
 
 botton.addEventListener('click', handleClick);
+clearButton.addEventListener('click', innerHTMLClear);
 
-//hidding pot log on fucntion
-function handleClick() {
-  //potImg.classList.toggle('hidden');
-  potImg.classList.toggle('hidden');
-  getRandomDesert();
+
+function handleClick(){
+    makeInnerHtml();
+}
+function innerHTMLClear(){
+  //getting random number for all arrays
+
+  jsElements.innerHTML = ``;
+
 }
 
-function getRandomDesert(){
-  var div = document.createElement("div");
-  var h3 = document.createElement('h3');
-  var clearBotton = document.createElement('button');
-  cookPot.append(div);
-  // cookPot.append(clearBotton)
-  // clearBotton.innerText = 'Clear'
-  div.append(h3);
+function makeInnerHtml(){
+  var sidesRandomNumber = getRedomNumber(sides);
+  var mainsRandomNumber = getRedomNumber(mains);
+  var dessertsRandomNumber = getRedomNumber(desserts);
+  
+  var dishRecipes = document.querySelector('input[name="dish-item"]:checked');
+  var clearForm = document.querySelector('#radio-form').reset();
+  jsElements.innerHTML = ``
 
-  h3.innerText = "You should Make:";
+  if(dishRecipes.value === 'Side'){
+    potImg.classList.add('hidden');
+    jsElements.innerHTML +=`
+      <h1> You should cook: </h1>
+      <h3 class="js-h1"> ${sides[sidesRandomNumber]} </h3>`;
+  }
+  if(dishRecipes.value === 'Main Dish'){
+    jsElements.innerHTML +=`
+      <h1> You should cook: </h1>
+      <h3 class="js-h1"> ${mains[mainsRandomNumber]} </h3>`;
+    potImg.classList.add('hidden');
+  }
+  if(dishRecipes.value === 'Desert'){
+    jsElements.innerHTML +=`
+      <h1> You should cook: </h1>
+      <h3 class="js-h1"> ${desserts[dessertsRandomNumber]} </h3>`;
+    potImg.classList.add('hidden');
+  }
+  if(dishRecipes.value === 'Entire Meal'){
+    jsElements.innerHTML +=`
+      <h1> You should cook: </h1>
+      <h2 class="js-h1"> ${sides[sidesRandomNumber]} <br> ${mains[mainsRandomNumber]} <br> ${desserts[dessertsRandomNumber]} <br> </h2>`;
+    potImg.classList.add('hidden');
+  }
+  //var clearForm = document.querySelector('#radio-form').reset();
+  //jsElements.innerHTML = ``
 }

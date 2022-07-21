@@ -7,96 +7,128 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-html{
+html {
   font-family: 'Roboto', sans-serif;
 }
-body{
-  background-image:url("../assets/burger-friends.jpg");
 
+body {
+  background-image: url("../assets/burger-friends.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  flex-direction: row;
+  margin: 0;
 }
 
-header h1{
-  margin-left: 10px;
-  margin-bottom: 20px;
+.intro-tag {
+  margin: 0;
+  padding: 10px;
+  padding-left: 20px;
+  padding-top: 10px
 }
 
-h3{
-  text-align: center;
-  font-style: italic;
-}
-
-.back-color{
+.header-section {
   padding-left: 2px;
   background-color: #0fb9b1;
-  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
-
 }
 
-
-.menus{
-  background: rgba(225, 225, 225, .9);
-  margin-left: 30px;
-  margin-top: 8%;
-  float: left;
-  width: 500px;
-  height: 370px;
-  bottom: 50%;
-  left:100px;
-  bottom: 35%;;
+.container {
+  display: flex;
+  justify-content: space-around;
+  /*box-sizing: content-box;*/
+  flex-wrap: wrap;
+  align-items: center;
 }
+
 /*menu section*/
-.menus h2{
+.recipes-section, .cookpot-section {
+  display: flex;
+  align-items: center;
+  width: 550px;
+  height: 370px;
+  margin-top: 10%;
+}
+
+  .recipes-section {
+  background: rgba(225, 225, 225, .9);
+}
+
+.recipes-section h2 {
   padding-left: 40px;
   position: relative;
-  top:5%;
+  top: 5%;
 }
 
-.menus li{
+.recipes-section li {
   list-style: none;
   margin: 0;
   padding: 10px;
   list-style-position: inside;
-  top:15%;
-
+  top: 15%;
 }
 
 /*button for menu section*/
-.lets-cook button{
+.lets-cook button {
   padding: 8px 50px;
-  background-color:#0fb9b1;
+  background-color: #0fb9b1;
 }
-.lets-cook{
+
+.lets-cook {
   position: relative;
   left: 10%;
 }
 
 /*pot section */
-.cookpot{
+.cookpot-section {
   background: rgba(225, 225, 225, .9);
-
-  margin-right: 8%;
-  margin-top: 8%;
-  float: right;
-  width: 500px;
-  height: 370px;
-
+  display: flex;
+  justify-content: center;
 }
-.pot-img{
-  width: 100px;
-  position: relative;
-  text-align: center;
-  left: 150px;
-  top: 100px;
-  color: #95a5a6;
 
+.pot-img {
+  width: 100px;
+  color: #95a5a6;
+  align-self: center;
 }
 
 /*hidden class*/
-.hidden{
+.hidden {
   visibility: hidden;
+  align-self: flex-start;
+  width: 0;
+}
+
+/*clear button*/
+.pot-button {
+  position: fixed;
+  right: 11%;
+  top: 65%;
+}
+
+.pot-button button {
+  padding: 10% 60% 10% 60%;
+  border-radius: .5rem;
+  background-color: #95a5a6;
+}
+
+.random-text {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/*js html tags*/
+.js-element {
+  position: relative;
+  left: 10%;
+  text-align: center;
+}
+
+.js-h1 {
+  font-size: 150%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }

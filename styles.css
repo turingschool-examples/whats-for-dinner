@@ -46,9 +46,9 @@ body {
 .recipes-section, .cookpot-section {
   display: flex;
   align-items: center;
-  width: 550px;
-  height: 370px;
-  margin-top: 2%;
+  width: 540px;
+  height: 380px;
+  margin-top: 8%;
   margin-bottom: 5%
 }
 /*menu section*/

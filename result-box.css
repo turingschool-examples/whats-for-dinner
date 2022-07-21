@@ -1,0 +1,48 @@
+.result--box {
+  background-color: rgba(225, 225, 225, .9);
+  opacity: 0.9;
+  width: 490px;
+  height: 400px;
+  margin-top: 60px;
+  padding: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.result--content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cookpot--image {
+  width: 160px;
+  height: 160px;
+}
+
+.result-paragraph {
+
+}
+
+.result--input {
+  font-size: 45px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.result--action-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.result--clear-button {
+  border-radius: 6px;
+  background-color: #95a5a6;
+  color: white;
+  border: 0;
+  padding: 10px;
+}

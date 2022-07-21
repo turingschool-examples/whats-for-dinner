@@ -165,3 +165,24 @@ header {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+/* Favorites Section */
+
+.favoritesSection {
+  /* border: 2px solid red; */
+  background-color: rgba(225, 225, 225, .9);
+  width: 450px;
+  height: 350px;
+  margin: 50px 0px 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+.favoritesSection {
+  border: 2px solid red;
+  background-color: rgba(225, 225, 225, .9);
+  width: 450px;
+  height: 350px;
+} */

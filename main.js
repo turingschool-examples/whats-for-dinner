@@ -83,6 +83,7 @@ function displayFavorites() {
   favoritesHeader.classList.toggle('hidden');
   userInputSection.classList.toggle('hidden');
   suggestionsSection.classList.toggle('hidden');
+  
 }
 
 function displayHome() {
@@ -97,6 +98,7 @@ function getRandomIndex(array) {
 /*
 When a recipe appears, it should appear with a “Favorite” button.
 When the “Favorite” button is clicked, that recipe should be added to a new list of favorite recipes.
+
 Users should be able to remove a recipe from their list of favorites, by clicking a button.
 As you add these new elements to the page, be sure to match the style of existing elements.
 */

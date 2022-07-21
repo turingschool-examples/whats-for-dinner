@@ -33,7 +33,6 @@ body {
 .main {
   display: flex;
   justify-content: space-evenly;
-  border: 3px solid blue;
 }
 h2 {
   font-size: 35px;
@@ -78,7 +77,8 @@ div {
   font-size: 20px;
 }
 .clear {
-  align: right;
+  display: flex;
+  text-align: right;
 }
 .hidden {
   display: none;
@@ -86,4 +86,14 @@ div {
 .make {
   display: flex;
   flex-direction: column;
+}
+.dish {
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+}
+.shouldMake {
+  display: flex;
+  font-style: italic;
+  font-size: 30px;
 }

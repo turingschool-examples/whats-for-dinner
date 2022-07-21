@@ -133,6 +133,7 @@ main {
 
 .suggestion {
   /* border: 2px solid red; */
+  width: 375px;
   display: flex column;
   justify-content: center;
   align-items: center;

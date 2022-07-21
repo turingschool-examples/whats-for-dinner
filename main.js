@@ -23,6 +23,7 @@ var favoritesHeader = document.querySelector('.favoritesHeader');
 var homeButton = document.querySelector('#homeButton');
 var userInputSection = document.querySelector('.userInputSection');
 var suggestionsSection = document.querySelector('.suggestionsSection');
+var favoritesSection = document.querySelector('.favoritesSection')
 
 // Event listeners
 window.addEventListener('load', displayCookpot);
@@ -83,7 +84,7 @@ function displayFavorites() {
   favoritesHeader.classList.toggle('hidden');
   userInputSection.classList.toggle('hidden');
   suggestionsSection.classList.toggle('hidden');
-  
+  favoritesSection.classList.toggle('hidden');
 }
 
 function displayHome() {

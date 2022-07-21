@@ -16,7 +16,7 @@ var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake',
 var favorites = [];
 
 // DOM elements
-var letsCookButton = document.querySelector('.letsCookButton');
+var letsCookButton = document.querySelector('#letsCookButton');
 var viewFavoritesButton = document.querySelector('#viewFavoritesButton');
 var homeHeader = document.querySelector('.homeHeader');
 var favoritesHeader = document.querySelector('.favoritesHeader');

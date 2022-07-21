@@ -109,7 +109,7 @@ header {
   margin-bottom: 15px;
 }
 
-.letsCookButton {
+.mainButton {
   background-color: #0fb9b1;
   border-style: none;
   border-radius: 5px;
@@ -118,7 +118,7 @@ header {
   transition: 0.5s;
 }
 
-.letsCookButton:hover {
+.mainButton:hover {
   background-color: #0fa8a1;
 }
 
@@ -171,18 +171,18 @@ header {
 .favoritesSection {
   /* border: 2px solid red; */
   background-color: rgba(225, 225, 225, .9);
-  width: 450px;
-  height: 350px;
+  width: 900px;
+  height: 500px;
   margin: 50px 0px 50px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*
-.favoritesSection {
-  border: 2px solid red;
-  background-color: rgba(225, 225, 225, .9);
-  width: 450px;
-  height: 350px;
-} */
+.noFavoritesContainer {
+  /* border: 2px solid red; */
+  display: flex column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -41,13 +41,17 @@
               <input type="radio" id="entireMeal" name="dish" value="entireMeal">
               <label for="entireMeal">Entire Meal</label>
             </div>
-            <button class="letsCookButton">LET'S COOK!</button>
+            <button class="mainButton" id="letsCookButton">LET'S COOK!</button>
         </div>
       </section>
       <section class="suggestionsSection">
       </section>
       <section class="favoritesSection hidden">
-        <p>Do you need something here?</p>
+        <div class="noFavoritesContainer">
+          <h1>You don't have any favorite recipes yet.</h1>
+          <p>Try pressing the 'Favorite' button underneath a
+            recipe you like, and come back!</p>
+        </div>
       </section>
     </main>
   </body>

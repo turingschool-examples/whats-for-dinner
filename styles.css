@@ -33,26 +33,40 @@ main {
   border: 5px solid red;
   min-height: 900px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
 }
-.input-output-container{
+
+.choices {
+  text-align: left;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 9px;
+}
+
+.input-output-container {
   display: flex;
   justify-content: space-around;
-  align-content: center;
-  flex-direction: row;
   min-width: 800px;
+  margin-top: 50px;
 }
 
 .input-output {
   background-color: rgba(225, 225, 225, .9);
   border: 5px dotted cyan;
-  width: 350px;
+  width: 400px;
   height: 400px;
-  flex-basis: auto;
-  flex-shrink: 2;
+  margin: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .hidden {
   display: none!important;
+}
+
+img {
+  max-height: 100px;
 }

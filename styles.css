@@ -202,14 +202,20 @@ header {
 }
 
 .savedRecipe {
-  border: 2px solid red;
+  border: 2px solid #0fb9b1;
   font-size: 18px;
   height: 125px;
   width: 200px;
-  padding: 2px;
+  padding: 5px;
   margin: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: 0.5s;
+}
+
+.savedRecipe:hover {
+  cursor: pointer;
+  background-color: #0fb9b1
 }

@@ -17,7 +17,7 @@ var favorites = [];
 
 // DOM elements
 var letsCookButton = document.querySelector('.letsCookButton');
-var addRecipeButton = document.querySelector('.addRecipeButton');
+var viewFavoritesButton = document.querySelector('#viewFavoritesButton');
 var suggestionsSection = document.querySelector('.suggestionsContainer');
 
 // Event listeners

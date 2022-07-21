@@ -36,7 +36,7 @@ button:hover {
   cursor: pointer;
 }
 
-.addRecipeButton {
+.headerButton {
   align-self: center;
   background-color: rgba(225, 225, 225);
   padding: 10px 10px 10px 10px;

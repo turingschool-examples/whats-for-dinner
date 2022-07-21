@@ -30,35 +30,26 @@ main {
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
   background-attachment: fixed;
-  border: 5px solid red;
-  min-height: 900px;
   display: flex;
-  align-items: flex-start;
   justify-content: space-around;
 }
 
 .choices {
-  text-align: left;
-  margin: 0;
-  padding-left: 0;
   padding-bottom: 9px;
+  flex-direction: column;
 }
 
 .input-output-container {
   display: flex;
-  justify-content: space-around;
-  min-width: 800px;
   margin-top: 50px;
 }
 
 .input-output {
   background-color: rgba(225, 225, 225, .9);
-  border: 5px dotted cyan;
   width: 400px;
   height: 400px;
   margin: 75px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
@@ -69,4 +60,24 @@ main {
 
 img {
   max-height: 100px;
+}
+
+#input-box {
+  align-items: baseline;
+}
+
+h2, .lets-cook {
+  margin-left: 30px;
+}
+
+.red {
+  color: #ee5253
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  border-radius: 12%;
+  padding: 10px 30px 10px 30px;
+  border: none;
+
 }

@@ -37,8 +37,12 @@ suggestionsSection.addEventListener('click', function(event) {
 
 // Data model manipulation functions
 function addRecipeToFavorites(event) {
-  console.log('You clicked somewhere');
-
+  if (event.target.classList.contains('mainButton')) {
+    // console.log('You clicked the button');
+    var foodSuggestion = document.getElementById('foodSuggestion')
+    favorites.push(foodSuggestion.innerText);
+    // console.log(favorites);
+  }
 };
 
 // Display functions
@@ -84,7 +88,7 @@ function displaySuggestion() {
     suggestionsSection.innerHTML += `
     <div class="suggestion">
       <p class="youShouldMake">You should make:</p>
-      <h1>${mains[getRandomIndex(mains)]} with
+      <h1 id="foodSuggestion">${mains[getRandomIndex(mains)]} with
       a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]}
       for dessert!</h1>
       <button class="mainButton" id="favoriteButton">FAVORITE</button>

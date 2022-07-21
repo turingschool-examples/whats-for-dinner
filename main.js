@@ -17,7 +17,6 @@ var favorites = [];
 
 // DOM elements
 var letsCookButton = document.querySelector('#letsCookButton');
-// var favoriteButton = document.querySelector('#favoriteButton')
 var viewFavoritesButton = document.querySelector('#viewFavoritesButton');
 var homeHeader = document.querySelector('.homeHeader');
 var favoritesHeader = document.querySelector('.favoritesHeader');
@@ -38,7 +37,6 @@ suggestionsSection.addEventListener('click', function(event) {
 // Data model manipulation functions
 function addRecipeToFavorites(event) {
   if (event.target.classList.contains('mainButton')) {
-    console.log('You clicked the button');
     var foodSuggestion = document.getElementById('foodSuggestion')
     favorites.push(foodSuggestion.innerText);
     console.log(favorites);
@@ -103,6 +101,16 @@ function displayFavorites() {
   userInputSection.classList.toggle('hidden');
   suggestionsSection.classList.toggle('hidden');
   favoritesSection.classList.toggle('hidden');
+  if (favorites.length === 0) {
+    favoritesSection.innerHTML += `
+    <div class="noFavoritesContainer">
+      <h1>You don't have any favorite recipes yet.</h1>
+      <p>Try pressing the 'Favorite' button underneath a
+        recipe you like, and come back!</p>
+    </div>
+    `
+  }
+  
 }
 
 function displayHome() {
@@ -115,8 +123,5 @@ function getRandomIndex(array) {
 }
 
 /*
-When the “Favorite” button is clicked, that recipe should be added to a new list of favorite recipes.
-
 Users should be able to remove a recipe from their list of favorites, by clicking a button.
-As you add these new elements to the page, be sure to match the style of existing elements.
 */

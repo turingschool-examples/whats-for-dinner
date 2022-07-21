@@ -174,14 +174,41 @@ header {
   width: 900px;
   height: 500px;
   margin: 50px 0px 50px 0px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .noFavoritesContainer {
   /* border: 2px solid red; */
   display: flex column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ************ */
+
+.favoriteRecipesDisplay {
+  /* border: 2px solid purple; */
+  width: 900px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.savedRecipe {
+  border: 2px solid red;
+  font-size: 18px;
+  height: 125px;
+  width: 200px;
+  padding: 2px;
+  margin: 2px;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;

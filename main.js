@@ -23,7 +23,9 @@ var favoritesHeader = document.querySelector('.favoritesHeader');
 var homeButton = document.querySelector('#homeButton');
 var userInputSection = document.querySelector('.userInputSection');
 var suggestionsSection = document.querySelector('.suggestionsSection');
-var favoritesSection = document.querySelector('.favoritesSection')
+var favoritesSection = document.querySelector('.favoritesSection');
+
+var favoriteRecipesDisplay = document.querySelector('.favoriteRecipesDisplay');
 
 // Event listeners
 window.addEventListener('load', displayCookpot);
@@ -39,9 +41,25 @@ function addRecipeToFavorites(event) {
   if (event.target.classList.contains('mainButton')) {
     var foodSuggestion = document.getElementById('foodSuggestion')
     favorites.push(foodSuggestion.innerText);
+    
     console.log(favorites);
+    addRecipeToFavDisplay(favorites[favorites.length - 1]);
   }
 };
+
+function addRecipeToFavDisplay(recipe) {
+  favoriteRecipesDisplay.innerHTML += `
+  <p class="savedRecipe">${recipe}</p>
+  `
+}
+
+// favoritesSection.innerHTML = '';
+
+// for (var i = 0; i < favorites.length; i++) {
+//   favoriteRecipesDisplay.innerHTML += `
+//     <p class="savedRecipe">${favorites[i]}</p>
+//     `
+//   }
 
 // Display functions
 function displayCookpot() {
@@ -101,16 +119,6 @@ function displayFavorites() {
   userInputSection.classList.toggle('hidden');
   suggestionsSection.classList.toggle('hidden');
   favoritesSection.classList.toggle('hidden');
-  if (favorites.length === 0) {
-    favoritesSection.innerHTML += `
-    <div class="noFavoritesContainer">
-      <h1>You don't have any favorite recipes yet.</h1>
-      <p>Try pressing the 'Favorite' button underneath a
-        recipe you like, and come back!</p>
-    </div>
-    `
-  }
-  
 }
 
 function displayHome() {

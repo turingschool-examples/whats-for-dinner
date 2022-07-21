@@ -18,6 +18,8 @@ var favorites = [];
 // DOM elements
 var letsCookButton = document.querySelector('.letsCookButton');
 var viewFavoritesButton = document.querySelector('#viewFavoritesButton');
+var homeHeader = document.querySelector('.homeHeader');
+var favoritesHeader = document.querySelector('.favoritesHeader');
 var userInputSection = document.querySelector('.userInputSection');
 var suggestionsSection = document.querySelector('.suggestionsSection');
 
@@ -75,6 +77,8 @@ function displaySuggestion() {
 };
 
 function displayFavorites() {
+  homeHeader.classList.toggle('hidden');
+  favoritesHeader.classList.toggle('hidden');
   userInputSection.classList.toggle('hidden');
   suggestionsSection.classList.toggle('hidden');
 }

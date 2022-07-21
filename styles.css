@@ -49,12 +49,6 @@ article section {
   margin: 100px 50px;
 }
 
-label {
-  font-size: 25px;
-  font-weight: bold;
-  text-align: left;
-}
-
 .required:after {
   content: "*";
   color: #ee5253;
@@ -68,6 +62,7 @@ label {
 }
 
 .suggestions {
+  background-color: rgba(225, 225, 225, .9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,17 +76,13 @@ label {
 }
 
 .you-should-make {
-  display: block;
-  /* position: fixed; */
+  position: fixed;
   font-size: 18px;
   font-style: italic;
-  justify-content: center;
-  margin-top: 15px;
+  margin-bottom: 75px;
 }
 
 .dish {
-
   font-size: 35px;
   justify-content: center;
-  /* margin-top: 10px; */
 }

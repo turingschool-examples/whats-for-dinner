@@ -51,23 +51,31 @@ var desserts = [
 letsCookButton.addEventListener("click", displayADish);
 
 function displayADish() {
-  var selectedDish = selectADish();
-  console.log(selectedDish);
-  if (selectedDish === "side") {
-    getRandomSide(sides);
-  } else if (selectedDish === "main") {
-    getRandomMain(mains);
-  } else if (selectedDish === "dessert") {
-    getRandomDessert(desserts)
-  }
+  var selectedType = selectAType();
+  var retrievedDish = retrieveADish(selectedType);
+  console.log(retrievedDish)
+  var suggestedDish = document.querySelector(".suggestions");
 }
 
-function selectADish() {
+function selectAType() {
   var input = document.querySelectorAll('input[name="dish"]');
   for (var i = 0; i < input.length; i++) {
     if (input[i].checked) {
       return input[i].value;
     }
+  }
+}
+
+function retrieveADish(selectedType) {
+  if (selectedType === "side") {
+    var sideDish = getRandomSide(sides);
+    return sideDish;
+  } else if (selectedType === "main") {
+    var mainDish = getRandomMain(mains);
+    return mainDish;
+  } else if (selectedType === "dessert") {
+    var dessertDish = getRandomDessert(desserts);
+    return dessertDish;
   }
 }
 
@@ -78,24 +86,21 @@ function getRandomNumber(array) {
 function getRandomSide(array) {
   var sideIndex = getRandomNumber(array);
     for (var i = 0; i < sides.length; i++) {
-    var sideDish = sides[sideIndex];
-    console.log(sideDish)
+    return sides[sideIndex];
     }
   }
 
 function getRandomMain(array) {
   var mainIndex = getRandomNumber(array);
   for (var i = 0; i < mains.length; i++) {
-    var mainDish = mains[mainIndex];
-    console.log(mainDish)
+    return mains[mainIndex];
   }
 }
 
 function getRandomDessert(array) {
   var dessertIndex = getRandomNumber(array);
   for (var i = 0; i < desserts.length; i++) {
-  var dessertDish = desserts[dessertIndex];
-  console.log(dessertDish)
+  return desserts[dessertIndex];
   }
 }
 

@@ -71,8 +71,8 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 5px;
 }
-
 
 .cookpot {
   display: block;
@@ -80,6 +80,18 @@ label {
   height: 150px;
 }
 
-#hide-me {
-  display: none;
+.you-should-make {
+  display: block;
+  /* position: fixed; */
+  font-size: 18px;
+  font-style: italic;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dish {
+
+  font-size: 35px;
+  justify-content: center;
+  /* margin-top: 10px; */
 }

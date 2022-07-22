@@ -81,14 +81,17 @@ function updateToCook() {
 function displayWhatToMake() {
   console.log(hideImage);
   cookPotImage.classList.add("hidden");
-  whatToMake.innerHTML = "";
-  whatToMake.innerHTML += `<p class="shouldMake">You should make:</p>
-  <p class="dish">${random}<p>
-    <button class="clear">Clear</button>`;
+
+  hideImage.innerHTML = "";
+  hideImage.innerHTML += `
+  <div class="shouldMake"><p class="shouldMakeText"">You should make:</p>
+  <p class="dish">${random}!</p></div>
+  <div class="clear">
+    <button class="clearButton">CLEAR</button>
+    </div>`;
 }
 
 function hideCard() {
-  console.log("here");
   cookPotImage.classList.remove("hidden");
   whatToMake.classList.add("hidden");
 }

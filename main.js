@@ -35,16 +35,16 @@ var dessert = [
 ];
 
 //------------------------query selectors
-var letsCook = document.querySelector('button');
-
-
-
-
-
-
+var side = document.querySelector('#side');
+var mainDish = document.querySelector('#main-dish');
+var dessert = document.querySelector('#dessert');
+var entireMeal = document.querySelector('#entire-meal');
+var letsCook = document.querySelector('.lets-cook');
+var cookpot = document.querySelector('.cookpot');
 
 //------------------------event listeners
 button.addEventListener('click', updateFeeling);
+
 
 
 

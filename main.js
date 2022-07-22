@@ -61,17 +61,43 @@ var mainChooser = document.querySelector("#main-dish")
 var dessertChooser = document.querySelector("#dessert")
 var wholeMealChooser = document.querySelector("#entire-meal")
 var allChoosers = document.querySelectorAll("#radio")
-
+var choosers = [sideChooser, mainChooser, dessertChooser, wholeMealChooser]
 //event listeners:
-// cornerAddBtn.addEventListener("click", functionHere)
-letsCookBtn.addEventListener("click", generateRandom)
+//this will generate the random output:
+for (var i = 0; i < choosers.length; i++) {
+  choosers[i].addEventListener("input", generateRandom)
+}
+//this will trigger the output to display:
+letsCookBtn.addEventListener("click", displayRandom)
 // clearBtn.addEventListener("click", clearOutput)
 
-function generateRandom(event){
-  var userSelection = event.target
-  if (userSelection == sideChooser) {
+
+//FUNCTIONS:
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length)
+}
+
+function generateRandom(event) {
+  var dishType = event.target.id
+  console.log(dishType)
+  if (dishType === "entire-meal") {
+    var wholeMeal = { main: getRandomIndex(mains),
+      side: getRandomIndex(sides),
+      dessert: getRandomIndex(desserts) }
+      console.log(wholeMeal)
+      console.log(mains[wholeMeal.main], sides[wholeMeal.side], desserts[wholeMeal.dessert])
+      return wholeMeal
+    } else {
+      var chosenNum = (getRandomIndex(dishType))
+      console.log(dishType[chosenNum])
+    return getRandomIndex(dishType)
+  }
+
+
     console.log("Hello")
   }
+function displayRandom(){
+  console.log("hi")
 }
 //find out which radio btn user clicked on
 //assign that to a variable (userSelection)

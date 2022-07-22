@@ -57,12 +57,6 @@ function displayADish() {
   suggestedDish.innerHTML =
       `<h3 class="you-should-make">You should make:</h3>
       <h1 class="dish">${retrievedDish}!</h1>`
-  console.log(retrievedDish);
-  for (var i = 0; i < retrievedDish.length; i++) {
-      suggestedDish.innerHTML =
-      `<h3 class="you-should-make">You should make:</h3>
-      <h1 class="dish" id="entire-meal">${retrievedDish[1]} with a side of ${retrievedDish[0]} and ${retrievedDish[2]} for dessert!</h1>`
-  }
 }
 
 function selectAType() {
@@ -85,7 +79,7 @@ function retrieveADish(selectedType) {
     var dessertDish = getRandomDessert(desserts);
     return dessertDish;
   } else if (selectedType === "meal") {
-    var entireMeal = [getRandomSide(sides), getRandomMain(mains), getRandomDessert(desserts)];
+    var entireMeal = `${getRandomMain(mains)} with a side of ${getRandomSide(sides)} and ${getRandomDessert(desserts)} for dessert`;
     return entireMeal
   }
 }

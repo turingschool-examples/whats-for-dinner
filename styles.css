@@ -28,6 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin:-8;
+  /*font weight*/
 }
 
 h1 {
@@ -38,6 +39,7 @@ h1 {
   font-weight: bold;
 }
 
+/*add recipe button*/
 .add-recipe {
   width: 120px;
   height: 35px;
@@ -45,8 +47,10 @@ h1 {
   border: none;
   margin-right: 2em;
   font-size: 14;
+  /*font weight*/
 }
 
+/*What are you looking for section*/
 .selections {
   border: 519px 415px;
   background-color: rgba(225, 225, 225, .9);
@@ -56,28 +60,69 @@ h1 {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items:baseline;
+  /*need to push containers apart ~10px*/
 }
 
-.cooking-pot{
+/*cook pot container*/
+.cook-pot-div{
   background-color: rgba(225, 225, 225, .9);
   width: 510px;
   height: 410px;
-  background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg");
+ /* background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25%;
+  background-size: 25%;*/
 }
 
+/*cook pot photo*/
+.cook-pot {
+  margin-left: 190px;
+  margin-top: 130px;
+  width: 110;
+  height: 160px;
+  visibility: visible;
+}
+
+.hidden-div {
+
+}
+
+
+/*h3 you should make:*/
+.you-should {
+  visibility: hidden;
+  font-size: 20;
+  font-style: italic;
+
+}
+
+/*clear button*/
+.clear {
+  visibility: hidden;
+  background-color: #95a5a6;
+  border: none;
+  width: 80px;
+  height: 35px;
+  font-size: 15;
+  color: white;
+  border-radius: 5px;
+  margin-left: 400px;
+
+
+ 
+}
+
+/*WAYLF & cook pot containers*/
 section {
     display: flex;
     flex-direction: row;
-
     justify-content: space-evenly;
     align-items:flex-end;
     align-content: center;
     margin-top: 4em;
 }
 
+/*lets cook button*/
 .lets-cook {
   background-color: #0fb9b1;
   border: none;
@@ -89,6 +134,7 @@ section {
   /*font weight doesnt seem to work*/
 }
 
+/*what are you looking for heading*/
 h2 {
   font-size: 30;
   margin-left: 1em;
@@ -100,6 +146,7 @@ h2 {
   font-size: 28;
 }
 
+/*radio input button list*/
 ul {
   font-size: 20;
   display: flex;
@@ -107,7 +154,9 @@ ul {
 	justify-content: space-between;
 	align-items: center;
   display: inline;
+  /*space selections more*/
 }
+
 
 li {
  

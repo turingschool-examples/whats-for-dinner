@@ -11,22 +11,15 @@
 
 .result--content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
 }
 
-.cookpot--image {
+.cookpot-image {
   width: 160px;
   height: 160px;
-}
-
-.result-paragraph {
-
-}
-
-.result--input {
-  font-size: 45px;
 }
 
 .hidden {

@@ -54,16 +54,9 @@ function displayADish() {
   var selectedType = selectAType();
   var retrievedDish = retrieveADish(selectedType);
   var suggestedDish = document.querySelector(".suggestions");
-  // if (retrievedDish) {
-    suggestedDish.innerHTML =
-        `<h3 class="you-should-make">You should make:</h3>
-        <h1 class="dish">${retrievedDish}!</h1>`
-  //       console.log('hello')
-  //   } else {
-  //     suggestedDish.innerHTML =
-  //     `<h3 class="you-should-make">You should make:</h3>
-  //     <h1 class="dish" style="font-size: 20px">${retrievedDish}!</h1>`
-  // }
+  suggestedDish.innerHTML =
+      `<h3 class="you-should-make">You should make:</h3>
+      <h1 class="dish">${retrievedDish}!</h1>`
 }
 
 function selectAType() {

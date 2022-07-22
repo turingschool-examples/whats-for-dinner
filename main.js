@@ -54,9 +54,16 @@ function displayADish() {
   var selectedType = selectAType();
   var retrievedDish = retrieveADish(selectedType);
   var suggestedDish = document.querySelector(".suggestions");
-  suggestedDish.innerHTML = 
-      `<h3 class="you-should-make">You should make:</h3>
-      <h1 class="dish">${retrievedDish}!</h1>`
+  // if (retrievedDish) {
+    suggestedDish.innerHTML =
+        `<h3 class="you-should-make">You should make:</h3>
+        <h1 class="dish">${retrievedDish}!</h1>`
+  //       console.log('hello')
+  //   } else {
+  //     suggestedDish.innerHTML =
+  //     `<h3 class="you-should-make">You should make:</h3>
+  //     <h1 class="dish" style="font-size: 20px">${retrievedDish}!</h1>`
+  // }
 }
 
 function selectAType() {
@@ -78,6 +85,9 @@ function retrieveADish(selectedType) {
   } else if (selectedType === "dessert") {
     var dessertDish = getRandomDessert(desserts);
     return dessertDish;
+  } else if (selectedType === "meal") {
+    var entireMeal = `${getRandomMain(mains)} with a side of ${getRandomSide(sides)} and ${getRandomDessert(desserts)} for dessert`;
+    return entireMeal
   }
 }
 
@@ -105,7 +115,3 @@ function getRandomDessert(array) {
   return desserts[dessertIndex];
   }
 }
-
-//click lets cook,
-//take input value and generate the coresponding random index
-//hide cookpot image, display array item at that index

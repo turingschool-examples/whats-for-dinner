@@ -4,20 +4,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>What's for Dinner?</h1>
-      <button class="add-recipe">Add a Recipe</button>
+      <button class="add-recipe">ADD A RECIPE</button>
     </header>
-  <section>
-    <h2>What are you looking for? </h2>
-      <ul>
-        <li>Side</li>
-        <li>Main Dish</li>
-        <li>Dessert</li>
-        <li>Entire Meal</li>
-      </ul>
-      <button class="lets-cook">LET'S COOK!</button>
-  </section>
+    <section>
+      <div class="selections">
+        <h2 contenteditable>
+          What are you looking for?<span style="color: red">*</span>
+        </h2>
+         <ul style="list-style-type:none">
+            <li><input type="radio" name="action" id="side" value="side"><label for="side">Side</label></li>
+            <li><input type="radio" name="action" id="main-dish" value="main dish"><label for="main-dish">Main Dish</label></li>
+            <li><input type="radio" name="action" id="dessert" value="dessert"><label for="dessert">Dessert</label></li>
+            <li><input type="radio" name="action" id="entire-meal" value="entire meal"><label for="entire-meal">Entire Meal</label></li>
+          </ul>
+          <button class="lets-cook">LET'S COOK!</button>
+      </div>
+      <div class="cooking-pot">
+        <img src="cookpot.svg">
+      </div>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

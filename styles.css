@@ -7,8 +7,98 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+html {
+  height: vw;
+  width: vh;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/burger-friends.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.header {
+  background-color: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  width: vw;
+  height: vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:-8;
+}
+
+h1 {
+  font-size: 24 ;
+  font-weight: 300;
+  align-items: center;
+  margin-left: 1em;
+  font-weight: bold;
+}
+
+.add-recipe {
+  width: 120px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 1em;
+  font-size: 14;
+}
+
+.selections {
+  border: 519px 415px;
+  background-color: rgba(225, 225, 225, .9);
+  width: 505px;
+  height: 410px;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items:baseline;
+
+}
+
+.cooking-pot{
+  background-color: rgba(225, 225, 225, .9);
+  width: 505px;
+  height: 410px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items:flex-end;
+    align-content: center;
+    margin-top: 4em;
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  border: none;
+  width: 180px;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 2em;
+  margin-bottom: 3em;
+  /*font weight doesnt seem to work*/
+}
+
+h2 {
+  font-size: 30;
+  margin-left: 1em;
+  margin-top: 3em;
+}
+
+ul {
+  font-size: 20;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+  display: inline;
 }

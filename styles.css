@@ -87,7 +87,7 @@ div {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 section.make {
   display: flex;

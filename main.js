@@ -53,19 +53,16 @@ var desserts = [
 
 // Variables
 var cookButton = document.querySelector(".cook");
-var whatToMake = document.querySelector(".make");
 var hideImage = document.querySelector(".cook-pot-card");
 var cookPotImage = document.querySelector(".cook-pot");
 var random = "";
-// var clearButton = document.querySelector(".clearButton");
-// Event Listeners
 
+// Event Listeners
 cookButton.addEventListener("click", updateToCook);
-// clearButton.addEventListener("click", hideCard);
+
 // Functions
 function updateToCook() {
   var selectDish = document.querySelector('input[name="dish"]:checked').value;
-
   if (selectDish === "Side") {
     random = sides[getRandomIndex(sides)];
     displayWhatToMake();
@@ -79,6 +76,7 @@ function updateToCook() {
     displayEntireMeal();
   }
 }
+
 function displayWhatToMake() {
   cookPotImage.classList.add("hidden");
   hideImage.innerHTML = "";
@@ -86,9 +84,10 @@ function displayWhatToMake() {
   <div class="shouldMake"><p class="shouldMakeText"">You should make:</p>
   <p class="dish">${random}!</p></div>
   <div class="clear">
-    <button class="clearButton">CLEAR</button>
+    <button onclick="hideCard()" class="clearButton">CLEAR</button>
     </div>`;
 }
+
 function displayEntireMeal() {
   cookPotImage.classList.add("hidden");
   hideImage.innerHTML = "";
@@ -98,13 +97,17 @@ function displayEntireMeal() {
     sides[getRandomIndex(sides)]
   } and ${desserts[getRandomIndex(desserts)]} for dessert!</p></div>
   <div class="clear">
-    <button class="clearButton">CLEAR</button>
+    <button onclick="hideCard()" class="clearButton">CLEAR</button>
     </div>`;
 }
-// function hideCard() {
-//   whatToMake.classList.add("hidden");
-//   cookPotImage.classList.remove("hidden");
-// }
+
+function hideCard() {
+  clearButton = document.querySelector(".clearButton");
+  var whatToMake = document.querySelector(".shouldMake");
+  whatToMake.classList.add("hidden");
+  clearButton.classList.add("hidden");
+  hideImage.innerHTML += `<img class="cook-pot" src="assets/cookpot.svg" />`;
+}
 
 // Random querySelector
 function getRandomIndex(array) {

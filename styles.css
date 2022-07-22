@@ -8,3 +8,121 @@ red - #ee5253
 
 */
 
+.bg-img {
+  background-image: url("/Users/ianmcintosh/whats-for-dinner/assets/burger-friends.jpg");
+  min-height: 100%;
+  background-size: 100%;
+  margin: 0px;
+}
+
+/* .top-container {
+  margin: 0px;
+  padding: 0px;
+} */
+
+.top-nav {
+  overflow: hidden;
+  background-color: #0fb9b1;
+}
+
+.top-nav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 14px 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.top-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.recipe-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  height: 30px;
+}
+
+
+/*--------------------------------- MIDDLE OF THE PAGE */
+.middle-page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.content-box {
+  background-color: rgba(225, 225, 225, .9);
+  width: 450px;
+  height: 350px;
+  padding: 50px;
+  margin: 20px;
+  margin-top: 80px;
+}
+
+.content-box h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+.content-box fieldset {
+  border: rgba(225, 225, 225, .9);
+  margin-top: 30px;
+}
+
+.content-box label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 5px;
+}
+
+.content-box input {
+  margin: 10px;
+}
+
+.content-box button {
+  background-color: #0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  margin-top: 30px;
+  border: 0;
+  border-radius: 5px;
+  width: 215px;
+  height: 35px
+}
+
+.content-box img {
+  height: 300px;
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+/* BOTTOM OF THE PAGE */
+.bottom-container {
+  position: absolute;
+  right: 0; 
+  bottom: 0; 
+  float:left;
+  margin: 0px;
+  bottom: 0px;
+  display: block;
+  left: 0px;
+}
+
+.bottom-nav {
+  overflow: hidden;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+
+
+

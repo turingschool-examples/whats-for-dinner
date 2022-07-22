@@ -102,6 +102,7 @@ p.dish {
   border: 3px #95a5a6;
   text-align: center;
   margin: auto;
+  font-family: "Roboto", sans-serif;
   font-style: bold;
 }
 .shouldMake {

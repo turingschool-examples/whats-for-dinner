@@ -57,31 +57,30 @@ var whatToMake = document.querySelector(".make");
 var hideImage = document.querySelector(".cook-pot-card");
 var cookPotImage = document.querySelector(".cook-pot");
 var random = "";
-var clearButton = document.querySelector(".clear");
+// var clearButton = document.querySelector(".clearButton");
 // Event Listeners
 
 cookButton.addEventListener("click", updateToCook);
-clearButton.addEventListener("click", hideCard);
+// clearButton.addEventListener("click", hideCard);
 // Functions
 function updateToCook() {
   var selectDish = document.querySelector('input[name="dish"]:checked').value;
-  console.log(selectDish);
+
   if (selectDish === "Side") {
     random = sides[getRandomIndex(sides)];
     displayWhatToMake();
   } else if (selectDish === "Main Dish") {
     random = mainDishes[getRandomIndex(mainDishes)];
     displayWhatToMake();
-  } else {
+  } else if (selectDish === "Dessert") {
     random = desserts[getRandomIndex(desserts)];
     displayWhatToMake();
+  } else {
+    displayEntireMeal();
   }
 }
-
 function displayWhatToMake() {
-  console.log(hideImage);
   cookPotImage.classList.add("hidden");
-
   hideImage.innerHTML = "";
   hideImage.innerHTML += `
   <div class="shouldMake"><p class="shouldMakeText"">You should make:</p>
@@ -90,11 +89,22 @@ function displayWhatToMake() {
     <button class="clearButton">CLEAR</button>
     </div>`;
 }
-
-function hideCard() {
-  cookPotImage.classList.remove("hidden");
-  whatToMake.classList.add("hidden");
+function displayEntireMeal() {
+  cookPotImage.classList.add("hidden");
+  hideImage.innerHTML = "";
+  hideImage.innerHTML += `
+  <div class="shouldMake"><p class="shouldMakeText"">You should make:</p>
+  <p class="dish">${mainDishes[getRandomIndex(mainDishes)]} with a side of ${
+    sides[getRandomIndex(sides)]
+  } and ${desserts[getRandomIndex(desserts)]} for dessert!</p></div>
+  <div class="clear">
+    <button class="clearButton">CLEAR</button>
+    </div>`;
 }
+// function hideCard() {
+//   whatToMake.classList.add("hidden");
+//   cookPotImage.classList.remove("hidden");
+// }
 
 // Random querySelector
 function getRandomIndex(array) {

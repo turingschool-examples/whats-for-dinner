@@ -51,6 +51,7 @@ var mains = ["Spaghetti and Meatballs",
 "Margarita Pizza",
 "Korean Glazed Meatloaf",
 "Cajun Salmon"]
+var counter = 0
 
 //selectors:
 var resultsText = document.querySelector("#results")
@@ -97,16 +98,17 @@ function generateRandom(event) {
       recommendedRecipe = desserts[getRandomIndex(desserts)]
     }
   }
-  //need to refactor so that button click is what triggers generation and rendering of results
 
-function displayRandom() {
-  outputBox.classList.remove("hidden")
-  outputBoxMain.classList.add("hidden")
-  results.innerText = recommendedRecipe
-
-  //hide output box main
-  //unhide output box hidden
-  //add results of generateRandom
+function displayRandom(event) {
+  if (outputBoxMain.classList.contains("hidden")) {
+    console.log("Hi")
+    generateRandom(event)
+    results.innerText = recommendedRecipe
+  } else {
+    outputBox.classList.remove("hidden")
+    outputBoxMain.classList.add("hidden")
+    results.innerText = recommendedRecipe
+  }
 }
 
 //find out which radio btn user clicked on

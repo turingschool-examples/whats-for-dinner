@@ -26,7 +26,6 @@
   display: none;
 }
 
-
 .result--action-row {
   display: flex;
   justify-content: flex-end;
@@ -38,4 +37,21 @@
   color: white;
   border: 0;
   padding: 10px;
+}
+
+.result--dont-like {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.result--dont-like-button {
+  border-radius: 6px;
+  background-color: #36454F;
+  color: white;
+  border: 0;
+  padding: 10px;
+}
+
+.dish-name {
+  text-align: center;
 }

@@ -4,6 +4,7 @@ let displayBox = document.querySelector('.result--content');
 let cookpotImg = document.querySelector('.cookpot-image');
 let selectMessage = document.querySelector('.select');
 let clearButton = document.querySelector('.result--clear-button');
+let removeDishButton = document.querySelector('.result--dont-like-button');
 //arrays for each course
 let sides = [
   "Steamed Edamame",
@@ -74,7 +75,7 @@ let currentDish = '';
 //event listeners below
 chooseNewDishButton.addEventListener('click', showACourseDish);
 clearButton.addEventListener('click', clearResultBox);
-
+removeDishButton.addEventListener('click', removeThisDish);
 
 // functions below
 function getRandomArray(arr) {
@@ -91,7 +92,7 @@ function displayDishResult(dish) {
   cookpotImg.classList.add('hidden');
 
   displayBox.innerHTML = `<p><em>You should make:</em></p>
-  <h1>${dish.name}</h1>`;
+  <h1 class="dish-name">${dish.name}</h1>`;
 
   return displayBox;
 }
@@ -113,14 +114,17 @@ function showACourseDish() {
   else if (chooseDishType.value === "Side") {
     currentDish = getRandomDish(sides);
     displayDishResult(currentDish);
+    removeDishButton.classList.remove('hidden');
   } 
   else if (chooseDishType.value === "Main-Dish") {
     currentDish = getRandomDish(mains);
     displayDishResult(currentDish);
+    removeDishButton.classList.remove('hidden');
   } 
   else if (chooseDishType.value === "Dessert") {
     currentDish = getRandomDish(desserts);
     displayDishResult(currentDish);
+    removeDishButton.classList.remove('hidden');
   }
 
   clearButton.classList.remove('hidden');
@@ -130,4 +134,41 @@ function clearResultBox() {
   displayBox.classList.add('hidden');
 
   clearButton.classList.add('hidden');
+
+  removeDishButton.classList.add('hidden');
+}
+
+function removeFromSides() {
+  for (let i = 0; i < sides.length; i++) {
+    if (currentDish.name === sides[i]) {
+      sides.splice(i, 1);
+    }
+  }
+  return sides;
+}
+
+function removeFromMains() {
+  for (let i = 0; i < mains.length; i++) {
+    if (currentDish.name === mains[i]) {
+      mains.splice(i, 1);
+    }
+  }
+  return mains;
+}
+
+function removeFromDesserts() {
+  for (let i = 0; i < desserts.length; i++) {
+    if (currentDish.name === desserts[i]) {
+      desserts.splice(i, 1);
+    }
+  }
+  return desserts;
+}
+
+function removeThisDish() {
+  removeFromSides();
+  
+  removeFromMains();
+  
+  removeFromDesserts();
 }

@@ -33,31 +33,39 @@ body {
 .main {
   display: flex;
   justify-content: space-evenly;
-  border: 3px solid blue;
 }
 h2 {
   font-size: 35px;
 }
 .card {
+  box-sizing: border-box;
   background-color: rgba(225, 225, 225, 0.9);
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  width: 450px;
+  height: 450px;
   padding: 60px;
+
   margin: 40px 80px 40px 100px;
 }
 .cook-pot-card {
   display: flex;
   flex-grow: 1;
   background-color: rgba(225, 225, 225, 0.9);
-  padding: 120px;
+  padding: 10px;
   margin: 40px 80px 40px 100px;
+  width: 450px;
+  height: 450px;
+  align-content: center;
+  justify-content: center;
+  position: relative;
 }
 .cook-pot {
   display: flex;
-  /*   */
-  align-content: center;
-  flex-direction: column;
+  padding: 100px;
+  justify-content: center;
+  margin-top: 35px;
 }
 .list {
   display: flex;
@@ -77,13 +85,54 @@ div {
   padding: 5px;
   font-size: 20px;
 }
-.clear {
-  align: right;
-}
+
 .hidden {
   display: none;
 }
-.make {
+section.make {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-grow: 1;
+}
+p.dish {
+  display: flex;
+  font-size: 50px;
+  float: center;
+  border: 3px #95a5a6;
+  text-align: center;
+  margin: auto;
+  font-style: bold;
+}
+.shouldMake {
+  align-items: stretch;
   display: flex;
   flex-direction: column;
+  align-self: center;
+  font-style: italic;
+  font-size: 30px;
+  margin: 0px;
+  border: 3px #95a5a6;
+}
+.clearButton {
+  display: flex;
+  border-radius: 5px;
+  background-color: #95a5a6;
+  border: #95a5a6;
+  font-size: 15px;
+  padding: 12px;
+  color: white;
+  justify-content: flex-end;
+}
+.clear {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+.shouldMakeText {
+  margin: 5px;
+  text-align: center;
 }

@@ -57,10 +57,11 @@ var whatToMake = document.querySelector(".make");
 var hideImage = document.querySelector(".cook-pot-card");
 var cookPotImage = document.querySelector(".cook-pot");
 var random = "";
+var clearButton = document.querySelector(".clear");
 // Event Listeners
 
 cookButton.addEventListener("click", updateToCook);
-
+clearButton.addEventListener("click", hideCard);
 // Functions
 function updateToCook() {
   var selectDish = document.querySelector('input[name="dish"]:checked').value;
@@ -80,9 +81,19 @@ function updateToCook() {
 function displayWhatToMake() {
   console.log(hideImage);
   cookPotImage.classList.add("hidden");
-  whatToMake.innerHTML += `<h2>You should make:</h2>
-  <p class="dish">${random}<p>
-    <button class="clear">Clear</button>`;
+
+  hideImage.innerHTML = "";
+  hideImage.innerHTML += `
+  <div class="shouldMake"><p class="shouldMakeText"">You should make:</p>
+  <p class="dish">${random}!</p></div>
+  <div class="clear">
+    <button class="clearButton">CLEAR</button>
+    </div>`;
+}
+
+function hideCard() {
+  cookPotImage.classList.remove("hidden");
+  whatToMake.classList.add("hidden");
 }
 
 // Random querySelector

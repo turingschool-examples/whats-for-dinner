@@ -8,13 +8,24 @@ red - #ee5253
 
 */
 
+* {
+  border: solid 2px red;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family:'Roboto', sans-serif;
-  background-color: #0fb9b1;
+  background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
 h1 {
+  display: flex;
   margin: 0;
   display: inline-block;
   padding: 5px
@@ -22,10 +33,16 @@ h1 {
 }
 
 .top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   background: #0fb9b1;
   font-size: small;
   padding-bottom: 15px;
+  height: 15%;
+  width: 100%;
 }
 
 .button {
@@ -35,11 +52,12 @@ h1 {
   padding: 7px 5px;
   border-radius: 8px;
   border-style: outset;
+  height: 30%;
+  width: 10%;
 }
 
 .button-2 {
   display: block;
-  float: inherit;
   font-size: 15px;
   background-color: #0fb9b1;
   border-radius: 8px;
@@ -52,15 +70,27 @@ img {
   width: 100%;
 }
 
-.container {
+.main-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
 
+}
+input {
+  vertical-align: text-top;
+  padding-bottom: 10px;
+  display:
 }
 
 .text-block {
   position: absolute;
   border: 1px solid white;
   background-color: rgba(225, 225, 225, .9);
+  padding: 30px 50px 50px;
+}
+
+.hidden {
+  display: none;
 }

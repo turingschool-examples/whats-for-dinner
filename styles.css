@@ -43,7 +43,6 @@ red - #ee5253
   margin: 0px 30px;
   padding:5px 0px;
   text-align: center;
-
 }
 .idea {
   font-family: 'Roboto', sans-serif;
@@ -60,7 +59,7 @@ red - #ee5253
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: none;
+  border: 1px solid white;
   margin: none;
   padding: none;
 }

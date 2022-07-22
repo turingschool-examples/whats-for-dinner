@@ -91,7 +91,7 @@ function displayDishResult(dish) {
   cookpotImg.classList.add('hidden');
 
   displayBox.innerHTML = `<p><em>You should make:</em></p>
-  <h1>${dish.name}</h1>`;
+  <h1 class="dish-name">${dish.name}</h1>`;
 
   return displayBox;
 }

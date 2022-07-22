@@ -18,31 +18,29 @@
         <h3 class="selection-box--title">What are you looking for?<span class="selection-box--asterisk">*</span></h3>
         <div class="selection-box--radios">
           <div>
-            <input type="radio" id="side" name="meal-types" value="Sides">
-            <label for="Sides">Sides</label>
+            <input type="radio" id="side" name="meal-types" value="Side">
+            <label for="side">Side</label>
           </div>
           <div>
             <input type="radio" id="main-dish" name="meal-types" value="Main-Dish">
-            <label for="Main-Dish">Main Dish</label>
+            <label for="main-dish">Main Dish</label>
           </div>
           <div>
             <input type="radio" id="dessert" name="meal-types" value="Dessert">
-            <label for="Dessert">Dessert</label>
+            <label for="dessert">Dessert</label>
           </div>
           <div>
             <input type="radio" id="entire-meal" name="meal-types" value="Entire-Meal">
-            <label for="Entire-Meal">Entire Meal</label>
+            <label for="entire-meal">Entire Meal</label>
           </div>
-          <div>
+          <div class="select">
             <button class="selection--submit-button">LET'S COOK!</button>
           </div>
         </div>
       </div>
       <div class="result--box">
         <div class="result--content">
-          <img class="cookpot--image" src="./assets/cookpot.svg" alt="cookpot">
-          <p class="result-paragraph hidden"><em>You should make:</em></p>
-          <h1 class="result--input hidden"></h1>
+          <img class="cookpot-image" src="./assets/cookpot.svg" alt="cookpot">
         </div>
         <div class="result--action-row">
           <button class="result--clear-button hidden">CLEAR</button>
@@ -50,5 +48,6 @@
       </div>
     </div>
   </body>
-  <script type="javascript" src="main.js"></script>
+  <script src="Dish.js"></script>
+  <script src="main.js"></script>
 </html>

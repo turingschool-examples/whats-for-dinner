@@ -1,8 +1,8 @@
 //query selectors below
-
 let chooseNewDishButton = document.querySelector('.selection--submit-button');
-
-
+let displayBox = document.querySelector('.result--content');
+let cookpotImg = document.querySelector('.cookpot-image');
+let selectMessage = document.querySelector('.select');
 //arrays for each course
 let sides = [
   "Steamed Edamame",
@@ -21,7 +21,8 @@ let sides = [
   "Sauteed Zucchini and Squash",
   "Quinoa and Broccoli Slaw",
   "Ceviche and Taro Chips",
-  "Takoyaki"
+  "Takoyaki",
+  "Roasted Brussel Sprouts"
 ];
 
 let mains = [
@@ -64,7 +65,8 @@ let desserts = [
   "Halo-Halo",
   "Candied Sweet Potato",
   "Macha Cake",
-  "Strawberry Mochi"
+  "Strawberry Mochi",
+  "Chai Seed Rainbox Pudding"
 ];
 let currentDish = '';
 
@@ -83,24 +85,40 @@ function getRandomDish(arr) {
 
   return dish;
 }
- 
+
+function displayDishResult(dish) {
+  cookpotImg.classList.add('hidden');
+
+  displayBox.innerHTML = `<p><em>You should make:</em></p>
+  <h1>${dish.name}</h1>`;
+
+  return displayBox;
+}
+
+function requireSelection() {
+  displayBox.innerHTML = `<p><em>Please select one</em></p>`;
+
+  return selectMessage;
+}
 
 function showACourseDish() {
   currentDish = '';
   let chooseDishType = document.querySelector('input[name="meal-types"]:checked');
-  console.log(chooseDishType)
-  // I want to check if the input selected Side, Main Dish, or Dessert when the button is pushed
-  if (chooseDishType.value === "Sides") {
-    console.log(currentDish = getRandomDish(sides));
-  } 
-  if (chooseDishType.value === "Main-Dish") {
-    console.log(currentDish = getRandomDish(mains));
-  } 
-  if (chooseDishType.value === "Dessert") {
-    console.log(currentDish = getRandomDish(desserts));
-  }
-  
-}
-// Next, I want the currentDish selected to show in my result-box
 
+  if (chooseDishType === null) {
+    requireSelection();
+  }
+  else if (chooseDishType.value === "Side") {
+    currentDish = getRandomDish(sides);
+    displayDishResult(currentDish);
+  } 
+  else if (chooseDishType.value === "Main-Dish") {
+    currentDish = getRandomDish(mains);
+    displayDishResult(currentDish);
+  } 
+  else if (chooseDishType.value === "Dessert") {
+    currentDish = getRandomDish(desserts);
+    displayDishResult(currentDish);
+  }
+}
 

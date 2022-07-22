@@ -3,6 +3,7 @@ let chooseNewDishButton = document.querySelector('.selection--submit-button');
 let displayBox = document.querySelector('.result--content');
 let cookpotImg = document.querySelector('.cookpot-image');
 let selectMessage = document.querySelector('.select');
+let clearButton = document.querySelector('.result--clear-button');
 //arrays for each course
 let sides = [
   "Steamed Edamame",
@@ -72,12 +73,12 @@ let currentDish = '';
 
 //event listeners below
 chooseNewDishButton.addEventListener('click', showACourseDish);
-
+clearButton.addEventListener('click', clearResultBox);
 
 
 // functions below
 function getRandomArray(arr) {
-  return Math.floor(Math.random() * arr.length)
+  return Math.floor(Math.random() * arr.length);
 }
 
 function getRandomDish(arr) {
@@ -102,7 +103,8 @@ function requireSelection() {
 }
 
 function showACourseDish() {
-  currentDish = '';
+  displayBox.classList.remove('hidden');
+
   let chooseDishType = document.querySelector('input[name="meal-types"]:checked');
 
   if (chooseDishType === null) {
@@ -120,5 +122,12 @@ function showACourseDish() {
     currentDish = getRandomDish(desserts);
     displayDishResult(currentDish);
   }
+
+  clearButton.classList.remove('hidden');
 }
 
+function clearResultBox() {
+  displayBox.classList.add('hidden');
+
+  clearButton.classList.add('hidden');
+}

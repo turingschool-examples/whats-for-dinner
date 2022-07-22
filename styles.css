@@ -174,9 +174,6 @@ header {
   width: 900px;
   height: 500px;
   margin: 50px 0px 50px 0px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .noFavoritesContainer {
@@ -186,8 +183,6 @@ header {
   align-items: center;
   text-align: center;
 }
-
-/* ************ */
 
 .favoriteRecipesDisplay {
   /* border: 2px solid purple; */

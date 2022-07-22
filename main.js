@@ -53,6 +53,9 @@ var mains = ["Spaghetti and Meatballs",
 "Cajun Salmon"]
 
 //selectors:
+var resultsText = document.querySelector("#results")
+var outputBox = document.querySelector("#output-box")
+var outputBoxMain = document.querySelector("#output-box-main")
 var cornerAddBtn = document.querySelector("#corner-add-button")
 var letsCookBtn = document.querySelector("#lets-cook")
 var clearBtn = document.querySelector("#clear-btn")
@@ -61,7 +64,7 @@ var mainChooser = document.querySelector("#mains")
 var dessertChooser = document.querySelector("#desserts")
 var wholeMealChooser = document.querySelector("#entire-meal")
 var allChoosers = [sideChooser, mainChooser, dessertChooser, wholeMealChooser]
-
+var recommendedRecipe
 //EVENT LISTENERS:
 //add event listener to each radio button:
 for (var i = 0; i < allChoosers.length; i++) {
@@ -84,18 +87,26 @@ function generateRandom(event) {
     var wholeMeal = { main: mains[getRandomIndex(mains)],
       side: sides[getRandomIndex(sides)],
       dessert: desserts[getRandomIndex(desserts)] }
-      return wholeMeal
+      recommendedRecipe = `${wholeMeal.main} with a side of ${wholeMeal.side}
+      and ${wholeMeal.dessert} for dessert!`
     } else if (dishType === "sides") {
-      return sides[getRandomIndex(sides)]
+      recommendedRecipe = sides[getRandomIndex(sides)]
     } else if (dishType === "mains") {
-      return mains[getRandomIndex(mains)]
+      recommendedRecipe = mains[getRandomIndex(mains)]
     } else if (dishType === "desserts") {
-      return desserts[getRandomIndex(desserts)]
+      recommendedRecipe = desserts[getRandomIndex(desserts)]
     }
   }
+  //need to refactor so that button click is what triggers generation and rendering of results
 
-function displayRandom(){
-  console.log("hi")
+function displayRandom() {
+  outputBox.classList.remove("hidden")
+  outputBoxMain.classList.add("hidden")
+  results.innerText = recommendedRecipe
+
+  //hide output box main
+  //unhide output box hidden
+  //add results of generateRandom
 }
 
 //find out which radio btn user clicked on

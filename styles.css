@@ -5,8 +5,8 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
+
 header {
   background-color: #0fb9b1;
   height: 60px;
@@ -30,7 +30,7 @@ main {
   display: flex;
   font-family: 'Roboto', sans-serif;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 50px;
 }
@@ -72,7 +72,6 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* column-gap: 5px; */
 }
 
 .cookpot {
@@ -85,10 +84,14 @@ label {
   position: fixed;
   font-size: 18px;
   font-style: italic;
-  margin-bottom: 75px;
+  margin-bottom: 100px;
 }
 
 .dish {
   font-size: 35px;
-  justify-content: center;
+}
+
+#entire-meal {
+  font-size: 20px;
+  align-items: center;
 }

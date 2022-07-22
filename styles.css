@@ -43,33 +43,35 @@ h1 {
   height: 35px;
   border-radius: 5px;
   border: none;
-  margin-right: 1em;
+  margin-right: 2em;
   font-size: 14;
 }
 
 .selections {
   border: 519px 415px;
   background-color: rgba(225, 225, 225, .9);
-  width: 505px;
+  width: 510px;
   height: 410px;
   display: flex;
 	flex-direction: column;
-	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	align-items:baseline;
-
 }
 
 .cooking-pot{
   background-color: rgba(225, 225, 225, .9);
-  width: 505px;
+  width: 510px;
   height: 410px;
+  background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
 }
 
 section {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+
     justify-content: space-evenly;
     align-items:flex-end;
     align-content: center;
@@ -82,23 +84,31 @@ section {
   width: 180px;
   height: 35px;
   border-radius: 5px;
-  margin-left: 2em;
-  margin-bottom: 3em;
+  margin-left: 3em;
+  margin-bottom: 4em;
   /*font weight doesnt seem to work*/
 }
 
 h2 {
   font-size: 30;
   margin-left: 1em;
-  margin-top: 3em;
+  margin-top: 2em;
+}
+
+.asterik {
+  color: red;
+  font-size: 28;
 }
 
 ul {
   font-size: 20;
   display: flex;
 	flex-direction: column;
-	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
   display: inline;
+}
+
+li {
+ 
 }

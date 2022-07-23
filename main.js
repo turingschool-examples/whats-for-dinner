@@ -1,4 +1,4 @@
-var side = [
+var sideDishes = [
     "asaparugus",
     "baked beans",
     "french fries",
@@ -7,10 +7,10 @@ var side = [
     "green beans",
     "mac and cheese",
     "mashed potatoes",
-    "salad",
+    "salad"
 ];
 
-var mainDish = [
+var mainDishes = [
     "chicken",
     "meatloaf",
     "burger",
@@ -22,7 +22,7 @@ var mainDish = [
     "bbq ribs"
 ];
 
-var dessert = [
+var dessertDishes = [
     "cheesecake",
     "ice-cream",
     "apple pie",
@@ -31,11 +31,11 @@ var dessert = [
     "key-lime pie",
     "cookie",
     "banana pudding",
-    "boston creme pie",
+    "boston creme pie"
 ];
 
-var cookedDinner = [];
-var currentDinner = new Dinner(side[getRandomIndex(side)], mainDish[getRandomIndex(mainDish)], dessert[getRandomIndex(dessert)]);
+var currentFoodItem = "";
+
 
 /*do i need to make a variable for each array since user will 
 only select one at a time and will only spit out one random 
@@ -46,60 +46,57 @@ var side = document.querySelector('#side');
 var mainDish = document.querySelector('#main-dish');
 var dessert = document.querySelector('#dessert');
 var entireMeal = document.querySelector('#entire-meal');
-var letsCook = document.querySelector('.lets-cook');
+var letsCookBtn = document.querySelector('.lets-cook');
 var cookpot = document.querySelector('.cookpot');
-var food = document.querySelector('.food');
+var foodText = document.querySelector('.food-text');
+var clearBtn = document.querySelector('clear-button')
+
 //------------------------event listeners
 
-letsCook.addEventListener('click', cookDinner);
+letsCookBtn.addEventListener('click', cookDinner);
+clearBtn.addEventListener('click', clearingButton);
 
 
 
 //------------------------functions and event handlers 👇🏿
-function cookDinner(); {
-    var selectedDinnerItem = document.querySelector('input[name="dinner"]: checked').value;
-    if (selectedDinnerItem === "side") {
-        dinner.side = currentDinner;
-        displayDinner();
-    } else if (selectedDinnerItem === "main-dish") {
-        dinner.main-dish = currentDinner;
-        displayDinner();
-    } else if (selectedDinnerItem === "dessert") {
-        dinner.dessert = currentDinner;
-        displayDinner();
+function randomFood(foodType) {
+    if (foodType === 'side') {
+       var sideItem = sideDishes[randomIndex(sideDishes)];
+        return sideItem;
+    } else if (foodType === 'main-dish') {
+       var mainItem = mainDishes[randomIndex(mainDishes)];
+        return mainItem;
+    } else if (foodType === 'dessert') {
+       var dessertItem = dessertDishes[randomIndex(dessertDishes)];
+       return dessertItem;
     } else {
-        dinner.side = currentDinner;
-        displayDinner();
+        return 'Not a valid option!'
     }
 }
 
-function displayDinner() {
-    h2.innerText = "have this for dinner";
-  }
-  
-  displayDinnerg();
+function randomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+}
+
+function cookDinner(){ 
+    cookpot.classList.add('hidden');
+    foodText.classList.remove('hidden');
+    var selectedDinnerItem = document.querySelector('input[name="dinner"]:checked').value;
+        currentFoodItem = randomFood(selectedDinnerItem);
+    console.log(currentFoodItem);
+    foodText.innerText = `You should make: ${currentFoodItem}!`;
+}
+
+function clearingButton() {
+    foodText.classList.add('hidden');
+    cookpot.classList.remove('hidden');
+}
 
 
 
 
-
-/* do these need to be random or do i need one per array*/
-
-
-
-
-
-/* do i need to pull from the array with pop and then push into a new array?*/
-
-
-
-
-  /*When a user selects a dish option and then clicks the “Let’s Cook!” button, the user sees a random dish from the list of possible dishes for that category
-
-  When the dish name appears, the cookpot icon disappears*/
-
-
-
+// ------------------THINGS TO ADD
+// add CLEAR button
 
 
 

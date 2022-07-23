@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  
   <body class="bg-img">
     <section>
       <div class="top-container">
@@ -33,13 +34,20 @@
             <input type="radio" id="entire-meal" name="dinner" value="entire-meal">
             <label for="entire-meal">Entire Meal</label>
           </div>
-          <button class="lets-cook">LET'S COOK!</button>
+
+<!-- this button isnt working the way all the other buttons do -->
+
         </fieldset>
+        <button class="lets-cook">LET'S COOK!</button>
+<!-- take button out of fieldset -->
       </section>
 
       <section class="content-box">
-        <h2 class="food"></h2>
+        <h2 class="food-text hidden"></h2>
         <img src="/Users/ianmcintosh/whats-for-dinner/assets/cookpot.svg" class="cookpot">
+          <div class="clear-section">      
+            <button class="clear-button"">CLEAR</button>
+          </div>
       </section>
     </section>
 

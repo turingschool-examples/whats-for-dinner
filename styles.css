@@ -7,18 +7,13 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-
+/*----------------------------------- TOP OF THE PAGE*/
 .bg-img {
   background-image: url("/Users/ianmcintosh/whats-for-dinner/assets/burger-friends.jpg");
   min-height: 100%;
   background-size: 100%;
   margin: 0px;
 }
-
-/* .top-container {
-  margin: 0px;
-  padding: 0px;
-} */
 
 .top-nav {
   overflow: hidden;
@@ -93,12 +88,17 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   margin-top: 30px;
-  border: 0;
+  border-color: blue;
   border-radius: 5px;
   width: 215px;
-  height: 35px
+  height: 35px;
+  cursor: pointer;
 }
 
+.content-box button:hover {
+  background-color: #075450;
+  color: white;
+}
 .content-box img {
   height: 300px;
   width: 300px;
@@ -106,7 +106,18 @@ red - #ee5253
   margin-left: 70px;
 }
 
-/* BOTTOM OF THE PAGE */
+.clear-section button {
+  background-color: #95a5a6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: white;
+  border: 0;
+  width: 80px;
+  margin-top: 0px;
+  margin-right: 46px;
+}
+
+/* ----------------------------------------------BOTTOM OF THE PAGE */
 .bottom-container {
   position: absolute;
   right: 0; 
@@ -123,6 +134,11 @@ red - #ee5253
   background-color: rgba(225, 225, 225, .9);
 }
 
+
+/* UTILITIES */
+.hidden {
+  display: none;
+}
 
 
 

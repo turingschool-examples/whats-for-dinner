@@ -85,7 +85,7 @@ function getRandomArray(arr) {
 function getRandomDish(arr) {
   let dish = new Dish(arr[getRandomArray(arr)]);
 
-  return dish;
+  currentDish = dish;
 }
 
 function displayDishResult(dish) {
@@ -112,17 +112,14 @@ function showACourseDish() {
     requireSelection();
   }
   else if (chooseDishType.value === "Side") {
-    currentDish = getRandomDish(sides);
     displayDishResult(currentDish);
     removeDishButton.classList.remove('hidden');
   } 
   else if (chooseDishType.value === "Main-Dish") {
-    currentDish = getRandomDish(mains);
     displayDishResult(currentDish);
     removeDishButton.classList.remove('hidden');
   } 
   else if (chooseDishType.value === "Dessert") {
-    currentDish = getRandomDish(desserts);
     displayDishResult(currentDish);
     removeDishButton.classList.remove('hidden');
   }
@@ -138,31 +135,36 @@ function clearResultBox() {
   removeDishButton.classList.add('hidden');
 }
 
+// removeFromSides, removeFromMains, removeFromDesserts are too repetitive and not ideal to call in the removeThisDish function so I need to Refactor this to be more DRY and still have single responsibility
+ 
 function removeFromSides() {
+  let removedDish = '';
   for (let i = 0; i < sides.length; i++) {
     if (currentDish.name === sides[i]) {
-      sides.splice(i, 1);
+      removedDish = sides.splice(i, 1);
     }
   }
-  return sides;
+  return removedDish;
 }
 
 function removeFromMains() {
+  let removedDish = '';
   for (let i = 0; i < mains.length; i++) {
     if (currentDish.name === mains[i]) {
-      mains.splice(i, 1);
+      removedDish = mains.splice(i, 1);
     }
   }
-  return mains;
+  return removedDish;
 }
 
 function removeFromDesserts() {
+  let removedDish = '';
   for (let i = 0; i < desserts.length; i++) {
     if (currentDish.name === desserts[i]) {
-      desserts.splice(i, 1);
+      removedDish = desserts.splice(i, 1);
     }
   }
-  return desserts;
+  return removedDish;
 }
 
 function removeThisDish() {
@@ -171,4 +173,16 @@ function removeThisDish() {
   removeFromMains();
   
   removeFromDesserts();
+
+  return removedDish;
 }
+
+function confirmDishRemoved(dish) {
+  cookpotImg.classList.add('hidden');
+
+  displayBox.innerHTML = `<p><em>This dish has been removed:</em></p>
+  <h1 class="dish-name">${dish.name}</h1>`;
+
+  return displayBox;
+}
+

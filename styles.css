@@ -8,25 +8,38 @@ red - #ee5253
 
 */
 .header {
-  display: flex;
+  /* display: flex;
   background-color: #0fb9b1;
   justify-content: space-between;
   padding: 5px 20px;
   font-family: 'Roboto', sans-serif;
   margin: none;
-  border: none;
+  border: none; */
+  position: fixed; /* Helps us position at the top; header no longer takes up space in the flow of the document */
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  top: 0px;
+  width: 98%;
+  height: 60px;
+  padding: 15px 10px;
+  overflow: clip;
+
 }
 .add-recipe {
   background-color: rgba(225, 225, 225, .9);
   border-radius: 5px;
   padding: 0px 10px;
-  border: none;
+  margin-right: 0px
+  border: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 .Container {
   display: flex;
   border: none;
   justify-content: space-around;
-  margin: 20px 20px;
+  margin: 80px 20px;
   padding: 30px 30px;
 }
 .Container-a {
@@ -35,23 +48,26 @@ red - #ee5253
   border: none;
   padding: 20px 40px;
   background-color: rgba(225, 225, 225, .9);
+  font-family: 'Roboto', sans-serif;
+  width: 370px;
+  height:400px;
+  box-sizing: border-box;
 }
 .Container-b {
   border: none;
+  display: flex column;
   padding: 20px;
   background-color: rgba(225, 225, 225, .9);
-  margin: 0px 30px;
-  padding:5px 0px;
-  text-align: center;
+  width: 370px;
+  height:400px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 40px 0px;
 }
 .idea {
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   visibility: hidden;
-}
-.clear {
-  font-family: font-family: 'Roboto', sans-serif;
-  visibility:;
 }
 #background-img {
   background-image: url(assets/burger-friends.jpg);
@@ -59,15 +75,17 @@ red - #ee5253
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid white;
-  margin: none;
-  padding: none;
+  border: 1px solid transparent;
+  padding-top: 100px;
 }
-#cookpot {
-  background-image: url(assets/cookpot.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-repeat: no-repeat;
+.Container-b img{
+  height: 180px;
+  width: auto;
+  margin-top: 60px;
+  margin-left: 110px;
+  padding: 0px;
+  margin: none;
+
 }
 .lets-cook {
   background-color: #0fb9b1;
@@ -75,4 +93,16 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
   border-radius: 3px;
   padding: 10px 20px;
+}
+
+.Container-b button {
+  margin top: 0px;
+  margin-left: 220px;
+  font-family: 'Roboto', sans-serif;
+}
+input.option1 {
+  margin-bottom: 20px
+}
+.red {
+  color: red;
 }

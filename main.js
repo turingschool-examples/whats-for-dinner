@@ -41,7 +41,8 @@ var desserts = [
   "Key Lime Pie",
   "Tart Tatin",
   "Croissants",
-  "Eclairs"]
+  "Eclairs"];
+
 
 //queryselectors
 
@@ -49,3 +50,6 @@ var desserts = [
 //eventlisteners
 
 //funtions
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}

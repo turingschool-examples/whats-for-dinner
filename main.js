@@ -1,6 +1,7 @@
 //query selectors below
 let chooseNewDishButton = document.querySelector('.selection--submit-button');
-let displayBox = document.querySelector('.result--content');
+let makeDish = document.querySelector('.make-dish');
+let dishName = document.querySelector('.dish-name');
 let cookpotImg = document.querySelector('.cookpot-image');
 let selectMessage = document.querySelector('.select');
 let clearButton = document.querySelector('.result--clear-button');
@@ -91,20 +92,22 @@ function getRandomDish(arr) {
 function displayDishResult(dish) {
   cookpotImg.classList.add('hidden');
 
-  displayBox.innerHTML = `<p><em>You should make:</em></p>
-  <h1 class="dish-name">${dish.name}</h1>`;
+  makeDish.classList.remove('hidden');
 
-  return displayBox;
+  dishName.classList.remove('hidden');
+
+  dishName.innerText = dish.name;
 }
 
 function requireSelection() {
-  displayBox.innerHTML = `<p><em>Please select one</em></p>`;
+  makeDish.innerText = "Please select one";
 
   return selectMessage;
 }
 
+
 function showACourseDish() {
-  displayBox.classList.remove('hidden');
+  dishName.classList.remove('hidden');
 
   let chooseDishType = document.querySelector('input[name="meal-types"]:checked');
 
@@ -131,38 +134,44 @@ function showACourseDish() {
 }
 
 function clearResultBox() {
-  displayBox.classList.add('hidden');
+
+  cookpotImg.classList.remove('hidden');
 
   clearButton.classList.add('hidden');
 
   removeDishButton.classList.add('hidden');
 }
 
+// removeFromSides, removeFromMains, removeFromDesserts are too repetitive and not ideal to call in the removeThisDish function so I need to Refactor this to be more DRY and still have single responsibility
+
 function removeFromSides() {
+  let removedDish = '';
   for (let i = 0; i < sides.length; i++) {
     if (currentDish.name === sides[i]) {
-      sides.splice(i, 1);
+      removedDish = sides.splice(i, 1);
     }
   }
-  return sides;
+  return removedDish;
 }
 
 function removeFromMains() {
+  let removedDish = '';
   for (let i = 0; i < mains.length; i++) {
     if (currentDish.name === mains[i]) {
-      mains.splice(i, 1);
+      removedDish = mains.splice(i, 1);
     }
   }
-  return mains;
+  return removedDish;
 }
 
 function removeFromDesserts() {
+  let removedDish = '';
   for (let i = 0; i < desserts.length; i++) {
     if (currentDish.name === desserts[i]) {
-      desserts.splice(i, 1);
+      removedDish = desserts.splice(i, 1);
     }
   }
-  return desserts;
+  return removedDish;
 }
 
 function removeThisDish() {
@@ -171,4 +180,16 @@ function removeThisDish() {
   removeFromMains();
   
   removeFromDesserts();
+
+  return removedDish;
 }
+
+function confirmDishRemoved(dish) {
+  cookpotImg.classList.add('hidden');
+
+  dishName.innerHTML = `<p><em>This dish has been removed:</em></p>
+  <h1 class="dish-name">${dish.name}</h1>`;
+
+  return displayBox;
+}
+

@@ -5,27 +5,37 @@
   </head>
   <body>
     <section class='header'>
-      <h2>What's for Dinner</h2>
+      <h2>What's for Dinner?</h2>
       <button class='add-recipe'>ADD A RECIPE</button>
     </section>
-    <div class="background"
-      <img class="background-img" src=".assets/burger-friends.jpg" alt="burgers and friends"/>
-    </div>
-    <section class="Container">
-      <h2>What are you looking for?<sup>*</sup></h2>
-      <form action="http://www.example.com/whatsfordinner.php"
-        <br />
-        <input type="radio" name="Dish" value="Side" checked="checked" /> Side
-        <input type="radio" name="Dish" value="Main Dish"/> Main Dish
-        <input type="radio" name="Dish" value="Dessert"/> Dessert
-        <button class="lets cook">LET'S COOK</button>
-      </form>
-    </section>
-    <section class="Container-2">
-      <img class="cookpot" src=".assets/cookpot.svg" alt="a cookpot"/>
-      <p class="idea hidden">You should make:</p>
-      <h1></h2>
-      <button class="clear">CLEAR</button>
+    <section class="background"
+      <img id="background-img" src=".assets/burger-friends.jpg" alt="burgers and friends"/>
+        <section class="Container">
+          <section class="Container-a">
+            <h3>What are you looking for?<sup class='red'>*</sup></h3>
+            <form class="question">
+              <br />
+              <input class='option1' type="radio" name="Dish" value="Side" checked="checked" /> Side
+              </div>
+              <div>
+              <input class='option1' type="radio" name="Dish" value="Main Dish"/> Main Dish
+              </div>
+              <input class='option1' type="radio" name="Dish" value="Dessert"/> Dessert
+              <div>
+              <input class='option1' type="radio" name="Dish" value="Entire Meal"/> Entire Meal
+              </div>
+              <div>
+              <button class="lets-cook">LET'S COOK</button>
+            </div>
+            </form>
+          </section>
+          <section class="Container-b">
+            <img src="/Users/coleanthony/turing/mod_1/mod1-projects/whats-for-dinner/assets/cookpot.svg" alt="a cookpot"/>
+              <!-- <p class="idea hidden">You should make:</p>
+              <h1></h2>
+              <button class="clear">CLEAR</button> -->
+          </section>
+        </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

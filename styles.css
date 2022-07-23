@@ -7,4 +7,102 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+.header {
+  /* display: flex;
+  background-color: #0fb9b1;
+  justify-content: space-between;
+  padding: 5px 20px;
+  font-family: 'Roboto', sans-serif;
+  margin: none;
+  border: none; */
+  position: fixed; /* Helps us position at the top; header no longer takes up space in the flow of the document */
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  top: 0px;
+  width: 98%;
+  height: 60px;
+  padding: 15px 10px;
+  overflow: clip;
 
+}
+.add-recipe {
+  background-color: rgba(225, 225, 225, .9);
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin-right: 0px
+  border: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+.Container {
+  display: flex;
+  border: none;
+  justify-content: space-around;
+  margin: 80px 20px;
+  padding: 30px 30px;
+}
+.Container-a {
+  /* display: flex;
+  flex-direction: column; */
+  border: none;
+  padding: 20px 40px;
+  background-color: rgba(225, 225, 225, .9);
+  font-family: 'Roboto', sans-serif;
+  width: 370px;
+  height:400px;
+  box-sizing: border-box;
+}
+.Container-b {
+  border: none;
+  display: flex column;
+  padding: 20px;
+  background-color: rgba(225, 225, 225, .9);
+  width: 370px;
+  height:400px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 40px 0px;
+}
+.idea {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  visibility: hidden;
+}
+#background-img {
+  background-image: url(assets/burger-friends.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid transparent;
+  padding-top: 100px;
+}
+.Container-b img{
+  height: 180px;
+  width: auto;
+  margin-top: 60px;
+  margin-left: 110px;
+  padding: 0px;
+  margin: none;
+
+}
+.lets-cook {
+  background-color: #0fb9b1;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 3px;
+  padding: 10px 20px;
+}
+
+.Container-b button {
+  margin top: 0px;
+  margin-left: 220px;
+  font-family: 'Roboto', sans-serif;
+}
+input.option1 {
+  margin-bottom: 20px
+}
+.red {
+  color: red;
+}

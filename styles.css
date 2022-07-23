@@ -8,31 +8,24 @@ red - #ee5253
 
 */
 .header {
-  /* display: flex;
-  background-color: #0fb9b1;
-  justify-content: space-between;
-  padding: 5px 20px;
-  font-family: 'Roboto', sans-serif;
-  margin: none;
-  border: none; */
-  position: fixed; /* Helps us position at the top; header no longer takes up space in the flow of the document */
+  position: relative;
   background-color: #0fb9b1;
   display: flex;
   justify-content: space-between;
   font-family: 'Roboto', sans-serif;
-  top: 0px;
-  width: 98%;
-  height: 60px;
   padding: 15px 10px;
-  overflow: clip;
+  width: 99%;
+  height: 60px;
+  overflow: hidden;
+  margin-top: 0px
 
 }
 .add-recipe {
   background-color: rgba(225, 225, 225, .9);
   border-radius: 5px;
   padding: 0px 10px;
-  margin-right: 0px
-  border: 0px;
+  border: none;
+  margin-right: 15px;
   font-family: 'Roboto', sans-serif;
 }
 .Container {
@@ -46,7 +39,7 @@ red - #ee5253
   /* display: flex;
   flex-direction: column; */
   border: none;
-  padding: 20px 40px;
+  padding: 5px 40px;
   background-color: rgba(225, 225, 225, .9);
   font-family: 'Roboto', sans-serif;
   width: 370px;
@@ -72,11 +65,11 @@ red - #ee5253
 #background-img {
   background-image: url(assets/burger-friends.jpg);
   height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid transparent;
-  padding-top: 100px;
+  padding-top: 75px;
 }
 .Container-b img{
   height: 180px;
@@ -100,9 +93,29 @@ red - #ee5253
   margin-left: 220px;
   font-family: 'Roboto', sans-serif;
 }
-input.option1 {
+input {
   margin-bottom: 20px
 }
 .red {
   color: red;
+}
+section > h2, h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 70px;
+  text-align: center;
+}
+.Container-b button {
+  margin-top: 90px;
+  margin-left: 290px;
+  border-radius: 3px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  background-color: #95a5a6;
+  color: white;
+  padding: 5px;
+
+
 }

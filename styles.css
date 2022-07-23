@@ -1,10 +1,186 @@
-/* font-family: 'Roboto', sans-serif;
+html {
+  font-family: 'Roboto', sans-serif;
+}
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
+body {
+  background-image: url("../assets/burger-friends.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-*/
+.button-header-section {
+  align-self: center;
+  position: absolute;
+  left: 93%;
+}
 
+.header-section {
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+  padding-left: 2px;
+  background-color: #0fb9b1;
+}
+
+.header-section button {
+  align-self: center;
+  padding: 8px;
+  border-radius: .5rem;
+}
+
+.intro-tag {
+  margin: 0;
+  padding: 10px;
+  padding-left: 20px;
+  padding-top: 10px
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/*menu section cookpot-section*/
+.recipes-section, .cookpot-section {
+  display: flex;
+  align-items: center;
+  width: 540px;
+  height: 380px;
+  margin-top: 8%;
+  margin-bottom: 5%
+}
+
+/*menu section*/
+.recipes-section {
+  background: rgba(225, 225, 225, .9);
+}
+
+.recipes-section h2 {
+  padding-left: 40px;
+  position: relative;
+  top: 5%;
+}
+
+.recipes-section li {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  list-style-position: inside;
+  top: 15%;
+}
+
+/*button for menu section*/
+.lets-cook button {
+  padding: 8px 40px;
+  background-color: #0fb9b1;
+  border-radius: .5rem
+}
+
+.lets-cook {
+  position: relative;
+  left: 10%;
+}
+
+/*pot section */
+.cookpot-section {
+  background: rgba(225, 225, 225, .9);
+  display: flex;
+  justify-content: center;
+}
+
+.pot-img {
+  width: 100px;
+  color: #95a5a6;
+  position: absolute;
+}
+
+/*hidden class*/
+.hidden {
+  visibility: hidden;
+  align-self: flex-start;
+  width: 0;
+}
+
+/*clear button*/
+.pot-button {
+  align-self: flex-end;
+  margin-bottom: 4%;
+  margin-right: 10%;
+}
+
+.pot-button button {
+  color: white;
+  padding: 10% 40% 10% 40%;
+  border-radius: .5rem;
+  background-color: #95a5a6;
+}
+
+.random-text {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/*js html tags*/
+.js-element {
+  position: relative;
+  left: 10%;
+  text-align: center;
+  width: 100%;
+}
+
+.js-h1 {
+  font-size: 150%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.js-form li {
+  list-style: none;
+  text-align: center;
+}
+
+.js-form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.js-form ul {
+  display: flex;
+}
+
+/*footer*/
+.footer-content {
+  margin-top: 20%;
+  position: relative;
+}
+
+.add-button button {
+  padding: 8px 20px;
+  border-radius: .5rem;
+  background-color: #0fb9b1;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+footer form {
+  padding: 1%;
+}
+
+.add-button {
+  padding-left: 2%;
+}
+
+.recipeName {
+  margin-left: 30px;
+}

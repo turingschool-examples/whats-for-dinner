@@ -1,10 +1,60 @@
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title> What's For Dinner </title>
+</head>
+
+<body>
+  <header class="header-section">
+    <h1 class="intro-tag"> What's For Dinner? </h1>
+    <section class="button-header-section">
+      <button id="header-button" type="button" name="button">ADD A RECIPE</button>
+    </section>
+  </header>
+  <main class="container">
+    <section class="recipes-section">
+      <form id="radio-form">
+        <h2>What are you looking for?* </h2>
+        <ul>
+          <li class="recipes"> <input type="radio" name="dish-item" value="Side"> Side </li>
+          <li class="recipes"> <input type="radio" name="dish-item" value="Main Dish"> Main Dish </li>
+          <li class="recipes"> <input type="radio" name="dish-item" value="Desert"> Desert </li>
+          <li class="recipes"> <input type="radio" name="dish-item" value="Entire Meal"> Entire Meal </li>
+        </ul>
+        <div class="lets-cook">
+          <button id="cook-button" type="button" name="button"> LET'S COOK! </button>
+        </div>
+      </form>
+    </section>
+    <section class="cookpot-section">
+      <section class="js-element">
+
+      </section>
+      <figure class="pot-img">
+        <img src="../assets/cookpot.svg" alt="cookpot">
+      </figure>
+      <div class="pot-button hidden">
+        <button classe="btn" id="clear-button" type="button" name="button"> CLEAR </button>
+      </div>
+    </section>
+  </main>
+
+  <section class="footer-content">
+    <footer class="addRecipeSection hidden" id="add-recipe">
+      <form class="js-form">
+        <ul>
+          <li> Recipe Type: <input type="text" name="add-type"> </li>
+          <li class="recipeName"> Recipe Name: <input type="text" name="add-name"> </li>
+        </ul>
+      </form>
+      <aside class="add-button"> <button id="header-button" type="button" name="button"> ADD NEW </button> </aside>
+    </footer>
+  </section>
+</body>
+<script type="text/javascript" src="main.js"></script>
+
 </html>

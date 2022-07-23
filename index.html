@@ -1,36 +1,41 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>What's for Dinner?</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1>What's for Dinner?</h1>
-      <button class="add-recipe">ADD A RECIPE</button>
-    </header>
-    <section>
-      <div class="selections">
-        <h2 contenteditable>
-          What are you looking for?<span class="asterik">*</span>
-        </h2>
-         <ul style="list-style-type:none">
-            <li><input type="radio" name="selection" id="side" value="side"><label for="side">Side</label></li>
-            <li><input type="radio" name="selection" id="main-dish" value="mainDish"><label for="main-dish">Main Dish</label></li>
-            <li><input type="radio" name="selection" id="dessert" value="dessert"><label for="dessert">Dessert</label></li>
-            <li><input type="radio" name="selection" id="entire-meal" value="entire meal"><label for="entire-meal">Entire Meal</label></li>
-          </ul>
-          <button class="lets-cook">LET'S COOK!</button>
+
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>What's for Dinner?</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>What's for Dinner?</h1>
+    <button class="add-recipe">ADD A RECIPE</button>
+  </header>
+  <section>
+    <div class="selections">
+      <h2 contenteditable>
+        What are you looking for?<span class="asterik">*</span>
+      </h2>
+      <ul style="list-style-type:none">
+        <li><input type="radio" name="selection" id="side" value="side"><label for="side">Side</label></li>
+        <li><input type="radio" name="selection" id="main-dish" value="mainDish"><label for="main-dish">Main
+            Dish</label></li>
+        <li><input type="radio" name="selection" id="dessert" value="dessert"><label for="dessert">Dessert</label></li>
+        <li><input type="radio" name="selection" id="entire-meal" value="entire meal"><label for="entire-meal">Entire
+            Meal</label></li>
+      </ul>
+      <button class="lets-cook">LET'S COOK!</button>
+    </div>
+    <div class="cook-pot-div">
+      <img src="/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg" class="cook-pot">
+      <div class="hidden-div">
+        <h3 class="you-should">You should make:</h3>
+        <h4 class="random-food"></h4>
+        <button class="clear">CLEAR</button>
       </div>
-      <div class="cook-pot-div">
-        <img src="/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg" class="cook-pot">
-          <div class="hidden-div">
-            <h3 class="you-should">You should make:</h3>
-            <h4 class="random-food"></h4>
-            <button class="clear">CLEAR</button>
-          </div>
-      </div>
-    </section>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+    </div>
+  </section>
+</body>
+<script type="text/javascript" src="main.js"></script>
+
 </html>

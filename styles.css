@@ -27,12 +27,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin:-8;
+  margin: -8;
   /*font weight*/
 }
 
 h1 {
-  font-size: 24 ;
+  font-size: 24;
   font-weight: 300;
   align-items: center;
   margin-left: 1em;
@@ -57,18 +57,18 @@ h1 {
   width: 510px;
   height: 410px;
   display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items:baseline;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
   /*need to push containers apart ~10px*/
 }
 
 /*cook pot container*/
-.cook-pot-div{
+.cook-pot-div {
   background-color: rgba(225, 225, 225, .9);
   width: 510px;
   height: 410px;
- /* background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg");
+  /* background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25%;*/
@@ -93,10 +93,10 @@ h1 {
 /*div thats revealed when lets cook is clicked*/
 .hidden-div {
   display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /*string that appears from picked food array*/
@@ -132,12 +132,12 @@ h1 {
 
 /*WAYLF & cook pot containers*/
 section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items:flex-end;
-    align-content: center;
-    margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  align-content: center;
+  margin-top: 4em;
 }
 
 /*lets cook button*/
@@ -168,14 +168,9 @@ h2 {
 ul {
   font-size: 20;
   display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   display: inline;
   /*space selections more*/
-}
-
-
-li {
- 
 }

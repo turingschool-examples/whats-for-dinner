@@ -74,31 +74,50 @@ h1 {
   background-size: 25%;*/
 }
 
+.toggle {
+  opacity: 1 !important;
+}
+
+.toggle2 {
+  opacity: 0;
+}
+
 /*cook pot photo*/
 .cook-pot {
   margin-left: 190px;
   margin-top: 130px;
   width: 110;
   height: 160px;
-  visibility: visible;
 }
 
+/*div thats revealed when lets cook is clicked*/
 .hidden-div {
-
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
+/*string that appears from picked food array*/
+.random-food {
+  font-size: 40;
+  font-weight: bold;
+  margin-top: -20px;
+  opacity: 0;
+}
 
 /*h3 you should make:*/
 .you-should {
-  visibility: hidden;
   font-size: 20;
   font-style: italic;
-
+  font-weight: bolder;
+  margin-top: -130px;
+  opacity: 0;
 }
 
 /*clear button*/
 .clear {
-  visibility: hidden;
   background-color: #95a5a6;
   border: none;
   width: 80px;
@@ -106,10 +125,9 @@ h1 {
   font-size: 15;
   color: white;
   border-radius: 5px;
-  margin-left: 400px;
-
-
- 
+  margin-left: 380px;
+  margin-top: 4em;
+  opacity: 0;
 }
 
 /*WAYLF & cook pot containers*/

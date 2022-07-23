@@ -2,20 +2,35 @@ var side = ["Esquites", "Elote", "Nopales", "Arroz Mexicano", "Frijoles fritos",
 var mainDish = ["Chiles en Nogada", "Tamales", "Chilaquiles", "Mole negro", "Tlayudas", "Tlacoyos", "Pozole", "Menudo", "Mollejas", "Enchiladas", "Torta ahogado", "Toastadas", "Sopes", "Barbacoa", "Tacos al Pastor"]
 var dessert = ["Gelatina", "Arroz con leche", "Paleta", "Dulce de lecha", "Flan", "Churros", "Concha", "Meringue", "Horchata", "Galletas"]
 
+var sides = side[Math.floor(Math.random()*side.length)]
+var mainDishes = mainDish[Math.floor(Math.random()*mainDish.length)]
+var desserts = dessert[Math.floor(Math.random()*dessert.length)]
+
+
 var letsCook = document.querySelector('.lets-cook') //lets cook button
 var cookPotImg = document.querySelector('.cook-pot') //cook pot image
 var clearButton = document.querySelector('.clear') //clear button
 var hiddenH3 = document.querySelector('.you-should') //you should make h3 header
 
+var randomFood = document.querySelector('.random-food')
 letsCook.addEventListener('click', showRandomFood)
-
 function showRandomFood() {
-    cookPotImg.classList.toggle('clear')
-    clearButton.classList.toggle('clear')
-    hiddenH3.classList.toggle('you-should')
+    var radioButtons = document.getElementsByName('selection')
+    var selected = Array.from(radioButtons).find(radio => radio.checked)
+    if (selected.value === "side") {
+        randomFood.innerHTML = sides
+    } else if (selected.value === "mainDish") {
+        randomFood.innerHTML = mainDishes
+    } else  {
+        randomFood.innerHTML = desserts
+    }
+    cookPotImg.classList.toggle('toggle2')
+    clearButton.classList.toggle('toggle')
+    hiddenH3.classList.toggle('toggle')
+    randomFood.classList.toggle('toggle')
+    
 }
 
-// function togglePage(pageToHide, pageToShow) {
-//     pageToHide.classList.add('hidden')
-//     pageToShow.classList.remove('hidden')
-//   }
+//need to have radio input value recongized
+//need to return element from array based on radio input value
+//possibly do it with innerHTML and render function

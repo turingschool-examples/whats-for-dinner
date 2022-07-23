@@ -88,7 +88,12 @@ label {
 }
 
 .dish {
+  margin-top: 150px;
+  height: 100px;
+  width: 425px;
   font-size: 35px;
+  text-align: center;
+
 }
 
 #entire-meal {

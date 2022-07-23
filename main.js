@@ -56,7 +56,7 @@ function displayADish() {
   var suggestedDish = document.querySelector(".suggestions");
   suggestedDish.innerHTML =
       `<h3 class="you-should-make">You should make:</h3>
-      <h1 class="dish">${retrievedDish}!</h1>`
+      <section class="dish">${retrievedDish}!</section>`
 }
 
 function selectAType() {

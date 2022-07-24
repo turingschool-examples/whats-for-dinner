@@ -7,97 +7,98 @@ grey - #95a5a6;
 red -
 
 */
-*{
+* {
   /* border: 2px solid red; */
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
-body{
-  display:flex;
+
+body {
+  display: flex;
   flex-direction: column;
   background: no-repeat url("assets/burger-friends.jpg");
   background-size: cover;
   font-family: 'Roboto', sans-serif;
 }
-span{
+
+span {
   color: #ee5253;
 }
+
 .button-container {
-    display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    size: 80%;
-    padding: 10px;
-    margin-top: 20px;
-    margin: 20px;
-}
-/* .Cook-pot-container {
-    width: 400px;
-    background-color: rgba(225, 225, 225, .9);
-    height: 350px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-evenly;
-} */
-form{
-  margin: 10px;
-  width: 380px;
-  height: 350px;
-  background-color: rgba(225, 225, 225, .9);
-  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  size: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  margin: 20px;
 }
 
-nav{
+.Cook-Pot-Container {
+  width: 450px;
+  background-color: rgba(225, 225, 225, .9);
+  height: 350px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+form {
+  margin: 10px;
+  width: 420px;
+  height: 350px;
+  background-color: rgba(225, 225, 225, .9);
+  padding-left: 30px;
+}
+
+nav {
   background-color: #0fb9b1;
   height: 60px;
   text-align: left center;
   margin: 0;
 }
-.nav-Title{
+
+.nav-Title {
   padding-top: 15px;
   font-size: 25px;
 }
-.mealDisplay{
+
+.mealDisplay {
   padding-top: 15px;
   font-size: 35px;
   text-align: center;
 }
-p{
+
+p {
   font-style: italic;
 }
 
-.lets-cook-button{
+.lets-cook-button {
   background-color: #0fb9b1;
 }
-img{
+
+img {
   width: 100px;
   height: auto;
 }
-.what{
-  padding-bottom:10px;
-  margin-top: 50px
 
+.what {
+  padding-bottom: 10px;
+  margin-top: 50px
 }
-button{
+
+button {
   background-color: #0fb9b1;
   width: 160px;
   height: 30px;
   border-radius: 5px;
   border: none;
-}
-.Cook-Pot-Container{
-width: 400px;
-background-color: rgba(225, 225, 225, .9);
-height: 350px;
-display: flex;
-align-content: center;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-flex-wrap: wrap;
-margin: 10px;
 }

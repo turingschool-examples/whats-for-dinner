@@ -153,6 +153,8 @@ function showACourseDish(event) {
     removeDishButton.classList.remove('hidden');
   }   else if (chooseDishType.value === "Entire-Meal") {
     dishName.innerText = randomEntireMeal();
+
+    removeDishButton.classList.add('hidden');
   }
   clearButton.classList.remove('hidden');
 }

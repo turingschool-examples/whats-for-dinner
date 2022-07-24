@@ -34,21 +34,25 @@ span{
     margin-top: 20px;
     margin: 20px;
 }
-/* .Cook-pot-container {
-    width: 400px;
-    background-color: rgba(225, 225, 225, .9);
-    height: 350px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-evenly;
-} */
+.Cook-Pot-Container{
+width: 450px;
+background-color: rgba(225, 225, 225, .9);
+height: 350px;
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+margin: 10px;
+}
+
 form{
   margin: 10px;
-  width: 380px;
+  width: 420px;
   height: 350px;
   background-color: rgba(225, 225, 225, .9);
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 nav{
@@ -88,16 +92,4 @@ button{
   height: 30px;
   border-radius: 5px;
   border: none;
-}
-.Cook-Pot-Container{
-width: 400px;
-background-color: rgba(225, 225, 225, .9);
-height: 350px;
-display: flex;
-align-content: center;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-flex-wrap: wrap;
-margin: 10px;
 }

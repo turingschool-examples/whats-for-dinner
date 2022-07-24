@@ -1,5 +1,5 @@
 var sides= [
-  'Miso Glazed Carrots',,
+  'Miso Glazed Carrots',
 'Coleslaw',
 'Garden Salad',
 'Crispy Potatoes',

@@ -79,13 +79,14 @@ clearButton.addEventListener('click', clearResultBox);
 removeDishButton.addEventListener('click', removeThisDish);
 
 // functions below
-function getRandomArray(arr) {
-  return Math.floor(Math.random() * arr.length);
+function getRandomArray(array) {
+  return Math.floor(Math.random() * array.length);
 }
 
-function getRandomDish(arr) {
-  let dish = new Dish(arr[getRandomArray(arr)]);
+function getRandomDish(courseArray) {
+  let dish = new Dish(course[getRandomArray(array)], courseArray);
 
+  console.log(dish)
   return dish;
 }
 
@@ -147,52 +148,29 @@ function clearResultBox() {
 
 // removeFromSides, removeFromMains, removeFromDesserts are too repetitive and not ideal to call in the removeThisDish function so I need to Refactor this to be more DRY and still have single responsibility
 
-function removeFromSides() {
+function removeFromArray(array) {
   let removedDish = '';
-  for (let i = 0; i < sides.length; i++) {
-    if (currentDish.name === sides[i]) {
-      removedDish = sides.splice(i, 1);
+  for (let i = 0; i < array.length; i++) {
+    if (currentDish.name === array[i]) {
+      removedDish = array.splice(i, 1);
     }
   }
-  return removedDish;
-}
-
-function removeFromMains() {
-  let removedDish = '';
-  for (let i = 0; i < mains.length; i++) {
-    if (currentDish.name === mains[i]) {
-      removedDish = mains.splice(i, 1);
-    }
-  }
-  return removedDish;
-}
-
-function removeFromDesserts() {
-  let removedDish = '';
-  for (let i = 0; i < desserts.length; i++) {
-    if (currentDish.name === desserts[i]) {
-      removedDish = desserts.splice(i, 1);
-    }
-  }
-  return removedDish;
-}
-
-function removeThisDish() {
-  removeFromSides();
-  
-  removeFromMains();
-  
-  removeFromDesserts();
-
   return removedDish;
 }
 
 function confirmDishRemoved(dish) {
   cookpotImg.classList.add('hidden');
 
-  dishName.innerHTML = `<p><em>This dish has been removed:</em></p>
+  
+  dishName.innerText = `<p><em>This dish has been removed:</em></p>
   <h1 class="dish-name">${dish.name}</h1>`;
 
-  return displayBox;
+  return dishName;
 }
+
+function removeThisDish() {
+  removeFromArray(currentDish.course);
+  confir
+}
+
 

@@ -12,7 +12,7 @@
     <main class="container">
       <section class="main-boxes" id="input-box">
         <h2>What are you looking for?<span id="super">*</span></h2>
-          <form class="meal-selector">
+          <form class="selector-form">
               <div>
                 <input type="radio" id="side" name="selection" value="side"/>
                 <label for="side">Side</label>
@@ -26,13 +26,19 @@
                 <label for="dessert">Dessert</label>
               </div>
               <div>
+                <input type="radio" id="entire-meal" name="selection" value="entire-meal"/>
+                <label for="entire-meal">Entire Meal</label>
+              </div>
+              <div>
                 <button id="lets-cook">LET'S COOK!</button>
               </div>
           </form>
-        </section>
-        <section class="main-boxes" id="output-box">
-          <img id="crockpot-img" src="./assets/cookpot.svg" alt="picture of crockpot" />
-        </section>
+      </section>
+      <section class="main-boxes" id="output-box">
+          <img id="cookpot-img" src="./assets/cookpot.svg" alt="picture of cookpot" />
+          <h2 class="meal-title hidden"><i>You should make:</i></h2>
+          <p class="meal-selection hidden"></p>
+      </section>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>

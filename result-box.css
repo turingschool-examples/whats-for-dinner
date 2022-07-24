@@ -55,3 +55,11 @@
 .dish-name {
   text-align: center;
 }
+
+.turn-red {
+  background-color: #ee5253;
+}
+
+.make-red {
+  color: #ee5253;
+}

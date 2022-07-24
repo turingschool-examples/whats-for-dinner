@@ -19,12 +19,12 @@
   - HTML
   - CSS
 ## Illustrations
-  ![What’s For Dinner?](url(assetshttps://hmonroe2.github.io/whats-for-dinner/))
+  ![What’s For Dinner?](url(assetshttps://hmonroe2.github.edu/whats-for-dinner/))
 ## Features
 - Any of the radio buttons chosen will output a specific item from that array.
 - The Choose Your Own Adventure I chose was the “Entire Meal Functionality”. Each button will output random items (side, main dish, dessert) OR one of each for a meal idea for any user clicking the buttons.
 ## Deployed Page
-Visit our published Hang In There Site! [here](https://hmonroe2.github.io/whats-for-dinner/)
+Visit my published Whats for Dinner Site! [here](https://hmonroe2.github.io/whats-for-dinner/)
 ## Possible Future Extensions
   - A login page, if it were responsive in a sense of allowing users login to be saved/recipe ideas they like to be stored within their page.
   - Adding in transitions via CSS would have appreciated.

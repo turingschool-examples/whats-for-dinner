@@ -108,7 +108,9 @@ function requireSelection() {
   return selectMessage;
 }
 
-function showACourseDish() {
+function showACourseDish(event) {
+  event.preventDefault();
+  
   dishName.classList.remove('hidden');
 
   removeDishButton.classList.remove('turn-red');
@@ -193,7 +195,7 @@ function removeThisDish() {
   changeToRed();
 
   removeFromArray(currentDish.course);
-  
+
   confirmDishRemoved(currentDish);
 }
 

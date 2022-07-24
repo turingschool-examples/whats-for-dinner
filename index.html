@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="navbar">
-      <span class="navbar--title">What's for Dinner?</span>
+    <header class="navbar">
+      <p class="navbar--title">What's for Dinner?</p>
       <button class="navbar--button">ADD A RECIPE</button>
-    </div>
-    <div class="boxes-holder">
-      <div class="selection-box">
-        <h3 class="selection-box--title">What are you looking for?<span class="selection-box--asterisk">*</span></h3>
-        <div class="selection-box--radios">
+    </header>
+    <main class="boxes-holder">
+      <section class="selection-box">
+        <h3 class="selection-box--title">What are you looking for?<strong class="selection-box--asterisk">*</strong></h3>
+        <form class="selection-box--radios">
           <div>
             <input type="radio" id="side" name="meal-types" value="Side" required>
             <label for="side">Side</label>
@@ -36,9 +36,9 @@
           <div class="select">
             <button class="selection--submit-button">LET'S COOK!</button>
           </div>
-        </div>
-      </div>
-      <div class="result--box">
+        </form>
+      </section>
+      <section class="result--box">
         <div class="result--dont-like">
           <button class="result--dont-like-button hidden">I don't like this dish</button>
         </div>
@@ -51,8 +51,8 @@
         <div class="result--action-row">
           <button class="result--clear-button hidden">CLEAR</button>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
   <script src="Dish.js"></script>
   <script src="main.js"></script>

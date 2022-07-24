@@ -8,20 +8,31 @@ var sideDishes = [
     "Mac and Cheese",
     "Mashed Potatoes",
     "Salad",
-    "Soup"
+    "Tomato Basil Soup",
+    "Miso Glazed Carrots",
+    "Coleslaw",
+    "Sweet Potatoes",
+    "Shrimp Summer Rolls",
+    "Garlic Butter Mushrooms",
+    "Hush Puppies"
 ];
 
 var mainDishes = [
-    "Chicken",
+    "Chicken Cordon Bleu",
     "Meatloaf",
-    "Burger",
+    "Cheese Burger Sliders",
     "Chicken Parmesan",
     "Lasagna",
-    "Spaghetti",
-    "Fajita",
-    "Pizza",
+    "Spaghetti and Meatballs",
+    "Sheet Pan Fajitas",
+    "Meat Lovers Pizza",
     "BBQ Ribs",
-    "Salmon"
+    "Baked Lemon Salmon",
+    "Shakshuka",
+    "Thai Yellow Curry",
+    "Bibimbap",
+    "BBQ Chicken Burgers",
+    "Ramen",
 ];
 
 var dessertDishes = [
@@ -73,8 +84,14 @@ function randomFood(foodType) {
        var dessertItem = dessertDishes[randomIndex(dessertDishes)];
        return dessertItem;
     } else {
-        return 'Not a valid option!'
+        var sideItem = sideDishes[randomIndex(sideDishes)];
+        var mainItem = mainDishes[randomIndex(mainDishes)];
+        var dessertItem = dessertDishes[randomIndex(dessertDishes)];
+       return `${mainItem} with a side of ${sideItem} and ${dessertItem} for dessert!`
     }
+    // else {
+    //     return 'Not a valid option!'
+    // }
 }
 
 function randomIndex(array) {

@@ -19,7 +19,7 @@
   - HTML
   - CSS
 ## Illustrations
-  ![What’s For Dinner?](url(assetshttps://hmonroe2.github.edu/whats-for-dinner/))
+  ![What’s For Dinner?](url("assets/Screenshot.png"))
 ## Features
 - Any of the radio buttons chosen will output a specific item from that array.
 - The Choose Your Own Adventure I chose was the “Entire Meal Functionality”. Each button will output random items (side, main dish, dessert) OR one of each for a meal idea for any user clicking the buttons.

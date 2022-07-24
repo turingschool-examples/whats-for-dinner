@@ -69,22 +69,22 @@ function getRandomIndex(array) {
 function letsCook() {
   if (sideDish.checked) {
     rightBox.innerHTML = `
-    <h3>You should make:</h3>
+    <h3><i>You should make:</i></h3>
     <h2>${randomSide}!</h2>
     <button class='clear'>CLEAR</button>`
   } else if(mainDish.checked) {
     rightBox.innerHTML = `
-    <h3>You should make:</h3>
+    <h3><i>You should make:</i></h3>
     <h2>${randomMains}!</h2>
     <button class='clear'>CLEAR</button>`
   } else if (dessertDish.checked) {
     rightBox.innerHTML = `
-    <h3>You should make:</h3>
+    <h3><i>You should make:</i></h3>
     <h2>${randomDessert}!</h2>
     <button class='clear'>CLEAR</button>`
   } else {
     rightBox.innerHTML = `
-    <h3>You should make:</h3>
+    <h3><i>You should make:</i></h3>
     <h2>${randomSide}, ${randomMains}, and ${randomDessert}! </h2>
     <button class='clear' type='button'>CLEAR</button>`
   }

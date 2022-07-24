@@ -60,4 +60,19 @@ function showAllRecipe() {
     dessertList.innerHTML = `Desserts: ${desserts}`
 }
 
-//all recipes shown by type
+addBtn.addEventListener('click', addNewRecipe)
+function addNewRecipe() {
+    if(typeEdit.value === 'sides' || 'Sides') {
+        sides.push(nameEdit.value)
+    }
+    if(typeEdit.value === 'desserts' || 'Desserts') {
+        desserts.push(nameEdit.value)
+    }
+    if(typeEdit.value === 'main dishes' || 'Main dishes') {
+        mainDishes.push(nameEdit.value)
+    }
+}
+
+
+
+// can take value from recipe and push to specified type

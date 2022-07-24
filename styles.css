@@ -34,6 +34,7 @@ h1 {
   margin-left: 1em;
   font-weight: bold;
 }
+
 /*add recipe button*/
 .add-recipe {
   width: 120px;
@@ -43,6 +44,7 @@ h1 {
   margin-right: 2em;
   font-size: 14;
 }
+
 /*WAYLF & cook pot containers*/
 section {
   display: flex;
@@ -52,6 +54,7 @@ section {
   align-content: center;
   margin-top: 4em;
 }
+
 /*What are you looking for section*/
 .selections {
   background-color: rgba(225, 225, 225, .9);
@@ -73,6 +76,7 @@ section {
   color: red;
   font-size: 28;
 }
+
 /*lets cook button*/
 .lets-cook {
   background-color: #0fb9b1;
@@ -83,6 +87,7 @@ section {
   margin-left: 3em;
   margin-bottom: 4em;
 }
+
 /*radio input button list*/
 ul {
   font-size: 20;
@@ -97,12 +102,14 @@ ul {
 li {
   margin-bottom: 1em;
 }
+
 /*cook pot container*/
 .cook-pot-div {
   background-color: rgba(225, 225, 225, .9);
   width: 510px;
   height: 410px;
 }
+
 /*cook pot photo*/
 .cook-pot {
   margin-left: 190px;
@@ -110,6 +117,7 @@ li {
   width: 110;
   height: 160px;
 }
+
 /*div thats revealed when lets cook is clicked*/
 .hidden-div {
   display: flex;
@@ -118,6 +126,7 @@ li {
   justify-content: center;
   align-items: center;
 }
+
 /*string that appears from picked food array*/
 .random-food {
   font-size: 40;
@@ -125,6 +134,7 @@ li {
   margin-top: -20px;
   opacity: 0;
 }
+
 /*h3 you should make:*/
 .you-should {
   font-size: 20;
@@ -133,6 +143,7 @@ li {
   margin-top: -130px;
   opacity: 0;
 }
+
 /*clear button*/
 .clear {
   background-color: #95a5a6;
@@ -147,11 +158,11 @@ li {
   opacity: 0;
 }
 
-.view-all-recipe{
+.view-all-recipe {
   background-color: rgba(225, 225, 225, .9);
   width: 1160px;
   height: 410px;
-  display:none;
+  display: none;
 }
 
 .all-recipe-div {
@@ -159,10 +170,10 @@ li {
   margin-top: 8em;
   height: 101px;
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .sides-list {
@@ -174,12 +185,12 @@ li {
 }
 
 .main-list {
- font-size: 20;
- font-style: italic;
+  font-size: 20;
+  font-style: italic;
   color: #0fb9b1;
- margin-left: 2em;
- padding-top: 1em;
- padding-bottom: 1em;
+  margin-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .dessert-list {
@@ -189,7 +200,7 @@ li {
   margin-left: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
-  }
+}
 
 .add-recipe-btn {
   background-color: #0fb9b1;

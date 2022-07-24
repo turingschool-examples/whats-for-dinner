@@ -34,7 +34,6 @@ h1 {
   margin-left: 1em;
   font-weight: bold;
 }
-
 /*add recipe button*/
 .add-recipe {
   width: 120px;
@@ -44,83 +43,6 @@ h1 {
   margin-right: 2em;
   font-size: 14;
 }
-
-/*What are you looking for section*/
-.selections {
-  border: 519px 415px;
-  background-color: rgba(225, 225, 225, .9);
-  width: 510px;
-  height: 410px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: baseline;
-  
-}
-
-/*cook pot container*/
-.cook-pot-div {
-  background-color: rgba(225, 225, 225, .9);
-  width: 510px;
-  height: 410px;
-}
-
-.toggle {
-  opacity: 1 !important;
-}
-
-.toggle2 {
-  opacity: 0;
-}
-
-/*cook pot photo*/
-.cook-pot {
-  margin-left: 190px;
-  margin-top: 130px;
-  width: 110;
-  height: 160px;
-}
-
-/*div thats revealed when lets cook is clicked*/
-.hidden-div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-/*string that appears from picked food array*/
-.random-food {
-  font-size: 40;
-  font-weight: bold;
-  margin-top: -20px;
-  opacity: 0;
-}
-
-/*h3 you should make:*/
-.you-should {
-  font-size: 20;
-  font-style: italic;
-  font-weight: bolder;
-  margin-top: -130px;
-  opacity: 0;
-}
-
-/*clear button*/
-.clear {
-  background-color: #95a5a6;
-  border: none;
-  width: 80px;
-  height: 35px;
-  font-size: 15;
-  color: white;
-  border-radius: 5px;
-  margin-left: 380px;
-  margin-top: 4em;
-  opacity: 0;
-}
-
 /*WAYLF & cook pot containers*/
 section {
   display: flex;
@@ -130,19 +52,17 @@ section {
   align-content: center;
   margin-top: 4em;
 }
-
-/*lets cook button*/
-.lets-cook {
-  background-color: #0fb9b1;
-  border: none;
-  width: 180px;
-  height: 35px;
-  border-radius: 5px;
-  margin-left: 3em;
-  margin-bottom: 4em;
+/*What are you looking for section*/
+.selections {
+  background-color: rgba(225, 225, 225, .9);
+  width: 510px;
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
 }
 
-/*what are you looking for heading*/
 h2 {
   font-size: 30;
   margin-left: 1em;
@@ -153,7 +73,16 @@ h2 {
   color: red;
   font-size: 28;
 }
-
+/*lets cook button*/
+.lets-cook {
+  background-color: #0fb9b1;
+  border: none;
+  width: 180px;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 3em;
+  margin-bottom: 4em;
+}
 /*radio input button list*/
 ul {
   font-size: 20;
@@ -168,18 +97,108 @@ ul {
 li {
   margin-bottom: 1em;
 }
+/*cook pot container*/
+.cook-pot-div {
+  background-color: rgba(225, 225, 225, .9);
+  width: 510px;
+  height: 410px;
+}
+/*cook pot photo*/
+.cook-pot {
+  margin-left: 190px;
+  margin-top: 130px;
+  width: 110;
+  height: 160px;
+}
+/*div thats revealed when lets cook is clicked*/
+.hidden-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/*string that appears from picked food array*/
+.random-food {
+  font-size: 40;
+  font-weight: bold;
+  margin-top: -20px;
+  opacity: 0;
+}
+/*h3 you should make:*/
+.you-should {
+  font-size: 20;
+  font-style: italic;
+  font-weight: bolder;
+  margin-top: -130px;
+  opacity: 0;
+}
+/*clear button*/
+.clear {
+  background-color: #95a5a6;
+  border: none;
+  width: 80px;
+  height: 35px;
+  font-size: 15;
+  color: white;
+  border-radius: 5px;
+  margin-left: 380px;
+  margin-top: 4em;
+  opacity: 0;
+}
+
+.view-all-recipe{
+  background-color: rgba(225, 225, 225, .9);
+  width: 1160px;
+  height: 410px;
+  display:none;
+}
+
+
 
 .all-recipe-div {
   background-color: rgba(225, 225, 225, .9);
   margin-top: 8em;
   height: 101px;
-	display: flex;
-	flex-direction: column-reverse;
+  display: flex;
+	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
-	align-content: center;
 
+}
+
+.add-recipe-btn {
+  background-color: #0fb9b1;
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 14;
+  margin: 10px;
+  display: none;
+}
+
+.edit-recipe-btn {
+  background-color: #0fb9b1;
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 14;
+  margin: 10px;
+  display: none;
+}
+
+.delete-recipe-btn {
+  background-color: #0fb9b1;
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 14;
+  margin: 10px;
+  display: none;
 }
 
 .all-recipe-btn {
@@ -189,4 +208,21 @@ li {
   width: 150px;
   border-radius: 5px;
   font-size: 14;
+  margin: 10px;
+}
+
+.toggle {
+  opacity: 1 !important;
+}
+
+.toggle2 {
+  opacity: 0;
+}
+
+.toggle3 {
+  display: none;
+}
+
+.toggle4 {
+  display: inline;
 }

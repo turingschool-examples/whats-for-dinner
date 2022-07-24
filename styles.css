@@ -4,12 +4,13 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red -
 
 */
 *{
-  border: 2px solid red;
-  /* margin: 0; */
+  /* border: 2px solid red; */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 body{
   display:flex;
@@ -19,7 +20,7 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 span{
-  color: red;
+  color: #ee5253;
 }
 .button-container {
     display: flex;
@@ -31,20 +32,23 @@ span{
     size: 80%;
     padding: 10px;
     margin-top: 20px;
+    margin: 20px;
 }
-.Cook-pot-container {
-    width: 350;
+/* .Cook-pot-container {
+    width: 400px;
     background-color: rgba(225, 225, 225, .9);
-    height: 250;
+    height: 350px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    justify-content: space-around;
-}
+    justify-content: space-evenly;
+} */
 form{
-  width: 350;
-  height: 250;
+  margin: 10px;
+  width: 380px;
+  height: 350px;
   background-color: rgba(225, 225, 225, .9);
+  padding-left: 20px;
 }
 
 nav{
@@ -53,23 +57,47 @@ nav{
   text-align: left center;
   margin: 0;
 }
-.Cook-pot-container{
-  background-color: rgba(225, 225, 225, .9);
-
+.nav-Title{
+  padding-top: 15px;
+  font-size: 25px;
 }
+.mealDisplay{
+  padding-top: 15px;
+  font-size: 35px;
+  text-align: center;
+}
+p{
+  font-style: italic;
+}
+
 .lets-cook-button{
   background-color: #0fb9b1;
 }
 img{
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 .what{
-  text-align: center;
+  padding-bottom:10px;
+  margin-top: 50px
+
 }
 button{
   background-color: #0fb9b1;
-  width: 125px;
-  height: 35px;
-  margin-left: 30;
+  width: 160px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+.Cook-Pot-Container{
+width: 400px;
+background-color: rgba(225, 225, 225, .9);
+height: 350px;
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+margin: 10px;
 }

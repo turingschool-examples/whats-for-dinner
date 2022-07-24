@@ -50,10 +50,6 @@ var dessertDishes = [
 var currentFoodItem = "";
 
 
-/*do i need to make a variable for each array since user will 
-only select one at a time and will only spit out one random 
-variable at a time?*/
-
 //------------------------query selectors
 var side = document.querySelector('#side');
 var mainDish = document.querySelector('#main-dish');
@@ -89,9 +85,6 @@ function randomFood(foodType) {
         var dessertItem = dessertDishes[randomIndex(dessertDishes)];
        return `${mainItem} with a side of ${sideItem} and ${dessertItem} for dessert!`
     }
-    // else {
-    //     return 'Not a valid option!'
-    // }
 }
 
 function randomIndex(array) {
@@ -111,15 +104,3 @@ function cookDinner(){
 function clearingButton() {
     location.reload();
 }
-
-
-
-
-// ------------------THINGS TO ADD
-// add CLEAR button
-
-
-
-
-
-  

@@ -96,11 +96,11 @@ function displayDishResult(dish) {
 
   dishName.classList.remove('hidden');
 
-  dishName.innerText = dish.name;
+  return dishName.innerText = dish.name;
 }
 
 function requireSelection() {
-  makeDish.innerText = "Please select one";
+  dishName.innerText = "Choose one!";
 
   return selectMessage;
 }
@@ -134,8 +134,11 @@ function showACourseDish() {
 }
 
 function clearResultBox() {
-
   cookpotImg.classList.remove('hidden');
+
+  makeDish.classList.add('hidden');
+
+  dishName.classList.add('hidden');
 
   clearButton.classList.add('hidden');
 

@@ -88,7 +88,6 @@ function getRandomIndex(courseArray) {
 function getRandomDish(courseArray) {
   let dish = new Dish(courseArray[getRandomIndex(courseArray)], courseArray);
 
-  console.log(dish)
   return dish;
 }
 
@@ -106,6 +105,16 @@ function requireSelection() {
   dishName.innerText = "Choose one!";
 
   return selectMessage;
+}
+
+function randomEntireMeal() {
+  cookpotImg.classList.add('hidden');
+
+  makeDish.classList.remove('hidden');
+
+  dishName.classList.remove('hidden');
+
+  return `${getRandomDish(mains).name} with a side of ${getRandomDish(sides).name} and ${getRandomDish(desserts).name} for dessert!`;
 }
 
 function showACourseDish(event) {
@@ -142,6 +151,8 @@ function showACourseDish(event) {
     displayDishResult(currentDish);
 
     removeDishButton.classList.remove('hidden');
+  }   else if (chooseDishType.value === "Entire-Meal") {
+    dishName.innerText = randomEntireMeal();
   }
   clearButton.classList.remove('hidden');
 }
@@ -163,12 +174,16 @@ function clearResultBox() {
 
 function removeFromArray(array) {
   let removedDish = '';
-
+  console.log(array.length)
   for (let i = 0; i < array.length; i++) {
     if (currentDish.name === array[i]) {
       removedDish = array.splice(i, 1);
     }
   }
+
+  console.log(removedDish)
+  console.log(array.length)
+  console.log(array)
   return removedDish;
 }
 
@@ -181,6 +196,7 @@ function confirmDishRemoved(dish) {
 
   dishName.innerText = dish.name;
 
+  console.log(dish.name)
   return dish.name;
 }
 

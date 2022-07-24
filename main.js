@@ -1,6 +1,6 @@
-var sides = ["Esquites", "Elote", "Nopales", "Arroz Mexicano", "Frijoles fritos", "Calabaza rostizada", "Chiles en vinagre", "Guacamole", "Papas fritas", "Consome"]
-var mainDishes = ["Chiles en Nogada", "Tamales", "Chilaquiles", "Mole negro", "Tlayudas", "Tlacoyos", "Pozole", "Menudo", "Mollejas", "Enchiladas", "Torta ahogado", "Toastadas", "Sopes", "Barbacoa", "Tacos al Pastor"]
-var desserts = ["Gelatina", "Arroz con leche", "Paleta", "Dulce de leche", "Flan", "Churros", "Concha", "Meringue", "Horchata", "Galletas"]
+var sides = ["Esquites", " Elote", " Nopales", " Arroz Mexicano", " Frijoles fritos", " Calabaza rostizada", " Chiles en vinagre", " Guacamole", " Papas fritas", " Consome"]
+var mainDishes = ["Chiles en Nogada", " Tamales", " Chilaquiles", " Mole negro", " Tlayudas", " Tlacoyos", " Pozole", " Menudo", " Mollejas", " Enchiladas", " Torta ahogado", " Toastadas", " Sopes", " Barbacoa", " Tacos al Pastor"]
+var desserts = ["Gelatina", " Arroz con leche", " Paleta", " Dulce de leche", " Flan", " Churros", " Concha", " Meringue", " Horchata", " Galletas"]
 
 var side = sides[Math.floor(Math.random() * sides.length)]
 var mainDish = mainDishes[Math.floor(Math.random() * mainDishes.length)]
@@ -17,11 +17,15 @@ var cookPotDiv = document.querySelector('.cook-pot-div')
 var selections = document.querySelector('.selections')
 var viewAllRecipe = document.querySelector('.view-all-recipe')
 
+var sidesList = document.querySelector('.sides-list')
+var mainList = document.querySelector('.main-list')
+var dessertList = document.querySelector('.dessert-list')
+
 var addBtn = document.querySelector('.add-recipe-btn')
 var editBtn = document.querySelector('.edit-recipe-btn')
 var deleteBtn = document.querySelector('.delete-recipe-btn')
-
-
+var typeEdit = document.querySelector('.recipe-type')
+var nameEdit = document.querySelector('.recipe-name')
 
 letsCook.addEventListener('click', showRandomFood)
 function showRandomFood() {
@@ -49,11 +53,11 @@ function showAllRecipe() {
     addBtn.classList.toggle('toggle4')
     editBtn.classList.toggle('toggle4')
     deleteBtn.classList.toggle('toggle4')
+    typeEdit.classList.toggle('toggle4')
+    nameEdit.classList.toggle('toggle4')
+    sidesList.innerHTML = `Sides: ${sides}`
+    mainList.innerHTML = `Main Dishes: ${mainDishes}`
+    dessertList.innerHTML = `Desserts: ${desserts}`
 }
 
-
-
 //all recipes shown by type
-//input box for recipe type
-//input box for recipe name
-//add recipe button, edit recipe button, delete recipe button

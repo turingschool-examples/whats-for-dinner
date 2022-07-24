@@ -3,8 +3,51 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    
+
+  <body class="bg-img">
+    <section>
+      <div class="top-container">
+        <div class="top-nav">
+          <a href="file:///Users/ianmcintosh/whats-for-dinner/index.html">What's for Dinner?</a>
+          <button class="recipe-button">ADD A RECIPE</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="middle-page">
+      <section class="content-box">
+        <h1 class="title">What are you looking for?<sup class="red">*</sup></h1>
+        <fieldset>
+          <div>
+            <input type="radio" id="side" name="dinner" value="side">
+            <label for="side">Side</label>
+          </div>
+          <div>
+            <input type="radio" id="main-dish" name="dinner" value="main-dish">
+            <label for="main-dish">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" id="dessert" name="dinner" value="dessert">
+            <label for="dessert">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" id="entire-meal" name="dinner" value="entire-meal">
+            <label for="entire-meal">Entire Meal</label>
+          </div>
+        </fieldset>
+        <button class="lets-cook">LET'S COOK!</button>
+      </section>
+
+      <section class="content-box">
+        <h2 class="food-title hidden">You should make:</h2>
+          <p class="food-text hidden"></p>
+        <img src="/Users/ianmcintosh/whats-for-dinner/assets/cookpot.svg" class="cookpot">
+          <div class="clear-section">      
+            <button type="button" onclick="clearingButton()" class="clear-button"">CLEAR</button>
+          </div>
+      </section>
+      
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

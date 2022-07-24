@@ -1,12 +1,4 @@
-/* font-family: 'Roboto', sans-serif;
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
 /*----------------------------------- TOP OF THE PAGE*/
 .bg-img {
   background-image: url("/Users/ianmcintosh/whats-for-dinner/assets/burger-friends.jpg");
@@ -67,6 +59,10 @@ red - #ee5253
   font-size: 30px;
 }
 
+.red {
+  color: red;
+}
+
 .content-box fieldset {
   border: rgba(225, 225, 225, .9);
   margin-top: 30px;
@@ -88,7 +84,7 @@ red - #ee5253
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   margin-top: 30px;
-  border-color: blue;
+  border-color: rgba(169, 169, 169, 0.388);
   border-radius: 5px;
   width: 215px;
   height: 35px;
@@ -99,6 +95,13 @@ red - #ee5253
   background-color: #075450;
   color: white;
 }
+
+.lets-cook{
+  animation-name: cook;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
 .content-box img {
   height: 300px;
   width: 300px;
@@ -121,6 +124,7 @@ red - #ee5253
   font-style: bold;
   text-align: center;
   margin-top: -20px;
+  animation: fadein 5s;
 }
 
 .clear-section button {
@@ -132,6 +136,10 @@ red - #ee5253
   width: 80px;
   margin-top: 0px;
   margin-left: 400px;
+}
+
+.clear-section button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /* ----------------------------------------------BOTTOM OF THE PAGE */
@@ -152,10 +160,41 @@ red - #ee5253
 }
 
 
-/* UTILITIES */
+/* --------------------------------------------------UTILITIES */
 .hidden {
   display: none;
 }
+
+@keyframes fadein {
+  from {opacity: 0; }
+  to {opacity: 1; }
+}
+
+@keyframes cook {
+  0%   {background-color: #0b5955; }
+  25%  {background-color: #0b7f79; }
+  50%  {background-color: #16ded4; }
+  75%  {background-color: #0b7f79; }
+  100% {background-color: #0a6e69; }
+}
+
+@keyframes wiggle {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+}
+
+
+
+
+/* font-family: 'Roboto', sans-serif;
+
+COLORS
+teal - #0fb9b1;
+frosted white - rgba(225, 225, 225, .9);
+grey - #95a5a6;
+red - #ee5253
+
+*/
 
 
 

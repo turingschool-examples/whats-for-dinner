@@ -52,7 +52,7 @@ var letsCookBtn = document.querySelector('.lets-cook');
 var cookpot = document.querySelector('.cookpot');
 var foodTitle = document.querySelector('.food-title');
 var foodText = document.querySelector('.food-text');
-var clearBtn = document.querySelector('clear-button')
+var clearBtn = document.querySelector('.clear-button')
 
 //------------------------event listeners
 
@@ -100,7 +100,6 @@ function clearingButton() {
 
 // ------------------THINGS TO ADD
 // add CLEAR button
-
 
 
 

@@ -1,11 +1,12 @@
 //query selectors below
-let chooseNewDishButton = document.querySelector('.selection--submit-button');
+let letsCookButton = document.querySelector('.selection--submit-button');
 let makeDish = document.querySelector('.make-dish');
 let dishName = document.querySelector('.dish-name');
 let cookpotImg = document.querySelector('.cookpot-image');
 let selectMessage = document.querySelector('.select');
 let clearButton = document.querySelector('.result--clear-button');
 let removeDishButton = document.querySelector('.result--dont-like-button');
+let removeAlert = document.querySelector('.remove-dish');
 //arrays for each course
 let sides = [
   "Steamed Edamame",
@@ -71,20 +72,21 @@ let desserts = [
   "Strawberry Mochi",
   "Chai Seed Rainbox Pudding"
 ];
+
 let currentDish = '';
 
 //event listeners below
-chooseNewDishButton.addEventListener('click', showACourseDish);
+letsCookButton.addEventListener('click', showACourseDish);
 clearButton.addEventListener('click', clearResultBox);
 removeDishButton.addEventListener('click', removeThisDish);
 
 // functions below
-function getRandomArray(array) {
-  return Math.floor(Math.random() * array.length);
+function getRandomIndex(courseArray) {
+  return Math.floor(Math.random() * courseArray.length);
 }
 
 function getRandomDish(courseArray) {
-  let dish = new Dish(course[getRandomArray(array)], courseArray);
+  let dish = new Dish(courseArray[getRandomIndex(courseArray)], courseArray);
 
   console.log(dish)
   return dish;
@@ -106,9 +108,12 @@ function requireSelection() {
   return selectMessage;
 }
 
-
 function showACourseDish() {
   dishName.classList.remove('hidden');
+
+  removeDishButton.classList.remove('turn-red');
+
+  removeAlert.classList.add('hidden');
 
   let chooseDishType = document.querySelector('input[name="meal-types"]:checked');
 
@@ -139,6 +144,8 @@ function clearResultBox() {
 
   makeDish.classList.add('hidden');
 
+  removeAlert.classList.add('hidden');
+
   dishName.classList.add('hidden');
 
   clearButton.classList.add('hidden');
@@ -146,10 +153,10 @@ function clearResultBox() {
   removeDishButton.classList.add('hidden');
 }
 
-// removeFromSides, removeFromMains, removeFromDesserts are too repetitive and not ideal to call in the removeThisDish function so I need to Refactor this to be more DRY and still have single responsibility
 
 function removeFromArray(array) {
   let removedDish = '';
+
   for (let i = 0; i < array.length; i++) {
     if (currentDish.name === array[i]) {
       removedDish = array.splice(i, 1);
@@ -161,16 +168,26 @@ function removeFromArray(array) {
 function confirmDishRemoved(dish) {
   cookpotImg.classList.add('hidden');
 
-  
-  dishName.innerText = `<p><em>This dish has been removed:</em></p>
-  <h1 class="dish-name">${dish.name}</h1>`;
+  makeDish.classList.add('hidden');
 
-  return dishName;
+  removeAlert.classList.remove('hidden');
+
+  dishName.innerText = dish.name;
+
+  return dish.name
 }
 
+function changeToRed() {
+  removeDishButton.classList.add('turn-red');
+
+  removeAlert.classList.add('make-red');
+}
+
+
 function removeThisDish() {
+  changeToRed();
   removeFromArray(currentDish.course);
-  confir
+  confirmDishRemoved(currentDish);
 }
 
 

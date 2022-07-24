@@ -8,8 +8,6 @@ red - #ee5253
 
 */
 html {
-  height: vw;
-  width: vh;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -17,18 +15,16 @@ body {
   background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/burger-friends.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0;
 }
 
 .header {
   background-color: #0fb9b1;
-  font-family: 'Roboto', sans-serif;
   width: vw;
   height: vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: -8;
-  /*font weight*/
 }
 
 h1 {
@@ -47,7 +43,6 @@ h1 {
   border: none;
   margin-right: 2em;
   font-size: 14;
-  /*font weight*/
 }
 
 /*What are you looking for section*/
@@ -60,7 +55,7 @@ h1 {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: baseline;
-  /*need to push containers apart ~10px*/
+  
 }
 
 /*cook pot container*/
@@ -68,10 +63,6 @@ h1 {
   background-color: rgba(225, 225, 225, .9);
   width: 510px;
   height: 410px;
-  /* background-image: url("/Users/Andrew/turing/mod1-projects/whats-for-dinner/assets/cookpot.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25%;*/
 }
 
 .toggle {
@@ -149,7 +140,6 @@ section {
   border-radius: 5px;
   margin-left: 3em;
   margin-bottom: 4em;
-  /*font weight doesnt seem to work*/
 }
 
 /*what are you looking for heading*/
@@ -167,10 +157,36 @@ h2 {
 /*radio input button list*/
 ul {
   font-size: 20;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   display: inline;
-  /*space selections more*/
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+.all-recipe-div {
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 8em;
+  height: 101px;
+	display: flex;
+	flex-direction: column-reverse;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+}
+
+.all-recipe-btn {
+  background-color: #0fb9b1;
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 14;
 }

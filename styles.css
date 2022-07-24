@@ -39,6 +39,10 @@ h2 {
   font-size: 30px;
 }
 
+#super {
+  vertical-align: super;
+}
+
 span {
   color: red;
 }

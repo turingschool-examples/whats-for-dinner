@@ -1,37 +1,39 @@
 var sideDishes = [
-    "asaparugus",
-    "baked beans",
-    "french fries",
-    "broccoli",
-    "bread roll",
-    "green beans",
-    "mac and cheese",
-    "mashed potatoes",
-    "salad"
+    "Asaparugus",
+    "Baked Beans",
+    "French Fries",
+    "Broccoli",
+    "Bread Roll",
+    "Green Beans",
+    "Mac and Cheese",
+    "Mashed Potatoes",
+    "Salad",
+    "Soup"
 ];
 
 var mainDishes = [
-    "chicken",
-    "meatloaf",
-    "burger",
-    "chicken parmesan",
-    "lasagna",
-    "spaghetti",
-    "fajita",
-    "pizza",
-    "bbq ribs"
+    "Chicken",
+    "Meatloaf",
+    "Burger",
+    "Chicken Parmesan",
+    "Lasagna",
+    "Spaghetti",
+    "Fajita",
+    "Pizza",
+    "BBQ Ribs",
+    "Salmon"
 ];
 
 var dessertDishes = [
-    "cheesecake",
-    "ice-cream",
-    "apple pie",
-    "chocolate cake",
-    "brownie",
-    "key-lime pie",
-    "cookie",
-    "banana pudding",
-    "boston creme pie"
+    "Strawberry Cheesecake",
+    "Butter-pecan Ice-cream",
+    "Hot Apple Pie",
+    "Chocolate Lava Cake",
+    "Peanut Butter Fudge Brownie",
+    "Key-lime Pie",
+    "Maple White Chocolate Cookie",
+    "Banana Pudding",
+    "Boston Creme Pie"
 ];
 
 var currentFoodItem = "";
@@ -48,6 +50,7 @@ var dessert = document.querySelector('#dessert');
 var entireMeal = document.querySelector('#entire-meal');
 var letsCookBtn = document.querySelector('.lets-cook');
 var cookpot = document.querySelector('.cookpot');
+var foodTitle = document.querySelector('.food-title');
 var foodText = document.querySelector('.food-text');
 var clearBtn = document.querySelector('clear-button')
 
@@ -81,15 +84,15 @@ function randomIndex(array) {
 function cookDinner(){ 
     cookpot.classList.add('hidden');
     foodText.classList.remove('hidden');
+    foodTitle.classList.remove('hidden');
     var selectedDinnerItem = document.querySelector('input[name="dinner"]:checked').value;
         currentFoodItem = randomFood(selectedDinnerItem);
     console.log(currentFoodItem);
-    foodText.innerText = `You should make: ${currentFoodItem}!`;
+    foodText.innerText = `${currentFoodItem}!`;
 }
 
 function clearingButton() {
-    foodText.classList.add('hidden');
-    cookpot.classList.remove('hidden');
+    location.reload();
 }
 
 

@@ -106,6 +106,23 @@ red - #ee5253
   margin-left: 70px;
 }
 
+.food-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  font-style: italic;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.food-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  font-style: bold;
+  text-align: center;
+  margin-top: -20px;
+}
+
 .clear-section button {
   background-color: #95a5a6;
   font-family: 'Roboto', sans-serif;
@@ -114,7 +131,7 @@ red - #ee5253
   border: 0;
   width: 80px;
   margin-top: 0px;
-  margin-right: 46px;
+  margin-left: 400px;
 }
 
 /* ----------------------------------------------BOTTOM OF THE PAGE */

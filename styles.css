@@ -101,4 +101,8 @@ button {
   height: 30px;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+}
+button:hover{
+  border: 1px solid blue;
 }

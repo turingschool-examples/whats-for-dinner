@@ -122,20 +122,25 @@ function showACourseDish() {
   }
   else if (chooseDishType.value === "Side") {
     currentDish = getRandomDish(sides);
+
     displayDishResult(currentDish);
+
     removeDishButton.classList.remove('hidden');
   } 
   else if (chooseDishType.value === "Main-Dish") {
     currentDish = getRandomDish(mains);
+
     displayDishResult(currentDish);
+
     removeDishButton.classList.remove('hidden');
   } 
   else if (chooseDishType.value === "Dessert") {
     currentDish = getRandomDish(desserts);
+
     displayDishResult(currentDish);
+
     removeDishButton.classList.remove('hidden');
   }
-
   clearButton.classList.remove('hidden');
 }
 
@@ -174,7 +179,7 @@ function confirmDishRemoved(dish) {
 
   dishName.innerText = dish.name;
 
-  return dish.name
+  return dish.name;
 }
 
 function changeToRed() {
@@ -186,7 +191,9 @@ function changeToRed() {
 
 function removeThisDish() {
   changeToRed();
+
   removeFromArray(currentDish.course);
+  
   confirmDishRemoved(currentDish);
 }
 

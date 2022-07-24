@@ -9,12 +9,17 @@ red - #ee5253
 */
 *{
   border: 2px solid red;
+  /* margin: 0; */
 }
 body{
   display:flex;
   flex-direction: column;
   background: no-repeat url("assets/burger-friends.jpg");
-  background-size: 100%;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+span{
+  color: red;
 }
 .button-container {
     display: flex;
@@ -25,6 +30,7 @@ body{
     align-items: flex-start;
     size: 80%;
     padding: 10px;
+    margin-top: 20px;
 }
 .Cook-pot-container {
     width: 350;
@@ -45,6 +51,7 @@ nav{
   background-color: #0fb9b1;
   height: 60px;
   text-align: left center;
+  margin: 0;
 }
 .Cook-pot-container{
   background-color: rgba(225, 225, 225, .9);
@@ -54,9 +61,15 @@ nav{
   background-color: #0fb9b1;
 }
 img{
-  width: 60px;
+  width: 80px;
   height: auto;
 }
 .what{
   text-align: center;
+}
+button{
+  background-color: #0fb9b1;
+  width: 125px;
+  height: 35px;
+  margin-left: 30;
 }

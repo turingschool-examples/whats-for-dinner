@@ -1,3 +1,13 @@
+// query selector variables
+
+
+// event listeners
+
+
+// functions and event handlers
+
+
+
 // function hide(element) {
 //   element.classList.add('hidden');
 // }

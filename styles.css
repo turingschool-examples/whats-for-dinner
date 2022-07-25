@@ -8,9 +8,9 @@ red - #ee5253
 
 */
 
-* {
+/* * {
   border: solid 2px red;
-}
+} */
 
 body {
   display: flex;
@@ -24,11 +24,12 @@ body {
   margin: 0;
 }
 
-h1 {
+.main-title {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   margin: 0;
-  display: inline-block;
-  padding: 5px
+  padding: 5px 10px;
 
 }
 
@@ -37,34 +38,76 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
+  box-sizing: content-box;
   background: #0fb9b1;
-  font-size: small;
-  padding-bottom: 15px;
-  height: 15%;
+  padding-bottom: 0px;
+  height: 10%;
   width: 100%;
 }
 
 .button {
-  display: block;
   float: right;
-  font-size: 15px;
-  padding: 7px 5px;
+  background-color:rgba(225, 225, 225, .9);
+  background-repeat: no-repeat;
   border-radius: 8px;
-  border-style: outset;
-  height: 30%;
-  width: 10%;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 38%;
+  font-family:'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  transition: all 200ms;
+  white-space: nowrap;
+  width: 9.2%;
+  touch-action: manipulation;
 }
 
 .button-2 {
-  display: block;
-  font-size: 15px;
   background-color: #0fb9b1;
   border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
   text-align: center;
-  padding: 10px 35px;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  touch-action: manipulation;
 }
 
+.button-3 {
+  background-color: #95a5a6;
+  border-radius: 8px;
+  border-width: 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  float: inherit;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+}
 img {
   height: auto;
   width: 100%;
@@ -72,23 +115,43 @@ img {
 
 .main-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 100%;
   width: 100%;
 
 }
-input {
-  vertical-align: text-top;
-  padding-bottom: 10px;
-  display:
+
+.text-wrapper-left {
+  background-color: rgba(225, 225, 225, .9);
+  border: 1px solid white;
+  float: left;
+  padding: 20px 35px 20px;
+  text-align: left;
+  width: 20%;
 }
 
-.text-block {
-  position: absolute;
-  border: 1px solid white;
+.text-wrapper-right {
   background-color: rgba(225, 225, 225, .9);
-  padding: 30px 50px 50px;
+  border: 1px solid white;
+  float: right;
+  padding: 20px 35px 20px;
+  text-align: center;
+  width: 20%;
+}
+
+.food-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: large;
+}
+.crockpot {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 60%;
+  align-content: center;
 }
 
 .hidden {

@@ -1,5 +1,4 @@
-// query selector variables
-
+query selector variables
 
 // event listeners
 

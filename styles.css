@@ -8,10 +8,6 @@ red - #ee5253
 
 */
 
-/* * {
-  border: solid 2px red;
-} */
-
 body {
   display: flex;
   flex-direction: column;

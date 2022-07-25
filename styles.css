@@ -254,13 +254,22 @@ li {
   display: none;
 }
 
+.edit-name {
+  height: 40px;
+  width: 150px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  display: none;
+  margin-right: 20em;
+}
+
 .recipe-name {
   height: 40px;
   width: 150px;
   margin: 10px;
   border: none;
   border-radius: 5px;
-  margin-right: 30em;
   display: none;
 }
 

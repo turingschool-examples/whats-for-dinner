@@ -1,6 +1,6 @@
-var sides = ["Esquites", " Elote", " Nopales", " Arroz Mexicano", " Frijoles fritos", " Calabaza rostizada", " Chiles en vinagre", " Guacamole", " Papas fritas", " Consome"]
-var mainDishes = ["Chiles en Nogada", " Tamales", " Chilaquiles", " Mole negro", " Tlayudas", " Tlacoyos", " Pozole", " Menudo", " Mollejas", " Enchiladas", " Torta ahogado", " Toastadas", " Sopes", " Barbacoa", " Tacos al Pastor"]
-var desserts = ["Gelatina", " Arroz con leche", " Paleta", " Dulce de leche", " Flan", " Churros", " Concha", " Meringue", " Horchata", " Galletas"]
+var sides = ["Esquites", "Elote", "Nopales", "Arroz Mexicano", "Frijoles fritos", "Calabaza rostizada", "Chiles en vinagre", "Guacamole", "Papas fritas", "Consome"]
+var mainDishes = ["Chiles en Nogada", "Tamales", "Chilaquiles", "Mole negro", "Tlayudas", "Tlacoyos", "Pozole", "Menudo", "Mollejas", "Enchiladas", "Torta ahogado", "Toastadas", "Sopes", "Barbacoa", "Tacos al Pastor"]
+var desserts = ["Gelatina", "Arroz con leche", "Paleta", "Dulce de leche", "Flan", "Churros", "Concha", "Meringue", "Horchata", "Galletas"]
 
 var side = sides[Math.floor(Math.random() * sides.length)]
 var mainDish = mainDishes[Math.floor(Math.random() * mainDishes.length)]
@@ -26,6 +26,7 @@ var editBtn = document.querySelector('.edit-recipe-btn')
 var deleteBtn = document.querySelector('.delete-recipe-btn')
 var typeEdit = document.querySelector('.recipe-type')
 var nameEdit = document.querySelector('.recipe-name')
+var changeRecipe = document.querySelector('.edit-name')
 
 letsCook.addEventListener('click', showRandomFood)
 function showRandomFood() {
@@ -55,24 +56,65 @@ function showAllRecipe() {
     deleteBtn.classList.toggle('toggle4')
     typeEdit.classList.toggle('toggle4')
     nameEdit.classList.toggle('toggle4')
-    sidesList.innerHTML = `Sides: ${sides}`
-    mainList.innerHTML = `Main Dishes: ${mainDishes}`
-    dessertList.innerHTML = `Desserts: ${desserts}`
+    changeRecipe.classList.toggle('toggle4')
+    sidesList.innerHTML = `Sides: ${sides.join(', ')}`
+    mainList.innerHTML = `Main Dishes: ${mainDishes.join(', ')}`
+    dessertList.innerHTML = `Desserts: ${desserts.join(', ')}`
 }
+
+var currentRecipe = []
 
 addBtn.addEventListener('click', addNewRecipe)
 function addNewRecipe() {
-    if(typeEdit.value === 'sides' || 'Sides') {
-        sides.push(nameEdit.value)
+    if (typeEdit.value === 'sides') {
+        sides.push(" " + nameEdit.value)
+        sidesList.innerText = `Sides: ${sides.join(', ')}`
     }
-    if(typeEdit.value === 'desserts' || 'Desserts') {
-        desserts.push(nameEdit.value)
+    if (typeEdit.value === 'desserts') {
+        desserts.push(" " + nameEdit.value)
+        dessertList.innerText = `Desserts: ${desserts.join(', ')}`
     }
-    if(typeEdit.value === 'main dishes' || 'Main dishes') {
-        mainDishes.push(nameEdit.value)
+    if (typeEdit.value === 'main dishes') {
+        mainDishes.push(" " + nameEdit.value)
+        mainList.innerText = `Main Dishes: ${mainDishes.join(', ')}`
     }
 }
 
+deleteBtn.addEventListener('click', deleteRecipe)
+function deleteRecipe() {
+    if (typeEdit.value === 'sides') {
+        var sideIndex = sides.indexOf(nameEdit.value)
+        sides.splice(sideIndex, 1)
+        sidesList.innerText = `Side: ${sides.join(', ')}`
+    }
+    if (typeEdit.value === 'desserts') {
+        var dessertIndex = desserts.indexOf(nameEdit.value)
+        desserts.splice(dessertIndex.value, 1)
+        dessertList.innerText = `Desserts: ${desserts.join(', ')}`
+    }
+    if (typeEdit.value === 'main dishes') {
+        var dishIndex = mainDishes.indexOf(nameEdit.value)
+        mainDishes.splice(dishIndex.value, 1)
+        mainList.innerText = `Main Dishes: ${mainDishes.join(', ')}`
+    }
+}
 
+editBtn.addEventListener('click', editRecipe)
+function editRecipe() {
+    if (typeEdit.value === 'sides') {
+        var sideIndex = sides.indexOf(nameEdit.value)
+        sides.splice(sideIndex, 1, changeRecipe.value)
+        sidesList.innerText = `Side: ${sides.join(', ')}`
+    }
+    if (typeEdit.value === 'desserts') {
+        var dessertIndex = desserts.indexOf(nameEdit.value)
+        desserts.splice(dessertIndex.value, 1, changeRecipe.value)
+        dessertList.innerText = `Desserts: ${desserts.join(', ')}`
+    }
+    if (typeEdit.value === 'main dishes') {
+        var dishIndex = mainDishes.indexOf(nameEdit.value)
+        mainDishes.splice(dishIndex.value, 1, changeRecipe.value)
+        mainList.innerText = `Main Dishes: ${mainDishes.join(', ')}`
+    }
+}
 
-// can take value from recipe and push to specified type

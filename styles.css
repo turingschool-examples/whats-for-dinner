@@ -4,7 +4,19 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+body {
+    display: flex;
+    background-image: url('./assets/burger-friends.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+ #navDiv {
+    display: flex;
+    justify-content: stretch;
+    background-color:#0fb9b1;
+}

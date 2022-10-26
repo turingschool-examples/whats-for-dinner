@@ -8,3 +8,115 @@ red - #ee5253
 
 */
 
+html {
+    height:100%;
+}
+
+.hidden {
+    display:none
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(assets/burger-friends.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav-box {
+    background-color: #0fb9b1;
+    display: flex;
+    border: 0;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-message {
+    margin-left: 20px;
+}
+
+.nav-button {
+    margin-right: 20px;
+    border: none;
+    border-radius: 8px;
+    height: 35px;
+    align-items: center;
+    width: 100px;
+}
+
+.main-page {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-start;
+    height: -webkit-fill-available;
+    margin-top: 80px;
+}
+
+.choice-section {
+    display: flex;
+    background-color: rgba(225, 225, 225, .9);
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 400px;
+    width: 400px;
+    margin-top: 40;
+}
+
+.choice-message span {
+    color: #ee5253;
+}
+
+.choice-message {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.choice-form {
+    padding-left: 30px;
+    height: 200px;
+}
+
+.lets-cook-button {
+    background-color: #0fb9b1;
+    width: 200px;
+    height: 35px;
+    border:none;
+    border-radius:8px;
+}
+
+
+.display-meals {
+    display: flex;
+    background-color: rgba(225, 225, 225, .9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    margin-top: 40;
+}
+
+.pot-svg {
+    display:flex;
+    width: 35%;
+}
+
+h3 {
+    font-style: italic;
+}
+
+.clear-button {
+    background-color:#95a5a6 ;
+}
+
+input[type=radio] {
+    margin-right:5px;
+    margin-bottom: 40px;
+}
+

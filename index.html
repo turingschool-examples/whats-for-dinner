@@ -4,7 +4,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <nav class="top-nav-box">
+      <h1 class="nav-message">What's for Dinner?</h1>
+      <button class="nav-button">Add A Recipe</button>
+    </nav>
+    <main class="main-page">
+      <section class="choice-section">
+        <h2 class="choice-message">What are you looking for?<span> * </span></h2>
+        <form class="choice-form">
+          <input type="radio" id="side-radio" name="meals" value="side">
+          <label for="side-radio">Side</label><br>
+          <input type="radio" id="main-dish-radio" name="meals" value="main-dish">
+          <label for="'main-dish-radio">Main Dish</label><br>
+          <input type="radio" id="dessert-radio" name="meals" value="dessert">
+          <label for="dessert-radio">Dessert</label><br>
+          <input type="radio" id="entire-meal-radio" name="meals" value="entire-meal">
+          <label for="entire-meal-radio">Entire Meal</label><br>
+          <button class="lets-cook-button">LET'S COOK!</button>
+        </form>
+      </section>
+      <section class="display-meals">
+        <img class="pot-svg" src="assets/cookpot.svg" alt="black and white cooking pot">
+        <article class="meal-message hidden">
+          <h3 id="make-message">You should make:</h3>
+          <h2 id="choice-results"></h2>
+          <button class="clear-button">CLEAR</button>
+        </article>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

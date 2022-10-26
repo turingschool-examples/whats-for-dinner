@@ -6,6 +6,12 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253 */
 
+* {
+    font-family: 'Roboto bold', sans-serif;
+    font-size: 16px;
+    font-weight: 540;
+}
+
 html {
     height: 100%;
 }
@@ -21,8 +27,7 @@ body {
 main {
     display: flex;
     flex-wrap: no-wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
     min-height: 100%;
     
 }
@@ -30,17 +35,24 @@ main {
 .home-boxs {
     background-color: rgba(225, 225, 225, .9);
     height: 300px;
-    width: 300px;
+    width: 375px;
+    margin: 40px;
     
     /* align-self: center; */
 }
 
 
 #pot-image-box {
-    background-image: url('./assets/cookpot.svg')
+    background-image: url('./assets/cookpot.svg');
+    background-size: 85px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #select-item-box {
+    text-align: center;
+    line-height: 120px;
+    font-size: 20px;
 
 }
 
@@ -48,5 +60,5 @@ main {
     background-color:#0fb9b1;
     width: 100%;
     padding: 1em;
-    font-weight: bold;
+   
 }

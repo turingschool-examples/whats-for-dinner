@@ -8,12 +8,10 @@ red - #ee5253
 
 */
 
+
+
 html {
     height:100%;
-}
-
-.hidden {
-    display:none
 }
 
 body {
@@ -24,6 +22,9 @@ body {
     border: 0;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .top-nav-box {
@@ -36,11 +37,36 @@ body {
     align-items: center;
 }
 
+.login-container {
+    display: flex;
+    background-color: rgba(225, 225, 225, .9);
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.login-message {
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+.login-button {
+    margin-top:10px;
+}
+
+#login-box {
+text-align: center;
+}
+
+
 .nav-message {
     margin-left: 20px;
 }
 
-.nav-button {
+.add-button {
     margin-right: 20px;
     border: none;
     border-radius: 8px;
@@ -66,6 +92,7 @@ body {
     height: 400px;
     width: 400px;
     margin-top: 40;
+    margin-right: 150px;
 }
 
 .choice-message span {
@@ -90,7 +117,6 @@ body {
     border-radius:8px;
 }
 
-
 .display-meals {
     display: flex;
     background-color: rgba(225, 225, 225, .9);
@@ -100,6 +126,7 @@ body {
     height: 400px;
     width: 400px;
     margin-top: 40;
+    margin-left: 150px;
 }
 
 .pot-svg {
@@ -113,6 +140,11 @@ h3 {
 
 .clear-button {
     background-color:#95a5a6 ;
+    color: rgba(225, 225, 225, .9);
+    border:0;
+    border-radius: 8px;
+    height: 35px;
+    width: 80px;
 }
 
 input[type=radio] {
@@ -120,3 +152,18 @@ input[type=radio] {
     margin-bottom: 40px;
 }
 
+.meal-message {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none!important;
+  }

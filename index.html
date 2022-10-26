@@ -2,13 +2,23 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
   <body>
     <nav class="top-nav-box">
       <h1 class="nav-message">What's for Dinner?</h1>
-      <button class="nav-button">Add A Recipe</button>
+      <p class="user-name hidden" id="user-input"></p>
+      <button class="add-button hidden" id="recipe-button">Add A Recipe</button>
     </nav>
-    <main class="main-page">
+    <article class="login-page" id="page-login">
+      <form class="login-container" id="container">
+        <h1 class="login-message">Login for Recipes!</h1>
+        <label for="login-box">Name:</label>
+        <input type="text" id="login-box">
+        <button class="login-button">Let's Cook!</button>
+      </form>
+    </article>
+    <article class="main-page hidden" id="main">
       <section class="choice-section">
         <h2 class="choice-message">What are you looking for?<span> * </span></h2>
         <form class="choice-form">
@@ -28,10 +38,10 @@
         <article class="meal-message hidden">
           <h3 id="make-message">You should make:</h3>
           <h2 id="choice-results"></h2>
-          <button class="clear-button">CLEAR</button>
+          <button class="clear-button" id="clear-results">CLEAR</button>
         </article>
       </section>
-    </main>
+    </article>
+    <script src="main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
 </html>

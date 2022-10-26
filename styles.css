@@ -8,13 +8,29 @@ red - #ee5253 */
 
 body {
     margin: 0;
-    display: flex;
     background-image: url('./assets/burger-friends.jpg');
     background-size: cover;
-  
 }
 
- #navbar {
+main {
+    display: flex;
+    justify-content: space-around;
+    align-content: center; 
+}
+
+.home-box {
+    display: flex;
+    background-color: rgba(225, 225, 225, .9);
+    height: 300px;
+    width: 300px;
+}
+
+
+#pot-image-box {
+    background-image: url('./assets/cookpot.svg')
+}
+
+#navbar {
     background-color:#0fb9b1;
     width: 100%;
     padding: 1em;

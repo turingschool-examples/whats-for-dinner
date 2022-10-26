@@ -11,7 +11,6 @@ body {
     display: flex;
     background-image: url('./assets/burger-friends.jpg');
     height: 100%;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   

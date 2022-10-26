@@ -10,17 +10,13 @@ body {
     margin: 0;
     display: flex;
     background-image: url('./assets/burger-friends.jpg');
-    height: 100%;
-    background-repeat: no-repeat;
     background-size: cover;
   
 }
 
  #navbar {
     background-color:#0fb9b1;
-    display: table;
     width: 100%;
     padding: 1em;
-    margin: 0;
     font-weight: bold;
 }

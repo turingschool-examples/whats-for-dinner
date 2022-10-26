@@ -1,3 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif, black;
+    border: 1px solid black; 
+    
+}
+
+body {
+    /* background-image: url("assets/burger-friends.jpg"); */
+    display: flex;
+    height: 100vh;
+    background: url("assets/burger-friends.jpg");/* background-color: black; */
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #0fb9b1;
+    width: var(--s-full);
+    max-width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+div {
+    margin: 20;
+    padding: 50;
+    background-color: #95a5a6;
+    /* color: black; */
+    padding: 100px;
+    width: 100;
+    /* opacity: 0.3; */
+}
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
@@ -7,4 +50,3 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-

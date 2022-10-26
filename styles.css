@@ -6,28 +6,42 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253 */
 
+html {
+    height: 100%;
+}
+
+
 body {
     margin: 0;
     background-image: url('./assets/burger-friends.jpg');
     background-size: cover;
+    height: 100%;
 }
 
 main {
     display: flex;
+    flex-wrap: no-wrap;
     justify-content: space-around;
-    align-content: center; 
+    align-items: center;
+    min-height: 100%;
+    
 }
 
-.home-box {
-    display: flex;
+.home-boxs {
     background-color: rgba(225, 225, 225, .9);
     height: 300px;
     width: 300px;
+    
+    /* align-self: center; */
 }
 
 
 #pot-image-box {
     background-image: url('./assets/cookpot.svg')
+}
+
+#select-item-box {
+
 }
 
 #navbar {

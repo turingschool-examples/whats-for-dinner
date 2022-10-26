@@ -26,6 +26,10 @@ h2 {
     color: black; 
 }
 
+input {
+    margin-bottom: 20px;
+}
+
 .page-title {
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -47,8 +51,7 @@ h2 {
     padding-left: 23px;
     height: 401px;
     width: 483px;
-    background-color: white;
-    opacity: 75%;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .input-options {
@@ -59,9 +62,10 @@ h2 {
 }
 
 .lets-cook-button {
-    height: 15;
-    width: 50;
-    color: #0fb9b1;
+    height: 30px;
+    width: 150px;
+    background-color: #0fb9b1;
+    border: none;
 }
 
 
@@ -72,13 +76,12 @@ h2 {
     margin-top: 46px;
     height: 400px;
     width: 500px;
-    background-color: white;
-    opacity: 75%;
+    background-color: rgba(255, 255, 255, 0.75);
     align-content: center;
     justify-content: center;
 }
 
 .cookpot-img {
-    height: 250;
+    height: 150;
     object-position: center;
 }

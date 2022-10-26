@@ -21,5 +21,7 @@ body {
     background-color:#0fb9b1;
     display: table;
     width: 100%;
+    padding: 1em;
     margin: 0;
+    font-weight: bold;
 }

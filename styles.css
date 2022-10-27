@@ -1,10 +1,105 @@
 /* font-family: 'Roboto', sans-serif;
-
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
-
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Element Selectors */
+body {
+    font-family: 'Roboto', sans-serif;  
+    background-image: url("assets/burger-friends.jpg");
+    background-size: cover;
+    contain: background-image;
+    background-color: #95a5a6;
+}
+nav {
+    overflow: hidden;
+    background-color: #0fb9b1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    height: 52px;
+    font-size: 14px;
+    align-items: center;
+}
+.add-a-recipe-btn {
+    margin: 10px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+}
+/* Main Body */
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+    align-items: flex-start;
+    padding: 10px;
+}
+.blocks {
+    background-color: rgba(225, 225, 225, .9);
+    height: 335px;
+    width: 450px;
+}
+.input-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.astrix {
+    color: red;
+}
+.input-block-header {
+    margin: 25px;
+}
+.radio-button-form {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 160px;
+    height: 160px;
+    align-items: flex-start;
+    margin: 3px 15px;
+}
+.selector {
+    margin: 8px;
+}
+.lets-cook-btn {
+    background-color: #0fb9b1;
+    padding: 5px 45px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    margin: 24px;
+}
+.pot-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+}
+.pot {
+    height: 175px;
+    width: 175px;
+}
+/* alternative styling block for when pot disappears? how do we toggle between styles? (look up notes from toggle class) */
+/* classList.add the recipe-block class to pot-block section dynamically with JS */
+/* .recipe-block {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+} */
+.hidden {
+    display: none;
+}

@@ -57,7 +57,7 @@ input {
 }
 
 .star {
-    color: red;
+    color: #ee5253;
 }
 
 .input-options {
@@ -97,8 +97,34 @@ input {
     margin: 0px;
 }
 
+.favorite-section {
+    
+}
+
+.favorite-buttons {
+    height: 30px;
+    width: 175px;
+    margin-top: 30px;
+    background-color: #0fb9b1;
+    border: none;
+}
+
+.go-back-button {
+    height: 30px;
+    width: 175px;
+    margin-top: 30px;
+    background-color: #0fb9b1;
+    border: none;
+}
+
 .cookpot-img {
     width: 25%;
+}
+
+.favorite-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hidden {

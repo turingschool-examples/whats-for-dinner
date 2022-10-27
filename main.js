@@ -6,9 +6,14 @@ var dessertRadio = document.querySelector('#dessert');
 var potIcon = document.querySelector('.cookpot-img');
 var prompt = document.querySelector('.prompt')
 var suggestion = document.querySelector('.suggestion')
+var favoriteSection = document.querySelector('.favorite-section')
+var favoriteButtons = document.querySelector('.favorite-buttons')
+var favorite = document.querySelector('#favorite')
+var viewFavorites = document.querySelector('#view-favorite')
+var favoriteList = document.querySelector('.favorite-list')
 
 
-// Assets go here
+// Food options
 var sides = [
     "Miso Glazed Carrots",
     "Coleslaw",
@@ -20,7 +25,7 @@ var sides = [
     "Shrimp Summer Rolls",
     "Garlic Butter Mushrooms",
     "Hush Puppies"
-]
+];
 
 var mains = [
     "Spaghetti and Meatballs",
@@ -36,7 +41,7 @@ var mains = [
     "Chicken Fried Rice",
     "Sheet Pan Fajitas",
     "Margarita Pizza"
-]
+];
 
 var desserts = [
     "Apple Pie",
@@ -57,37 +62,53 @@ var desserts = [
     "Tart Tatin",
     "Croissants",
     "Eclairs"
-]
+];
+
+
 
 // Event Listeners go here
 cookButton.addEventListener('click', selectFood)
+favorite.addEventListener('click', addFavorite)
+viewFavorites.addEventListener('click', showFavorites)
 
-
-
+// Global vars
+var selectedFood;
+var favoriteFoods = [];
 // Functions 
 
 function getRndFood(array) {
     var arrayIndex = Math.floor(Math.random() * array.length);
     return array[arrayIndex];
-  }
+};
 
-  function displayCourse() {
+function displayCourse() {
     potIcon.classList.add("hidden");
     prompt.classList.remove("hidden");
-    suggestion.classList.remove("hidden")
+    suggestion.classList.remove("hidden");
+    favoriteSection.classList.remove("hidden");
 };
 
 
 function selectFood() {
-   var selectedFood;
     if (sideRadio.checked == true) {
         selectedFood = getRndFood(sides);
-} else if (mainRadio.checked == true) {
+    } else if (mainRadio.checked == true) {
         selectedFood = getRndFood(mains);
-} else if (dessertRadio.checked == true) {
+    } else if (dessertRadio.checked == true) {
         selectedFood = getRndFood(desserts);
-}
+    }
 suggestion.innerText = `${selectedFood}!`;
 displayCourse()
 };
 
+function addFavorite() {
+    favoriteFoods.push(selectedFood)
+}
+
+function showFavorites() {
+    prompt.classList.add("hidden");
+    suggestion.classList.add("hidden");
+    favoriteSection.classList.add("hidden");
+    favoriteList.classList.remove("hidden");
+    
+}

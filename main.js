@@ -11,6 +11,7 @@ var favoriteButtons = document.querySelector('.favorite-buttons')
 var favorite = document.querySelector('#favorite')
 var viewFavorites = document.querySelector('#view-favorite')
 var favoriteList = document.querySelector('.favorite-list')
+var goBackButton = document.querySelector('.go-back-button')
 
 
 // Food options
@@ -70,6 +71,7 @@ var desserts = [
 cookButton.addEventListener('click', selectFood)
 favorite.addEventListener('click', addFavorite)
 viewFavorites.addEventListener('click', showFavorites)
+goBackButton.addEventListener('click', goBack)
 
 // Global vars
 var selectedFood;
@@ -110,5 +112,11 @@ function showFavorites() {
     suggestion.classList.add("hidden");
     favoriteSection.classList.add("hidden");
     favoriteList.classList.remove("hidden");
-    
+}
+
+function goBack() {
+    prompt.classList.remove("hidden");
+    suggestion.classList.remove("hidden");
+    favoriteSection.classList.remove("hidden");
+    favoriteList.classList.add("hidden");
 }

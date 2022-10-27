@@ -48,6 +48,20 @@ var desserts = [
     'Tart Tatin'
 ];
 
+var mealType;
+var foodChoice = document.getElementsByName("lets-cook-radio");
+var foodName = document.querySelector(".food-name")
+
+
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
+};
+
+function displayRandomFood() {
+    for(var i = 0; i < foodChoice.length; i++) {
+        if(foodChoice[i].checked) {
+            mealType = eval(foodChoice[i].id)
+            foodName.innerText = mealType[getRandomIndex(mealType)]
+        };
+    };
 };

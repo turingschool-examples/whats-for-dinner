@@ -47,3 +47,7 @@ var desserts = [
     'Pumpkin Pie',
     'Tart Tatin'
 ];
+
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length)
+};

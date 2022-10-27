@@ -119,3 +119,16 @@ button {
 .cookpot img {
     width: 100px;
 }
+
+#meal-display {
+    text-align: center;  
+}
+
+#meal-display-name {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+

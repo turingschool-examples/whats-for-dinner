@@ -20,6 +20,7 @@ var mealDisplayName = document.querySelector('#meal-display-name')
 //eventListeners
 letsCookButton.addEventListener('click', function() {
     checkRadio()
+    toggleDisplay()
 })
 
 //functions
@@ -44,6 +45,12 @@ function checkRadio() {
         return 'Please make a selection.'
     }
 }
+
+function toggleDisplay() {
+    mealDisplayBox.classList.toggle('hidden')
+    cookpotDisplay.classList.toggle('hidden')
+}
+
 
 
 

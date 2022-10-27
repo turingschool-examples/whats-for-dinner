@@ -33,3 +33,7 @@ nav {
     font-size: .90em;
   }
 
+  html {
+    background: url(assets/burger-friends.jpg);
+    background-size: cover;
+}

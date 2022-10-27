@@ -14,6 +14,7 @@ var clearButton = document.querySelector('#clear-results')
 var letsCookButton = document.querySelector('.lets-cook-button')
 var mealMessage = document.querySelector('.meal-message')
 var entireMealMessage = document.querySelector('#entire-meal-results')
+var errorMessageDisplay = document.querySelector('.error-message')
 
 
 var sides = [
@@ -101,15 +102,16 @@ function displayMeals(event) {
     event.preventDefault()
     potImage.classList.add('hidden')
     mealMessage.classList.remove('hidden')
+    document.getElementById('choice-results').style.color = "black"
     var checkedRadio = document.querySelector('input[name="meals"]:checked');
-    console.log(checkedRadio)
     var sideDish = getRandomIndex(sides)
     var mainDish = getRandomIndex(mains)
     var dessertDish = getRandomIndex(desserts)
     choiceDisplay.innerHTML = " "
     if (checkedRadio === null) {
-        potImage.classList.remove('hidden')
-        mealMessage.classList.add('hidden')
+        clearButton.classList.add('hidden')
+        document.getElementById('choice-results').style.color = "#ff0000"
+        choiceDisplay.innerText = "Please make a choice!!"
     }
     if (checkedRadio.value === "side") {
         choiceDisplay.innerText = getRandomIndex(sides)
@@ -121,7 +123,7 @@ function displayMeals(event) {
         choiceDisplay.innerText = getRandomIndex(desserts)
     }
     if (checkedRadio.value === "entire-meal") {
-        choiceDisplay.innerText = `${mainDish} with a side of ${sideDish} and ${dessertDish}`
+        choiceDisplay.innerText = `${mainDish} with a side of ${sideDish} and ${dessertDish} for dessert!`
     }   
     
 }

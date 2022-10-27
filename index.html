@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
@@ -10,7 +11,7 @@
     </header>
       <section class="main-menus">
         <article class="main-menus left-menu">
-          <h2>What are you looking for?</h2>
+          <h2>What are you looking for?<span class="star">*</span></h2>
           <form>
             <input id="side" name="course" type="radio" value="Side">
             <label class="input-options" for="side">Side</label><br>
@@ -23,6 +24,8 @@
         </article>
         <article class="main-menus right-menu">
           <img class="cookpot-img" src="./assets/cookpot.svg" alt="cooking pot icon">
+          <h2 class="prompt hidden">You should make:</h2>
+          <p class="suggestion hidden">Food Suggestion Here</p>
         </article> 
       </section>
   </body>

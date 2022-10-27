@@ -8,20 +8,26 @@ red - #ee5253
 
 */
 
+/* ~~~~~ GLOBAL RULES ~~~~~ */
 html {
     background-image: url("assets/burger-friends.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 body {
     font-family: 'Roboto', sans-serif;
 }
+.hidden {
+    display: none!important;
+}
+
+/* ~~~~~ HEADER RULES ~~~~~ */
 
 header {
     background-color: #0fb9b1;
     display: flex;
     flex-direction: row;
+    font-size: large;
     height: 60px;
     justify-content: space-between;
     left: 0;
@@ -29,23 +35,23 @@ header {
     top: 0;
     width: 100%;
 }
-
 #header-title {
     margin: 15px 20px;
 }
-
 #header-btn {
     background-color: rgba(225, 225, 225, .9);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size:medium;
+    font-size:inherit;
     margin: 12px 20px;
     padding-left: 7px;
     padding-right: 7px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
+
+/* ~~~~~ SECTION/BOX RULES ~~~~~ */  
 
 section {
     align-items: center;
@@ -54,7 +60,6 @@ section {
     justify-content:space-around;
     margin-top: 125px;
 }
-
 .box {
     background-color: rgba(225, 225, 225, .9);
     display: flex;
@@ -64,30 +69,44 @@ section {
     width: 500px;
 }
 
+/* ~~~~~ FORM RULES ~~~~~ */ 
+
 #lets-cook-form {
     align-items: center;
     font-size: larger;
     font-weight: bolder;
-    margin: 50px 0 0 40px;
+    margin: 40px 0 0 40px;
 }
-
 sup {
     color: #ee5253;
 }
-
-#lets-cook-btn {
+.lets-cook-btn {
     background-color: #0fb9b1;
     border: none;
     border-radius: 5px;
-    font-weight: bold;
+    font-size: inherit;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-img {
-    height: 150px;
+/* ~~~~~ PIC/FOOD RULES ~~~~~ */ 
+
+.cookpot-img {
+    height: 200px;
     margin: auto;
-    width: 150px;
+    width: 200px;
+}
+.random-meal {
+    align-items: center;
+    font-weight: bolder;
+    margin: auto;
+    text-align: center;
+}
+em {
+    font-size: 30px;
+}
+p {
+    font-size: 50px;
 }

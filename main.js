@@ -15,6 +15,7 @@ var letsCookButton = document.querySelector('.lets-cook-button')
 var mealMessage = document.querySelector('.meal-message')
 var entireMealMessage = document.querySelector('#entire-meal-results')
 
+
 var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
@@ -80,23 +81,19 @@ function getRandomIndex(array) {
     return array[randomArray]
 }
 
-
-
 function toMainPage(event) {
     event.preventDefault()
     loginPage.classList.add('hidden')
     mainPage.classList.remove('hidden')
     addRecipeButton.classList.remove('hidden')
+    displayUser.classList.remove('hidden')
+    displayUser.innerText = `Let's get cooking, ${loginBox.value}!`
 }
 
 function clearMealMessage(event) {
     event.preventDefault()
     potImage.classList.remove('hidden')
     mealMessage.classList.add('hidden')
-
-
-
-
 }
 
 
@@ -104,23 +101,32 @@ function displayMeals(event) {
     event.preventDefault()
     potImage.classList.add('hidden')
     mealMessage.classList.remove('hidden')
-    var checkedRadio = document.querySelector('input[name="meals"]:checked').value;
+    var checkedRadio = document.querySelector('input[name="meals"]:checked');
+    console.log(checkedRadio)
     var sideDish = getRandomIndex(sides)
     var mainDish = getRandomIndex(mains)
     var dessertDish = getRandomIndex(desserts)
     choiceDisplay.innerHTML = " "
-    if (checkedRadio === "side") {
+    if (checkedRadio === null) {
+        potImage.classList.remove('hidden')
+        mealMessage.classList.add('hidden')
+    }
+    if (checkedRadio.value === "side") {
         choiceDisplay.innerText = getRandomIndex(sides)
     }
-    if (checkedRadio === "main-dish") {
+    if (checkedRadio.value === "main-dish") {
         choiceDisplay.innerText = getRandomIndex(mains)
     }
-    if (checkedRadio === "dessert") {
+    if (checkedRadio.value === "dessert") {
         choiceDisplay.innerText = getRandomIndex(desserts)
     }
-    if (checkedRadio === "entire-meal") {
+    if (checkedRadio.value === "entire-meal") {
         choiceDisplay.innerText = `${mainDish} with a side of ${sideDish} and ${dessertDish}`
-    }
+    }   
+    
 }
+
+
+
 
 

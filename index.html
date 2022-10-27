@@ -7,14 +7,16 @@
   <body>
     <nav class="top-nav-box">
       <h1 class="nav-message">What's for Dinner?</h1>
-      <p class="user-name hidden" id="user-input"></p>
-      <button class="add-button hidden" id="recipe-button">Add A Recipe</button>
+      <article class="display-user-add">
+        <p class="user-name hidden" id="user-input"></p>
+        <button class="add-button hidden" id="recipe-button">Add A Recipe</button>
+      </article>
     </nav>
     <article class="login-page" id="page-login">
       <form class="login-container" id="container">
         <h1 class="login-message">Login for Recipes!</h1>
         <label for="login-box">Name:</label>
-        <input type="text" id="login-box">
+        <input type="text" id="login-box" value="">
         <button class="login-button">Let's Cook!</button>
       </form>
     </article>
@@ -38,7 +40,6 @@
         <article class="meal-message hidden">
           <h3 id="make-message">You should make:</h3>
           <h2 id="choice-results"></h2>
-          <article id="entire-meal-results"></article>
           <div class="style-box">
             <button class="clear-button" id="clear-results">CLEAR</button>
           </div>

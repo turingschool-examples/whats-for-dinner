@@ -195,6 +195,15 @@ h3  {
     font-family: 'Roboto', sans-serif;
 }
 
+.display-user-add {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    padding-right: 30px;
+}
+
 .hidden {
     display: none!important;
   }

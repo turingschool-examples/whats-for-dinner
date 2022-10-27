@@ -3,43 +3,45 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  <header>
+      <nav>
+        <h1 class="main">What's for Dinner?</h1>
+        <button class="add-a-recipe-btn">add a recipe</button>
+      </nav> 
+  </header>
   <body>
-
-    <p style="background-image: url('img_girl.jpg');">
-    background image
-
-    <nav>
-      <h1 class="main">What's for Dinner?</h1>
-      <button class="add-a-recipe-btn">add a recipe</button>
-    </nav> 
-
-    <section class="input-block">
-      <h2 class="input-block header">What are you looking for?</h2> 
-      <form>
-        <input type="radio" value="side">
-        <label for="side">Side</label><br>
-        <input type="radio" value="main-dish">
-        <label for="main-dish">Main Dish</label><br>
-        <input type="radio" value="dessert">
-        <label for="dessert">Dessert</label><br>
-        <input type="radio" value="Entire Meal">
-        <label for="side">Entire Meal</label><br>
-
+    <section class="boxes">
+      <form class="boxes blocks input-block">
+        <h2 class="input-block-header">What are you looking for?<span class="astrix">*</span></h2> 
+        <fieldset class="radio-button-form">
+          <div class="selector">
+            <input type="radio" name="pick-one" value="side" id="side">
+            <label for="side">Side</label><br>
+          </div>
+          <div class="selector">
+            <input type="radio" name="pick-one" value="main-dish" id="main-dish">
+            <label for="main-dish">Main Dish</label><br>
+          </div>
+          <div class="selector">
+            <input type="radio" name="pick-one" value="dessert" id="dessert">
+            <label for="dessert">Dessert</label><br>
+          </div>
+          <div class="selector">
+            <input type="radio" name="pick-one" value="Entire Meal" id="entire-meal">
+            <label for="side">Entire Meal</label><br>
+          </div>
+        </fieldset>
+        <button class="lets-cook-btn">let's cook</button>
       </form>
-      <button class="lets-cook-btn">let's cook</button>
+      <section class="boxes blocks pot-block">
+        <img class="pot" src="assets/cookpot.svg" alt="steaming pot">
+        <div class="suggest hidden">
+          <p><em>you should make</em></p>
+          <div>insert innerText here</div>
+          <button class="clear-btn">clear</button>
+        </div>
+      </section>
     </section>
-    <section class="recipe-display">
-      <p class="suggest">you should make</p>
-      <article>insert innerText here</article>
-      <button class="clear-btn">clear</button>
-    </section>
-      
-         
-
-
-
-
-
     
   </body>
   <script type="text/javascript" src="main.js"></script>

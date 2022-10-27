@@ -8,67 +8,95 @@ red - #ee5253
 
 */
 
-.add-a-recipe-wrapper {
+.add-a-recipe {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
+
 .lets-cook {
   background-color: #0fb9b1;
+  padding: 15;
   display: flex;
 }
-html {
-  height:100%;
+label {
+  display: flex;
+  justify-content: center;
 }
-body {
-  background: #0fb9b1;
+div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
+  margin-block: 0px;
+  width: 50%;
+  height: 150px;
+}
+
+button {
+  border-radius: 7px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-selection-title {
+  margin: 0px;
+  padding: 15px;
+}
+
+html {
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+}
+
+body {
   background-image: url("./assets/burger-friends.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
+
 header {
   background-color: #0fb9b1;
   padding: 10px 50px;
   display: flex;
-  flex-direction: column;
+  align-items: space-between;
+  font-family: 'Roboto', sans-serif;
 }
-/* main {
-  background-image: url("./assets/burger-friends.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-} */
 
 .wrapper {
-  /* opacity: 0.3;
-  background-color: white; */
-  /* border: 10px solid black; */
-  padding: 285px ;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: stretch;
+  margin: 75px;
 }
-.box {
-  /* opacity: 0.3; */
-  background-color: white;
-  border: 10px solid black;
-  padding: 5%;
+
+.box-1 {
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 20px;
+  width: 30%;
+  height: 400px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
 }
-.boxz:nth-child(1) {
-  /* opacity: 0.3; */
-  background-color: white;
-}
-.box:nth-child(2) {
-  /* opacity: 0.3; */
-  background-color: white;
-  display:flex;
+
+.box-2 {
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 20px;
+  width: 30%;
+  height: 400px;
+  display: flex;
   justify-content: center;
+  flex-direction: center;
 }
 
 h1 {

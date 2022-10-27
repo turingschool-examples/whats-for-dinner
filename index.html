@@ -10,34 +10,31 @@
 
 <body>
   <header>
-    <nav>
-      <h1>What's For Dinner?</h1>
-      <section class="add-a-recipe-wrapper">
-        <button class="add-a-recipe">ADD A RECIPE</button>
-      </section>
-    </nav>
+
+    <h1>What's For Dinner?</h1>
+    <button class="add-a-recipe">ADD A RECIPE</button>
   </header>
 
   <main class="main">
     <section class="wrapper">
-    <section class="box">
-      <h2 class="menu-selection-title">What are you looking for?</h2>
-      <ul>
-        <input type="radio" id="side">
-        <label for="side">Side</label><br>
-        <input type="radio" id="main-dish">
-        <label for="main-dish">Main Dish</label><br>
-        <input type="radio" id="dessert">
-        <label for="dessert">Dessert</label><br>
-        <input type="radio" id="entier-meal">
-        <label for="entire-meal">Entire Meal</label><br>
-      </ul>
-      <button class="lets-cook">LET'S COOK</button>
+      <form class="box-1">
+        <h2 class="menu-selection-title">What are you looking for?</h2>
+        <div>
+          <span><input type="radio" id="side"> Side</span><br> 
+          <!-- <label for="side">Side</label>-->
+          <span><input type="radio" id="main-dish"> Main Dish</span><br>
+          <!-- <label for="main-dish">Main Dish</label> -->
+          <span><input type="radio" id="dessert"> Desserts</span><br>
+          <!-- <label for="dessert">Dessert</label> -->
+          <span><input type="radio" id="entier-meal"> Entire Meal</span><br>
+          <!-- <label for="entire-meal">Entire Meal</label> -->
+        </div>
+        <button class="lets-cook">LET'S COOK!</button>
+      </form>
+      <section class="box-2">
+          <img src="./assets/cookpot.svg" style="width:50%" />
+      </section>
     </section>
-    <section class="box">
-      <img src="./assets/cookpot.svg" style="width:50%" />
-    </section>
-  </section>
   </main>
 </body>
 <script type="text/javascript" src="main.js"></script>

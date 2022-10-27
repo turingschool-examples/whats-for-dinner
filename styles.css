@@ -8,3 +8,8 @@ red - #ee5253
 
 */
 
+html {
+    background-image: url("assets/burger-friends.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

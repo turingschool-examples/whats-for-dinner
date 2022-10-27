@@ -7,10 +7,11 @@ grey - #95a5a6;
 red - #ee5253 */
 
 * {
-    font-family: 'Roboto bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0 0 0 0;
     padding: 0;
+    font-weight: bold;
 }
 
 html {
@@ -41,7 +42,7 @@ main {
     width: 300px;
     margin: 35px 0px;
     padding: 60px 30px;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: flex-start;
     font-size: 20px;
@@ -56,6 +57,15 @@ main {
     background-position: center;
 }
 
+#asterisk {
+    color: red;
+    vertical-align: super;
+    font-size: 24px;
+}
+
+span {
+    justify-content: flex-end;
+}
 
 #lets-cook-button {
     background-color: #0fb9b1;
@@ -64,6 +74,8 @@ main {
     margin: 10px;
     align-items: flex-end;
     padding: 0;
+    border: none;
+    border-radius: 5px;
 }
 
 ul {

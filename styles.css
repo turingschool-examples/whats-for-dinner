@@ -9,7 +9,8 @@ red - #ee5253 */
 * {
     font-family: 'Roboto bold', sans-serif;
     font-size: 16px;
-    font-weight: 540;
+    margin: 0 0 0 0;
+    padding: 0;
 }
 
 html {
@@ -28,17 +29,21 @@ main {
     display: flex;
     flex-wrap: no-wrap;
     justify-content: space-evenly;
-    min-height: 100%;
-    
+    min-height: 100%; 
 }
 
 .home-boxs {
     background-color: rgba(225, 225, 225, .9);
     height: 300px;
     width: 375px;
-    margin: 40px;
-    
-    /* align-self: center; */
+    margin: 40px 0px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: left;
 }
 
 
@@ -49,16 +54,20 @@ main {
     background-position: center;
 }
 
-#select-item-box {
-    text-align: center;
-    line-height: 120px;
-    font-size: 20px;
 
+ul {
+    list-style-type: none;
+    flex-direction: column;
+    display: flex; 
+    align-items: flex-start;
+    padding: 0;
+    width: 90%;
+    height: 70%;
+    justify-content: space-evenly;
 }
 
 #navbar {
-    background-color:#0fb9b1;
+    background-color: #0fb9b1;
     width: 100%;
     padding: 1em;
-   
 }

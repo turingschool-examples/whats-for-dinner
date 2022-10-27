@@ -13,3 +13,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

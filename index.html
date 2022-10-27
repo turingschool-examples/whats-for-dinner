@@ -9,7 +9,7 @@
       <h1 class="whats-for-dinner">What's for Dinner?</h1> 
     </nav>
     <main>
-      <div class="white-boxes what-are-you-looking-for">
+      <section class="white-boxes what-are-you-looking-for">
         <form action="">
           <h2 class="meal">What are you looking for?<a class="red-astrisk">*</a></h2>
           <span><input type="radio" name="meal" id="side-radio">Side</span>
@@ -18,11 +18,17 @@
           <span><input type="radio" name="meal" id="entire-radio">Entire Meal</span>
           <button type="button" id="lets-cook-button">LET'S COOK!</button>
         </form>
-      </div>
-      <div class="white-boxes cookpot ">
-        <img src="assets/cookpot.svg"" alt="Cooking Pot">
-      </div>
+      </section>
+      <section class="white-boxes cookpot">
+        <img src="assets/cookpot.svg"" alt="Cooking Pot" id="cookpot-display">
+        <article class="hidden" id="meal-display">
+          <h3>You should make:</h3>
+          <h2 id="meal-display-name"></h2>
+        </article>
+      </section>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
+
+

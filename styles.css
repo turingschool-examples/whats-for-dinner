@@ -1,3 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+body {
+    background: #0fb9b1;
+    background-image: url(assets/burger-friends.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header {
+    background-color: #0fb9b1 ;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+.add-recipe-button {
+    background-color: lightgray;
+    border-color: black;
+    height: 3vh;
+    width: 12vw;
+    display: flex;
+    justify-content: flex-start;
+
+    padding: 12px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+}
+.radio-buttons {
+    
+}
+.boxes{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.box-one {
+    background-color: #0fb9b1;
+    padding: 10px;
+    border: 0 solid;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+   
+
+}
+.box-two {
+    background-color: rgba(225, 225, 225, .9);
+    opacity: 80%;
+    padding: 45px;
+    height: 250px;
+    width: 350px;
+    border: 0 solid;
+    margin: 50px;
+    /* display: grid; */
+}
+.box-three {
+    background-color: rgba(225, 225, 225, .9);
+    opacity: 80%;
+    padding: 45px;
+    height: 250px;
+    width: 350px;
+    border: 0 solid;
+    margin: 50px;
+    /* display: grid; */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  
+
+}
+
+/* .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    border-radius: 50%;
+} */
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS

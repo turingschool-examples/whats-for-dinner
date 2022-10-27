@@ -45,8 +45,8 @@ header {
     cursor: pointer;
     font-size:inherit;
     margin: 12px 20px;
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
@@ -108,5 +108,5 @@ em {
     font-size: 30px;
 }
 p {
-    font-size: 50px;
+    font-size: 45px;
 }

@@ -28,6 +28,7 @@ nav {
     display: flex;
     height: 58px;
     justify-content: space-between;
+    margin-left: 0;
     position: absolute; top: 0; left: 0;
     width: 100%;
 }
@@ -35,6 +36,14 @@ nav {
 .whats-for-dinner {
     margin-left: 25px;
     order: 1;
+}
+
+#add-recipe-button {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    order: 2;
+    padding: 9px 15px;
 }
 
 /* main */
@@ -82,21 +91,6 @@ form span {
     margin: 10px
 }
 
-
-/* right div */
-.cookpot {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.cookpot img {
-    width: 100px;
-}
-
-
-/* buttons*/ 
 button {
     border: none;
     border-radius: 5px;
@@ -114,15 +108,14 @@ button {
     width: 175px;
 }
 
-#add-recipe-button {
-    border-radius: 5px;
-    margin-bottom: 20px;
-    margin-right: 25px;
-    order: 2;
-    padding: 9px 15px;
+/* right div */
+.cookpot {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-
-
-
-
+.cookpot img {
+    width: 100px;
+}

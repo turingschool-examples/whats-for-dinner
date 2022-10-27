@@ -9,17 +9,20 @@
       <button>Add a Recipe</button>
     </header>
     <main class="boxes"></main>
-      <form class="form">
-        <p>What are you looking for?</p>
-        <!-- <input class="radio" type="radio" id="side"> -->
-        <label class="label" for="side"><input class="radio" type="radio" id="side">  Side</label>
-        <label class="label" for="main-dish"><input type="radio" id="main-dish">  Main Dish</label>
-        <label class="label" for="dessert"><input type="radio" id="dessert">  Dessert</label>
-        <label class="label" for="entire-meal"><input type="radio" id="entire-meal">  Entire Meal</label>
-        <input class="button" type="submit" value="LET'S COOK!">
-      </form>
+      <section class="form">
+        <p>What are you looking for?<span>*</span></p>
+        <form class="form-structure">
+          <label class="label" for="side"><input class="radio" type="radio" name="food" value="side">Side</label>
+          <label class="label" for="main-dish"><input class="radio" type="radio" name="food" value="main">Main Dish</label>
+          <label class="label" for="dessert"><input class="radio" type="radio" name="food" value="dessert">Dessert</label>
+          <label class="label" for="entire-meal"><input class="radio" type="radio" name="food" value="entire-meal">Entire Meal</label>
+          <input class="cook-button" type="submit" value="LET'S COOK!">
+        </form>
+      </section>
       <div class="output">
-        <img src="./assets/cookpot.svg" alt="Cute little cookpot">
+        <p class="dish-heading hidden">You should make:<p>
+        <p class="dish-output hidden"></p>
+        <img class="cookpot" src="./assets/cookpot.svg" alt="Cute little cookpot">
       </div>
     </main>
     

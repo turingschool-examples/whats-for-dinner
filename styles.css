@@ -8,9 +8,9 @@ red - #ee5253
 
 */
 
-* {
+/* * {
   border: 2px solid blue;
-}
+} */
 
 body {
     padding: 0;
@@ -29,6 +29,10 @@ header {
     align-items: center;
 }
 
+span {
+  color: #ee5253;
+}
+
 .form {
     background-color: rgba(225, 225, 225, .9);
     display: flex;
@@ -36,6 +40,11 @@ header {
     justify-content: center;
     min-height: 400px;
     width: 500px;
+}
+
+.form-structure {
+  display: flex;
+  flex-direction: column;
 }
 
 .output {
@@ -51,21 +60,40 @@ header {
   .boxes {
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 100px;
   }
   
   .label {
-    margin: 10px 20px;
+    margin: 10px 30px;
   }
   
-  .button {
+  .cook-button {
     padding: 5px;
-    margin: 10px 320px 10px 20px;
+    margin: 10px 320px 10px 30px;
     background-color: #0fb9b1;
     border-radius: 5px;
     border: none;
     font-size: 16px;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .dish-heading {
+    font-style: italic;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dish-output {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
   }
 
   h1 {
@@ -88,6 +116,7 @@ header {
 
   p {
     font-size: 30px;
+    margin: 10px 30px;
   }
   
   label {

@@ -139,12 +139,14 @@ h3 {
 }
 
 .clear-button {
-    background-color:#95a5a6 ;
+    background-color: #95a5a6;
     color: rgba(225, 225, 225, .9);
-    border:0;
+    border: 0;
     border-radius: 8px;
     height: 35px;
     width: 80px;
+    margin-right: 25px;
+    margin-bottom: 25px;
 }
 
 input[type=radio] {
@@ -153,16 +155,30 @@ input[type=radio] {
 }
 
 .meal-message {
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    width: 401px;
+    height: 401px;
+    margin-top: 120px;
 }
+
+.style-box {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#entire-meal-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 
 .hidden {
     display: none!important;

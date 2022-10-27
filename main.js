@@ -51,7 +51,14 @@ var desserts = [
 var mealType;
 var foodChoice = document.getElementsByName("lets-cook-radio");
 var foodName = document.querySelector(".food-name")
+var foodButton = document.querySelector('.lets-cook-btn')
+var cookpotImg = document.querySelector(".cookpot-img")
+var randomFood = document.querySelector(".random-meal")
 
+foodButton.addEventListener("click", function() {
+    hideImage();
+    displayRandomFood();
+});
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
@@ -61,7 +68,12 @@ function displayRandomFood() {
     for(var i = 0; i < foodChoice.length; i++) {
         if(foodChoice[i].checked) {
             mealType = eval(foodChoice[i].id)
-            foodName.innerText = mealType[getRandomIndex(mealType)]
+            foodName.innerText = mealType[getRandomIndex(mealType)]+'!'
         };
     };
 };
+
+function hideImage() {
+    cookpotImg.classList.toggle("hidden");
+    randomFood.classList.toggle("hidden");
+  };

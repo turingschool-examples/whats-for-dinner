@@ -17,6 +17,9 @@ html {
     height: 100%;
 }
 
+span {
+    white-space: nowrap;
+}
 
 body {
     margin: 0;
@@ -37,7 +40,7 @@ main {
     height: 200px;
     width: 300px;
     margin: 35px 0px;
-    padding: 70px 30px;
+    padding: 60px 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -53,6 +56,15 @@ main {
     background-position: center;
 }
 
+
+#lets-cook-button {
+    background-color: #0fb9b1;
+    width: 220px;
+    height: 40px;
+    margin: 10px;
+    align-items: flex-end;
+    padding: 0;
+}
 
 ul {
     list-style-type: none;

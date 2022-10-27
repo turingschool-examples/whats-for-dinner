@@ -11,6 +11,7 @@ red - #ee5253
 header {
     background-color: #0fb9b1;
     height: 75px;
+    margin-top: -22px;
 }
 
 body {
@@ -21,8 +22,11 @@ body {
   }
 
 h2 {
+    font-family: 'Roboto', sans-serif; 
+}
+
+p {
     font-family: 'Roboto', sans-serif;
-    color: black; 
 }
 
 input {
@@ -52,6 +56,10 @@ input {
     background-color: rgba(255, 255, 255, 0.75);
 }
 
+.star {
+    color: red;
+}
+
 .input-options {
     font-family: 'Roboto', sans-serif;
     color: black;
@@ -70,14 +78,29 @@ input {
 .right-menu {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 46px;
     height: 400px;
     width: 500px;
     background-color: rgba(255, 255, 255, 0.75);
-    align-content: center;
-    justify-content: center;
+ 
+}
+
+.prompt {
+    font-style: italic;
+    margin: 0px;
+}
+
+.suggestion {
+    font-size: 40px;
+    margin: 0px;
 }
 
 .cookpot-img {
-    height: 150;
+    width: 25%;
+}
+
+.hidden {
+    display: none;
 }

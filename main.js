@@ -10,6 +10,7 @@ var sides = [
     'Shrimp Summer Rolls',
     'Sweet Potato Tots'
 ];
+
 var mains = [
     'BBQ Chicken Burgers',
     'Bibimbap',
@@ -24,7 +25,8 @@ var mains = [
     'Sheet Pan Fajitas',
     'Spaghetti and Meatballs',
     'Thai Yellow Curry'
-]
+];
+
 var desserts = [
     'Apple Pie',
     'Baklava',
@@ -44,4 +46,4 @@ var desserts = [
     'Peach Cobbler',
     'Pumpkin Pie',
     'Tart Tatin'
-]
+];

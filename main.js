@@ -13,6 +13,7 @@ var choiceDisplay = document.querySelector('#choice-results')
 var clearButton = document.querySelector('#clear-results')
 var letsCookButton = document.querySelector('.lets-cook-button')
 var mealMessage = document.querySelector('.meal-message')
+var entireMealMessage = document.querySelector('#entire-meal-results')
 
 var sides = [
     'Miso Glazed Carrots',
@@ -76,7 +77,7 @@ letsCookButton.addEventListener('click', displayMeals)
 function getRandomIndex(array) {
     var randomArray = Math.floor(Math.random() * array.length);
     return array[randomArray]
-  }
+}
 
 
 
@@ -90,12 +91,37 @@ function toMainPage(event) {
 
 function displayMeals(event) {
     event.preventDefault()
-    console.log(event.target)
     potImage.classList.add('hidden')
     mealMessage.classList.remove('hidden')
-    choiceDisplay.innerHTML= ""
-    if(sideRadio.checked === true) {
+    var checkedRadio = document.querySelector('input[name="meals"]:checked').value;
+    var sideDish = getRandomIndex(sides)
+    var mainDish = getRandomIndex(mains)
+    var dessertDish = getRandomIndex(desserts)
+    choiceDisplay.innerHTML = " "
+    if (checkedRadio === "side") {
         choiceDisplay.innerText = getRandomIndex(sides)
     }
-    console.log(choiceDisplay)
+    if (checkedRadio === "main-dish") {
+        choiceDisplay.innerText = getRandomIndex(mains)
+    }
+    if (checkedRadio === "dessert") {
+        choiceDisplay.innerText = getRandomIndex(desserts)
+    }
+    if (checkedRadio === "entire-meal") {
+        entireMealMessage.innerHTML = " "
+        entireMealMessage.innerHTML =  
+        `<h2>${sideDish}</h2>
+        <h2>${mainDish}</h2>
+        <h2>${dessertDish}</h2>`
+    }
+}
+
+    function entireMealDisplay() {
+
+        entireMealMessage.innerHTML = " "
+        entireMealMessage.innerHTML = entireMealMessage + 
+        `<h2>${sideDish}</h2
+        <h2>${mainDish}</h2>
+        <h2>${dessertDish}</h2>`
+        
 }

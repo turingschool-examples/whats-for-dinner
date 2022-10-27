@@ -71,6 +71,7 @@ var savedRecipes = []
 
 loginButton.addEventListener('click', toMainPage)
 letsCookButton.addEventListener('click', displayMeals)
+clearButton.addEventListener('click', clearMealMessage)
 
 
 
@@ -86,6 +87,16 @@ function toMainPage(event) {
     loginPage.classList.add('hidden')
     mainPage.classList.remove('hidden')
     addRecipeButton.classList.remove('hidden')
+}
+
+function clearMealMessage(event) {
+    event.preventDefault()
+    potImage.classList.remove('hidden')
+    mealMessage.classList.add('hidden')
+
+
+
+
 }
 
 
@@ -108,20 +119,8 @@ function displayMeals(event) {
         choiceDisplay.innerText = getRandomIndex(desserts)
     }
     if (checkedRadio === "entire-meal") {
-        entireMealMessage.innerHTML = " "
-        entireMealMessage.innerHTML =  
-        `<h2>${sideDish}</h2>
-        <h2>${mainDish}</h2>
-        <h2>${dessertDish}</h2>`
+        choiceDisplay.innerText = `${mainDish} with a side of ${sideDish} and ${dessertDish}`
     }
 }
 
-    function entireMealDisplay() {
 
-        entireMealMessage.innerHTML = " "
-        entireMealMessage.innerHTML = entireMealMessage + 
-        `<h2>${sideDish}</h2
-        <h2>${mainDish}</h2>
-        <h2>${dessertDish}</h2>`
-        
-}

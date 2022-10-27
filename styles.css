@@ -8,3 +8,73 @@ red - #ee5253
 
 */
 
+.add-a-recipe-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.lets-cook {
+  background-color: #0fb9b1;
+  display: flex;
+}
+html {
+  height:100%;
+}
+body {
+  background: #0fb9b1;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-image: url("./assets/burger-friends.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  background-color: #0fb9b1;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+}
+/* main {
+  background-image: url("./assets/burger-friends.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+} */
+
+.wrapper {
+  /* opacity: 0.3;
+  background-color: white; */
+  /* border: 10px solid black; */
+  padding: 285px ;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.box {
+  /* opacity: 0.3; */
+  background-color: white;
+  border: 10px solid black;
+  padding: 5%;
+}
+.boxz:nth-child(1) {
+  /* opacity: 0.3; */
+  background-color: white;
+}
+.box:nth-child(2) {
+  /* opacity: 0.3; */
+  background-color: white;
+  display:flex;
+  justify-content: center;
+}
+
+h1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}

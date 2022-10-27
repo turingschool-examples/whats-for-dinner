@@ -34,14 +34,13 @@ main {
 
 .home-boxs {
     background-color: rgba(225, 225, 225, .9);
-    height: 300px;
-    width: 375px;
-    margin: 40px 0px;
-    padding: 20px 0px;
+    height: 200px;
+    width: 300px;
+    margin: 35px 0px;
+    padding: 70px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-size: 20px;
     text-align: left;
 }

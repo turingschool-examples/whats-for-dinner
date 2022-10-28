@@ -78,6 +78,11 @@ section {
     font-weight: bolder;
     margin: 40px 0 0 40px;
 }
+
+.menu-selection {
+    font-size: xx-large;
+}
+
 sup {
     color: #ee5253;
 }

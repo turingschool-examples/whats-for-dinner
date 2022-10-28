@@ -57,26 +57,44 @@ var desserts = [
 var sideRadioButton = document.querySelector('#side')
 var mainRadioButton = document.querySelector('#main-dish')
 var dessertRadioButton = document.querySelector('#dessert')
+var entireMealRadioButton = document.querySelector('#entire-meal')
 var letsCookButton = document.querySelector('.lets-cook')
 var cookPotBox = document.querySelector('.box-2')
 var mealSuggestionBox = document.querySelector('.box-3')
 var dish = document.querySelector('#dish')
+var clearButton = document.querySelector('.clear')
 
 letsCookButton.addEventListener('click', showRandomMealType)
+clearButton.addEventListener('click', clearButtonClicked)
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
+function clearButtonClicked() {
+    showSugestionBox(false)
+}
+
+function showSugestionBox(show) {
+    if(show === true) {
+        mealSuggestionBox.classList.remove('hidden')
+        cookPotBox.classList.add('hidden')
+    } else {
+        mealSuggestionBox.classList.add('hidden')
+        cookPotBox.classList.remove('hidden')
+        }
+}
 function showRandomMealType(event) {
     event.preventDefault()
-    cookPotBox.classList.add('hidden')
+    showSugestionBox(true)
     if (sideRadioButton.checked === true) {
         showRandomSide()
     } else if(mainRadioButton.checked === true) {
         showRandomMain()
     } else if(dessertRadioButton.checked === true) {
         showRandomDessert()
+    } else {
+        showRandomEntireMeal()
     }
 }
 function showRandomSide() {
@@ -93,7 +111,20 @@ function showRandomMain() {
 }
 function showRandomDessert() {
     dish.innerText = ""
-    var dessertRadioButton = getRandomIndex(mains)
+    var dessertRadioButton = getRandomIndex(desserts)
     dessert = desserts[dessertRadioButton]
     dish.innerText = `${dessert}!`
+}
+
+function showRandomEntireMeal() {
+    dish.innerText = ""
+    var sideRadioButton = getRandomIndex(sides)
+    side = sides[sideRadioButton]
+    var mainRadioButton = getRandomIndex(mains)
+    main = mains[mainRadioButton]
+    var dessertRadioButton = getRandomIndex(desserts)
+    dessert = desserts[dessertRadioButton]
+    dish.innerText = `${side}, 
+    ${main}, 
+    ${dessert}!`
 }

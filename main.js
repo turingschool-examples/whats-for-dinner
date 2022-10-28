@@ -59,6 +59,13 @@ var dessertButton = document.querySelector('#dessert');
 var entireMealButton = document.querySelector('#entire-meal');
 //action buttons
 var letsCookBtn = document.querySelector('.lets-cook-btn');
+var clearButton = document.querySelector('.clear-btn');
+//suggestions
+var potBlock = document.querySelector('.pot-block');
+var potImage = document.querySelector('.pot');
+var youShouldMakeContent = document.querySelector('.suggest');
+var centered = document.querySelector('.centered')
+var dishToMake = document.querySelector('.suggestion');
 
 
 //event listeners
@@ -97,21 +104,16 @@ function checkRadioValues() {
 }
 function randomizeSelecton(array) {
     return getRandomArrayElement(array);
-
     }
 
-
-
 function displayDish() {
-        //interpolate dishToCook into innerText
-        //hide pot
-        //unhide
+    dishToMake.innerText = null;
+    potImage.classList.add('hidden');
+    centered.classList.add('recipe-block');
+    youShouldMakeContent.classList.remove('hidden');
+    dishToMake.innerText = `${dishToCook}`;
 }
 
-//
-
-
-    
     //function that randomizes array index from selected array and display that element in the right hand box
      //query select lets cook button in HTML
     //query select radio buttons
@@ -122,9 +124,7 @@ function displayDish() {
     //query select crockpot image to hide/reveal
     //check radio button default functionality to override
 
-    //EMF (CYA 1) -
-    // how to incorporate classes, if desired: a meal class that takes in randomized values to return an array of 3 dishes to plug into  
-
+    
     //prevent default on Let's Cook button (because it is on a form and will refresh the page)
     //radio button default value for if it's checked. you dont need an event listener
     //querySelect button. radioButtonSelection() If: radiobutton.checked === true

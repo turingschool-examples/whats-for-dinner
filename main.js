@@ -6,6 +6,7 @@ var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana 
 var mainDishes =['Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai Yellow Curry', 'Bibimbap','Chicken Parmesean', 'Butternut Squash Soup', 'BBQ Chicken Burgers', 'Ramen', 'Empanadas', 'Chicken Fried Rice', 'Sheet Pan Fajitas', 'Margarita Pizza']
 
 //---------------------QuerySelectors-----------------
+var allRadioButtons = document.querySelectorAll('input[name=radio-button]')
 var sideButton = document.querySelector("#button-one");
 var mainDishButton = document.querySelector("#button-two");
 var dessertButton = document.querySelector("#button-three");
@@ -27,11 +28,22 @@ letsCookButton.addEventListener('click', showDish);
 // ---------------------Functions-------------------------
 
 function showDish(){
-
+    var selectedDish = new Dish (
+        mainDishes[getRandomIndex(desserts)],
+        sides[getRandomIndex(sides)],
+        desserts[getRandomIndex(desserts)]
+    )
+        // These maybe useful for our needed functions.
+        // sideButton.checked, dessertButton.checked, mainDishesButton.checked, allRadioButtons.checked 
+        // sideButton.value, dessertButton.value, mainDishesButton.value,allRadioButtons.value
+        // 
+        }
+    )
+    }
 }
 
 function displayDish(){
-    
+
 }
 
 function getRandomIndex(array) {

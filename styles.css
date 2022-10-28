@@ -78,12 +78,11 @@ header {
     font-family: 'Roboto', sans-serif;
     background-color: #0fb9b1;
     border-radius: 12px;
-    height: 5vh;
-    width: 20vh;
+    height: 6vh;
+    width: 25vh;
  }
  #title{
      font-family: 'Roboto';
-     padding-bottom:;
      font-size: larger;
  }
  #title::after {
@@ -97,9 +96,9 @@ header {
     width: 350px;
     border: 0 solid;
     margin: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content:flex-end; */
     /* display: grid; */
 }
 

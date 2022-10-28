@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
@@ -12,18 +13,19 @@
     <form class="food-category">
       <div class= "category-selection"> 
           <h4>What are you looking for?*</h4>
-          <input type="radio" id="side-dish" value="side-dish">
+         <!-- put each radios as divs -->
+          <input type="radio" id="side-dish" value="side-dish" name="selector">
           <label for="side-dish">Side</label><br>
-          <input type="radio" id="main-dish" value="main-dish">
+          <input type="radio" id="main-dish" value="main-dish" name="selector">
           <label for="main-dish">Main Dish</label><br>
-          <input type="radio" id="dessert" value="dessert">
+          <input type="radio" id="dessert" value="dessert" name="selector">
           <label for="dessert">Dessert</label><br>
-          <input type="radio" id="entire-meal" value="entire-meal">
+          <input type="radio" id="entire-meal" value="entire-meal" name="selector">
           <label for="entire-meal">Entire Meal</label><br>
           <button id="lets-cook">LET'S COOK! </button>
       </div>
     <div class= "result">
-          <img src="assets/cookpot.svg" alt="Cookpot">
+          <img src="./assets/cookpot.svg" alt="Cookpot" class="result-img">
     </div>
   </body>
   <script type="text/javascript" src="main.js"></script>

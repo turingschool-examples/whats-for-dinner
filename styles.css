@@ -3,14 +3,12 @@
     padding: 0;
     font-family: 'Roboto', sans-serif, black;
     border: 1px solid black; 
-    
 }
 
 body {
-    /* background-image: url("assets/burger-friends.jpg"); */
     display: flex;
     height: 100vh;
-    background: url("assets/burger-friends.jpg");/* background-color: black; */
+    background: url("assets/burger-friends.jpg");
     background-size: cover;
     background-position: center;
     flex-direction: column;
@@ -36,10 +34,12 @@ div {
     margin: 20;
     padding: 50;
     background-color: #95a5a6;
-    /* color: black; */
     padding: 100px;
     width: 100;
-    /* opacity: 0.3; */
+}
+
+.result-img {
+    height: 2in;
 }
 
 /* div.background {

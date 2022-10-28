@@ -12,6 +12,7 @@ var favorite = document.querySelector('#favorite')
 var viewFavorites = document.querySelector('#view-favorite')
 var favoriteList = document.querySelector('.favorite-list')
 var goBackButton = document.querySelector('.go-back-button')
+var favoriteDishes = document.querySelector("#favorite-dishes")
 
 
 // Food options
@@ -101,10 +102,11 @@ function selectFood() {
     }
 suggestion.innerText = `${selectedFood}!`;
 displayCourse()
+favoriteList.classList.add("hidden");
 };
 
 function addFavorite() {
-    favoriteFoods.push(selectedFood)
+    favoriteFoods.push(selectedFood);
 }
 
 function showFavorites() {
@@ -112,6 +114,15 @@ function showFavorites() {
     suggestion.classList.add("hidden");
     favoriteSection.classList.add("hidden");
     favoriteList.classList.remove("hidden");
+    listFavorites();
+}
+
+function listFavorites() {
+    favoriteDishes.innerHTML = " "
+    for (let index = 0; index < favoriteFoods.length; index++) {
+        favoriteDishes.innerHTML += 
+        `<ul>${favoriteFoods[index]}</ul>`
+    }
 }
 
 function goBack() {

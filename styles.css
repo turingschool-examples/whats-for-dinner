@@ -127,6 +127,10 @@ input {
     align-items: center;
 }
 
+ul {
+    font-family: 'Roboto', sans-serif;
+}
+
 .hidden {
     display: none;
 }

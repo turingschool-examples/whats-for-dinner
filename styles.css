@@ -56,7 +56,7 @@ nav {
     flex-direction: column;
 }
 .astrix {
-    color: red;
+    color: #ee5253;
 }
 .input-block-header {
     margin: 25px;
@@ -93,13 +93,14 @@ nav {
     height: 175px;
     width: 175px;
 }
-/* alternative styling block for when pot disappears? how do we toggle between styles? (look up notes from toggle class) */
-/* classList.add the recipe-block class to pot-block section dynamically with JS */
-/* .recipe-block {
+.recipe-block {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-} */
+}
+.clear-btn-container {
+    display: flex;
+}
 .hidden {
     display: none;
 }

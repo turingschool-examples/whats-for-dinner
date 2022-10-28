@@ -56,13 +56,6 @@ var cookpotImg = document.querySelector(".cookpot-img")
 var randomFood = document.querySelector(".random-meal")
 var clearContent = document.querySelector('.clear-btn');
 
-// foodButton.addEventListener("click", function() {
-//     hideImage();
-//     displayRandomFood();
-// });
-foodButton.addEventListener("click", function() {
-    hideImage();
-}, {once: true});
 foodButton.addEventListener("click", displayRandomFood);
 clearContent.addEventListener("click",showImage);
 
@@ -80,11 +73,13 @@ function displayRandomFood() {
 };
 
 function hideImage() {
-    cookpotImg.classList.toggle("hidden");
-    randomFood.classList.toggle("hidden");
-  };
+    if(randomFood.classList.contains('hidden')) {
+        cookpotImg.classList.toggle("hidden");
+        randomFood.classList.toggle("hidden");
+    };
+};
 
-  function showImage() {
+function showImage() {
     cookpotImg.classList.toggle("hidden");
     randomFood.classList.toggle("hidden");
-  }
+};

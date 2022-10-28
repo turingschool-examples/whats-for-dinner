@@ -2,12 +2,13 @@ var letsCookButton = document.querySelector('.cook-button');
 var cookpotImage = document.querySelector('.cookpot');
 var dishPrinted = document.querySelector('.dish-output');
 var dishHeading = document.querySelector('.dish-heading');
-
+var clearButton = document.querySelector('.clear');
 // var currentSide = sides[getRandomIndex(sides)];
 // var currentMain = mains[getRandomIndex(mains)];
 // var currentDessert = desserts[getRandomIndex(desserts)];
 
 letsCookButton.addEventListener('click', showRandomDish);
+clearButton.addEventListener('click', showHomePage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -25,8 +26,17 @@ function showRandomDish() {
   cookpotImage.classList.add('hidden');
   dishPrinted.classList.remove('hidden');
   dishHeading.classList.remove('hidden');
+  clearButton.classList.remove('hidden');
   event.preventDefault();
 };
+
+function showHomePage() {
+    cookpotImage.classList.remove('hidden');
+    dishPrinted.classList.add('hidden');
+    dishHeading.classList.add('hidden');
+    clearButton.classList.add('hidden');
+    event.preventDefault();
+  }
 
 
 // function showRandomDish() {

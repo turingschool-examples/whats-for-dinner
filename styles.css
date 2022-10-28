@@ -65,6 +65,7 @@ section {
     display: flex;
     flex-direction: row;
     height: 400px;
+    position: relative;
     opacity: 95%;
     width: 500px;
 }
@@ -109,4 +110,21 @@ em {
 }
 p {
     font-size: 45px;
+}
+
+.clear-btn {
+    background-color: #95a5a6;
+    border: none;
+    border-radius: 5px;
+    bottom: 0;
+    color: white;
+    cursor: pointer;
+    font-size: larger;
+    margin: 25px 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: absolute;
+    right: 0;
 }

@@ -57,8 +57,8 @@ var randomFood = document.querySelector(".random-meal")
 
 foodButton.addEventListener("click", function() {
     hideImage();
-    displayRandomFood();
-});
+}, {once: true});
+foodButton.addEventListener("click", displayRandomFood);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)

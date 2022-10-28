@@ -1,0 +1,39 @@
+// --------------------DishVarieties-------------------
+var sides = ['Miso Glazed Carrots', 'Coleslaw', 'Garden Salad', 'Crispy Potatoes', 'Sweet Potato Tots', 'Coconut Rice', 'Caeser Salad', 'Shrimp Summer Rolls', 'Garlic Butter Mushrooms', 'Hush Puppies']
+
+var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana Bread', 'Peach Cobbler', 'Cheesecake', 'Funfetti Cake', 'Baklava', 'Flan', 'Macarons', 'Macaroons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie', 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs']
+
+var mainDishes =['Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai Yellow Curry', 'Bibimbap','Chicken Parmesean', 'Butternut Squash Soup', 'BBQ Chicken Burgers', 'Ramen', 'Empanadas', 'Chicken Fried Rice', 'Sheet Pan Fajitas', 'Margarita Pizza']
+
+//---------------------QuerySelectors-----------------
+var sideButton = document.querySelector("#button-one");
+var mainDishButton = document.querySelector("#button-two");
+var dessertButton = document.querySelector("#button-three");
+var entireMealButton = document.querySelector("#button-four");
+
+var letsCookButton = document.querySelector(".lets-cook-button");
+var addRecipeButton = document.querySelector(".add-recipe-button");
+
+var potImage = document.querySelector("#pot-image");
+var responseBox = document.querySelector(".box-three");
+
+// other global variables-----
+
+
+// ----------------------Event Listeners--------------
+
+letsCookButton.addEventListener('click', showDish);
+
+// ---------------------Functions-------------------------
+
+function showDish(){
+
+}
+
+function displayDish(){
+    
+}
+
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  };

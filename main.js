@@ -5,6 +5,9 @@ var mains = [ 'Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai
 
 var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana Bread', 'Peach Cobbler', 'Cheesecake', 'Funfetti Cake', 'Baklava', 'Flan', 'Macarons', 'Macaroons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie', 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs' ]
 
+var favoriteRecipes = []
+
+
 //querySelectors
 //buttons
 var sideButton = document.querySelector('#side-radio')
@@ -12,16 +15,31 @@ var mainButton = document.querySelector('#main-radio')
 var dessertButton = document.querySelector('#dessert-radio')
 var entireButton = document.querySelector('#entire-radio')
 var letsCookButton = document.querySelector('#lets-cook-button')
+var viewFavoritesButton = document.querySelector('#view-favorites-button')
+var backToMainButton = document.querySelector('#back-to-main-button')
 //display
 var cookpotDisplay = document.querySelector('#cookpot-display')
 var mealDisplayBox = document.querySelector('#meal-display')
 var mealDisplayName = document.querySelector('#meal-display-name')
+var favoritesDisplay = document.querySelector('.favorites-page')
+var mealSelectorDisplay = document.querySelector('.what-are-you-looking-for')
+var youShouldMakeDisplay = document.querySelector('.cookpot')
 
 //eventListeners
 letsCookButton.addEventListener('click', function() {
     checkRadio()
-    toggleDisplay()
+    toggleCookpotDisplay()
 })
+
+viewFavoritesButton.addEventListener('click', function() {
+    toggleFavoriteDisplay()
+})
+
+backToMainButton.addEventListener('click', function() {
+    toggleFavoriteDisplay()
+})
+
+
 
 //functions
 function getRandomMeal(mealArray) {
@@ -46,42 +64,14 @@ function checkRadio() {
     }
 }
 
-function toggleDisplay() {
+function toggleCookpotDisplay() {
     mealDisplayBox.classList.toggle('hidden')
     cookpotDisplay.classList.toggle('hidden')
 }
 
+function toggleFavoriteDisplay() {
+    favoritesDisplay.classList.toggle('hidden')
+    mealSelectorDisplay.classList.toggle('hidden')
+    youShouldMakeDisplay.classList.toggle('hidden')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function getRadioValue() {
-//     var checkedBox = document.getElementsByName('meal')
-//     for(var i = 0; i < checkedBox.length; i++) {
-//         if(checkedBox[i].checked) {
-//             console.log(checkedBox[i].id)
-//             var meal = checkedBox[i].id
-//             randomizeMeal(meal)
-//         }
-//     }
-// }
+}

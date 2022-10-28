@@ -21,6 +21,15 @@ body {
     width: 100%;
 }
 
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px 6px;
+    position: center;
+    margin-top: 1.5em;
+}
+
 /* header */
 nav {
     align-items: center;
@@ -39,6 +48,14 @@ nav {
 }
 
 #add-recipe-button {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    order: 3;
+    padding: 9px 15px;
+}
+
+#view-favorites-button {
     border-radius: 5px;
     margin-bottom: 20px;
     margin-right: 25px;
@@ -91,16 +108,8 @@ form span {
     margin: 10px
 }
 
-button {
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 6px 6px;
-    position: center;
-    margin-top: 1.5em;
-}
 
-#lets-cook-button {
+#lets-cook-button, #add-favorite-button, #back-to-main-button {
     background-color: #0fb9b1;
     margin-top: 5px;
     padding-bottom: 10px;
@@ -126,9 +135,25 @@ button {
 
 #meal-display-name {
     text-align: center;
+    border: solid seagreen;
+    /* padding: */
+}
+
+.favorites-page {
+    margin-top: 200px;
+    width: 75%;
+    height: 500px;
+    background-color: rgba(225, 225, 225, .9);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* favorites page */
+#back-to-main-button {
+    margin: 20px;
 }
 
 .hidden {
     display: none;
 }
-

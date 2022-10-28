@@ -54,11 +54,17 @@ var foodName = document.querySelector(".food-name")
 var foodButton = document.querySelector('.lets-cook-btn')
 var cookpotImg = document.querySelector(".cookpot-img")
 var randomFood = document.querySelector(".random-meal")
+var clearContent = document.querySelector('.clear-btn');
 
+// foodButton.addEventListener("click", function() {
+//     hideImage();
+//     displayRandomFood();
+// });
 foodButton.addEventListener("click", function() {
     hideImage();
 }, {once: true});
 foodButton.addEventListener("click", displayRandomFood);
+clearContent.addEventListener("click",showImage);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
@@ -77,3 +83,8 @@ function hideImage() {
     cookpotImg.classList.toggle("hidden");
     randomFood.classList.toggle("hidden");
   };
+
+  function showImage() {
+    cookpotImg.classList.toggle("hidden");
+    randomFood.classList.toggle("hidden");
+  }

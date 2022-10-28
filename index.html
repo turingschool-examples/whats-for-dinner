@@ -2,11 +2,13 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
   <body>
     <nav>
-      <button type="button" id="add-recipe-button">ADD A RECIPE</button>
-      <button type="button" id="view-favorites-button">VIEW FAVORITES!</button>
+      <button type="button" class="nav-button hidden" id="back-to-main-button">BACK TO MAIN!</button>
+      <button type="button" class="nav-button" id="add-recipe-button">ADD A RECIPE</button>
+      <button type="button" class="nav-button" id="view-favorites-button">VIEW FAVORITES!</button>
       <h1 class="whats-for-dinner">What's for Dinner?</h1> 
     </nav>
     <main>
@@ -24,15 +26,67 @@
         <img src="assets/cookpot.svg"" alt="Cooking Pot" id="cookpot-display">
         <article class="hidden" id="meal-display">
           <h3>You should make:</h3>
-          <h2 id="meal-display-name"></h2>
+          <h1 id="meal-display-name"></h1>
+          <button type="button" id="add-favorite-button">ADD AS FAVORITE!</button>
         </article>
       </section>
       <article class="favorites-page hidden">
-          <button type="button" id="back-to-main-button">BACK TO MAIN!</button>
+        <!-- <section> -->
+          <section class="sides-box display">
+            <section class="display">
+              <h1 class="sides-text">Sides ~</h1>
+              <section class="sides-display  display" >
+                <h1></h1>
+              </section>
+            </section>
+          </section>
+          <section class="mains-box display">
+            <section class="display">
+              <h1 class="mains-text">Mains ~</h1>
+              <section class="mains-display  display">
+                <h1></h1>
+              </section>
+            </section>
+          </section>
+          <section class="desserts-box">
+            <section class="display">
+              <h1 class="desserts-text">Dessests ~</h1>
+              <section class="desserts-display  display" >
+                <h1></h1>
+              </section>
+            </section>
+          </section>
+        <!-- </section> -->
       </article>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -5,8 +5,12 @@ var mains = [ 'Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai
 
 var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana Bread', 'Peach Cobbler', 'Cheesecake', 'Funfetti Cake', 'Baklava', 'Flan', 'Macarons', 'Macaroons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie', 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs' ]
 
-var favoriteRecipes = []
+var favoriteSides = []
+var favoriteMains = []
+var favoriteDesserts = []
 
+
+var mealName
 
 //querySelectors
 //buttons
@@ -17,6 +21,7 @@ var entireButton = document.querySelector('#entire-radio')
 var letsCookButton = document.querySelector('#lets-cook-button')
 var viewFavoritesButton = document.querySelector('#view-favorites-button')
 var backToMainButton = document.querySelector('#back-to-main-button')
+var addFavoriteButton = document.querySelector('#add-favorite-button')
 //display
 var cookpotDisplay = document.querySelector('#cookpot-display')
 var mealDisplayBox = document.querySelector('#meal-display')
@@ -24,6 +29,9 @@ var mealDisplayName = document.querySelector('#meal-display-name')
 var favoritesDisplay = document.querySelector('.favorites-page')
 var mealSelectorDisplay = document.querySelector('.what-are-you-looking-for')
 var youShouldMakeDisplay = document.querySelector('.cookpot')
+var sidesDisplay = document.querySelector('.sides-display')
+var mainsDisplay = document.querySelector('.mains-display')
+var dessertsDisplay = document.querySelector('.desserts-display')
 
 //eventListeners
 letsCookButton.addEventListener('click', function() {
@@ -39,6 +47,10 @@ backToMainButton.addEventListener('click', function() {
     toggleFavoriteDisplay()
 })
 
+addFavoriteButton.addEventListener('click', function() {
+    addFavorite()
+    displayFavorites()
+})
 
 
 //functions
@@ -48,7 +60,7 @@ function getRandomMeal(mealArray) {
 
 function randomizeMeal(mealArray) {
     var randomMealNumber = getRandomMeal(mealArray)
-    var mealName = mealArray[randomMealNumber]
+    mealName = mealArray[randomMealNumber]
     mealDisplayName.innerText = mealName
 }
 
@@ -73,5 +85,53 @@ function toggleFavoriteDisplay() {
     favoritesDisplay.classList.toggle('hidden')
     mealSelectorDisplay.classList.toggle('hidden')
     youShouldMakeDisplay.classList.toggle('hidden')
+    backToMainButton.classList.toggle('hidden')
 
 }
+
+function addFavorite() {
+    if (sideButton.checked === true) {
+        favoriteSides.push(mealName)
+    } else if (mainButton.checked === true) {
+        favoriteMains.push(mealName)
+    } else if (dessertButton.checked === true) {
+        favoriteDesserts.push(mealName)
+    }
+}
+
+function displayFavorites() {
+    sidesDisplay.innerHTML = favoriteSides.join(', ')
+    mainsDisplay.innerHTML = favoriteMains.join(', ')
+    dessertsDisplay.innerHTML = favoriteDesserts.join(', ')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

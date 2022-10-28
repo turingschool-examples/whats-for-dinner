@@ -63,19 +63,20 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 };
 
-function displayRandomFood() {
-    for(var i = 0; i < foodChoice.length; i++) {
-        if(foodChoice[i].checked) {
-            mealType = eval(foodChoice[i].id)
-            foodName.innerText = mealType[getRandomIndex(mealType)]+'!'
-        };
-    };
-};
-
 function hideImage() {
     if(randomFood.classList.contains('hidden')) {
         cookpotImg.classList.toggle("hidden");
         randomFood.classList.toggle("hidden");
+    };
+};
+
+function displayRandomFood() {
+    for(var i = 0; i < foodChoice.length; i++) {
+        if(foodChoice[i].checked) {
+            hideImage()
+            mealType = eval(foodChoice[i].id)
+            foodName.innerText = mealType[getRandomIndex(mealType)]+'!'
+        };
     };
 };
 

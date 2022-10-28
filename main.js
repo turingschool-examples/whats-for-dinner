@@ -54,25 +54,46 @@ var desserts = [
     'Eclairs']
 
 
-function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
-}
-
 var sideRadioButton = document.querySelector('#side')
 var mainRadioButton = document.querySelector('#main-dish')
 var dessertRadioButton = document.querySelector('#dessert')
 var letsCookButton = document.querySelector('.lets-cook')
-var cookPotBox = document.querySelector('.box')
+var cookPotBox = document.querySelector('.box-2')
+var mealSuggestionBox = document.querySelector('.box-3')
+var dish = document.querySelector('#dish')
 
 letsCookButton.addEventListener('click', showRandomMealType)
 
-function showRandomMealType() {
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+}
 
+function showRandomMealType(event) {
+    event.preventDefault()
+    cookPotBox.classList.add('hidden')
+    if (sideRadioButton.checked === true) {
+        showRandomSide()
+    } else if(mainRadioButton.checked === true) {
+        showRandomMain()
+    } else if(dessertRadioButton.checked === true) {
+        showRandomDessert()
+    }
+}
+function showRandomSide() {
+    dish.innerText = ""
     var sideRadioButton = getRandomIndex(sides)
+    side = sides[sideRadioButton]
+    dish.innerText = `${side}!`
+}
+function showRandomMain() {
+    dish.innerText = ""
     var mainRadioButton = getRandomIndex(mains)
-    var dessertRadioButton = getRandomIndex(desserts)
-
-    sides = sides[sideRadioButton],
-    mains = mains[mainRadioButton],
-    desserts = desserts[dessertRadioButton],
+    main = mains[mainRadioButton]
+    dish.innerText = `${main}!`
+}
+function showRandomDessert() {
+    dish.innerText = ""
+    var dessertRadioButton = getRandomIndex(mains)
+    dessert = desserts[dessertRadioButton]
+    dish.innerText = `${dessert}!`
 }

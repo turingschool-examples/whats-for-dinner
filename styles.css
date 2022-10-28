@@ -19,10 +19,12 @@ red - #ee5253
   padding: 15;
   display: flex;
 }
+
 label {
   display: flex;
   justify-content: center;
 }
+
 div {
   display: flex;
   flex-direction: column;
@@ -97,6 +99,27 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: center;
+}
+
+.box-3 {
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 20px;
+  width: 30%;
+  height: 400px;
+  font-family: 'Roboto', sans-serif;;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  align-content: center;
+}
+#you-should-make {
+  font-size: small;
+  font-style: italic;
+}
+#dish {
+  font-size:xx-large;
+  font-style: ;
 }
 
 h1 {

@@ -4,7 +4,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header class="header">
+      <h1>What's for Dinner?</h1>
+      <button>Add a Recipe</button>
+    </header>
+    <main class="boxes">
+      <section class="form">
+        <p>What are you looking for?<span>*</span></p>
+        <form class="form-structure">
+          <label class="label" for="side"><input class="radio" type="radio" name="food" value="side">Side</label>
+          <label class="label" for="main-dish"><input class="radio" type="radio" name="food" value="main">Main Dish</label>
+          <label class="label" for="dessert"><input class="radio" type="radio" name="food" value="dessert">Dessert</label>
+          <label class="label" for="entire-meal"><input class="radio" type="radio" name="food" value="entire-meal">Entire Meal</label>
+          <input class="cook-button" type="submit" value="LET'S COOK!">
+        </form>
+      </section>
+      <div class="output">
+        <p class="dish-heading hidden">You should make:<p>
+        <p class="dish-output hidden"></p>
+        <input class="clear hidden" type="submit" value="CLEAR">
+        <img class="cookpot" src="./assets/cookpot.svg" alt="Cute little cookpot">
+      </div>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

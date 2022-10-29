@@ -111,8 +111,8 @@ function randomizeSelecton(array) {
     }
 
 function displayDish(selection) {
-    console.log(selection);
-    dishToMake.innerText = null;
+    mealToCook = [];
+    dishToMake.innerText = "";
     potImage.classList.add('hidden');
     youShouldMakeContent.classList.add('recipe-block');
     youShouldMakeContent.classList.remove('hidden');

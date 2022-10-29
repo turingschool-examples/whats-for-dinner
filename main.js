@@ -7,10 +7,26 @@ var desserts = ["Apple pie", "Lemon Meringue Pie", "Black Forest Cake", "Banana 
 // var addARecipeButton = document.querySelector(".name");
 // var clearButton = document.querySelector();
 var sideRadioButton = document.querySelector("#Side");
+document.querySelector("div.")
 var mainRadioButton = document.querySelector("#Main Dish");
 var dessertRadioButton = document.querySelector("#Dessert");
 var entireMealRadioButton = document.querySelector("#Entire Meal");
 var letsCookButton = document.querySelector("#cookButton");
 
 //**;* ${Event Listeners} *;**//
-Xbutton.addEventListener('click', Xfunction)
+sideRadioButton.addEventListener('click', randomSide);
+mainRadioButton.addEventListener('click', getRandomMains);
+dessertRadioButton.addEventListener('click', getRandomDesserts);
+
+letsCookButton.addEventListener('click', x);
+
+//**;* ${Functions} *;**//
+    //sides//
+function getRandomIndex(sides) {
+    return Math.floor(Math.random() * sides.length);
+}
+var randomSideNumber = getRandomIndex(sides);
+var randomSide = sides[randomSideNumber];
+
+
+

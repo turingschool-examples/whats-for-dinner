@@ -85,6 +85,9 @@ form {
     display: flex;
     align-items: flex-start;
 } */
+.spite:nth-child(4) {
+    padding-bottom: 50px;
+}
 
 #cookbutton {
     background-color: #0fb9b1;

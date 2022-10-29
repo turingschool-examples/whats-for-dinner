@@ -19,13 +19,12 @@ body {
 }
 nav {
     overflow: hidden;
-    background-color: #0fb9b1;
+    height: 52px;
     width: 100%;
+    background-color: #0fb9b1;
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
-    height: 50px;
-    height: 52px;
-    font-size: 14px;
     align-items: center;
 }
 h1 {
@@ -33,24 +32,24 @@ h1 {
 }
 .add-a-recipe-btn {
     margin: 10px;
-    text-transform: uppercase;
     padding: 10px 20px;
-    text-align: center;
-    border-radius: 5px;
     border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
 }
 /* Main Body */
 .boxes {
+    margin-top: 5vh;
+    padding: 10px;
     display: flex;
     justify-content: space-around;
-    margin-top: 5vh;
     align-items: flex-start;
-    padding: 10px;
 }
 .blocks {
-    background-color: rgba(225, 225, 225, .9);
     height: 335px;
     width: 450px;
+    background-color: rgba(225, 225, 225, .9);
 }
 .input-block {
     display: flex;
@@ -69,26 +68,26 @@ h1 {
     color: red;
 }
 .radio-button-form {
+    width: 160px;
+    height: 160px;
+    margin: 3px 15px;
     border: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 160px;
-    height: 160px;
     align-items: flex-start;
-    margin: 3px 15px;
 }
 .selector {
     margin: 8px;
 }
 .lets-cook-btn {
-    background-color: #0fb9b1;
-    padding: 5px 45px;
-    text-transform: uppercase;
+    margin: 24px;
     border: none;
     border-radius: 3px;
+    padding: 5px 45px;
+    background-color: #0fb9b1;
+    text-transform: uppercase;
     font-size: 12px;
-    margin: 24px;
 }
 .pot-block {
     display: flex;
@@ -104,26 +103,26 @@ h1 {
     transform: scaleY(-1);
 }
 .recipe-block {
+    display: flex;
     align-items: center;
     flex-direction: column;
-    display: flex;
     justify-content: flex-end;
 }
 .centered {
     height: 153px;
+    margin-top: 120px;
+    margin-bottom: 45px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 120px;
-    margin-bottom: 45px;
 }
 p {
     text-align: center;
 }
 .suggestion {
-    font-size: 26px;
-    text-align: center;
     margin-top: 25px;
+    text-align: center;
+    font-size: 26px;
 }
 .clear-btn-container {
     width: 100%;
@@ -133,14 +132,14 @@ p {
 }
 .clear-btn {
     margin: 10px;
+    padding: 5px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #95a5a6;
+    text-align: center;
     color: white;
     font-size: 10px;
-    background-color: #95a5a6;
     text-transform: uppercase;
-    padding: 5px 14px;
-    text-align: center;
-    border-radius: 5px;
-    border: none;
 }
 .hidden {
     display: none;

@@ -73,7 +73,6 @@ letsCookBtn.addEventListener('click', function(event) {
     event.preventDefault();
     displayDish(checkRadioValues());
 });
-
 clearButton.addEventListener('click', reset);
 
 //function
@@ -103,13 +102,11 @@ function checkRadioValues() {
         for(var i = 0; i < errorMessages.length; i++) {
         errorMessages[i].classList.remove('hidden');
         }
-    }
-       
+    }    
 }
 function randomizeSelecton(array) {
     return getRandomArrayElement(array);
     }
-
 function displayDish(selection) {
     mealToCook = [];
     dishToMake.innerText = "";

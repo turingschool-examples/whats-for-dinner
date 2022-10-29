@@ -23,7 +23,7 @@
     <article class="main-page hidden" id="main">
       <section class="choice-section">
         <h2 class="choice-message">What are you looking for?<span> * </span></h2>
-        <form class="choice-form">
+        <form class="choice-form" id="choice-field">
           <input type="radio" id="side-radio" name="meals" value="side">
           <label for="side-radio">Side</label><br>
           <input type="radio" id="main-dish-radio" name="meals" value="main-dish">
@@ -46,6 +46,20 @@
         </article>
       </section>
     </article>
+    <footer class="add-recipe-footer hidden" id="footer-recipe">
+      <label for="recipe-type" class="recipe-label">Recipe Type:</label>
+      <input list="type" id="recipe-type" class="recipe-text" name="addRecipe">
+      <datalist id="type">
+        <option value="side">
+        <option value="main dish">
+        <option value="dessert">
+      </datalist>
+      <label for="recipe-name" class="recipe-label">Recipe Name:</label>
+      <input type="text" id="recipe-name" class="recipe-text" name="addRecipe" value="">
+      <button class="submit-add" id="submit-new-recipe">ADD NEW</button>
+      <p class="type-error hidden" id="new-type-error"></p>
+      <p class="name-error hidden" id="new-name-error"></p>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>

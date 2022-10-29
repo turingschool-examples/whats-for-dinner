@@ -96,12 +96,36 @@ header {
     width: 350px;
     border: 0 solid;
     margin: 50px;
-    /* display: flex; */
+    display: flex;
     /* flex-direction: column; */
-    /* justify-content:flex-end; */
+    justify-content: space-around;
     /* display: grid; */
 }
+.response-location {
+    display: flex;
+    flex-direction: column;
+    align-content: center
+    justify-content: space-evenly;
+}
 
+.response-title {
+    font-family:'Roboto', sans-serif;
+    font-size: medium;
+    padding-top: 40px;
+}
+
+.dish-response {
+    font-family:'Roboto', sans-serif;
+    font-size: x-large;
+    padding-bottom: 40px;
+}
+.together {
+    display: flex;
+    justify-content: space-around;
+    margin: 21px;
+    display: flex;
+    flex-direction: row;
+}
 
 
 /* font-family: 'Roboto', sans-serif;

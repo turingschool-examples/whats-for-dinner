@@ -21,30 +21,44 @@ var responseBox = document.querySelector(".box-three");
 // other global variables-----
 
 
-// ----------------------Event Listeners--------------
+// ----------------------Event Listeners------------
 
 letsCookButton.addEventListener('click', showDish);
 
-// ---------------------Functions-------------------------
+// ---------------------Functions----------------------
 
-function showDish(){
-    var selectedDish = new Dish (
-        mainDishes[getRandomIndex(desserts)],
-        sides[getRandomIndex(sides)],
-        desserts[getRandomIndex(desserts)]
-    )
+function showDish(event){
+    event.preventDefault()
+    if(sideButton.checked === true){
+        responseBox.innerHTML= `
+        <section class="response-location">
+         <p class="response-title together">You should make: </p>
+         <p class="dish-response together">${sides[getRandomIndex(sides)]}</p>`
+        // console.log(responseBox)
+        // console.log(sides[getRandomIndex(sides)])
+     } else if (mainDishButton.checked === true){
+        responseBox.innerHTML= `
+        <section class="response-location">
+          <p class="response-title together">You should make: </p>
+          <p class="dish-response together">${mainDishes[getRandomIndex(mainDishes)]}</p>`
+        console.log(mainDishes[getRandomIndex(mainDishes)])
+     } else if (dessertButton.checked === true){
+        responseBox.innerHTML= `
+        <section class="response-location">
+            <p class="response-title together">You should make: </p>
+            <p class="dish-response together">${desserts[getRandomIndex(desserts)]}</p>`
+        // console.log(desserts[getRandomIndex(desserts)])
+        }
+    }  
+        // I can hide the pot and show within this function
+
         // These maybe useful for our needed functions.
         // sideButton.checked, dessertButton.checked, mainDishesButton.checked, allRadioButtons.checked 
         // sideButton.value, dessertButton.value, mainDishesButton.value,allRadioButtons.value
         // 
-        }
-    )
-    }
-}
-
-function displayDish(){
-
-}
+// function displayDish(){
+//  if()
+// }
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);

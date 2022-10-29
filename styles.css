@@ -58,14 +58,28 @@ main {
 
 .left {
     text-align: start;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start; */
+    align-items: flex-start;
 }
 
 legend {
     font-size: xx-large;
+}
+
+fieldset {
+    border-color: white;
+}
+
+form {
+    block-size: fit-content;
+}
+
+label {
+    float: left;
+    display: flex;
+    align-items: flex-start;
 }
 
 #cookbutton {

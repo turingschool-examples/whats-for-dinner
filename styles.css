@@ -30,10 +30,13 @@ header {
     border-color: lightgray;
     font-family: 'Roboto', sans-serif;
     border: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     padding: 12px;
     margin: 10px;
     font-family: 'Roboto', sans-serif;
-    ;
+    height: 10px;
     font-size: 16px;
     border-radius: 12px;
 }
@@ -107,39 +110,46 @@ header {
     padding: 45px;
     height: 250px;
     width: 350px;
-    border: 0 solid;
     margin: 50px;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-around;
-    /* display: grid; */
+    align-content: center;
+    align-items: center;
 }
 
 .response-location {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .response-title {
     font-family: 'Roboto', sans-serif;
+    font-style: italic;
     font-size: medium;
-    padding-top: 40px;
+    padding-bottom: 20px;
+
+   
 }
 
 .dish-response {
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
-    padding-bottom: 40px;
-
-}
-
-.together {
+    font-weight: 100;
+    text-align: center;
     display: flex;
-    justify-content: space-around;
-    margin: 21px;
-  
+    justify-content: center;
+    padding-bottom: 60px;
+
 }
+
+/* .together {
+    padding-left: 100px;
+    display: contents;
+    
+  
+} */
 
 .clear-button {
     color: whitesmoke;
@@ -147,13 +157,13 @@ header {
     font-family: 'Roboto', sans-serif;
     background-color: darkgray;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     height: 30px;
-    width: 60px;
-    margin-right: 20px;
+    width: 80px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .hidden{

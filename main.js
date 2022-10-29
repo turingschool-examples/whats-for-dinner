@@ -60,6 +60,7 @@ var entireMealButton = document.querySelector('#entire-meal');
 //action buttons
 var letsCookBtn = document.querySelector('.lets-cook-btn');
 var clearButton = document.querySelector('.clear-btn');
+var clearButtonContainer = document.querySelector('.clear-btn-container');
 //suggestions
 var potBlock = document.querySelector('.pot-block');
 var potImage = document.querySelector('.pot');
@@ -113,14 +114,12 @@ function displayDish(selection) {
     console.log(selection);
     dishToMake.innerText = null;
     potImage.classList.add('hidden');
-    centered.classList.add('recipe-block');
+    youShouldMakeContent.classList.add('recipe-block');
     youShouldMakeContent.classList.remove('hidden');
+    clearButtonContainer.classList.remove('hidden');
     if (selection.length === 3) {
         dishToMake.innerText = `${selection[1]} with a side of ${selection[0]} and ${selection[2]} for dessert`;
     } else {
         dishToMake.innerText = `${selection}`;
     }
 }
-
-
-//dishToMake.innerHTML = 

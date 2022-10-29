@@ -9,65 +9,69 @@ red - #ee5253
 */
 
 body {
-    /* background-color: #a3c9d9; */
     background-image: url("file:///Users/elb/turing_work/1mod/3week/whats-for-dinner/assets/burger-friends.jpg");
     background-size: cover;
     padding: 0;
     margin: 0;
 }
 
-.header {
+header {
+    background-color: #0fb9b1;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-small;
+    display: flex;
+    justify-content: space-between;
+    block-size: fit-content;
+    padding: 1em;
+} 
+
+main {
+    block-size: fit-content;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    display: block;
+    box-sizing: content-box;
+    margin: 5%;
+    margin-top: 60px;
+    padding: 2em;
+    width: 650px;
+    height: 540px;
+    background-color: rgba(225, 225, 225, .9);
+    font-family: 'Roboto', sans-serif;
+}
+
+.left {
+    text-align: start;
+}
+
+.right {
+    text-align: center;
+}
+
+footer {
     background-color: #0fb9b1;
     border: 1px solid rgb(96, 45, 169);
     font-family: 'Roboto', sans-serif;
     font-size: x-small;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
-    /* padding-left: 10px;
-    padding-top: 10px;
-    box-sizing: border-box; */
-} 
-
-.wrapper {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-margin-bottom: 400px;
-margin-top: 400px;
-margin-left: 200px;
-margin-right: 200px;
+    block-size: fit-content;
+    padding: 1em; 
 }
 
 .button1 {
     background-color: rgba(225, 225, 225, .9);
-    padding: 1em;
-    border-radius: 2px;
+    /* padding: 1em; */
+    /* border-radius: 2px; */
+    white-space: normal;
+    word-wrap: break-word;
 }
 
-.footer {
-
-}
-
-.box {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-between;
-    /*^ this should move items along the main (horizontal) axis
-    color: rgba(225, 225, 225, .9);
-    /* opacity: 1; */
-    border: 1px solid red;
-    text-align: center;
-    padding: 1em;
-    box-sizing: content-box;
-}
-
-.hidden {
+/* .hidden {
     display: none;
-}
-
-.grid-container {
-    display: grid;
-    border: 1px solid rebeccapurple;
-}
+} */

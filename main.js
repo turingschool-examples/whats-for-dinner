@@ -46,7 +46,7 @@ var desserts = [
     'Croissants',
     'Eclairs']
 
-
+var addARecipeButton =document.querySelector('.add-a-recipe')
 var sideRadioButton = document.querySelector('#side')
 var mainRadioButton = document.querySelector('#main-dish')
 var dessertRadioButton = document.querySelector('#dessert')
@@ -56,14 +56,40 @@ var cookPotBox = document.querySelector('.box-2')
 var mealSuggestionBox = document.querySelector('.box-3')
 var dish = document.querySelector('#dish')
 var clearButton = document.querySelector('.clear')
-var errorMessage = document.querySelector('.error-message')
+var errorMessage = document.querySelector('.error-message1')
+var addARecipeForm = document.querySelector('.add-a-recipe-form')
+var addNewRecipeButton = document.querySelector('.add-recipe')
 
 
 letsCookButton.addEventListener('click', showRandomMealType)
 clearButton.addEventListener('click', clearButtonClicked)
+addARecipeButton.addEventListener('click', showAddRecipeForm)
+addNewRecipeButton.addEventListener('click', showNewlyAddedRecipe)
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
+}
+
+function showAddRecipeForm() {
+    addARecipeForm.classList.remove('hidden')
+}
+
+function showNewlyAddedRecipe() {
+    clearErrorMessage()
+    showSugestionBox(true)
+    var newRecipeType = document.getElementById('add-recipe-type').value    
+    var newRecipeName = document.getElementById('add-recipe-name').value
+    dish.innerText = newRecipeName
+    if(newRecipeType === 'main') {
+        mains.push(newRecipeName)
+    } else if(newRecipeType === 'side') {
+        sides.push(newRecipeName)
+    } else if(newRecipeType === 'dessert') {
+        desserts.push(newRecipeName)
+    } else {
+        clearButtonClicked()
+        showErrorMessage1()
+    }
 }
 
 function clearButtonClicked() {
@@ -93,10 +119,10 @@ function showRandomMealType(event) {
         showRandomEntireMeal()
     } else {
         clearButtonClicked()
-        showErrorMessage()
+        showErrorMessage1()
     }
 }
-function showErrorMessage(show) {
+function showErrorMessage1() {
     errorMessage.classList.remove('hidden')
 }
 function clearErrorMessage() {

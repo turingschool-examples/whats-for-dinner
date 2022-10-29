@@ -10,7 +10,6 @@
 
 <body>
   <header>
-
     <h1>What's For Dinner?</h1>
     <button class="add-a-recipe">ADD A RECIPE</button>
   </header>
@@ -30,7 +29,7 @@
           <!-- <label for="entire-meal">Entire Meal</label> -->
         </div>
         <button class="lets-cook">LET'S COOK!</button>
-        <div class="error-message hidden">Sorry, you must select a meal type</div>
+        <div class="error-message1 hidden">Sorry, you must choose a defined meal type</div>
       </form>
       <svg class="box-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
         <path
@@ -41,11 +40,15 @@
         <h2 id="dish"></h2>
         <button class="clear" id="clear">CLEAR</button>
       </section>
-      <section class="add-a-recipe-form">
-        
-      </section>
     </section>
   </main>
+  <footer class="add-a-recipe-form hidden">
+    <label for="recipe-type">Recipe Type: </label>
+    <input type="text" name="recipe-type" id="add-recipe-type" placeholder="main">
+    <label for="recipe-name">Recipe Name: </label>
+    <input type="text" name="recipe-name" id="add-recipe-name" placeholder="name">
+    <button class="add-recipe">ADD NEW</button>
+  </footer>
 </body>
 <script type="text/javascript" src="main.js"></script>
 

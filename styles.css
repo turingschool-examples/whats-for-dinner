@@ -37,3 +37,9 @@ nav {
     background: url(assets/burger-friends.jpg);
     background-size: cover;
 }
+
+.box {
+  width: 30%;
+  padding: 40px;
+  background-color: rgba(225, 225, 225, .85);
+}

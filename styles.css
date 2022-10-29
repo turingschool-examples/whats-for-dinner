@@ -1,3 +1,106 @@
+body {
+    background-image: url(./assets/burger-friends.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+  
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+  
+.header {
+    background-color: #0fb9b1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 300;
+    font-weight: bold;
+}
+
+#add-recipe-button {
+    border-radius: 5px;
+    border: none;
+    padding: 2px 2px;
+    font-size: 14px;
+    height: 35px;
+    width: 125px;
+}
+  
+.choose-dish,
+.show-recipes {
+    background-color: rgba(225, 225, 225, .9);
+    max-width: 300px;
+    max-height: 300px;
+    flex: 1;
+    margin: 40px;
+    padding: 1.5em;
+}
+  
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+}
+  
+.show-recipes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.show-recipes img {
+    width: 100px;
+    height: 100px;
+}
+  
+h3 {
+    font-weight: bold;
+}
+  
+label {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+  
+span {
+    color: #ee5253;
+}
+  
+#lets-cook-button {
+    border: none;
+    border-radius: 7%;
+    background-color: #0fb9b1;
+    margin-top: 10px;
+    padding: 8px 40px 8px 40px;
+    font-weight: lighter;
+    font-size: 11px;
+}
+  
+.recipe p {
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+  
+.recipe h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 0;
+}
+  
+.hidden {
+    display: none;
+}
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS

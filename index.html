@@ -1,10 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>What's For Dinner?</title>
+    <link rel="icon"  type="image/png" href="https://cdn-icons-png.flaticon.com/512/2253/2253457.png">
   </head>
   <body>
-    
+    <header class="header">
+      <h3>What's for Dinner?</h3>
+      <button id="add-recipe-button" type="button">ADD A RECIPE</button>
+    </header>
+    <section class="cards">
+      <section class="choose-dish">
+        <form class="form">
+          <h3>What are you looking for?<span>*</span></h3>
+          <div class="radio-buttons">
+            <label for="side-dish"><input type="radio" name="dish" class="button" id="side-dish"> Side</label>
+            <label for="main-dish"><input type="radio" name="dish" class="button" id="main-dish"> Main Dish</label>
+            <label for="dessert-dish"><input type="radio" name="dish" class="button" id="dessert-dish"> Dessert</label>
+            <label for="entire-meal"><input type="radio" name="dish" class="button" id="entire-meal"> Entire Meal</label>
+          </div>
+          <button id="lets-cook-button" type="button">LET'S COOK!</button>
+        </form>
+      </section>
+      <section class="show-recipes recipe-shown">
+        <img class="cookpot-image" src="./assets/cookpot.svg" alt="minimalistic cook pot" />
+        <div class="recipe hidden">
+          <p>You should make:</p>
+          <h1 class="recipe-text">Recipe Here</h1>
+        </div>
+      </section>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

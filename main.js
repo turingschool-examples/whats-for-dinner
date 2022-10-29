@@ -66,4 +66,29 @@ var recipeText = document.querySelector(".recipe-text");
 letsCookButton.addEventListener("click", displayRecipe)
 
 // functions
+function getRandomizedRecipe(array) {
+    var index = Math.floor(Math.random() * array.length);
+    return array[index]
+}
 
+function hideShowImage(show, hide) {
+    show.classList.remove("hidden");
+    hide.classList.add("hidden");
+}
+
+function displayRecipe() {
+    var newRecipe = "";
+    if (sideButton.checked) {
+      newRecipe = getRandomizedRecipe(sides);
+    } else if (mainButton.checked) {
+      newRecipe = getRandomizedRecipe(mains);
+    } else if (dessertButton.checked) {
+      newRecipe = getRandomizedRecipe(desserts);
+    }
+    recipeText.innerText = newRecipe;
+}
+
+function displayRecipe() {
+    hideShowImage(recipeBox, cookpotImage);
+    generateRandomRecipe()
+  }

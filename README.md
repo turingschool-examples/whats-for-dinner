@@ -1,51 +1,33 @@
-# What's for Dinner?
+## What's for Dinner? 
+This app will help you answer the question of what to cook for dinner quickly and randomly.
 
-## Overview
+#### Deploy Link
+[Try the website here!](https://karrarq.github.io/whats-for-dinner/)
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+### Description
+This app was put together over the course of five days as an assignment from Turing School of Software and Design. It was the second time myself and most of the students touched CSS, and it was a fun learning experience.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+Ultimately, users can select the saved **side**, **main**, and **dessert** options to randomly generate a specific meal component, or use our **entire meal** option to put a complete random meal together!
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+### Getting Started
+#### Set Up
+To view the app in your browser, simply click the deploy link and get started! If you'd like to edit the app on your own machine, complete the following steps:
+  - Fork this project so that you have your own version.
+  - Clone the repository onto your local computer.
+  - Move into the project and make any changes you'd like!
+#### Execution
+If you choose to use this version of the app in your browser, the execution is simple:
+  - Select the desired button to display the entire meal or component of your choice.
+  - Click the **LET'S COOK** button to see your random selection appear on the right side of the page.
+  - If you'd like to start over, click **CLEAR** to reset the page.
 
-## Learning Goals
+### Technologies used
+  - JavaScript
+  - HTML
+  - CSS
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+### Learning and Growth
+I'm happy with my attempt at using CSS and specifically the flexbox, but I know that there is a lot of room for improvement.
 
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# What's for Dinner? 
-
-### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-
-### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
-### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
-### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-
-### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
-
-### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
-
-### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+### Authors
+  -[Karrar Qasim](https://github.com/KarrarQ)

@@ -1,3 +1,4 @@
+// arrays for all three types of dishes
 var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
@@ -47,3 +48,22 @@ var desserts = [
     'Croissants',
     'Eclairs',
 ]
+
+// button variables
+var sideDishesButton = document.querySelector("#side-dish");
+var mainDishesButton = document.querySelector("#main-dish");
+var dessertDishesButton = document.querySelector("#dessert-dish");
+var mealsButton = document.querySelector("#entire-meal");
+var letsCookButton = document.querySelector("#lets-cook-button");
+var addRecipesButton = document.querySelector("#add-recipe-button");
+
+// other variables
+var cookpotImage = document.querySelector(".cookpot-image");
+var recipeBox = document.querySelector(".recipe");
+var recipeText = document.querySelector(".recipe-text");
+
+// event listeners
+letsCookButton.addEventListener("click", displayRecipe)
+
+// functions
+

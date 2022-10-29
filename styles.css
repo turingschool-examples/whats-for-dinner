@@ -7,7 +7,9 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-
+/* * {
+    border: solid 2px red;
+} */
 body {
     background-image: url("file:///Users/elb/turing_work/1mod/3week/whats-for-dinner/assets/burger-friends.jpg");
     background-size: cover;
@@ -76,11 +78,13 @@ form {
     block-size: fit-content;
 }
 
-label {
-    float: left;
+.spite {
+    margin: 30px;
+}
+/* label {
     display: flex;
     align-items: flex-start;
-}
+} */
 
 #cookbutton {
     background-color: #0fb9b1;

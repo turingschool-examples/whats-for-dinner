@@ -104,3 +104,14 @@ input[type="radio"]{
 .dish-option{
   margin: 2%;
 }
+
+#favorite-button{
+  margin-left: 67.5%;
+  background-color: #0fb9b1;
+  border-radius: 4px;
+  border: 2px;
+  border-color: coral;
+  width: 160px;
+  height: 30px;
+  font-size: 85%;
+}

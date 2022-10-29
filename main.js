@@ -3,6 +3,7 @@ var potImage = document.querySelector('.image')
 var chosenOption = document.querySelector('.chosen-dish')
 var radioButtons = document.querySelectorAll('input[name="choose-one"]')
 var dishOption = document.querySelector('.dish-option')
+var favoriteButton = document.querySelector('#favorite-button')
 
 var sides = [
   'Fresh green beans',
@@ -39,6 +40,7 @@ var desserts = [
 
 letsCookButton.addEventListener('click', generateRandomOption)
 letsCookButton.addEventListener('click', changeDisplay)
+favoriteButton.addEventListener('click', saveToFavorites)
 
 function getRandomIndex(array) {
   var newRandomIndex = Math.floor(Math.random() * array.length);
@@ -48,20 +50,31 @@ function getRandomIndex(array) {
 function changeDisplay(){
   potImage.classList.add('hidden')
   chosenOption.classList.remove('hidden')
+  favoriteButton.classList.remove('hidden')
 }
 
 function generateRandomOption(){
   var selectedDish;
+  chosenOption.innerHTML = ''
   for (let i = 0; i < radioButtons.length; i++){
     if (radioButtons[i].checked){
       selectedDish = radioButtons[i].value
     }
   }
   if(selectedDish === 'Sides'){
-    dishOption.innerText = `${getRandomIndex(sides)}!`
+    chosenOption.innerHTML +=
+    `<em class="you-should-make">You Should Make:</em>
+     <h1 class="dish-option">${getRandomIndex(sides)}!</h1>
+    `
   } else if (selectedDish === 'main-dishes'){
-    dishOption.innerText = `${getRandomIndex(mainDishes)}!`
+    chosenOption.innerHTML +=
+    `<em class="you-should-make">You Should Make:</em>
+     <h1 class="dish-option">${getRandomIndex(mainDishes)}!</h1>
+    `
   } else if (selectedDish === 'dessert'){
-    dishOption.innerText = `${getRandomIndex(desserts)}!`
+    chosenOption.innerHTML +=
+    `<em class="you-should-make">You Should Make:</em>
+     <h1 class="dish-option">${getRandomIndex(desserts)}!</h1
+    `
   }
 }

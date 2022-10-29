@@ -8,3 +8,66 @@ red - #ee5253
 
 */
 
+body {
+    /* background-color: #a3c9d9; */
+    background-image: url("file:///Users/elb/turing_work/1mod/3week/whats-for-dinner/assets/burger-friends.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: #0fb9b1;
+    border: 1px solid rgb(96, 45, 169);
+    font-family: 'Roboto', sans-serif;
+    font-size: x-small;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    /* padding-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box; */
+} 
+
+.wrapper {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+margin-bottom: 400px;
+margin-top: 400px;
+margin-left: 200px;
+margin-right: 200px;
+}
+
+.button1 {
+    background-color: rgba(225, 225, 225, .9);
+    padding: 1em;
+    border-radius: 2px;
+}
+
+.footer {
+
+}
+
+.box {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /*^ this should move items along the main (horizontal) axis
+    color: rgba(225, 225, 225, .9);
+    /* opacity: 1; */
+    border: 1px solid red;
+    text-align: center;
+    padding: 1em;
+    box-sizing: content-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    border: 1px solid rebeccapurple;
+}

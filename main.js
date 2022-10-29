@@ -74,6 +74,8 @@ letsCookBtn.addEventListener('click', function(event) {
     displayDish(checkRadioValues());
 });
 
+clearButton.addEventListener('click', reset);
+
 //function
 function getRandomArrayElement(array) {
     var randomIndex = Math.floor(Math.random() * array.length);
@@ -111,6 +113,7 @@ function randomizeSelecton(array) {
 function displayDish(selection) {
     mealToCook = [];
     dishToMake.innerText = "";
+    potImage.classList.remove('pot-error');
 
     potImage.classList.add('hidden');
     dishToMake.classList.remove('hidden');
@@ -126,4 +129,11 @@ function displayDish(selection) {
     } else {
         dishToMake.innerText = `${selection}`;
     }
+}
+
+function reset() {
+    potImage.classList.remove('hidden');
+    potImage.classList.remove('pot-error');
+    centered.classList.add('hidden');
+    clearButtonContainer.classList.add('hidden');
 }

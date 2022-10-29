@@ -16,13 +16,14 @@ red - #ee5253
 
 .lets-cook {
   background-color: #0fb9b1;
-  padding: 15;
+  padding: 7px;
   display: flex;
 }
 
 label {
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
 
 div {
@@ -39,9 +40,13 @@ div {
 }
 
 .clear {
-  width: 150px;
+  background-color: #95a5a6;
+  box-sizing: border-box;
+  width: 65px;
+  height: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -85,8 +90,13 @@ header {
   margin: 75px;
 }
 
+.star-label:after {
+  content: " *";
+  color: red;
+}
+
 .box-1 {
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgba(225, 225, 225, .9);
   padding: 50px;
   width: 400px;
   height: 400px;
@@ -97,8 +107,14 @@ header {
   padding: 20px;
 }
 
+.error-message {
+  font-family: 'Roboto', sans-serif;
+  width: 300px;
+  color: red;
+}
+
 .box-2 {
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgba(225, 225, 225, .9);
   padding: 120px 20px;
   width: 400px;
   height: 200px;
@@ -117,11 +133,12 @@ svg {
 }
 
 .box-3 {
-  background-color: rgb(255, 255, 255, 0.8);
-  padding-top: 40px;
+  background-color: rgba(225, 225, 225, .9);
+  /* padding-top: 40px;
   padding-left: 50px;
-  padding-right: 50px;
-  width: 30%;
+  padding-right: 50px; */
+  padding: 20px;
+  width: 400px;
   height: 400px;
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -131,14 +148,22 @@ svg {
   flex-wrap: wrap;
 }
 
+/* .box-3:nth-child(3) {
+  border: 10px solid black;
+  display: flex;
+  justify-content: center;
+} */
+
 #you-should-make {
+  /* padding-right: 130px; */
   font-size: small;
   font-style: italic;
 }
 
 #dish {
   font-size: xx-large;
-  margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: ;
 }

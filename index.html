@@ -18,7 +18,7 @@
   <main class="main">
     <section class="wrapper">
       <form class="box-1">
-        <h2 class="menu-selection-title">What are you looking for?</h2>
+        <h2 class="menu-selection-title star-label">What are you looking for?</h2>
         <div>
           <span><input type="radio" id="side" name="cook"> Side</span><br>
           <!-- <label for="side">Side</label>-->
@@ -26,10 +26,11 @@
           <!-- <label for="main-dish">Main Dish</label> -->
           <span><input type="radio" id="dessert" name="cook"> Desserts</span><br>
           <!-- <label for="dessert">Dessert</label> -->
-          <span><input type="radio" id="entier-meal" name="cook"> Entire Meal</span><br>
+          <span><input type="radio" id="entire-meal" name="cook"> Entire Meal</span><br>
           <!-- <label for="entire-meal">Entire Meal</label> -->
         </div>
         <button class="lets-cook">LET'S COOK!</button>
+        <div class="error-message hidden">Sorry, you must select a meal type</div>
       </form>
       <svg class="box-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
         <path
@@ -38,7 +39,10 @@
       <section class="box-3 hidden">
         <h2 id="you-should-make">You should make:</h2>
         <h2 id="dish"></h2>
-        <button class="clear">CLEAR</button>
+        <button class="clear" id="clear">CLEAR</button>
+      </section>
+      <section class="add-a-recipe-form">
+        
       </section>
     </section>
   </main>

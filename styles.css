@@ -8,3 +8,100 @@ red - #ee5253
 
 */
 
+body {
+    background-image: url("file:///Users/elb/turing_work/1mod/3week/whats-for-dinner/assets/burger-friends.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #0fb9b1;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-small;
+    display: flex;
+    justify-content: space-between;
+    block-size: fit-content;
+    padding: 1em;
+} 
+
+footer {
+    background-color: #0fb9b1;
+    border: 1px solid rgb(96, 45, 169);
+    font-family: 'Roboto', sans-serif;
+    font-size: x-small;
+    display: flex;
+    justify-content: space-between;
+    block-size: fit-content;
+    padding: 1em; 
+}
+
+main {
+    block-size: fit-content;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    display: block;
+    box-sizing: content-box;
+    margin: 5%;
+    margin-top: 60px;
+    padding: 5em;
+    width: 650px;
+    height: 540px;
+    background-color: rgba(225, 225, 225, .9);
+    font-family: 'Roboto', sans-serif;
+}
+
+.left {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+legend {
+    font-size: xx-large;
+}
+
+fieldset {
+    border-color: white;
+}
+
+form {
+    block-size: fit-content;
+}
+
+label {
+    float: left;
+    display: flex;
+    align-items: flex-start;
+}
+
+#cookbutton {
+    background-color: #0fb9b1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.right {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1 {
+    background-color: rgba(225, 225, 225, .9);
+    /* padding: 1em; */
+    /* border-radius: 2px; */
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* .hidden {
+    display: none;
+} */

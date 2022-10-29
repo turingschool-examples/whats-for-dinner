@@ -114,9 +114,12 @@ function displayDish(selection) {
     mealToCook = [];
     dishToMake.innerText = "";
     potImage.classList.add('hidden');
-    youShouldMakeContent.classList.add('recipe-block');
-    youShouldMakeContent.classList.remove('hidden');
+    //youShouldMakeContent.classList.add('recipe-block');
+    dishToMake.classList.remove('hidden');
+    centered.classList.remove('hidden');
     clearButtonContainer.classList.remove('hidden');
+    console.log(centered);
+    console.log(clearButtonContainer);
     if (selection.length === 3) {
         dishToMake.innerText = `${selection[1]} with a side of ${selection[0]} and ${selection[2]} for dessert`;
     } else {

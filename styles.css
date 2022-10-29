@@ -28,6 +28,9 @@ nav {
     font-size: 14px;
     align-items: center;
 }
+h1 {
+    padding-left: 15px;
+}
 .add-a-recipe-btn {
     margin: 10px;
     text-transform: uppercase;
@@ -84,10 +87,14 @@ nav {
     margin: 24px;
 }
 .pot-block {
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;  */
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: space-around;
 }
 .pot {
     height: 175px;
@@ -99,8 +106,14 @@ nav {
     display: flex;
     justify-content: flex-end;
 }
-.center {
-    margin-top: 74px;
+.centered {
+    /* margin-top: 74px; */
+    height: 153px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 120px;
+    margin-bottom: 45px;
 }
 p {
     text-align: center;
@@ -111,11 +124,14 @@ p {
     margin-top: 25px;
 }
 .clear-btn-container {
+    /* width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; */
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: 130px;
 }
 .clear-btn {
     margin: 10px;

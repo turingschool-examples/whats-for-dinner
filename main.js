@@ -51,8 +51,14 @@ function showDish(event){
             <p class="dish-response together">${desserts[getRandomIndex(desserts)]}</p>
             <button class="clear-button">Clear</button>`
         // console.log(desserts[getRandomIndex(desserts)])
-        }
+     } else if (entireMealButton.checked === true){
+        responseBox.innerHTML= `
+         <section class="response-location">
+            <p class="response-title together">You should make: </p>
+             <p class="dish-response together">${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!</p>
+                <button class="clear-button">Clear</button>`
     }  
+}
         // I can hide the pot and show within this function
 
         // These maybe useful for our needed functions.

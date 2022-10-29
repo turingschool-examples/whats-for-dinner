@@ -29,7 +29,7 @@ header {
     background-color: lightgray;
     border-color: lightgray;
     font-family: 'Roboto', sans-serif;
-    ;
+    border: none;
     padding: 12px;
     margin: 10px;
     font-family: 'Roboto', sans-serif;
@@ -99,7 +99,7 @@ header {
 
 #title::after {
     content: "*";
-    color: red;
+    color: #ee5253;
 }
 
 .box-three {
@@ -138,8 +138,7 @@ header {
     display: flex;
     justify-content: space-around;
     margin: 21px;
-    display: flex;
-    flex-direction: row;
+  
 }
 
 .clear-button {
@@ -148,12 +147,17 @@ header {
     font-family: 'Roboto', sans-serif;
     background-color: darkgray;
     border: none;
+    border-radius: 12px;
     height: 30px;
     width: 60px;
     margin-right: 20px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+.hidden{
+    display: none;
 }
 
 /* font-family: 'Roboto', sans-serif;

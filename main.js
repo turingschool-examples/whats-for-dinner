@@ -10,8 +10,7 @@ var sides = [
     'Shrimp Summer Rolls',
     'Garlic Butter Mushrooms',
     'Hush Puppies'
-]
-
+];
 var mains = [
     'Spaghetti and Meatballs',
     'Pineapple Chicken',
@@ -26,8 +25,7 @@ var mains = [
     'Chicken Fried Rice',
     'Sheet Pan Fajitas',
     'Margarita Pizza'
-]
-
+];
 var desserts = [
     'Apple Pie',
     'Lemon Meringue Pie',
@@ -63,7 +61,7 @@ var recipeBox = document.querySelector(".recipe");
 var recipeText = document.querySelector(".recipe-text");
 
 // event listeners
-letsCookButton.addEventListener("click", displayRecipe)
+letsCookButton.addEventListener("click", getRecipe)
 
 // functions
 function getRandomizedRecipe(array) {
@@ -71,24 +69,20 @@ function getRandomizedRecipe(array) {
     return array[index]
 }
 
-function hideShowImage(show, hide) {
-    show.classList.remove("hidden");
+function hideOrShowImage(hide, show) {
     hide.classList.add("hidden");
+    show.classList.remove("hidden");
 }
 
-function displayRecipe() {
-    var newRecipe = "";
-    if (sideButton.checked) {
+function getRecipe() {
+    hideOrShowImage(cookpotImage, recipeBox);
+    var newRecipe = '';
+    if (sideDishesButton.checked) {
       newRecipe = getRandomizedRecipe(sides);
-    } else if (mainButton.checked) {
+    } else if (mainDishesButton.checked) {
       newRecipe = getRandomizedRecipe(mains);
-    } else if (dessertButton.checked) {
+    } else if (dessertDishesButton.checked) {
       newRecipe = getRandomizedRecipe(desserts);
     }
     recipeText.innerText = newRecipe;
 }
-
-function displayRecipe() {
-    hideShowImage(recipeBox, cookpotImage);
-    generateRandomRecipe()
-  }

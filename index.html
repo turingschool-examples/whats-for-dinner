@@ -13,6 +13,7 @@
     <section class="boxes">
       <form class="boxes blocks input-block">
         <h2 class="input-block-header">What are you looking for?<span class="astrix">*</span></h2> 
+        <div class="error-messages hidden">*this is a required field</div>
         <fieldset class="radio-button-form">
           <div class="selector">
             <input type="radio" name="pick-one" value="side" id="side">
@@ -35,15 +36,14 @@
       </form>
       <section class="boxes blocks pot-block">
         <img class="pot" src="assets/cookpot.svg" alt="steaming pot">
-        <section class="suggest hidden">
-          <div class="centered">
-            <p><em>you should make</em></p>
-            <div class="suggestion">insert innerText here</div>
-          </div>
-          <div class="clear-btn-container">
-            <button class="clear-btn">clear</button>
-          </div>
-        </section>
+        <div class="centered hidden">
+          <p><em>you should make</em></p>
+          <div class="suggestion"></div>
+        </div>
+        <p class='error-messages hidden'>*Whoops, you forgot to select an option!</p>
+        <div class="clear-btn-container hidden">
+          <button class="clear-btn">clear</button>
+        </div>
       </section>
     </section> 
   </body>

@@ -48,8 +48,6 @@ var dessertsArray = [
 ];
 var dishToCook;
 var mealToCook = [];
-
-
 //querySelects
 
 //radio buttons
@@ -60,16 +58,17 @@ var entireMealButton = document.querySelector('#entire-meal');
 //action buttons
 var letsCookBtn = document.querySelector('.lets-cook-btn');
 var clearButton = document.querySelector('.clear-btn');
+var clearButtonContainer = document.querySelector('.clear-btn-container');
 //suggestions
 var potBlock = document.querySelector('.pot-block');
 var potImage = document.querySelector('.pot');
 var youShouldMakeContent = document.querySelector('.suggest');
 var centered = document.querySelector('.centered')
 var dishToMake = document.querySelector('.suggestion');
-
+//error-handling
+var errorMessages = document.querySelectorAll('.error-messages')
 
 //event listeners
-
 letsCookBtn.addEventListener('click', function(event) {
     event.preventDefault();
     displayDish(checkRadioValues());
@@ -82,45 +81,49 @@ function getRandomArrayElement(array) {
 }
 
 function checkRadioValues() {
-
+    errorMessages[0].classList.add('hidden');
+    errorMessages[1].classList.add('hidden');
     if(sideButton.checked) {
         dishToCook = randomizeSelecton(sidesArray);
-        console.log("Side: ", dishToCook);
         return dishToCook;
     } else if(mainButton.checked) {
         dishToCook = randomizeSelecton(mainsArray);
-        console.log("Main: ", dishToCook);
         return dishToCook;
     }else if(dessertButton.checked) {
         dishToCook = randomizeSelecton(dessertsArray);
-        console.log("Dessert: ", dishToCook);
         return dishToCook;
     }else if(entireMealButton.checked) {
         mealToCook.push(randomizeSelecton(sidesArray));
         mealToCook.push(randomizeSelecton(mainsArray));
         mealToCook.push(randomizeSelecton(dessertsArray));
-        console.log("Meal: ", mealToCook);
         return mealToCook;
+    } else {
+        for(var i = 0; i < errorMessages.length; i++) {
+        errorMessages[i].classList.remove('hidden');
+        }
     }
-    //else statement for errors
-
+       
 }
 function randomizeSelecton(array) {
     return getRandomArrayElement(array);
     }
 
 function displayDish(selection) {
-    console.log(selection);
-    dishToMake.innerText = null;
+    mealToCook = [];
+    dishToMake.innerText = "";
+
     potImage.classList.add('hidden');
-    centered.classList.add('recipe-block');
-    youShouldMakeContent.classList.remove('hidden');
-    if (selection.length === 3) {
+    dishToMake.classList.remove('hidden');
+    centered.classList.remove('hidden');
+    clearButtonContainer.classList.remove('hidden');
+    if(!selection){
+        potImage.classList.remove('hidden');
+        potImage.classList.add('pot-error');
+        centered.classList.add('hidden');
+        clearButtonContainer.classList.add('hidden');
+    } else if(selection.length === 3) {
         dishToMake.innerText = `${selection[1]} with a side of ${selection[0]} and ${selection[2]} for dessert`;
     } else {
         dishToMake.innerText = `${selection}`;
     }
 }
-
-
-//dishToMake.innerHTML = 

@@ -13,6 +13,8 @@ var viewFavorites = document.querySelector('#view-favorite')
 var favoriteList = document.querySelector('.favorite-list')
 var goBackButton = document.querySelector('.go-back-button')
 var favoriteDishes = document.querySelector("#favorite-dishes")
+var removeButtons = document.querySelectorAll('.remove-buttons');
+
 
 
 // Food options
@@ -73,11 +75,22 @@ cookButton.addEventListener('click', selectFood)
 favorite.addEventListener('click', addFavorite)
 viewFavorites.addEventListener('click', showFavorites)
 goBackButton.addEventListener('click', goBack)
+favoriteDishes.addEventListener('click', removeFavorite);
+
 
 // Global vars
+
 var selectedFood;
 var favoriteFoods = [];
+
 // Functions 
+
+class Favorite {
+    constructor(name) {
+        this.id = Date.now();
+        this.name = name;
+    }
+}
 
 function getRndFood(array) {
     var arrayIndex = Math.floor(Math.random() * array.length);
@@ -106,7 +119,14 @@ favoriteList.classList.add("hidden");
 };
 
 function addFavorite() {
-    favoriteFoods.push(selectedFood);
+    var newFood = new Favorite(selectedFood);
+    for (let index = 0; index < favoriteFoods.length; index++) {
+        if (favoriteFoods[index].name === newFood.name) {
+             favoriteFoods.pop();
+            } 
+    }
+    favoriteFoods.push(newFood);
+    listFavorites();
 }
 
 function showFavorites() {
@@ -114,16 +134,41 @@ function showFavorites() {
     suggestion.classList.add("hidden");
     favoriteSection.classList.add("hidden");
     favoriteList.classList.remove("hidden");
+}
+
+
+function listFavorites() {
+    // Needs to reset the HTML every time view favorites is pressed
+    favoriteDishes.innerHTML = " ";
+    for (let index = 0; index < favoriteFoods.length; index++) {
+        favoriteDishes.innerHTML += 
+        `<p id="${favoriteFoods[index].id}">${favoriteFoods[index].name}&nbsp</p>
+        <button id="${favoriteFoods[index].id}" class="remove-buttons">REMOVE</button>`
+    }
+}
+
+
+
+function removeFavorite(event) {
+    // alert(event.target.className)}   
+    // if (event.target.className == ".remove-buttons") {
+    for (let index = 0; index < favoriteFoods.length; index++) {
+        if ((event.target.id == favoriteFoods[index].id) && (event.target.className == "remove-buttons")) {
+            favoriteFoods.splice(index, 1);
+        }
+    }
+    // }
+    // event.target.parentNode.remove();
     listFavorites();
 }
 
-function listFavorites() {
-    favoriteDishes.innerHTML = " "
-    for (let index = 0; index < favoriteFoods.length; index++) {
-        favoriteDishes.innerHTML += 
-        `<ul>${favoriteFoods[index]}</ul>`
-    }
-}
+// function removeArticle(event) {
+//     if (event.target.class == "remove-buttons") {
+//         removeFavorite(event);
+//     }
+// }
+
+
 
 function goBack() {
     prompt.classList.remove("hidden");

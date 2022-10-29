@@ -27,6 +27,7 @@ h2 {
 
 p {
     font-family: 'Roboto', sans-serif;
+    margin: auto;
 }
 
 input {
@@ -98,7 +99,7 @@ input {
 }
 
 .favorite-section {
-    
+    font-family: 'Roboto', sans-serif;
 }
 
 .favorite-buttons {
@@ -127,8 +128,19 @@ input {
     align-items: center;
 }
 
-ul {
+#favorite-dishes {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.remove-buttons {
+    height: 20px;
+    background-color: #0fb9b1;
+    border: none;
 }
 
 .hidden {

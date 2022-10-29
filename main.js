@@ -33,20 +33,23 @@ function showDish(event){
         responseBox.innerHTML= `
         <section class="response-location">
          <p class="response-title together">You should make: </p>
-         <p class="dish-response together">${sides[getRandomIndex(sides)]}</p>`
+         <p class="dish-response together">${sides[getRandomIndex(sides)]}</p>
+         <button class="clear-button">Clear</button>`
         // console.log(responseBox)
         // console.log(sides[getRandomIndex(sides)])
      } else if (mainDishButton.checked === true){
         responseBox.innerHTML= `
         <section class="response-location">
           <p class="response-title together">You should make: </p>
-          <p class="dish-response together">${mainDishes[getRandomIndex(mainDishes)]}</p>`
+          <p class="dish-response together">${mainDishes[getRandomIndex(mainDishes)]}</p>
+          <button class="clear-button">Clear</button>`
         console.log(mainDishes[getRandomIndex(mainDishes)])
      } else if (dessertButton.checked === true){
         responseBox.innerHTML= `
         <section class="response-location">
             <p class="response-title together">You should make: </p>
-            <p class="dish-response together">${desserts[getRandomIndex(desserts)]}</p>`
+            <p class="dish-response together">${desserts[getRandomIndex(desserts)]}</p>
+            <button class="clear-button">Clear</button>`
         // console.log(desserts[getRandomIndex(desserts)])
         }
     }  

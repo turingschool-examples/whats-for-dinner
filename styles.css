@@ -3,36 +3,42 @@
     margin: 0;
     font-size: 20px;
 }
+
 body {
     background: #0fb9b1;
     background-image: url(assets/burger-friends.jpg);
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 header {
-    background-color: #0fb9b1 ;
+    background-color: #0fb9b1;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding-left: 25px;
     padding-right: 25px;
-    
+
 }
+
 .add-recipe-button {
     background-color: lightgray;
     border-color: lightgray;
-    font-family:'Roboto', sans-serif; ;
+    font-family: 'Roboto', sans-serif;
+    ;
     padding: 12px;
     margin: 10px;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    ;
     font-size: 16px;
     border-radius: 12px;
 }
-.boxes{
+
+.boxes {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -48,9 +54,10 @@ header {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-   
+
 
 }
+
 .box-two {
     background-color: rgba(225, 225, 225, .9);
     padding: 45px;
@@ -62,33 +69,39 @@ header {
     flex-direction: column;
     justify-content: space-around;
 }
+
 .side-button {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
-.button-location{
+
+.button-location {
     display: flex;
     margin-right: 20px;
     flex-direction: column;
     justify-content: left;
     align-items: center;
- }
- .lets-cook-button {
+}
+
+.lets-cook-button {
     font-family: 'Roboto', sans-serif;
     background-color: #0fb9b1;
     border-radius: 12px;
     height: 6vh;
     width: 25vh;
- }
- #title{
-     font-family: 'Roboto';
-     font-size: larger;
- }
- #title::after {
+}
+
+#title {
+    font-family: 'Roboto';
+    font-size: larger;
+}
+
+#title::after {
     content: "*";
     color: red;
-  }
+}
+
 .box-three {
     background-color: rgba(225, 225, 225, .9);
     padding: 45px;
@@ -101,24 +114,26 @@ header {
     justify-content: space-around;
     /* display: grid; */
 }
+
 .response-location {
     display: flex;
     flex-direction: column;
-    align-content: center
-    justify-content: space-evenly;
+    align-items: flex-end;
 }
 
 .response-title {
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: medium;
     padding-top: 40px;
 }
 
 .dish-response {
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: x-large;
     padding-bottom: 40px;
+
 }
+
 .together {
     display: flex;
     justify-content: space-around;
@@ -127,6 +142,19 @@ header {
     flex-direction: row;
 }
 
+.clear-button {
+    color: whitesmoke;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkgray;
+    border: none;
+    height: 30px;
+    width: 60px;
+    margin-right: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /* font-family: 'Roboto', sans-serif;
 
@@ -137,4 +165,3 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-

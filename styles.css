@@ -7,4 +7,100 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+*{
+  font-family: 'Roboto', sans-serif;
+}
 
+body {
+  background-image: url(/Users/ryanbaer/home/1mod/projects/whats-for-dinner/assets/burger-friends.jpg);
+  background-size: cover;
+  margin: 0px
+}
+
+.Top-Header{
+  background: #0fb9b1;
+  border: 1px #0fb9b1 solid;
+  /* background-color: teal; */
+}
+
+.Header-Text{
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.select-box{
+  background-color: rgba(225, 225, 225, .9);
+  width: 35%;
+  height: 75%;
+}
+
+.dish-box{
+  background-color: rgba(225, 225, 225, .9);
+  width: 35%;
+  height: 75%;
+}
+
+.main{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70vh
+
+}
+
+.select-text{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%
+}
+
+.box-header{
+  padding-left: 15%;
+  padding-top: 12%;
+  margin-bottom: 10px
+}
+
+.buttons{
+  padding-left: 40px;
+}
+
+.cook-button{
+  margin-left: 15%;
+  background-color: #0fb9b1;
+  border-radius: 4px;
+  border: 2px;
+  border-color: coral;
+  width: 160px;
+  height: 30px;
+  font-size: 85%;
+}
+
+.chosen-dish{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"]{
+  margin: 20 0% 0 10%;
+}
+
+.hidden {
+  display: none!important;
+}
+
+.dish-option{
+  margin: 2%;
+}

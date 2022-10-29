@@ -124,9 +124,11 @@ function showRandomMealType(event) {
 }
 function showErrorMessage1() {
     errorMessage.classList.remove('hidden')
+    addARecipeForm.classList.add('hidden')
 }
 function clearErrorMessage() {
     errorMessage.classList.add('hidden')
+    addARecipeForm.classList.add('hidden')
 }
 function showRandomSide() {
     dish.innerText = ""

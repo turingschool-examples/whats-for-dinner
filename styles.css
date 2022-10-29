@@ -116,7 +116,7 @@ form span {
 }
 
 
-#lets-cook-button, #add-favorite-button {
+#lets-cook-button, #add-favorite-button, #remove-recipe-button {
     background-color: #0fb9b1;
     margin-top: 5px;
     padding-bottom: 10px;
@@ -146,47 +146,58 @@ form span {
     padding: 25px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* favorites page */
-.favorites-page {
+#favorites-page {
     margin-top: 200px;
     width: 75%;
     height: 500px;
     background-color: rgba(225, 225, 225, .9);
 }
 
-.display {
+.favorites-header-display {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 150px;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50px;
+    font-size: 20px;
+    /* border: solid red; */
+}
+
+.favorite-text {
+    /* border: solid hotpink; */
+    margin-top: 5px;
+    height: 40px;
+}
+
+#favorites-display {
+    /* border: solid blueviolet; */
+    height: 400px;
     font-size: 20px;
 }
 
-.sides-text {
-    margin-left: 35px;
-    margin-right: 35px;
+.remove-recipe-button-box {
+    height: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    /* border: solid lightpink; */
 }
 
-.mains-text {
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.desserts-text {
-    margin-left: 10px;
+#remove-recipe-input {
+    height: 20px;    
+    width: 250px;
     margin-right: 10px;
+    order: 1;
 }
 
-.hidden {
-    display: none;
+#remove-recipe-button {
+    order: 2;
 }
-
-
-
-
-
-
-
 
 
 

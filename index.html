@@ -6,9 +6,9 @@
   </head>
   <body>
     <nav>
-      <button type="button" class="nav-button hidden" id="back-to-main-button">BACK TO MAIN!</button>
+      <button type="button" class="nav-button hidden" id="back-to-main-button">BACK TO MAIN</button>
       <button type="button" class="nav-button" id="add-recipe-button">ADD A RECIPE</button>
-      <button type="button" class="nav-button" id="view-favorites-button">VIEW FAVORITES!</button>
+      <button type="button" class="nav-button" id="view-favorites-button">VIEW FAVORITES</button>
       <h1 class="whats-for-dinner">What's for Dinner?</h1> 
     </nav>
     <main>
@@ -28,35 +28,17 @@
           <h3>You should make:</h3>
           <h1 id="meal-display-name"></h1>
           <button type="button" id="add-favorite-button">ADD AS FAVORITE!</button>
-        </article>
       </section>
-      <article class="favorites-page hidden">
-        <!-- <section> -->
-          <section class="sides-box display">
-            <section class="display">
-              <h1 class="sides-text">Sides ~</h1>
-              <section class="sides-display  display" >
-                <h1></h1>
-              </section>
-            </section>
-          </section>
-          <section class="mains-box display">
-            <section class="display">
-              <h1 class="mains-text">Mains ~</h1>
-              <section class="mains-display  display">
-                <h1></h1>
-              </section>
-            </section>
-          </section>
-          <section class="desserts-box">
-            <section class="display">
-              <h1 class="desserts-text">Dessests ~</h1>
-              <section class="desserts-display  display" >
-                <h1></h1>
-              </section>
-            </section>
-          </section>
-        <!-- </section> -->
+      <article id="favorites-page" class="hidden">
+        <section class="favorites-header-display">
+          <h1 class="favorite-text">~ Favorite Recipes ~</h1>
+        </section>
+        <section id="favorites-display">
+        </section>
+        <section class="remove-recipe-button-box">
+            <input type="text" placeholder="Which recipe would you like to remove?" name="remove-recipe" id="remove-recipe-input" class="hidden">
+            <button type="button" id="remove-recipe-button">REMOVE RECIPE</button>
+        </section>
       </article>
     </main>
   </body>

@@ -1,16 +1,12 @@
 //arraysAndVariables
-var sides = ['Miso Glazed Carrots', 'Coleslaw', 'Garden Salad', 'Crispy Potatoes', 'Sweet Potato Tots', 'Coconut Rice', 'Caeser Salad', 'Shrimp Summer Rolls', 'Garlic Butter Mushrooms', 'Hush Puppies']
+var sides = ['miso glazed carrots', 'coleslaw', 'garden salad', 'crispy potatoes', 'sweet potato tots', 'coconut rice', 'caeser salad', 'shrimp summer rolls', 'garlic butter mushrooms', 'hush puppies']
 
-var mains = [ 'Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai Yellow Curry', 'Bibimbap', 'Chicken Parmesean', 'Butternut Squash Soup', 'BBQ Chicken Burgers', 'Ramen', 'Empanadas','Chicken Fried Rice', 'Sheet Pan Fajitas', 'Margarita Pizza']
+var mains = [ 'spaghetti and meatballs', 'pineapple chicken', 'shakshuka', 'thai yellow curry', 'bibimbap', 'chicken parmesean', 'butternut squash soup', 'bbq chicken burgers', 'ramen', 'empanadas', 'chicken fried rice', 'sheet pan fajitas', 'margarita pizza']
 
-var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana Bread', 'Peach Cobbler', 'Cheesecake', 'Funfetti Cake', 'Baklava', 'Flan', 'Macarons', 'Macaroons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie', 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs' ]
-
-var favoriteSides = []
-var favoriteMains = []
-var favoriteDesserts = []
-
+var desserts = ['apple pie', 'lemon meringue pie', 'black forest cake', 'banana bread', 'peach cobbler', 'cheesecake', 'funfetti cake', 'baklava', 'flan', 'macarons', 'macaroons', 'chocolate cupcakes', 'pavlova', 'pumpkin pie', 'key lime pie', 'tart tatin', 'croissants', 'eclairs' ]
 
 var mealName
+var favoriteMeals = []
 
 //querySelectors
 //buttons
@@ -22,16 +18,16 @@ var letsCookButton = document.querySelector('#lets-cook-button')
 var viewFavoritesButton = document.querySelector('#view-favorites-button')
 var backToMainButton = document.querySelector('#back-to-main-button')
 var addFavoriteButton = document.querySelector('#add-favorite-button')
+var removeRecipeButton = document.querySelector('#remove-recipe-button')
 //display
 var cookpotDisplay = document.querySelector('#cookpot-display')
 var mealDisplayBox = document.querySelector('#meal-display')
 var mealDisplayName = document.querySelector('#meal-display-name')
-var favoritesDisplay = document.querySelector('.favorites-page')
 var mealSelectorDisplay = document.querySelector('.what-are-you-looking-for')
 var youShouldMakeDisplay = document.querySelector('.cookpot')
-var sidesDisplay = document.querySelector('.sides-display')
-var mainsDisplay = document.querySelector('.mains-display')
-var dessertsDisplay = document.querySelector('.desserts-display')
+var removeInput = document.querySelector('#remove-recipe-input')
+var favoritesDisplay = document.querySelector('#favorites-page')
+var favoritesNameDisplay = document.querySelector('#favorites-display')
 
 //eventListeners
 letsCookButton.addEventListener('click', function() {
@@ -52,6 +48,10 @@ addFavoriteButton.addEventListener('click', function() {
     displayFavorites()
 })
 
+removeRecipeButton.addEventListener('click', function() {
+    // toggleRemoveInput()
+    deleteRecipe()
+})
 
 //functions
 function getRandomMeal(mealArray) {
@@ -61,19 +61,7 @@ function getRandomMeal(mealArray) {
 function randomizeMeal(mealArray) {
     var randomMealNumber = getRandomMeal(mealArray)
     mealName = mealArray[randomMealNumber]
-    mealDisplayName.innerText = mealName
-}
-
-function checkRadio() {
-    if (sideButton.checked === true) {
-        randomizeMeal(sides)
-    } else if (mainButton.checked === true) {
-        randomizeMeal(mains)
-    } else if (dessertButton.checked === true) {
-        randomizeMeal(desserts)
-    } else {
-        return 'Please make a selection.'
-    }
+    mealDisplayName.innerText = mealName[0].toUpperCase() + mealName.slice(1)
 }
 
 function toggleCookpotDisplay() {
@@ -89,49 +77,35 @@ function toggleFavoriteDisplay() {
 
 }
 
-function addFavorite() {
+function checkRadio() {
     if (sideButton.checked === true) {
-        favoriteSides.push(mealName)
+        randomizeMeal(sides)
     } else if (mainButton.checked === true) {
-        favoriteMains.push(mealName)
+        randomizeMeal(mains)
     } else if (dessertButton.checked === true) {
-        favoriteDesserts.push(mealName)
+        randomizeMeal(desserts)
+    } else {
+        mealDisplayName.innerText = "Please select a meal"
     }
 }
 
-function displayFavorites() {
-    sidesDisplay.innerHTML = favoriteSides.join(', ')
-    mainsDisplay.innerHTML = favoriteMains.join(', ')
-    dessertsDisplay.innerHTML = favoriteDesserts.join(', ')
+function addFavorite() {
+    favoriteMeals.push(mealName[0].toUpperCase() + mealName.slice(1))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+function displayFavorites() {
+    favoritesNameDisplay.innerText = favoriteMeals.join(', ')
+}    
+        
+function deleteRecipe() {
+    removeInput.classList.toggle('hidden')
+    var lowerCaseInput = removeInput.value
+    var input = lowerCaseInput[0].toUpperCase() + lowerCaseInput.slice(1)
+    for (var i = 0; i < favoriteMeals.length; i++) {
+        if  (favoriteMeals[i] === input) {
+            favoriteMeals.splice(i, 1)
+            displayFavorites()
+            removeInput.value = ''
+        } 
+    }
+}

@@ -8,3 +8,175 @@ red - #ee5253
 
 */
 
+.add-a-recipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  padding: 7px;
+  display: flex;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
+  margin-block: 0px;
+  width: 50%;
+  height: 150px;
+}
+
+.clear {
+  background-color: #95a5a6;
+  box-sizing: border-box;
+  width: 65px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border-radius: 5px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-selection-title {
+  margin: 0px;
+  padding: 15px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #0fb9b1;
+  padding: 10px 50px;
+  display: flex;
+  align-items: space-between;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: stretch;
+  margin: 75px;
+}
+
+.star-label:after {
+  content: " *";
+  color: red;
+}
+
+.box-1 {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 50px;
+  width: 400px;
+  height: 400px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.error-message1 {
+  font-family: 'Roboto', sans-serif;
+  width: 300px;
+  color: red;
+}
+
+.box-2 {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 120px 20px;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: center;
+}
+
+svg {
+  width: 50%;
+  height: auto
+}
+
+.hidden {
+  display: none !important;
+}
+
+.box-3 {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 20px;
+  width: 400px;
+  height: 400px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.add-a-recipe-form {
+  background-color: rgba(225, 225, 225, .9);
+  padding: 15px 50px;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+#you-should-make {
+  font-size: small;
+  font-style: italic;
+}
+
+#dish {
+  font-size: xx-large;
+  margin-top: 5px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: ;
+}
+
+h1 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}

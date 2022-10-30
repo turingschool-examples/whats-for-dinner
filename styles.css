@@ -68,7 +68,6 @@ header {
     padding: 45px;
     height: 250px;
     width: 350px;
-    border: 0 solid;
     margin: 50px;
     display: flex;
     flex-direction: column;

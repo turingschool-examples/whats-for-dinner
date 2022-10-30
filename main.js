@@ -29,10 +29,10 @@ clearButton.addEventListener('click', clearDisplay);
 
 function showDish(event){
     event.preventDefault()
+    show(responseTitle);
     if(sideButton.checked === true){
         displayMeals.innerText = `
         ${sides[getRandomIndex(sides)]}!`;
-
      } else if (mainDishButton.checked === true){
         displayMeals.innerText = `
         ${mainDishes[getRandomIndex(mainDishes)]}!`;
@@ -46,10 +46,13 @@ function showDish(event){
          ${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`  ;
 
     } else {
+        responseTitle.classList.add("hidden")
         displayMeals.innerText = `ERROR: You must Choose a food!`;
+      
+       
     };
 
-    show(responseTitle);
+   
     show(clearButton);
     hide(potImage);
     show(displayMeals);

@@ -7,4 +7,97 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+h1 {
+    font-family:'Roboto', sans-serif; 
+    margin-top:12px;
+    display:inline;
+}
+h2 {
+    font-family:'Roboto', sans-serif; 
+    font-size: 16px;
+}
+h3 {
+    font-family:'Roboto', sans-serif; 
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+#food-item {
+    font-family:'Roboto', sans-serif; 
+    font-size: 14px;
+    font-weight:bold;
+    text-align: center;
+}
+
+body {
+ background-image: url("assets/burger-friends.jpg");
+ background-size: cover;
+ margin: 0em
+}
+nav {
+    background-color: #0fb9b1 ;
+    height: 50px;
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    padding:10px;
+    padding-left: 20px;
+    justify-content:space-between;
+    
+}
+#add {
+    background-color:rgba(225, 225, 225);
+    font-family:'Roboto', sans-serif;
+    border: 0px;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px;
+    height: fit-content;
+}
+#cook {
+    display: inline;
+    background-color: #0fb9b1;
+    border: 0px;
+    border-radius: 4px;
+    font-family:'Roboto', sans-serif;
+    font-size: 8px;
+    margin-top: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.svg {
+    background-color: rgba(225, 225, 225, .9);
+    height: 200px;
+    width: 300px;
+    padding: 50px;
+    display:inline;
+}
+ul {
+    background-color:rgba(225, 225, 225, .9);
+    height: 200px;
+    width: 300px;
+    padding: 50px;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family:'Roboto', sans-serif; 
+    font-size: 12px;
+    list-style: none;
+   
+}
+li{
+    margin-bottom: 7px;
+    margin-top: 1px;
+}
+div {
+    display: flex;
+    height: 80vh;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.star{
+    color:red;
+    }
 

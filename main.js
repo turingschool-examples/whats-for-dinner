@@ -7,7 +7,7 @@ var desserts = ["Apple pie", "Lemon Meringue Pie", "Black Forest Cake", "Banana 
 // var addARecipeButton = document.querySelector(".name");
 // var clearButton = document.querySelector();
 var sidesRadioButton = document.querySelector("#Side");
-var mainsRadioButton = document.querySelector("#Main Dish");
+var mainsRadioButton = document.querySelector("#Main");
 var dessertsRadioButton = document.querySelector("#Dessert");
 var entireMealRadioButton = document.querySelector("#Entire Meal");
 var letsCookButton = document.querySelector("#cookButton");
@@ -16,24 +16,20 @@ var letsCookButton = document.querySelector("#cookButton");
 sidesRadioButton.addEventListener('click', getRandomSide());
 mainsRadioButton.addEventListener('click', getRandomMain());
 dessertsRadioButton.addEventListener('click', getRandomDessert());
-
-// letsCookButton.addEventListener('click', showRandomDishText());
+letsCookButton.addEventListener('click', youShouldMake());
 
 //**;* ${Functions} *;**//
     //sides//
-function getRandomIndex(sides) {
-    return Math.floor(Math.random() * sides.length);
+function getRandomIndex(food) {
+    return Math.floor(Math.random() * food.length);
 }
 var randomSideNumber = getRandomIndex(sides);
 var randomSide = sides[randomSideNumber];
 
 function getRandomSide() {
-
+    return randomSide;
 }
     //mains//
-function getRandomIndex(mains) {
-        return Math.floor(Math.random() * mains.length);
-    }
 var randomMainNumber = getRandomIndex(mains);
 var randomMain = mains[randomMainNumber];
     
@@ -41,9 +37,6 @@ function getRandomMain() {
     
 }
     //desserts//
-function getRandomIndex(desserts) {
-        return Math.floor(Math.random() * desserts.length);
-    }
 var randomDessertNumber = getRandomIndex(desserts);
 var randomDessert = desserts[randomDessertNumber];
     
@@ -62,23 +55,25 @@ function getRandomDessert() {
     // }
 //**;* card flip *;**//
 var potIcon = document.querySelector('.front');
-var potContents = docuemnt.querySelector('.back');
+var potContents = document.querySelector('.back');
 
-// function showCookPotIcon() {
-// //add front
-//     potIcon.classList.remove('hidden');
-// //hide back
-//     potContents.classList.add('hidden');
-// }
+function showCookPotIcon() {
+//add front
+    potIcon.classList.remove('hidden');
+//hide back
+    potContents.classList.add('hidden');
+}
 
-// function showMealCardRandomText() {
-//     potIcon.classList.add('.hidden');
-//     potContents.classlist.remove('.hidden');
-// }
+function showMealCardRandomText() {
+    potIcon.classList.add('.hidden');
+    potContents.classlist.remove('.hidden');
+}
 //add back
 //hide front
+
+//**;* right card recipe details *;**//
+var youShouldText = document.querySelector('.message');
 function youShouldMake() {
-    //var thing to be interpolalted
-    //if event happens
-    //show interpolated text `You should make: ${}!` or use .innerText?
+    showMealCardRandomText();
+    youShouldText.innerText = `You should make: ${randomSide}!`
 }

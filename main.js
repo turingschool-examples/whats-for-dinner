@@ -62,7 +62,6 @@ function clearDisplay(){
   hide(clearButton);
   hide(responseTitle);
 }
-
 // ------------------ helper functions---------------
 
 function show(elements) {

@@ -8,6 +8,12 @@ red - #ee5253
 
 */
 
+
+.hidden {
+  display: none;
+}
+
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -82,6 +88,10 @@ background-color: rgba(225, 225, 225, .85);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 img {

@@ -3,8 +3,49 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  <header>
+      <nav>
+        <h1 class="main">What's for Dinner?</h1>
+        <button class="add-a-recipe-btn">add a recipe</button>
+      </nav> 
+  </header>
   <body>
-    
+    <section class="boxes">
+      <form class="boxes blocks input-block">
+        <h2 class="input-block-header">What are you looking for?<span class="astrix">*</span></h2> 
+        <div class="error-messages hidden">*this is a required field</div>
+        <fieldset class="radio-button-form">
+          <div class="selector">
+            <input type="radio" name="pick-one" value="side" id="side">
+            <label for="side">Side</label><br>
+          </div>
+          <div class="selector">
+            <input type="radio" name="pick-one" value="main-dish" id="main-dish">
+            <label for="main-dish">Main Dish</label><br>
+          </div>
+          <div class="selector">
+            <input type="radio" name="pick-one" value="dessert" id="dessert">
+            <label for="dessert">Dessert</label><br>
+          </div>
+          <div class="selector">
+            <input type="radio" name="pick-one" value="Entire Meal" id="entire-meal">
+            <label for="side">Entire Meal</label><br>
+          </div>
+        </fieldset>
+        <button class="lets-cook-btn">let's cook</button>
+      </form>
+      <section class="boxes blocks pot-block">
+        <img class="pot" src="assets/cookpot.svg" alt="steaming pot">
+        <div class="centered hidden">
+          <p><em>you should make</em></p>
+          <div class="suggestion"></div>
+        </div>
+        <p class='error-messages hidden'>*Whoops, you forgot to select an option!</p>
+        <div class="clear-btn-container hidden">
+          <button class="clear-btn">clear</button>
+        </div>
+      </section>
+    </section> 
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

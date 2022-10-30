@@ -1,51 +1,31 @@
-# What's for Dinner?
-
-## Overview
-
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
 
 # What's for Dinner? 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+Ever wish you had an additional party in your household whose sole job it is to decide what you eat for your next meal? This app is designed to save any cohabitating relationship the struggle of debating who is more "down for whatever", when it comes to finalizing a meal decision. We pick for you!
+
+All a user has to do is select what type of dish they need to make and the app will randomly select and deliver the name of a recipe. Choose from side dishes, main dishes, desserts, or an entire meal!
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+Clone this repository to a local machine and open in a code editor. User terminal or other method of opening index.html in a live browser and find out what you're having for dinner tonight!
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![Screen Shot 2022-10-29 at 6 02 11 PM](https://user-images.githubusercontent.com/101011015/198879119-69433a5c-2f76-43d6-a784-34e002c149e1.png)
+
+
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+This project was completed as a solo project in week 3 of Module 1. The basic HTML and JavaScript functionality took a few hours, with the CSS manipulation taking up just as much time as those two combined.
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+Kirsten Smith: 
+https://github.com/smithkirsten
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+  + Use HTML and CSS to match a provided comp.
+  + Strengthen understanding of the DOM vs. the Data Model.
+  + Strengthen ability to listen and react to user input.
+  + Introduce error handling.
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+Successes includes: easily identifying where I could integrate error handling and entire meal presentation into code, as I was pseudocoding it out. Struggles mostly pertained to CSS and trying to orient elements correctly without pushing each other off the page.

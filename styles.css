@@ -13,6 +13,25 @@ red - #ee5253
   display: none;
 }
 
+.login-button {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  font-size: .90em;
+}
+
+label {
+  font-size: 24px;
+  margin-left: 30px;
+}
+
+.user-name {
+   font-size: 18px;
+   border-radius: 5px;
+}
+
 
 nav {
   display: flex;

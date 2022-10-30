@@ -52,8 +52,10 @@ main {
     margin: 5%;
     margin-top: 60px;
     padding: 5em;
-    width: 650px;
-    height: 540px;
+    /* width: 650px; */
+    /* height: 540px; */
+    width: 600px;
+    height: 500px;
     background-color: rgba(225, 225, 225, .9);
     font-family: 'Roboto', sans-serif;
 }
@@ -101,6 +103,10 @@ form {
     align-items: center;
 }
 
+.cookpot {
+    height: 250px;
+    width: 250px;
+}
 .button1 {
     background-color: rgba(225, 225, 225, .9);
     /* padding: 1em; */
@@ -109,6 +115,6 @@ form {
     word-wrap: break-word;
 }
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+}

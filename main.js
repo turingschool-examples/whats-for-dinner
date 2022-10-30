@@ -1,9 +1,9 @@
-// --------------------DishVarieties-------------------
-var sides = ['Miso Glazed Carrots', 'Coleslaw', 'Garden Salad', 'Crispy Potatoes', 'Sweet Potato Tots', 'Coconut Rice', 'Caeser Salad', 'Shrimp Summer Rolls', 'Garlic Butter Mushrooms', 'Hush Puppies']
+// --------------------DishVarieties/Arrays-------------------
+var sides = ['Miso Glazed Carrots', 'Coleslaw', 'Garden Salad', 'Crispy Potatoes', 'Sweet Potato Tots', 'Coconut Rice', 'Caeser Salad', 'Shrimp Summer Rolls', 'Garlic Butter Mushrooms', 'Hush Puppies'];
 
-var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana Bread', 'Peach Cobbler', 'Cheesecake', 'Funfetti Cake', 'Baklava', 'Flan', 'Macarons', 'Macaroons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie', 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs']
+var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana Bread', 'Peach Cobbler', 'Cheesecake', 'Funfetti Cake', 'Baklava', 'Flan', 'Macarons', 'Macaroons', 'Chocolate Cupcakes', 'Pavlova', 'Pumpkin Pie', 'Key Lime Pie', 'Tart Tatin', 'Croissants', 'Eclairs'];
 
-var mainDishes =['Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai Yellow Curry', 'Bibimbap','Chicken Parmesean', 'Butternut Squash Soup', 'BBQ Chicken Burgers', 'Ramen', 'Empanadas', 'Chicken Fried Rice', 'Sheet Pan Fajitas', 'Margarita Pizza']
+var mainDishes =['Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai Yellow Curry', 'Bibimbap','Chicken Parmesean', 'Butternut Squash Soup', 'BBQ Chicken Burgers', 'Ramen', 'Empanadas', 'Chicken Fried Rice', 'Sheet Pan Fajitas', 'Margarita Pizza'];
 
 //---------------------QuerySelectors-----------------
 var sideButton = document.querySelector("#button-one");
@@ -13,16 +13,12 @@ var entireMealButton = document.querySelector("#button-four");
 
 var letsCookButton = document.querySelector(".lets-cook-button");
 var addRecipeButton = document.querySelector(".add-recipe-button");
+var clearButton = document.querySelector(".clear-button")
 
 var potImage = document.querySelector(".pot-image");
 var responseBox = document.querySelector(".box-three");
-var clearButton = document.querySelector(".clear-button")
-var displayMeals = document.querySelector(".display-meals")
-var responseTitle = document.querySelector(".response-title")
-
-
-// other global variables-----
-
+var displayMeals = document.querySelector(".display-meals");
+var responseTitle = document.querySelector(".response-title");
 
 // ----------------------Event Listeners------------
 
@@ -35,49 +31,46 @@ function showDish(event){
     event.preventDefault()
     if(sideButton.checked === true){
         displayMeals.innerText = `
-        ${sides[getRandomIndex(sides)]}!`
+        ${sides[getRandomIndex(sides)]}!`;
+
      } else if (mainDishButton.checked === true){
         displayMeals.innerText = `
-        ${mainDishes[getRandomIndex(mainDishes)]}!`
+        ${mainDishes[getRandomIndex(mainDishes)]}!`;
+
      } else if (dessertButton.checked === true){
         displayMeals.innerText = `
-        ${desserts[getRandomIndex(desserts)]}!`
-        // console.log(desserts[getRandomIndex(desserts)])
+        ${desserts[getRandomIndex(desserts)]}!`;
+
      } else if (entireMealButton.checked === true){
         displayMeals.innerText = `
-         ${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`   
-    } else {
-        displayMeals.innerText = `ERROR: You must Choose a food!`
-    }
-    show(responseTitle)
-    show(clearButton)
-    hide(potImage)
-    show(displayMeals)
-}
+         ${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`  ;
 
+    } else {
+        displayMeals.innerText = `ERROR: You must Choose a food!`;
+    };
+
+    show(responseTitle);
+    show(clearButton);
+    hide(potImage);
+    show(displayMeals);
+};
 
 function clearDisplay(){
-    // showDish()
-  show(responseBox)
-  show(potImage)
-  hide(displayMeals)
-  hide(clearButton)
-  hide(responseTitle)
+  show(responseBox);
+  show(potImage);
+  hide(displayMeals);
+  hide(clearButton);
+  hide(responseTitle);
 }
 
-// function displayRecipe(){
-//     showDish()
-//     hide(potImage)
-//     show(clearButton)
-// }
-    
-// ------------------
+// ------------------ helper functions---------------
+
 function show(elements) {
-    elements.classList.remove('hidden')
+    elements.classList.remove('hidden');
   };
   
   function hide(elements) {
-    elements.classList.add('hidden')
+    elements.classList.add('hidden');
   };
 
 function getRandomIndex(array) {

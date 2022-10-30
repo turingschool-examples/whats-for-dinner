@@ -5,6 +5,11 @@ var radioButtons = document.querySelectorAll('input[name="choose-one"]')
 var favoriteButton = document.querySelector('#favorite-button')
 var viewFavoritesButton = document.querySelector('#view-favorites')
 var dishOption = document.querySelector('.dish-option')
+var selectBox = document.querySelector('.select-box')
+var dishBox = document.querySelector('.dish-box')
+var favoritesWindow = document.querySelector('.favorites-screen')
+var savedFavoritesSection = document.querySelector('.saved-favorites')
+var returnToMainButton = document.querySelector('.return-main')
 
 var sides = [
   'Fresh green beans',
@@ -46,6 +51,9 @@ letsCookButton.addEventListener('click', changeDisplay)
 chosenOption.addEventListener('click', function(event){
   saveToFavorites(event)
 })
+viewFavoritesButton.addEventListener('click', showFavoritesWindow)
+viewFavoritesButton.addEventListener('click', showSavedFavorites)
+returnToMainButton.addEventListener('click', returnToMain)
 
 function getRandomIndex(array) {
   var newRandomIndex = Math.floor(Math.random() * array.length);
@@ -92,4 +100,27 @@ function saveToFavorites(event){
     favorites.push(event.target.previousElementSibling.innerText)
     alert('Saved to Favorites')
   }
+}
+
+function showFavoritesWindow(){
+  selectBox.classList.add('hidden')
+  dishBox.classList.add('hidden')
+  viewFavoritesButton.classList.add('hidden')
+  favoritesWindow.classList.remove('hidden')
+}
+
+function showSavedFavorites(){
+  savedFavoritesSection.innerHTML = ''
+  for (var i = 0; i < favorites.length; i++){
+    savedFavoritesSection.innerHTML += `
+     <h2>${favorites[i]}</h2>
+    `
+  }
+}
+
+function returnToMain(){
+  selectBox.classList.remove('hidden')
+  dishBox.classList.remove('hidden')
+  viewFavoritesButton.classList.remove('hidden')
+  favoritesWindow.classList.add('hidden')
 }

@@ -1,5 +1,5 @@
-
-var sides = [
+var meals = {
+side: [
     'Miso Glazed Carrots',
     'Coleslaw',
     'Garden Salad',
@@ -9,9 +9,8 @@ var sides = [
     'Caeser Salad',
     'Shrimp Summer Rolls',
     'Garlic Butter Mushrooms',
-    'Hush Puppies']
-
-var mains = [
+    'Hush Puppies'],
+main:[
     'Spaghetti and Meatballs',
     'Pineapple Chicken',
     'Shakshuka',
@@ -24,9 +23,8 @@ var mains = [
     'Empanadas',
     'Chicken Fried Rice',
     'Sheet Pan Fajitas',
-    'Margarita Pizza']
-
-var desserts = [
+    'Margarita Pizza'],
+dessert:[
     'Apple Pie',
     'Lemon Meringue Pie',
     'Black Forest Cake',
@@ -45,7 +43,7 @@ var desserts = [
     'Tart Tatin',
     'Croissants',
     'Eclairs']
-
+}
 var addARecipeButton =document.querySelector('.add-a-recipe')
 var sideRadioButton = document.querySelector('#side')
 var mainRadioButton = document.querySelector('#main-dish')
@@ -69,33 +67,28 @@ addNewRecipeButton.addEventListener('click', showNewlyAddedRecipe)
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
-
 function showAddRecipeForm() {
     addARecipeForm.classList.remove('hidden')
 }
-
+function isRecipeTypeValid(recipeType) {
+    return Object.keys(meals).includes(recipeType)
+}
 function showNewlyAddedRecipe() {
     clearErrorMessage()
     showSugestionBox(true)
     var newRecipeType = document.getElementById('add-recipe-type').value    
     var newRecipeName = document.getElementById('add-recipe-name').value
-    dish.innerText = newRecipeName
-    if(newRecipeType === 'main') {
-        mains.push(newRecipeName)
-    } else if(newRecipeType === 'side') {
-        sides.push(newRecipeName)
-    } else if(newRecipeType === 'dessert') {
-        desserts.push(newRecipeName)
+    if(isRecipeTypeValid(newRecipeType)) {
+        dish.innerText = newRecipeName
+        meals[newRecipeType].push(newRecipeName) 
     } else {
         clearButtonClicked()
-        showErrorMessage1()
+        showErrorMessage()
     }
 }
-
 function clearButtonClicked() {
     showSugestionBox(false)
 }
-
 function showSugestionBox(show) {
     if(show === true) {
         mealSuggestionBox.classList.remove('hidden')
@@ -119,10 +112,10 @@ function showRandomMealType(event) {
         showRandomEntireMeal()
     } else {
         clearButtonClicked()
-        showErrorMessage1()
+        showErrorMessage()
     }
 }
-function showErrorMessage1() {
+function showErrorMessage() {
     errorMessage.classList.remove('hidden')
     addARecipeForm.classList.add('hidden')
 }
@@ -130,32 +123,23 @@ function clearErrorMessage() {
     errorMessage.classList.add('hidden')
     addARecipeForm.classList.add('hidden')
 }
+function getRandomItem (itemList) {
+    var index = getRandomIndex(itemList)
+    return itemList[index]
+}
 function showRandomSide() {
-    dish.innerText = ""
-    var sideRadioButton = getRandomIndex(sides)
-    side = sides[sideRadioButton]
-    dish.innerText = `${side}!`
+    dish.innerText = `${getRandomItem(meals.side)}!`
 }
 function showRandomMain() {
-    dish.innerText = ""
-    var mainRadioButton = getRandomIndex(mains)
-    main = mains[mainRadioButton]
-    dish.innerText = `${main}!`
+    dish.innerText = `${getRandomItem(meals.main)}!`
 }
 function showRandomDessert() {
-    dish.innerText = ""
-    var dessertRadioButton = getRandomIndex(desserts)
-    dessert = desserts[dessertRadioButton]
-    dish.innerText = `${dessert}!`
+    dish.innerText = `${getRandomItem(meals.dessert)}!`
 }
 
 function showRandomEntireMeal() {
-    dish.innerText = ""
-    var sideRadioButton = getRandomIndex(sides)
-    side = sides[sideRadioButton]
-    var mainRadioButton = getRandomIndex(mains)
-    main = mains[mainRadioButton]
-    var dessertRadioButton = getRandomIndex(desserts)
-    dessert = desserts[dessertRadioButton]
+    var side = getRandomItem(meals.side)
+    var main = getRandomItem(meals.main)
+    var dessert = getRandomItem(meals.dessert)
     dish.innerText = `${main} with a side of ${side} and ${dessert} for dessert!`
 }

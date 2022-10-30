@@ -150,7 +150,7 @@ svg {
 
 .add-a-recipe-form {
   background-color: rgba(225, 225, 225, .9);
-  margin-top: 250px;
+  /* margin-top: 250px; */
   padding: 15px 50px;
   display: flex;
   font-family: 'Roboto', sans-serif;

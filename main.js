@@ -3,7 +3,6 @@ var sides = ["Miso Glazed Carrots", "Coleslaw", "Garden Salad", "Crispy Potatoes
 var mains = ["Spaghetti and Meatballs", "Pineapple Chicken", "Shakshuka", "Thai Yellow Curry", "Bibimbap", "Chicken Parmesean", "Butternut Squash Soup", "BBQ Chicken Burgers", "Ramen", "Empenadas", "Chicken Fried Rice", "Cheet Pan Fajitas", "Margarita Pizza"];
 var desserts = ["Apple pie", "Lemon Meringue Pie", "Black Forest Cake", "Banana Bread", "Peach Cobbler", "Cheesecake", "Funfetti Cake", "Baklava", "Flan", "Macarons", "Chocolate Cupcakes", "Pavlova", "Pumpkin Pie", "Key Lime Pie", "Tart Tatin", "Croissants", "Eclairs"];
 
-//**;* ${Query Selectors[Methods Actually] & Event Listeners} *;**/
 //**;* ${Query Selectors} *;**/
 var addARecipeButton = document.querySelector(".name");
 var clearButton = document.querySelector("#clear");
@@ -20,25 +19,13 @@ var potIcon = document.querySelector('.front');
 var potContents = document.querySelector('.back');
 
 // **;* ${Event Listeners} *;**//
-// sidesRadioButton.addEventListener('click', getRandomSide);
-// mainsRadioButton.addEventListener('click', getRandomMain);
-// dessertsRadioButton.addEventListener('click', getRandomDessert);
 letsCookButton.addEventListener('click', function() {
     var menuItemString = whichButton();
     insertMealToDOM(menuItemString);
     showMealCardRandomText();
 });
 
-// document.getElementById("menuItem").addEventListener("click", whichButton);
 document.getElementById("cookbutton").addEventListener("click", youShouldMake);
-//
-//grab radio button result when 'cookbutton' clicked (don't need to do anything, no eventListener)
-//gather the value with querySelect
-
-//pull random variable for chosen array-use randomIndex to get random food result 
-//push/update data model(kinda)
-//update DOM (.innerText)
-//display (toggle hidden)
 
 function getRandomIndex(food) {
     return Math.floor(Math.random() * food.length);
@@ -64,7 +51,19 @@ function whichButton() {
         console.log(chosenRandomDessert);
         return chosenRandomDessert;
     }
+    if (entireMealRadioButton.checked === true) {
+        var sideIndexNum = getRandomIndex(sides);
+        var mainIndexNum = getRandomIndex(mains);
+        var dessertIndexNum = getRandomIndex(desserts);
+        var chosenRandomSide = sides[sideIndexNum];
+        var chosenRandomMain = mains[mainIndexNum];
+        var chosenRandomDessert = desserts[dessertIndexNum];
+        return `${chosenRandomMain} with a side of ${chosenRandomSide} and ${chosenRandomDessert} for dessert!`;
+    }
 }
+
+
+
 
 function insertMealToDOM(menuItemString){
     youShouldText.innerText = menuItemString;

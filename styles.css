@@ -91,11 +91,6 @@ form {
     padding-bottom: 50px;
 }
 
-#cookbutton {
-    background-color: #0fb9b1;
-    font-family: 'Roboto', sans-serif;
-}
-
 .right {
     display: flex;
     align-content: center;
@@ -107,12 +102,62 @@ form {
     height: 250px;
     width: 250px;
 }
+
+.helpful {
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    font-style: italic;
+}
+
+.helpful,
+#message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#message {
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+
+}
 .button1 {
     background-color: rgba(225, 225, 225, .9);
     /* padding: 1em; */
     /* border-radius: 2px; */
     white-space: normal;
     word-wrap: break-word;
+    border-radius: 5px;
+}
+
+#clear {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #95a5a6;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.button-solid {
+    border: none;
+    outline: none;
+}
+
+#cookbutton {
+    border: blue;
+    outline: blue;
+    background-color: #0fb9b1;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    font-size: large;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
 }
 
 .hidden {

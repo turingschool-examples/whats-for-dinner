@@ -6,7 +6,6 @@ var desserts = ['Apple Pie', 'Lemon Meringue Pie', 'Black Forest Cake', 'Banana 
 var mainDishes =['Spaghetti and Meatballs', 'Pineapple Chicken', 'Shakshuka', 'Thai Yellow Curry', 'Bibimbap','Chicken Parmesean', 'Butternut Squash Soup', 'BBQ Chicken Burgers', 'Ramen', 'Empanadas', 'Chicken Fried Rice', 'Sheet Pan Fajitas', 'Margarita Pizza']
 
 //---------------------QuerySelectors-----------------
-var allRadioButtons = document.querySelectorAll('input[name=radio-button]')
 var sideButton = document.querySelector("#button-one");
 var mainDishButton = document.querySelector("#button-two");
 var dessertButton = document.querySelector("#button-three");
@@ -15,8 +14,12 @@ var entireMealButton = document.querySelector("#button-four");
 var letsCookButton = document.querySelector(".lets-cook-button");
 var addRecipeButton = document.querySelector(".add-recipe-button");
 
-var potImage = document.querySelector("#pot-image");
+var potImage = document.querySelector(".pot-image");
 var responseBox = document.querySelector(".box-three");
+var clearButton = document.querySelector(".clear-button")
+var displayMeals = document.querySelector(".display-meals")
+var responseTitle = document.querySelector(".response-title")
+
 
 // other global variables-----
 
@@ -24,48 +27,58 @@ var responseBox = document.querySelector(".box-three");
 // ----------------------Event Listeners------------
 
 letsCookButton.addEventListener('click', showDish);
+clearButton.addEventListener('click', clearDisplay);
 
 // ---------------------Functions----------------------
 
 function showDish(event){
     event.preventDefault()
     if(sideButton.checked === true){
-        responseBox.innerHTML= `
-        <section class="response-location">
-         <p class="response-title together">You should make: </p>
-         <p class="dish-response together">${sides[getRandomIndex(sides)]}</p>
-         <button class="clear-button">Clear</button>`
+        displayMeals.innerText = `
+        ${sides[getRandomIndex(sides)]}!`
      } else if (mainDishButton.checked === true){
-        responseBox.innerHTML= `
-        <section class="response-location">
-          <p class="response-title together">You should make: </p>
-          <p class="dish-response together">${mainDishes[getRandomIndex(mainDishes)]}</p>
-          <button class="clear-button">Clear</button>`
-        console.log(mainDishes[getRandomIndex(mainDishes)])
+        displayMeals.innerText = `
+        ${mainDishes[getRandomIndex(mainDishes)]}!`
      } else if (dessertButton.checked === true){
-        responseBox.innerHTML= `
-        <section class="response-location">
-            <p class="response-title together">You should make: </p>
-            <p class="dish-response together">${desserts[getRandomIndex(desserts)]}</p>
-            <button class="clear-button">Clear</button>`
+        displayMeals.innerText = `
+        ${desserts[getRandomIndex(desserts)]}!`
         // console.log(desserts[getRandomIndex(desserts)])
      } else if (entireMealButton.checked === true){
-        responseBox.innerHTML= `
-         <section class="response-location">
-            <p class="response-title together">You should make: </p>
-             <p class="dish-response">${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!</p>
-                <button class="clear-button together">Clear</button>`
-    }  
+        displayMeals.innerText = `
+         ${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`   
+    } else {
+        displayMeals.innerText = `ERROR: You must Choose a food!`
+    }
+    show(responseTitle)
+    show(clearButton)
+    hide(potImage)
+    show(displayMeals)
 }
-        // I can hide the pot and show within this function
 
-        // These maybe useful for our needed functions.
-        // sideButton.checked, dessertButton.checked, mainDishesButton.checked, allRadioButtons.checked 
-        // sideButton.value, dessertButton.value, mainDishesButton.value,allRadioButtons.value
-        // 
-// function displayDish(){
-//  if()
+
+function clearDisplay(){
+    // showDish()
+  show(responseBox)
+  show(potImage)
+  hide(displayMeals)
+  hide(clearButton)
+  hide(responseTitle)
+}
+
+// function displayRecipe(){
+//     showDish()
+//     hide(potImage)
+//     show(clearButton)
 // }
+    
+// ------------------
+function show(elements) {
+    elements.classList.remove('hidden')
+  };
+  
+  function hide(elements) {
+    elements.classList.add('hidden')
+  };
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);

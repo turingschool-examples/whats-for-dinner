@@ -25,6 +25,11 @@ header {
 
 }
 
+.pot-image {
+    height: 200px;
+    width: 100px;
+}
+
 .add-recipe-button {
     background-color: lightgray;
     border-color: lightgray;
@@ -46,7 +51,6 @@ header {
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-
 }
 
 .box-one {
@@ -57,8 +61,6 @@ header {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 .box-two {
@@ -128,7 +130,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-style: italic;
     font-size: medium;
-    padding-bottom: 20px;
+    padding-top: 80px;
 
    
 }
@@ -144,22 +146,25 @@ header {
 
 }
 
-/* .together {
-    padding-left: 100px;
-    display: contents;
-    
-  
-} */
+.clear-button-box{
+    width: 40vw;
+    height: 20vh;
+    display: flex;
+    padding-right: 150px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
 
 .clear-button {
     color: whitesmoke;
     display: flex;
     font-family: 'Roboto', sans-serif;
     background-color: darkgray;
+   
     border: none;
     border-radius: 10px;
     height: 30px;
-    width: 80px;
+    width: 100px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;

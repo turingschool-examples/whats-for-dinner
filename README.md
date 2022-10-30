@@ -18,14 +18,14 @@ Clone this repository to a local machine and open in a code editor. User termina
 This project was completed as a solo project in week 3 of Module 1. The basic HTML and JavaScript functionality took a few hours, with the CSS manipulation taking up just as much time as those two combined.
 
 ### Contributors:
-Kirsten Smith
+Kirsten Smith: 
 https://github.com/smithkirsten
 
 ### Learning Goals:
-+Use HTML and CSS to match a provided comp
-+Strengthen understanding of the DOM vs. the Data Model
-+Strengthen ability to listen and react to user input
-+Introduce error handling
+  + Use HTML and CSS to match a provided comp.
+  + Strengthen understanding of the DOM vs. the Data Model.
+  + Strengthen ability to listen and react to user input.
+  + Introduce error handling.
 
 ### Wins + Challenges:
 Successes includes: easily identifying where I could integrate error handling and entire meal presentation into code, as I was pseudocoding it out. Struggles mostly pertained to CSS and trying to orient elements correctly without pushing each other off the page.

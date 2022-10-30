@@ -133,4 +133,12 @@ function reset() {
     potImage.classList.remove('pot-error');
     centered.classList.add('hidden');
     clearButtonContainer.classList.add('hidden');
+    clearButtons();
+}
+
+function clearButtons() {
+    sideButton.checked = false;
+    mainButton.checked = false;
+    dessertButton.checked = false;
+    entireMealButton.checked = false;
 }

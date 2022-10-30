@@ -13,6 +13,14 @@ red - #ee5253
   display: none;
 }
 
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-button {
   margin-top: 35px;
   margin-bottom: 35px;
@@ -32,6 +40,13 @@ label {
    border-radius: 5px;
 }
 
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 25px;
+}
 
 
 nav {
@@ -39,8 +54,6 @@ nav {
   justify-content: space-between;
   background-color: #0fb9b1;
 }
-
-
 
 
 main {
@@ -51,7 +64,7 @@ main {
   margin: 50px;
 }
 
-h1, button, h2, label {
+h1, button, h2, label, h3, h4 {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -117,6 +130,7 @@ background-color: rgba(225, 225, 225, .85);
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 
 img {
   width: 150px;

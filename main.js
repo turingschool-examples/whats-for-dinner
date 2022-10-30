@@ -2,8 +2,9 @@ var letsCookButton = document.querySelector('.cook-button')
 var potImage = document.querySelector('.image')
 var chosenOption = document.querySelector('.chosen-dish')
 var radioButtons = document.querySelectorAll('input[name="choose-one"]')
-var dishOption = document.querySelector('.dish-option')
 var favoriteButton = document.querySelector('#favorite-button')
+var viewFavoritesButton = document.querySelector('#view-favorites')
+var dishOption = document.querySelector('.dish-option')
 
 var sides = [
   'Fresh green beans',
@@ -38,9 +39,13 @@ var desserts = [
   'Banana pudding',
 ]
 
+var favorites = [];
+
 letsCookButton.addEventListener('click', generateRandomOption)
 letsCookButton.addEventListener('click', changeDisplay)
-favoriteButton.addEventListener('click', saveToFavorites)
+chosenOption.addEventListener('click', function(event){
+  saveToFavorites(event)
+})
 
 function getRandomIndex(array) {
   var newRandomIndex = Math.floor(Math.random() * array.length);
@@ -50,7 +55,7 @@ function getRandomIndex(array) {
 function changeDisplay(){
   potImage.classList.add('hidden')
   chosenOption.classList.remove('hidden')
-  favoriteButton.classList.remove('hidden')
+  viewFavoritesButton.classList.remove('hidden')
 }
 
 function generateRandomOption(){
@@ -65,16 +70,26 @@ function generateRandomOption(){
     chosenOption.innerHTML +=
     `<em class="you-should-make">You Should Make:</em>
      <h1 class="dish-option">${getRandomIndex(sides)}!</h1>
+     <button class="save-dish">Favorite</button>
     `
   } else if (selectedDish === 'main-dishes'){
     chosenOption.innerHTML +=
     `<em class="you-should-make">You Should Make:</em>
      <h1 class="dish-option">${getRandomIndex(mainDishes)}!</h1>
+     <button class="save-dish">Favorite</button>
     `
   } else if (selectedDish === 'dessert'){
     chosenOption.innerHTML +=
     `<em class="you-should-make">You Should Make:</em>
      <h1 class="dish-option">${getRandomIndex(desserts)}!</h1
+     <button class="save-dish">Favorite</button>
     `
+  }
+}
+
+function saveToFavorites(event){
+  if (event.target.classList.contains('save-dish')){
+    favorites.push(event.target.previousElementSibling.innerText)
+    alert('Saved to Favorites')
   }
 }

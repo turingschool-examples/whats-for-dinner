@@ -10,6 +10,7 @@ var dishBox = document.querySelector('.dish-box')
 var favoritesWindow = document.querySelector('.favorites-screen')
 var savedFavoritesSection = document.querySelector('.saved-favorites')
 var returnToMainButton = document.querySelector('.return-main')
+var mainWindow = document.querySelector('.main')
 
 var sides = [
   'Fresh green beans',
@@ -89,7 +90,7 @@ function generateRandomOption(){
   } else if (selectedDish === 'dessert'){
     chosenOption.innerHTML +=
     `<em class="you-should-make">You Should Make:</em>
-     <h1 class="dish-option">${getRandomIndex(desserts)}!</h1
+     <h1 class="dish-option">${getRandomIndex(desserts)}!</h1>
      <button class="save-dish">Favorite</button>
     `
   }
@@ -107,13 +108,14 @@ function showFavoritesWindow(){
   dishBox.classList.add('hidden')
   viewFavoritesButton.classList.add('hidden')
   favoritesWindow.classList.remove('hidden')
+  mainWindow.classList.remove('main')
 }
 
 function showSavedFavorites(){
   savedFavoritesSection.innerHTML = ''
   for (var i = 0; i < favorites.length; i++){
     savedFavoritesSection.innerHTML += `
-     <h2>${favorites[i]}</h2>
+     <h2 class="single-dish">${favorites[i]}</h2>
     `
   }
 }
@@ -123,4 +125,5 @@ function returnToMain(){
   dishBox.classList.remove('hidden')
   viewFavoritesButton.classList.remove('hidden')
   favoritesWindow.classList.add('hidden')
+  mainWindow.classList.add('main')
 }

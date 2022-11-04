@@ -134,7 +134,7 @@ header {
     display: flex;
     font-family: 'Roboto', sans-serif;
     background-color: darkgray;
-   
+   border-color: #0fb9b1;
     border: none;
     border-radius: 10px;
     height: 30px;

@@ -4,7 +4,18 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
 
+.main{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    justify-content: space-between;
+}
+
+.box{
+    border: 1px #ccc solid;
+    padding: 10%;
+    flex-basis: 13%
+}

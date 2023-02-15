@@ -14,6 +14,7 @@ body {
 
 header {
     background-color: #0fb9b1;
+    justify-content: space-between;
 }
 .main {
     display: flex;
@@ -21,12 +22,19 @@ header {
     justify-content: space-around;
     flex-wrap: wrap
 }
-#cook-btn{
-    background-color:#0fb9b1;
+
+.button{
     box-shadow: none;
     border-radius: 0px;
     border: 0
 }
+/* .add-recipe{
+    background-color: #95a5a6;
+} */
+.lets-cook{
+    background-color:#0fb9b1;
+}
+
 .box{
 background-color: rgba(225, 225, 225, .9);
 padding: 3%;
@@ -34,6 +42,16 @@ flex-basis: 20%;
 /* justify-content: center */
 
 }
+
+span{
+    color:red
+}
+.box ul li {
+    list-style-type:none;
+    align-content: space-evenly
+}
+
+
 .display{
     justify-content: center;
     flex-direction: center;

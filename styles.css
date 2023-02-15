@@ -2,9 +2,62 @@
 
 COLORS
 teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
+
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+body {
+    background-image: url("./assets/burger-friends.jpg");
+    background-size:contain;
+    font-family: 'Roboto', sans-serif;
+}
 
+header {
+    background-color: #0fb9b1;
+    justify-content: space-between;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap
+}
+
+.button{
+    box-shadow: none;
+    border-radius: 0px;
+    border: 0
+}
+/* .add-recipe{
+    background-color: #95a5a6;
+} */
+.lets-cook{
+    background-color:#0fb9b1;
+}
+
+.box{
+background-color: rgba(225, 225, 225, .9);
+padding: 3%;
+flex-basis: 20%;
+/* justify-content: center */
+
+}
+
+span{
+    color:red
+}
+.box ul li {
+    list-style-type:none;
+    align-content: space-evenly
+}
+
+
+.display{
+    justify-content: center;
+    flex-direction: center;
+    flex-basis: 30%
+}
+
+.hidden{
+    display:none
+}

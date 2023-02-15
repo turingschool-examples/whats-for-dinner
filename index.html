@@ -1,10 +1,47 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header class="">
+    <h3> What's for Dinner? </h3>
+    <!-- <button class="">ADD A RECIPE</button> -->
+  </header>
+  <section class="">
+    <article class="column">
+      <h2>What are you looking for?<!--asterick--></h2>
+      <div>
+        <input type="radio" id="side" value="side" checked>
+        <label for="side">Side</label>
+      </div>
+      <div>
+        <input type="radio" id="mainDish" value="mainDish" checked>
+        <label for="mainDish">Main Dish</label>
+      </div>
+      <div>
+        <input type="radio" id="dessert" value="dessert" checked>
+        <label for="dessert">Dessert</label>
+      </div>
+      <div>
+        <input type="radio" id="entireMeal" value="entireMeal" checked>
+        <label for="dessert">Entire Meal</label>
+      </div>
+      <button class="button-letsCook">LET'S COOK!</button>
+    </article>
+    <article class="column hidden" src="./assets/cookpot.svg">
+      <img>
+    </article>
+    <article class="column">
+      <h4>You should make:</h4>
+      <h1></h1>
+      <button class="">CLEAR</button>
+    </article>
+  </section>
+</body>
+<script type="text/javascript" src="main.js"></script>
+
 </html>

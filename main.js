@@ -80,40 +80,43 @@ letsCookBtn.addEventListener('click', giveMakeSuggestion)
 //1. randomize index number param - array
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
-  }
+}
 //2. radio button selection
 function findMealType() {
     var mealType;
-    for (var radioButton of radioBtns) {
-        if (radioButton.checked) {
-            mealType = radioButton.value
+    for (var i = 0; i < radioBtns.length; i++) {
+        if (radioBtns[i].value) {
+            mealType = radioBtns[i].value
         }
-    } 
-     return mealType
+        console.log(mealType)
+        return mealType
+    }
 }
 
 // 3. Display Selection
-function displayShouldMake(){
+function displayShouldMake() {
     crockpotDisplay.classList.add('hidden')
     makeDisplay.classList.remove('hidden')
 }
 
-function displayCrockpot(){
+function displayCrockpot() {
     crockpotDisplay.classList.remove('hidden')
     makeDisplay.classList.add('hidden')
-} 
+}
 
 // ** Populate you should make
 function giveMakeSuggestion() {
     var selectedType = findMealType()
-    
-    if (selectedType === 'dessert'){
+
+    if (selectedType === 'dessert') {
         makeText.innerText = `${desserts[getRandomIndex(desserts)]}`
-    } else if (selectedType === 'side'){
+    } else if (selectedType === 'side') {
         makeText.innerText = `${randomSelection = sides[getRandomIndex(sides)]}`
-    } else if (selectedType === 'main-dish'){
+    } else if (selectedType === 'main-dish') {
         makeText.innerHTML = `${mainDishes[getRandomIndex(mainDishes)]}`
+    } else {
+        makeText.innerHTML = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${randomSelection = sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
     }
     displayShouldMake()
-  
+
 }

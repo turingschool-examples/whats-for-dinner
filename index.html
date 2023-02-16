@@ -1,10 +1,37 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>What's for Dinner?</title>
+</head>
+
+<body>
+  <header>
+    <h1>What's for Dinner?</h1>
+    <button class="add-recipe">ADD A RECIPE</button>
+  </header>
+  <section class="left-box">
+    <h2>What are you looking for?</h2>
+    <div id="choose-course">
+      <input type="radio" name="one" id="side-button">
+      <label for="side">Side</label><br>
+      <input type="radio" name="one" id="entree-button">
+      <label for="entree">Entree</label><br>
+      <input type="radio" name="one" id="dessert-button">
+      <label for="dessert">Dessert</label><br>
+      <input type="radio" name="one" id="entire-meal-button">
+      <label for="entire-meal">Entire Meal</label><br>
+    </div>
+    <button type="submit" class="cook-button">LET'S COOK</button>
+  </section>
+  <section class="right-box">
+    <h2>you should make:</h2>
+    <br>
+    <h3>Food!
+    </h3>
+    <button class="clear">CLEAR</button>
+  </section>
+</body>
+<script type="text/javascript" src="main.js"></script>
 </html>

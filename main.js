@@ -88,8 +88,8 @@ function findMealType() {
         if (radioButton.checked) {
             mealType = radioButton.value
         }
-    } console.log(mealType)
-    return mealType
+    } 
+     return mealType
 }
 
 // 3. Display Selection
@@ -106,14 +106,14 @@ function displayCrockpot(){
 // ** Populate you should make
 function giveMakeSuggestion() {
     var selectedType = findMealType()
-    var randomSelection;
-
+    
     if (selectedType === 'dessert'){
-        var index = getRandomIndex(desserts)
-        randomSelection = desserts[index]
+        makeText.innerText = `${desserts[getRandomIndex(desserts)]}`
+    } else if (selectedType === 'side'){
+        makeText.innerText = `${randomSelection = sides[getRandomIndex(sides)]}`
+    } else if (selectedType === 'main-dish'){
+        makeText.innerHTML = `${mainDishes[getRandomIndex(mainDishes)]}`
     }
     displayShouldMake()
-    makeText.innerText = `${randomSelection}`
+  
 }
-    
-

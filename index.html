@@ -7,25 +7,35 @@
   <body>
     <section class="header-bar">
       <h2>What's for Dinner?</h2>
-      <button class="add-recipe">Add a Recipe</button>
+      <button class="add-recipe">ADD A RECIPE</button>
     </section>
-    <section class="boxes" id="selection-box">
-      <h1>What are you looking for?</h1>
-        <form>
-          <input type="radio" id="side" name="type" value="side">
-          <label for="side">Side</label>
-          <input type="radio" id="main-dish" name="type" value="main-dish">
-          <label for="main-dish">Main Dish</label>
-          <input type="radio" id="dessert" name="type" value="dessert">
-          <label for="dessert">Dessert</label>
-          <input type="radio" id="entire-meal" name="type" value="entire-meal">
-          <label for="entire-meal">Entire Meal</label>
-          <button class="submit">Let's cook</button>
+    <section class="boxes">
+      <section class="inner-box" id="selection-box">
+        <h1>What are you looking for?</h1>
+        <form class="radio-section">
+          <div class="radio-option">
+            <input type="radio" id="side" name="type" value="side">
+            <label for="side">Side</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="main-dish" name="type" value="main-dish">
+            <label for="main-dish">Main Dish</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="dessert" name="type" value="dessert">
+            <label for="dessert">Dessert</label>
+         </div>
+         <div class="radio-option">
+            <input type="radio" id="entire-meal" name="type" value="entire-meal">
+            <label for="entire-meal">Entire Meal</label>
+          </div> 
+          <button class="submit">LET'S COOK!</button>
         </form>
-    </section>
-    <section class="boxes" id="display-box">
-      <img class="cookpot" src="assets/cookpot.svg" alt="cookpot"/>
-    </section>
+      </section>
+      <section class="inner-box" id="display-box">
+        <img class="cookpot" src="assets/cookpot.svg" alt="cookpot"/>
+      </section>
+  </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

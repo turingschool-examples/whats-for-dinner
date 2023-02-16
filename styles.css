@@ -8,3 +8,96 @@ red - #ee5253
 
 */
 
+/* General Page Settings */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("assets/burger-friends.jpg") no-repeat center center fixed;
+    background-color: #cccccc;
+    background-size: cover;
+}
+
+/* Top Header Bar */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 40px;
+    background-color: #0fb9b1;
+}
+
+.pageTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.addRecipeButton {
+    font-size: 12px;
+    padding: 5px;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+/* Main Content */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+
+}
+
+.box {
+    width: 40vw;
+    height: 350px;
+    padding: 50px 30px 20px 20px;
+    background-color: rgba(225, 225, 225, .9);
+    margin: 50 75 150;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.radio-labels {
+    margin-right: 15px;
+    line-height: 15px;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    height: 6%;
+    background-color: rgba(225, 225, 225, .9);
+}
+
+#recipe-type-input {
+    margin: 15px;
+}
+
+#recipe-name-input {
+    margin: 15px;
+}
+
+.footer-labels {
+    padding-left: 30px;
+}
+

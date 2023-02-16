@@ -1,10 +1,25 @@
-/* font-family: 'Roboto', sans-serif;
+/* font-family: 'Roboto', sans-serif;  */
 
-COLORS
+#title {
+    font-family: 'Roboto', sans-serif; 
+    font-size:small;
+    border-color: 20px solid teal - #0fb9b1;
+    background-color: teal - #0fb9b1;
+}
+body {
+    background-color:pink;
+}
+#directions {
+    font-family: 'Roboto', sans-serif; 
+    font-size:x-large;
+    border: 20px solid frosted white - rgba(225, 225, 225, .9);
+}
+
+/* COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+
 

@@ -11,7 +11,7 @@
     <main>
       <section class="box" id="input-box">
         <fieldset>
-          <legend>What are you looking for?</legend>
+          <legend>What are you looking for?<sup id="legend-asterix">*</sup></legend>
           <label><input type="radio" id="side" name="meal" class="radio-buttons" value="side"></input>Side</label>
           <label><input type="radio" id="main-dish" name="meal" class="radio-buttons" value="main-dish"></input>Main Dish</label>
           <label><input type="radio" id="dessert" name="meal" class="radio-buttons" value="dessert"></input>Dessert</label>
@@ -21,6 +21,8 @@
       </section>
       <section class="box" id="output-box">
           <img src="assets/cookpot.svg" id="cookpot" alt="cookpot"/>
+          <h1 id="output-lead"></h1>
+          <p id="output-meal"></p>
       </section>
     </main>
     <footer>
@@ -32,4 +34,5 @@
     
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="mealData.js"></script>
 </html>

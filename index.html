@@ -2,9 +2,34 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
   </head>
   <body>
-    
+    <nav class="navbar">
+      <h1 class="navbar-title">What's for Dinner?</h1>
+      <button class="navbar-button">ADD A RECIPE</button>
+    </nav>
+    <section class="box-container">
+      <section class="dish-options">
+        <h1 class="dish-title">What are you looking for?</h1>
+        <label for="side-dish"><input type="radio" name="side" value="Side" class="radio-btn">Side</label> <br>
+        <label for="main-dish"><input type="radio" name="main dish" value="Main Dish" class="radio-btn">Main Dish</label> <br>
+        <label for="dessert"><input type="radio" name="dessert" value="Dessert" class="radio-btn">Dessert</label> <br>
+        <label for="entire-meal"><input type="radio" name="entire meal" value="Entire Meal" class="radio-btn">Entire Meal</label> <br>
+        <button class="lets-cook-btn">LET'S COOK!</button>
+      </section>
+      <section class="results-box">
+        <img class="cookpot-image hidden" src="assets/cookpot.svg" alt="cookpot image">
+      </section>
+    </section>
+    <footer class="new-recipe-form">
+      <form class="recipe-input" action="">
+        <label for="">Recipe Type:</label><input type="text">
+        <label for="">Recipe Name:</label><input type="text"> 
+        <button>ADD NEW</button>
+      </form>
+    </footer>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

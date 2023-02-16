@@ -11,34 +11,26 @@
     <h3> What's for Dinner? </h3>
     <!-- <button class="">ADD A RECIPE</button> -->
   </header>
-  <section class="">
-    <article class="column">
-      <h2>What are you looking for?<!--asterick--></h2>
-      <div>
-        <input type="radio" id="side" value="side" checked>
-        <label for="side">Side</label>
-      </div>
-      <div>
-        <input type="radio" id="mainDish" value="mainDish" checked>
-        <label for="mainDish">Main Dish</label>
-      </div>
-      <div>
-        <input type="radio" id="dessert" value="dessert" checked>
-        <label for="dessert">Dessert</label>
-      </div>
-      <div>
-        <input type="radio" id="entireMeal" value="entireMeal" checked>
-        <label for="dessert">Entire Meal</label>
-      </div>
-      <button class="button-letsCook">LET'S COOK!</button>
+  <section class="flex-even">
+    <article class="left-article">
+      <h2>What are you looking for?<span>*</span></h2>
+      <ul>
+        <li><input type="radio" name="dishType" id="side" value="side"><label for="side">Side</label></li>
+        <li><input type="radio" name="dishType" id="mainDish" value="mainDish"><label for="mainDish">Main Dish</label></li>
+        <li> <input type="radio" name="dishType" id="dessert" value="dessert"><label for="dessert">Dessert</label></li>
+        <li><input type="radio" name="dishType" id="entireMeal" value="entireMeal"><label for="dessert">Entire Meal</label></li>
+      </ul>
+      <button class="cook-button">LET'S COOK!</button>
     </article>
-    <article class="column hidden" src="./assets/cookpot.svg">
-      <img>
+    <article class="hidden">
+      <img id="pot" src="./assets/cookpot.svg">
     </article>
-    <article class="column">
+    <article class="right-article">
       <h4>You should make:</h4>
       <h1></h1>
-      <button class="">CLEAR</button>
+      <div class="flex-right">
+        <button class="clear-button">CLEAR</button>
+      </div>
     </article>
   </section>
 </body>

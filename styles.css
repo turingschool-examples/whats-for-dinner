@@ -24,8 +24,8 @@ header {
 }
 
 article {
-  width: 400px;
-  height: 250px;
+  width: 425px;
+  height: 310px;
   background-color: rgba(225, 225, 225, .9);
   margin-top: 50px;
   padding: 40;
@@ -48,6 +48,12 @@ ul {
 
 li {
   padding-bottom: 15px;
+}
+
+.img {
+  height: 125px;
+  width: 125px;
+  align-self:center;
 }
 
 h4 {
@@ -74,8 +80,11 @@ h4 {
   align-self:last baseline;
 }
 
-.hidden {
-  display: none;
+
+
+.img-flex {
+  display: flex;
+  justify-content: center;
 }
 
 .flex-even {
@@ -85,5 +94,10 @@ h4 {
 
 .flex-right {
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
+  align-items: flex-end;
+}
+
+.hidden {
+  display: none;
 }

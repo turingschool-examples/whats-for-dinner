@@ -3,14 +3,12 @@
 var letsCookBtn = document.querySelector(".cook-button");
 // 2. Clear Button
 var clearBtn = document.querySelector(".clear-button");
-// 3. Crockpot Article
-var crockpotArt = document.querySelector(".js-crockpot");
 // 4. You should make article
 var shouldMake = document.querySelector(".js-make");
 // 5. Radio Group 
 var radioBtns = document.querySelectorAll('input[name ="dishType"]');
-// 6. Crockpot Article
-var crockpotDisplay = document.querySelector('.js-crockpot');
+// 9. Crockpot Art
+var crockpotImg = document.querySelector('.js-crockpot-pic')
 // 7. You Should Make Article
 var makeDisplay = document.querySelector('.js-make');
 // 8. You should make selection
@@ -95,12 +93,14 @@ function findMealType() {
 
 // 3. Display Selection
 function displayShouldMake() {
-    crockpotDisplay.classList.add('hidden')
+    // crockpotDisplay.classList.add('hidden')
+    crockpotImg.classList.add('hidden')
     makeDisplay.classList.remove('hidden')
 }
 
 function displayCrockpot() {
-    crockpotDisplay.classList.remove('hidden')
+    // crockpotDisplay.classList.remove('hidden')
+    crockpotImg.classList.remove('hidden')
     makeDisplay.classList.add('hidden')
 }
 

@@ -24,30 +24,35 @@ body {
 
 button {
   font-family: 'Roboto', sans-serif;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 0px;
+  font-size: 20px;
 }
 
 .submit {
   background-color: #0fb9b1;
-  font-size: 18px;
   width: fit-content;
   padding: 12px;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 72px;
+  padding-right: 72px;
   margin: 8px;
 }
 
 .add-recipe{
- font-size: 20px;
  padding: 10px;
  padding-left: 16px;
  padding-right:16px;
 }
 
 h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+  margin-left: 8px;
+}
+
+.asterisk {
+  color: #ee5253;
   font-size: 36px;
-  margin-bottom: 10px;
 }
 
 h2 {
@@ -65,6 +70,7 @@ h2 {
   background-color: rgba(225, 225, 225, .9);
   padding: 36px;
   width: 600px;
+  height: 475px;
 }
 
 .radio-section {
@@ -73,11 +79,17 @@ h2 {
 }
 
 .radio-option {
-  padding: 8px;
-  font-size: 24px;
+  padding: 16px;
+  font-size: 28px;
 }
 
 .cookpot {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
+}
+
+.cookpot-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

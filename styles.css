@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px;
+
 }
 
 header {
@@ -25,22 +26,51 @@ h1 {
     font-size: 11px;
     background-color: rgba(225, 225, 225, .9);
     float: right;
+    width: 115px;
+    border-radius: 4px;
+    margin: 15px;
+}
+
+.left-box-header {
+    font-weight: bolder;
+    font-size: 33px;
+
+}
+
+#choose-course{
+    font-size: 22.5px;
+    margin: 10px;
+
+}
+.cook-button{
+background-color: #0fb9b1;
+margin: 10px;
+padding: 10px;
+border-radius: 4px;
+border-color: blue;
+width: 100px
 }
 
 .left-box {
-    padding: 175px 175px 175px 175px;
     background-color: rgba(225, 225, 225, .9);
+    accent-color: blueopen index.html
+    ;
     float: left;
     margin-top: 50px;
     margin-left: 135px;
 }
 
 .right-box {
-    padding: 175px 175px 175px 175px;
+    background-image: url(/Users/ashleeaubree/turing_work/1mod/whats-for-dinner/assets/cookpot.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: rgba(225, 225, 225, .9);
     float: right;
     margin-top: 50px;
     margin-right: 135px;
+
+}
+.right-box-header{
 
 }
 
@@ -49,6 +79,8 @@ h1 {
     color: rgba(225, 225, 225, .9);
     text-align: center;
     background-color: #95a5a6;
+    padding: 10px;
+    border-radius: 4px;
 }
 
 

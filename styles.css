@@ -10,64 +10,80 @@ red - #ee5253
 
 
 body {
-    background-image: url("assets/burger-friends.jpg");
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-  }
-  
-  header {
-    background-color: #0fb9b1;
-    padding-left: 25px ;
-    padding-right: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
+  background-image: url("assets/burger-friends.jpg");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
 
-  article {
-    width: 30%;
-    background-color:rgba(225, 225, 225, .9);
-    opacity: 0.9;
-    margin-top: 5%;
-    margin-left: 10%;
-    padding: 5%;
+header {
+  background-color: #0fb9b1;
+  padding: 5px 25px;
+}
 
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  div {
-   padding-bottom: 5px;
-  }
-
-  .button-letsCook {
-    background-color: #0fb9b1;
-    font-weight: 100;
-    border-radius: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 30px;
-    padding-left: 30px;
-    border: 0;
-  }
+article {
+  width: 400px;
+  height: 250px;
+  background-color: rgba(225, 225, 225, .9);
+  margin-top: 50px;
+  padding: 40;
+}
 
 
 
-  .hidden {
-    display: none;
-  }
+h2 {
+  font-size: 18px;
+}
 
-  /* .column {
-    float: left;
-  } */
-  
+span {
+  color: #ee5253;
+}
 
-  
- 
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
 
- 
- 
+li {
+  padding-bottom: 15px;
+}
+
+h4 {
+  font-style: italic;
+  font-size: large;
+  text-align: center;
+}
+
+.cook-button {
+  background-color: #0fb9b1;
+  border-radius: 5px;
+  padding: 5px 30px;
+  border: 0;
+  font-size:smaller;
+  font-weight:300;
+}
+
+.clear-button {
+  background-color: #95a5a6;
+  color: rgba(225, 225, 225, .9);
+  border-radius: 5px;
+  padding: 10px;
+  border: 0;
+  align-self:last baseline;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: end;
+}

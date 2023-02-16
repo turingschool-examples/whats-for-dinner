@@ -30,18 +30,18 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 2px 40px;
+    padding: 0.25% 2% 0.25% 3%;
     background-color: #0fb9b1;
 }
 
 .pageTitle {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 700;
 }
 
 .addRecipeButton {
-    font-size: 12px;
-    padding: 5px;
+    font-size: 0.8rem;
+    padding: 0.5% 0.8%;
     border-color: transparent;
     border-radius: 5px;
 }
@@ -58,16 +58,24 @@ main {
 }
 
 .box {
-    width: 30vw;
-    height: 275px;
-    padding: 50px 30px 20px 20px;
+    width: 35%;
+    height: 45%;
+    margin: 5% 5% 0 5%;
     background-color: rgba(225, 225, 225, .9);
-    margin: 50 75 150;
+}
+
+#input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 3%;
 }
 
 #output-box {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #cookpot {
@@ -77,34 +85,34 @@ main {
 #output-message {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-items: center;
-    padding-top: 70px;
+    align-items: center;
+    padding-top: 1%;
 }
 
 #output-lead {
-    margin-bottom: 0;
+    margin-bottom: 5%;
     font-style: italic;
 }
 
 #output-meal {
     font-weight:bold;
-    font-size: 45px;
-    margin-top: 3px;
+    font-size: 2rem;
+    margin-top: 2%;
+    text-align: center;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 5px;
     border: none;
 }
 
 legend {
     font-weight: 700;
-    font-size: 22px;
-    padding-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 4%;
 }
 
 #legend-asterix {
@@ -113,12 +121,12 @@ legend {
 
 
 .radio-buttons {
-    margin: 10px;
+    margin: 0.8em 0.8em 0.8em 0em;
 }
 
 #meal-choice-button {
-    margin-top: 20px;
-    padding: 8px 45px;
+    margin-top: 10%;
+    padding: 3% 20%;
     background-color:#0fb9b1;
     border-radius: 5px;
     border: none;
@@ -131,20 +139,13 @@ footer {
     flex-direction: row;
     align-items: center;
     margin-top: auto;
-    height: 6%;
+    height: 7%;
     background-color: rgba(225, 225, 225, .9);
 }
 
-#recipe-type-input {
-    margin: 15px;
-}
-
-#recipe-name-input {
-    margin: 15px;
-}
-
 .footer-labels {
-    padding-left: 30px;
+    margin: 1%;
+    padding-left: 2%;
 }
 
 /* Gen Pop */

@@ -70,6 +70,29 @@ main {
     justify-content: center;
 }
 
+#cookpot {
+    object-fit: scale-down;
+}
+
+#output-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding-top: 70px;
+}
+
+#output-lead {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+#output-meal {
+    font-weight:bold;
+    font-size: 45px;
+    margin-top: 3px;
+}
+
 fieldset {
     display: flex;
     flex-direction: column;
@@ -83,6 +106,11 @@ legend {
     font-size: 22px;
     padding-bottom: 10px;
 }
+
+#legend-asterix {
+    color: red;
+}
+
 
 .radio-buttons {
     margin: 10px;
@@ -119,3 +147,8 @@ footer {
     padding-left: 30px;
 }
 
+/* Gen Pop */
+
+.hidden {
+    display: none;
+  }

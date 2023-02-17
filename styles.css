@@ -5,6 +5,67 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
+ */
 
-*/
+body {
+    background-image: url("assets/burger-friends.jpg");
+    background-size: cover;
+}
 
+nav {
+    background-color: #0fb9b1;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+}
+
+nav > p {
+    margin-left: 25px;
+}
+
+#recipe-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    height: 500px;
+    align-items: center;
+    
+}
+
+.box {
+    background-color: rgba(225, 225, 225, .9);
+    height: 250px;
+    width: 375px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+legend {
+    font-size: x-large;
+}
+
+#cookpot{
+    height: 130px;
+    width: 1300px;
+}
+    
+#cookpot-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lets-cook {
+    display: flex;
+    background-color: #0fb9b1;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}

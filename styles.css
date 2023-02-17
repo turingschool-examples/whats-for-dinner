@@ -95,8 +95,12 @@ span {
     margin: 0;
   }
 
-  #recipe-title {
+  .recipe-title {
     font-size: xx-large;
-    margin: 0;
-    font-weight: bold;
+    margin: 10;
+  }
+
+  .entire-recipe-title {
+    font-size: x-large;
+    margin: 10;
   }

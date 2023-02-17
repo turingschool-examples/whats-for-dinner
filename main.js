@@ -1,8 +1,7 @@
-// Query Selectors
 var cookpot = document.querySelector('#cookpot');
 var letsCookButton = document.querySelector('#lets-cook');
 var currentRecipe = document.querySelector('#current-recipe');
-var recipeTitle = document.querySelector('#recipe-title');
+var recipeTitle = document.querySelector('.recipe-title');
 var radioButton1 = document.querySelector('#radio-button1');
 var radioButton2 = document.querySelector('#radio-button2');
 var radioButton3 = document.querySelector('#radio-button3');
@@ -12,7 +11,6 @@ var mainDishRadioButton = document.querySelectorAll('#main-dish');
 var dessertRadioButton = document.querySelectorAll('#dessert');
 var entireMealRadioButton = document.querySelectorAll('#entire-meal');
 
-// Global Variables
 var sides = [
 'Miso Glazed Carrots',
 'Coleslaw',
@@ -61,22 +59,24 @@ var desserts = [
 'Eclairs',
 ];
 
-//Event Listeners
 letsCookButton.addEventListener('click', letsCook);
+
 radioButton1.addEventListener('click', function () {
     sideRadioButton.checked = true
 })
+
 radioButton2.addEventListener('click', function () {
     mainDishRadioButton.checked = true
 })
+
 radioButton3.addEventListener('click', function () {
     dessertRadioButton.checked = true
 })
+
 radioButton4.addEventListener('click', function () {
     entireMealRadioButton.checked = true
 })
 
-//Functions
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
@@ -108,17 +108,34 @@ function uncheckRadioButtons () {
     entireMealRadioButton.checked = false;
 }
 
+function makeRecipeTitleBig () {
+    recipeTitle.classList.add('recipe-title');
+    recipeTitle.classList.remove('entire-recipe-title')
+}
+
+function makeRecipeTitleSmall () {
+    recipeTitle.classList.remove('recipe-title');
+    recipeTitle.classList.add('entire-recipe-title')
+}
+
 function letsCook() {
     hide(cookpot);
     show(currentRecipe);
 
     if(sideRadioButton.checked === true) {
         recipeTitle.innerText = `${sides[getRandomSide()]}!`;
+        makeRecipeTitleBig()
     } else if(mainDishRadioButton.checked === true) {
         recipeTitle.innerText = `${mains[getRandomMain()]}!`;
+        makeRecipeTitleBig()
     } else if(dessertRadioButton.checked === true) {
         recipeTitle.innerText = `${desserts[getRandomDessert()]}!`;
+        makeRecipeTitleBig()
+    } else if(entireMealRadioButton.checked === true) {
+        recipeTitle.innerText = `${mains[getRandomMain()]} with a side of ${sides[getRandomSide()]} and ${desserts[getRandomDessert()]} for dessert!`;
+        makeRecipeTitleSmall()
+    } else {
+        recipeTitle.innerText = "Please make a selection."
     }
-
     uncheckRadioButtons()
 }

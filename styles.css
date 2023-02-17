@@ -8,3 +8,147 @@ red - #ee5253
 
 */
 
+/* General Page Settings */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("assets/burger-friends.jpg") no-repeat center center fixed;
+    background-color: #cccccc;
+    background-size: cover;
+}
+
+/* Top Header Bar */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 40px;
+    background-color: #0fb9b1;
+}
+
+.pageTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.addRecipeButton {
+    font-size: 12px;
+    padding: 5px;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+/* Main Content */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+
+}
+
+.box {
+    width: 30vw;
+    height: 275px;
+    padding: 50px 30px 20px 20px;
+    background-color: rgba(225, 225, 225, .9);
+    margin: 50 75 150;
+}
+
+#output-box {
+    display: flex;
+    justify-content: center;
+}
+
+#cookpot {
+    object-fit: scale-down;
+}
+
+#output-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding-top: 70px;
+}
+
+#output-lead {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+#output-meal {
+    font-weight:bold;
+    font-size: 45px;
+    margin-top: 3px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    border: none;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+#legend-asterix {
+    color: red;
+}
+
+
+.radio-buttons {
+    margin: 10px;
+}
+
+#meal-choice-button {
+    margin-top: 20px;
+    padding: 8px 45px;
+    background-color:#0fb9b1;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    height: 6%;
+    background-color: rgba(225, 225, 225, .9);
+}
+
+#recipe-type-input {
+    margin: 15px;
+}
+
+#recipe-name-input {
+    margin: 15px;
+}
+
+.footer-labels {
+    padding-left: 30px;
+}
+
+/* Gen Pop */
+
+.hidden {
+    display: none;
+  }

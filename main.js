@@ -41,7 +41,7 @@ var mains = [
 ]
 
 var desserts = [
-  'Apple Pie',
+'Apple Pie',
 'Lemon Meringue Pie',
 'Black Forest Cake',
 'Banana Bread',
@@ -61,9 +61,8 @@ var desserts = [
 'Eclairs',
 ]
 
-var sideDish = getRandomIndex(sides)
-var mainDish = getRandomIndex(mains)
-var dessertDish = getRandomIndex(desserts)
+var currentRecipe
+var entireMeal = []
 
 letsCookBtn.addEventListener('click', displayRecipe)
 deleteButton.addEventListener('click', deleteRecipe)
@@ -73,28 +72,45 @@ function getRandomIndex(array) {
 }
 
 function displayRecipe() {
+  var sideDish = getRandomIndex(sides)
+  var mainDish = getRandomIndex(mains)
+  var dessertDish = getRandomIndex(desserts)
   cookpotImage.classList.add('hidden')
   messageBox.classList.remove('hidden')
   if (sideRadioBtn.checked) {
-      randomDish.innerText = ''
-      randomDish.innerText += `${sides[sideDish]}!`
+      currentRecipe = `${sides[sideDish]}`
   } else if (mainDishRadioBtn.checked) {
-    randomDish.innerText = ''
-      randomDish.innerText += `${mains[mainDish]}!`
+    currentRecipe = `${mains[mainDish]}!`
   } else if (dessertRadioBtn.checked) {
-    randomDish.innerText = ''
-    randomDish.innerText += `${desserts[dessertDish]}!`
+    currentRecipe = `${desserts[dessertDish]}!`
   } else if (entireMealRadioBtn.checked) {
-    randomDish.innerText = ''
-    randomDish.innerText += `${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!`
-    
+    currentRecipe = `${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!`
+    entireMeal.push(currentRecipe)
   }
+  randomDish.innerText = ''
+  randomDish.innerText += currentRecipe
 }
 
 function deleteRecipe() {
   messageBox.classList.add('hidden')
   cookpotImage.classList.remove('hidden')
+  var sideDelete = sides.indexOf(currentRecipe)
+  var mainDelete = mains.indexOf(currentRecipe)
+  var dessertDelete = desserts.indexOf(currentRecipe)
+  var mealDelete = entireMeal.indexOf(currentRecipe)
+  if (sideDelete > -1) {
+    sides.splice(sideDelete,1)
+  } else if (mainDelete > -1) {
+    mains.splice(mainDelete,1)
+  } else if (dessertDelete > -1) {
+    desserts.splice(dessertDelete,1) 
+  } else if (mealDelete > -1) {
+    entireMeal.splice(mealDelete,1)
+  }
+  alert('This recipe has been deleted!')
 }
+
+
 
 
 

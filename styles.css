@@ -12,10 +12,6 @@ html {
   margin: 0;
 }
 
-.astryx {
-  color: #ee5253;
-}
-
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -37,6 +33,10 @@ h1 {
   font-size: 25px;
 }
 
+.welcome-user {
+  padding-right: 2%;
+}
+
 .mid-container {
   display: flex;
   justify-content: space-evenly;
@@ -56,13 +56,6 @@ h1 {
   justify-content: space-evenly;
 } 
 
-#form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background-color: rgba(225, 225, 225, .9);
-}
-
 .form-prompt,
 .radio-button,
 .search-food-button {
@@ -72,6 +65,10 @@ h1 {
 
 .form-prompt {
   padding-top: 50px;
+}
+
+.astryx {
+  color: #ee5253;
 }
 
 .search-food-button {
@@ -91,7 +88,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(225, 225, 225, .9);
 }
 
 .cooking-pot {
@@ -127,8 +123,4 @@ h1 {
 h5 {
   color: rgb(179, 23, 23);
   font-size: large;
-}
-
-.welcome-user {
-  padding-right: 2%;
 }

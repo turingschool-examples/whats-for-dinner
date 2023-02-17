@@ -1,19 +1,12 @@
 // *** Selectors ***
-// 1. Lets Cook Button
 var letsCookBtn = document.querySelector(".cook-button");
-// 2. Clear Button
 var clearBtn = document.querySelector(".clear-button");
-// 4. You should make article
-var shouldMake = document.querySelector(".js-make");
-// 5. Radio Group 
-var radioBtns = document.querySelectorAll('input[name ="dishType"]');
-// 9. Crockpot Art
-var crockpotImg = document.querySelector('.js-crockpot-pic')
-// 7. You Should Make Article
-var makeDisplay = document.querySelector('.js-make');
-// 8. You should make selection
-var makeText = document.querySelector('h1');
+var radioBtns = document.getElementsByName('dish-type');
+var crockpotImg = document.querySelector('.js-crockpot-pic');
 
+var shouldMakeDisplay = document.querySelector('.js-make');
+var entireMealText = document.querySelector('.js-entire-meal');
+var singleDishText = document.querySelector('.js-single-dish');
 
 // *** Arrays ***
 var sides = [
@@ -67,11 +60,8 @@ var desserts = [
 ]
 
 // *** Event Listeners *** 
-// 1. Lets cook button click
 letsCookBtn.addEventListener('click', giveMakeSuggestion)
-
-// 2. Clear buttton
-
+clearBtn.addEventListener('click', clearSelection)
 
 // *** Functions ***
 
@@ -81,42 +71,59 @@ function getRandomIndex(array) {
 }
 //2. radio button selection
 function findMealType() {
-    var mealType;
+   var mealType;
     for (var i = 0; i < radioBtns.length; i++) {
-        if (radioBtns[i].value) {
+        if (radioBtns[i].checked) {
             mealType = radioBtns[i].value
-        }
-        console.log(mealType)
-        return mealType
-    }
+        }    
+    } return mealType
 }
 
 // 3. Display Selection
 function displayShouldMake() {
-    // crockpotDisplay.classList.add('hidden')
     crockpotImg.classList.add('hidden')
-    makeDisplay.classList.remove('hidden')
+    shouldMakeDisplay.classList.remove('hidden')
 }
 
 function displayCrockpot() {
-    // crockpotDisplay.classList.remove('hidden')
     crockpotImg.classList.remove('hidden')
-    makeDisplay.classList.add('hidden')
+    shouldMakeDisplay.classList.add('hidden')
 }
+
+
+function clearSelection(){
+    displayCrockpot();
+    clearRadioSelection() 
+    singleDishText.innerText = '';
+    entireMealText.innerText= '';
+}
+
+function clearRadioSelection() {
+     for (var i = 0; i < radioBtns.length; i++) {
+         if (radioBtns[i].checked) {
+            radioBtns[i].checked = false;
+         }    
+     } 
+ }
+
 
 // ** Populate you should make
 function giveMakeSuggestion() {
     var selectedType = findMealType()
 
     if (selectedType === 'dessert') {
-        makeText.innerText = `${desserts[getRandomIndex(desserts)]}`
+        singleDishText.innerText = `${desserts[getRandomIndex(desserts)]}!`
+        displayShouldMake()
     } else if (selectedType === 'side') {
-        makeText.innerText = `${randomSelection = sides[getRandomIndex(sides)]}`
+        singleDishText.innerText = `${randomSelection = sides[getRandomIndex(sides)]}!`
+        displayShouldMake()
     } else if (selectedType === 'main-dish') {
-        makeText.innerHTML = `${mainDishes[getRandomIndex(mainDishes)]}`
-    } else {
-        makeText.innerHTML = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${randomSelection = sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
-    }
-    displayShouldMake()
-
+        singleDishText.innerText = `${mainDishes[getRandomIndex(mainDishes)]}!`
+        displayShouldMake()
+    } else if (selectedType === 'entire-meal'){
+        entireMealText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${randomSelection = sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+        displayShouldMake()
+    } else(
+        displayCrockpot()
+    )
 }

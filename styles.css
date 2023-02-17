@@ -31,7 +31,13 @@ article {
   margin-top: 50px;
   padding: 40px;
 }
-h1 {
+h1.single-dish {
+  font-size: 32px;
+  text-align: center;
+  margin: 0px;
+}
+
+h1.entire-meal {
   font-size: 32px;
   text-align: center;
   margin: 0px;

@@ -45,10 +45,12 @@ h2 {
     flex-direction: column;
 }
 
-.btn-group {
-    display: block;
+.radio-group {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
     display: flex;
-    flex-direction: column;
+    /* display: block; */
+    /* flex-direction: column; */
 }
 
 .row {

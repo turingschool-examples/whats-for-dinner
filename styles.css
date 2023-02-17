@@ -40,7 +40,7 @@ body {
     align-items: flex-start;
     background-color: rgba(225, 225, 225, .9);
     height: 395px;
-    width: 500px
+    width: 500px;
 }
 
 .right-box {
@@ -54,7 +54,7 @@ body {
 }
 
 .cookpot {
-    height: 15vh
+    height: 15vh;
 }
 
 .food-button {
@@ -78,7 +78,7 @@ h2 {
 
 .dish-question::after {
     content: "*";
-    color: red
+    color: red;
 }
 
 .hidden {
@@ -88,7 +88,7 @@ h2 {
 h4 {
     text-align: center;
     font-size: 20px;
-    width: 75%
+    width: 75%;
 }
 
 .buttons {

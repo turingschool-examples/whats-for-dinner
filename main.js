@@ -7,14 +7,14 @@ var entireMealButton = document.getElementById('entire-meal')
 var deleteButton = document.querySelector('.delete-recipe')
 
 var currentFood;
-var entireMeal = [];
+var entireMeal = []
 
 cookButton.addEventListener('click', displayFood)
 deleteButton.addEventListener('click', deleteRecipe)
 
 function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
-  };
+    return Math.floor(Math.random() * array.length)
+}
 
 function displayFood(event) {
     event.preventDefault()

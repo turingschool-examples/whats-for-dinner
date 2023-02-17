@@ -14,29 +14,41 @@ body {
 
 nav {
     background-color: #0fb9b1;
-    height: 50px;
     font-family: 'Roboto', sans-serif;
-    font-size: larger;
+    font-size: x-large;
     display: flex;
+    height: 60px;
     align-items: center;
+    justify-content: space-between;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px
 }
 
 nav > p {
     margin-left: 25px;
 }
 
+nav > button {
+    margin-right: 25px;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+}
+
 #recipe-boxes {
     display: flex;
     justify-content: space-evenly;
-    height: 500px;
+    height: 450px;
     align-items: center;
     
 }
 
 .box {
     background-color: rgba(225, 225, 225, .9);
-    height: 250px;
-    width: 375px;
+    height: 260px;
+    width: 350px;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -51,7 +63,7 @@ legend {
 
 #cookpot{
     height: 130px;
-    width: 1300px;
+    width: 130px;
 }
     
 #cookpot-box {
@@ -61,10 +73,9 @@ legend {
 }
 
 #lets-cook {
-    display: flex;
     background-color: #0fb9b1;
-    width: 150px;
-    height: 30px;
+    width: 170px;
+    height: 35px;
     border-radius: 5px;
     border: none;
     text-align: center;

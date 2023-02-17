@@ -14,25 +14,30 @@
         <h1>What are you looking for?<span class="asterisk">*</span></h1>
         <form class="radio-section">
           <div class="radio-option">
-            <input type="radio" id="side" name="type" value="side">
+            <input type="radio" id="side" name="meal-type" value="side">
             <label for="side">Side</label>
           </div>
           <div class="radio-option">
-            <input type="radio" id="main-dish" name="type" value="main-dish">
+            <input type="radio" id="main-dish" name="meal-type" value="main-dish">
             <label for="main-dish">Main Dish</label>
           </div>
           <div class="radio-option">
-            <input type="radio" id="dessert" name="type" value="dessert">
+            <input type="radio" id="dessert" name="meal-type" value="dessert">
             <label for="dessert">Dessert</label>
          </div>
          <div class="radio-option">
-            <input type="radio" id="entire-meal" name="type" value="entire-meal">
+            <input type="radio" id="entire-meal" name="meal-type" value="entire-meal">
             <label for="entire-meal">Entire Meal</label>
           </div> 
           <button class="submit">LET'S COOK!</button>
         </form>
       </section>
       <section class="inner-box cookpot-section" id="display-box">
+        <div class="meal-text hidden" id="meal-display">
+          <h3 class="dish-header">You should make:</h3>
+          <h1 class="name-of-dish">Name of dish!</h1>
+          <button class="clear">CLEAR</button>
+        </div>
         <img class="cookpot" src="assets/cookpot.svg" alt="cookpot"/>
       </section>
   </section>

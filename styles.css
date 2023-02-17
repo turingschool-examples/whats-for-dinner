@@ -27,6 +27,7 @@ button {
   border-radius: 6px;
   border: 0px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .submit {
@@ -53,11 +54,23 @@ h1 {
 .asterisk {
   color: #ee5253;
   font-size: 36px;
+  position: relative;
+  bottom: 14px;
+}
+
+.name-of-dish {
+  font-size: 58px;
+  margin: 0px;
 }
 
 h2 {
   margin: 0px;
   font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+  margin: 0px;
 }
 
 .boxes {
@@ -92,4 +105,28 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dish-header {
+  font-style: italic;
+}
+
+.meal-text{
+  text-align: center;
+
+}
+
+.clear {
+  color:white;
+  padding: 14px;
+  padding-left: 18px;
+  padding-right:18px;
+  background-color: #95a5a6;
+  position: relative;
+  top: 175px;
+  left: 245px
+}
+
+.hidden {
+  display: none;
 }

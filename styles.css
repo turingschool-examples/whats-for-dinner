@@ -8,12 +8,31 @@ red - #ee5253
 
 */
 
-/* body {
-    background-image: url("burger-friends.jpg");
-} */
+body {
+    background-image: url("./assests/burger-friends.jpg");
+}
 
 h1 {
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-left: initial;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: #0fb9b1;
+    width: 100vw;
 
 }
 
+.box {
+    height: 42vh;
+    width: 25vw;
+    border: solid red;
+}

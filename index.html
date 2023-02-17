@@ -1,10 +1,55 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset = "utf-8">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title> What's For Dinner ? </title>
   </head>
   <body>
+    <section>
+      <header class="header"> 
+        <h1>What's For Dinner ?</h1>
+        <button>ADD A RECIPE</button>
+      </header>
+    </section class= "wrapper">
+     <form>
+      <fieldset>
+        <p>
+          What are you looking for*?
+       </p>
+        <div>
+          <input type="radio" id="meal-side" name="side" value="side">
+          <label for="meal-side">Side</label> <br><br>
+        </div>
+        <div>
+          <input type="radio" id="main-dish" name="mainDish" value="mainDish">
+                 
+          <label for="main-dish">Main Dish</label> <br><br>
+        </div>
+        <div>
+          <input type="radio" id="dessert" name="dessert" value="dessert">
+                 
+          <label for="dessert">Dessert</label> <br><br>
+        </div>
+        <div>
+          <input type="radio" id="whole-meal" name="wholeMeal" value="wholeMeal"
+                 checked>
+          <label for="whole-meal">Whole Meal</label> <br><br>
+        </div>
+        <div>
+          <button>LET'S COOK!</button>
+        </div>
+      </fieldset>
+     </form>
+      </ul>
+      
+      <div>
+        <img src="assets/cookpot.svg" alt="cookpot"/>
+      </div>
     
+    
+  
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

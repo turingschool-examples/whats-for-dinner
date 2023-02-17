@@ -3,8 +3,6 @@
 // Dish appears on right side and cooking pot gets hidden
 
 // research radio input and how to make them work.
-// assign "lets cook" to a variable
-// create a variable for each dish category and hold their arrays
 // create and event listener for the button
 // when button is clicked...
   // random number generator
@@ -14,7 +12,7 @@
 // WILL NEED //
 // function for hiding cooking pot
 // function for random number
-// 
+// research hidden function for event listener
 
 var sides = ["Miso Glazed Carrots",
   "Coleslaw",
@@ -59,3 +57,11 @@ var desserts = ["Apple Pie",
   "Tart Tatin",
   "Croissants",
   "Eclairs"];
+
+var submitButton = document.querySelector('.submit');
+
+// submitButton.addEventListener('click', listFoodDish);
+
+function getRandom(dishList) {
+  return Math.floor(Math.random() * dishList.length);
+}

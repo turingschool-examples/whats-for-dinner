@@ -4,32 +4,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="top-bar">
-      <h1 class="title">What's for Dinner?</h1>
-    </div>
-    <section class="mid-container">
-      <div id="form" name="dish-selector" class="recipe-container">
-        <h2 class="form-prompt">What are you looking for?<span class="astryx">*</span></h2>
-      <!-- <div class="radio-toolbar"> -->
-        <div class="radio-button">
-          <input id="side-selection" type="radio" class="dish" name="choose-dish" value="side" checked>
-          <label>Side</label>
-        </div>
-        <div class="radio-button">
-          <input id="main-dish-selection" type="radio" class="dish" name="choose-dish" value="main">
-          <label>Main Dish</label>
-        </div>
-        <div class="radio-button">
-          <input id="dessert-selection" type="radio" class="dish" name="choose-dish" value="dessert">
-          <label>Dessert</label>
-        </div>
-        <div class="search-food-button">
-            <button class="submit" onclick="displayDish()">LET'S COOK!</button>
-        </div>
-     <!-- </div> -->
+    <section class="page-display">
+      <div class="top-bar">
+        <h1 class="title">What's for Dinner?</h1>
+        <h3 class="welcome-user"></h3>
       </div>
-      <div id="display-meal" class="recipe-container">
-        <img class="cooking-pot" src="assets/cookpot.svg">
+      <section class="mid-container">
+        <div id="form" name="dish-selector" class="recipe-container">
+          <h2 class="form-prompt">What are you looking for?<span class="astryx">*</span></h2>
+          <div class="radio-button">
+            <input id="side-selection" type="radio" class="dish" name="choose-dish" value="side" checked>
+            <label>Side</label>
+          </div>
+          <div class="radio-button">
+            <input id="main-dish-selection" type="radio" class="dish" name="choose-dish" value="main">
+            <label>Main Dish</label>
+          </div>
+          <div class="radio-button">
+            <input id="dessert-selection" type="radio" class="dish" name="choose-dish" value="dessert">
+            <label>Dessert</label>
+          </div>
+          <div class="search-food-button">
+              <button class="submit" onclick="displayDish()">LET'S COOK!</button>
+          </div>
+        </div>
+        <div id="display-meal" class="recipe-container">
+          <img class="cooking-pot" src="assets/cookpot.svg">
+        </div>
+      </section>
+    </section>
+    <section class="hide sign-in-form">
+      <div class="sign-in-container">
+        <h1>Welcome to What's For Dinner</h1>
+        <p>Please fill in the required fields to get started</p>
+        <label>Name:</label><input type="text" id="name" class="input-name" name="page-key" placeholder="your name here" />
+        <button name="submit" class="entry-button">ENTER!</button>
+        <h5></h5>
       </div>
     </section>
   </body>

@@ -82,3 +82,36 @@ function displayDish() {
 function getRandom(dishList) {
   return Math.floor(Math.random() * dishList.length);
 }
+
+// make a login page that takes a name input to proceed to app
+// require a name to be submitted to show the main body
+// use get element by id .value to obtain the input value
+// 
+
+window.addEventListener('load', supplyInput);
+var pageDisplay = document.querySelector('.page-display');
+var signInForm = document.querySelector('.sign-in-form');
+var signInButton = document.querySelector('.entry-button');
+var welcomeText = document.querySelector('.welcome-user');
+var errorMessage = document.querySelector('h5');
+var signInContainer = document.querySelector('.sign-in-container');
+var user = "";
+
+signInButton.addEventListener('click', showMainPage);
+
+function showMainPage() {
+  user = document.getElementById('name').value;
+  if (user) {
+    pageDisplay.classList.remove('hide');
+    signInForm.classList.add('hide');
+    signInForm.classList.remove('sign-in-form');
+    welcomeText.innerText = `Welcome ${user}!`;
+  } else {
+    errorMessage.innerText = `Please provide valid name`;
+  }
+}
+
+function supplyInput() {
+  pageDisplay.classList.add('hide');
+  signInForm.classList.remove('hide');
+}

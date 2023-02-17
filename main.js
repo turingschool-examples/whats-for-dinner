@@ -113,11 +113,11 @@ function letsCook() {
     show(currentRecipe);
 
     if(sideRadioButton.checked === true) {
-        recipeTitle.innerText = sides[getRandomSide()];
+        recipeTitle.innerText = `${sides[getRandomSide()]}!`;
     } else if(mainDishRadioButton.checked === true) {
-        recipeTitle.innerText = mains[getRandomMain()];
+        recipeTitle.innerText = `${mains[getRandomMain()]}!`;
     } else if(dessertRadioButton.checked === true) {
-        recipeTitle.innerText = desserts[getRandomDessert()];
+        recipeTitle.innerText = `${desserts[getRandomDessert()]}!`;
     }
 
     uncheckRadioButtons()

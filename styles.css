@@ -61,6 +61,10 @@ legend {
     font-size: x-large;
 }
 
+span {
+    color: #ee5253
+}
+
 #cookpot{
     height: 130px;
     width: 130px;
@@ -70,6 +74,7 @@ legend {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #lets-cook {
@@ -85,4 +90,13 @@ legend {
     display: none!important;
   }
 
-  
+  #you-should-make {
+    font-style: italic;
+    margin: 0;
+  }
+
+  #recipe-title {
+    font-size: xx-large;
+    margin: 0;
+    font-weight: bold;
+  }

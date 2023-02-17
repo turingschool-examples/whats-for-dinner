@@ -52,9 +52,16 @@ h1 {
     justify-content:space-evenly;
     flex-direction:column;
     padding-left: 3%;
-    
-    
+    }
+fieldset {
+    border:0
 }
+    button {
+        background-color: #0fb9b1;
+    width: 150px;
+    height: 25px
+}
+    
 .wrapper:nth-child(2) {
     display:flex;
     align-items: center;

@@ -1,10 +1,88 @@
-/* font-family: 'Roboto', sans-serif;
+* {
+   margin: auto;
+   font-family: 'Roboto', sans-serif;
+} 
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
+
+body {  margin:0;
+  background-image: url(assets/burger-friends.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.banner {
+  height: 65px ;
+  width: auto;
+  background: #0fb9b1
+  
+}
+
+.banner-text {
+  padding: 20;
+  padding-left: 50;
+  text-align: left;
+  font-size: larger;
+}
+
+.flexbox-container {
+  width: 70%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.box {
+  height: 65%;
+  width: 40%;
+}
+
+.box:nth-child(1) {
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.box:nth-child(2) {
+  background-color: rgba(225, 225, 225, .9);
+}
+
+h1 {
+  padding-top: 15%;
+  padding-left: 10%;
+  text-align:left;
+}
+
+.required::after {
+ content: "*";
+ color: #ee5253;
+ font-size: 20px;
+}
+
+
+.crockpot-img {
+  padding-top: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width:  200px;
+}
+ 
+.lets-cook-button {
+  background-color:#0fb9b1;
+  border: 10px;
+  border-radius: 4px;
+  padding: 5px 40px;
+}
+
+
+/* COLORS
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+
+.radio-selectors {
+padding-top:20 ;
+padding-left: 48;
+}
+
 

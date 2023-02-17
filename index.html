@@ -14,14 +14,20 @@
         <label for="sides"><input type="radio" id="sides" class="food-button" name="rad-button" checked>Sides</label><br>
         <label for="main-course"><input type="radio" id="main-dish" class="food-button" name="rad-button">Main Dish</label><br> 
         <label for="desserts">  <input type="radio" id="desserts" class="food-button" name="rad-button">Desserts</label><br>
-        <label for="entire-meal">  <input type="radio" id="desserts" class="food-button" name="rad-button">Entire Meal</label><br>
+        <label for="entire-meal">  <input type="radio" id="entire-meal" class="food-button" name="rad-button">Entire Meal</label><br>
         <br>
         <br>
         <button class="cook-button">LET'S COOK!</button>
       </div>
       <div class="right-box">
-          <img class="cookpot" src="assets/cookpot.svg" alt="Place to cook food!"> 
+          <img class="cookpot" src="assets/cookpot.svg" alt="Place to cook food!">
+          <div class="meal-container hidden">
+            <h3 class="recipe-message hidden"><em>You should make:</em></h3>
+            <h4 class="food-display hidden">Food<h4>
+          </div> 
+          <button class="delete-meal hidden">Delete Meal</button>
       </div>
   </body>
+  <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </html>

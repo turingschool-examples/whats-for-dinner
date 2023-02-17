@@ -47,7 +47,7 @@ body {
 .right-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: rgba(225, 225, 225, .9);
     height: 395px;
@@ -79,6 +79,16 @@ h2 {
 .dish-question::after {
     content: "*";
     color: red
+}
+
+.hidden {
+    display: none;
+}
+
+h4 {
+    text-align: center;
+    font-size: 20px;
+    width: 75%
 }
 /* COLORS
 teal - #0fb9b1;

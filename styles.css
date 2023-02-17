@@ -80,3 +80,9 @@ legend {
     border: none;
     text-align: center;
 }
+
+.hidden {
+    display: none!important;
+  }
+
+  

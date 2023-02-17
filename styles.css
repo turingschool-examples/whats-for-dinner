@@ -22,7 +22,6 @@ h1 {
     font-weight: 300;
     padding-left: initial;
 }
-
 h2 {
     font-family: 'Roboto', sans-serif;
 }
@@ -35,27 +34,62 @@ h2 {
     background-color: #0fb9b1;
 }
 
+.box:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.box:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .box {
-    height: 42vh;
-    width: 25vw;
+    height: 500px;
+    width: 650px;
+    margin-left: 100px;
+    margin-right: 100px;
     border: none;
     background: rgba(225, 225, 225, .9);
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
+    align-items: baseline;
+}
+
+.small-box {
+    margin-right: 300px;
+    margin-bottom: 150px;
+    border: dotted palevioletred;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: baseline;
 }
 
 .radio-group {
     font-family: 'Roboto', sans-serif;
     margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
     display: flex;
-    /* display: block; */
-    /* flex-direction: column; */
+    align-items: baseline;
 }
 
-.row {
+section {
     margin-top: 50px;
+    border: solid red;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.cookpot {
+    height: 200px;
+    width: 200px;
+    border: none;
+    display: flex;
+    align-items: center;
 }

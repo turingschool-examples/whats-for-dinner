@@ -7,16 +7,20 @@
     <title> What's For Dinner ? </title>
   </head>
   <body>
-    <section>
-      <header class="header"> 
+      <header class="header-container"> 
         <h1>What's For Dinner ?</h1>
-        <button>ADD A RECIPE</button>
+          <div>
+            <button class="add-recipe-button">ADD A RECIPE</button>
+          </div>
       </header>
-    </section class= "wrapper">
+    
+
+    <section class="main-flexbox-container">
+      <div class="box">
      <form>
       <fieldset>
         <p>
-          What are you looking for*?
+          What are you looking for<span class="asterik">*</span>?
        </p>
         <div>
           <input type="radio" id="meal-side" name="side" value="side">
@@ -42,12 +46,13 @@
         </div>
       </fieldset>
      </form>
-      </ul>
-      
-      <div>
+    </div>
+    <div class="box">
+      <div class="cookpot-image">
         <img src="assets/cookpot.svg" alt="cookpot"/>
       </div>
-    
+    </div>
+    </section>
     
   
   </body>

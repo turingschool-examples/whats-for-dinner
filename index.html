@@ -4,23 +4,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>What's For Dinner?</title>
   </head>
-  <body> 
-    <h1>What's for dinner?</h1>   
-    <form class="left-box">
-      <h2>What are you looking for?*</h2>
-      <input type="radio" id="sides" class="food-button" name="rad-button" checked>
-      <label for="sides" class="sides-button">Sides</label>
-      <input type="radio" id="main-dish" class="food-button" name="rad-button">
-      <label for="main-course" class="main-dish-button">Main Dish</label>
-      <input type="radio" id="desserts" class="food-button" name="rad-button">
-      <label for="desserts" class="desserts-button">Dessert</label>
-      <button class="cook-button">LET'S COOK!</button>
-    </form>
-    <form>
-      <div class="right-box">
-        <!-- <img class="cookpot" src="assets/cookpot.svg" alt="Place to cook food!">  -->
+  <body>
+    <nav class="navbar"> 
+      <h1>What's for Dinner?</h1> 
+    </nav>  
+    <form class="food-selection">
+      <div class="left-box">
+        <h2 class="dish-question">What are you looking for?</h2>       
+        <label for="sides"><input type="radio" id="sides" class="food-button" name="rad-button" checked>Sides</label><br>
+        <label for="main-course"><input type="radio" id="main-dish" class="food-button" name="rad-button">Main Dish</label><br> 
+        <label for="desserts">  <input type="radio" id="desserts" class="food-button" name="rad-button">Desserts</label><br>
+        <label for="entire-meal">  <input type="radio" id="desserts" class="food-button" name="rad-button">Entire Meal</label><br>
+        <br>
+        <br>
+        <button class="cook-button">LET'S COOK!</button>
       </div>
-    </form> 
+      <div class="right-box">
+          <img class="cookpot" src="assets/cookpot.svg" alt="Place to cook food!"> 
+      </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

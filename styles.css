@@ -20,7 +20,8 @@ body {
 
 header {
   background-color: #0fb9b1;
-  padding: 5px 25px;
+  padding-left: 25px;
+  font-size: 20px;
 }
 
 article {
@@ -28,46 +29,63 @@ article {
   height: 310px;
   background-color: rgba(225, 225, 225, .9);
   margin-top: 50px;
-  padding: 40;
+  padding: 40px;
 }
-
-
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin: 0px;
+}
 
 h2 {
-  font-size: 18px;
+  font-size: 30px;
+  margin-bottom: 0px;
 }
+
+h3 {
+  padding: 18px;
+}
+
+h4 {
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+  }
 
 span {
   color: #ee5253;
+  font-size: 28px;
+  font-variant-position: super;
 }
 
 ul {
   list-style: none;
   padding-left: 0px;
+  font-size: 20px;
+  display: flex;
+  height: 200px;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-li {
-  padding-bottom: 15px;
-}
+/* ******Classes****** */
 
+div.should-make-space {
+height:206;
+width: 425;
+}
 .img {
   height: 125px;
   width: 125px;
-  align-self:center;
-}
-
-h4 {
-  font-style: italic;
-  font-size: large;
-  text-align: center;
-}
+ }
 
 .cook-button {
   background-color: #0fb9b1;
   border-radius: 5px;
-  padding: 5px 30px;
+  padding: 10px 50px;
   border: 0;
-  font-size:smaller;
+  font-size: 15px;
   font-weight:300;
 }
 
@@ -77,22 +95,20 @@ h4 {
   border-radius: 5px;
   padding: 10px;
   border: 0;
+  margin-top: 50px;
   align-self:last baseline;
 }
 
-
-
-.img-flex {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-even {
+/* *******FLEX*********  */
+.box-spread {
   display: flex;
   justify-content: space-evenly;
 }
 
-.flex-right {
+
+
+
+.clear-area {
   display: flex;
   justify-content:flex-end;
   align-items: flex-end;
@@ -101,3 +117,4 @@ h4 {
 .hidden {
   display: none;
 }
+

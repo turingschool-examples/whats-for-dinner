@@ -8,20 +8,23 @@
       <h1 class="title">What's for Dinner?</h1>
     </div>
     <section class="mid-container">
-      <div id="form" class="recipe-container">
+      <div id="form" name="dish-selector" class="recipe-container">
         <h2 class="form-prompt">What are you looking for?<span class="astryx">*</span></h2>
       <!-- <div class="radio-toolbar"> -->
         <div class="radio-button">
-          <input type="radio" class="dish"><label>Side</label>
+          <input id="side-selection" type="radio" class="dish" name="choose-dish" value="side" checked>
+          <label>Side</label>
         </div>
         <div class="radio-button">
-          <input type="radio" class="dish"><label>Main Dish</label>
+          <input id="main-dish-selection" type="radio" class="dish" name="choose-dish" value="main">
+          <label>Main Dish</label>
         </div>
         <div class="radio-button">
-          <input type="radio" class="dish"><label>Dessert</label>
+          <input id="dessert-selection" type="radio" class="dish" name="choose-dish" value="dessert">
+          <label>Dessert</label>
         </div>
         <div class="search-food-button">
-            <button class="submit">LET'S COOK!</button>
+            <button class="submit" onclick="displayDish()">LET'S COOK!</button>
         </div>
      <!-- </div> -->
       </div>

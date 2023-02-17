@@ -110,7 +110,9 @@ function clearRadioSelection() {
 // ** Populate you should make
 function giveMakeSuggestion() {
     var selectedType = findMealType()
-
+    singleDishText.innerText ='';
+    entireMealText.innerText= '';
+    
     if (selectedType === 'dessert') {
         singleDishText.innerText = `${desserts[getRandomIndex(desserts)]}!`
         displayShouldMake()

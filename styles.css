@@ -68,12 +68,13 @@ h2 {
 
 .cook-button {
     margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 30px;
     background-color: #0fb9b1;
     height: 3.5vh;
     width: 10vw;
     border: 1px solid #0fb9b1;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .dish-question::after {
@@ -92,16 +93,16 @@ h4 {
 }
 
 .buttons {
-    display: inline-block;
+    display: inline-block;  
 }
 
 .delete-recipe {
-    margin-left: 80px;
     background-color: red;
     height: 3.5vh;
     width: 10vw;
     border: 1px solid red;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 

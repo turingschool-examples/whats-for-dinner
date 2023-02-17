@@ -37,7 +37,6 @@ body {
 .left-box {
     display: flex;
     flex-direction: column;
-    margin-left: 15px;
     align-items: flex-start;
     background-color: rgba(225, 225, 225, .9);
     height: 395px;
@@ -69,6 +68,7 @@ h2 {
 
 .cook-button {
     margin-left: 50px;
+    margin-right: 50px;
     background-color: #0fb9b1;
     height: 3.5vh;
     width: 10vw;
@@ -90,11 +90,18 @@ h4 {
     font-size: 20px;
     width: 75%
 }
-/* COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
 
-*/
+.buttons {
+    display: inline-block;
+}
+
+.delete-recipe {
+    margin-left: 80px;
+    background-color: red;
+    height: 3.5vh;
+    width: 10vw;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+
 

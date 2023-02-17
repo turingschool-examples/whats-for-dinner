@@ -8,3 +8,96 @@ red - #ee5253
 
 */
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+body {
+  margin: 0; 
+  background-image:url(assets/burger-friends.jpg) ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+ .header-container {
+  background-color:#0fb9b1;
+  border: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+ }
+
+
+.add-recipe-button {
+  background-color: rgba(225, 225, 225, .9);
+  bottom: 10px;
+  padding:
+  /* float: right; */
+/* figure it out */
+  top: 10px
+ }
+
+.main-flexbox-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.box {
+  border: solid 3px black;
+  width: 200px;
+  height: 200px;
+  
+}
+
+.cookpot-image {
+  width: 100px;
+  height: 200px;
+}
+
+.asterik {
+  color: #ee5253;
+}
+
+
+/* .wrapper {
+  background-color: white;
+  width: 75%;
+  height: 300px;
+  border: solid 1px black;
+  display: flex;
+  align-items: bottom;
+  flex-direction: row;
+  justify-content: left;
+} */
+
+
+/* // by element name
+h1 {
+  color: red;
+}
+
+// by class name
+.primary-font {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+}
+
+// by id name
+#about-page {
+  background-color: lightgrey;
+}
+
+// by a combination of above
+.primary-font p {
+  font-size: 15px;
+  color: darkgrey;
+} */

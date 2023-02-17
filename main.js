@@ -6,7 +6,10 @@ var entireMealRadioBtn = document.getElementById('entireMealRadioBtn')
 var letsCookBtn = document.querySelector('.lets-cook-btn')
 var cookpotImage = document.querySelector('.cookpot-image')
 var recipeOption = document.querySelector('.results-box')
-
+var deleteButton = document.querySelector('.deleteBtn')
+var recipeForm = document.querySelector('.new-recipe-form')
+var randomDish = document.querySelector('.randomDish')
+var messageBox = document.querySelector('.message-box')
 
 var sides = [
   'Miso Glazed Carrots',
@@ -58,46 +61,39 @@ var desserts = [
 'Eclairs',
 ]
 
-letsCookBtn.addEventListener('click', displayRecipe)
+var sideDish = getRandomIndex(sides)
+var mainDish = getRandomIndex(mains)
+var dessertDish = getRandomIndex(desserts)
 
+letsCookBtn.addEventListener('click', displayRecipe)
+deleteButton.addEventListener('click', deleteRecipe)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 function displayRecipe() {
-  var sideDish = getRandomIndex(sides)
-  var mainDish = getRandomIndex(mains)
-  var dessertDish = getRandomIndex(desserts)
+  cookpotImage.classList.add('hidden')
+  messageBox.classList.remove('hidden')
   if (sideRadioBtn.checked) {
-    recipeOption.innerHTML = '';
-    recipeOption.innerHTML += 
-    `<section class="message-box">
-        <h1 class="results-title">You should make:</h1> 
-        <h2 class="randomDish">${sides[sideDish]}!</h2>
-      </section>`
+      randomDish.innerText = ''
+      randomDish.innerText += `${sides[sideDish]}!`
   } else if (mainDishRadioBtn.checked) {
-    recipeOption.innerHTML = '';
-    recipeOption.innerHTML += 
-    `<section class="message-box">
-        <h1 class="results-title">You should make:</h1> 
-        <h2 class="randomDish">${mains[mainDish]}!</h2>
-      </section>`
+    randomDish.innerText = ''
+      randomDish.innerText += `${mains[mainDish]}!`
   } else if (dessertRadioBtn.checked) {
-    recipeOption.innerHTML = '';
-    recipeOption.innerHTML += 
-    `<section class="message-box">
-        <h1 class="results-title">You should make:</h1> 
-        <h2 class="randomDish">${desserts[dessertDish]}!</h2>
-      </section>`
+    randomDish.innerText = ''
+    randomDish.innerText += `${desserts[dessertDish]}!`
   } else if (entireMealRadioBtn.checked) {
-    recipeOption.innerHTML = '';
-    recipeOption.innerHTML += 
-    `<section class="message-box">
-        <h1 class="results-title">You should make:</h1> 
-        <h2 class="entire-meal">${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!</h2>
-      </section>`
+    randomDish.innerText = ''
+    randomDish.innerText += `${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!`
+    
   }
+}
+
+function deleteRecipe() {
+  messageBox.classList.add('hidden')
+  cookpotImage.classList.remove('hidden')
 }
 
 

@@ -1,3 +1,13 @@
+
+var sideRadioBtn = document.getElementById('sideRadioBtn')
+var mainDishRadioBtn = document.getElementById('mainDishRadioBtn')
+var dessertRadioBtn = document.getElementById('dessertRadioBtn')
+var entireMealRadioBtn = document.getElementById('entireMealRadioBtn')
+var letsCookBtn = document.querySelector('.lets-cook-btn')
+var cookpotImage = document.querySelector('.cookpot-image')
+var recipeOption = document.querySelector('.results-box')
+
+
 var sides = [
   'Miso Glazed Carrots',
 'Coleslaw',
@@ -12,7 +22,7 @@ var sides = [
 ]
 
 var mains = [
-  'Spaghetti and Meatballs',
+'Spaghetti and Meatballs',
 'Pineapple Chicken',
 'Shakshuka',
 'Thai Yellow Curry',
@@ -47,3 +57,48 @@ var desserts = [
 'Croissants',
 'Eclairs',
 ]
+
+letsCookBtn.addEventListener('click', displayRecipe)
+
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function displayRecipe() {
+  var sideDish = getRandomIndex(sides)
+  var mainDish = getRandomIndex(mains)
+  var dessertDish = getRandomIndex(desserts)
+  if (sideRadioBtn.checked) {
+    recipeOption.innerHTML = '';
+    recipeOption.innerHTML += 
+    `<section class="message-box">
+        <h1 class="results-title">You should make:</h1> 
+        <h2 class="randomDish">${sides[sideDish]}!</h2>
+      </section>`
+  } else if (mainDishRadioBtn.checked) {
+    recipeOption.innerHTML = '';
+    recipeOption.innerHTML += 
+    `<section class="message-box">
+        <h1 class="results-title">You should make:</h1> 
+        <h2 class="randomDish">${mains[mainDish]}!</h2>
+      </section>`
+  } else if (dessertRadioBtn.checked) {
+    recipeOption.innerHTML = '';
+    recipeOption.innerHTML += 
+    `<section class="message-box">
+        <h1 class="results-title">You should make:</h1> 
+        <h2 class="randomDish">${desserts[dessertDish]}!</h2>
+      </section>`
+  } else if (entireMealRadioBtn.checked) {
+    recipeOption.innerHTML = '';
+    recipeOption.innerHTML += 
+    `<section class="message-box">
+        <h1 class="results-title">You should make:</h1> 
+        <h2 class="entire-meal">${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!</h2>
+      </section>`
+  }
+}
+
+
+

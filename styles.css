@@ -26,6 +26,10 @@ body {
   background-size: cover;
 }
 
+.hidden {
+  display: none; 
+}
+
 .navbar {
   display: flex;
   background-color: #0fb9b1;
@@ -75,6 +79,7 @@ body {
   margin-left: 55px;
   padding: 10px;
   background-color: #0fb9b1;
+  cursor: pointer;
 }
 
 .dish-title {
@@ -116,6 +121,32 @@ body {
 
 .recipe-input {
   margin-left: 20px;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.results-title {
+  margin-bottom: 0%;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.randomDish {
+  margin-top: 0%;
+  font-size: 40px;
+}
+
+.entire-meal {
+  font-size: 25px;
+  height: 75%;
+  width: 75%;
+  text-align: center;
 }
 
 

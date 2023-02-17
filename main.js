@@ -58,9 +58,26 @@ var desserts = ["Apple Pie",
   "Croissants",
   "Eclairs"];
 
-var submitButton = document.querySelector('.submit');
+// var submitButton = document.querySelector('.submit');
 
 // submitButton.addEventListener('click', listFoodDish);
+
+function displayDish() {
+  var foodDisplay = document.querySelector('#display-meal');
+  var radioElements = document.getElementsByName("choose-dish");
+  for (var i = 0; i < radioElements.length; i++) {
+    if (radioElements[i].checked) {
+      if (radioElements[i].value === "side") {
+        foodDisplay.innerHTML = `<h2>${sides[getRandom(sides)]}</h2>`;
+      } else if (radioElements[i].value === "main") {
+        foodDisplay.innerHTML = `<h2>${mains[getRandom(mains)]}</h2>`;
+      } else {
+        foodDisplay.innerHTML = `<h2>${desserts[getRandom(desserts)]}</h2>`;
+      }
+
+    }
+  }
+}
 
 function getRandom(dishList) {
   return Math.floor(Math.random() * dishList.length);

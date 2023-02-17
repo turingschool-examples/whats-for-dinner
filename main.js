@@ -1,3 +1,16 @@
+
+var sideRadioBtn = document.getElementById('sideRadioBtn')
+var mainDishRadioBtn = document.getElementById('mainDishRadioBtn')
+var dessertRadioBtn = document.getElementById('dessertRadioBtn')
+var entireMealRadioBtn = document.getElementById('entireMealRadioBtn')
+var letsCookBtn = document.querySelector('.lets-cook-btn')
+var cookpotImage = document.querySelector('.cookpot-image')
+var recipeOption = document.querySelector('.results-box')
+var deleteButton = document.querySelector('.deleteBtn')
+var recipeForm = document.querySelector('.new-recipe-form')
+var randomDish = document.querySelector('.randomDish')
+var messageBox = document.querySelector('.message-box')
+
 var sides = [
   'Miso Glazed Carrots',
 'Coleslaw',
@@ -12,7 +25,7 @@ var sides = [
 ]
 
 var mains = [
-  'Spaghetti and Meatballs',
+'Spaghetti and Meatballs',
 'Pineapple Chicken',
 'Shakshuka',
 'Thai Yellow Curry',
@@ -47,3 +60,41 @@ var desserts = [
 'Croissants',
 'Eclairs',
 ]
+
+var sideDish = getRandomIndex(sides)
+var mainDish = getRandomIndex(mains)
+var dessertDish = getRandomIndex(desserts)
+
+letsCookBtn.addEventListener('click', displayRecipe)
+deleteButton.addEventListener('click', deleteRecipe)
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function displayRecipe() {
+  cookpotImage.classList.add('hidden')
+  messageBox.classList.remove('hidden')
+  if (sideRadioBtn.checked) {
+      randomDish.innerText = ''
+      randomDish.innerText += `${sides[sideDish]}!`
+  } else if (mainDishRadioBtn.checked) {
+    randomDish.innerText = ''
+      randomDish.innerText += `${mains[mainDish]}!`
+  } else if (dessertRadioBtn.checked) {
+    randomDish.innerText = ''
+    randomDish.innerText += `${desserts[dessertDish]}!`
+  } else if (entireMealRadioBtn.checked) {
+    randomDish.innerText = ''
+    randomDish.innerText += `${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!`
+    
+  }
+}
+
+function deleteRecipe() {
+  messageBox.classList.add('hidden')
+  cookpotImage.classList.remove('hidden')
+}
+
+
+

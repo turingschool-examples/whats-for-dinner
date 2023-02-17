@@ -20,10 +20,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-image: url(assets/burger-friends.jpg);
-  height: 100%;
-  background-position: center;
+  height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+}
+
+.hidden {
+  display: none!important; 
 }
 
 .navbar {
@@ -50,10 +53,10 @@ body {
 .box-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 15px;
-  height: 75%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  height: 100%;
 }
 
 .dish-options {
@@ -61,12 +64,13 @@ body {
   flex-direction: column;
   align-content: center;
   height: 400;
-  width: 500;
+  width: 450;
   background-color: rgba(225, 225, 225, .9);
 }
 
 .radio-btn {
   margin-left: 55px;
+  cursor: pointer;
 }
 
 .lets-cook-btn {
@@ -75,6 +79,7 @@ body {
   margin-left: 55px;
   padding: 10px;
   background-color: #0fb9b1;
+  cursor: pointer;
 }
 
 .dish-title {
@@ -93,7 +98,7 @@ body {
 
 .results-box{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 400;
@@ -116,6 +121,46 @@ body {
 
 .recipe-input {
   margin-left: 20px;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 450px;
+}
+
+.results-title {
+  margin-bottom: 0%;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.randomDish {
+  margin-top: 0%;
+  font-size: 25px;
+  text-align: center;
+  width: 75%
+
+}
+
+.entire-meal {
+  font-size: 25px;
+  height: 75%;
+  width: 75%;
+  text-align: center;
+}
+
+.deleteBtn {
+  /* display: flex;
+  justify-content: center;
+  align-items: end; */
+  cursor: pointer;
+  background-color: red;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 

@@ -94,6 +94,7 @@ var signInForm = document.querySelector('.sign-in-form');
 var signInButton = document.querySelector('.entry-button');
 var welcomeText = document.querySelector('.welcome-user');
 var errorMessage = document.querySelector('h5');
+var signInContainer = document.querySelector('.sign-in-container');
 var user = "";
 
 signInButton.addEventListener('click', showMainPage);
@@ -103,9 +104,10 @@ function showMainPage() {
   if (user) {
     pageDisplay.classList.remove('hide');
     signInForm.classList.add('hide');
-    welcomeText.innerText = `Welcome ${user}!`
+    signInForm.classList.remove('sign-in-form');
+    welcomeText.innerText = `Welcome ${user}!`;
   } else {
-    errorMessage.innerText = `Please provide valid name`
+    errorMessage.innerText = `Please provide valid name`;
   }
 }
 

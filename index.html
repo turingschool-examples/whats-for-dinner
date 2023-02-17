@@ -3,8 +3,29 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  <nav>
+    <h1>What's for Dinner?</h1>  
+  </nav>
   <body>
-    
+    <section class="container">
+      <div class="box">
+        <h2>What are you looking for?*</h2>
+        <form>
+          <fieldset>
+            <input name="meal-type" id="side" type="radio" value="side">
+            <label for="side">Side</label><br><br><br>
+            <input name="meal-type" id="main-dish" type="radio" value="main-dish">
+            <label for="main-dish">Main Dish</label><br><br><br>
+            <input name="meal-type" id="desert" type="radio" value="desert">
+            <label for="desert">Desert</label><br><br><br>
+            <input name="meal-type" id="entire-meal" type="radio" value="entire-meal">
+            <label for="entire-meal">Entire Meal</label><br><br><br>
+            <button class="lets-Cook!">LET'S COOK!</button>
+          </fieldset>
+        </form>  
+      </div>
+      <div class="box"></div>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

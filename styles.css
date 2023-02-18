@@ -82,6 +82,16 @@ h1 {
   padding: 10px 50px 10px 50px;
   border-radius: 5px;
   border: 0;
+  cursor: pointer;
+}
+
+.food-prompt {
+  font-style: italic;
+}
+
+.random-dish {
+  margin-top: 2px;
+  font-size: 50px;
 }
 
 #display-meal {
@@ -100,27 +110,52 @@ h1 {
   display: none;
 }
 
-.sign-in-container {
-  height: 80%;
-  width: 80%;
-  background-color: aquamarine;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-}
-
 .sign-in-form {
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   margin-right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10%;
+  background-color: rgba(225, 225, 225, .9);
+  
+}
+
+.sign-in-container {
+  height: 80%;
+  width: 80%;
+  background-color: #7fffd4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.sign-in-heading {
+  margin-left: 0;
+}
+
+.entry-button {
+  border: 0;
+  padding: 0;
+  color: #f5e719;
+  background-color: #852dbacc;
+  height: 50px;
+  width: 200px;
+  box-shadow: 5px 10px 20px black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.input-prompt,
+.input-text,
+.sign-in-heading {
+  text-shadow: 1.5px 1.5px white;
 }
 
 h5 {
   color: rgb(179, 23, 23);
   font-size: large;
 }
+

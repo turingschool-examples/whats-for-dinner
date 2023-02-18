@@ -40,35 +40,35 @@ h2 {
     background: rgba(225, 225, 225, .9);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 .box:nth-child(1) {
-    height: 55vh;
-    width: 65vw;
-    display: flex;
+    height: 50vh;
+    width: 35vw;
+    /* display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 .box:nth-child(2) {
-    height: 55vh;
-    width: 65vw;
-    display: flex;
+    height: 50vh;
+    width: 35vw;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
-.small-box {
+/* .small-box {
     margin-right: 300px;
     margin-bottom: 150px;
     border: dotted palevioletred;
     display: flex;
-    /* justify-content: center;
+    justify-content: center;
     flex-direction: column;
-    /* align-items: baseline; */
-}
+    align-items: baseline;
+} */
 
 .radio-group {
     font-family: 'Roboto', sans-serif;
@@ -85,7 +85,7 @@ section {
     border: solid red;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .cookpot-image {

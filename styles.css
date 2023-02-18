@@ -111,10 +111,14 @@ width: 425;
   justify-content: space-evenly;
 }
 
+.output-box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
-.clear-area {
+.clear-box {
   display: flex;
   justify-content:flex-end;
   align-items: flex-end;

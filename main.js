@@ -10,19 +10,22 @@ var foodSelection = document.querySelector(".food-selection")
 letsCookButton.addEventListener("click", getDish );
 
 function getDish() {
-if(document.getElementById("side").checked === true) {
+if (document.getElementById("side").checked === true) {
     console.log(sides)
-} else if(document.getElementById("main-dish").checked === true) {
+} else if (document.getElementById("main-dish").checked === true) {
     console.log(mains)
+} else if (document.getElementById("dessert").checked === true) {
+    console.log(desserts)
 }
-
 }
        
 
 
 sides = ["Miso Glazed Carrots","Coleslaw","Garden Salad"]
 mains = ["Spaghetti and Meatballs","Pineapple Chicken","Shakshuka"]
-
+desserts = ["Apple Pie","Lemon Meringue Pie","Black Forest Cake"]
+   
+  
 
 
 

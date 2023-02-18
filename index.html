@@ -1,10 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>What's for Dinner?</title>
   </head>
+
   <body>
-    
+    <header class="header">
+      <h1>What's for Dinner?</h1> 
+    </header>
+
+    <main class="box">
+      <section class="wrapper">
+        <form class="box1">
+          <h2>What are you looking for?</h2>
+            <div>
+              <label for="Side"> <input type="radio" id="Side" name="food" value="Side"/> Side</label>
+              <label for="Main Dish"> <input type="radio" id="Main Dish" name="food" value="Main Dish"/>Main Dish</label>
+              <label for="Dessert"> <input type="radio" id="Dessert" name="food" value="Dessert"/> Dessert</label>
+              <label for="Entire Meal"> <input type="radio" id="Entire Meal" name="food" value="Entire Meal"/>Entire Meal</label> 
+            </div>
+          <div>
+            <input class="button" type="button" value="LET'S COOK!" onclick="letsCook()">
+          </div>
+        </form> 
+        <section class="box2">
+          <img class="image"  src="assets/cookpot.svg" alt="Cookpot">
+        <section class="food-suggestion hidden">
+          <h2 class="random-results">You should make:</h2> 
+          <h2 class="random-food"></h2>
+        </section> 
+        
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
+
+
+<!-- <section class="results-box">
+  <img class="cookpot-image" src="assets/cookpot.svg" alt="cookpot image">
+  <section class="message-box hidden">
+    <h2 class="results-title">You should make:</h2>
+    <h2 class="randomDish"></h2>
+    <button class="deleteBtn">YUCK! DELETE!</button>
+  </section> -->
+<!-- 
+.hidden {
+  display: none!important;
+} -->

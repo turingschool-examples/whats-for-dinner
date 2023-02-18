@@ -7,24 +7,27 @@
     <h1>What's for Dinner?</h1>  
   </nav>
   <body>
-    <section class="container">
+    <section class="container" id="left">
       <div class="box">
-        <h2>What are you looking for?*</h2>
-        <form>
-          <fieldset>
-            <input name="meal-type" id="side" type="radio" value="side">
-            <label for="side">Side</label><br><br><br>
-            <input name="meal-type" id="main-dish" type="radio" value="main-dish">
-            <label for="main-dish">Main Dish</label><br><br><br>
-            <input name="meal-type" id="desert" type="radio" value="desert">
-            <label for="desert">Desert</label><br><br><br>
-            <input name="meal-type" id="entire-meal" type="radio" value="entire-meal">
-            <label for="entire-meal">Entire Meal</label><br><br><br>
-            <button class="lets-Cook!">LET'S COOK!</button>
-          </fieldset>
-        </form>  
+      <form>
+      <h2>What are you looking for?<span>*</span></h2><br>
+        <fieldset>
+          <input name="meal-type" id="side" type="radio" value="side">
+          <label for="side">Side</label><br><br>
+          <input name="meal-type" id="main-dish" type="radio" value="main-dish">
+          <label for="main-dish">Main Dish</label><br><br>
+          <input name="meal-type" id="desert" type="radio" value="desert">
+          <label for="desert">Desert</label><br><br>
+          <input name="meal-type" id="entire-meal" type="radio" value="entire-meal">
+          <label for="entire-meal">Entire Meal</label><br><br>
+        </fieldset>
+        <button class="lets-Cook!">LET'S COOK!</button>
+      </form>  
       </div>
-      <div class="box"></div>
+      <div class="box" id="right">
+        <img class="pot" src="assets/cookpot.svg" alt="cooking pot" width="200" height="200">
+        
+      </div>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>

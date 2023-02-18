@@ -1,6 +1,9 @@
 //variables
 
-var body = document.querySelectorAll('body')
+var entireMeal = document.getElementById("entire-meal")
+var pot = document.querySelector(".pot")
+
+//var body = document.querySelectorAll('body')
 
 //event listeners
 

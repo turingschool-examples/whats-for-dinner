@@ -39,16 +39,15 @@ body {
     align-items: baseline;
     padding: 20px;
   }
-/* input {
+input {
     display: flex;
     flex-direction: column;
-} */
+}
 label {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    align-items: baseline;
-    align-content: center;
+    padding-left: 35px;
+    margin: 0;
   }
 
 .box2 {
@@ -62,7 +61,10 @@ label {
     flex-direction: center;
   }
 
-button {
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #0fb9b1;
     width:200px;
     height: 35px;

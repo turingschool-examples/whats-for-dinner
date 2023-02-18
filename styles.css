@@ -20,13 +20,26 @@ body {
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    padding-left: initial;
+    margin-left: 20px;
 }
+
+#add-recipe-button {
+    margin-right: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+#lets-cook-button {
+    padding: 5px 40px 5px 40px;
+    border: none;
+    background-color: #0fb9b1;
+}
+
 h2 {
     font-family: 'Roboto', sans-serif;
 }
 
 .top-banner {
+    margin: 0%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +92,7 @@ h2 {
     align-items: baseline; */
 }
 
-section {
+.wrapper {
     margin-top: 50px;
     height: 100vh;
     border: solid red;

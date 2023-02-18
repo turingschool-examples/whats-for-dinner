@@ -31,16 +31,21 @@ var currentFood;
 
 function letsCook() {
     var randomSide = getRandomIndex(side);
-    // var randomMainDish = getRandomIndex(mainDish);
-    // var randomDessert = getRandomIndex(dessert);
+    var randomMainDish = getRandomIndex(mainDish);
+    var randomDessert = getRandomIndex(dessert);
     cookPotImage.classList.add('hidden')
     foodSuggestion.classList.remove('hidden')
 
      if (document.getElementById("Side").checked) {
         currentFood = side[randomSide]
-        randomFood.innerText = ''
-        randomFood.innerText += currentFood + '!'
-    }
+     } else if (document.getElementById("Main Dish").checked) {
+        currentFood = mainDish[randomMainDish]
+     } else if (document.getElementById("Dessert").checked) {
+        currentFood = dessert[randomDessert]
+     }
+        randomFood.innerText = `${currentFood}!`
+        // randomFood.innerText += currentFood + '!'
+    
 
 }
         

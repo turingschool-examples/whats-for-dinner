@@ -39,15 +39,17 @@ body {
     align-items: baseline;
     padding: 20px;
   }
+
 input {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 label {
     display: flex;
     flex-direction: row;
-    padding-left: 35px;
-    margin: 0;
+    padding-left: 0px;
+    margin: 30px;
   }
 
 .box2 {

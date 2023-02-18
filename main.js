@@ -1,3 +1,4 @@
+
 // *** Selectors ***
 var letsCookBtn = document.querySelector(".cook-button");
 var clearBtn = document.querySelector(".clear-button");
@@ -129,3 +130,4 @@ function giveMakeSuggestion() {
         displayCrockpot()
     )
 }
+

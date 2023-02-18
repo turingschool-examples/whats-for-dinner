@@ -58,37 +58,7 @@ var desserts = ["Apple Pie",
   "Croissants",
   "Eclairs"];
 
-// var submitButton = document.querySelector('.submit');
 
-// submitButton.addEventListener('click', listFoodDish);
-
-function displayDish() {
-  var foodDisplay = document.querySelector('#display-meal');
-  var radioElements = document.getElementsByName("choose-dish");
-  for (var i = 0; i < radioElements.length; i++) {
-    if (radioElements[i].checked) {
-      if (radioElements[i].value === "side") {
-        foodDisplay.innerHTML = `<h2>${sides[getRandom(sides)]}</h2>`;
-      } else if (radioElements[i].value === "main") {
-        foodDisplay.innerHTML = `<h2>${mains[getRandom(mains)]}</h2>`;
-      } else {
-        foodDisplay.innerHTML = `<h2>${desserts[getRandom(desserts)]}</h2>`;
-      }
-
-    }
-  }
-}
-
-function getRandom(dishList) {
-  return Math.floor(Math.random() * dishList.length);
-}
-
-// make a login page that takes a name input to proceed to app
-// require a name to be submitted to show the main body
-// use get element by id .value to obtain the input value
-// 
-
-window.addEventListener('load', supplyInput);
 var pageDisplay = document.querySelector('.page-display');
 var signInForm = document.querySelector('.sign-in-form');
 var signInButton = document.querySelector('.entry-button');
@@ -97,7 +67,28 @@ var errorMessage = document.querySelector('h5');
 var signInContainer = document.querySelector('.sign-in-container');
 var user = "";
 
+
+window.addEventListener('load', supplyInput);
 signInButton.addEventListener('click', showMainPage);
+
+
+function displayDish() {
+  var foodDisplay = document.querySelector('#display-meal');
+  var radioElements = document.getElementsByName("choose-dish");
+  for (var i = 0; i < radioElements.length; i++) {
+    if (radioElements[i].checked) {
+        var checkedValue = eval(radioElements[i].value);
+        foodDisplay.innerHTML = `
+        <h2 class="food-prompt">You should make:</h2>
+        <h1 class="random-dish">${checkedValue[getRandom(checkedValue)]}!</h1>
+        `;
+    }
+  }
+}
+
+function getRandom(dishList) {
+  return Math.floor(Math.random() * dishList.length);
+}
 
 function showMainPage() {
   user = document.getElementById('name').value;

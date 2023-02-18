@@ -18,10 +18,7 @@ body {
     background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
- /* .box {
-    height: 300px;
-    width: 50%;
- } */
+
  .wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -34,31 +31,44 @@ body {
     padding: 50px;
     width: 400px;
     height: 400px;
+    border-radius: 1px;
     margin-right: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: baseline;
     padding: 20px;
   }
-input {
+/* input {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-}
+} */
+label {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    align-content: center;
+  }
+
 .box2 {
     background-color: rgba(225, 225, 225, .9);
     padding: 120px 20px;
     width: 400px;
     height: 200px;
+    border-radius: 1px;
     display: flex;
     justify-content: center;
     flex-direction: center;
   }
 
-svg {
-    width: 50%;
-    height: auto
-  }
+button {
+    background-color: #0fb9b1;
+    width:200px;
+    height: 35px;
+    border-radius: 5px;
+    border-color: #95a5a6;
+}
 
  /* .box1 {
     font-size:x-large;

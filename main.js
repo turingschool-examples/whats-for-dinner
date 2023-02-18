@@ -42,6 +42,8 @@ function letsCook() {
         currentFood = mainDish[randomMainDish]
      } else if (document.getElementById("Dessert").checked) {
         currentFood = dessert[randomDessert]
+     } else if (document.getElementById("Entire Meal").checked) {
+        currentFood = `${mainDish[randomMainDish]} with a side of ${side[randomSide]} and ${dessert[randomDessert]} for dessert`
      }
         randomFood.innerText = `${currentFood}!`
         // randomFood.innerText += currentFood + '!'

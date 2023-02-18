@@ -60,6 +60,25 @@ label {
     justify-content: center;
     flex-direction: center;
   }
+  .hidden {
+    display: none!important;
+  }
+
+.food-suggestion {
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 1px;  
+}
+
+.random-results {
+    margin-bottom: 0%;
+    font-size: 15px;
+    font-style: italic;
+}
 
 .button {
     display: flex;

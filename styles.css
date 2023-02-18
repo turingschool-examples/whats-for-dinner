@@ -20,72 +20,48 @@ body {
 
 header {
   background-color: #0fb9b1;
-  padding-left: 25px;
-  font-size: 20px;
+  padding: 5px 25px;
 }
 
 article {
-  width: 425px;
-  height: 310px;
+  width: 400px;
+  height: 250px;
   background-color: rgba(225, 225, 225, .9);
   margin-top: 50px;
-  padding: 40px;
+  padding: 40;
 }
-h1 {
-  font-size: 32px;
-  text-align: center;
-  margin: 0px;
-}
+
+
 
 h2 {
-  font-size: 30px;
-  margin-bottom: 0px;
-}
-
-h3 {
-  padding: 18px;
-}
-
-h4 {
-  font-style: italic;
   font-size: 18px;
-  text-align: center;
-  }
+}
 
 span {
   color: #ee5253;
-  font-size: 28px;
-  font-variant-position: super;
 }
 
 ul {
   list-style: none;
   padding-left: 0px;
-  font-size: 20px;
-  display: flex;
-  height: 200px;
-  margin: 0;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
-/* ******Classes****** */
-
-div.should-make-space {
-height:206;
-width: 425;
+li {
+  padding-bottom: 15px;
 }
-.img {
-  height: 125px;
-  width: 125px;
- }
+
+h4 {
+  font-style: italic;
+  font-size: large;
+  text-align: center;
+}
 
 .cook-button {
   background-color: #0fb9b1;
   border-radius: 5px;
-  padding: 10px 50px;
+  padding: 5px 30px;
   border: 0;
-  font-size: 15px;
+  font-size:smaller;
   font-weight:300;
 }
 
@@ -95,26 +71,19 @@ width: 425;
   border-radius: 5px;
   padding: 10px;
   border: 0;
-  margin-top: 50px;
   align-self:last baseline;
-}
-
-/* *******FLEX*********  */
-.box-spread {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
-
-
-.clear-area {
-  display: flex;
-  justify-content:flex-end;
-  align-items: flex-end;
 }
 
 .hidden {
   display: none;
 }
 
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: end;
+}

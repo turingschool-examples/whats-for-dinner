@@ -31,8 +31,7 @@ article {
   margin-top: 50px;
   padding: 40px;
   /********** additon ******/
-  display: flex;
-  flex-direction: column;
+ 
 }
 
 h1 {
@@ -104,7 +103,7 @@ width: 425;
 
 .clear-button {
   background-color: #95a5a6;
-  color: rgba(225, 225, 225, .9);
+  color: rgba(225, 225, 225, .9); 
   border-radius: 5px;
   padding: 10px;
   border: 0;
@@ -123,6 +122,8 @@ width: 425;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .clear-box {

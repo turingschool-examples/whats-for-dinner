@@ -11,11 +11,11 @@ letsCookButton.addEventListener("click", getDish );
 // functions
 function getDish() {
    if (document.getElementById("side").checked === true) {
-  foodOutputText.innerText = getRandomIndex(sides)
+  foodOutputText.innerText = `${getRandomIndex(sides)}!`
  } else if (document.getElementById("main-dish").checked === true) {
-  foodOutputText.innerHTML = getRandomIndex(mains)
+  foodOutputText.innerHTML = `${getRandomIndex(mains)}!`
  } else if (document.getElementById("dessert").checked === true) {
-  foodOutputText.innerHTML = getRandomIndex(desserts)
+  foodOutputText.innerHTML = `${getRandomIndex(desserts)}!`
 }
 hideCrockPot()
 }

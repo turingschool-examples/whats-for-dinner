@@ -71,6 +71,7 @@ function getRandomIndex(array) {
 }
 
 function displayRecipe() {
+  
   var sideDish = getRandomIndex(sides)
   var mainDish = getRandomIndex(mains)
   var dessertDish = getRandomIndex(desserts)
@@ -97,14 +98,15 @@ function deleteRecipe() {
   var mainDelete = mains.indexOf(currentRecipe)
   var dessertDelete = desserts.indexOf(currentRecipe)
   var mealDelete = entireMeal.indexOf(currentRecipe)
-  if (sideDelete > -1) {
-    sides.splice(sideDelete, 1)
-  } else if (mainDelete > -1) {
-    mains.splice(mainDelete, 1)
-  } else if (dessertDelete > -1) {
-    desserts.splice(dessertDelete, 1) 
-  } else if (mealDelete > -1) {
-    entireMeal.splice(mealDelete, 1)
+  console.log(sideDelete)
+  if (sideDelete >= -1) {
+    sides.splice(sideDelete,1)
+  } else if (mainDelete >= -1) {
+    mains.splice(mainDelete,1)
+  } else if (dessertDelete >= -1) {
+    desserts.splice(dessertDelete,1) 
+  } else if (mealDelete >= -1) {
+    entireMeal.splice(mealDelete,1)
   }
   alert('This recipe has been deleted!')
 }

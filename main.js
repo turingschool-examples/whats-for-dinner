@@ -1,13 +1,11 @@
-
 // *** Selectors ***
 var letsCookBtn = document.querySelector(".cook-button");
 var clearBtn = document.querySelector(".clear-button");
 var radioBtns = document.getElementsByName('dish-type');
 var crockpotImg = document.querySelector('.js-crockpot-pic');
 
-var shouldMakeDisplay = document.querySelector('.js-make');
-var entireMealText = document.querySelector('.js-entire-meal');
-var singleDishText = document.querySelector('.js-single-dish');
+var shouldMakeDisplay = document.querySelector('.js-output');
+var outputText = document.querySelector('.js-output-text');
 
 // *** Arrays ***
 var sides = [
@@ -84,19 +82,20 @@ function findMealType() {
 function displayShouldMake() {
     crockpotImg.classList.add('hidden')
     shouldMakeDisplay.classList.remove('hidden')
+    clearBtn.classList.remove('hidden')
 }
 
 function displayCrockpot() {
     crockpotImg.classList.remove('hidden')
     shouldMakeDisplay.classList.add('hidden')
+    clearBtn.classList.add('hidden')
 }
 
 
 function clearSelection(){
     displayCrockpot();
     clearRadioSelection() 
-    singleDishText.innerText = '';
-    entireMealText.innerText= '';
+    outputText.innerText = '';
 }
 
 function clearRadioSelection() {
@@ -111,23 +110,27 @@ function clearRadioSelection() {
 // ** Populate you should make
 function giveMakeSuggestion() {
     var selectedType = findMealType()
-    singleDishText.innerText ='';
-    entireMealText.innerText= '';
-    
+    outputText.innerText ='';
+    outputText.classList.remove('single-dish')
+    outputText.classList.remove('entire-meal')
+        
     if (selectedType === 'dessert') {
-        singleDishText.innerText = `${desserts[getRandomIndex(desserts)]}!`
+        outputText.innerText = `${desserts[getRandomIndex(desserts)]}!`
+        outputText.classList.add('single-dish')
         displayShouldMake()
     } else if (selectedType === 'side') {
-        singleDishText.innerText = `${randomSelection = sides[getRandomIndex(sides)]}!`
+        outputText.innerText = `${randomSelection = sides[getRandomIndex(sides)]}!`
+        outputText.classList.add('single-dish')
         displayShouldMake()
     } else if (selectedType === 'main-dish') {
-        singleDishText.innerText = `${mainDishes[getRandomIndex(mainDishes)]}!`
+        outputText.innerText = `${mainDishes[getRandomIndex(mainDishes)]}!`
+        outputText.classList.add('single-dish')
         displayShouldMake()
     } else if (selectedType === 'entire-meal'){
-        entireMealText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${randomSelection = sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+        outputText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${randomSelection = sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+        outputText.classList.add('entire-meal')
         displayShouldMake()
     } else(
         displayCrockpot()
     )
 }
-

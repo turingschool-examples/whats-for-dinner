@@ -30,17 +30,21 @@ article {
   background-color: rgba(225, 225, 225, .9);
   margin-top: 50px;
   padding: 40px;
+  /********** additon ******/
+ 
 }
+
+h1 {
+  text-align: center;
+  margin: 2px;
+}
+
 h1.single-dish {
   font-size: 32px;
-  text-align: center;
-  margin: 0px;
 }
 
 h1.entire-meal {
-  font-size: 32px;
-  text-align: center;
-  margin: 0px;
+  font-size: 28px;
 }
 
 h2 {
@@ -54,6 +58,7 @@ h3 {
 
 h4 {
   font-style: italic;
+  margin: 5px;
   font-size: 18px;
   text-align: center;
   }
@@ -81,6 +86,7 @@ div.should-make-space {
 height:206;
 width: 425;
 }
+
 .img {
   height: 125px;
   width: 125px;
@@ -97,7 +103,7 @@ width: 425;
 
 .clear-button {
   background-color: #95a5a6;
-  color: rgba(225, 225, 225, .9);
+  color: rgba(225, 225, 225, .9); 
   border-radius: 5px;
   padding: 10px;
   border: 0;
@@ -116,12 +122,24 @@ width: 425;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .clear-box {
   display: flex;
   justify-content:flex-end;
   align-items: flex-end;
+}
+
+.output {
+  padding-top: 2rem;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .hidden {

@@ -7,18 +7,19 @@
 </head>
 
 <body>
-  <header class="">
+  <header>
     <h3> What's for Dinner? </h3>
-    <!-- <button class="">ADD A RECIPE</button> -->
   </header>
-  <section class="flex-even">
+  <section class="box-spread">
     <article class="left-article">
       <h2>What are you looking for?<span>*</span></h2>
       <ul>
-        <li><input type="radio" name="dishType" id="side" value="side"><label for="side">Side</label></li>
-        <li><input type="radio" name="dishType" id="mainDish" value="mainDish"><label for="mainDish">Main Dish</label></li>
-        <li> <input type="radio" name="dishType" id="dessert" value="dessert"><label for="dessert">Dessert</label></li>
-        <li><input type="radio" name="dishType" id="entireMeal" value="entireMeal"><label for="dessert">Entire Meal</label></li>
+        <li><input type="radio" name="dish-type" id="side" value="side"><label for="side">Side</label></li>
+        <li><input type="radio" name="dish-type" id="main-dish" value="main-dish"><label for="main-dish">Main
+            Dish</label></li>
+        <li> <input type="radio" name="dish-type" id="dessert" value="dessert"><label for="dessert">Dessert</label></li>
+        <li><input type="radio" name="dish-type" id="entire-meal" value="entire-meal"><label for="entire-meal">Entire
+            Meal</label></li>
       </ul>
       <button class="cook-button">LET'S COOK!</button>
     </article>
@@ -27,14 +28,11 @@
       <div class="js-crockpot-pic">
         <img class="img" src="./assets/cookpot.svg">
       </div>
-      <div class="js-make hidden">
+      <div class="js-output hidden output">
         <h4>You should make:</h4>
-        <h1 class="single-dish js-single-dish"></h1>
-        <h1 class="entire-meal js-entire-meal"></h1>
-        <div class="clear-box">
-          <button class="clear-button">CLEAR</button>
-        </div>
+        <h1 class="js-output-text"></h1>
       </div>
+      <button class="clear-button hidden">CLEAR</button>
     </article>
   </section>
 </body>

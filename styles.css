@@ -39,15 +39,17 @@ body {
     align-items: baseline;
     padding: 20px;
   }
+
 input {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 label {
     display: flex;
     flex-direction: row;
-    padding-left: 35px;
-    margin: 0;
+    padding-left: 0px;
+    margin: 30px;
   }
 
 .box2 {
@@ -60,6 +62,30 @@ label {
     justify-content: center;
     flex-direction: center;
   }
+  .hidden {
+    display: none!important;
+  }
+
+.food-suggestion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 1px;  
+}
+
+.random-results {
+    margin-bottom: 0%;
+    font-size: 20px;
+    font-style: italic;
+}
+.random-food {
+    margin-bottom: 0%;
+    font-size: 35px;
+
+}
 
 .button {
     display: flex;

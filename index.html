@@ -4,7 +4,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <section class="top-banner">
+      <h1>What's for Dinner?</h1>
+      <button id="add-recipe-button">ADD A RECIPE</button>
+    </section>
+    <section class="wrapper">
+      <div class="box">
+        <div>
+          <h2>What are you looking for?*</h2>
+          <div class="radio-group">
+            <input type="radio" id="Side" = name="dish_type" value="Side">
+            <label for="Side">Side</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="Main Dish" = name="dish_type" value="Main Dish">
+            <label for="Main Dish">Main Dish</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="Dessert" = name="dish_type" value="Dessert">
+            <label for="Dessert">Dessert</label>
+          </div>
+          <button id="lets-cook-button">LET'S COOK!</button>
+        </div>
+      </div>
+  
+      <div class="box">
+        <div>
+          <img class="cookpot-image" alt="Cookpot Image" src="./assets/cookpot.svg" viewBox="0 0 100 125">
+        </div>
+      </div>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -81,8 +81,18 @@ red - #ee5253 */
 
 
 .radio-selectors {
-padding-top:20 ;
+padding-top: 20;
 padding-left: 48;
 }
 
+.food-selection {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.selection-text {
+  font-size: 50;
+  font-weight: bold;
+}
 

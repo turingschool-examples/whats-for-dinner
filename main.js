@@ -77,7 +77,8 @@ function displayDish() {
   var radioElements = document.getElementsByName("choose-dish");
   for (var i = 0; i < radioElements.length; i++) {
     if (radioElements[i].checked) {
-        var checkedValue = eval(radioElements[i].value);
+      var valueString = radioElements[i].value
+        var checkedValue = Function("return " + valueString)();
         foodDisplay.innerHTML = `
         <h2 class="food-prompt">You should make:</h2>
         <h1 class="random-dish">${checkedValue[getRandom(checkedValue)]}!</h1>

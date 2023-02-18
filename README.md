@@ -33,6 +33,8 @@ ______________________________________________________
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
 
 ### Installation Instructions:
+* github repository link- https://github.com/dustingouner/whats-for-dinner
+* SSH clone link- git@github.com:dustingouner/whats-for-dinner.git
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
 
 ### Preview of App:
@@ -42,9 +44,14 @@ ______________________________________________________
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 
 ### Contributors:
+* Dustin Gouner-  https://github.com/dustingouner
 [//]: <> (Who worked on this application? Link to their GitHubs.)
 
 ### Learning Goals:
+ - Gain experience building an application that utilizes HTML, CSS and JavaScript
+- Write HTML and CSS to match a provided comp
+- Understand how to listen to and respond to user events
+- Individualize your programming skill set
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
 
 ### Wins + Challenges:

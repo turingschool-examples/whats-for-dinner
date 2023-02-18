@@ -1,13 +1,3 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
-
 body, html {
   height: 100vh;
   margin: 0;
@@ -40,13 +30,9 @@ body {
   margin-left: 25px;
 }
 
-.navbar-button {
+.nav-message {
   margin-right: 25px;
-  border-radius: 10px;
-  border-color: grey;
   align-items: center;
-  cursor: pointer;
-  padding: 12px;
 }
 
 .box-container {
@@ -133,7 +119,7 @@ body {
 
 .results-title {
   margin-bottom: 0%;
-  font-size: 20px;
+  font-size: 15px;
   font-style: italic;
 }
 
@@ -142,13 +128,6 @@ body {
   font-size: 25px;
   text-align: center;
   width: 75%
-}
-
-.entire-meal {
-  font-size: 25px;
-  height: 75%;
-  width: 75%;
-  text-align: center;
 }
 
 .deleteBtn {

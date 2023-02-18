@@ -1,4 +1,3 @@
-
 var sideRadioBtn = document.getElementById('sideRadioBtn')
 var mainDishRadioBtn = document.getElementById('mainDishRadioBtn')
 var dessertRadioBtn = document.getElementById('dessertRadioBtn')
@@ -78,14 +77,14 @@ function displayRecipe() {
   cookpotImage.classList.add('hidden')
   messageBox.classList.remove('hidden')
   if (sideRadioBtn.checked) {
-      currentRecipe = `${sides[sideDish]}`
+      currentRecipe = `${sides[sideDish]}!`
   } else if (mainDishRadioBtn.checked) {
-    currentRecipe = `${mains[mainDish]}!`
+      currentRecipe = `${mains[mainDish]}!`
   } else if (dessertRadioBtn.checked) {
-    currentRecipe = `${desserts[dessertDish]}!`
+      currentRecipe = `${desserts[dessertDish]}!`
   } else if (entireMealRadioBtn.checked) {
-    currentRecipe = `${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!`
-    entireMeal.push(currentRecipe)
+      currentRecipe = `${mains[mainDish]} with a side of ${sides[sideDish]} and ${desserts[dessertDish]} for dessert!`
+      entireMeal.push(currentRecipe)
   }
   randomDish.innerText = ''
   randomDish.innerText += currentRecipe

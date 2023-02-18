@@ -14,7 +14,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border: none;
 }
 
 h1 {
@@ -30,8 +29,8 @@ h1 {
 
 #lets-cook-button {
     padding: 5px 40px 5px 40px;
-    border: none;
     background-color: #0fb9b1;
+    border: none;
 }
 
 h2 {
@@ -43,13 +42,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none;
     background-color: #0fb9b1;
 }
 
 
 .box {
-    border: solid orange;
     background: rgba(225, 225, 225, .9);
     display: flex;
     flex-direction: column;
@@ -60,42 +57,21 @@ h2 {
 .box:nth-child(1) {
     height: 50vh;
     width: 35vw;
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center; */
 }
 .box:nth-child(2) {
     height: 50vh;
     width: 35vw;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
-
-/* .small-box {
-    margin-right: 300px;
-    margin-bottom: 150px;
-    border: dotted palevioletred;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: baseline;
-} */
 
 .radio-group {
     font-family: 'Roboto', sans-serif;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: none;
-    /* display: flex;
-    align-items: baseline; */
 }
 
 .wrapper {
     margin-top: 50px;
     height: 100vh;
-    border: solid red;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -104,7 +80,4 @@ h2 {
 .cookpot-image {
     height: 200px;
     width: 200px;
-    border: none;
-    /* display: flex; */
-    /* align-items: center; */
 }

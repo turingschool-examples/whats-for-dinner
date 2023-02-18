@@ -57,7 +57,6 @@ h1 {
  font-size: 20px;
 }
 
-
 .crockpot-img {
   padding-top: 15%;
   display: block;
@@ -74,21 +73,22 @@ h1 {
   padding: 5px 40px;
 }
 
-
-/* COLORS
-grey - #95a5a6;
-red - #ee5253 */
-
-
 .radio-selectors {
 padding-top: 20;
 padding-left: 48;
 }
 
 .food-selection {
-  display: flex;
-  flex-direction: column;
   visibility: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction:column ;
+  position: relative;
+  right: 50px;
+  left: 10px; ;
+  bottom: 150px;
 }
 
 .selection-text {

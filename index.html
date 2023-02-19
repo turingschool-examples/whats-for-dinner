@@ -10,20 +10,24 @@
     <section class="dishSelectorBox">
       <h2 class="form-area">What are you looking for?</h2>
         <form id="dish-selector-form">
-        <input type="radio" name="dish-type" value="side"/>
+        <input type="radio" name="dish-type" value="side" id="side" />
         <label for="side">Side</label><br>
-        <input type="radio" name="dish-type" value="main dish"/>
+        <input type="radio" name="dish-type" value="main dish" id="main-dish" />
         <label for="Main Dish">Main Dish</label><br>
-        <input type="radio" name="dish-type" value="dessert"/>
+        <input type="radio" name="dish-type" value="dessert" id="dessert">
         <label for="Dessert">Dessert</label><br>
-        <input type="radio" name="dish-type" value="entire meal"/>
+        <input type="radio" name="dish-type" value="entire meal" id="dessert" />
         <label for="Entire Meal">Entire Meal</label><br>
-       </form>
-       <button type="submit" value="submit" form="dish-selector-form">LET'S COOK</button>
+        <input type="button" value="LET'S COOK" class="letscook-button" id="dish-selector-form"/>      
+      </form>
     </section>
     <section class="image-box">
     <img class="pot-image" src="assets/cookpot.svg" alt="crockpot" />
-    </section>                                                                                                                                                                                                                                             </div>
+    </section>   
+    <section class="hidden" id="dish-recommendation-box" >
+      <h6 class="rec-title">You should make:</h6>
+      <p class="to-make-rec"></p>
+    </section>                                                                                                                                                                                                                                          </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

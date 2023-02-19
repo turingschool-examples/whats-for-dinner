@@ -77,9 +77,11 @@ body {
 .left-box {
   background-color:rgba(225, 225, 225, .9);
   font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  font-style: italic;
   border-color: rgba(225, 225, 225, .9);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 400px;
@@ -101,6 +103,10 @@ body {
   height: 100px;
 }
 
+.hidden {
+  display: none!important;
+}
+
 .asterik {
   color: #ee5253;
 }
@@ -108,6 +114,10 @@ body {
 .right-box-header{
   font-size: x-large;
   font-weight: bolder;
+}
+
+.should-make {
+  font-size: x-large;
 }
 
 /* .wrapper {

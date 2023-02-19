@@ -5,6 +5,10 @@ var resultsBox = document.querySelector(".results-box");
 
 var cookButton = document.querySelector(".cook-button");
 var recipeButton = document.querySelector(".recipe-button");
+var sideOptRadio = document.querySelector("#side-option");
+var mainOptRadio = document.querySelector("#main-option");
+var dessertOptRadio = document.querySelector("#dessert-option")
+var mealOptRadio = document.querySelector("#meal-option")
 
 var sides = [
   "Miso Glazed Carrots",
@@ -49,3 +53,7 @@ var desserts = [
   "Macaroons",
   "Chocolate Cupcakes",
 ];
+
+var showMeal = [];
+var currentMeal;
+

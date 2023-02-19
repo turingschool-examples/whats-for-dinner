@@ -1,10 +1,50 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>What's for Dinner?</title>
   </head>
   <body>
-    
+    <section class="topBar">
+      <h1>What's For Dinner?</h1>
+      <button class="recipe">
+        ADD A RECIPE
+      </button>
+    </section>
+    <section class="main">
+      <section class="card">
+        <h2>What are you looking for?</h2>
+        <section class="list">
+          <div>
+            <input type="radio" id="c1" name="dish" value="Side" />
+            <label for="c1">Side</label>
+          </div>
+          <div>
+            <input type="radio" id="c2" name="dish" value="Main Dish" />
+            <label for="c2">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" id="c3" name="dish" value="Dessert" />
+            <label for="c3">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" id="c4" name="dish" value="Entire Meal" />
+            <label for="c4">Entire Meal</label>
+          </div>
+        </section>
+        <section class="button">
+          <button class="cook">
+            LET'S COOK!
+          </button>
+        </section>
+      </section>
+      <section class="cook-pot-card">
+        <img class="cook-pot" src="assets/cookpot.svg" />
+      </section>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

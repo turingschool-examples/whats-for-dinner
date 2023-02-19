@@ -16,6 +16,106 @@ grey - #95a5a6;
 red - #ee5253
 */
 
-.background {
-  z-index: -1
+body {
+  margin: 0;
+}
+.header {
+  padding: 5px;
+  background-color: #0fb9b1;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 525;
+}
+
+.hidden {
+  display: none;
+}
+
+.box-layout {
+  max-width: 1600px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box1 {
+  padding: 40px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  display: flex;
+  flex-basis: 45%;
+  height: 500px;
+  background-color: rgba(225, 225, 225, .9);
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 525;
+}
+
+.box2 {
+  padding: 40px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: 45%;
+  height: 500px;
+  background-color: rgba(225, 225, 225, .9);
+  float: right;
+  align-content: center;
+}
+
+#maketxt {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 525;
+}
+
+#foodtxt {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 525;
+}
+
+/* .label {
+display: block;
+} */
+
+.cookPot {
+  width: 200px;
+}
+
+.addRecipeBtn {
+  float: right;
+  height: 30px;
+  border-radius: 5px;
+}
+
+#clearBtn {
+  width: 75px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #95a5a6;
+  color: rgba(225, 225, 225, .9);
+}
+
+.letsCookBtn {
+  width: 150px;
+  height: 30px;
+  background-color: #0fb9b1;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  /* font-weight: bold; */
+}
+.letsCookBtn:hover {
+  background-color: Teal;
+  color: rgba(225, 225, 225, .9);
+}
+#clearBtn:hover {
+  background-color: Grey;
+  color: Black;
+}
+.addRecipeBtn:hover {
+  background-color: rgba(225, 225, 225, .9);
+  color: White;
 }

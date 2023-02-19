@@ -3,8 +3,31 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
-    
+  <body class="Mainparent">
+    <div class="headerParent">
+      <header> Whats for dinner? </header>
+    </div>              
+    <section class="dishSelectorBox">
+      <h2 class="form-area">What are you looking for?</h2>
+        <form id="dish-selector-form">
+        <input type="radio" name="dish-type" value="side" id="side" />
+        <label for="side">Side</label><br>
+        <input type="radio" name="dish-type" value="main dish" id="main-dish" />
+        <label for="Main Dish">Main Dish</label><br>
+        <input type="radio" name="dish-type" value="dessert" id="dessert">
+        <label for="Dessert">Dessert</label><br>
+        <input type="radio" name="dish-type" value="entire meal" id="dessert" />
+        <label for="Entire Meal">Entire Meal</label><br>
+        <input type="button" value="LET'S COOK" class="letscook-button" id="dish-selector-form"/>      
+      </form>
+    </section>
+    <section class="image-box">
+    <img class="pot-image" src="assets/cookpot.svg" alt="crockpot" />
+    </section>   
+    <section class="hidden" id="dish-recommendation-box" >
+      <h6 class="rec-title">You should make:</h6>
+      <p class="to-make-rec"></p>
+    </section>                                                                                                                                                                                                                                          </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

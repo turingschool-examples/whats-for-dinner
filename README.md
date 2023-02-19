@@ -1,51 +1,39 @@
-# What's for Dinner?
-
-## Overview
-
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
 # What's for Dinner? 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+
+The guess work of the age old question of 'What's for dinner?' is no longer with this application. A randomly generated dish option or entire meal is presented to the user. A user can quickly choose which option they would like by making a selection on the left, clicking 'Let's Cook!' and an option is presented on the right. The user can also start over by selecting the 'clear' button that appears below the option. 
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+
+1. Fork and clone this repo.
+1. `cd` into the directory
+1. To open the application type `open index.html`
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+
+[![What's for dinner preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjQ4MmE3ZDZmZDQwNDM1N2VmZDg4YTYzNzVlMDQ4OTQ2MTM1MmM0OCZjdD1n/N6WVo95Hp55V7jyAxy/giphy.gif)]
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+
+The project took approximately 15 hours to complete including planning and research. 
+
+I have completed week 3 of a 6 month intensive program through Turing School of Software and Design. 
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+
+Sharie Trachsel - [GitHub](https://github.com/sdtrachsel)
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+
+The learning goals were to gain experiance building an application using HTML, CSS, and JavaScript, write HTML and CSS to match a provided comp, and understandd how to listen to and respond to user events. 
+
+I utilized git workflow to enhance code integrity and VSCode as and IDE. 
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+
+My largest win was refactoring the code that populates the right hand box after a user clicks the 'Let's Cook!' button. The original function although functional, was hard to understand and did not follow SRP. I originally utilized three seperate arrays for the data. I changed this to one array of objects. Using an array objects allowed me to breakdwon the original function into two and make the code more dynamic. 
+
+The largest challenge was during the start of the project, I did not follow the proper git workflow for pull requests and merging branches. I erroneously merged the last branch and then reverted. This resulted in portions of code being overwritten. I went through my commit history to find the impacted code and make needed corrections. Follwoing the corrections, I began implementing the the correct git workflow regarding branches and merging. 
+
+Another challenge was properly aligning the right-hand box contents so the clear button would remain in the lower right corner as the the text above changed in length. In order to over come this, I sketched the solution and outlined the needed elements along with styling divs. I utilized [CodePen](https://codepen.io) to mirror the righthand output box. I proceeded to box out the elements and to make adjusts while referencing [MDN Web Docs CSS section](https://developer.mozilla.org/en-US/docs/Web/CSS). When the styling was working correctly, I copied the code over to my styling sheet. 

@@ -8,12 +8,9 @@ var cookpotImg = document.querySelector("img")
 
 //event listeners
 letsCookButton.addEventListener('click', hidePot)
-window.addEventListener('load', hidePot)
 letsCookButton.addEventListener('click', showMeal) 
-window.addEventListener('load', showMeal)
 
-
-//data model function   
+  
 //arrays
 var sides = [ "Miso Glazed Carrots","Coleslaw", "Garden Salad","Crispy Potatoes","Sweet Potato Tots", "Coconut Rice", "Caeser Salad","Summer Rolls", "Garlic Butter Mushrooms", "Hush Puppies"];
 var mains = ["Spaghetti","Pineapple Curry","Shakshuka",  "Thai Yellow Curry","Bibimbap","Vegan Chicken Parmesean", "Butternut Squash Soup","BBQ Veggie Burgers","Ramen","Empanadas","Fried Rice","Sheet Pan Fajitas","Margarita Pizza"]
@@ -27,15 +24,14 @@ var desserts = ["Apple Pie", "Lemon Meringue Pie", "Black Forest Cake", "Banana 
 var sideDish = getRandomDish(sides);
 var mainDish = getRandomDish(mains);
 var dessertDish = getRandomDish(desserts);
-var selectedDish;
+
 
 //FUNCTIONS:
-//hides cookpot
+// hides cookpot
 function hidePot () {
     shouldMake.classList.remove('hidden')
     cookpotImg.classList.add('hidden')
 }
-
 
 //this will pull random item from array based on index variable for radio buttons 
 function getRandomDish(dishArray) {
@@ -45,16 +41,18 @@ function getRandomDish(dishArray) {
 //radio buttons
 function showMeal(event) {  
 event.preventDefault()
-cookpotImg.classList.remove('hidden')
-shouldMake.classList.add('hidden')
+cookpotImg.classList.add('hidden')
+shouldMake.classList.remove('hidden')
 if (document.getElementById("side").checked) {
-shouldMake.innerText = `${sideDish}`
+shouldMake.innerText = `You should make:
+${sideDish}`
 } else if (document.getElementById("main").checked) {
-shouldMake.innerText = `${mainDish}`
+shouldMake.innerText = `You should make:
+${mainDish}`
 } else {
-shouldMake.innerText = `${dessertDish}`
+shouldMake.innerText = `You should make:
+${dessertDish}`
 }
 }
 
 
-//arrays 

@@ -57,6 +57,9 @@ function getRandomIndex(array) {
 
 letsCook.addEventListener('click', getRadioTypeValues)
 var chosenRecipe = ''
+var chosenDessert = ''
+var chosenMainDish = ''
+var chosenSide = ''
 function getRadioTypeValues() {
 var radioValues = document.querySelectorAll("input[name='radio']")
     for (i = 0; i < radioValues.length; i++) {
@@ -75,7 +78,14 @@ var radioValues = document.querySelectorAll("input[name='radio']")
                 chosenRecipe = dessert[getRandomIndex(dessert)]
                 crockPot.innerHTML =  `<p class="cookingPrompt">You should make:</p> 
                 <h3 class="foodName">${chosenRecipe}!</h3>`
-    }    
+            } else if
+                (radioValues[i].value === "entireMeal") {
+                chosenDessert = dessert[getRandomIndex(dessert)]
+                chosenSide = sides[getRandomIndex(sides)]
+                chosenMainDish = mainDish[getRandomIndex(mainDish)]
+                crockPot.innerHTML =  `<p class="cookingPrompt">You should make:</p> 
+                <h3 class="foodName">${chosenMainDish} with a side of ${chosenSide} and ${chosenDessert} for dessert!</h3>`  
+}
 }
 }
 }

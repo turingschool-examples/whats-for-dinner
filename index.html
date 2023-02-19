@@ -4,7 +4,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header class="top-bar">
+      <h1>What's for Dinner?</h1>
+    </header>
+    <main>
+      <div class="container">
+        <form class="form" id="choose-dinner">
+              <h2><b>What are you looking for?</b><span style="color:#ee5253">*</span></h2>
+                <p>
+                  <input type="radio" id="side" name="food-type" value="side">
+                  <label for="side-dish">Side</label>
+                </p>
+                <p>
+                  <input type="radio" id="main-dish" name="food-type" value="main-dish">
+                  <label for="main-dish">Main Dish</label>
+                </p>
+                <p>
+                  <input type="radio" id="dessert" name="food-type" value="dessert">
+                  <label for="dessert">Dessert</label>
+                </p>
+                <p>
+                  <input type="radio" id="entire-meal" name="food-type" value="entire-meal">
+                  <label for="entire-meal">Entire Meal</label>
+               </p>
+              <button type="submit" id="lets-cook">LET'S COOK!</button>
+        </form>
+        <div class="suggestions">
+          <h3></h3>
+            <p id="dish-suggestions"></p>
+            <img src="assets/cookpot.svg" id="cookpot" alt="simple line drawing of a cooking pot with lid slightly open and two drips of what is cooking coming half-way over the side">
+          <button type="button" id="clear">CLEAR</button>
+        </div>
+      </div>  
+  </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
+

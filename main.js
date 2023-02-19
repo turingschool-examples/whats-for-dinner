@@ -7,22 +7,25 @@ var crockpotImg = document.querySelector('.js-crockpot-pic');
 var shouldMakeDisplay = document.querySelector('.js-output');
 var outputText = document.querySelector('.js-output-text');
 
-// *** Arrays ***
-var sides = [
-    'Miso Glazed Carrots',
-    'Coleslaw',
-    'Garden Salad',
-    'Crispy Potatoes',
-    'Sweet Potato Tots',
-    'Coconut Rice',
-    'Caeser Salad',
-    'Shrimp Summer Rolls',
-    'Garlic Butter Mushrooms',
-    'Hush Puppies'
-]
-
-var mainDishes = [
-    'Spaghetti and Meatballs',
+// *** Data ***
+var meals = [
+    {name: 'sides',
+    options: 
+     [ 'Miso Glazed Carrots',
+      'Coleslaw',
+      'Garden Salad',
+      'Crispy Potatoes',
+      'Sweet Potato Tots',
+      'Coconut Rice',
+      'Caeser Salad',
+      'Shrimp Summer Rolls',
+      'Garlic Butter Mushrooms',
+      'Hush Puppies'
+      ]
+    },
+    { name: 'mains',
+     options:
+    ['Spaghetti and Meatballs',
     'Pineapple Chicken',
     'Shakshuka',
     'Thai Yellow Curry',
@@ -35,10 +38,11 @@ var mainDishes = [
     'Chicken Fried Rice',
     'Sheet Pan Fajitas',
     'Margarita Pizza'
-]
-
-var desserts = [
-    'Apple Pie',
+    ]
+  },
+  { name: 'desserts',
+   options: 
+   [ 'Apple Pie',
     'Lemon Meringue Pie',
     'Black Forest Cake',
     'Banana Bread',
@@ -56,7 +60,9 @@ var desserts = [
     'Tart Tatin',
     'Croissants',
     'Eclairs'
-]
+    ] 
+  }
+];
 
 // *** Event Listeners *** 
 letsCookBtn.addEventListener('click', giveMakeSuggestion)
@@ -74,6 +80,7 @@ function findMealType() {
     for (var i = 0; i < radioBtns.length; i++) {
         if (radioBtns[i].checked) {
             mealType = radioBtns[i].value
+            console.log(radioBtns[i].value)
         }    
     } return mealType
 }
@@ -114,23 +121,32 @@ function giveMakeSuggestion() {
     outputText.classList.remove('single-dish')
     outputText.classList.remove('entire-meal')
         
-    if (selectedType === 'dessert') {
+    if (selectedType === 'desserts') {
         outputText.innerText = `${desserts[getRandomIndex(desserts)]}!`
         outputText.classList.add('single-dish')
         displayShouldMake()
-    } else if (selectedType === 'side') {
+    } else if (selectedType === 'sides') {
         outputText.innerText = `${randomSelection = sides[getRandomIndex(sides)]}!`
         outputText.classList.add('single-dish')
         displayShouldMake()
-    } else if (selectedType === 'main-dish') {
-        outputText.innerText = `${mainDishes[getRandomIndex(mainDishes)]}!`
+    } else if (selectedType === 'mains') {
+        outputText.innerText = `${mains[getRandomIndex(mains)]}!`
         outputText.classList.add('single-dish')
         displayShouldMake()
     } else if (selectedType === 'entire-meal'){
-        outputText.innerText = `${mainDishes[getRandomIndex(mainDishes)]} with a side of ${randomSelection = sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+        outputText.innerText = `${mains[getRandomIndex(mains)]} with a side of ${randomSelection = sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
         outputText.classList.add('entire-meal')
         displayShouldMake()
     } else(
         displayCrockpot()
     )
 }
+
+function mealObject(){
+    var possibleSelections;
+   for (i = 0, i < meals.length, i++){
+     if (meals[i].name === selectedMealtype()){
+       possibleSelections =  meals[i].options
+     }
+    } return possibleSelections
+  }

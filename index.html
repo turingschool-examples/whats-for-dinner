@@ -1,34 +1,31 @@
 <html>
-
 <head>
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
   <header>
     <h3> What's for Dinner? </h3>
   </header>
   <section class="box-spread">
-    <article class="left-article">
+    <article>
       <h2>What are you looking for?<span>*</span></h2>
       <ul>
-        <li><input type="radio" name="dish-type" id="side" value="side"><label for="side">Side</label></li>
-        <li><input type="radio" name="dish-type" id="main-dish" value="main-dish"><label for="main-dish">Main
+        <li><input type="radio" name="dish-type" id="side" value="sides"><label for="side">Side</label></li>
+        <li><input type="radio" name="dish-type" id="main-dish" value="mains"><label for="main-dish">Main
             Dish</label></li>
-        <li> <input type="radio" name="dish-type" id="dessert" value="dessert"><label for="dessert">Dessert</label></li>
+        <li> <input type="radio" name="dish-type" id="dessert" value="desserts"><label for="dessert">Dessert</label></li>
         <li><input type="radio" name="dish-type" id="entire-meal" value="entire-meal"><label for="entire-meal">Entire
             Meal</label></li>
       </ul>
       <button class="cook-button">LET'S COOK!</button>
     </article>
-    <!-- Crockpot & You Should make -->
     <article class="output-box">
       <div class="js-crockpot-pic">
         <img class="img" src="./assets/cookpot.svg">
       </div>
-      <div class="js-output hidden output">
+      <div class="js-output output hidden">
         <h4>You should make:</h4>
         <h1 class="js-output-text"></h1>
       </div>
@@ -37,5 +34,4 @@
   </section>
 </body>
 <script type="text/javascript" src="main.js"></script>
-
 </html>

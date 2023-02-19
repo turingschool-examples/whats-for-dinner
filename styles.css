@@ -96,7 +96,6 @@ body {
   border-radius: 5px;
   padding: 6px 40px;
   text-align: center;
-
 }
 .cookpot-image {
   width: 100px;
@@ -119,6 +118,20 @@ body {
 .should-make {
   font-size: x-large;
 }
+
+.dont-like {
+  background-color: #0fb9b1;
+  border-color:#0fb9b1 ;
+  text-size-adjust: small;
+  border-radius: 5px;
+  padding: 2px 10px;
+  text-align: center;
+  margin-top: 90%;
+  margin-bottom: 10%;
+  display: hidden;
+}
+
+
 
 /* .wrapper {
   background-color: white;

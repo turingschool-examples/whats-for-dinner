@@ -4,10 +4,13 @@ var selectMain = document.querySelector("#dish")
 var selectDessert = document.querySelector("#dessert")
 var letsCookButton = document.querySelector(".lets-cook-button")
 var shouldMake = document.querySelector(".should-make")
+var cookpotImg = document.querySelector("#cookpot-image")
 
 //event listeners
 letsCookButton.addEventListener('click', showMeal) 
-
+window.addEventListener('load', showMeal)
+letsCookButton.addEventListener('click', hidePot)
+window.addEventListener('load', hidePot)
 
 //data model function   
 //arrays
@@ -23,21 +26,33 @@ var desserts = ["Apple Pie", "Lemon Meringue Pie", "Black Forest Cake", "Banana 
 var sideDish = getRandomDish(sides);
 var mainDish = getRandomDish(mains);
 var dessertDish = getRandomDish(desserts);
+var selectedDish;
 
 //FUNCTIONS:
+//hides cookpot
+function hidePot () {
+    shouldMake.classList.add('hidden')
+    cookpotImg.classList.remove('hidden')
+}
+
+
 //this will pull random item from array based on index variable for radio buttons 
 function getRandomDish(dishArray) {
     return dishArray[Math.floor(Math.random() * dishArray.length)];
   }
 
 //radio buttons
-function showMeal() {  
+function showMeal(event) {  
+event.preventDefault()
 if (document.getElementById("side").checked) {
-shouldMake.innerText = `You should make ${sideDish}.`
+shouldMake.innerText = `You should make: 
+${sideDish}`
 } else if (document.getElementById("main").checked) {
-shouldMake.innerText = `You should make ${mainDish}.`
+shouldMake.innerText = `You should make: 
+${mainDish}`
 } else {
-shouldMake.innerText = `You should make ${dessertDish}.`
+shouldMake.innerText = `You should make: 
+${dessertDish}`
 }
 }
 

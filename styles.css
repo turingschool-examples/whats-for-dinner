@@ -24,7 +24,8 @@ body {
   background-image:url(assets/burger-friends.jpg);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
  .header-container {
@@ -33,10 +34,10 @@ body {
   font-size: small;
   /* border: solid 1px black; */
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  padding: 1px;
+  padding: 5px;
   
  }
 

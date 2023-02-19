@@ -7,4 +7,52 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+.page-heading{
+  font-family: 'Roboto', sans-serif;
+  background-color: teal;
+  align-items: flex-end;
+}
+
+/* 
+fieldset {
+ 
+  
+ } */
+.input-list{
+  height: 280;
+  width: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+fieldset{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+}
+.results-box{
+  background-color: rgba(225, 225, 225, .9);
+  width: 300px;
+  height: 300px;
+}
+
+ .dinner-list{
+  background-color: rgba(225, 225, 225, .9);
+  width: 30%;
+  height: 20%;
+  border: solid 1px black;
+  
+ }
+
+body {
+background-image: url(/Users/capsmac/mod_1/Whats-For-Dinner-Solo/assets/burger-friends.jpg);
+height: auto;
+max-width: auto;
+
+}
+
+
 

@@ -4,13 +4,14 @@ var selectMain = document.querySelector("#dish")
 var selectDessert = document.querySelector("#dessert")
 var letsCookButton = document.querySelector(".lets-cook-button")
 var shouldMake = document.querySelector(".should-make")
-var cookpotImg = document.querySelector("#cookpot-image")
+var cookpotImg = document.querySelector("img")
 
 //event listeners
-letsCookButton.addEventListener('click', showMeal) 
-window.addEventListener('load', showMeal)
 letsCookButton.addEventListener('click', hidePot)
 window.addEventListener('load', hidePot)
+letsCookButton.addEventListener('click', showMeal) 
+window.addEventListener('load', showMeal)
+
 
 //data model function   
 //arrays
@@ -31,8 +32,8 @@ var selectedDish;
 //FUNCTIONS:
 //hides cookpot
 function hidePot () {
-    shouldMake.classList.add('hidden')
-    cookpotImg.classList.remove('hidden')
+    shouldMake.classList.remove('hidden')
+    cookpotImg.classList.add('hidden')
 }
 
 
@@ -44,15 +45,14 @@ function getRandomDish(dishArray) {
 //radio buttons
 function showMeal(event) {  
 event.preventDefault()
+cookpotImg.classList.remove('hidden')
+shouldMake.classList.add('hidden')
 if (document.getElementById("side").checked) {
-shouldMake.innerText = `You should make: 
-${sideDish}`
+shouldMake.innerText = `${sideDish}`
 } else if (document.getElementById("main").checked) {
-shouldMake.innerText = `You should make: 
-${mainDish}`
+shouldMake.innerText = `${mainDish}`
 } else {
-shouldMake.innerText = `You should make: 
-${dessertDish}`
+shouldMake.innerText = `${dessertDish}`
 }
 }
 

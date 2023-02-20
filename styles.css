@@ -8,3 +8,161 @@ red - #ee5253
 
 */
 
+*,
+*:before,
+*:after {
+  rgba(225, 225, 225, .9)
+  /* border: 2px solid black; */
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 24px; */
+}
+
+body {
+  margin: 0; 
+  width: 100%;
+  height: auto;
+  background-image:url(assets/burger-friends.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+ .header-container {
+  background-color:#0fb9b1;
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
+  /* border: solid 1px black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  
+ }
+
+
+.add-recipe-button {
+  background-color: rgba(225, 225, 225, .9);
+  border-color:rgba(225, 225, 225, .9) ;
+  border-radius: 5px;
+  padding: 6px;
+
+  /* float: right; */
+/* figure it out */
+  /* top: 10px */
+ }
+
+.main-flexbox-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  font-size: 12px;
+  padding-top: 5%;
+}
+
+.right-box {
+  background-color:rgba(225, 225, 225, .9);
+  font-family: 'Roboto', sans-serif;
+  border-color: rgba(225, 225, 225, .9);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 400px;
+  height: 300px; 
+}
+
+.left-box {
+  background-color:rgba(225, 225, 225, .9);
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  font-style: italic;
+  border-color: rgba(225, 225, 225, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 400px;
+  height: 300px; 
+}
+
+
+.lets-cook-button{
+  background-color: #0fb9b1;
+  border-color:#0fb9b1 ;
+  text-size-adjust: small;
+  border-radius: 5px;
+  padding: 6px 40px;
+  text-align: center;
+}
+.cookpot-image {
+  width: 100px;
+  height: 100px;
+}
+
+.hidden {
+  display: none!important;
+}
+
+.asterik {
+  color: #ee5253;
+}
+
+.right-box-header{
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.should-make {
+  font-size: x-large;
+}
+
+.dont-like {
+  background-color: #0fb9b1;
+  border-color:#0fb9b1 ;
+  text-size-adjust: small;
+  border-radius: 5px;
+  padding: 2px 10px;
+  text-align: center;
+  margin-top: 90%;
+  margin-bottom: 10%;
+  display: hidden;
+}
+
+
+
+/* .wrapper {
+  background-color: white;
+  width: 75%;
+  height: 300px;
+  border: solid 1px black;
+  display: flex;
+  align-items: bottom;
+  flex-direction: row;
+  justify-content: left;
+} */
+
+
+/* // by element name
+h1 {
+  color: red;
+}
+
+// by class name
+.primary-font {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+}
+
+// by id name
+#about-page {
+  background-color: lightgrey;
+}
+
+// by a combination of above
+.primary-font p {
+  font-size: 15px;
+  color: darkgrey;
+} */

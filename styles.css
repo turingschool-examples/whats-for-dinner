@@ -25,7 +25,10 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 50px 50px 50px 50px; 
+    padding: 20px 50px 50px 50px; 
+}
+input[type="radio"] {
+    margin: 0 0px 20px 0px;
 }
 
 .image-box {
@@ -44,6 +47,7 @@ body {
     display:flex;
     align-items: flex-start;
 }
+
 
 .pot-image {
     height: 200px;
@@ -90,5 +94,14 @@ header {
     font-size: 15px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    padding-top: 50px;
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
+
+.to-make-rec {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 100px;
+}   
+

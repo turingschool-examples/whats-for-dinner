@@ -5,12 +5,13 @@
     <title>What's for Dinner?</title>
   </head>
   <body>
-    <header>
-      <h1>What's for Dinner?</h1>
-      <button class="addRecipeBtn">ADD A RECIPE</button>
+    <header class="header">
+      <h1>What's for Dinner? <button class="addRecipeBtn">ADD A RECIPE</button>
+      </h1>
     </header>
-    <section class="box1">
-      <h2>What are you looking for?<span>*</span></h2>
+    <section class=box-layout>
+      <section class="box1">
+        <h2>What are you looking for?<span>*</span></h2>
         <div>
           <input type="radio" id="side" name="food" value="side"/>
           <label for="side" class="label">Side</label>
@@ -27,14 +28,15 @@
           <input type="radio" id="entireMeal" name="food" value="entireMeal"/>
           <label for="entireMeal" class="label">Entire Meal</label>
         </div>
-      <button class="letsCookBtn">LET'S COOK!</button>
-    </section>
-    <section class="box2">
-      <img class="hidden" id="cookPot" src="./assets/cookpot.svg" alt="Image of a soup pot">
-      <h4 class="" id="maketxt">You should make:</h4>
-        <h1 class="" id="foodtxt">Funfetti Cake!</h1>
-        <button class="" id="clearBtn">CLEAR</button>
-    </section>
+        <button class="letsCookBtn">LET'S COOK!</button>
+      </section>
+      <section class="box2">
+        <img class="cookPot" id="cookPot" src="./assets/cookpot.svg" alt="Image of a soup pot">
+        <h4 class="hidden" id="maketxt">You should make:</h4>
+        <h1 class="hidden" id="foodtxt"></h1>
+        <button class="hidden" id="clearBtn">CLEAR</button>
+      </section>
+  </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

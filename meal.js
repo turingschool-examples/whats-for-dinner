@@ -1,6 +1,8 @@
 class Meal {
-  constructor(meal){
+  constructor(side, main, dessert){
     this.id = Date.now();
-    this.meal = meal
+    this.sides = side
+    this.main = main
+    this.dessert = dessert
   }
 }

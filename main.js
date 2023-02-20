@@ -2,13 +2,18 @@ var mealTitle = document.querySelector("h3");
 var pageHeading = document.querySelector("h1");
 var dinnerList = document.querySelector(".dinner-list");
 var resultsBox = document.querySelector(".results-box");
+var viewMeal = document.querySelector(".view-meal");
+var mealInput = document.querySelectorAll(".input-list");
 
-var cookButton = document.querySelector(".cook-button");
+var cookButton = document.querySelector(".submit-button");
 var recipeButton = document.querySelector(".recipe-button");
 var sideOptRadio = document.querySelector("#side-option");
 var mainOptRadio = document.querySelector("#main-option");
-var dessertOptRadio = document.querySelector("#dessert-option")
-var mealOptRadio = document.querySelector("#meal-option")
+var dessertOptRadio = document.querySelector("#dessert-option");
+var mealOptRadio = document.querySelector("#meal-option");
+cookButton.addEventListener("click", letsCook);
+var showMeal = [];
+var currentMeal;
 
 var sides = [
   "Miso Glazed Carrots",
@@ -54,6 +59,24 @@ var desserts = [
   "Chocolate Cupcakes",
 ];
 
-var showMeal = [];
-var currentMeal;
+function pushMeals() {
+  if (document.getElementById("side-option").checked) {
+    mealTitle.innerText = sides[getRandomIndex(sides)];
+  } else if (document.getElementById("main-option").checked) {
+    mealTitle.innertext = mains[getRandomIndex(mains)];
+  } else document.getElementById("dessert-option");
+  mealTitle.innerText = desserts[getRandomIndex(desserts)];
 
+  currentMeal = new Meal(mealTitle.innerText);
+  console.log(mealTitle.innerText);
+}
+
+function letsCook(event) {
+  event.preventDefault();
+  pushMeals();
+  showMeal.push(currentMeal);
+}
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}

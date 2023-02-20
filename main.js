@@ -69,9 +69,6 @@ ${dessertDish}`
 
 //deleting recipe 
 function deleteRecipe (event) {
-
-
-
    
 }
 

@@ -4,24 +4,49 @@ var mainRadio = document.querySelector('#Main Dish');
 var dessertRadio = document.querySelector('#Dessert');
 var foodName = document.querySelector('#food-name');
 var cookpotImage = document.querySelector('.cookpot-image');
+var letsCookButton = document.querySelector('#lets-cook-button');
+var clearButton = document.querySelector('.clear-btn');
+var recipeBox = document.querySelector('#recipe-box');
+
 
  // data/arrays:
-var sideDishes = ["Garlic Bread", "Fries", "Rice & beans", "Nachos"];
-var mainDishes = ["Spaghetti Bolognese", "Cheeseburger", "Fried Chicken", "Burrito Bowl"];
-var dessertDishes = ["Chocolate Lava Cake", "Milkshake", "Ice Cream Sundae", "Cinnamon Rolls"];
+var sideDishes = [
+    "Garlic Bread", 
+    "Fries", 
+    "Rice & beans", 
+    "Nachos",
+    "Mashed Potatoes",
+    "Caesar Salad", 
+    "Roasted Brussels Sprouts"
+];
+var mainDishes = [
+    "Spaghetti Bolognese", 
+    "Cheeseburger", 
+    "Fried Chicken", 
+    "Burrito Bowl",
+    "Spaghetti Bolognese", 
+    "Roast Chicken", 
+    "Veggie Burger", 
+    "Beef Stir Fry"
+];
+var dessertDishes = [
+    "Chocolate Lava Cake", 
+    "Milkshake", 
+    "Ice Cream Sundae", 
+    "Cinnamon Rolls",
+    "Apple Pie", 
+    "Fruit Salad"
+];
 
  // event listeners:
-var letsCookButton = document.querySelector('#lets-cook-button');
 letsCookButton.addEventListener('click', displayRandomDish);
 
  // functions:
-function selectRandomDish(dishes) {
+ function selectRandomDish(dishes) {
     return dishes[Math.floor(Math.random() * dishes.length)];
   }
-  
-  // Define function to display a random dish for the currently selected category
+
   function displayRandomDish() {
-    // Determine the currently selected category
     var selectedCategory = '';
     if (sideRadio.checked) {
       selectedCategory = 'Side';
@@ -31,43 +56,18 @@ function selectRandomDish(dishes) {
       selectedCategory = 'Dessert';
     }
     
-    // Select a random dish from the corresponding list
     var randomDish = '';
     if (selectedCategory === 'Side') {
-      randomDish = selectRandomDish(sideDishes);
+      randomDish = `You should make: ${selectRandomDish(sideDishes)}`;
     } else if (selectedCategory === 'Main Dish') {
-      randomDish = selectRandomDish(mainDishes);
+      randomDish = `You should make: ${selectRandomDish(mainDishes)}`;
     } else if (selectedCategory === 'Dessert') {
-      randomDish = selectRandomDish(dessertDishes);
+      randomDish = `You should make: ${selectRandomDish(dessertDishes)}`;
     }
     
-    // Display the random dish and hide the cookpot image
-    foodName.textContent = randomDish;
+    foodName.innerHTML = randomDish;
     cookpotImage.style.display = 'none';
   }
-  
-  // Attach event listener to "LET'S COOK!" button
-  var letsCookButton = document.querySelector('#lets-cook-button');
-  letsCookButton.addEventListener('click', displayRandomDish);
-// var selectedArray;
-
-//  function getRandomIndex(selectedArray) {
-//     return Math.floor(Math.random() * selectedArray.length);
-//   }
-
-// function showRandomIndex() {
-//     alert(`hi`);
-//     if(document.getElementById('Side').checked) {
-//         selectedArray = side;
-//     } else if (document.getElementById('Main Dish').checked) {
-//         selectedArray = mainDish;
-//     } else if (document.getElementById('Dessert').checked) {
-//         selectedArray = dessert;
-//     }
-//     var randomIndex = getRandomIndex();
-//     var randomElement = selectedArray[randomIndex];
-//     return foodResult.innerHTML += `You should make: ${randomElement}`;
-// }
   
 
 

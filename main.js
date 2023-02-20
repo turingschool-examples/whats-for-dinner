@@ -62,11 +62,11 @@ function showDish(){
     hide(imageBox)
     show(toMake)   
     if(document.getElementById('side').checked === true) {
-        makeRecommendation.innerText = sides[getRandomIndex(sides)]
+        makeRecommendation.innerText = sides[getRandomIndex(sides)] + `!`
     } else if (document.getElementById('main-dish').checked === true) {
-        makeRecommendation.innerText = mains[getRandomIndex(mains)]
+        makeRecommendation.innerText = mains[getRandomIndex(mains)] + `!`
     } else if (document.getElementById('dessert').checked === true){ 
-        makeRecommendation.innerText = desserts[getRandomIndex(desserts)]
+        makeRecommendation.innerText = desserts[getRandomIndex(desserts)] + `!`
     }
 }
 

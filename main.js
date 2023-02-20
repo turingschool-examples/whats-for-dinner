@@ -65,11 +65,13 @@ var signInButton = document.querySelector('.entry-button');
 var welcomeText = document.querySelector('.welcome-user');
 var errorMessage = document.querySelector('h5');
 var signInContainer = document.querySelector('.sign-in-container');
+var getMealButton = document.querySelector('.submit');
 var user = "";
 
 
 window.addEventListener('load', supplyInput);
 signInButton.addEventListener('click', showMainPage);
+getMealButton.addEventListener('click', displayDish);
 
 
 function displayDish() {

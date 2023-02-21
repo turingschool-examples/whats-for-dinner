@@ -7,4 +7,62 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+.page-heading{
+  font-family: 'Roboto', sans-serif;
+  background-color: teal;
+  align-items: flex-end;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  
+}
+.input-list{
+  font-family: 'Roboto', sans-serif;
+  height: 280;
+  width: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.flex-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+}
+.results-box{
+  background-color: rgba(225, 225, 225, .9);
+  width: 300px;
+  height: 350px;
+}
+
+ .dinner-list{
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(225, 225, 225, .9);
+  width: 30%;
+  height: 20%;
+  border: solid 1px black;
+  
+ }
+
+body {
+background-image: url(/Users/capsmac/mod_1/Whats-For-Dinner-Solo/assets/burger-friends.jpg);
+height: auto;
+max-width: auto;
+
+}
+.recipe-button{
+  font-family: 'Roboto', sans-serif;
+  background-color:#95a5a6;
+}
+.cook-button{
+  font-family: 'Roboto', sans-serif;
+  background-color: #0fb9b1;
+  border-color: blue;
+}
+
+
 

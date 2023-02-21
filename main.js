@@ -4,6 +4,7 @@ var dinnerList = document.querySelector(".dinner-list");
 var resultsBox = document.querySelector(".results-box");
 var viewMeal = document.querySelector(".view-meal");
 var mealInput = document.querySelectorAll(".input-list");
+var cookPotImg = document.querySelector(".cook-pot")
 
 var cookButton = document.querySelector(".submit-button");
 var recipeButton = document.querySelector(".recipe-button");
@@ -62,19 +63,24 @@ var desserts = [
 function pushMeals() {
   if (document.getElementById("side-option").checked) {
     mealTitle.innerText = sides[getRandomIndex(sides)];
+    console.log(mealTitle.innerText)
   } else if (document.getElementById("main-option").checked) {
-    mealTitle.innertext = mains[getRandomIndex(mains)];
-  } else document.getElementById("dessert-option");
-  mealTitle.innerText = desserts[getRandomIndex(desserts)];
+    mealTitle.innerText = mains[getRandomIndex(mains)];
+    console.log(mealTitle.innerText)
+  } else {
+    mealTitle.innerText = desserts[getRandomIndex(desserts)];
+    console.log(mealTitle.innerText)
+  } 
+  
 
   currentMeal = new Meal(mealTitle.innerText);
-  console.log(mealTitle.innerText);
 }
 
 function letsCook(event) {
   event.preventDefault();
   pushMeals();
   showMeal.push(currentMeal);
+  cookPotImg.innerHTML = null
 }
 
 function getRandomIndex(array) {

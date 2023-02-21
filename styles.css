@@ -1,10 +1,17 @@
-/* font-family: 'Roboto', sans-serif;
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
- */
+header {
+    background-color: #0fb9b1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 0x;
+    height:10px;
+    width: 100%;
+    padding-top: 0px;
+    font: 'Roboto', sans-serif; 
+    position: fixed;
+    padding: 10px 10px 20px 10px;
+} 
 
 body {
     background-image: url("../whats-for-dinner/assets/burger-friends.jpg");
@@ -42,32 +49,10 @@ input[type="radio"] {
     padding: 50px 50px 50px 50px; 
 }
 
-.form-area {
-    font-family: 'Roboto', sans-serif;
-    display:flex;
-    align-items: flex-start;
-}
-
-
 .pot-image {
     height: 200px;
     width: 200px
 }
-
-header {
-    background-color: #0fb9b1;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    margin: 0px;
-    padding: 0x;
-    height:10px;
-    width: 100%;
-    padding-top: 0px;
-    font: 'Roboto', sans-serif; 
-    position: fixed;
-    padding: 10px 10px 20px 10px;
-} 
 
 .hidden { 
     display: none;
@@ -94,14 +79,12 @@ header {
     font-size: 15px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    padding-top: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .to-make-rec {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     text-align: center;
-    padding-bottom: 100px;
 }   
 

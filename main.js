@@ -1,0 +1,47 @@
+var sideSelection = document.querySelector('#side');
+var mainSelection = document.querySelector('#mainDish');
+var dessertSelection = document.querySelector('#dessert');
+var entireMealSelection = document.querySelector('#entireMeal');
+var cookButton = document.querySelector('#cookButton');
+var recipeDisplayBox = document.querySelector('#recipeDisplay');
+
+cookButton.addEventListener("click", selectRecipe);
+
+function selectRecipe() {
+  if (sideSelection.checked) {
+    randomSide()
+  } else if (mainSelection.checked) {
+    randomMain()
+  } else if (dessertSelection.checked) {
+    randomDessert()
+  } else if (entireMealSelection.checked) {
+    createEntireMeal()
+  }
+}
+
+function randomMeal(mealOptions) {
+  return Math.floor(Math.random() * mealOptions.length);
+}
+
+function randomSide() {
+  suggestionMessage()
+  recipeDisplayBox.innerHTML += `<span class="meal-text">${sides[randomMeal(sides)]}!</span>`;
+  recipeDisplayBox.classList.add('meal-text');
+}
+
+function randomMain() {
+  suggestionMessage()
+  recipeDisplayBox.innerHTML += `<span class="meal-text">${mains[randomMeal(mains)]}!</span>`;
+  recipeDisplayBox.classList.add('meal-text');
+}
+
+function randomDessert() {
+  suggestionMessage()
+  recipeDisplayBox.innerHTML += `<span class="meal-text">${desserts[randomMeal(desserts)]}!</span>`;
+  recipeDisplayBox.classList.add('meal-text');
+}
+
+function suggestionMessage() {
+  recipeDisplayBox.innerHTML = "You should make: "
+  recipeDisplayBox.classList.add('suggestion-text')
+}

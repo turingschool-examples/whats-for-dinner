@@ -8,3 +8,154 @@ red - #ee5253
 
 */
 
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url(assets/burger-friends.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.top-bar {
+  background-color: #0fb9b1;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.welcome-user {
+  padding-right: 2%;
+}
+
+.mid-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-top: 90px;
+  gap: 6%;
+}
+
+.recipe-container {
+  min-height: 475px;
+  min-width: 33%;
+  max-height: 550px;
+  max-width: 33%;
+  background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+} 
+
+.form-prompt,
+.radio-button,
+.search-food-button {
+  padding-left: 30px;
+  margin: 0px;
+}
+
+.form-prompt {
+  padding-top: 50px;
+}
+
+.astryx {
+  color: #ee5253;
+}
+
+.search-food-button {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  
+}
+
+.submit {
+  background-color: #0fb9b1;
+  padding: 10px 50px 10px 50px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.food-prompt {
+  font-style: italic;
+}
+
+.random-dish {
+  margin-top: 2px;
+  font-size: 50px;
+}
+
+#display-meal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cooking-pot {
+  max-width: 200px;
+  max-height: 200px;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.sign-in-form {
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(225, 225, 225, .9);
+  
+}
+
+.sign-in-container {
+  height: 80%;
+  width: 80%;
+  background-color: #7fffd4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.sign-in-heading {
+  margin-left: 0;
+}
+
+.entry-button {
+  border: 0;
+  padding: 0;
+  color: #f5e719;
+  background-color: #852dbacc;
+  height: 50px;
+  width: 200px;
+  box-shadow: 5px 10px 20px black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.input-prompt,
+.input-text,
+.sign-in-heading {
+  text-shadow: 1.5px 1.5px white;
+}
+
+h5 {
+  color: rgb(179, 23, 23);
+  font-size: large;
+}
+

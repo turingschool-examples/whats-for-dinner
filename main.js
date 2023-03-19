@@ -1,20 +1,16 @@
-// User selects a dish option, clicks button and random dish pulls up
-      //from the elected category
-// Dish appears on right side and cooking pot gets hidden
+//***Query Selectors***//
 
-// research radio input and how to make them work.
-// create and event listener for the button
-// when button is clicked...
-  // random number generator
-  // grab an index at random
-  // insert that index value into an html element
-  // hide the cooking pot emblem
-// WILL NEED //
-// function for hiding cooking pot
-// function for random number
-// research hidden function for event listener
+const pageDisplay = document.querySelector('.page-display');
+const signInForm = document.querySelector('.sign-in-form');
+const signInButton = document.querySelector('.entry-button');
+const welcomeText = document.querySelector('.welcome-user');
+const errorMessage = document.querySelector('h5');
+const signInContainer = document.querySelector('.sign-in-container');
+const getMealButton = document.querySelector('.submit');
 
-var sides = ["Miso Glazed Carrots",
+//***Data Model***//
+
+const sides = ["Miso Glazed Carrots",
   "Coleslaw",
   "Garden Salad",
   "Crispy Potatoes",
@@ -25,7 +21,7 @@ var sides = ["Miso Glazed Carrots",
   "Garlic Butter Mushrooms",
   "Hush Puppies"];
 
-var mains = ["Spaghetti and Meatballs",
+const mains = ["Spaghetti and Meatballs",
   "Pineapple Chicken",
   "Shakshuka",
   "Thai Yellow Curry",
@@ -39,7 +35,7 @@ var mains = ["Spaghetti and Meatballs",
   "Sheet Pan Fajitas",
   "Margarita Pizza"];
 
-var desserts = ["Apple Pie",
+const desserts = ["Apple Pie",
   "Lemon Meringue Pie",
   "Black Forest Cake",
   "Banana Bread",
@@ -59,41 +55,24 @@ var desserts = ["Apple Pie",
   "Eclairs"];
 
 
-var pageDisplay = document.querySelector('.page-display');
-var signInForm = document.querySelector('.sign-in-form');
-var signInButton = document.querySelector('.entry-button');
-var welcomeText = document.querySelector('.welcome-user');
-var errorMessage = document.querySelector('h5');
-var signInContainer = document.querySelector('.sign-in-container');
-var getMealButton = document.querySelector('.submit');
-var user = "";
+//***Event Handlers***//
 
-
-window.addEventListener('load', supplyInput);
-signInButton.addEventListener('click', showMainPage);
-getMealButton.addEventListener('click', displayDish);
-
-
-function displayDish() {
-  var foodDisplay = document.querySelector('#display-meal');
-  var radioElements = document.getElementsByName("choose-dish");
-  for (var i = 0; i < radioElements.length; i++) {
-    if (radioElements[i].checked) {
-      var valueString = radioElements[i].value
-        var checkedValue = Function("return " + valueString)();
-        foodDisplay.innerHTML = `
-        <h2 class="food-prompt">You should make:</h2>
-        <h1 class="random-dish">${checkedValue[getRandom(checkedValue)]}!</h1>
-        `;
+const displayDish = () => {
+  const foodDisplay = document.querySelector('#display-meal');
+  const radioElements = document.getElementsByName("choose-dish");
+  radioElements.forEach(element => {
+    if (element.checked) {
+      const checkedValue = Function("return " + element.value)();
+      foodDisplay.innerHTML = `
+      <h2 class="food-prompt">You should make:</h2>
+      <h1 class="random-dish">${checkedValue[getRandom(checkedValue)]}!</h1>
+      `;
     }
-  }
+  });
 }
 
-function getRandom(dishList) {
-  return Math.floor(Math.random() * dishList.length);
-}
-
-function showMainPage() {
+const showMainPage = () => {
+  var user = "";
   user = document.getElementById('name').value;
   if (user) {
     pageDisplay.classList.remove('hide');
@@ -105,7 +84,17 @@ function showMainPage() {
   }
 }
 
-function supplyInput() {
+const supplyInput = () => {
   pageDisplay.classList.add('hide');
   signInForm.classList.remove('hide');
 }
+
+//***Functions***//
+
+const getRandom = dishList => Math.floor(Math.random() * dishList.length)
+
+//***Event Listeners***//
+
+window.addEventListener('load', supplyInput);
+signInButton.addEventListener('click', showMainPage);
+getMealButton.addEventListener('click', displayDish);

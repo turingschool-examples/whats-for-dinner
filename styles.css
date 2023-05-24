@@ -8,3 +8,9 @@ red - #ee5253
 
 */
 
+body {
+    background-image: url(/Users/judyye/turing_work/mod1/whats-for-dinner/assets/burger-friends.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* background-position: fixed; */
+}

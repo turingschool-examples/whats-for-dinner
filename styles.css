@@ -31,3 +31,9 @@ header {
     width: 150px;
     font-size: medium;
 }
+
+body {
+    background-image: url("assets/burger-friends.jpg");
+    background-size: cover;
+    
+}

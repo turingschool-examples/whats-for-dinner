@@ -4,7 +4,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header>
+			<span id="header-title">What's for Dinner?</span>
+			<button class="button" id="add-recipe-button">ADD A RECIPE</button>
+		</header>
+		<main>
+			<section>
+				<p>What are you looking for?</p>
+				<form action="#">
+					<input type="checkbox" name="side" id="side-cb">
+					<label for="side">Side</label>
+					<input type="checkbox" name="main" id="main-cb">
+					<label for="main">Main Dish</label>
+					<input type="checkbox" name="dessert" id="dessert-cb">
+					<label for="dessert">Desserts</label>
+					<input type="checkbox" name="meal" id="meal-cb">
+					<label for="meal">Entire Meal</label>
+					<button class="button" id="form-submit-button">Let's Cook!</button>
+				</form>
+			</section>
+			<section>
+				<img id="cookpot" src="./assets/cookpot.svg" alt="Cooking pot">
+				<p id="generated-meal"></p>
+			</section>
+		</main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

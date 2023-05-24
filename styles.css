@@ -30,13 +30,15 @@ header {
     background-color: rgba(225, 225, 225, .9);
     width: 275px;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 img {
     width: 100px;
     height: auto;
-    
 }
 
 .list {

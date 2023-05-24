@@ -6,10 +6,18 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
-*/
-
-.header-text {
- font-family:'Roboto', sans-serif;
- background-color:#0fb9b1;
-
+   */
+   
+* { 
+   font-family:'Roboto', sans-serif;
+   margin: 0;
+}
+           
+header {
+    background-color:#0fb9b1;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }

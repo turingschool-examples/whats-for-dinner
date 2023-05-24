@@ -17,10 +17,27 @@ header {
     font-weight: bold;
     padding: 10px;
 }
-section {
+
+article {
     border-color: black;
-    border-width: 20px;
+    border-width: 100px;
     background-color: red;
     width: 300px;
     height: 300px
+}
+.left-box{
+    border-color: black;
+    border-width: 100px;
+        position: absolute;
+        top: 250px;
+        left: 300px;
+      
+}
+
+.right-box{
+    border-color: black;
+    border-width: 100px;
+    position: absolute;
+    top: 250px;
+    left: 850px;
 }

@@ -13,6 +13,11 @@ body{
     background-size: cover;
     margin: 0;
 }
+
+.asterisk{
+    color:#ee5253;
+}
+
 header {
     background-color: #0fb9b1;
     font-size: 25px;
@@ -22,20 +27,17 @@ header {
 }
 
 article {
-    border-color: black;
-    border-width: 100px;
     background-color: rgba(225, 225, 225, .9);
     width: 450px;
     height: 350px
 }
+
 .left-box{
-    border-color: black;
-    border-width: 100px;
     position: absolute;
     top: 165px;
     left: 150px;
-    
 }
+
 .button-header {
     margin-top: 50px;
     font-size: 25px;
@@ -45,12 +47,12 @@ article {
 p {
     font-size: 18px;
     margin-left: 50px;
-    
 }
 
 .lets-cook-button {
     background-color: #0fb9b1 ;
     border-radius: 5px;
+    border-color: #0fb9b1;
     width: 200px;
     height: 50px;
     font-size: 18px;
@@ -58,8 +60,6 @@ p {
 }
 
 .right-box{
-    border-color: black;
-    border-width: 100px;
     position: absolute;
     top: 165px;
     left: 825px;

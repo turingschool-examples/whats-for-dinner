@@ -28,25 +28,25 @@ header {
 
 article {
     background-color: rgba(225, 225, 225, .9);
-    width: 450px;
-    height: 350px
+    width: 500px;
+    height: 400px
 }
 
 .left-box{
     position: absolute;
-    top: 165px;
-    left: 150px;
+    top: 125px;
+    left: 125px;
 }
 
 .button-header {
-    margin-top: 50px;
+    margin-top: 75px;
     font-size: 25px;
     font-weight: bold;
 }
 
 p {
     font-size: 18px;
-    margin-left: 50px;
+    margin-left: 60px;
 }
 
 .lets-cook-button {
@@ -56,13 +56,13 @@ p {
     width: 200px;
     height: 50px;
     font-size: 18px;
-    margin-left: 50px
+    margin-left: 60px
 }
 
 .right-box{
     position: absolute;
-    top: 165px;
-    left: 825px;
+    top: 125px;
+    left: 800px;
     display: grid;
     place-items: center;
 }

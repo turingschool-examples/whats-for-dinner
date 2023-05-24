@@ -12,21 +12,25 @@
       <button class="button" id="add-recipe-button">ADD A RECIPE</button>
     </header>
     <main>
-      <section>
+      <section id="form-card">
         <p>What are you looking for?</p>
-        <form action="#">
-          <input type="checkbox" name="side" id="side-cb" />
-          <label for="side">Side</label>
-          <input type="checkbox" name="main" id="main-cb" />
-          <label for="main">Main Dish</label>
-          <input type="checkbox" name="dessert" id="dessert-cb" />
-          <label for="dessert">Desserts</label>
-          <input type="checkbox" name="meal" id="meal-cb" />
-          <label for="meal">Entire Meal</label>
-          <button class="button" id="form-submit-button">Let's Cook!</button>
+        <form id="meal-form" action="#">
+          <label for="side">
+            <input type="checkbox" name="side" id="side" />Side
+          </label>
+          <label for="main">
+            <input type="checkbox" name="main" id="main" />Main Dish
+          </label>
+          <label for="dessert">
+            <input type="checkbox" name="dessert" id="dessert" />Desserts
+          </label>
+          <label for="meal">
+            <input type="checkbox" name="meal" id="meal" />Entire Meal
+          </label>
+          <button class="button" id="form-submit-button">LET'S COOK!</button>
         </form>
       </section>
-      <section>
+      <section id="meal-card">
         <img id="cookpot" src="./assets/cookpot.svg" alt="Cooking pot" />
         <p id="generated-meal"></p>
       </section>

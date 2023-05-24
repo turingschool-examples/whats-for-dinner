@@ -8,3 +8,26 @@ red - #ee5253
 
 */
 
+
+
+nav {
+background-color: #0fb9b1;  
+height: 75px;
+}
+
+form { 
+background: #95a5a6;
+height: 350px;
+width: 450px;
+display: block;
+}
+
+h2 {
+font-family:
+font-size: 3rem;
+text-align: left;
+}
+
+user-image-box {
+
+}

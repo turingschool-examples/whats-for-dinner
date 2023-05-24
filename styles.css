@@ -10,6 +10,8 @@ red - #ee5253
 body{
     font-family: 'Roboto', sans-serif;
     background-image: url(/assets/burger-friends.jpg);
+    background-size: cover;
+    background-position: center;
 }
 header {
     background-color: #0fb9b1;
@@ -21,16 +23,16 @@ header {
 article {
     border-color: black;
     border-width: 100px;
-    background-color: red;
-    width: 300px;
+    background-color: rgba(225, 225, 225, .9);
+    width: 350px;
     height: 300px
 }
 .left-box{
     border-color: black;
     border-width: 100px;
-        position: absolute;
-        top: 250px;
-        left: 300px;
+    position: absolute;
+    top: 250px;
+    left: 300px;
       
 }
 
@@ -40,4 +42,11 @@ article {
     position: absolute;
     top: 250px;
     left: 850px;
+    display: grid;
+    place-items: center;
+}
+
+.cooking-pot{
+    width: 125px;
+    height: auto;
 }

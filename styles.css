@@ -9,18 +9,65 @@ red - #ee5253
 */
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: url(/assets/burger-friends.jpg);
+    background-image: url(/Users/jocelynwensloff/turing_work/1mod/projects/solo_projects/whats-for-dinner_JW/assets/burger-friends.jpg);
+    background-size: cover;
+    margin: 0;
 }
+
+.asterisk{
+    color:#ee5253;
+}
+
 header {
     background-color: #0fb9b1;
     font-size: 25px;
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
+
 }
-section {
-    border-color: black;
-    border-width: 20px;
-    background-color: red;
-    width: 300px;
-    height: 300px
+
+article {
+    background-color: rgba(225, 225, 225, .9);
+    width: 500px;
+    height: 400px
+}
+
+.left-box{
+    position: absolute;
+    top: 125px;
+    left: 125px;
+}
+
+.button-header {
+    margin-top: 75px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin-left: 60px;
+}
+
+.lets-cook-button {
+    background-color: #0fb9b1 ;
+    border-radius: 5px;
+    border-color: #0fb9b1;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    margin-left: 60px
+}
+
+.right-box{
+    position: absolute;
+    top: 125px;
+    left: 800px;
+    display: grid;
+    place-items: center;
+}
+
+.cooking-pot{
+    width: 125px;
+    height: auto;
 }

@@ -1,6 +1,11 @@
-/* font-family: 'Roboto', sans-serif;
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 
-COLORS
+
+/* COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
@@ -8,3 +13,35 @@ red - #ee5253
 
 */
 
+.control {
+    background-color: #0fb9b1;
+    padding: 10px;
+}
+
+.control-header {
+    display: inline-block;
+}
+
+button {
+    display: inline-block;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.lets-cook-btn {
+    background-color: #0fb9b1;
+}
+
+.menu-box {
+    display: inline-block;
+    margin-top: 100px;
+    width: 600px;
+    height: 500px;
+    background-color:rgba(225, 225, 225, .9);
+}
+
+.cookpot {
+    height: 200px;
+    width: 200px;
+}

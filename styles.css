@@ -32,7 +32,9 @@ img {
 }
 
 body {
-    background-image: url("./assets/burger-friends.jpg");
-    /* background-repeat: no-repeat; */
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url("./assets/burger-friends.jpg");
 }

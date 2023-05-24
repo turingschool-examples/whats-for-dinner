@@ -7,4 +7,20 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(/assets/burger-friends.jpg);
+}
+header {
+    background-color: #0fb9b1;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+section {
+    border-color: black;
+    border-width: 20px;
+    background-color: red;
+    width: 300px;
+    height: 300px
+}

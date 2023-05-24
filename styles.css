@@ -47,6 +47,20 @@ section {
 
 article {
     background-color: rgba(225, 225, 225, .9);
+    height: 250px;
+    width: 300px;
+    display:flex;
+}
+
+.selection-box {
+   flex-direction: column;
+   justify-content: space-around;
+   align-items:flex-start;
+}
+
+.pot-box {
+ justify-content: center;
+ align-items: center;
 }
 
 img {

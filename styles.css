@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -14,4 +16,10 @@ red - #ee5253
 .control {
     background-color: #0fb9b1;
     padding: 10px;
+}
+
+.add-Recipe-Btn {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 20px;
 }

@@ -21,18 +21,12 @@ body {
     margin-top: -10px;
     margin-right: -10px;
     margin-left: -10px;
-    height: 30;
-    
+    height: 30;    
 }
 
 #header-text {
-    margin-top: 5px;
-    margin-left: 10px;
-    
+    margin-top: 6px;
+    padding-left: 15px;
     font-family: 'Roboto', sans-serif;
     
 }
-/* .top-bar {
-    background-color: #0fb9b1 ;
-    padding: 1rem
-} */

@@ -35,5 +35,22 @@ header {
 body {
     background-image: url("assets/burger-friends.jpg");
     background-size: cover;
-    
+}
+
+section {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 150px;
+}
+
+article {
+    background-color: rgba(225, 225, 225, .9);
+}
+
+img {
+    height:100px;
+    width:auto;
+    position:center;
 }

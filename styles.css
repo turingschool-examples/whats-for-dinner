@@ -9,38 +9,44 @@ red - #ee5253
 */
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: url(/assets/burger-friends.jpg);
+    background-image: url(/Users/jocelynwensloff/turing_work/1mod/projects/solo_projects/whats-for-dinner_JW/assets/burger-friends.jpg);
     background-size: cover;
     background-position: center;
+    margin: 0;
 }
 header {
     background-color: #0fb9b1;
     font-size: 25px;
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
+    /* margin: 0; */
 }
 
 article {
     border-color: black;
     border-width: 100px;
     background-color: rgba(225, 225, 225, .9);
-    width: 350px;
-    height: 300px
+    width: 450px;
+    height: 350px
 }
 .left-box{
     border-color: black;
     border-width: 100px;
     position: absolute;
-    top: 250px;
-    left: 300px;
-      
+    top: 125px;
+    left: 200px;
 }
-
+p {
+    right:20px
+}
+.button {
+    background-color: #0fb9b1 !important;
+}
 .right-box{
     border-color: black;
     border-width: 100px;
     position: absolute;
-    top: 250px;
+    top: 125px;
     left: 850px;
     display: grid;
     place-items: center;

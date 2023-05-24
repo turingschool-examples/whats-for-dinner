@@ -34,16 +34,29 @@ article {
     position: absolute;
     top: 165px;
     left: 150px;
+    
 }
+.button-header {
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 p {
-    right:20px
+    font-size: 18px;
+    margin-left: 50px;
+    
 }
+
 .lets-cook-button {
     background-color: #0fb9b1 ;
     border-radius: 5px;
     width: 200px;
-    height: 50px
+    height: 50px;
+    font-size: 18px;
+    margin-left: 50px
 }
+
 .right-box{
     border-color: black;
     border-width: 100px;

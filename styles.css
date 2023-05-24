@@ -43,10 +43,11 @@ header {
 
 #form-submit-button {
   background-color: var(--teal);
+  width: 180px;
 }
 
 #cookpot {
-  height: 200px;
+  height: 150px;
 }
 
 main > * {
@@ -54,17 +55,45 @@ main > * {
 }
 
 section {
-  height: 400px;
-  width: 500px;
+  height: 350px;
+  width: 450px;
   margin: 70px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #form-card {
   float: left;
   margin-right: 5px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#form-card > * {
+  margin-left: 50px;
+}
+
+#form-card p {
+  font-size: 25px;
+}
+
+form {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+label input {
+  margin-right: 8px;
 }
 
 #meal-card {
   float: right;
   margin-left: 5px;
 }
+

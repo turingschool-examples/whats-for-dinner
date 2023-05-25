@@ -12,7 +12,7 @@ red - #ee5253
 
 body{
     background-image: url('./assets/burger-friends.jpg');
-    background-size: cover;
+    background-size: cover, auto 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -22,4 +22,68 @@ h1{
     background-color: #0fb9b1;
     padding: 10px;
     font-family: 'Roboto', 'sans-serif';
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    
+}
+.block-1>p{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.parent>form{
+    background-color: rgba(225, 225, 225, .9);
+    height: 400px;
+    width: 500px;
+    margin: 100px;
+    
+}
+
+.block-1{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label{
+    display:block;
+}
+
+
+button[type="submit"]{
+    margin-top: 10px;
+    width: 100px;
+    background-color:#0fb9b1;
+    
+}
+
+.block-2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.block-2>img{
+    height: 35%;
+    width: 35%;
+}
+
+.mealchoice{
+    display: block;
+    align-items: center;
+}
+
+#reset{
+    height: 100px;
+    width: 200px;
+    text-align: center;
+}
+
+.mealchoice .remove{
+    align-self: left;
 }

@@ -3,13 +3,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+    display: none;
+}
 
 /* COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
 
 body {

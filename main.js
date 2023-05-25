@@ -3,6 +3,24 @@ import { sides } from './data/sides.js';
 import { mains } from './data/mains.js';
 import { desserts } from './data/desserts.js';
 
+// QUERY SELECTORS
+
+// MEAL CARD
+var cookpot = document.querySelector('#cookpot');
+var mealCardSpan = document.querySelector('#meal-card span');
+var mealSuggestion = document.querySelector('#generated-meal');
+
+// BUTTONS
+var letsCookBtn = document.querySelector('#form-submit-button');
+
+// EVENT LISTENERS
+
+letsCookBtn.onclick = (event) => {
+  event.preventDefault();
+  toggleClass(cookpot, 'hidden');
+  toggleClass(mealCardSpan, 'hidden');
+};
+
 // FUNCTIONS AND HANDLERS
 
 function getRandomIndex(array) {
@@ -29,4 +47,8 @@ function createSuggestion(side, main, dessert) {
     main: main ?? '',
     dessert: dessert ?? '',
   };
+}
+
+function toggleClass(element, className) {
+  element.classList.toggle(className);
 }

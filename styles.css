@@ -23,18 +23,17 @@ header {
     font-size: 25px;
     font-weight: bold;
     padding: 20px;
-
 }
 
 article {
     background-color: rgba(225, 225, 225, .9);
-    width: 500px;
+    width: 420px;
     height: 400px
 }
 
 .left-box{
     position: absolute;
-    top: 125px;
+    top: 100px;
     left: 125px;
 }
 
@@ -61,8 +60,8 @@ p {
 
 .right-box{
     position: absolute;
-    top: 125px;
-    left: 800px;
+    top: 100px;
+    left: 725px;
     display: grid;
     place-items: center;
 }

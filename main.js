@@ -48,18 +48,15 @@ var desserts= [
 
 //........................query selectors ......................
 var cookingPot = document.querySelector('.cooking-pot');
-var displaySide = document.querySelector('.side');
-var displayDessert = document.querySelector('.dessert');
-var displayMain = document.querySelector('.main');
-var displayEntire = document.querySelector('.entire');
-
-
+// var displaySide = document.querySelector('.side');
+// var displayDessert = document.querySelector('.dessert');
+// var displayMain = document.querySelector('.main');
+// var displayEntire = document.querySelector('.entire');
+var letsCookButton = document.querySelector('.lets-cook-button');
+var radioButtons = document.getElementsByName('dinner');
 //........................event listeners.......................
-displaySide.addEventListener('click', showRandomSide);
-displayDessert.addEventListener('click', showRandomDessert);
-displayMain.addEventListener('click', showRandomMain);
-displayEntire.addEventListener('click', showRandomEntire);
 
+// letsCookButton.addEventListener('click', )
 
 //........................functions ............................
 function getRandomIndex(array) {
@@ -67,21 +64,8 @@ function getRandomIndex(array) {
   }
 
   function hideCookingPot(){
-  cookingPot.classList.add('hidden')
+  cookingPot.classList.add('hidden');
 }
 
-function showRandomSide(){
 
-}
-
-function showRandomDessert(){
-
-}
-
-function showRandomMain(){
-
-}
-
-function showRandomEntire(){
-    
-}
+// first select the value of the specified 

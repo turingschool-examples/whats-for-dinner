@@ -25,8 +25,8 @@ letsCookButton.addEventListener('click', function(){
 
 // Functions and Event Handlers
 
-function getRandomIndex() {
-    
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
 }
 
 function getRandomRecipe() {

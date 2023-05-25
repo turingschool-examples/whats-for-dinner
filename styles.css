@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -14,8 +13,13 @@ red - #ee5253
 */
 
 header {
+    display: flex;
+    height: 60px;
+    padding: 15px;
     background-color: #0fb9b1;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
 .header-title {

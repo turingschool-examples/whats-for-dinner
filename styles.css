@@ -13,12 +13,12 @@ red - #ee5253
 
 */
 
-.control {
+header {
     background-color: #0fb9b1;
     padding: 10px;
 }
 
-.control-header {
+.header-title {
     display: inline-block;
 }
 
@@ -33,7 +33,7 @@ button {
     background-color: #0fb9b1;
 }
 
-.menu-box {
+article {
     display: inline-block;
     margin-top: 100px;
     width: 600px;

@@ -47,15 +47,41 @@ var desserts= [
 'Eclairs'];
 
 //........................query selectors ......................
+var cookingPot = document.querySelector('.cooking-pot');
+var displaySide = document.querySelector('.side');
+var displayDessert = document.querySelector('.dessert');
+var displayMain = document.querySelector('.main');
+var displayEntire = document.querySelector('.entire');
 
 
 //........................event listeners.......................
+displaySide.addEventListener('click', showRandomSide);
+displayDessert.addEventListener('click', showRandomDessert);
+displayMain.addEventListener('click', showRandomMain);
+displayEntire.addEventListener('click', showRandomEntire);
 
 
 //........................functions ............................
-// randomly generated index 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   }
 
-  
+  function hideCookingPot(){
+  cookingPot.classList.add('hidden')
+}
+
+function showRandomSide(){
+
+}
+
+function showRandomDessert(){
+
+}
+
+function showRandomMain(){
+
+}
+
+function showRandomEntire(){
+    
+}

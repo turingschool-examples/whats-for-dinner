@@ -16,12 +16,12 @@ red - #ee5253
 header {
     background-color:#0fb9b1;
     display: flex;
-    height: 70px;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     padding: 14px; 
-    font-size:medium
+    font-size: small
 }
 
 .header-button {
@@ -55,12 +55,22 @@ article {
 .selection-box {
    flex-direction: column;
    justify-content: space-around;
-   align-items:flex-start;
+   align-items: flex-start;
+}
+ 
+.box-title {
+    font-size: x-large;
+    padding-left: 30px;
+}
+
+.cook-button {
+    background-color: #0fb9b1 ;
+    border-radius: 4px;
 }
 
 .pot-box {
- justify-content: center;
- align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 img {

@@ -42,13 +42,13 @@ section {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 article {
     background-color: rgba(225, 225, 225, .9);
-    height: 250px;
-    width: 300px;
+    height: 380px;
+    width: 450px;
     display:flex;
 }
 
@@ -64,7 +64,7 @@ article {
 }
 
 img {
-    height:100px;
+    height:180px;
     width:auto;
     position:center;
 }

@@ -20,6 +20,7 @@ var Dessert = [
     'Banana Bread',
     'Peach Cobbler',
 ]
+var newVar;
 var selectedValue = document.getElementById('meal');
 var imageBox = document.getElementById('mealbox');
 console.log(imageBox);
@@ -40,7 +41,7 @@ function printSelection(event){
         `<article class="mealchoice">
             <em>You should make:</em>
             <h2>${mealArray[randChoice]} !</h2>
-            <button id="reset">Reset</button>
+            <button class="remove" id="reset">Reset</button>
         </article>`;
     console.log(selectedOption);
     }

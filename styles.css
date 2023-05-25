@@ -67,7 +67,6 @@ section {
   float: left;
   margin-right: 5px;
   gap: 15px;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
 }

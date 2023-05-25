@@ -4,6 +4,15 @@ var letsCookButton = document.querySelector(".lets-cook-btn");
 
 // Variables
 
+var sides = [
+    "Rice Pilaf"
+]
+var mains = [
+    "Steak"
+]
+var desserts = [
+    "Creme Brulee"
+]
 
 
 
@@ -15,6 +24,10 @@ letsCookButton.addEventListener('click', function(){
 })
 
 // Functions and Event Handlers
+
+function getRandomIndex() {
+    
+}
 
 function getRandomRecipe() {
 

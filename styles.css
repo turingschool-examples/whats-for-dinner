@@ -19,7 +19,7 @@ body {
 
 header {
     display: flex;
-    height: 60px;
+    height: 5%;
     padding: 15px;
     background-color: #0fb9b1;
     justify-content: space-between;
@@ -48,7 +48,7 @@ article {
     width: 500px;
     height: 400px;
     padding: 50px;
-    margin-top: 80px;
+    margin-top: 5%;
     background-color:rgba(225, 225, 225, .9);
 }
 
@@ -62,10 +62,13 @@ article {
     width: 200px;
 }
 
-
-
+.cookpot-box {
+    justify-content: center;
+    align-items: center;
+}
 
 .cookpot {
     height: 200px;
     width: 200px;
 }
+

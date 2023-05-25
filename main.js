@@ -56,9 +56,11 @@ var letsCookButton = document.querySelector('.lets-cook-button');
 var radioButtons = document.getElementsByName('dinner');
 //........................event listeners.......................
 
-// letsCookButton.addEventListener('click', )
+letsCookButton.addEventListener('click', displayFood);
 
 //........................functions ............................
+var sideMainDessertEntree; 
+
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   }
@@ -69,3 +71,10 @@ function getRandomIndex(array) {
 
 
 // first select the value of the specified 
+function displayFood(){
+    for(var i=0; i < radioButtons.length; i++){ 
+        if(radioButtons[i].checked){
+          sideMainDessertEntree = radioButtons[i].value
+        }
+    } return sideMainDessertEntree
+} 

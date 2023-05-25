@@ -22,24 +22,11 @@ letsCookBtn.onclick = (event) => {
 };
 
 // FUNCTIONS AND HANDLERS
+var currentMeal;
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
-
-function returnRandomSide() {
-  return sides[getRandomIndex(sides)];
-}
-
-function returnRandomMain() {
-  return mains[getRandomIndex(mains)];
-}
-
-function returnRandomDessert() {
-  return desserts[getRandomIndex(desserts)];
-}
-
-var currentMeal;
 
 function createSuggestion(side, main, dessert) {
   return {
@@ -47,6 +34,18 @@ function createSuggestion(side, main, dessert) {
     main: main ?? '',
     dessert: dessert ?? '',
   };
+}
+
+function getRandomDish(array) {
+  return array[getRandomIndex(array)];
+}
+
+function returnRandomMeal() {
+  var randomSide = getRandomDish(sides);
+  var randomMain = getRandomDish(mains);
+  var randomDessert = getRandomDish(desserts)
+
+  return createSuggestion(randomSide, randomMain, randomDessert);
 }
 
 function toggleClass(element, className) {

@@ -43,17 +43,27 @@ button {
     flex-direction: row;
 }
 
-.lets-cook-btn {
-    background-color: #0fb9b1;
-}
-
 article {
-    display: inline-block;
-    margin-top: 100px;
-    width: 600px;
-    height: 500px;
+    display: flex;
+    width: 500px;
+    height: 400px;
+    padding: 50px;
+    margin-top: 80px;
     background-color:rgba(225, 225, 225, .9);
 }
+
+.input-box {
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.lets-cook-btn {
+    background-color: #0fb9b1;
+    width: 200px;
+}
+
+
+
 
 .cookpot {
     height: 200px;

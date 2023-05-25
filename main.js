@@ -45,3 +45,17 @@ var desserts= [
 'Tart Tatin',
 'Croissants',
 'Eclairs'];
+
+//........................query selectors ......................
+
+
+//........................event listeners.......................
+
+
+//........................functions ............................
+// randomly generated index 
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  }
+
+  

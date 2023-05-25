@@ -12,6 +12,11 @@ red - #ee5253
 
 */
 
+body {
+    background-image: url('assets/burger-friends.jpg');
+    background-size: cover;
+}
+
 header {
     display: flex;
     height: 60px;
@@ -29,6 +34,13 @@ button {
     border-radius: 5px;
     padding: 10px 20px;
     font-size: medium;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }
 
 .lets-cook-btn {

@@ -9,25 +9,72 @@ red - #ee5253
 */
 
 
+html, body {
+    min-height: 100vh;
+  }
+
+  body {
+    background-image: url(assets/burger-friends.jpg);
+    background-size: cover;
+
+    /* border: solid red; */
+}
+
+h1 {
+    margin-left: 10px;
+}
 
 nav {
-background-color: #0fb9b1;  
-height: 75px;
+    background-color: #0fb9b1;  
+    height: 60px;
+    display: flex;
+  }
+
+
+.add-recipe-button {
+    
+}
+
+main {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 10%;
+    height: 100vh;
+}
+
+.boxes {
+    background: rgba(225, 225, 225, .9);
+    height: 350px;
+    width: 450px;
 }
 
 form { 
-background: #95a5a6;
-height: 350px;
-width: 450px;
-display: block;
+  height: 350px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+
+}
+
+.lets-cook {
+  background-color: #0fb9b1; 
+  height: 20px;
+  width: 100px;
+  align-self: center;
+
 }
 
 h2 {
-font-family:
-font-size: 3rem;
-text-align: left;
+  font-size: 23px;
+  /* text-align: left; */
 }
 
-user-image-box {
+.user-image-box {
+  background: rgba(225, 225, 225, .9);
+  border: 10px;
+}
 
+.boiling-pot {
+  height: 100px;
 }

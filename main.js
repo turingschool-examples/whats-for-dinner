@@ -3,7 +3,7 @@
 var letsCookButton = document.querySelector(".lets-cook-btn");
 var inputs = document.querySelectorAll('input');
 var cookpot = document.querySelector('.cookpot');
-var recipeMSG = document.querySelector('.recipe-msg');
+var recipeView = document.querySelector('.recipe-view');
 var recipe = document.querySelector('.recipe');
 
 // Variables
@@ -68,7 +68,7 @@ function getRandomRecipe(index) {
 function displayRecipe() {
     recipe.innerText = currentRecipe;
     cookpot.classList.add('hidden');
-    recipeMSG.classList.remove('hidden');
+    recipeView.classList.remove('hidden');
 }
 
 // When the user hits the lets cook btn

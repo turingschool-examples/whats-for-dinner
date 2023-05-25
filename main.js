@@ -24,6 +24,7 @@ letsCookBtn.onclick = (event) => {
   event.preventDefault();
   toggleClass(cookpot, 'hidden');
   toggleClass(mealCardSpan, 'hidden');
+  renderMeal();
 };
 
 entireMealCB.onchange = (event) => {
@@ -121,4 +122,10 @@ function returnRequestedMeal(suggestion) {
   } else if (entireMeal) {
     return `${suggestion.main} with a side of ${suggestion.side} and ${suggestion.dessert} for dessert!`;
   }
+}
+
+function renderMeal() {
+  var meal = returnRequestedMeal(returnRandomMeal());
+
+  mealSuggestion.innerText = meal;
 }

@@ -50,6 +50,10 @@ header {
   height: 150px;
 }
 
+.hidden {
+  display: none;
+}
+
 main > * {
   background: var(--frosted-white);
 }

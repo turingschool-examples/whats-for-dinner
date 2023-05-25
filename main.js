@@ -13,6 +13,10 @@ var mealSuggestion = document.querySelector('#generated-meal');
 // BUTTONS
 var letsCookBtn = document.querySelector('#form-submit-button');
 
+// CHECKBOXES
+var entireMealCB = document.querySelector('input[name=meal]');
+var sideMainDessertCheckBoxes = document.querySelectorAll('.cb');
+
 // EVENT LISTENERS
 
 letsCookBtn.onclick = (event) => {
@@ -20,6 +24,28 @@ letsCookBtn.onclick = (event) => {
   toggleClass(cookpot, 'hidden');
   toggleClass(mealCardSpan, 'hidden');
 };
+
+entireMealCB.onchange = (event) => {
+  if (event.target.checked) {
+    toggleCheckBoxes();
+    event.target.checked = true;
+  } else {
+    event.target.checked = false;
+  }
+};
+
+for (var i = 0; i < sideMainDessertCheckBoxes.length; i++) {
+  sideMainDessertCheckBoxes[i].addEventListener('change', () => {
+    var allCBAreChecked = checkIfAllCBChecked();
+    if (entireMealCB.checked) {
+      entireMealCB.checked = !entireMealCB.checked
+    }
+    if (allCBAreChecked) {
+      toggleCheckBoxes();
+      entireMealCB.checked = true;
+    } 
+  });
+}
 
 // FUNCTIONS AND HANDLERS
 var currentMeal;
@@ -43,9 +69,27 @@ function getRandomDish(array) {
 function returnRandomMeal() {
   var randomSide = getRandomDish(sides);
   var randomMain = getRandomDish(mains);
-  var randomDessert = getRandomDish(desserts)
+  var randomDessert = getRandomDish(desserts);
 
   return createSuggestion(randomSide, randomMain, randomDessert);
+}
+
+function checkIfAllCBChecked() {
+  for (var i = 0; i < sideMainDessertCheckBoxes.length; i++) {
+    if (!sideMainDessertCheckBoxes[i].checked) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function toggleCheckBoxes() {
+  for (var i = 0; i < sideMainDessertCheckBoxes.length; i++) {
+    if (sideMainDessertCheckBoxes[i].checked) {
+      sideMainDessertCheckBoxes[i].checked =
+        !sideMainDessertCheckBoxes[i].checked;
+    }
+  }
 }
 
 function toggleClass(element, className) {

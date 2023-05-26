@@ -36,8 +36,11 @@ var desserts = [
 "Croissants",
 "Eclairs",
 ]
-var currentSelection;
-var currentRecipe;
+var currentRecipe = {
+    type: '',
+    dish: '',
+};
+var favoriteRecipes = [];
 
 
 // Event Listeners
@@ -54,20 +57,20 @@ favoriteButton.addEventListener('click', favoriteRecipe);
 // Functions and Event Handlers
 
 function getRandomIndex() {
-    return Math.floor(Math.random() * currentSelection.length);
+    return Math.floor(Math.random() * window[currentRecipe.type].length);
 }
 
 function getInput() {
     for (var i = 0; i < inputs.length; i++) {
         if(inputs[i].checked) {
-            currentSelection = window[inputs[i].value];
+            currentRecipe.type = inputs[i].value;
         }
     }
 }
 
 function getRandomRecipe(index) {
-    currentRecipe = currentSelection[index];
-    recipe.innerText = currentRecipe;
+    currentRecipe.dish = window[currentRecipe.type][index];
+    recipe.innerText = currentRecipe.dish;
 }
 
 function displayRecipe() {
@@ -77,7 +80,11 @@ function displayRecipe() {
 
 
 function clearRecipe() {
-    currentRecipe = ''
+    currentRecipe.dish = ''
     cookpot.classList.remove('hidden');
     recipeView.classList.add('hidden');
+}
+
+function favoriteRecipe() {
+    favoriteRecipes.push(currentRecipe);
 }

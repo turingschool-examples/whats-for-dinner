@@ -6,18 +6,24 @@
   <body>
     <header>
      <h1>What's for Dinner?</h1> 
-     <button>ADD A RECIPE</button>
+     <button class="ar">ADD A RECIPE</button>
     </header>
     <div class="main-content">
-    <section class="list">
-      <h2>What are you looking for?</h2>
-      <ul style="list-style-type: none;">
-        <li><input type="radio">Side</li>
-        <li><input type="radio">Main Dish</li>
-        <li><input type="radio">Dessert</li>
-        <li><input type="radio">Entire Meal</li>
-      </ul>
-      <button>LET'S COOK!</button>
+    <section class="dinner-left">
+      <form>
+        <h2>What are you looking for?</h2>
+        <div class="list">
+          <!-- <input type="radio" value="side"/> -->
+          <label><input type="radio" name="db" value="side"/>Side</label>
+          <!-- <input type="radio" value="main dish"/> -->
+          <label><input type="radio" name="db" value="main dish"/>Main Dish</label>
+          <!-- <input type="radio" value="dessert"/> -->
+          <label><input type="radio" name="db" value="dessert"/>Dessert</label>
+          <!-- <input type="radio" value="entire meal"/> -->
+          <label><input type="radio" name="db" value="entire meal"/>Entire Meal</label>
+        </div>
+        <button>LET'S COOK!</button>
+      </form>
     </section>
     <section class="image">
       <img src="./assets/cookpot.svg"/>

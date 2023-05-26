@@ -6,6 +6,7 @@ var cookpot = document.querySelector('.cookpot');
 var recipeView = document.querySelector('.recipe-view');
 var recipe = document.querySelector('.recipe');
 var clearButton = document.querySelector('.clear');
+var favoriteButton = document.querySelector('.favorite');
 
 // Variables
 
@@ -48,6 +49,7 @@ letsCookButton.addEventListener('click', function(){
 })
 
 clearButton.addEventListener('click', clearRecipe);
+favoriteButton.addEventListener('click', favoriteRecipe);
 
 // Functions and Event Handlers
 

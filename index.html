@@ -4,16 +4,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section>What's for Dinner</section> for header bar; no 'ADD A RECIPE' btn
-    <div> main for background pic and blocks
-      <div> for opaque squares
-        <h3> for heading in block 1
-        <input type='radio'> for the radio button list
-        <button> for the button at the bottom of opaque square 1
-        <img> for opaque square 2
-        </button>
-        </input>
-        </h3>
+    <div class="title">
+      <p>What's for Dinner?</p>
+    </div>
+      
+    <div class="main">
+      <div class="opaque-squares" id=" opaque-square-1">
+        <div class="block-1-heading">
+          <h3 class="heading">What are you looking for?</h3>
+        </div>
+        <div class="radio-block">
+          <div class="radio-btn">
+            <input type="radio">Side</input>
+          </div>
+          <div class="radio-btn">
+            <input type="radio">Main Dish</input>
+          </div>
+          <div class="radio-btn">
+            <input type="radio">Dessert</input>
+          </div>
+          <div class="radio-btn">
+            <input type="radio">Entire Meal</input>
+          </div> 
+        </div>
+        <button class="cook-button">LET'S COOK!</button>
+      </div>
+      <div class="opaque-squares" id="opaque-square-2">
+        <img class="image-in-block-2">
       </div>
     </div>
   </body>

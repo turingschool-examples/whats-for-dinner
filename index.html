@@ -7,7 +7,8 @@
   <body>
     <header>
       <h1 class="header-title" >What's for Dinner?</h1>
-      <button class="add-recipe-btn">ADD A RECIPE</button>
+      <button class="show-favorites">MY FAVORITES</button>
+      <button class="back hidden">GO BACK</button>
     </header>
     <section class="main">
       <article class="input-box">
@@ -30,10 +31,16 @@
         <div class="recipe-view hidden">
           <h4>You should make...</h4>
           <h1 class="recipe">Recipe</h1>
+        <div class="control-bar">
+          <button class="favorite">FAVORITE</button>
           <button class="clear">CLEAR</button>
+        </div>  
         </div>
         <img class="cookpot" src='assets/cookpot.svg' alt="Cookpot"/>
       </article>
+    </section>
+    <section class="favorites-page hidden">
+      <article class="favs-list"></article>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>

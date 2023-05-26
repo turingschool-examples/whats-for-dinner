@@ -1,11 +1,19 @@
 // Query Selectors
 
-var letsCookButton = document.querySelector(".lets-cook-btn");
 var inputs = document.querySelectorAll('input');
 var cookpot = document.querySelector('.cookpot');
 var recipeView = document.querySelector('.recipe-view');
 var recipe = document.querySelector('.recipe');
+
+var letsCookButton = document.querySelector(".lets-cook-btn");
+var favoriteButton = document.querySelector('.favorite');
 var clearButton = document.querySelector('.clear');
+var myFavoritesButton = document.querySelector('.show-favorites')
+var goBackButton = document.querySelector('.back');
+
+var favoritesPage = document.querySelector('.favorites-page');
+var mainPage = document.querySelector('.main');
+
 
 // Variables
 
@@ -35,8 +43,11 @@ var desserts = [
 "Croissants",
 "Eclairs",
 ]
-var currentSelection;
-var currentRecipe;
+var currentRecipe = {
+    type: '',
+    dish: '',
+};
+var favoriteRecipes = [];
 
 
 // Event Listeners
@@ -49,23 +60,31 @@ letsCookButton.addEventListener('click', function(){
 
 clearButton.addEventListener('click', clearRecipe);
 
+favoriteButton.addEventListener('click', function(){
+    favoriteRecipe();
+});
+
+myFavoritesButton.addEventListener('click', displayFavorites);
+
+
+
 // Functions and Event Handlers
 
 function getRandomIndex() {
-    return Math.floor(Math.random() * currentSelection.length);
+    return Math.floor(Math.random() * window[currentRecipe.type].length);
 }
 
 function getInput() {
     for (var i = 0; i < inputs.length; i++) {
         if(inputs[i].checked) {
-            currentSelection = window[inputs[i].value];
+            currentRecipe.type = inputs[i].value;
         }
     }
 }
 
 function getRandomRecipe(index) {
-    currentRecipe = currentSelection[index];
-    recipe.innerText = currentRecipe;
+    currentRecipe.dish = window[currentRecipe.type][index];
+    recipe.innerText = currentRecipe.dish;
 }
 
 function displayRecipe() {
@@ -75,7 +94,19 @@ function displayRecipe() {
 
 
 function clearRecipe() {
-    currentRecipe = ''
+    currentRecipe.dish = ''
     cookpot.classList.remove('hidden');
     recipeView.classList.add('hidden');
+}
+
+function favoriteRecipe() {
+    favoriteRecipes.push(currentRecipe);
+}
+
+function displayFavorites() {
+    mainPage.classList.add('hidden');
+    favoritesPage.classList.remove('hidden');
+    goBackButton.classList.remove('hidden');
+    myFavoritesButton.classList.add('hidden');
+
 }

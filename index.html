@@ -13,7 +13,9 @@
     </header>
     <main>
       <section id="form-card">
-        <p>What are you looking for?</p>
+        <div id="prompt-container">
+          <p>What are you looking for?</p><p id="asterisk">*</p>
+        </div>
         <form id="meal-form" action="#">
           <label for="side">
             <input type="checkbox" name="side" id="side" class="cb"/>Side
@@ -31,10 +33,13 @@
         </form>
       </section>
       <section id="meal-card">
-        <img id="cookpot" class="hidden" src="./assets/cookpot.svg" alt="Cooking pot" />
-        <div class="meal-container">
-          <span class=""><em>You should make: </em></span>
+        <img id="cookpot" class="" src="./assets/cookpot.svg" alt="Cooking pot" />
+        <div id="meal-container">
+          <span class="hidden"><em>You should make: </em></span>
           <p id="generated-meal"></p>
+        </div>
+        <div id="meal-card-btn-container">
+          <button class="button" id="favorite">FAVORITE</button>
         </div>
       </section>
     </main>

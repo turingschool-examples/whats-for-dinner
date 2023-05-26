@@ -13,20 +13,25 @@
       <article class="input-box">
         <h1>What are you looking for?</h1>
         <div>
-          <input type="radio" id="side" name="type" value="side">
+          <input class="type" type="radio" id="side" name="type" value="side">
           <label for="side">Side</label>
         </div>
         <div>
-          <input type="radio" id="main-dish" name="type" value="main-dish">
+          <input class="type" type="radio" id="main-dish" name="type" value="mains">
           <label for="main-dish">Main Dish</label>
         </div>
         <div>
-          <input type="radio" id="dessert" name="type" value="dessert">
+          <input class="type" type="radio" id="dessert" name="type" value="desserts">
           <label for="dessert">Dessert</label>
         </div>
         <button class="lets-cook-btn">LET'S COOK!</button>
       </article>
       <article class="cookpot-box">
+        <div class="recipe-view hidden">
+          <h4>You should make...</h4>
+          <h1 class="recipe">Recipe</h1>
+          <button class="clear">CLEAR</button>
+        </div>
         <img class="cookpot" src='assets/cookpot.svg' alt="Cookpot"/>
       </article>
     </section>

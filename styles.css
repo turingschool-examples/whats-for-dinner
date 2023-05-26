@@ -3,13 +3,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.hidden {
+    display: none !important;
+}
 
 /* COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
 
 body {
@@ -72,3 +74,27 @@ article {
     width: 200px;
 }
 
+.recipe-view {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    margin-top: auto;
+}
+
+.recipe {
+    font-size:x-large;
+    font-style: italic;
+}
+
+.clear {
+    background-color: #95a5a6;
+    color: rgb(225,225, 225);
+    align-self: flex-end;
+    margin-top: auto;
+}

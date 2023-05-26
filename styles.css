@@ -153,6 +153,8 @@ label input {
   margin: 27px 0 0 20px;
 }
 
+/* FAVORITES CONTAINER */
+
 .favorite-container {
   background-color: var(--frosted-white);
   position: absolute;
@@ -167,9 +169,10 @@ label input {
   justify-content: flex-start;
 }
 
-.favorite-container p:nth-child(1) {
+#favorites-top-container p:nth-child(2) {
   font-size: 25px;
   margin-bottom: 40px;
+  margin-right: auto;
 }
 
 .favorite-meal-container {
@@ -182,6 +185,16 @@ label input {
   background-color: var(--teal);
   color: var(--off-white);
   margin-left: 40px;
+}
+
+#favorites-top-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#back-to-main {
+  margin-right: auto;
 }
 
 .hidden {

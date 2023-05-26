@@ -9,6 +9,7 @@ import { desserts } from './data/desserts.js';
 var cookpot = document.querySelector('#cookpot');
 var mealCardSpan = document.querySelector('#meal-card span');
 var mealSuggestion = document.querySelector('#generated-meal');
+var favoriteBtn = document.querySelector('#favorite');
 
 // BUTTONS
 var letsCookBtn = document.querySelector('#form-submit-button');
@@ -49,8 +50,13 @@ for (var i = 0; i < sideMainDessertCheckBoxes.length; i++) {
   });
 }
 
+favoriteBtn.onclick = () => {
+  addToFavorites(currentMeal);
+}
+
 // FUNCTIONS AND HANDLERS
 var currentMeal;
+var favoriteMeals = [];
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -125,7 +131,16 @@ function returnRequestedMeal(suggestion) {
 }
 
 function renderMeal() {
-  var meal = returnRequestedMeal(returnRandomMeal());
+  currentMeal = returnRequestedMeal(returnRandomMeal());
 
-  mealSuggestion.innerText = meal;
+  mealSuggestion.innerText = currentMeal;
+}
+
+function addToFavorites(meal) {
+  if (favoriteMeals.length === 0) {
+    favoriteMeals.push(meal);
+  }
+  if (!favoriteMeals.includes(meal)) {
+    favoriteMeals.push(meal);
+  }
 }

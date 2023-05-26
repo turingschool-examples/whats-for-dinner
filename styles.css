@@ -41,8 +41,12 @@ header {
   cursor: pointer;
 }
 
-#add-recipe-button {
+#header-btn-container {
   margin: 0 20px 0 auto;
+}
+
+#add-recipe-button {
+  margin-left: 10px;
 }
 
 #form-submit-button {

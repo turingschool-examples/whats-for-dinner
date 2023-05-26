@@ -50,10 +50,6 @@ header {
   width: 180px;
 }
 
-.hidden {
-  display: none;
-}
-
 main > * {
   background: var(--frosted-white);
 }
@@ -151,4 +147,39 @@ label input {
   background-color: var(--grey);
   width: 100px;
   margin: 27px 0 0 20px;
+}
+
+.favorite-container {
+  background-color: var(--frosted-white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.favorite-container p:nth-child(1) {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.favorite-meal-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.favorite-meal-container button {
+  background-color: var(--teal);
+  color: var(--off-white);
+  margin-left: 40px;
+}
+
+.hidden {
+  display: none;
 }

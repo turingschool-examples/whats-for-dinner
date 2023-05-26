@@ -100,3 +100,8 @@ h4 {
     align-self: flex-end;
     margin-top: auto;
 }
+
+.required::after {
+    color: #ee5253;
+    content: "*";
+}

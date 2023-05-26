@@ -4,6 +4,8 @@ import { mains } from './data/mains.js';
 import { desserts } from './data/desserts.js';
 
 // QUERY SELECTORS
+var mainElement = document.querySelector('main');
+var header = document.querySelector('header');
 
 // MEAL CARD
 var cookpot = document.querySelector('#cookpot');
@@ -13,11 +15,16 @@ var favoriteBtn = document.querySelector('#favorite');
 
 // BUTTONS
 var letsCookBtn = document.querySelector('#form-submit-button');
+var viewFavorites = document.querySelector('#view-favorites');
+var backToMain = document.querySelector('#back-to-main');
 
 // CHECKBOXES
 var entireMealCB = document.querySelector('input[name=meal]');
 var sideMainDessertCheckBoxes = document.querySelectorAll('.cb');
 var [sideCB, mainCB, dessertCB] = [...sideMainDessertCheckBoxes];
+
+// FAVORITES CONTAINER
+var favoritesContainer = document.querySelector('.favorite-container');
 
 // EVENT LISTENERS
 
@@ -53,6 +60,10 @@ for (var i = 0; i < sideMainDessertCheckBoxes.length; i++) {
 favoriteBtn.onclick = () => {
   addToFavorites(currentMeal);
 }
+
+viewFavorites.onclick = toggleFavorites;
+
+backToMain.onclick = toggleFavorites;
 
 // FUNCTIONS AND HANDLERS
 var currentMeal;
@@ -143,4 +154,10 @@ function addToFavorites(meal) {
   if (!favoriteMeals.includes(meal)) {
     favoriteMeals.push(meal);
   }
+}
+
+function toggleFavorites() {
+  toggleClass(favoritesContainer, 'hidden');
+  toggleClass(header, 'hidden');
+  toggleClass(mainElement, 'hidden');
 }

@@ -50,6 +50,10 @@ header {
   height: 150px;
 }
 
+.hidden {
+  display: none;
+}
+
 main > * {
   background: var(--frosted-white);
 }
@@ -96,3 +100,15 @@ label input {
   margin-left: 5px;
 }
 
+.meal-container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#generated-meal {
+  text-align: center;
+  font-size: 24px;
+}

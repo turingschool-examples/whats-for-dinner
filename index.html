@@ -16,13 +16,13 @@
         <p>What are you looking for?</p>
         <form id="meal-form" action="#">
           <label for="side">
-            <input type="checkbox" name="side" id="side" />Side
+            <input type="checkbox" name="side" id="side" class="cb"/>Side
           </label>
           <label for="main">
-            <input type="checkbox" name="main" id="main" />Main Dish
+            <input type="checkbox" name="main" id="main" class="cb"/>Main Dish
           </label>
           <label for="dessert">
-            <input type="checkbox" name="dessert" id="dessert" />Desserts
+            <input type="checkbox" name="dessert" id="dessert" class="cb"/>Desserts
           </label>
           <label for="meal">
             <input type="checkbox" name="meal" id="meal" />Entire Meal
@@ -31,8 +31,11 @@
         </form>
       </section>
       <section id="meal-card">
-        <img id="cookpot" src="./assets/cookpot.svg" alt="Cooking pot" />
-        <p id="generated-meal"></p>
+        <img id="cookpot" class="hidden" src="./assets/cookpot.svg" alt="Cooking pot" />
+        <div class="meal-container">
+          <span class=""><em>You should make: </em></span>
+          <p id="generated-meal">Pineapple Chicken with a side of Miso Glazed Carrots and Eclairs for dessert!</p>
+        </div>
       </section>
     </main>
   </body>

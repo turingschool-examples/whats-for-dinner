@@ -114,3 +114,13 @@ h4 {
     color: #ee5253;
     content: "*";
 }
+
+.favorites-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favs-list {
+
+}

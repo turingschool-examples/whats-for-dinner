@@ -9,6 +9,7 @@ var letsCookButton = document.querySelector(".lets-cook-btn");
 var favoriteButton = document.querySelector('.favorite');
 var clearButton = document.querySelector('.clear');
 var myFavoritesButton = document.querySelector('.show-favorites')
+var goBackButton = document.querySelector('.back');
 
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main');
@@ -105,4 +106,7 @@ function favoriteRecipe() {
 function displayFavorites() {
     mainPage.classList.add('hidden');
     favoritesPage.classList.remove('hidden');
+    goBackButton.classList.remove('hidden');
+    myFavoritesButton.classList.add('hidden');
+
 }

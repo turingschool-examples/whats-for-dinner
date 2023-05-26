@@ -169,6 +169,12 @@ label input {
   justify-content: flex-start;
 }
 
+#favorites-top-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 #favorites-top-container p:nth-child(2) {
   font-size: 25px;
   margin-bottom: 40px;
@@ -177,6 +183,9 @@ label input {
 
 .favorite-meal-container {
   width: 100%;
+  height: fit-content;
+  margin: 30px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
 }
@@ -187,15 +196,16 @@ label input {
   margin-left: 40px;
 }
 
-#favorites-top-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 #back-to-main {
   margin-right: auto;
 }
+
+#favorites-bottom-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* HIDDEN */
 
 .hidden {
   display: none;

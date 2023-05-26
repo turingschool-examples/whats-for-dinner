@@ -46,7 +46,7 @@ header {
     margin-inline-start: 0px;
     margin-inline-end: 25px;
     padding: 10 20;
-    border-radius: 8%;
+    border-radius: 8px;
     border: none
 }
 
@@ -84,6 +84,11 @@ h2 {
     margin-bottom: -15;
 }
 
+h2::after {
+    content: "*";
+    color: #ee5253;
+    /* size: x; */
+}
 
 body {
     background-size: cover;
@@ -111,5 +116,11 @@ label {
     padding: 10px 50px;
     background-color: #0fb9b1;
     border: none;
-    border-radius: 8%;
+    border-radius: 8px;
 }
+
+/* .required::after {
+    content: "*";
+    color: #ee5253;
+    size: x;
+} */

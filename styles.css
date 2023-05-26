@@ -26,7 +26,7 @@ header {
 .main-content {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 10%;
 }
 .image {
@@ -45,7 +45,9 @@ header {
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 25px;
-    font-weight: ;
+    padding: 10 20;
+    border-radius: 8%;
+    border: none
 }
 
 img {
@@ -95,6 +97,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 40;
+    padding-bottom: 10;
 }
 
 label {
@@ -103,23 +106,10 @@ label {
     font-size: 25;
 }
 
-
-/* header  */
-/* background-color: #0fb9b1;
-background-size: -100px;
-display: flex;
-align-items: baseline;
-margin-top: -40;
-margin-left: -10px;
-margin-right: -8;
-flex-direction: row;
-justify-content: space-between; */
-
-/* lets go? */
-/* margin-top: 75;
+.lets-cook {
     margin-left: 50;
+    padding: 10px 50px;
     background-color: #0fb9b1;
-    font-size: 20;
-    border-radius: 10%;
-    border-width: 0px;
-    padding: 10px 40; */
+    border: none;
+    border-radius: 8%;
+}

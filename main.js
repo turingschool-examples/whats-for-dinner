@@ -64,7 +64,10 @@ favoriteBtn.onclick = () => {
   addToFavoriteMeals(currentMeal);
 };
 
-viewFavorites.onclick = toggleFavorites;
+viewFavorites.onclick = () => {
+  toggleFavorites();
+  renderFavoriteMeals();
+};
 
 backToMain.onclick = toggleFavorites;
 
@@ -158,10 +161,13 @@ function renderMeal() {
 function addToFavoriteMeals(meal) {
   if (favoriteMeals.length === 0) {
     favoriteMeals.push(meal);
+    return;
   }
-  if (!favoriteMeals.includes(meal)) {
-    favoriteMeals.push(meal);
-  }
+  for (var i = 0; i < favoriteMeals.length; i++)
+    if (favoriteMeals[i].mealString === meal.mealString) {
+      return;
+    }
+  favoriteMeals.push(meal);
 }
 
 function renderFavoriteMeals() {
@@ -175,12 +181,10 @@ function renderFavoriteMeals() {
       </section>
     `;
   }
-
 }
 
 function toggleFavorites() {
   toggleClass(favoritesContainer, 'hidden');
   toggleClass(header, 'hidden');
   toggleClass(mainElement, 'hidden');
-  renderFavoriteMeals();
 }

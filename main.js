@@ -69,7 +69,18 @@ viewFavorites.onclick = () => {
   renderFavoriteMeals();
 };
 
+favoritesBottomContainer.onclick = (event) => {
+  if (event.target.tagName === 'BUTTON') {
+    removeFromFavoritesArray(event);
+    removeMealFromDOM(event);
+  }
+}
+
 backToMain.onclick = toggleFavorites;
+
+// use event delegation on the favorites-bottom-container to listen for the event 
+// className that matches the button class name
+// if it is, then invoke the removeFromArray function
 
 // FUNCTIONS AND HANDLERS
 var currentMeal;
@@ -177,10 +188,24 @@ function renderFavoriteMeals() {
     favoritesBottomContainer.innerHTML += `
       <section id="${favoriteMeals[i].id}" class="favorite-meal-container">
         <p>${favoriteMeals[i].mealString}</p>
-        <button class="button">REMOVE</button>
+        <button class="button remove-button">REMOVE</button>
       </section>
     `;
   }
+}
+
+function removeFromFavoritesArray(event) {
+  var meal = event.target.closest('section');
+
+  for (var i = 0; i < favoriteMeals.length; i++) {
+    if (favoriteMeals[i].id === parseInt(meal.id)) {
+      favoriteMeals.splice(i, 1);
+    }
+  }
+}
+
+function removeMealFromDOM(event) {
+  event.target.closest('section').remove();
 }
 
 function toggleFavorites() {

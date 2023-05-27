@@ -10,79 +10,74 @@ red - #ee5253 */
     font-family: 'Roboto', sans-serif;
   }
 
-body {
-    
-    border: 5px solid purple;  
-    height: 100vh;
-    box-sizing: border-box;
- 
-}  
-
-.top-line-container {
-    border: 5px solid crimson;    
+.wrapper {
+    border: 20 px solid magenta;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
 }
 
-.top-line-words-and-button {
-    border: 5px solid magenta;
-    background-color:   #0fb9b1;  
-  }
-
-.whats-for-dinner {
-    border: 5px solid black;
-    font-size: 25px;
-    display: inline-block;   
+.wrapper>* {
+    border: 3px solid blue;
+   padding: 10px; 
+   margin: 10px;
+   flex: 1 100%;
 }
 
-.add-a-recipe-button {
-    border: 3px solid saddlebrown;
-    font-size: 20px;
-    margin-left: 1000px;
-    padding: 5px;
+.header {
+    background: #0fb9b1;
 }
 
-  
-.opaque-rectangle {
-     border: 5px solid lime;
-    display: inline-block;
-    padding: 40px;
-    margin-top: 70px;
-    margin-left: 200px; 
-  }
-
-.opaque-rectangle:nth-child(1) {
-    display: inline-block;
-    height: 300px;
-    width: 300px;
-    
+.aside-wrapper {
+    display: flex;
+    justify-content: space-around;
 }
 
-
-  /* Right now I want to get the whats for dinner and add recipe 
-  on opposite sides*/
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* * .burger-friends {
-    background-image: url(assets/burger-friends.jpg);
+.aside1 {
+    background: lightslategray;
+    order: 1;
 }
 
-.cookpot-image {
-   
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTI1Ij4KICA8cGF0aCBkPSJNMjguODgzIDQyLjhoLTEuMzQ2IHYtNC41MDRhMSAxIDAgMCAwLTEtMS0xSDIuNTk0IDQyLjgwSDkuMTMsMS4zNDIgNS4yNDIgNS4yNDJoMS4zNDZ2MzIuODc0YTQuMDAzIDQuMDAzIDAgMCAwLTMuOTk4IDMuOTkOHjE1LjM2NyA1MS4yODRjLTEuNzg4IDAgLTEuMzQyLTEuNDU0LTEuMzQyLTEuMzQySDQuODIxIDQzLjE5NC42MDUgNy45ODhhNCAwMDMgNC4wMDMgMy45OTggMy45OTggMy45OTh2MzIuODc0YTEuNzk4IDEuNzk4IDAgMCAxLTMuMjQyLTMuMjQySDIxLjU5NC0zLjUwNGgzLjQ2NHoiLz4gICA8Y2lyY2xlIGN4PSI0LjU1IiBjeT0iNC4wNSIgcj0iMjIuMjU4IiBzdHJva2U9IiM0ODQzQzAiLz4gICA8Y2lyY2xlIGN4PSI1LjI1OCIgY3k9IjMuMjQzIiByPSIyLjU4NiIgc3Ryb2tlPSIyLjU4NiIvPiAgPC9zdmc+Cg==");
-    
-  } */
-
-  */
+.aside2 {
+    background: lightpink;
+    order: 2;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  

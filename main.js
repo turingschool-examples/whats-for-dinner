@@ -70,16 +70,14 @@ favoriteButton.addEventListener('click', function(){
 });
 
 myFavoritesButton.addEventListener('click', function(){
-    toggleFavoritesView()
-    toggleMainVeiw();
+    toggleView()
     displayFavorites();
 });
 
 goBackButton.addEventListener('click', function(){
     clearRecipe();
     clearInput();
-    toggleFavoritesView();
-    toggleMainVeiw();
+    toggleView();
     goBack();
 });
 
@@ -129,14 +127,11 @@ function favoriteRecipe() {
     displaySelection();
 }
 
-function toggleFavoritesView() {
+function toggleView() {
     headerFavorites.classList.toggle('hidden');
     favoritesPage.classList.toggle('hidden');
     goBackButton.classList.toggle('hidden');
     removeButton.classList.toggle('hidden');
-}
-
-function toggleMainVeiw() {
     mainPage.classList.toggle('hidden');
     myFavoritesButton.classList.toggle('hidden');
     headerTitle.classList.toggle('hidden');

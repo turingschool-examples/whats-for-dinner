@@ -11,29 +11,34 @@ red - #ee5253
 
 html, body {
     min-height: 100vh;
+    
   }
 
   body {
     background-image: url(assets/burger-friends.jpg);
     background-size: cover;
-    /* border: solid red; */
+    font-family: Roboto, sans-serif;
 }
 
 h1 {
-    margin-left: 10px;
-    height: 100vh;
+     margin: 20px;
+    /* margin-left: 10px; */
+    /* height: 100vh; */
 }
 
 nav {
     background-color: #0fb9b1;  
     height: 60px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
 
 .add-recipe-button {
 flex-direction: row;
 align-items: start;
+margin: 20px;
 }
 
 main {
@@ -53,17 +58,13 @@ display: flex;
     width: 450px;
 }
 
-form { 
-  height: 350px;
-  width: 450px;
+section { 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 10%;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  align-items: stretch;
+}
 
+form {
+  padding: 7%;
 }
 
 .lets-cook {
@@ -81,7 +82,7 @@ h2 {
   /* text-align: left; */
 }
 
-.user-image-box {
+.user-suggestion-box {
   background: rgba(225, 225, 225, .9);
   border: 10px;
   display: flex;
@@ -91,4 +92,8 @@ h2 {
 
 .boiling-pot {
   height: 115px;
+}
+
+.hidden {
+  display: none
 }

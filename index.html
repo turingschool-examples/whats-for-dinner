@@ -1,10 +1,59 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    
+    <header>
+      <span id="header-title">What's for Dinner?</span>
+      <div id="header-btn-container">
+        <button class="button" id="view-favorites">VIEW FAVORITES</button>
+        <button class="button" id="add-recipe-button">ADD A RECIPE</button>
+      </div>
+    </header>
+    <section class="favorite-container hidden">
+      <div id="favorites-top-container">
+        <button class="button" id="back-to-main">BACK</button>
+        <p>FAVORITES</p>
+      </div>
+      <div id="favorites-bottom-container">
+      </div>
+    </section>
+    <main>
+      <section id="form-card">
+        <div id="prompt-container">
+          <p>What are you looking for?</p><p id="asterisk">*</p>
+        </div>
+        <form id="meal-form" action="#">
+          <label for="side">
+            <input type="checkbox" name="side" id="side" class="cb"/>Side
+          </label>
+          <label for="main">
+            <input type="checkbox" name="main" id="main" class="cb"/>Main Dish
+          </label>
+          <label for="dessert">
+            <input type="checkbox" name="dessert" id="dessert" class="cb"/>Desserts
+          </label>
+          <label for="meal">
+            <input type="checkbox" name="meal" id="meal" />Entire Meal
+          </label>
+          <button class="button" id="form-submit-button">LET'S COOK!</button>
+        </form>
+      </section>
+      <section id="meal-card">
+        <img id="cookpot" class="" src="./assets/cookpot.svg" alt="Cooking pot" />
+        <div id="meal-container">
+          <span class="hidden"><em>You should make: </em></span>
+          <p id="generated-meal"></p>
+        </div>
+        <div id="meal-card-btn-container">
+          <button class="button" id="favorite">FAVORITE</button>
+        </div>
+      </section>
+    </main>
   </body>
-  <script type="text/javascript" src="main.js"></script>
+  <script type="module" src="main.js"></script>
 </html>

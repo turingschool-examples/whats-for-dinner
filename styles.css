@@ -1,10 +1,212 @@
-/* font-family: 'Roboto', sans-serif;
+:root {
+  --teal: #0fb9b1;
+  --frosted-white: rgba(225, 225, 225, 0.9);
+  --grey: #95a5a6;
+  --red: #ee5253;
+  --off-white: rgb(229, 229, 229);
+}
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
 
-*/
+html {
+  background: url('./assets/burger-friends.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+header {
+  height: 60px;
+  background-color: var(--teal);
+  display: flex;
+  align-items: center;
+}
+
+#header-title {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.button {
+  height: 30px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#header-btn-container {
+  margin: 0 20px 0 auto;
+}
+
+#add-recipe-button {
+  margin-left: 10px;
+}
+
+#form-submit-button {
+  background-color: var(--teal);
+  width: 180px;
+}
+
+main > * {
+  background: var(--frosted-white);
+}
+
+section {
+  height: 350px;
+  width: 450px;
+  margin: 70px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-card {
+  float: left;
+  margin-right: 5px;
+  gap: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#prompt-container {
+  display: flex;
+}
+
+#asterisk {
+  color: var(--red);
+  line-height: 15px;
+}
+
+.prompt {
+  display: inline-block;
+}
+
+#form-card > * {
+  margin-left: 50px;
+}
+
+#form-card p {
+  font-size: 25px;
+}
+
+form {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+label input {
+  margin-right: 8px;
+}
+
+#meal-card {
+  position: relative;
+  float: right;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#cookpot {
+  position: absolute;
+  top: 30%;
+  height: 150px;
+}
+
+#meal-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#meal-container span {
+  margin-top: 60px;
+}
+
+#generated-meal {
+  text-align: center;
+  font-size: 24px;
+}
+
+#meal-card-btn-container {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+
+#favorite {
+  color: var(--off-white);
+  background-color: var(--grey);
+  width: 100px;
+  margin: 27px 0 0 20px;
+}
+
+/* FAVORITES CONTAINER */
+
+.favorite-container {
+  background-color: var(--frosted-white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#favorites-top-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#favorites-top-container p:nth-child(2) {
+  font-size: 25px;
+  margin-bottom: 40px;
+  margin-right: auto;
+}
+
+.favorite-meal-container {
+  width: 100%;
+  height: fit-content;
+  margin: 30px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.favorite-meal-container button {
+  background-color: var(--teal);
+  color: var(--off-white);
+  margin-left: 40px;
+}
+
+#back-to-main {
+  margin-right: auto;
+}
+
+#favorites-bottom-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* HIDDEN */
+
+.hidden {
+  display: none;
+}

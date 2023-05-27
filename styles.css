@@ -26,21 +26,28 @@ red - #ee5253 */
 
 .header {
     background: #0fb9b1;
+    display: flex;
+    justify-content: space-between;
 }
 
 .aside-wrapper {
+    border: 3px solid greenyellow;
+    margin-top: 60px;
     display: flex;
     justify-content: space-around;
+    
 }
 
 .aside1 {
     background: lightslategray;
-    order: 1;
+    height: 300px;
+    width: 412.5px;
 }
 
 .aside2 {
-    background: lightpink;
-    order: 2;
+    background: lightpink;    
+    height: 300px;
+    width: 412.5px;
 }
   
   

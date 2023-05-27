@@ -71,6 +71,10 @@ myFavoritesButton.addEventListener('click', function(){
     displayFavorites();
 });
 
+goBackButton.addEventListener('click', function(){
+    clearRecipe();
+    goBack();
+});
 
 
 // Functions and Event Handlers
@@ -130,3 +134,11 @@ function displayFavorites() {
         favoritesList.innerHTML += `<h2>${favoriteRecipes[i].dish}</h2>`
     }
 }
+
+function goBack() {
+    mainPage.classList.remove('hidden');
+    favoritesPage.classList.add('hidden');
+    goBackButton.classList.add('hidden');
+    myFavoritesButton.classList.remove('hidden');
+}
+

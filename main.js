@@ -1,4 +1,3 @@
-// When a user selects a dish option and then clicks the “Let’s Cook!” button, the user sees a random dish from the list of possible dishes for that category
 
 // querySelectors:
 var sideRadioButton = document.querySelector("#side-radio")
@@ -66,7 +65,7 @@ var desserts = [
 ]
 
 // var mealOptions = []
-var foodOption = ""
+// var foodOption = ""
 
 // eventListeners:
 letsCookButton.addEventListener("click", showFood)
@@ -101,10 +100,3 @@ function clearPage() {
     dishSuggestion.classList.add("hidden")
 }
 clearButton()
-
-
-
-
-// getRandomSide etc. with conditional checking if the button was checked. if it was, put in random side to innerHTML. 
-
-// var randomMeal = [randomSide, randomMain, randomDessert]

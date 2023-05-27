@@ -11,28 +11,34 @@ red - #ee5253
 
 html, body {
     min-height: 100vh;
+    
   }
 
   body {
     background-image: url(assets/burger-friends.jpg);
     background-size: cover;
-
-    /* border: solid red; */
+    font-family: Roboto, sans-serif;
 }
 
 h1 {
-    margin-left: 10px;
+     margin: 20px;
+    /* margin-left: 10px; */
+    /* height: 100vh; */
 }
 
 nav {
     background-color: #0fb9b1;  
     height: 60px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
 
 .add-recipe-button {
-    
+flex-direction: row;
+align-items: start;
+margin: 20px;
 }
 
 main {
@@ -42,27 +48,33 @@ main {
     height: 100vh;
 }
 
+.user-input-box {
+display: flex;
+
+}
 .boxes {
     background: rgba(225, 225, 225, .9);
     height: 350px;
     width: 450px;
 }
 
-form { 
-  height: 350px;
-  width: 450px;
+section { 
   display: flex;
   flex-direction: column;
-  justify-content: right;
+}
 
+form {
+  padding: 7%;
 }
 
 .lets-cook {
   background-color: #0fb9b1; 
-  height: 20px;
+  height: 25px;
   width: 100px;
-  align-self: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 h2 {
@@ -70,11 +82,18 @@ h2 {
   /* text-align: left; */
 }
 
-.user-image-box {
+.user-suggestion-box {
   background: rgba(225, 225, 225, .9);
   border: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .boiling-pot {
-  height: 100px;
+  height: 115px;
+}
+
+.hidden {
+  display: none
 }

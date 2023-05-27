@@ -14,6 +14,8 @@ var goBackButton = document.querySelector('.back');
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main');
 
+var headerTitle = document.querySelector('.header-title');
+var headerFavorites = document.querySelector('.header-favs')
 var favoritesList = document.querySelector('.favs-list');
 
 
@@ -67,12 +69,16 @@ favoriteButton.addEventListener('click', function(){
 });
 
 myFavoritesButton.addEventListener('click', function(){
-    displayFavoritesView()
+    toggleFavoritesView()
+    toggleMainVeiw();
     displayFavorites();
 });
 
 goBackButton.addEventListener('click', function(){
     clearRecipe();
+    clearInput();
+    toggleFavoritesView();
+    toggleMainVeiw();
     goBack();
 });
 
@@ -122,27 +128,25 @@ function favoriteRecipe() {
     displaySelection();
 }
 
-function displayFavoritesView() {
-    mainPage.classList.add('hidden');
-    favoritesPage.classList.remove('hidden');
-    goBackButton.classList.remove('hidden');
-    myFavoritesButton.classList.add('hidden');
+function toggleFavoritesView() {
+    headerFavorites.classList.toggle('hidden');
+    favoritesPage.classList.toggle('hidden');
+    goBackButton.classList.toggle('hidden');
+}
+
+function toggleMainVeiw() {
+    mainPage.classList.toggle('hidden');
+    myFavoritesButton.classList.toggle('hidden');
+    headerTitle.classList.toggle('hidden');
+
 }
 
 function displayFavorites() {
-    favoritesList.innerHTML = '<h1 class="fav-header">Your Favorites</h1>';
+    favoritesList.innerHTML = '';
 
     for (var i = 0; i < favoriteRecipes.length; i++){
         favoritesList.innerHTML += `<article class="card"><h3>${favoriteRecipes[i].dish}</h3></article>`;
     }
-}
-
-function goBack() {
-    clearInput();
-    mainPage.classList.remove('hidden');
-    favoritesPage.classList.add('hidden');
-    goBackButton.classList.add('hidden');
-    myFavoritesButton.classList.remove('hidden');
 }
 
 function clearInput() {

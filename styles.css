@@ -12,8 +12,9 @@ header {
     text-align: center;
     background: #0fb9b1;
     color: black;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
+    justify-content: space-between;
   }
 
 
@@ -28,4 +29,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.recipe-button {
+    margin-left: auto;
 }

@@ -88,6 +88,7 @@ function createFavoriteRecipe(type, dish) {
     return {
         type: type,
         dish: dish,
+        id: Date.now(),
         }
 }
 
@@ -123,6 +124,12 @@ function clearRecipe() {
 
 function favoriteRecipe() {
     var recipe = createFavoriteRecipe(currentRecipe.type, currentRecipe.dish);
+
+    for (var i = 0; i < favoriteRecipes.length; i++){
+        if (recipe.dish === favoriteRecipes[i].dish){
+            return;
+        }
+    }
     favoriteRecipes.push(recipe);
     displaySelection();
 }

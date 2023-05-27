@@ -119,6 +119,7 @@ function clearRecipe() {
 function favoriteRecipe() {
     var recipe = createFavoriteRecipe(currentRecipe.type, currentRecipe.dish);
     favoriteRecipes.push(recipe);
+    displaySelection();
 }
 
 function displayFavoritesView() {
@@ -132,7 +133,7 @@ function displayFavorites() {
     favoritesList.innerHTML = '';
 
     for (var i = 0; i < favoriteRecipes.length; i++){
-        favoritesList.innerHTML += `<h2>${favoriteRecipes[i].dish}</h2>`
+        favoritesList.innerHTML += `<article class="card"><h3>${favoriteRecipes[i].dish}</h3></article>`;
     }
 }
 
@@ -148,4 +149,8 @@ function clearInput() {
     for (var i = 0; i < inputs.length; i++) {
         inputs[i].checked = false;
     }
+}
+
+function displaySelection() {
+    favoriteButton.classList.add('selected');
 }

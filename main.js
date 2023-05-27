@@ -8,8 +8,9 @@ var recipe = document.querySelector('.recipe');
 var letsCookButton = document.querySelector(".lets-cook-btn");
 var favoriteButton = document.querySelector('.favorite');
 var clearButton = document.querySelector('.clear');
-var myFavoritesButton = document.querySelector('.show-favorites')
+var myFavoritesButton = document.querySelector('.show-favorites');
 var goBackButton = document.querySelector('.back');
+var removeButton = document.querySelector('.remove');
 
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main');
@@ -132,6 +133,7 @@ function toggleFavoritesView() {
     headerFavorites.classList.toggle('hidden');
     favoritesPage.classList.toggle('hidden');
     goBackButton.classList.toggle('hidden');
+    removeButton.classList.toggle('hidden');
 }
 
 function toggleMainVeiw() {

@@ -6,23 +6,26 @@
   </head>
   <body>
     <nav>
-      <button name="add-recipe-button">Add recipe</button>
       <h1 class="title">What's for Dinner?</h1>
+      <button name="add-recipe-button">ADD A RECIPE</button>
     </nav>
     <main>
       <section class="user-input-box boxes">
         <form>
-          <h2>What are looking for?</h2>
-          <input type="radio" name="meal-options" id="side"> Side
-          <input type="radio" name="meal-options" id="main"> Main Dish
-          <input type="radio" name="meal-options" id="dessert"> Dessert
-          <input type="radio" name="meal-options" id="entire-meal"> Entire Meal
-          <button class="lets-cook">Let's cook</button>
+          <h2>What are you looking for?</h2>
+          <p><input type="radio" name="meal-options" id="side-radio" value="side">Side</input></p>
+        </p><input type="radio" name="meal-options" id="main-radio" value="main">Main Dish</input></p>
+      </p><input type="radio" name="meal-options" id="dessert-radio" value="dessert">Dessert</input></p>
+    </p><input type="radio" name="meal-options" id="entire-meal-radio" value="entire-meal">Entire Meal</input></p>
+          <button type="button" class="lets-cook">LET'S COOK</button>
         </form>
       </section>
 
-      <section class="user-image-box boxes">
+      <section class="user-suggestion-box boxes">
+        <p class="title-suggestion hidden">You Should Made</p>
+        <p class="dish-suggestion-placeholder hidden">Placeholder Food</p>
         <img class="boiling-pot" src="assets/cookpot.svg"alt="outline of black and white boiling pot">
+        <button class="clear-button">CLEAR</button>
       </section>
     </main>
   </body>

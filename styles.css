@@ -1,10 +1,31 @@
-/* font-family: 'Roboto', sans-serif;
+ /* font-family: 'Roboto', sans-serif;
 
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+header {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    background: #0fb9b1;
+    color: black;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+  }
 
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url('assets/burger-friends.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

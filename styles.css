@@ -100,3 +100,10 @@ p {
     height: 120px;
     width: auto;
 }
+
+.recipe {
+    
+}
+.hidden {
+    display: none
+}

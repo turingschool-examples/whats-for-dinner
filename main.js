@@ -14,6 +14,8 @@ var goBackButton = document.querySelector('.back');
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main');
 
+var favoritesList = document.querySelector('.favs-list');
+
 
 // Variables
 
@@ -64,7 +66,10 @@ favoriteButton.addEventListener('click', function(){
     favoriteRecipe();
 });
 
-myFavoritesButton.addEventListener('click', displayFavorites);
+myFavoritesButton.addEventListener('click', function(){
+    displayFavoritesView()
+    displayFavorites();
+});
 
 
 
@@ -103,10 +108,17 @@ function favoriteRecipe() {
     favoriteRecipes.push(currentRecipe);
 }
 
-function displayFavorites() {
+function displayFavoritesView() {
     mainPage.classList.add('hidden');
     favoritesPage.classList.remove('hidden');
     goBackButton.classList.remove('hidden');
     myFavoritesButton.classList.add('hidden');
+}
 
+function displayFavorites() {
+    favoritesList.innerHTML = '';
+
+    for (var i = 0; i < favoriteRecipes.length; i++){
+        favoritesList.innerHTML += `<h2>${favoriteRecipes[i].dish}</h2>`
+    }
 }

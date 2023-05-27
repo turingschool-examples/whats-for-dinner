@@ -27,7 +27,7 @@ var mains = [
   "Sheet Pan Fajitas",
   "Margarita Pizza",
 ];
-var Desserts = [
+var desserts = [
   "Apple Pie",
   "Lemon Meringue Pie",
   "Black Forest Cake",
@@ -56,7 +56,7 @@ var potImage = document.querySelector('.image-in-block-2');
 
 var recipeName = document.querySelector('.recipe');
 
-
+var recipeSugText = document.querySelector('.should-make-text');
 // buttons
 
 
@@ -74,23 +74,38 @@ function getRandomIndex(array) {
   }
 
 function createRecipe() {
-    var rndSideRec = getRandomIndex(sides);
-    var rndMainRec = getRandomIndex(mains);
-    var rndDsrtRec = getRandomIndex(desserts);
+    var rndSideRecIndex = getRandomIndex(sides);
+    var rndMainRecIndex = getRandomIndex(mains);
+    var rndDsrtRecIndex = getRandomIndex(desserts);
+
+    var rndSideRecipe = sides[rndSideRecIndex]
+    var rnd
+
 }
 
 
+
 function showRecipe() {
-  console.log('adrian');
+
+  var rndMainRecIndex = getRandomIndex(mains);
+  var rndDsrtRecIndex = getRandomIndex(desserts);
   var radioButtons = document.querySelectorAll('input');
-  for (var i = 0; i < radioButtons.length; i++) {
-    if (radioButtons[i].checked) {
-        toggleImageRecipe();
-    }
-  }
+  
+    for (var i = 0; i <         radioButtons.length; i++) {
+        if (radioButtons[i].checked && radioButtons[i].value === 'Side') {
+            recipeName.innerText = sides[getRandomIndex(sides)];
+            console.log(sides)
+        }else if (radioButtons[i].checked && radioButtons[i].value === 'Main') {
+            recipeName.innerText = mains[getRandomIndex(mains)];
+            console.log(mains)
+        }else if (radioButtons[i].checked && radioButtons[i].value === 'Dessert') {
+            recipeName.innerText = desserts[getRandomIndex(desserts)];
+        }
+  }toggleImageRecipe();
 }
 
 function toggleImageRecipe() {
     recipeName.classList.remove('hidden');
     potImage.classList.add('hidden');
+    recipeSugText.classList.remove('hidden')
 }

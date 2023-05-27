@@ -89,7 +89,7 @@ p {
 }
 
 #opaque-square-2 {
-    background-color: rgba(225, 225, 225, .9);5a5a6;
+    background-color: rgba(225, 225, 225, .9);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -101,8 +101,11 @@ p {
     width: auto;
 }
 
+.should-make-text {
+    font-style: italic;
+}
 .recipe {
-    
+    font-size: 20;
 }
 .hidden {
     display: none

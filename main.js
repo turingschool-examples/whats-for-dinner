@@ -130,7 +130,7 @@ function displayFavoritesView() {
 }
 
 function displayFavorites() {
-    favoritesList.innerHTML = '';
+    favoritesList.innerHTML = '<h1 class="fav-header">Your Favorites</h1>';
 
     for (var i = 0; i < favoriteRecipes.length; i++){
         favoritesList.innerHTML += `<article class="card"><h3>${favoriteRecipes[i].dish}</h3></article>`;

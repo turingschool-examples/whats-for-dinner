@@ -70,6 +70,13 @@ myFavoritesButton.addEventListener('click', displayFavorites);
 
 // Functions and Event Handlers
 
+function createFavoriteRecipe(type, dish) {
+    return {
+        type: type,
+        dish: dish,
+        }
+}
+
 function getRandomIndex() {
     return Math.floor(Math.random() * window[currentRecipe.type].length);
 }
@@ -100,7 +107,8 @@ function clearRecipe() {
 }
 
 function favoriteRecipe() {
-    favoriteRecipes.push(currentRecipe);
+    var recipe = createFavoriteRecipe(currentRecipe.type, currentRecipe.dish);
+    favoriteRecipes.push(recipe);
 }
 
 function displayFavorites() {

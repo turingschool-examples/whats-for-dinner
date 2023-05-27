@@ -6,15 +6,11 @@ var mainRadioButton = document.querySelector("#main-radio")
 var dessertRadioButton = document.querySelector("#dessert-radio")
 var entireMealRadioButton = document.querySelector("#entire-meal-radio")
 var boilingPot = document.querySelector(".boiling-pot")
-// var dishSuggestion = document.querySelector("user-suggestion-box")
-
-// var radioButtonAll = document.querySelectorAll("input[type=radio]")
-
-var dishSuggestion = document.querySelector(".dish-suggestion-placeholder")
-var titleSuggestion = document.querySelector(".title-suggestion")
-
 var letsCookButton = document.querySelector(".lets-cook")
 var addRecipeButton = document.querySelector(".add-recipe-button")
+var dishSuggestion = document.querySelector(".dish-suggestion-placeholder")
+var titleSuggestion = document.querySelector(".title-suggestion")
+var clearButton = document.querySelector(".clear-button")
 
 
 
@@ -70,10 +66,11 @@ var desserts = [
 ]
 
 // var mealOptions = []
-
+var foodOption = ""
 
 // eventListeners:
 letsCookButton.addEventListener("click", showFood)
+clearButton.addEventListener("click", clearPage)
 
 // functions:
 function getRandomIndex(array) {
@@ -81,52 +78,33 @@ function getRandomIndex(array) {
 }
 
 function getRandomDish() {
-    
     if (sideRadioButton.checked) {
         dishSuggestion.innerHTML = sides[getRandomIndex(sides)]
     } else if (mainRadioButton.checked) {
         dishSuggestion.innerHTML = mains[getRandomIndex(mains)]
     } else if (dessertRadioButton.checked) {
         dishSuggestion.innerHTML = desserts[getRandomIndex(desserts)]
+        
     }
     return dishSuggestion  
 }
 // console.log(dishSuggestion)
 
 function showFood() {
-    getRandomDish()
-    boilingPot.classList.add("hidden")
+   boilingPot.classList.add("hidden")
     dishSuggestion.classList.remove("hidden")
     titleSuggestion.classList.remove("hidden")
+    getRandomDish()
 }
 
+function clearPage() {
+    dishSuggestion.classList.add("hidden")
+}
+clearButton()
 
 
 
-
-// function sides() {
-//     if (sideRadioButton.checked) {
-//         console.log("hello")
-//     }
-// }
-// check()
 
 // getRandomSide etc. with conditional checking if the button was checked. if it was, put in random side to innerHTML. 
 
 // var randomMeal = [randomSide, randomMain, randomDessert]
-
-
-
-// var randomSide = sides[getRandomIndex(sides)]
-// var randomMain = mains[getRandomIndex(mains)]
-// var randomDessert = desserts[getRandomIndex(desserts)]
-// if (sideRadioButton.checked) {
-//     sides.innerHTML = randomSide
-// } else if (mainRadioButton.checked) {
-//     mains.innerHTML = randomMain
-// } else if (desserts.innerHTML = randomDessert) {
-
-// }
-// }
-
- // } else if (entireMealRadioButton.checked) {

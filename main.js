@@ -111,6 +111,7 @@ function displayRecipe() {
 
 function clearRecipe() {
     currentRecipe.dish = ''
+    clearInput();
     cookpot.classList.remove('hidden');
     recipeView.classList.add('hidden');
 }
@@ -136,9 +137,15 @@ function displayFavorites() {
 }
 
 function goBack() {
+    clearInput();
     mainPage.classList.remove('hidden');
     favoritesPage.classList.add('hidden');
     goBackButton.classList.add('hidden');
     myFavoritesButton.classList.remove('hidden');
 }
 
+function clearInput() {
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+}

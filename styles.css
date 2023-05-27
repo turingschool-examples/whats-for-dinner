@@ -13,6 +13,7 @@ header {
     background: #0fb9b1;
     color: black;
     font-size: 20px;
+    font-weight: 2000;
     font-family: 'Roboto', sans-serif;
     justify-content: space-between;
   }
@@ -22,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-size: 12px;
 }
 
 body {
@@ -34,3 +36,21 @@ body {
 .recipe-button {
     margin-left: auto;
 }
+
+.meal-type-box {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background-color:rgba(225, 225, 225, .9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    opacity: 85%;
+    text-align: left;
+    font-size: 15px;
+}
+ .meal-type-box h1::after {
+    content: "*";
+    color: #ee5253;
+      }

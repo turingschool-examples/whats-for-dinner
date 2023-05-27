@@ -2,10 +2,16 @@
 
 // querySelectors:
 var sideRadioButton = document.querySelector("#side-radio")
-var mainRadioButton = document.querySelector("#main")
-var dessertRadioButton = document.querySelector("#dessert")
-var entireMealRadioButton = document.querySelector("#entire-meal")
+var mainRadioButton = document.querySelector("#main-radio")
+var dessertRadioButton = document.querySelector("#dessert-radio")
+var entireMealRadioButton = document.querySelector("#entire-meal-radio")
 var boilingPot = document.querySelector(".boiling-pot")
+// var dishSuggestion = document.querySelector("user-suggestion-box")
+
+// var radioButtonAll = document.querySelectorAll("input[type=radio]")
+
+var dishSuggestion = document.querySelector(".dish-suggestion-placeholder")
+var titleSuggestion = document.querySelector(".title-suggestion")
 
 var letsCookButton = document.querySelector(".lets-cook")
 var addRecipeButton = document.querySelector(".add-recipe-button")
@@ -63,17 +69,11 @@ var desserts = [
     "Eclairs"
 ]
 
-var recipeOptions = []
+// var mealOptions = []
 
 
 // eventListeners:
-// sideRadioButton.addEventListener("click", getRandomDish)
-// mainRadioButton.addEventListener("click", getRandomDish)
-// dessertRadioButton.addEventListener("click", getRandomDish)
-// entireMealRadioButton.addEventListener("click", getRandomDish)
-letsCookButton.addEventListener("click", getRandomDish)
-
-
+letsCookButton.addEventListener("click", showFood)
 
 // functions:
 function getRandomIndex(array) {
@@ -81,16 +81,28 @@ function getRandomIndex(array) {
 }
 
 function getRandomDish() {
-    boilingPot.classList.add("hidden")
-
+    
     if (sideRadioButton.checked) {
-        recipeOptions.innerText = sides[getRandomIndex(sides)]
+        dishSuggestion.innerHTML = sides[getRandomIndex(sides)]
     } else if (mainRadioButton.checked) {
-        recipeOptions.innerText = mains[getRandomIndex(mains)]
+        dishSuggestion.innerHTML = mains[getRandomIndex(mains)]
     } else if (dessertRadioButton.checked) {
-        recipeOptions.innerText = desserts[getRandomIndex(desserts)] 
-    }     
+        dishSuggestion.innerHTML = desserts[getRandomIndex(desserts)]
+    }
+    return dishSuggestion  
 }
+// console.log(dishSuggestion)
+
+function showFood() {
+    getRandomDish()
+    boilingPot.classList.add("hidden")
+    dishSuggestion.classList.remove("hidden")
+    titleSuggestion.classList.remove("hidden")
+}
+
+
+
+
 
 // function sides() {
 //     if (sideRadioButton.checked) {
@@ -116,3 +128,5 @@ function getRandomDish() {
 
 // }
 // }
+
+ // } else if (entireMealRadioButton.checked) {

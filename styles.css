@@ -76,8 +76,10 @@ header {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     max-width: 400px;
+    flex-direction: column;
+    text-align: left;
   }
 
   .random-meal-box {
@@ -86,7 +88,18 @@ header {
     align-items: center;
   }
 
-  #pot-image {
+  .pot-image {
     width: 200px;
     height: 200px;
+  }
+  .hidden {
+    display: none !important;
+  }
+
+  #lets-cook-button {
+    width: 20vh;
+    background-color:#0fb9b1;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: 300;
   }

@@ -99,10 +99,10 @@ function showRecipe() {
 }
 
 function toggleImageRecipe() {
-    recipeName.classList.remove('hidden');
-    potImage.classList.add('hidden');
-    recipeSugText.classList.remove('hidden');
-    clearBtn.classList.remove('hidden');
+    recipeName.classList.toggle('hidden');
+    potImage.classList.toggle('hidden');
+    recipeSugText.classList.toggle('hidden');
+    clearBtn.classList.toggle('hidden');
 }
 
 function makeMeal() {

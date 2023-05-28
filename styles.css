@@ -1,3 +1,6 @@
+/* ~~~~~ Global Rules ~~~~~ */
+
+
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -6,13 +9,6 @@
 .hidden {
     display: none !important;
 }
-
-/* COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-*/
 
 body {
     background-image: url('assets/burger-friends.jpg');
@@ -38,13 +34,6 @@ button {
     font-size: medium;
 }
 
-.main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-}
-
 article {
     display: flex;
     width: 500px;
@@ -52,6 +41,15 @@ article {
     padding: 50px;
     margin-top: 5%;
     background-color:rgba(225, 225, 225, .9);
+}
+
+/* ~~~~~ Main view ~~~~~ */
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }
 
 .input-box {
@@ -115,8 +113,6 @@ h4 {
     content: "*";
 }
 
-
-
 /* ~~~~~ Favorites view ~~~~~ */
 
 .favorites-page {
@@ -149,8 +145,4 @@ h4 {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.selected {
-    background-color: #95a5a6;
 }

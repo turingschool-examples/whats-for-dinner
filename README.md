@@ -38,3 +38,4 @@ https://github.com/ganuza
 #### Challenges
 1. Figuring out how to 'listen' to the radio buttons took some time to figure out
 2. Getting all of the components to line up exactly where I wanted them took some time, especially because I'm a bit of a perfectionist when it comes to the visible page.
+3. I'm still making mistakes with adding Pull Requests to the Turing School repo instead of my fork!

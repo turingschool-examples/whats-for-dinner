@@ -64,9 +64,6 @@ var desserts = [
     "Eclairs"
 ]
 
-// var mealOptions = []
-// var foodOption = ""
-
 // eventListeners:
 letsCookButton.addEventListener("click", showFood)
 clearButton.addEventListener("click", clearPage)
@@ -83,20 +80,24 @@ function getRandomDish() {
         dishSuggestion.innerHTML = mains[getRandomIndex(mains)]
     } else if (dessertRadioButton.checked) {
         dishSuggestion.innerHTML = desserts[getRandomIndex(desserts)]
-        
+    } else if (entireMealRadioButton.checked) {
+        dishSuggestion.innerHTML = `Side: ${sides[getRandomIndex(sides)]} Main: ${mains[getRandomIndex(mains)]} and Dessert: ${desserts[getRandomIndex(desserts)]}`
+    } else if (!sideRadioButton.checked && !mainRadioButton.checked && !dessertRadioButton.checked) {
+        dishSuggestion.innerHTML = "Please select a  dish."
     }
-    return dishSuggestion  
+    return dishSuggestion
 }
-// console.log(dishSuggestion)
 
 function showFood() {
-   boilingPot.classList.add("hidden")
+    boilingPot.classList.add("hidden")
     dishSuggestion.classList.remove("hidden")
     titleSuggestion.classList.remove("hidden")
     getRandomDish()
 }
 
 function clearPage() {
+    boilingPot.classList.remove("hidden")
     dishSuggestion.classList.add("hidden")
+    titleSuggestion.classList.add("hidden")
+
 }
-clearButton()

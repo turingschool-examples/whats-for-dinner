@@ -5,62 +5,67 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
 
 
-html, body {
-    min-height: 100vh;
-    
-  }
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0px;
+}
 
-  body {
-    background-image: url(assets/burger-friends.jpg);
-    background-size: cover;
-    font-family: Roboto, sans-serif;
+body {
+  background-image: url(assets/burger-friends.jpg);
+  background-size: cover;
+  font-family: Roboto, sans-serif;
 }
 
 h1 {
-     margin: 20px;
-    /* margin-left: 10px; */
-    /* height: 100vh; */
+  margin: 20px;
+  /* margin-left: 10px; */
+  /* height: 100vh; */
 }
 
 nav {
-    background-color: #0fb9b1;  
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  background-color: #0fb9b1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: none;
+  height: 60px;
+}
 
 .add-recipe-button {
-flex-direction: row;
-align-items: start;
-margin: 20px;
+  text-transform: uppercase;
+  margin: 2%;
+  padding: 6px;
+  border-radius: 3px;
+  border: none;
 }
 
 main {
-    display: flex;
-    justify-content:space-around;
-    margin-top: 10%;
-    height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10%;
+  height: 100vh;
 }
 
 .user-input-box {
-display: flex;
+  display: flex;
 
 }
+
 .boxes {
-    background: rgba(225, 225, 225, .9);
-    height: 350px;
-    width: 450px;
+  background: rgba(225, 225, 225, .9);
+  height: 350px;
+  width: 450px;
 }
 
-section { 
+section {
   display: flex;
   flex-direction: column;
+
 }
 
 form {
@@ -68,9 +73,12 @@ form {
 }
 
 .lets-cook {
-  background-color: #0fb9b1; 
-  height: 25px;
-  width: 100px;
+  background-color: #0fb9b1;
+  text-transform: uppercase;
+  border: solid blue;
+  border-radius: 3px;
+  height: 30px;
+  width: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +87,6 @@ form {
 
 h2 {
   font-size: 23px;
-  /* text-align: left; */
 }
 
 .user-suggestion-box {
@@ -87,7 +94,7 @@ h2 {
   border: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .boiling-pot {
@@ -104,6 +111,28 @@ h2 {
   margin-top: unset;
 }
 
+.clear-button-container {
+  display: flex;
+  margin: 10%;
+  margin-left: 80%;
+}
+
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: none;
+  padding: 12%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
 .hidden {
   display: none
+}
+
+.dish-suggestion-placeholder {
+  text-align: center;
+  padding: 3%;
 }

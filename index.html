@@ -4,25 +4,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body background="assets/burger-friends.jpg">
-  <header>What's for dinner?<button class="recipe-button">Add Recipe</button>
-  </header>
+  <header>What's for dinner?</header>
 
   <section class="container">
     <section class="user-input-box meal-type-box">
       <h1>What Are You Looking For?</h1>
-      <ul class="meal-type-list">
-        <li><input type="radio" id="side">Side</li>
-        <li><input type="radio" id="main-dish">Main Dish</li>
-        <li><input type="radio" id="dessert">Dessert</li>
-        <li><input type="radio" id="whole-meal">Whole Meal</li>
-      </ul>
+      <div class="meal-type-list">
+        <div><input type="radio" id="side">Side</div>
+        <div><input type="radio" id="main-dish">Main Dish</div>
+        <div><input type="radio" id="dessert">Dessert</div>
+        <div><input type="radio" id="whole-meal">Whole Meal</div>
+      </div>
       <button type="button" name="lets-cook" id="lets-cook-button">LET'S COOK</button>
     </section>
     <div></div>
     <section class="user-input-box random-meal-box">
       <p class="you-should-make hidden">You Should Make</p>
-      <p id="dish-name" class="item hidden">Something</p>
-      <img id="pot-image" src="assets/cookpot.svg" alt="image of cookpot">
+      <p class="dish-name hidden">Something</p>
+      <img class="pot-image" src="assets/cookpot.svg" alt="image of cookpot">
     </section>
   </section>
 

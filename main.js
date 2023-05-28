@@ -19,7 +19,6 @@ var headerTitle = document.querySelector('.header-title');
 var headerFavorites = document.querySelector('.header-favs')
 var favoritesList = document.querySelector('.favs-list');
 
-
 // Variables
 
 var sides = [
@@ -63,6 +62,10 @@ letsCookButton.addEventListener('click', function(){
     displayRecipe();
 })
 
+window.addEventListener('load', function(){
+    getLocalStorage();
+})
+
 clearButton.addEventListener('click', clearRecipe);
 
 favoriteButton.addEventListener('click', function(){
@@ -78,11 +81,11 @@ goBackButton.addEventListener('click', function(){
     clearRecipe();
     clearInput();
     toggleView();
-    goBack();
 });
 
 favoritesList.addEventListener('click', function(event) {
      removeFavorite(event);
+     setLocalStorage();
 })
 
 
@@ -92,7 +95,6 @@ function createFavoriteRecipe(type, dish) {
     return {
         type: type,
         dish: dish,
-        id: Date.now(),
         }
 }
 
@@ -135,6 +137,7 @@ function favoriteRecipe() {
         }
     }
     favoriteRecipes.push(recipe);
+    setLocalStorage();
 }
 
 function toggleView() {
@@ -145,7 +148,6 @@ function toggleView() {
     mainPage.classList.toggle('hidden');
     myFavoritesButton.classList.toggle('hidden');
     headerTitle.classList.toggle('hidden');
-
 }
 
 function displayFavorites() {
@@ -170,4 +172,14 @@ function removeFavorite(event) {
     }
     
     displayFavorites();
+}
+
+function getLocalStorage() {
+    if (localStorage.getItem('favorites')){
+        favoriteRecipes = JSON.parse(localStorage.getItem('favorites'));
+    }
+}
+
+function setLocalStorage() {
+    localStorage.setItem('favorites', JSON.stringify(favoriteRecipes));
 }

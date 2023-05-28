@@ -8,12 +8,15 @@ var recipe = document.querySelector('.recipe');
 var letsCookButton = document.querySelector(".lets-cook-btn");
 var favoriteButton = document.querySelector('.favorite');
 var clearButton = document.querySelector('.clear');
-var myFavoritesButton = document.querySelector('.show-favorites')
+var myFavoritesButton = document.querySelector('.show-favorites');
 var goBackButton = document.querySelector('.back');
+var removeButton = document.querySelector('.remove');
 
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main');
 
+var headerTitle = document.querySelector('.header-title');
+var headerFavorites = document.querySelector('.header-favs')
 var favoritesList = document.querySelector('.favs-list');
 
 
@@ -67,14 +70,20 @@ favoriteButton.addEventListener('click', function(){
 });
 
 myFavoritesButton.addEventListener('click', function(){
-    displayFavoritesView()
+    toggleView()
     displayFavorites();
 });
 
 goBackButton.addEventListener('click', function(){
     clearRecipe();
+    clearInput();
+    toggleView();
     goBack();
 });
+
+favoritesList.addEventListener('click', function(event) {
+     removeFavorite(event);
+})
 
 
 // Functions and Event Handlers
@@ -83,6 +92,7 @@ function createFavoriteRecipe(type, dish) {
     return {
         type: type,
         dish: dish,
+        id: Date.now(),
         }
 }
 
@@ -118,34 +128,46 @@ function clearRecipe() {
 
 function favoriteRecipe() {
     var recipe = createFavoriteRecipe(currentRecipe.type, currentRecipe.dish);
+
+    for (var i = 0; i < favoriteRecipes.length; i++){
+        if (recipe.dish === favoriteRecipes[i].dish){
+            return;
+        }
+    }
     favoriteRecipes.push(recipe);
 }
 
-function displayFavoritesView() {
-    mainPage.classList.add('hidden');
-    favoritesPage.classList.remove('hidden');
-    goBackButton.classList.remove('hidden');
-    myFavoritesButton.classList.add('hidden');
+function toggleView() {
+    headerFavorites.classList.toggle('hidden');
+    favoritesPage.classList.toggle('hidden');
+    goBackButton.classList.toggle('hidden');
+    removeButton.classList.toggle('hidden');
+    mainPage.classList.toggle('hidden');
+    myFavoritesButton.classList.toggle('hidden');
+    headerTitle.classList.toggle('hidden');
+
 }
 
 function displayFavorites() {
     favoritesList.innerHTML = '';
 
     for (var i = 0; i < favoriteRecipes.length; i++){
-        favoritesList.innerHTML += `<h2>${favoriteRecipes[i].dish}</h2>`
+        favoritesList.innerHTML += `<article class="card" id="${favoriteRecipes[i].dish}"><h3>${favoriteRecipes[i].dish}</h3></article>`;
     }
-}
-
-function goBack() {
-    clearInput();
-    mainPage.classList.remove('hidden');
-    favoritesPage.classList.add('hidden');
-    goBackButton.classList.add('hidden');
-    myFavoritesButton.classList.remove('hidden');
 }
 
 function clearInput() {
     for (var i = 0; i < inputs.length; i++) {
         inputs[i].checked = false;
     }
+}
+
+function removeFavorite(event) {
+    for (var i = 0; i < favoriteRecipes.length; i++){
+        if (event.target.id === favoriteRecipes[i].dish){
+            favoriteRecipes.splice(i, 1);
+        }
+    }
+    
+    displayFavorites();
 }

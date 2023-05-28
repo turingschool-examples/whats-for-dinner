@@ -12,17 +12,25 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color:#0fb9b1;
-    height: 45px;
+    height: 30px;
     align-items: center;
-    flex-basis: 70%;
+    /* position: 20px; */
+    /* margin: 20px; */
+    border: 10px;
+    padding: 10px;
+    /* flex-basis: 70%; */
     /* width:
     border: */
 }
 
 .pageTitle {
     display: flex;
-    flex-wrap: wrap;
-    flex-basis: 70%;
+    position: 20px;
+    margin: 20px;
+    border: 20px;
+    padding: 20px;
+    /* flex-wrap: wrap;
+    flex-basis: 70%; */
     
 }
 
@@ -39,6 +47,7 @@ body {
     background-color: rgba(225, 225, 225, .9);
     height: 400px;
     width: 500px;
+    margin-top: 50px;
 }
 
 /* url(sweettexture.jpg) */

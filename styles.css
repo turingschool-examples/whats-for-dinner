@@ -7,48 +7,47 @@ body {
   }
   
   .topOfPage {
-      display: flex;
-      flex-wrap: wrap;
-      background-color:#0fb9b1;
-      height: 125px;
-      align-items: center;
-      font-size: 100px;
-      font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#0fb9b1;
+    height: 125px;
+    align-items: center;
+    font-size: 100px;
+    font-family: 'Roboto', sans-serif;
       /* position: 20px; */
       /* margin: 20px; */
-      border: 10px;
-      padding: 75px;
+    border: 10px;
+    padding: 75px;
       /* flex-basis: 70%; */
       /* width:
       border: */
   }
   
   .pageTitle {
-      font-family: 'Roboto', sans-serif;
-      font-size: 100px;
-      display: flex;
-      position: 20px;
-      margin: 20px;
-      border: 20px;
-      padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    display: flex;
+    position: 20px;
+    margin: 20px;
+    border: 20px;
+    padding: 20px;
       /* flex-wrap: wrap;
       flex-basis: 70%; */
   }
   
   .wrapper {
-      display: flex;
-      justify-content: space-around;
-      padding: 0;
-      margin: 0;
-      height: 2000px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    height: 2000px;
   }
   
   .box {
-      /* display: flex; */
-      background-color: rgba(225, 225, 225, .9);
-      height: 1700px;
-      width: 2100px;
-      margin-top: 200px;
+    background-color: rgba(225, 225, 225, .9);
+    height: 1700px;
+    width: 2100px;
+    margin-top: 200px;
   }
   
   .box:nth-child(1) {
@@ -80,6 +79,34 @@ body {
     margin-top: 100px;
     border-radius: 100px;
   }
+
+  #stockpot {
+    padding: 500px;
+    width: 1000px;
+    height: 700px;
+    /* img[Attributes Style] {
+        width: 1189px;
+        aspect-ratio: auto 1189 / 646;
+        height: 646px;
+    } */
+    /* padding-bottom: 800px;
+    border: auto;
+    margin: auto; */
+  }
+
+  /* img[Attributes Style] {
+    width: 1189px;
+    aspect-ratio: auto 1189 / 646;
+    height: 646px;
+} */
+
+  /* .box:nth-child(2) {
+    img[Attributes Style] {
+        width: 1189px;
+        aspect-ratio: auto 1189 / 646;
+        height: 646px;
+    }
+  } */
 
   /* url(sweettexture.jpg) */
   

@@ -1,51 +1,40 @@
-# What's for Dinner?
 
-## Overview
-
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
 ______________________________________________________  
 
 # What's for Dinner? 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+- This user-friendly app suggests recipes for sides, mains, and desserts. Users can individually select which course they want a recipe for or they can select an entire meal. Additionally, users can clear the recipe suggestions with the click of a button. If a user hasn’t selected one of the meal options and clicks the “Let’s cook” button, a message will appear letting the user know they first need to select a dish.
+
+
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+1. git clone this repo to your local machine
+2. cd into that directory
+3. git open index.html to open the browser
+4. Have fun making meals!
+
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![Alt text](../../../../Desktop/Screenshot%202023-05-28%20at%205.23.04%20PM.png)
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+- The project was introduced 5 days before the due date. I dedicated time to work on the project outside of class each of the 5 days. I have completed 3 weeks of Mod 1.
+
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+- Devin Altobello - 2305 FE Mod 1 student at Turing School for Software and Design https://github.com/alto-fx
+
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+- This was the second time that I worked on an actual application that includes HTML, CSS, and JavaScript. My learning goal was not only to create a landing page identical to the mockup using HTML and CSS, but also to add functionality to the radio inputs and buttons with JavaScript and DOM manipulation. I wanted to use and grow my understanding of functions that rely on a user event in the browser. I also wanted to get more practice using git commands, pushing code into the remote repo and pulling it back down to my local machine.
+
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+- Playing Flexbox Froggy before applying the concept of flexbox in my project helped improve my understanding of how to align elements and distribute space within a container. 
+- Learning about radio buttons and using .checked to determine if they are selected was a satisfying research project.
+- I enjoyed figuring out I could use the bang operator and && in my conditional statement to simplify when no radio buttons are checked a message is displayed telling the user to make a selection.
+Using text-transform: uppercase; in CSS to affect the innerText in my HTML
+
+- Looking at a prompt and determining where to start and what tools to use is still quite challenging for me, especially when there isn’t existing code to start. 
+- Although I knew I needed to create a function that generates a random number and use that function inside of another function to randomize the string elements inside of the sides, mains, and desserts arrays, I had difficulty putting the pieces together which cost me time in the beginning. With guidance from my mentor and my rock, I was able to complete this step.

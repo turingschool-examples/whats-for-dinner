@@ -85,6 +85,7 @@ goBackButton.addEventListener('click', function(){
 
 favoritesList.addEventListener('click', function(event) {
      removeFavorite(event);
+     setLocalStorage();
 })
 
 
@@ -136,6 +137,7 @@ function favoriteRecipe() {
         }
     }
     favoriteRecipes.push(recipe);
+    setLocalStorage();
 }
 
 function toggleView() {
@@ -146,7 +148,6 @@ function toggleView() {
     mainPage.classList.toggle('hidden');
     myFavoritesButton.classList.toggle('hidden');
     headerTitle.classList.toggle('hidden');
-
 }
 
 function displayFavorites() {

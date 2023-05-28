@@ -9,6 +9,9 @@ var dishName = document.querySelector('.dish-name');
 var potImage = document.querySelector('.pot-image');
 var youShouldMake = document.querySelector('.you-should-make');
 var selectedRadioButton = null;
+var sideDishWhole = document.querySelector("#side-dish-whole");
+var mainDishWhole = document.querySelector("#main-dish-whole");
+var dessertDishWhole = document.querySelector("#dessert-dish-whole")
 
 // Dishes:
 var sideDishes = ['Sweet Potatoes', 'Caesar salad', 'Garlic Bread', 'Baked potato'];
@@ -38,7 +41,10 @@ function getRandomDish(dishArray) {
         var mainDish = getRandomDish(mainDishes);
         var dessertDish = getRandomDish(dessertDishes);
         
-        dish =  `${sideDish} \n${mainDish} \n${dessertDish}`
+       // dish =  `${sideDish} \n${mainDish} \n${dessertDish}`
+       sideDishWhole.innerText = sideDish
+       mainDishWhole.innerText = mainDish
+       dessertDishWhole.innerText = dessertDish
       }
     dishName.textContent = dish;
     dishName.classList.remove('hidden');

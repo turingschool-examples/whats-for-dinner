@@ -7,7 +7,7 @@ var wholeMealRadio = document.querySelector('#whole-meal');
 var letsCookButton = document.querySelector('#lets-cook-button');
 var dishName = document.querySelector('.dish-name');
 var potImage = document.querySelector('.pot-image');
-var youShouldMake = document.querySelector('.you-should-make')
+var youShouldMake = document.querySelector('.you-should-make');
 var selectedRadioButton = null;
 
 // Dishes:
@@ -33,7 +33,13 @@ function getRandomDish(dishArray) {
       dish = getRandomDish(mainDishes);
     } else if (dessertRadio.checked) {
       dish = getRandomDish(dessertDishes);
-    }
+    } else if (wholeMealRadio.checked) {
+        var sideDish = getRandomDish(sideDishes);
+        var mainDish = getRandomDish(mainDishes);
+        var dessertDish = getRandomDish(dessertDishes);
+        
+        dish =  `${sideDish} \n${mainDish} \n${dessertDish}`
+      }
     dishName.textContent = dish;
     dishName.classList.remove('hidden');
     potImage.classList.add('hidden');
@@ -43,18 +49,28 @@ function getRandomDish(dishArray) {
   sideRadio.addEventListener('click', function() {
     mainDishRadio.checked = false;
     dessertRadio.checked = false;
+    wholeMealRadio.checked = false;
   });
   
   mainDishRadio.addEventListener('click', function() {
     sideRadio.checked = false;
     dessertRadio.checked = false;
+    wholeMealRadio.checked = false;
+
   });
   
   dessertRadio.addEventListener('click', function() {
     sideRadio.checked = false;
     mainDishRadio.checked = false;
+    wholeMealRadio.checked = false;
   });
   
+  wholeMealRadio.addEventListener('click', function() {
+    sideRadio.checked = false;
+    mainDishRadio.checked = false;
+    dessertRadio.checked = false;
+  });
+
 
   
   

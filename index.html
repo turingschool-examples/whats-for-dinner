@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <nav>
-      <h1 class="title">What's for Dinner?</h1>
-      <button name="add-recipe-button">ADD A RECIPE</button>
-    </nav>
-    <main>
-      <section class="user-input-box boxes">
-        <form>
-          <h2>What are you looking for?</h2>
-          <p><input type="radio" name="meal-options" id="side-radio" value="side">Side</input></p>
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <h1 class="title">What's for Dinner?</h1>
+    <button class="add-recipe-button">ADD A RECIPE</button>
+  </nav>
+  <main>
+    <section class="user-input-box boxes">
+      <form>
+        <h2>What are you looking for?<span style="color:#ee5253">*</span> </h2>
+        <p><input type="radio" name="meal-options" id="side-radio" value="side">Side</input></p>
         </p><input type="radio" name="meal-options" id="main-radio" value="main">Main Dish</input></p>
-      </p><input type="radio" name="meal-options" id="dessert-radio" value="dessert">Dessert</input></p>
-    </p><input type="radio" name="meal-options" id="entire-meal-radio" value="entire-meal">Entire Meal</input></p>
-          <button type="button" class="lets-cook">LET'S COOK</button>
-        </form>
-      </section>
-
-      <section class="user-suggestion-box boxes">
-        <p class="title-suggestion hidden">You Should Made</p>
-        <p class="dish-suggestion-placeholder hidden">Placeholder Food</p>
-        <img class="boiling-pot" src="assets/cookpot.svg"alt="outline of black and white boiling pot">
-        <button class="clear-button">CLEAR</button>
-      </section>
-    </main>
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+        </p><input type="radio" name="meal-options" id="dessert-radio" value="dessert">Dessert</input></p>
+        </p><input type="radio" name="meal-options" id="entire-meal-radio" value="entire-meal">Entire Meal</input></p>
+        <button type="button" class="lets-cook">LET'S COOK!</button>
+      </form>
+    </section>
+    <section class="user-suggestion-box boxes">
+      <p class="title-suggestion hidden">You Should Made:</p>
+      <p class="dish-suggestion-placeholder hidden">Placeholder Food</p>
+      <img class="boiling-pot" src="assets/cookpot.svg" alt="outline of black and white boiling pot">
+      <div class="clear-button-container">
+        <button class="clear-button">Clear</button>
+      </div>
+    </section>
+  </main>
+</body>
+<script type="text/javascript" src="main.js"></script>
 </html>

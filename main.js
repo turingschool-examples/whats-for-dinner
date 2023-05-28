@@ -10,7 +10,6 @@ var favoriteButton = document.querySelector('.favorite');
 var clearButton = document.querySelector('.clear');
 var myFavoritesButton = document.querySelector('.show-favorites');
 var goBackButton = document.querySelector('.back');
-var removeButton = document.querySelector('.remove');
 
 var favoritesPage = document.querySelector('.favorites-page');
 var mainPage = document.querySelector('.main');
@@ -165,7 +164,6 @@ function toggleView() {
     headerFavorites.classList.toggle('hidden');
     favoritesPage.classList.toggle('hidden');
     goBackButton.classList.toggle('hidden');
-    removeButton.classList.toggle('hidden');
     mainPage.classList.toggle('hidden');
     myFavoritesButton.classList.toggle('hidden');
     headerTitle.classList.toggle('hidden');
@@ -175,7 +173,10 @@ function displayFavorites() {
     favoritesList.innerHTML = '';
 
     for (var i = 0; i < favoriteRecipes.length; i++){
-        favoritesList.innerHTML += `<article class="card" id="${favoriteRecipes[i].dish}"><h3>${favoriteRecipes[i].dish}</h3></article>`;
+        favoritesList.innerHTML += `<article class="card" id="${favoriteRecipes[i].dish}">
+        <h3>${favoriteRecipes[i].dish}</h3>
+        <button class="remove">&#128465</button>
+        </article>`;
     }
 }
 

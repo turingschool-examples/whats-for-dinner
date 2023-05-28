@@ -48,7 +48,8 @@ var desserts = [
   "Eclairs",
 ];
 
-var entireMeal = [];
+var currentRecipe = '';
+var entireMeal = '';
 
 // query selectors
 
@@ -59,10 +60,10 @@ var recipeName = document.querySelector('.recipe');
 var recipeSugText = document.querySelector('.should-make-text');
 // buttons
 
-
-
 var radioButtons = document.querySelectorAll('input');
 var letsCookBtn = document.querySelector('.cook-button');
+var clearBtn = document.querySelector('.clear-button');
+
 // event listeners
 
 letsCookBtn.addEventListener('click', showRecipe);
@@ -78,34 +79,54 @@ function createRecipe() {
     var rndMainRecIndex = getRandomIndex(mains);
     var rndDsrtRecIndex = getRandomIndex(desserts);
 
-    var rndSideRecipe = sides[rndSideRecIndex]
-    var rnd
+    // var rndSideRecipe = sides[rndSideRecIndex]
+    
 
 }
 
 
 
 function showRecipe() {
-
-  var rndMainRecIndex = getRandomIndex(mains);
-  var rndDsrtRecIndex = getRandomIndex(desserts);
   var radioButtons = document.querySelectorAll('input');
   
     for (var i = 0; i <         radioButtons.length; i++) {
         if (radioButtons[i].checked && radioButtons[i].value === 'Side') {
-            recipeName.innerText = sides[getRandomIndex(sides)];
-            console.log(sides)
+            currentRecipe = sides[getRandomIndex(sides)];
+            recipeName.innerText = currentRecipe;
+            console.log('current sides recipe: ', currentRecipe);
         }else if (radioButtons[i].checked && radioButtons[i].value === 'Main') {
-            recipeName.innerText = mains[getRandomIndex(mains)];
-            console.log(mains)
+            currentRecipe = mains[getRandomIndex(mains)]
+            recipeName.innerText = currentRecipe;
+            console.log('current Mains recipe: ', currentRecipe)
         }else if (radioButtons[i].checked && radioButtons[i].value === 'Dessert') {
-            recipeName.innerText = desserts[getRandomIndex(desserts)];
+            currentRecipe = desserts[getRandomIndex(desserts)]
+            recipeName.innerText = `${currentRecipe}!`;
+            console.log('currentRecipe: ', currentRecipe)
+        }else if (radioButtons[i].checked && radioButtons[i].value === 'Meal') {
+            currentRecipe = makeMeal()
+            recipeName.innerText = currentRecipe;
         }
   }toggleImageRecipe();
 }
 
+
 function toggleImageRecipe() {
     recipeName.classList.remove('hidden');
     potImage.classList.add('hidden');
-    recipeSugText.classList.remove('hidden')
+    recipeSugText.classList.remove('hidden');
+    clearBtn.classList.remove('hidden');
 }
+
+function makeMeal() {
+  entireMeal = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
+  console.log('whole meal: ', entireMeal)
+  return entireMeal;
+
+}
+    
+// clearBtn.addEventListener('click', clearPage)
+
+// function clearPage() {
+//     currentRecipe = currentRecipe.shift
+//     clearBtn.innerT
+// }

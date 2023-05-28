@@ -24,7 +24,8 @@ p {
 }
 .main {
     /* border: solid red; */
-    background: url("assets/burger-friends.jpg");height: 500px;
+    background: url("assets/burger-friends.jpg");
+    height: 500px;
     background-color: grey;
     display: flex;
     justify-content: space-around;
@@ -92,6 +93,7 @@ p {
     background-color: rgba(225, 225, 225, .9);
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -99,14 +101,38 @@ p {
     /* border: solid red; */
     height: 120px;
     width: auto;
+    align-self: middle;
 }
 
 .should-make-text {
+    /* border: solid black; */
     font-style: italic;
 }
 .recipe {
-    font-size: 20;
+    /* border: solid red; */
+    margin: 0px;
+    font-size: 22;
+}
+
+.clear-button {
+    border: none;
+    background-color: #95a5a6;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 70px;
+    margin: 0px;
+    padding: 7px;
+    justify-content: flex-end;
+    align-self: flex-end;
+    position: relative;
+    bottom: -50px;
+    
 }
 .hidden {
     display: none
+}
+
+span {
+    color: red;
 }

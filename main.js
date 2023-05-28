@@ -54,10 +54,9 @@ var entireMeal = '';
 // query selectors
 
 var potImage = document.querySelector('.image-in-block-2');
-
 var recipeName = document.querySelector('.recipe');
-
 var recipeSugText = document.querySelector('.should-make-text');
+
 // buttons
 
 var radioButtons = document.querySelectorAll('input');
@@ -78,37 +77,26 @@ function createRecipe() {
     var rndSideRecIndex = getRandomIndex(sides);
     var rndMainRecIndex = getRandomIndex(mains);
     var rndDsrtRecIndex = getRandomIndex(desserts);
-
-    // var rndSideRecipe = sides[rndSideRecIndex]
-    
-
 }
-
-
 
 function showRecipe() {
   var radioButtons = document.querySelectorAll('input');
-  
     for (var i = 0; i <         radioButtons.length; i++) {
         if (radioButtons[i].checked && radioButtons[i].value === 'Side') {
             currentRecipe = sides[getRandomIndex(sides)];
-            recipeName.innerText = currentRecipe;
-            console.log('current sides recipe: ', currentRecipe);
+            recipeName.innerText = `${currentRecipe}!`;
         }else if (radioButtons[i].checked && radioButtons[i].value === 'Main') {
             currentRecipe = mains[getRandomIndex(mains)]
-            recipeName.innerText = currentRecipe;
-            console.log('current Mains recipe: ', currentRecipe)
+            recipeName.innerText = `${currentRecipe}!`;
         }else if (radioButtons[i].checked && radioButtons[i].value === 'Dessert') {
             currentRecipe = desserts[getRandomIndex(desserts)]
             recipeName.innerText = `${currentRecipe}!`;
-            console.log('currentRecipe: ', currentRecipe)
         }else if (radioButtons[i].checked && radioButtons[i].value === 'Meal') {
             currentRecipe = makeMeal()
             recipeName.innerText = currentRecipe;
         }
   }toggleImageRecipe();
 }
-
 
 function toggleImageRecipe() {
     recipeName.classList.remove('hidden');
@@ -119,14 +107,5 @@ function toggleImageRecipe() {
 
 function makeMeal() {
   entireMeal = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
-  console.log('whole meal: ', entireMeal)
   return entireMeal;
-
 }
-    
-// clearBtn.addEventListener('click', clearPage)
-
-// function clearPage() {
-//     currentRecipe = currentRecipe.shift
-//     clearBtn.innerT
-// }

@@ -89,8 +89,8 @@ header {
   }
 
   .pot-image {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
   }
   .hidden {
     display: none !important;

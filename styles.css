@@ -64,7 +64,7 @@ section {
 }
 
 form {
-  padding: 7%;
+  padding: 10%;
 }
 
 .lets-cook {
@@ -92,6 +92,16 @@ h2 {
 
 .boiling-pot {
   height: 115px;
+}
+
+.title-suggestion {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.dish-suggestion-placeholder {
+  font-size: 1.5em;
+  margin-top: unset;
 }
 
 .hidden {

@@ -87,9 +87,6 @@ function createRecipe() {
 
 
 function showRecipe() {
-
-  // var rndMainRecIndex = getRandomIndex(mains);
-  // var rndDsrtRecIndex = getRandomIndex(desserts);
   var radioButtons = document.querySelectorAll('input');
   
     for (var i = 0; i <         radioButtons.length; i++) {
@@ -118,6 +115,13 @@ function toggleImageRecipe() {
     potImage.classList.add('hidden');
     recipeSugText.classList.remove('hidden');
     clearBtn.classList.remove('hidden');
+}
+
+function makeMeal() {
+  entireMeal = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`;
+  console.log('whole meal: ', entireMeal)
+  return entireMeal;
+
 }
     
 // clearBtn.addEventListener('click', clearPage)

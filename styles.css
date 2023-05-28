@@ -113,6 +113,11 @@ h4 {
     content: "*";
 }
 
+.selected::after {
+    color:#ee5253;
+    content: 🗑️;
+}
+
 /* ~~~~~ Favorites view ~~~~~ */
 
 .favorites-page {

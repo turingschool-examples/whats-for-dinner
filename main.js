@@ -187,7 +187,7 @@ function clearInput() {
 
 function removeFavorite(event) {
     for (var i = 0; i < favoriteRecipes.length; i++){
-        if (event.target.id === favoriteRecipes[i].dish){
+        if (event.target.closest('.card').id === favoriteRecipes[i].dish){
             favoriteRecipes.splice(i, 1);
         }
     }

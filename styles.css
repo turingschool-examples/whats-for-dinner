@@ -44,13 +44,43 @@ body {
   }
   
   .box {
-      display: flex;
+      /* display: flex; */
       background-color: rgba(225, 225, 225, .9);
       height: 1700px;
       width: 2100px;
       margin-top: 200px;
   }
   
+  .box:nth-child(1) {
+    display: block;
+    font-size: 80px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #watcha-want {
+    font-size: 125px;
+    display: flex;
+    padding-left: 200px;
+    padding-top: 250px;
+    /* border-top: 800px; */
+  }
+
+  .select-dish {
+    /* display: flex; */
+    padding-left: 200px;
+    border-left: 200px;
+    margin-left: 200px;
+    margin-bottom: 100px;
+  }
+
+  button {
+    font-size: 80px;
+    background-color:#0fb9b1;
+    padding-left: 200px;
+    margin-top: 100px;
+    border-radius: 100px;
+  }
+
   /* url(sweettexture.jpg) */
   
   

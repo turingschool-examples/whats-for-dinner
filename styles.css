@@ -66,7 +66,21 @@ header {
     align-items:
   }
 
-  .meal-type-box,
+  .meal-type-box {
+    flex: 1;
+    background-color: rgba(225, 225, 225, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    max-width: 400px;
+    flex-direction: column;
+    text-align: left;
+  }
+
   .random-meal-box {
     flex: 1;
     background-color: rgba(225, 225, 225, 0.9);
@@ -102,4 +116,13 @@ header {
     border-radius: 6px;
     margin-top: 20px;
     font-weight: 300;
+  }
+.you-should-make {
+    font-style: italic;
+    font-weight:300;
+    font-size: 20;
+}
+
+h1 .red-asterisk {
+    color: red;
   }

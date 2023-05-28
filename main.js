@@ -104,8 +104,9 @@ goBackButton.addEventListener('click', function(){
 });
 
 favoritesList.addEventListener('click', function(event) {
-     removeFavorite(event);
-     setLocalStorage();
+    if (event.target.className === 'remove')
+    removeFavorite(event);
+    setLocalStorage();
 })
 
 

@@ -1,10 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <header class="topOfPage"
+      <h1 class="pageTitle"><strong>What's for Dinner?</strong></h1>
+    </header>
+    <section class="wrapper">
+      <div class="box">
+        <form id="form">
+          <p id="watcha-want"<strong>What Are You Looking For?</strong></p>
+          <input type="radio" id="side" value="side" name="select-dish" class="select-dish"><label for="side">Side</label><br>
+          <input type="radio" id="main" value="main" name="select-dish" class="select-dish"><label for="main">Main Dish</label><br>
+          <input type="radio" id="dessert" value="dessert" name="select-dish" class="select-dish"><label for="dessert">Dessert</label><br>
+          <input type="radio" id="meal" value="meal" name="meal" class="select-dish"><label for="meal">Entire Meal</label><br>
+          <div><button type="submit">LET'S COOK!</button></div>
+        </form>
+      </div>
+      <div class="box">
+        <img id="stockpot" src="/Users/dan/turing_work/1mod/whats-for-dinner/assets/cookpot.svg" alt="boiling stockpot">
+        <div class="hidden suggestion-box">
+          <p class="just-do-it"<em>You should make:</em></p>
+          <p class="suggested-item"></p>
+        </div>
+      </div>
+
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

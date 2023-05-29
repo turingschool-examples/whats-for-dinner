@@ -6,8 +6,6 @@ ______________________________________________________
 ### Abstract:
 - This user-friendly app suggests recipes for sides, mains, and desserts. Users can individually select which course they want a recipe for or they can select an entire meal. Additionally, users can clear the recipe suggestions with the click of a button. If a user hasn’t selected one of the meal options and clicks the “Let’s cook” button, a message will appear letting the user know they first need to select a dish.
 
-
-
 ### Installation Instructions:
 1. git clone this repo to your local machine
 2. cd into that directory

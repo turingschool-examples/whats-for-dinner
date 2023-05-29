@@ -1,0 +1,90 @@
+// query selector variables below:
+var chooseSide = document.querySelector('#side');
+var chooseMain = document.querySelector('#main');
+var chooseDessert = document.querySelector('#dessert');
+var letsCookButton = document.querySelector('button');
+
+var sides = [
+    "Miso Glazed Carrots",
+    "Coleslaw",
+    "Garden Salad",
+    "Crispy Potatoes",
+    "Sweet Potato Tots",
+    "Coconut Rice",
+    "Caeser Salad",
+    "Shrimp Summer Rolls",
+    "Garlic Butter Mushrooms",
+    "Hush Puppies"
+];
+var mains = [
+    "Spaghetti and Meatballs",
+    "Pineapple Chicken",
+    "Shakshuka",
+    "Thai Yellow Curry",
+    "Bibimbap",
+    "Chicken Parmesean",
+    "Butternut Squash Soup",
+    "BBQ Chicken Burgers",
+    "Ramen",
+    "Empanadas",
+    "Chicken Fried Rice",
+    "Sheet Pan Fajitas",
+    "Margarita Pizza"
+];
+var desserts = [
+    "Apple Pie",
+    "Lemon Meringue Pie",
+    "Black Forest Cake",
+    "Banana Bread",
+    "Peach Cobbler",
+    "Cheesecake",
+    "Creme Brulee",
+    "Baklava",
+    "Flan",
+    "Cannoli",
+    "Macaroons",
+    "Chocolate Mousse",
+    "Chocolate Souffle",
+    "Pumpkin Pie",
+    "Key Lime Pie",
+    "Tart Tatin",
+    "Chocolate Croissants",
+    "Eclairs"
+];
+// event listeners below:
+chooseSide.addEventListener('check', pickRandomSide);
+chooseMain.addEventListener('check', pickRandomMain);
+chooseDessert.addEventListener('check', pickRandomDessert);
+letsCookButton.addEventListener('click', showRandomDish);
+
+// functions / event handlers below:
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  }
+function pickRandomSide() {
+    sides[getRandomIndex(sides)];
+    
+}
+
+function pickRandomMain() {
+    mains[getRandomIndex(mains)];
+}
+
+function pickRandomDessert() {
+    desserts[getRandomIndex(desserts)];
+}
+// function showRandomPoster () {
+//   posterImg.src = images[getRandomIndex(images)];
+//   posterTitle.innerText = titles[getRandomIndex(titles)];
+//   posterQuotes.innerText = quotes[getRandomIndex(quotes)];
+//   currentPoster = createPoster(posterImg.src, posterTitle.innerText, posterQuotes.innerText) 
+// }  
+//   function createMeal(sides, mains, desserts) {
+//     return {
+//       id: Date.now(), 
+//       sides: sides, 
+//       mains: mains, 
+//       desserts: desserts
+//     }
+//   }
+

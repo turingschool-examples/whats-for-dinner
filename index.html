@@ -1,10 +1,35 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
-  <script type="text/javascript" src="main.js"></script>
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body background="assets/burger-friends.jpg">
+  <header>What's for dinner?</header>
+
+  <section class="container">
+    <section class="user-input-box meal-type-box">
+      <h1>What Are You Looking For?<span class="red-asterisk">*</span></h1>
+      <div class="meal-type-list">
+        <div><input type="radio" id="side">Side</div>
+        <div><input type="radio" id="main-dish">Main Dish</div>
+        <div><input type="radio" id="dessert">Dessert</div>
+        <div><input type="radio" id="whole-meal">Whole Meal</div>
+      </div>
+      <button type="button" name="lets-cook" id="lets-cook-button">LET'S COOK</button>
+    </section>
+    <div></div>
+    <section class="user-input-box random-meal-box">
+      <p class="you-should-make hidden">You Should Make</p>
+      <div>
+        <p id="main-dish-whole"></p>
+        <p id="side-dish-whole"></p>
+        <p id="dessert-dish-whole"></p>
+        <p id="single-dish"></p>
+      </div>
+      <img class="pot-image" src="assets/cookpot.svg" alt="image of cookpot">
+    </section>
+  </section>
+
+</body>
+<script type="text/javascript" src="main.js"></script>
 </html>

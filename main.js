@@ -68,7 +68,13 @@ function showRandomDish(event) {
     if (chooseSide.checked) {
       var sideName = sides[getRandomIndex(sides)];
       suggestedItem.innerText = sideName;
-    } 
+    } else if (chooseMain.checked) {
+        var mainName = mains[getRandomIndex(mains)];
+        suggestedItem.innerText = mainName;
+    } else {
+        var dessertName = desserts[getRandomIndex(desserts)];
+        suggestedItem.innerText = dessertName;
+    }
 }
 // posterTitle.innerText = userInputTitle.value;
 // showMyPosterButton.addEventListener('click', function (e) {

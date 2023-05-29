@@ -5,12 +5,6 @@
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Document</title>
-  <style>
-    .burger-friends-image {
-      background: linear-greadient(rgba(0,0))
-
-    }
-  </style>
 </head>
 
 <body>
@@ -27,18 +21,36 @@
      <div class="left-rectangle-container">
       <div class="left-rectangle">
         <div class="left-rectangle-text-container">
-        <h2>What are you looking for?*</h2>
-        <ul>
-          <li>Side</li>
-          <li>Main Dish</li>
-          <li>Dessert</li>
-          <li>Entire Meal</li>
-       </ul>
-       <button class="lets-cook">LET'S COOK</button>
+        <h2>What are you looking for?<span class="asterik">*</span></h2>
+         
+        <label>
+          <input type="radio" value="Side" name="food">
+          Side
+          <span></span>
+         </label>
+         
+        <label>
+          <input type="radio" value="Main Dish" name="food">
+          Main Dish
+          <span></span>
+          </label>
+        
+        <label>
+          <input type="radio" value="Dessert" name="food">
+          Dessert
+         </label>
+         <span></span>
+         
+        <label>
+          <input type="radio" value="Entire Meal" name="food">
+          Entire Meal
+         </label>
+       
+       <button class="lets-cook-button">LET'S COOK</button>
        </div>
      </div>
    </div>
-  
+     
   <div class="right-rectangle-container">
     <div class="right-rectangle"></div>
    </div>

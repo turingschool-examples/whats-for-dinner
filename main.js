@@ -5,13 +5,13 @@ var mainDishRadio = document.querySelector('#main-dish');
 var dessertRadio = document.querySelector('#dessert');
 var wholeMealRadio = document.querySelector('#whole-meal');
 var letsCookButton = document.querySelector('#lets-cook-button');
-var dishName = document.querySelector('.dish-name');
 var potImage = document.querySelector('.pot-image');
 var youShouldMake = document.querySelector('.you-should-make');
 var selectedRadioButton = null;
 var sideDishWhole = document.querySelector("#side-dish-whole");
 var mainDishWhole = document.querySelector("#main-dish-whole");
 var dessertDishWhole = document.querySelector("#dessert-dish-whole")
+var singleDish = document.querySelector('#single-dish')
 
 // Dishes:
 var sideDishes = ['Sweet Potatoes', 'Caesar salad', 'Garlic Bread', 'Baked potato'];
@@ -29,25 +29,24 @@ function getRandomDish(dishArray) {
   
   // Event listeners:
   letsCookButton.addEventListener('click', function() {
-    //var dish = null;
       if (sideRadio.checked) {
-      dish = getRandomDish(sideDishes);
+      singleDish.innerText = getRandomDish(sideDishes);
     } else if (mainDishRadio.checked) {
-      dish = getRandomDish(mainDishes);
+      singleDish.innerText = getRandomDish(mainDishes);
     } else if (dessertRadio.checked) {
-      dish = getRandomDish(dessertDishes);
+      singleDish.innerText = getRandomDish(dessertDishes);
     } else if (wholeMealRadio.checked) {
         var sideDish = getRandomDish(sideDishes);
         var mainDish = getRandomDish(mainDishes);
         var dessertDish = getRandomDish(dessertDishes);
         
        // dish =  `${sideDish} \n${mainDish} \n${dessertDish}`
-       sideDishWhole.innerText = sideDish
-       mainDishWhole.innerText = mainDish
-       dessertDishWhole.innerText = dessertDish
+       sideDishWhole.innerText = " " + sideDish + " " + "and" + " ";
+       mainDishWhole.innerText = mainDish +" " + 'with a side of';
+       dessertDishWhole.innerText = dessertDish + " " + "for dessert";
+       singleDish.classList.add('hidden');
       }
-    dishName.textContent = dish;
-    dishName.classList.remove('hidden');
+    // dishName.textContent = dish;
     potImage.classList.add('hidden');
     youShouldMake.classList.remove('hidden');
   });

@@ -94,6 +94,7 @@ header {
     max-width: 400px;
     flex-direction: column;
     text-align: left;
+    font-size: 20px;
   }
 
   .random-meal-box {
@@ -126,3 +127,16 @@ header {
 h1 .red-asterisk {
     color: red;
   }
+
+#main-dish-whole {
+    margin: 1px;
+    border: 0px;
+}
+#side-dish-whole {
+    margin: 1px;
+    border: 0px;
+}
+#dessert-dish-whole {
+    margin: 1px;
+    border: 0px;
+}

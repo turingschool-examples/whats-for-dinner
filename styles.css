@@ -79,7 +79,32 @@ body {
 
   .hidden {
     display: none;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-size: 300px; */
+
   }
+
+  .suggestion-box {
+    display: block;
+    padding-left: 200px;
+    padding-top: 500px;
+  }
+
+  .just-do-it {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 75px;
+    font-style: italic;
+  }
+
+  .suggested-item {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 175px;
+  }
+
   /* url(sweettexture.jpg) */
   
   /* font-family: 'Roboto', sans-serif;

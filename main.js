@@ -29,7 +29,7 @@ function getRandomDish(dishArray) {
   
   // Event listeners:
   letsCookButton.addEventListener('click', function() {
-    var dish = null;
+    //var dish = null;
       if (sideRadio.checked) {
       dish = getRandomDish(sideDishes);
     } else if (mainDishRadio.checked) {

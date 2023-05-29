@@ -19,11 +19,8 @@ ______________________________________________________
 ### Context:
 - The project was introduced 5 days before the due date. I dedicated time to work on the project outside of class each of the 5 days. I have completed 3 weeks of Mod 1.
 
-
 ### Contributors:
 - Devin Altobello - 2305 FE Mod 1 student at Turing School for Software and Design https://github.com/alto-fx
-
-
 
 ### Learning Goals:
 - This was the second time that I worked on an actual application that includes HTML, CSS, and JavaScript. My learning goal was not only to create a landing page identical to the mockup using HTML and CSS, but also to add functionality to the radio inputs and buttons with JavaScript and DOM manipulation. I wanted to use and grow my understanding of functions that rely on a user event in the browser. I also wanted to get more practice using git commands, pushing code into the remote repo and pulling it back down to my local machine.

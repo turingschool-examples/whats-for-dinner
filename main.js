@@ -3,7 +3,9 @@ var chooseSide = document.querySelector('#side');
 var chooseMain = document.querySelector('#main');
 var chooseDessert = document.querySelector('#dessert');
 var letsCookButton = document.querySelector('button');
-
+var stockPotImage = document.querySelector('#stockpot');
+var suggestionBox = document.querySelector('.suggestion-box');
+var suggestedItem = document.querySelector('.suggested-item');
 var sides = [
     "Miso Glazed Carrots",
     "Coleslaw",
@@ -52,32 +54,27 @@ var desserts = [
     "Eclairs"
 ];
 // event listeners below:
-chooseSide.addEventListener('check', pickRandomSide);
-chooseMain.addEventListener('check', pickRandomMain);
-chooseDessert.addEventListener('check', pickRandomDessert);
 letsCookButton.addEventListener('click', showRandomDish);
 
 // functions / event handlers below:
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
-  }
-
-function pickRandomSide() {
-    return sides[getRandomIndex(sides)];
 }
 
-function pickRandomMain() {
-    return mains[getRandomIndex(mains)];
+function showRandomDish(event) {
+    event.preventDefault();
+    stockPotImage.hidden = true;
+    suggestionBox.classList.remove('hidden');
+    if (chooseSide.checked) {
+      var sideName = sides[getRandomIndex(sides)];
+      suggestedItem.innerText = sideName;
+    } 
 }
-
-function pickRandomDessert() {
-    return desserts[getRandomIndex(desserts)];
-}
-
-function showRandomDish() {
-    if 
-}
-
+// posterTitle.innerText = userInputTitle.value;
+// showMyPosterButton.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   displayUserInputPoster();
+// });
 // function showRandomPoster () {
 //   posterImg.src = images[getRandomIndex(images)];
 //   posterTitle.innerText = titles[getRandomIndex(titles)];
@@ -93,3 +90,14 @@ function showRandomDish() {
 //     }
 //   }
 
+// function pickRandomSide() {
+//     return sides[getRandomIndex(sides)];
+// }
+
+// function pickRandomMain() {
+//     return mains[getRandomIndex(mains)];
+// }
+
+// function pickRandomDessert() {
+//     return desserts[getRandomIndex(desserts)];
+// }

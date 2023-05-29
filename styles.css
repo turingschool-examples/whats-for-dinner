@@ -77,6 +77,9 @@ body {
     height: 700px;
   }
 
+  .hidden {
+    display: none;
+  }
   /* url(sweettexture.jpg) */
   
   /* font-family: 'Roboto', sans-serif;

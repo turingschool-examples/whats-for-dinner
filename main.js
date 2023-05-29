@@ -61,18 +61,23 @@ letsCookButton.addEventListener('click', showRandomDish);
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
   }
+
 function pickRandomSide() {
-    sides[getRandomIndex(sides)];
-    
+    return sides[getRandomIndex(sides)];
 }
 
 function pickRandomMain() {
-    mains[getRandomIndex(mains)];
+    return mains[getRandomIndex(mains)];
 }
 
 function pickRandomDessert() {
-    desserts[getRandomIndex(desserts)];
+    return desserts[getRandomIndex(desserts)];
 }
+
+function showRandomDish() {
+    if 
+}
+
 // function showRandomPoster () {
 //   posterImg.src = images[getRandomIndex(images)];
 //   posterTitle.innerText = titles[getRandomIndex(titles)];

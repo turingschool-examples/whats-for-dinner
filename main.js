@@ -1,6 +1,6 @@
-//Arrays of Dishes
- window.addEventListener('load', function() {
 
+ window.addEventListener('load', function() {
+//Arrays of Dishes
     var sides = ["Rice and Peas", "Fried Plantain", "Fried Dumpling", "Roti", "Rice", "Macaroni and Cheese"]
 
 var mainDishes = ["Jerk Chicken", "Curry Goat", "Oxtail Stew", "Escovitch Fish", "Curry Beef",]
@@ -49,15 +49,14 @@ function removeCookpotInDom() {
    theCookpot.style.backgroundImage = 'none';  
 }
 
-
- function letsCookResponse() {
+function letsCookResponse() {
     if(sidesRadioButton.checked) {
-      return rightRectangleContainer.textContent = `You should make: ${generateRandomSides()}`
+      return rightRectangleContainer.innerHTML = `You should make: ${generateRandomSides()}`
     } else if(mainDishRadioButton.checked) {
-       return rightRectangleContainer.textContent = `You should make: ${generateRandomMainDishes()}`
+       return rightRectangleContainer.innerHTML = `You should make: ${generateRandomMainDishes()}`
     } else {
-      return rightRectangleContainer.textContent = `You should make:${generateRandomDesserts()}`
+      return rightRectangleContainer.innerHTML = `You should make:${generateRandomDesserts()}`
     }
  }
 
- })
+ });

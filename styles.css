@@ -1,10 +1,133 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
+/* COLORS
 teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
+frosted white - rgba(225, 225, 225, .9);// the add recipe button is this color
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+* {
+  font-family: Roboto, sans-serif;  
+}
 
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;   
+}
+.burger-friends-container {
+    height: 100vh;
+    background-image: url("assets/burger-friends.jpg");   
+    background-size: cover   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0fb9b1;    
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+.add-a-recipe {
+    margin-right: 50px;
+    margin-top: 15px;
+    height: 47px;
+    width: 135px;
+    border-radius: 7px;
+    border: 0px;
+}
+
+.both-rectangles-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.left-rectangle-container {
+    display: flex;
+    background-color: whitesmoke; opacity: 0.84; 
+}
+
+.left-rectangle {
+    display: flex;
+    flex-direction: column;   
+    justify-content: flex-start;
+    height: 320px;
+    width: 400px;
+   
+}
+
+.left-rectangle-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    margin-left: 30px;
+    margin-top: 33px; 
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.lets-cook-button {
+    height:30px;
+    width: 140px;
+    margin-top: 12px;
+    background-color:   #0fb9b1;
+    border: 1px solid blue;
+    border-radius: 8px;
+}
+
+.right-rectangle-container {
+    display: flex;
+    height: 320px;
+    width: 400px;
+    background-color: white; opacity: 0.85;
+    background-image: url("assets/cookpot.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 140px;
+    background-position: center;  
+    font-size: 20px;
+    justify-content: center;
+    
+
+}
+    
+
+.asterik {
+    color: red;
+}
+
+.clear-button-container {
+   position:absolute;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    width: 200px; 
+    padding-left: 300px;
+    padding-top: 265px;
+}
+
+.clear-button {
+    border: 1px solid yellow;
+    border: 0px;
+    width: 70px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #95a5a6;
+    color: white;
+    font-size: 14px
+}
+
+.right-rectangle-text {
+  text-align: center;
+  margin-top: 110px;
+  font-size: 20px; 
+}
+
+.meal-styling {
+ 
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;  
+}

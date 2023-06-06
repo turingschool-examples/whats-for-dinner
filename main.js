@@ -47,11 +47,11 @@ function removeCookpotInDom() {
 
 function letsCookResponse() {
     if(sidesRadioButton.checked) {
-       rightRectangleContainer.innerHTML = `You should make: ${generateRandomSides()}`
+       rightRectangleContainer.innerHTML = `<span class="right-rectangle-text"><em> you should make: </em><div class="meal-styling">${generateRandomSides()}</div></span>`
     } else if(mainDishRadioButton.checked) {
-        rightRectangleContainer.innerHTML = `You should make: ${generateRandomMainDishes()}`
+        rightRectangleContainer.innerHTML = `<span class="right-rectangle-text"><em>you should make: </em><div class="meal-styling"> ${generateRandomMainDishes()}</div></span>`
     } else {
-       rightRectangleContainer.innerHTML = `You should make:${generateRandomDesserts()}`
+       rightRectangleContainer.innerHTML = `<span class="right-rectangle-text"><em>you should make: </em><div class="meal-styling"> ${generateRandomDesserts()}</div></span>`
     }
  }
 

@@ -4,7 +4,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <nav class = "navbar">
+      <h1 class="header">What's for dinner?</h1>
+      <button class="favorites"> FAVORITES </button>
+      <button class="add-recipe"> ADD A RECIPE </button>
+    </nav>
+    <main class="main-container">
+      <section class="meal-search-box">
+        <h2> What are you looking for?<span> * </span></h2>
+        <input type="radio" class="buttons" id="side" name="dish-buttons" value ="side">
+        <label for="side">Side</label>
+        <input type="radio" class="buttons" id="main-dish" name="dish-buttons" value ="main-dish">
+        <label for="main-dish">Main Dish</label>
+        <input type="radio" class="buttons" id="dessert" name="dish-buttons" value ="dessert">
+        <label for="dessert">Dessert</label>
+        <input type="radio" class="buttons" id="entire-meal" name="dish-buttons" value ="entire-meal">
+        <label for="entire-meal">Entire Meal</label>
+        <button class="dish-selecting-button" id="letsCook">LET'S COOK!</button>
+      </section>
+      <section class="dish-container">
+        <section class="selected-dish">
+          <h3> You should make: </h3>
+          <h4 id="foodName"> Food name! </h4>
+          <button id="clear"> CLEAR </button>
+        </section>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -24,10 +24,36 @@ body {
 }
 
 .navbar {
+display:flex;
+justify-content: space-between;
   background-color:#0fb9b1;
   padding: 10 px;
   font-size: 25 px ;
 
+}
+.nav-button-container {
+    border:  1px red solid;
+    display:flex;
+    width: 250px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.favorite-button {
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: none;
+    border: none;
+    background-color: #EFEFEF;
+    color: 
+}
+
+.add-recipe-button{
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: none;
+    border: none;
+    background-color: #EFEFEF;
 }
 
 .main-container {

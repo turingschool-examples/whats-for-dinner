@@ -51,7 +51,7 @@ body {
     opacity: 0.9;
     display: flex;
     flex-direction: column;
-}
+}5
 
 /* read top and down so that's why I put h3 after left-section */
 .left-section h3 {
@@ -95,8 +95,9 @@ form {
     height: 30px
 }
 .right-section {
-    margin-top: 60px;
+    margin-top: 110px;
     margin-right: 80px;
+    margin-bottom: 50px;
     margin-left: 130px;
     width: 50%;
     height: 380px; 
@@ -105,7 +106,27 @@ form {
     font-size: 20;
     opacity: 0.9;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* stack div blocks on top of each other */
+}
+
+.clear-button {
+    background-color: #95a5a6;
+    border: none;
+    border-radius: 8px;
+    width: 115px;
+    height: 35px
+}
+
+.clear-button-container {
+    margin-right: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 main {
@@ -116,11 +137,25 @@ main {
 
 .pot-image {
     width: 100px;
-    height: auto;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center
+}
+
+.pot-image-container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .hidden {/*element selected by class */
     display: none!important;
+}
+
+.prompt {
+    margin-top: 150px;
+    text-align: center;
 }
 
 /* Optionally, you can add some styling to the button */

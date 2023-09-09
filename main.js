@@ -9,6 +9,7 @@ var letsCookButton = document.querySelector('.lets-cook')
 
 var potImage = document.querySelector('.pot-image')
 var randomText = document.querySelector('.random-text')
+var clearButton = document.querySelector('.clear-button')
 
 // DATA MODEL 👇
 var sides = [
@@ -62,30 +63,12 @@ var desserts = [
     'Eclairs'
 ]
 
-var meals = [
-'Omelette',
-  'Chicken Alfredo',
-  'Grilled Salmon',
-  'Chocolate Cake',
-  'Caesar Salad',
-  'Margarita Pizza',
-  'California Roll',
-  'Cheeseburger',
-  'Taco Salad',
-  'Spaghetti Carbonara',
-  'Fruit Salad',
-  'Club Sandwich',
-  'Beef Stir-Fry',
-  'Ice Cream Sundae',
-  'Vegetable Curry'
-];
+var meals = [];
 
 //EVENT LISTENERS HERE! 👇 TELLING COMPUTER TO LISTEN TO CLICK:
-sideButton.addEventListener('click', generateRandomDish)
-mainButton.addEventListener('click', generateRandomDish)
-dessertButton.addEventListener('click',generateRandomDish)
-mealButton.addEventListener('click',generateRandomDish)
-letsCookButton.addEventListener('click',generateRandomDish)
+//ANY Form input (e.g radio buttons, text boxes under a form)
+//bc it's a form, there are methods you can apply for inputs to be checked... don't need event listeners typically 
+letsCookButton.addEventListener('click',generateRandomDish, showPrompt)
 // FUNCTIONS AND EVENT HANDLERS GO HERE 👇 (we've provided two to get you started)!
 
 function getRandomIndex(array) {
@@ -93,40 +76,84 @@ function getRandomIndex(array) {
 }
 
 function generateRandomDish(event) {
-    event.preventDefault();
+    //event.target - returns element that had put the event on. e.c lets cook button(element) that click event is being selected on... and radio button that click event is
+    console.log(event.target)
+    // console.log(event) - shows that it's getting the event
+    event.preventDefault(); //QUESTION: usu event.preventDefault is used for any input buttons under a <form>
+    //the event we are preventing is refreshing the page.
+    //every button default event is to refresh page? Can double check and ask instructors
     //if user clicks side button
     var randomSides = sides[getRandomIndex(sides)];
     var randomMains = mains[getRandomIndex(mains)];
     var randomDesserts = desserts[getRandomIndex(desserts)];
-    var randomMeals = meals[getRandomIndex(meals)];
-
+    //one function:
     if (sideButton.checked) {
-        randomText.innerText = `<section id="random-side">
+        randomText.innerHTML = `<section class="prompt" id="random-side">
         <h3>You should make</h3>
         <h1>${randomSides}!</h1>
-        </section>`;
+        </section>`; //innerHTML is when you want to edit the entire HTML element: add child elements to the parent element (always adding child elements)
+        showPrompt(event)
     } else if (mainButton.checked) {
-        randomText.innerHTML = `<section id="random-main">
+        randomText.innerHTML = `<section class="prompt" id="random-main">
         <h3>You should make</h3>
         <h1>${randomMains}!</h1>
-        </section>`;
-    } else if (randomDesserts.checked) {
-        randomText.innerHTML = `<section id="random-dessert">
+        </section>`; //innerText: just changing text within the element itself seen b/t ><
+        showPrompt(event)
+    } else if (dessertButton.checked) {
+        randomText.innerHTML = `<section class="prompt" id="random-dessert">
         <h3>You should make</h3>
         <h1>${randomDesserts}!</h1> 
         </section>`;
-    } else if (randomMeals.checked) {
-        randomText.innerHTML = `<section id="random-meal">
+        showPrompt(event)
+        // potImage.classList.add('hidden');
+        // randomText.classList.remove("hidden");
+    } else if (mealButton.checked) {
+        // var randomMeals = meals[getRandomIndex(meals)];
+        randomText.innerHTML = `<section class="prompt" id="random-meal">
         <h3>You should make</h3>
-        <h1>${randomMeals}!</h1>
+        <h1>${randomMains} with a side of ${randomSides} and ${randomDesserts} for dessert!</h1>
         </section>`;
+        meals.push(randomText.innerHTML)
+        clearButton.classList.toggle('hidden')
+        showPrompt(event)
+        // potImage.classList.add('hidden');
+        // randomText.classList.remove("hidden");
     } else {
-        potImage.classList.remove('hidden');
-        randomText.classList.add("hidden");
+        potImage.classList.toggle('hidden');
+        randomText.classList.toggle("hidden");
     }
-    potImage.classList.add('hidden');
-    randomText.classList.remove("hidden");
  }
+
+
+ // try puttibng things in parameters! Psuedocode that
+// function displayContent() {
+//     randomText.innerHTML = `<section id="random-side">
+//     <h3>You should make</h3>
+//     <h1>${randomSides}!</h1>
+//     </section>`
+// }
+//     randomSides.innerHTML = `<section id="random-side">
+//     <h3>You should make</h3>
+//     <h1>${randomSides}!</h1>
+//     </section>`
+//     //one function:
+//     if (sideButton.checked) {
+//         var randomSides = sides[getRandomIndex(sides)];
+//         displayContent() randomText.innerHTML = `<section id="random-side">
+//         <h3>You should make</h3>
+//         <h1>${randomSides}!</h1>
+//         </section>`; //innerHTML is when you want to edit the entire HTML element: add child elements to the parent element (always adding child elements)
+//         showPrompt(event)
+
+
+ //onefunction:
+ function showPrompt(event) {
+    event.preventDefault()
+    potImage.classList.toggle('hidden');
+    randomText.classList.toggle("hidden");
+    //.toggle - if the class name  is present, it'll remove and if it's not, it'll add
+ }
+
     //create a new section
 
     // HTML insert hear

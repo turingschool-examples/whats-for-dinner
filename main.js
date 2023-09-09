@@ -6,10 +6,29 @@ var radioDishSelection = document.querySelectorAll("radio-buttons")
 //fav button to toggle if favorited or not
 
 // event listeners 
-
-
+favesButton.addEventListener("click", displayFavorites)
+letsCookButton.addEventListener("click", displayRandomRecipe)
+clearButton.addEventListener("click", displayCookPot)
+radioDishSelection.addEventListener("click", selectDishType)
 
 var currentRecipe
+function displayRandomRecipe(){
+//display random recipe
+//add hidden class to cookpot
+}
+
+function selectDishType(){
+// translate the selection to the let's cook button to display random recipe
+// how do radio buttons select and transfer the selection????
+}
+
+function displayFavorites(){
+
+}
+
+function displayCookPot(){
+
+}
 
 
 /*pseudocode map
@@ -34,6 +53,9 @@ iteration 1
 ---> when the dish name appears, the cookpot icon is hidden
 
 CYOA: favorites
+
+where to show the favorites list??? replace the cookpot section?
+
 ---> when a recipe appears it should appear with a “Favorite” button.
 
 ---> When the “Favorite” button is clicked, that recipe should be added to a new list of favorite recipes.

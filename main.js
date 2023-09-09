@@ -1,14 +1,22 @@
 // query selectors
-var 
+var favesButton = document.querySelector(".favorites-button")
+var letsCookButton = document.querySelector(".dish-selecting-button")
+var clearButton = document.querySelector(".clear-button")
+var radioDishSelection = document.querySelectorAll("radio-buttons")
+//fav button to toggle if favorited or not
 
 // event listeners 
+
+
+
+var currentRecipe
+
 
 /*pseudocode map
     > add fav button
     > choose dish button
     > event.target for the cook pot clear button
 
-var current recipe
 
 function to display current one in the dom
 function to favorite the current one in the DM
@@ -17,6 +25,29 @@ connect radio button selection to the let's cook button
 > query selectorall for the radio button to transfer the value, treat the values as an array, actually a nodelist, can convert easily
 
 function attached to event listener for the button to toggle the hidden class for the selected dish
+
+---> remove the entire meal button
+---> remove the add a recipe button
+
+iteration 1 
+---> when a user selects a dish option and clicks the lets cook button, the user sees a random dish from the list of possible dishes for that category
+---> when the dish name appears, the cookpot icon is hidden
+
+CYOA: favorites
+---> when a recipe appears it should appear with a “Favorite” button.
+
+---> When the “Favorite” button is clicked, that recipe should be added to a new list of favorite recipes.
+
+---> Users should be able to view their favorites by clicking a “View Favorites” button that exists somewhere on the page
+
+---> When the “View Favorites” button is clicked, users should be taken to a new page that displays all of their favorite recipes.
+
+---> Users should be able to navigate back to the main page by clicking a button.
+
+---> Users should be able to remove a recipe from their list of favorites, by clicking a button.
+
+*** As you add these new elements to the page, be sure to match the style of existing elements.***
+
  
 favorite function:
 id that matches the one on the DOM

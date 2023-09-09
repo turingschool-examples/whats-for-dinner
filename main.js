@@ -58,11 +58,19 @@ var sides = [
     var letsCookButton = document.querySelector('.select-button');
     var clearButton = document.querySelector('.clear-button');
     var suggestionHeader = document.querySelector('.right-box h2');
-    
-    
+    var addButton = document.querySelector('.header-btn');
+
+
+  
     
     
     // Event Listeners
+    addButton.addEventListener('click', function() {
+        alert('This feature is currently not available. Stay tuned!');
+    });
+
+
+
     option1.addEventListener('click', function() {
         letsCookButton.onclick = function() {
             selectedItems.innerText = getRandomItem(sides) + '! ';

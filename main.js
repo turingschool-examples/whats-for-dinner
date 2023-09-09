@@ -46,7 +46,6 @@ var sides = [
     "Eclairs"]
     
     
-    
     // Elements 
     var selectedItems = document.querySelector('#selectedItem');
     var cookpotSvgContainer = document.querySelector('.overlay-svg');

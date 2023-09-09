@@ -3,15 +3,17 @@ var favesButton = document.querySelector(".favorites-button")
 var letsCookButton = document.querySelector(".dish-selecting-button")
 var clearButton = document.querySelector(".clear-button")
 var radioDishSelection = document.querySelectorAll("radio-buttons")
-//fav button to toggle if favorited or not
+//fav button on recipe to toggle if favorited or not
 
 // event listeners 
 favesButton.addEventListener("click", displayFavorites)
 letsCookButton.addEventListener("click", displayRandomRecipe)
 clearButton.addEventListener("click", displayCookPot)
 radioDishSelection.addEventListener("click", selectDishType)
+// fav button listener to update the property of recipe object
 
 var currentRecipe
+
 function displayRandomRecipe(){
 //display random recipe
 //add hidden class to cookpot
@@ -32,21 +34,28 @@ function displayCookPot(){
 
 
 /*pseudocode map
+---> remove the entire meal button
+---> remove the add a recipe button
+
+---> for current recipe object display
     > add fav button
+
+---> how does the radio talk w the lets cook button
+    connect radio button selection to the let's cook button
+
+    > query selectorall for the radio button to transfer the value, treat the values as an array, actually a nodelist, can convert easily
+
     > choose dish button
+---> adding an event listener to the container for the clear button
     > event.target for the cook pot clear button
 
 
 function to display current one in the dom
 function to favorite the current one in the DM
 
-connect radio button selection to the let's cook button
-> query selectorall for the radio button to transfer the value, treat the values as an array, actually a nodelist, can convert easily
 
 function attached to event listener for the button to toggle the hidden class for the selected dish
 
----> remove the entire meal button
----> remove the add a recipe button
 
 iteration 1 
 ---> when a user selects a dish option and clicks the lets cook button, the user sees a random dish from the list of possible dishes for that category
@@ -69,17 +78,8 @@ where to show the favorites list??? replace the cookpot section?
 ---> Users should be able to remove a recipe from their list of favorites, by clicking a button.
 
 *** As you add these new elements to the page, be sure to match the style of existing elements.***
-
  
 favorite function:
-id that matches the one on the DOM
-and have a new array to push into for faves
-
-favorite radio button
-will rerender based on T/F of fave get the id property from DM to render on DOM 
-
-OR
-
 have a function working on the current recipe
 the current recipe will have a property of favorited
 automatically update the DOM bc DM is updated 

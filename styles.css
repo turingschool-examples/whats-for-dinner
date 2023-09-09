@@ -51,14 +51,6 @@ justify-content: space-between;
     background-color: #EFEFEF;
 }
 
-.add-recipe-button {
-    height: 40px;
-    border-radius: 8px;
-    box-shadow: none;
-    border: none;
-    background-color: #EFEFEF;
-}
-
 .main-container {
     border: 1px red solid;
     display: flex;
@@ -100,7 +92,6 @@ justify-content: space-between;
     background-color: #0fb9b1;
     margin-top: 30px;
 }
-
 
 .dish-container {
     display: flex;

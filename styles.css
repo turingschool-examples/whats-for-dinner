@@ -38,7 +38,7 @@ body {
 }
 
 .left-section {
-    margin-top: 60px;
+    margin-top: 55px;
     margin-right: 15px;
     margin-left: 100px;
     width: 50%;
@@ -51,7 +51,7 @@ body {
     opacity: 0.9;
     display: flex;
     flex-direction: column;
-}5
+}
 
 /* read top and down so that's why I put h3 after left-section */
 .left-section h3 {

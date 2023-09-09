@@ -5,31 +5,47 @@
   </head>
   <body>
     <nav class = "navbar">
-      <h1 class="header">What's for dinner?</h1>
-      <button class="favorites"> FAVORITES </button>
-      <button class="add-recipe"> ADD A RECIPE </button>
+      <h1 class="header">What's for Dinner?</h1>
+      <section class="nav-button-container">
+        <button class="favorite-button"> FAVORITES </button>
+        <button class="add-recipe-button"> ADD A RECIPE </button>
+      </section>
     </nav>
     <main class="main-container">
       <section class="meal-search-box">
-        <h2> What are you looking for?<span> * </span></h2>
-        <input type="radio" class="buttons" id="side" name="dish-buttons" value ="side">
-        <label for="side">Side</label>
-        <input type="radio" class="buttons" id="main-dish" name="dish-buttons" value ="main-dish">
-        <label for="main-dish">Main Dish</label>
-        <input type="radio" class="buttons" id="dessert" name="dish-buttons" value ="dessert">
-        <label for="dessert">Dessert</label>
-        <input type="radio" class="buttons" id="entire-meal" name="dish-buttons" value ="entire-meal">
-        <label for="entire-meal">Entire Meal</label>
-        <button class="dish-selecting-button" id="letsCook">LET'S COOK!</button>
+        <div class="meal-search-wrapper">
+          <h2> What are you looking for?<span class="asterisk"> * </span></h2>
+          <div class="radio-button-wrapper">
+            <input type="radio" class="buttons" id="side" name="dish-buttons" value ="side">
+            <label for="side">Side</label>
+          </div>
+          <div class="radio-button-wrapper">
+            <input type="radio" class="buttons" id="main-dish" name="dish-buttons" value ="main-dish">
+            <label for="main-dish">Main Dish</label>
+          </div>
+          <div class="radio-button-wrapper">
+            <input type="radio" class="buttons" id="dessert" name="dish-buttons" value ="dessert">
+            <label for="dessert">Dessert</label>
+          </div>
+          <div class="radio-button-wrapper">
+            <input type="radio" class="buttons" id="entire-meal" name="dish-buttons" value ="entire-meal">
+            <label for="entire-meal">Entire Meal</label>
+          </div>
+          <button class="dish-selecting-button" id="letsCook">LET'S COOK!</button>
+        </div>
       </section>
       <section class="dish-container">
-        <section class="selected-dish">
-          <h3> You should make: </h3>
+        <section class="selected-dish" hidden>
+          <h3 > You should make: </h3>
           <h4 id="foodName"> Food name! </h4>
           <button id="clear"> CLEAR </button>
+        </section>
+        <section class="pot-image">
+          <img src="/Users/deannastevens/Desktop/mod_1/whats-for-dinner/assets/cookpot.svg" alt="outline image of a pot cooking">
         </section>
       </section>
     </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script src="data.js"></script>
 </html>

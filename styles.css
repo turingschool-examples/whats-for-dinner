@@ -6,5 +6,166 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
-*/
 
+/*  */
+
+.flash-bar { /*creating a class selector for that specific section to set CSS styles onto it*/
+    background-color:#0fb9b1;
+    padding: 10px; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    display: flex; /* Use flexbox to control layout */
+    justify-content: space-between;/* Spread items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.add-recipe-button {
+    background-color: rgba(225, 225, 225, .9);
+    border: none;
+    border-radius: 8px;
+    width: 115px;
+    height: 35px
+}
+body {
+    margin: 0;
+    background-image: url("./assets/burger-friends.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.left-section {
+    margin-top: 55px;
+    margin-right: 15px;
+    margin-left: 100px;
+    width: 50%;
+    height: auto; 
+    /* the element will automatically adjust its height to allow its content to be displayed correctl */
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: rgba(225, 225, 225, .9);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* read top and down so that's why I put h3 after left-section */
+.left-section h3 {
+    font-weight: bold;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-left: 40px;
+    /* align-items: center */
+}
+
+.left-section h3::after {
+    content: "*"; /* display an aserick */
+    /* property is used to insert content into pseudo-element created by ::after. In this case, we are inserting an asterisk (*) character. */
+    color: red; 
+    position: absolute;
+}
+
+/* read top to down so that's why I put  */
+
+form {
+    margin-left: 2em;
+}
+
+.radio-button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.lets-cook {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #0fb9b1;
+    border-radius: 8px; 
+    /* 10% of 200px = 0.1 * 200px = 20px */
+    border: none;
+    width: 175px;
+    height: 30px
+}
+.right-section {
+    margin-top: 110px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+    margin-left: 130px;
+    width: 50%;
+    height: 380px; 
+    background-color: rgba(225, 225, 225, .9);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* stack div blocks on top of each other */
+}
+
+.clear-button {
+    background-color: #95a5a6;
+    border: none;
+    border-radius: 8px;
+    width: 115px;
+    height: 35px
+}
+
+.clear-button-container {
+    margin-right: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+main {
+    display: flex; 
+    justify-content: space-between;/* Spread items horizontally */
+    align-items: center;
+}
+
+.pot-image {
+    width: 100px;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center
+}
+
+.pot-image-container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.hidden {/*element selected by class */
+    display: none!important;
+}
+
+.prompt {
+    margin-top: 150px;
+    text-align: center;
+}
+
+/* Optionally, you can add some styling to the button */
+/* .flash-bar button {
+    padding: 10px 20px; /* Adjust padding for better appearance */
+    /* background-color: #007bff; Example button background color */
+    /* color: white; Text color */
+    /* border: none; Remove border */
+    /* border-radius: 5px; Rounded corners */
+    /* cursor: pointer; Change cursor on hover */
+/* } */ 
+
+/* Add more styles as needed */

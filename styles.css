@@ -25,6 +25,12 @@ body, h1, h2, p, button {
   background-color: #ff6666;
 }
 
+.red-star {
+  color: red;
+  margin-right: 5px;
+  margin-left: 10px   /* space between the star and the text*/
+}
+
 .image-container {
   position: relative;
   width: 100vw;
@@ -67,8 +73,8 @@ body, h1, h2, p, button {
   background-color: rgba(225, 225, 225, .9);
   padding: 15px;
   border-radius: 5px;
-  width: 300px;
-  height: 300px;
+  width: 310px;
+  height: 310px;
 }
 
 .left-box {
@@ -106,8 +112,8 @@ body, h1, h2, p, button {
   align-items: center;
   position: absolute;
   background-color: rgba(225, 225, 225, 0.9);
-  width: 300px;
-  height: 300px;
+  width: 310px;
+  height: 310px;
   padding: 15px;
   border-radius: 5px;
 }

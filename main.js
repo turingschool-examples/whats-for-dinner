@@ -62,6 +62,7 @@ var meals = [];
 
 //EVENT LISTENERS HERE! 👇 TELLING COMPUTER TO LISTEN TO CLICK:
 letsCookButton.addEventListener('click',generateRandomDish, showPrompt)
+clearButton.addEventListener('click',clearPrompt)
 
 // FUNCTIONS AND EVENT HANDLERS GO HERE 👇 
 function getRandomIndex(array) {
@@ -76,7 +77,7 @@ var randomDesserts = desserts[getRandomIndex(desserts)];
 
 function generateRandomSide(event) {
     event.preventDefault();
-    randomText.innerHTML = `<section class="prompt" id="random-side">
+    randomText.innerHTML = `<section class="prompt">
         <h3>You should make</h3>
         <h1>${randomSides}!</h1>
         </section>`; 
@@ -84,7 +85,7 @@ function generateRandomSide(event) {
 
 function generateRandomMain(event) {
     event.preventDefault();
-    randomText.innerHTML = `<section class="prompt" id="random-main">
+    randomText.innerHTML = `<section class="prompt">
         <h3>You should make</h3>
         <h1>${randomMains}!</h1>
         </section>`; 
@@ -92,7 +93,7 @@ function generateRandomMain(event) {
 
 function generateRandomDessert(event) {
     event.preventDefault();
-    randomText.innerHTML = `<section class="prompt" id="random-dessert">
+    randomText.innerHTML = `<section class="prompt">
         <h3>You should make</h3>
         <h1>${randomDesserts}!</h1> 
         </section>`;
@@ -100,7 +101,7 @@ function generateRandomDessert(event) {
 
 function generateRandomMeal(event) {
     event.preventDefault();
-    randomText.innerHTML = `<section class="prompt" id="random-meal">
+    randomText.innerHTML = `<section class="prompt">
         <h3>You should make</h3>
         <h1>${randomMains} with a side of ${randomSides} and ${randomDesserts} for dessert!</h1>
         </section>`;
@@ -111,20 +112,22 @@ function generateRandomDish(event) {
     if (sideButton.checked) {
         generateRandomSide(event)
         showPrompt(event)
+        clearButton.classList.remove('hidden')
     } else if (mainButton.checked) {
         generateRandomMain(event)
         showPrompt(event)
+        clearButton.classList.remove('hidden')
     } else if (dessertButton.checked) {
         generateRandomDessert(event)
         showPrompt(event)
+        clearButton.classList.remove('hidden')
     } else if (mealButton.checked) {
         generateRandomMeal(event) 
         meals.push(randomText.innerHTML)
         showPrompt(event)
-        clearButton.classList.toggle('hidden')
+        clearButton.classList.remove('hidden')
     } else {
-        potImage.classList.toggle('hidden');
-        randomText.classList.toggle("hidden");
+        potImage.classList.remove('hidden');
     }
  }
 
@@ -132,5 +135,12 @@ function generateRandomDish(event) {
     event.preventDefault()
     potImage.classList.toggle('hidden');
     randomText.classList.toggle("hidden");
-
  }
+
+function clearPrompt() {
+    potImage.classList.remove('hidden');
+    randomText.classList.add("hidden");
+    clearButton.classList.add('hidden')
+}
+ //should create a clear button click, to clear words and reset it
+

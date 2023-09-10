@@ -59,6 +59,7 @@ var desserts = [
     'Eclairs'
 ]
 var meals = [];
+array = []
 
 //EVENT LISTENERS HERE! 👇 TELLING COMPUTER TO LISTEN TO CLICK:
 letsCookButton.addEventListener('click',generateRandomDish, showPrompt)
@@ -69,60 +70,43 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-//Variables:
-var randomSides = sides[getRandomIndex(sides)];
-var randomSides = sides[getRandomIndex(sides)];
-var randomMains = mains[getRandomIndex(mains)];
-var randomDesserts = desserts[getRandomIndex(desserts)];
-
-function generateRandomSide(event) {
-    event.preventDefault();
+function getRandomPrompt(event,array) {
+    event.preventDefault
+    var randomDish = ""
+    if (array === sides) {
+        randomDish = sides[getRandomIndex(sides)];
+    } else if (array === mains) {
+        randomDish = mains[getRandomIndex(mains)];
+    } else if (array === desserts) {
+        randomDish = desserts[getRandomIndex(desserts)];
+    } else if (array === meals) {
+        var randomMains = mains[getRandomIndex(mains)];
+        var randomSides = sides[getRandomIndex(sides)];
+        var randomDesserts = desserts[getRandomIndex(desserts)];
+        randomDish = `${randomMains} with a side of ${randomSides} and ${randomDesserts} for dessert!`
+    } 
     randomText.innerHTML = `<section class="prompt">
-        <h3>You should make</h3>
-        <h1>${randomSides}!</h1>
-        </section>`; 
-}
-
-function generateRandomMain(event) {
-    event.preventDefault();
-    randomText.innerHTML = `<section class="prompt">
-        <h3>You should make</h3>
-        <h1>${randomMains}!</h1>
-        </section>`; 
-}
-
-function generateRandomDessert(event) {
-    event.preventDefault();
-    randomText.innerHTML = `<section class="prompt">
-        <h3>You should make</h3>
-        <h1>${randomDesserts}!</h1> 
-        </section>`;
-}
-
-function generateRandomMeal(event) {
-    event.preventDefault();
-    randomText.innerHTML = `<section class="prompt">
-        <h3>You should make</h3>
-        <h1>${randomMains} with a side of ${randomSides} and ${randomDesserts} for dessert!</h1>
-        </section>`;
+    <h3>You should make</h3>
+    <h1>${randomDish}!</h1>
+    </section>`; 
 }
     
 function generateRandomDish(event) {
     event.preventDefault(); 
     if (sideButton.checked) {
-        generateRandomSide(event)
+        getRandomPrompt(event,sides)
         showPrompt(event)
         clearButton.classList.remove('hidden')
     } else if (mainButton.checked) {
-        generateRandomMain(event)
+        getRandomPrompt(event,mains)
         showPrompt(event)
         clearButton.classList.remove('hidden')
     } else if (dessertButton.checked) {
-        generateRandomDessert(event)
+        getRandomPrompt(event,desserts)
         showPrompt(event)
         clearButton.classList.remove('hidden')
     } else if (mealButton.checked) {
-        generateRandomMeal(event) 
+        getRandomPrompt(event,meals)
         meals.push(randomText.innerHTML)
         showPrompt(event)
         clearButton.classList.remove('hidden')

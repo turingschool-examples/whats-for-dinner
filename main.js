@@ -12,11 +12,33 @@ clearButton.addEventListener("click", displayCookPot)
 radioDishSelection.addEventListener("click", selectDishType)
 // fav button listener to update the property of recipe object
 
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  }
+
 var currentRecipe
+// define the properties of the object
+// current recipe object needs to have : unique id and id for favorite T/F
+// reassigned thru function 
+
+function getRandomRecipe(){
+    // var working on getRandomIndex
+    // how to select between the three arrays?
+    // part of the event listener of 
+}
+
+function showElement(elementToDisplay) {
+    elementToDisplay.classList.remove("hidden")
+  }
+  
+  function hideElement(elementToHide) {
+    elementToHide.classList.add("hidden")
+  }
 
 function displayRandomRecipe(){
 //display random recipe
 //add hidden class to cookpot
+//use hideElement on cookpot
 }
 
 function selectDishType(){
@@ -25,7 +47,9 @@ function selectDishType(){
 }
 
 function displayFavorites(){
-
+// define the html as an empty string
+// how to find the recipes that are favorited???
+// use innerHTML to insert html block to render
 }
 
 function displayCookPot(){
@@ -34,8 +58,8 @@ function displayCookPot(){
 
 
 /*pseudocode map
----> remove the entire meal button
----> remove the add a recipe button
+
+--> array data.js file exporting to js file and html?
 
 ---> for current recipe object display
     > add fav button
@@ -83,11 +107,6 @@ favorite function:
 have a function working on the current recipe
 the current recipe will have a property of favorited
 automatically update the DOM bc DM is updated 
-
-
-
-
-
 
 
 */

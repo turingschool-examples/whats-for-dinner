@@ -22,19 +22,46 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-button {
-    background-color: #0fb9b1;
-    border: none;
-    border-radius: 3px;
-    padding: 8px 40px;
-    font-size: 16px;
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6%;
+}
+
+span {
+    color: #ee5253;
 }
 
 section {
-    display: inline-block;
-    padding-top: 40px;
-    padding-right: 100px;
-    padding-bottom: 45px;
-    padding-left: 40px;
+    padding-top: 3%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    padding-left: 2%;
     background-color: rgba(225, 225, 225, .9);
+    font-size: 150%;
+}
+
+input {
+    width: 1.15em;
+    height: 1.15em;
+}
+
+button {
+    background-color: #0fb9b1;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 60px;
+    font-size: 90%;
+}
+
+div {
+    background-color: rgba(225, 225, 225, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 9%;
+}
+
+#cooking-pot {
+    width: 50%;
 }

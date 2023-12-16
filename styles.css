@@ -5,6 +5,36 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
+ */
 
-*/
+h2 {
+    color: #000;
+    background-color: #0fb9b1;
+    padding: 15px 10px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
 
+body {
+    background-image: url('https://github.com/corysanders3/whats-for-dinner/blob/main/assets/burger-friends.jpg?raw=true');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background-color: #0fb9b1;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 40px;
+    font-size: 16px;
+}
+
+section {
+    display: inline-block;
+    padding-top: 40px;
+    padding-right: 100px;
+    padding-bottom: 45px;
+    padding-left: 40px;
+    background-color: rgba(225, 225, 225, .9);
+}

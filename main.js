@@ -50,12 +50,14 @@ var desserts = [
     'Eclairs',
 ];
 
+var randomDish = '';
 
 
 //query selectors
 var cookButton = document.querySelector('button');
 var showDish = document.querySelector('div');
 var radioButtons = document.getElementsByName('meal')
+// var cookingPot = document.querySelector('#cooking-pot')
 
 //event listeners
 cookButton.addEventListener('click', checkRadioButtons)
@@ -83,8 +85,24 @@ function checkRadioButtons() {
 
 function getRandomDish(dishes) {
     var randomIndex = Math.floor(Math.random() * dishes.length)
-    var randomDish = dishes[randomIndex]
+    randomDish = dishes[randomIndex]
     console.log(randomDish)
+    showRandomDish()
+};
+
+//we now have a random dish being generated,
+//we have to display that dish on the screen,
+//and remove the cooking pot image.
+//top 50%, left 50%, and transform: translate (-50%, -50%)
+//background color - last color to 0)
+//use this to dynamically change the box size
+
+function showRandomDish() {
+    // cookingPot.classList.add('hidden')
+    showDish.innerHTML = `
+    <p><em>You should make:</em></p>
+    <h1>${randomDish}!</h1>
+    `
 };
 
 

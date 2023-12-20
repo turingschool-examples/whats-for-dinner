@@ -54,7 +54,7 @@ var randomDish = '';
 
 
 //query selectors
-var cookButton = document.querySelector('button');
+var cookButton = document.querySelector('.lets-cook');
 var showDish = document.querySelector('div');
 var radioButtons = document.getElementsByName('meal')
 // var cookingPot = document.querySelector('#cooking-pot')

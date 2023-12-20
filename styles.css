@@ -7,13 +7,22 @@ grey - #95a5a6;
 red - #ee5253
  */
 
-h2 {
-    color: #000;
+header {
     background-color: #0fb9b1;
-    padding: 15px 10px;
     margin-top: -10px;
     margin-left: -10px;
     margin-right: -10px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-recipe {
+    background-color: fff;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
 }
 
 body {
@@ -47,7 +56,7 @@ input {
     height: 1.15em;
 }
 
-button {
+.lets-cook {
     background-color: #0fb9b1;
     border: none;
     border-radius: 5px;

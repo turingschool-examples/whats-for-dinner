@@ -7,4 +7,90 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-
+body {
+    font-family: 'roboto', sans-serif ;
+}
+.title {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.main-page {
+    display: flex;
+}
+img {
+    width: 118rem;
+    height: 71rem;
+    object-fit: fill;
+}
+nav {
+    background-color: #0fb9b1;
+    height: 3rem;
+    display: flex;
+    justify-content: end;
+}
+button {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.title-column {
+    display: flex;
+    flex: 50%;
+    display: flex;
+}
+.title-column:nth-child(2) {
+    display: flex;
+    flex: 50%;
+    justify-content: end;
+}
+.option-menu {
+    height: 30rem;
+    /* border: black;
+    border-style: solid; */
+    margin: 10px;
+    z-index: 1;
+    position: absolute;
+    bottom: 13rem;
+    WIDTH: 116rem;
+    display:flex;
+}
+.menu {
+    flex: 50%;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    background-color: rgba(225, 225, 225, .9);
+    padding-top: 4rem
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    font-style: italic;
+}
+.selection p {
+    font-size: 2rem;
+}
+li {
+    list-style-type: none;
+    margin-top: 2rem;
+}
+.lets-cook{
+    background-color: #0fb9b1;
+}
+.selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectContainer > img {
+    width: 10rem;
+    height: 10rem;
+}
+.hidden {
+    display: none;
+}
+.button-container {
+    display: flex;
+}

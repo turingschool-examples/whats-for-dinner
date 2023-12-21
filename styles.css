@@ -34,7 +34,7 @@ body {
 main {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 6%;
+    margin-top: 4%;
 }
 
 span {
@@ -42,13 +42,12 @@ span {
 }
 
 section {
-    padding-top: 3%;
-    padding-right: 10%;
-    padding-bottom: 5%;
     padding-left: 2%;
     background-color: rgba(225, 225, 225, .9);
     font-size: 150%;
     margin-right: 5%;
+    width: 525px;
+    height: 400px;
 }
 
 input {
@@ -70,9 +69,10 @@ div {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0% 9%;
+    width: 550px;
+    height: 400px;
 }
 
 #cooking-pot {
-    width: 50%;
+    width: 25%;
 }

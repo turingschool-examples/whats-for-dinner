@@ -7,4 +7,81 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+body {
+  background-image: url(assets/burger-friends.jpg);
+  background-size: 100%;
+}
 
+h1 {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  background-color: #0fb9b1;
+  width: auto;
+  height: 70px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  text-indent: 20px;
+}
+button {
+  top: 1.8%;
+  left: 87%;
+  position: absolute;
+  height: 45px;
+  width: 150px;
+  font-size: 17px;
+  border: 0px;
+  border-radius: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.box1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 500px;
+  height: 400px;
+  text-indent: 40px;
+  margin-top: 30px;
+}
+.box2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 500px;
+  height: 400px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.main-page-boxes {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+h2 {
+  font-size: 30;
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+input[type="submit" i] {
+  background: #0fb9b1;
+  border: 0px;
+  border-radius: 5px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 17px;
+}
+.Food-Selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 340px;
+}
+.cooking-pot {
+  width: 125px;
+}

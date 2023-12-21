@@ -1,10 +1,44 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    
+    <header>
+      <h1>What's for Dinner?</h1>
+      <button>ADD A RECIPE</button>
+    </header>
+    <div class="main-page-boxes">
+      <div class="box1">
+        <form class = "Food-Selection">
+          <h2>What are you looking for?</h2>
+          <label class="radio-button">
+            <input type="radio" name="food" value="Side" /> Side
+          </label>
+          <label class="radio-button">
+            <input type="radio" name="food" value="Main-Dish" /> Main Dish
+          </label>
+          <label class="radio-button">
+            <input type="radio" name="food" value="Dessert" /> Dessert
+          </label>
+          <label class="radio-button">
+            <input type="radio" name="food" value="Entire-Meal" /> Entire
+            Meal
+          </label>
+          <label class = "cook-button">
+            <input type="submit" value="Let's Cook!" />
+          </label>
+        </form>
+      </div>
+      <div class="box2">
+      <label class = "cooking-pot">
+       <img src = "assets/cookpot.svg" alt = "Cooking pot!">
+      </label>
+      </div>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

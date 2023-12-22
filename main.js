@@ -57,7 +57,6 @@ var randomDish = '';
 var cookButton = document.querySelector('.lets-cook');
 var showDish = document.querySelector('div');
 var radioButtons = document.getElementsByName('meal')
-// var cookingPot = document.querySelector('#cooking-pot')
 
 //event listeners
 cookButton.addEventListener('click', checkRadioButtons)
@@ -90,18 +89,10 @@ function getRandomDish(dishes) {
     showRandomDish()
 };
 
-//we now have a random dish being generated,
-//we have to display that dish on the screen,
-//and remove the cooking pot image.
-//top 50%, left 50%, and transform: translate (-50%, -50%)
-//background color - last color to 0)
-//use this to dynamically change the box size
-
 function showRandomDish() {
-    // cookingPot.classList.add('hidden')
     showDish.innerHTML = `
     <p><em>You should make:</em></p>
-    <h1>${randomDish}!</h1>
+    <h2>${randomDish}!</h2>
     `
 };
 

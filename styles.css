@@ -18,6 +18,10 @@ header {
     align-items: center;
 }
 
+h1 {
+    font-size: 25px;
+}
+
 .add-recipe {
     background-color: fff;
     border-radius: 5px;
@@ -35,19 +39,23 @@ main {
     display: flex;
     justify-content: space-evenly;
     margin-top: 4%;
+    height: 60%;
 }
 
 span {
     color: #ee5253;
+    vertical-align: super;
+    font-size: smaller;
 }
 
 section {
     padding-left: 2%;
     background-color: rgba(225, 225, 225, .9);
-    font-size: 150%;
+    font-size: 140%;
     margin-right: 5%;
-    width: 525px;
-    height: 400px;
+    display: inline-block;
+    width: 35%;
+    overflow: auto;
 }
 
 input {
@@ -58,9 +66,9 @@ input {
 .lets-cook {
     background-color: #0fb9b1;
     border: none;
-    border-radius: 5px;
-    padding: 8px 60px;
-    font-size: 90%;
+    border-radius: 5%;
+    padding: 2% 12%;
+    font-size: 80%;
 }
 
 div {
@@ -69,10 +77,15 @@ div {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 550px;
-    height: 400px;
+    width: 37%;
+    overflow: auto;
 }
 
 #cooking-pot {
     width: 25%;
+}
+
+h3 {
+    font-size: 175%;
+    margin-top: -10px;
 }

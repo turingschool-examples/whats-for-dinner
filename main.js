@@ -92,7 +92,7 @@ function getRandomDish(dishes) {
 function showRandomDish() {
     showDish.innerHTML = `
     <p><em>You should make:</em></p>
-    <h2>${randomDish}!</h2>
+    <h3>${randomDish}!</h3>
     `
 };
 

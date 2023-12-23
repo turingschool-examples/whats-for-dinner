@@ -36,6 +36,7 @@ button {
     padding: 5px;
     margin: 10px;
     border-radius: 8px;
+    border-style: none;
 }
 .title-column {
     display: flex;
@@ -55,7 +56,18 @@ button {
     flex-direction: row;
     bottom: 35rem;
     height: auto;
+    -webkit-animation: fadein 1s linear forwards;
+    animation: fadein 1s linear forwards;
 }
+.runAnimation{
+    opacity: 0;
+    -webkit-animation: fadein 1s linear forwards;
+    animation: fadein 1s linear forwards;
+}
+@-webkit-keyframes fadein {
+    0%,100% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 .menu {
     flex: 50%;
     margin-left: 7rem;
@@ -66,9 +78,11 @@ h2 {
     text-align: center;
 }
 h3 {
+    opacity: 0;
     font-style: italic;
 }
 .selection p {
+    opacity: 0;
     font-size: 2rem;
 }
 li {
@@ -105,4 +119,12 @@ li {
     width: 100vw;
     height: 100vh;
     display: inherit;
+}
+button:hover {
+    background-color: darkgray;  
+    cursor: pointer;
+}
+input:hover {
+    mix-blend-mode: color-dodge;
+    cursor: pointer;
 }

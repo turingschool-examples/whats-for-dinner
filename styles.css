@@ -82,6 +82,13 @@ li {
 .selection {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.selectContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 .selectContainer > img {
@@ -93,4 +100,8 @@ li {
 }
 .button-container {
     display: flex;
+    position: absolute;
+    bottom: 1rem;
+    width: 33rem;
+    justify-content: flex-end;
 }

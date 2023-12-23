@@ -49,19 +49,41 @@ var desserts = [
     'Eclairs'
 ]
 
+var selectionType = buildArray(sides,mains,desserts)
+
+function buildArray(sideArr,mainArr,dessertArr) {
+    var types = {
+        sides: sideArr,
+        mains: mainArr,
+        desserts: dessertArr
+    }
+    return types
+}
+
 reset.addEventListener('click',resetSelection)
 for(var i=0; i < radioButtons.length; i++) {
     radioButtons[i].addEventListener('click',radioSelect)
 }
 
 function radioSelect(event) {
+    selType = event.target.id
     potIcon.classList.add('hidden')
     selectHdr.classList.remove('hidden')
     selectTxt.classList.remove('hidden')
+
+    displayRandomSelection(selType)
+}
+
+function displayRandomSelection(arrayName) {
+    var array = selectionType[arrayName]
+    var selection = array[randomIntGen(array.length)]
+    selectTxt.innerText = selection
+   console.log(array[randomIntGen(array.length)])
 }
 
 function randomIntGen(max) {
-    console.log(Math.floor(Math.random() * max))
+    var randomInt = Math.floor(Math.random() * max)
+    return randomInt
 }
 
 function resetSelection() {

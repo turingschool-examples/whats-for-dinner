@@ -79,6 +79,7 @@ div {
     flex-direction: column;
     width: 37%;
     overflow: auto;
+    text-align: center;
 }
 
 #cooking-pot {
@@ -89,3 +90,9 @@ h3 {
     font-size: 175%;
     margin-top: -10px;
 }
+
+h4 {
+    font-size: 125%;
+    margin: 0% 10%;
+}
+

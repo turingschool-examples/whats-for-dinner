@@ -1,10 +1,102 @@
-/* font-family: 'Roboto', sans-serif;
+header {
+    background-color: #0fb9b1;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
+h1 {
+    font-size: 25px;
+}
 
-*/
+.add-recipe {
+    background-color: fff;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+}
+
+body {
+    background-image: url('https://github.com/corysanders3/whats-for-dinner/blob/main/assets/burger-friends.jpg?raw=true');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4%;
+    height: 60%;
+}
+
+span {
+    color: #ee5253;
+    vertical-align: super;
+    font-size: smaller;
+}
+
+section {
+    padding-left: 2%;
+    padding-top: 1%;
+    background-color: rgba(225, 225, 225, .9);
+    font-size: 130%;
+    margin-right: 5%;
+    display: inline-block;
+    width: 35%;
+    overflow: auto;
+}
+
+input {
+    width: 1.15em;
+    height: 1.15em;
+}
+
+.lets-cook {
+    background-color: #0fb9b1;
+    border: none;
+    border-radius: 5%;
+    padding: 2% 12%;
+    font-size: 80%;
+}
+
+div {
+    background-color: rgba(225, 225, 225, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 37%;
+    overflow: auto;
+    text-align: center;
+    position: relative;
+}
+
+#cooking-pot {
+    width: 25%;
+}
+
+h3 {
+    font-size: 175%;
+    margin-top: -10px;
+}
+
+h4 {
+    font-size: 125%;
+    margin: 0% 10%;
+}
+
+.clear {
+    border: none;
+    border-radius: 5%;
+    background-color: #95a5a6;
+    color: fff;
+    padding: 1.5% 2%;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
 

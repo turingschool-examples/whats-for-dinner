@@ -1,5 +1,3 @@
-//data model
-
 var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
@@ -51,26 +49,25 @@ var desserts = [
 ];
 
 var randomDish = '';
+
 var entireMeal = {
     side: '',
     mainDish: '',
     dessert: ''
-}
+};
 
-//query selectors
 var cookButton = document.querySelector('.lets-cook');
 var showDish = document.querySelector('div');
 var radioButtons = document.getElementsByName('meal');
 
-//event listeners
 cookButton.addEventListener('click', checkRadioButtons);
 
-//function
 function checkRadioButtons() {
     for(var i = 0; i < radioButtons.length; i++){
         if(radioButtons[i].checked) {
             var selectedMeal = radioButtons[i].value
         }
+        radioButtons[i].checked = false
     }
     if(selectedMeal === 'Side'){
         getRandomDish(sides)
@@ -97,7 +94,9 @@ function showRandomDish() {
     showDish.innerHTML = `
     <p><em>You should make:</em></p>
     <h3>${randomDish}!</h3>
+    <button class='clear'>CLEAR</button>
     `
+    document.querySelector('.clear').addEventListener('click', showCookingPot)
 };
 
 function makeEntireMeal(sides, mains, desserts) {
@@ -114,14 +113,14 @@ function showEntireMeal() {
     showDish.innerHTML = `
     <p><em>You should make:</em></p>
     <h4>${entireMeal.mainDish} with a side of ${entireMeal.side} and ${entireMeal.dessert} for dessert!</h4>
+    <button class='clear'>CLEAR</button>
     `
+    document.querySelector('.clear').addEventListener('click', showCookingPot)
 };
 
-
-
-
-
-
-
-
+function showCookingPot() {
+    showDish.innerHTML = `
+    <img src="https://raw.githubusercontent.com/corysanders3/whats-for-dinner/f89a7ed704b3effccc5f910a5575066837a03bfd/assets/cookpot.svg" alt="cooking pot" id="cooking-pot">
+    `
+};
 

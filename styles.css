@@ -99,9 +99,10 @@ li {
 }
 .selectContainer {
     display: flex;
-    margin-top: 80px;
+    margin-top: 20px;
     flex-direction: column;
     align-items: center;
+    padding: 25px;
 }
 .selectContainer > img {
     width: 10rem;
@@ -127,4 +128,42 @@ button:hover {
 input:hover {
     mix-blend-mode: color-dodge;
     cursor: pointer;
+}
+.modal-add-recipe {
+    background-color: #ecf2f882;
+    position: absolute;
+    z-index: 2;
+    height: 93%;
+    width: 100%;
+    bottom: 0rem;
+    display: flex;    justify-content: center;
+    align-items: center
+}
+.modal-inner-container {
+    background-color: rgba(225, 225, 225, .9);
+    width: 32%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border: black;
+    border-style: solid;
+}
+.input-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.add-recipe{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+h1 {
+    background-color: #0fb9b1;
+    position: absolute;
+    width: 45rem;
+    height: 3rem;
+    bottom: 29rem;
 }

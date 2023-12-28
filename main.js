@@ -5,6 +5,10 @@ var radioButtons = document.getElementsByName('userSelect')
 var sidesRad = document.querySelector('#sides')
 var reset = document.querySelector('.reset')
 var letsCook = document.querySelector('.lets-cook')
+var addRecipe = document.querySelector('.add-recipe')
+var recipeModal = document.querySelector('.modal-add-recipe')
+var newRecipeAdd = document.querySelector('.add-recipe-button')
+var newRecipeCancel = document.querySelector('.cancel-recipe-button')
 var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
@@ -62,10 +66,16 @@ function buildArray(sideArr,mainArr,dessertArr) {
     return types
 }
 
+newRecipeCancel.addEventListener('click',addNewRecipe)
+addRecipe.addEventListener('click',addNewRecipe)
 letsCook.addEventListener('click',cookSelection)
 reset.addEventListener('click',resetSelection)
 for(var i=0; i < radioButtons.length; i++) {
     radioButtons[i].addEventListener('click',radioSelect)
+}
+
+function addNewRecipe() {
+    recipeModal.classList.toggle('hidden')
 }
 
 function cookSelection() {
@@ -73,6 +83,7 @@ function cookSelection() {
     if(selectHdr.classList.contains('hidden')=== true && selectTxt.classList.contains('hidden')=== true) {
         selectHdr.classList.replace('hidden','runAnimation')
         selectTxt.classList.replace('hidden','runAnimation')
+        reset.classList.remove('hidden')
     }
 }
 
@@ -81,7 +92,18 @@ function radioSelect(event) {
     potIcon.classList.replace('hidden','runAnimation')
     selectHdr.classList.add('hidden')
     selectTxt.classList.add('hidden')
+    if(selType === "entireMeal") {
+        displayEntireMeal(selType)
+    } else {
     displayRandomSelection(selType)
+    }
+}
+
+function displayEntireMeal() {
+    var sideSelection = sides[randomIntGen(sides.length)]
+    var mainSelection = mains[randomIntGen(mains.length)]
+    var dessertSelection = desserts[randomIntGen(desserts.length)]
+    selectTxt.innerText = `${mainSelection} with a side of ${sideSelection} and ${dessertSelection} for dessert!`
 }
 
 function displayRandomSelection(arrayName) {
@@ -99,5 +121,6 @@ function resetSelection() {
     potIcon.classList.remove('hidden')
     selectHdr.classList.add('hidden')
     selectTxt.classList.add('hidden')
+    reset.classList.add('hidden')
     sidesRad.checked = true
 }

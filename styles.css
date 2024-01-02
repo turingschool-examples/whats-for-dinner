@@ -59,14 +59,14 @@ h1 {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5em;
-    margin-right: 10em;
-    margin-left: 10em;
+    margin-top: 3em;
+    margin-right: 9em;
+    margin-left: 9em;
     margin-bottom: 15em;
 }
 
 .transparent-box {
-    height: 34em;
+    height: 25em;
     width: 42.5%;
     background-color: rgba(225, 225, 225, .9);
 }
@@ -109,11 +109,15 @@ span {
     margin: 0px 10px 0px 10px
 }
 
+.cook-button {
+    margin-left: 2em;
+}
+
 .lets-cook-button {
     font-size: 16px;
     background-color: #0fb9b1;
     height: 44px;
-    width: 220px;
+    width: 200px;
     border-radius: 5px;
     border-style: hidden;
 }

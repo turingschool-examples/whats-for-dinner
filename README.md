@@ -30,22 +30,22 @@ ______________________________________________________
 # What's for Dinner? 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+[//]: <> Created basic webpage from style sheet. Added functionality to radio buttons and let's cook button which shows a title of meals to make.
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+[//]: <> open index.html from the repo.
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+[//]: <> Unsure how to do this at the moment.
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+[//]: <> This took me around 20-25 hours to make. I am only a few weeks into Mod 1. Most time was spent custom creating circles in CSS before learning o radio styles.
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+[//]: <> Only I was working on this project. https://github.com/AsherSpurr
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+[//]: <> The learning goals of this project from my understanding was to understand and implament HTML, CSS, and JS all together.
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+[//]: <> Some wins from this project was before making the radio inputs I custom made outer and inner circles to act as buttons, where in a function I changed the coloring so it would appear like a highlighted radio button. I also linked the background image successfully. There were a lot of challenges to overcome. Mainly was my basic understanding of how these 3 interfaces interacted. Along with creating more complex functions and understanding the order or operations and combining different functions with each other. CSS styling continues to baffle me as well. I got over most of these with the dev tools or by asking chat GPT "I am trying to do XYZ, here is my code, i'm getting this error, could you explain why?"

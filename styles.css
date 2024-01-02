@@ -1,10 +1,204 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
+ body {
+    font-family: 'roboto', sans-serif ;
+}
+nav {
+    background-color: #0fb9b1;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.title {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.title-column {
+    display: flex;
+    flex: 50%;
+}
+button {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+    border-style: none;
+}
+img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    position: absolute;
+}
+.overlay {
+    background-color: rgba(225, 225, 225, .9);
+    display: flex;
+    flex-direction: column;
+ 
+}
+.landing-page {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+h2 {
+    text-align: center;
+}
+.input-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+label {
+    margin-right: 3px;
+    margin-left: 10px;
+}
+.loginError {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+p {
+    margin: 0px;
+    text-align: center;
+    padding: 5px;
+}
+h3 {
+    text-align: center;
+}
+.background {
+    position: absolute;
+}
+.runAnimation {
+    animation-name: fadeIn;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+}
+.runAnimationOut {
+    animation-name: fadeOut;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+}
+.animateUp {
+    animation-name: pullUp;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+}
+.animateDown {
+    animation-name: dropDown;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+}
+@keyframes dropDown {
+    from {opacity: 0; top: 8;}
+    to {opacity: 1; top: 56;}
+  }
+@keyframes pullUp {
+    from {opacity: 1; top: 56;}
+    to {opacity: 0; top: 8; display: none;}
+  }
+@keyframes fadeOut {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0; display: none;}
+  }
+.option-menu {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.stockpot-container > img {
+    width: 10rem;
+    height: 10rem;
+}
+.menu {
+    display: flex;
+    width: 30rem;
+    height: 25rem;
+    z-index: 1;
+    margin: 12rem;
+    flex-direction: column;
+}
+.selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+.stockpot-container {
+    width: 10rem;
+}
+.main-container {
+    display: flex;
+}
+button:hover {
+    background-color: darkgray;  
+    cursor: pointer;
+}
+.radioButton:hover {
+    mix-blend-mode: color-dodge;
+    cursor: pointer;
+}
+li {
+    list-style-type: none;
+    margin-top: 2rem;
+}
+.modal {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+}
+.modal-favorites{
+    height: 17rem;
+}
+.modal-inner-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+.modal-add-recipe > .modal-inner-container {
+    justify-content: space-evenly;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-inner-container > div {
+    border: black;
+    border-style: solid;
+    border-width: thin;
+    width: 19rem;
+    height: 16rem;
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    overflow: auto;
+}
+.add-recipe-input {
+    margin: 1px;
+}
+label {
+    align-self: center;
+}
+.hidden {
+    display: none;
+}
+.table > p:hover {
+    background-color: darkgray; 
+}
 

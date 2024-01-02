@@ -3,8 +3,108 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
+  <nav>
+    <div class="title-column">
+      <div class="title">What's for Dinner?</div> 
+    </div>
+    <div class="title-column"> 
+      <button class="show-favorites hidden">Show favorites</button>
+      <button class="add-recipe hidden">Add an item</button>
+    </div>  
+  </nav>
   <body>
-    
-  </body>
+    <div class="main-content">
+        <div class="landing-page overlay">
+            <h2>Complete the fields below for a personalized experience</h2>
+              <section class="input-section">
+                <label for="first-name">First Name</label>
+                <input class="name-field first-name"/>
+                <label for="last-name">Last Name</label>
+                <input class="name-field last-name"/>
+                <button class="userLogin">Enter</button>
+              </section>
+            <error class="loginError hidden">
+              <p>Whoops! Looks like you forgot something...</p>
+              <p>Would you like to 
+                <button class="guestLogin">Login as guest</button>?
+                <sup>*note that some functions will not be available*</sup>
+              </p>
+            </error>
+        </div>
+        <div class="main-page background">
+          <img src="/assets/burger-friends.jpg"></img>
+          <div class="main-container">
+            <div class="option-menu hidden">
+              <section class="menu options overlay">
+                <h2>What are you looking for?</h2>
+                <section class="radioList">
+                  <ul>  
+                    <li>
+                      <input type="radio" id="sides" name="userSelect" value="side" class="radioButton"/>
+                      <label for="sideChoice">Side</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="mains" name="userSelect" value="mainDish" class="radioButton"/>
+                      <label for="mainDishChoice">Main Dish</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="desserts" name="userSelect" value="dessert" class="radioButton"/>
+                      <label for="dessertChoice">Dessert</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="entireMeal" name="userSelect" value="entireMeal" class="radioButton"/>
+                      <label for="entireMealChoice">Entire Meal</label>
+                    </li>
+                    <li>
+                      <button class="lets-cook">LET'S COOK!</button>
+                    </li>
+                  </ul>
+                </section>
+              </section>
+              <section class="menu selection overlay">
+                <img class="stockpot-container" src="/assets/cookpot.svg"></img>
+                <section class="selectContainer hidden">
+                  <h3 class="selectHeader">You should make:</h3>
+                  <p class="selectText">Black Forest Cake!</p>
+                </section>
+                <section class="button-container hidden">
+                  <button class="reset">Clear</button>
+                  <button class="favorite">Favorite</button>
+                </section>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-add-recipe modal overlay hidden">
+          <div class="modal-inner-container">
+            <section class="input-container">
+              <label>Add a dish (name)</label>
+              <input class="add-recipe-input name"></input>
+              <select class="add-recipe-input type">Recipe Type
+                <option value="sides">Side Dish</option>
+                <option value="mains">Main Dish</option>
+                <option value="desserts">Dessert</option>
+              </select>
+            </section>
+            <section class="modal-button-container">
+              <button class="add-recipe-button">Add</button>
+              <button class="cancel-recipe-button">Cancel</button>
+            </section> 
+        </div>
+      </div>
+      <div class="modal-favorites modal overlay hidden">
+        <div class="modal-inner-container">
+            <h1>Sides</h1>
+            <div class="sides table"></div>
+            <h1>Mains</h1>
+            <div class="mains table"></div>
+            <h1>Desserts</h1>
+            <div class="desserts table"></div>
+            <h1>Meals</h1>
+            <div class="meals table"></div>
+        </div>
+      </div>
+    </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

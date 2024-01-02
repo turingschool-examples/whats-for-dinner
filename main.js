@@ -22,6 +22,9 @@ var lastName = document.querySelector('.last-name')
 var guestLoginButton = document.querySelector('.guestLogin')
 var recipeName = document.querySelector('.name')
 var recipeType = document.querySelector('.type')
+var addFavorite = document.querySelector('.favorite')
+var showFavorites = document.querySelector(".show-favorites")
+var favoriteItems = document.querySelector('.modal-favorites')
 var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
@@ -67,6 +70,12 @@ var desserts = [
     'Croissants',
     'Eclairs'
 ]
+
+var favSides = []
+var favMains = []
+var favDesserts = []
+var favMeals = []
+
 var selectionType = buildArray(sides,mains,desserts)
 letsCook.disabled = true
 
@@ -79,16 +88,40 @@ function buildArray(sideArr,mainArr,dessertArr) {
     return types
 }
 
+window.addEventListener('load', pageLoad)
 loginButton.addEventListener('click', userLogin)
 guestLoginButton.addEventListener('click', guestLogin)
 newRecipeCancel.addEventListener('click',addNewRecipe)
 addRecipe.addEventListener('click',addNewRecipe)
+showFavorites.addEventListener('click', showFavoriteItems)
 newRecipeAdd.addEventListener('click',saveRecipe)
 newRecipeCancel.addEventListener('click',cancelRecipe)
 letsCook.addEventListener('click',cookSelection)
 reset.addEventListener('click',resetSelection)
+addFavorite.addEventListener('click',addToFavorites)
 for(var i=0; i < radioButtons.length; i++) {
     radioButtons[i].addEventListener('click',radioSelect)
+}
+
+function pageLoad() {
+    if(localStorage.length > 1) {
+        firstName.value = localStorage.firstname
+        lastName.value = localStorage.lastname
+        favSides = localStorage.favsides.split(',')
+        favMains = localStorage.favmains.split(',')
+        favDesserts = localStorage.favdesserts.split(',')
+        favMeals = localStorage.favmeals.split(',')
+    } else {
+        firstName.value = ""
+        lastName.value = ""
+        localStorage.favsides = favSides
+        localStorage.favmains = favMains
+        localStorage.favdesserts = favDesserts
+        localStorage.favmeals = favMeals
+        localStorage.sides = sides
+        localStorage.mains = mains
+        localStorage.desserts = desserts
+    }
 }
 
 function guestLogin() {
@@ -104,7 +137,10 @@ function userLogin() {
         optionMenu.classList.toggle('hidden')
         optionMenu.classList.add('runAnimation')
         addRecipe.classList.toggle('hidden')
+        showFavorites.classList.toggle('hidden')
         navTitle.innerText = `Hi ${firstName.value}! Let's get cookin'!`
+        localStorage.setItem('firstname',`${firstName.value}`)
+        localStorage.setItem('lastname',`${lastName.value}`)
     } else {
         errorMessage.classList.toggle('hidden')
     }
@@ -117,21 +153,27 @@ function addNewRecipe() {
     } else {
         recipeModal.classList.replace('animateUp','animateDown')
     }
+    document.querySelector('.input-container > label').innerText = "New item name"
 }
 
 function saveRecipe() {
-    
-    if(recipeType.value === "sides") {
-        sides.push(recipeName.value)
-    } else if(recipeType.value === "mains") {
-        mains.push(recipeName.value)
+    if(recipeName.value.length > 0) {
+        if(recipeType.value === "sides") {
+            sides.push(recipeName.value)
+            localStorage.sides = sides
+        } else if(recipeType.value === "mains") {
+            mains.push(recipeName.value)
+            localStorage.mains = mains
+        } else {
+            desserts.push(recipeName.value)
+            localStorage.desserts = desserts
+        }
+        recipeModal.classList.replace('animateDown','animateUp')
+        recipeName.value = ""
+        recipeType.value = "Side Dish"
     } else {
-        desserts.push(recipeName.value)
+        document.querySelector('.input-container > label').innerText = "Please enter a name"
     }
-    
-    recipeModal.classList.replace('animateDown','animateUp')
-    recipeName.value = ""
-    recipeType.value = "Side Dish"
 }
 
 function cancelRecipe() {
@@ -199,4 +241,94 @@ function resetSelection() {
     dessertsRad.checked = false
     dessertsRad.disabled = false
     letsCook.disabled = true
+}
+
+function addToFavorites() {
+   if(sidesRad.checked == true) {
+    favSides.push(selectTxt.innerText)
+    localStorage.favsides = favSides
+   } else if(mainsRad.checked == true) {
+    favMains.push(selectTxt.innerText)
+    localStorage.favmains = favMains
+   } else if(dessertsRad.checked == true) {
+    favDesserts.push(selectTxt.innerText)
+    localStorage.favdesserts = favDesserts
+   } else if(mealsRad.checked == true) {
+    favMeals.push(selectTxt.innerText)
+    localStorage.favmeals = favMeals
+   }
+   for(i=0; i < document.querySelectorAll('.table').length; i++) {
+    document.querySelectorAll('.table')[i].replaceChildren()
+}
+listFavoriteSides()
+}
+
+function showFavoriteItems() {
+    if(showFavorites.innerText === "Show favorites") {
+        showFavorites.innerText = "Hide favorites"
+        if(favoriteItems.classList.contains('hidden')) {
+            favoriteItems.classList.replace('hidden','animateDown')
+        } else {
+        favoriteItems.classList.replace('animateUp','animateDown')
+        }
+        listFavoriteSides()
+    } else {
+        showFavorites.innerText = "Show favorites"
+        favoriteItems.classList.replace('animateDown','animateUp')
+        for(i=0; i < document.querySelectorAll('.table').length; i++) {
+            document.querySelectorAll('.table')[i].replaceChildren()
+        }
+    }
+    
+}
+
+function listFavoriteSides() {
+    var sideTable = document.querySelector('.sides')
+var tableBody = ''
+for(i=0; i < favSides.length; i++) {
+    var lineText = favSides[i]
+    tableBody += `
+    <p>${lineText}</p>
+    `
+}
+sideTable.insertAdjacentHTML('afterbegin',tableBody)
+listFavoriteMains()
+}
+
+function listFavoriteMains() {
+    var sideTable = document.querySelector('.mains')
+var tableBody = ''
+for(i=0; i < favMains.length; i++) {
+    var lineText = favMains[i]
+    tableBody += `
+    <p>${lineText}</p>
+    `
+}
+sideTable.insertAdjacentHTML('afterbegin',tableBody)
+listFavoriteDesserts()
+}
+
+function listFavoriteDesserts() {
+    var sideTable = document.querySelector('.desserts')
+var tableBody = ''
+for(i=0; i < favDesserts.length; i++) {
+    var lineText = favDesserts[i]
+    tableBody += `
+    <p>${lineText}</p>
+    `
+}
+sideTable.insertAdjacentHTML('afterbegin',tableBody)
+listFavoriteMeals()
+}
+
+function listFavoriteMeals() {
+    var sideTable = document.querySelector('.meals')
+var tableBody = ''
+for(i=0; i < favMeals.length; i++) {
+    var lineText = favMeals[i]
+    tableBody += `
+    <p>${lineText}</p>
+    `
+}
+sideTable.insertAdjacentHTML('afterbegin',tableBody)
 }

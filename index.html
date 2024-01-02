@@ -8,7 +8,8 @@
       <div class="title">What's for Dinner?</div> 
     </div>
     <div class="title-column"> 
-      <button class="add-recipe hidden">ADD A RECIPE</button>
+      <button class="show-favorites hidden">Show favorites</button>
+      <button class="add-recipe hidden">Add an item</button>
     </div>  
   </nav>
   <body>
@@ -17,7 +18,7 @@
             <h2>Complete the fields below for a personalized experience</h2>
               <section class="input-section">
                 <label for="first-name">First Name</label>
-                <input class="name-field first-name" value="testname"/>
+                <input class="name-field first-name"/>
                 <label for="last-name">Last Name</label>
                 <input class="name-field last-name"/>
                 <button class="userLogin">Enter</button>
@@ -68,16 +69,17 @@
                 </section>
                 <section class="button-container hidden">
                   <button class="reset">Clear</button>
+                  <button class="favorite">Favorite</button>
                 </section>
               </section>
             </div>
           </div>
         </div>
       </div>
-      <div class="modal-add-recipe overlay hidden">
+      <div class="modal-add-recipe modal overlay hidden">
           <div class="modal-inner-container">
             <section class="input-container">
-              <label>Dish name</label>
+              <label>Add a dish (name)</label>
               <input class="add-recipe-input name"></input>
               <select class="add-recipe-input type">Recipe Type
                 <option value="sides">Side Dish</option>
@@ -89,6 +91,18 @@
               <button class="add-recipe-button">Add</button>
               <button class="cancel-recipe-button">Cancel</button>
             </section> 
+        </div>
+      </div>
+      <div class="modal-favorites modal overlay hidden">
+        <div class="modal-inner-container">
+            <h1>Sides</h1>
+            <div class="sides table"></div>
+            <h1>Mains</h1>
+            <div class="mains table"></div>
+            <h1>Desserts</h1>
+            <div class="desserts table"></div>
+            <h1>Meals</h1>
+            <div class="meals table"></div>
         </div>
       </div>
     </body>

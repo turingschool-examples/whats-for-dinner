@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="assets" href="/assets/burger-friends.jpg" alt="Photo of American cuisine">
+    <link rel="assets" href="/assets/cookpot.svg">
   </head>
   <body>
     <header class="header">
@@ -16,16 +17,31 @@
       </div>
     </header>
     <section class="box">
-      <div class="transparent-box">
+      <div class="transparent-box" id="left-transparent-box">
         <div class="start-transparent-box"></div>
-        <h2>What are you looking for?*</h2>
-          <ul style="list-style-type:circle;">
-            <li>Breakfast</li>
-            <li>Lunch</li>
-          </ul>
-      </div>
-      <div class="transparent-box" id="end-transparent-box">
+        <h2>What are you looking for?<span>*</span></h2>
+          <div class="recipe-list">
+            <input type="radio" id="side-dish" name="dish" value="Side"></label>
+            <label for="side-dish">Side</label><br>
+            <input type="radio" id="main-dish" name="dish" value="Main Dish"></label>
+            <label for="main-dish">Main Dish</label><br>
+            <input type="radio" id="dessert-dish" name="dish" value="Dessert"></label>
+            <label for="dessert-dish">Dessert</label><br>
+            <input type="radio" id="entire-meal" name="dish" value="Entire Meal"></input>
+            <label for="entire-meal">Entire Meal</label><br><br>
+            <button class="lets-cook-button"> LET'S COOK!</button>
+          </div>
+        </div>
+      <div class="transparent-box" id="right-transparent-box">
         <div class="end-transparent-box"></div>
+          <img id="cooking-pot-img" src="http://www.w3.org/2000/svg" alt="Cooking pot line drawing">
+          <div class="box-meal hidden">
+              <h3>You should make:</h3><br>
+              <p id="rendered-meal">TEST</p>
+              <div class="clear-box">
+                <button class="button" id="clear-button">CLEAR</button>
+            </div>
+          </div>
       </div>
     </section>
   </body>

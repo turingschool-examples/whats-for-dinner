@@ -7,7 +7,7 @@ grey - #95a5a6;
 red - #ee5253
 
 */
-img {
+body {
     margin: 0%;
     background-image:url('assets/burger-friends.jpg');
     background-repeat: no-repeat;
@@ -16,6 +16,7 @@ img {
     width: 100%;
     max-width: 100vw;
     position: absolute;
+    font-family: 'Roboto', sans-serif
 }
 
 .header {
@@ -51,37 +52,104 @@ img {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 180%;
 }
 
 .box {
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 4.5em;
+    margin-top: 5em;
     margin-right: 10em;
     margin-left: 10em;
     margin-bottom: 15em;
 }
 
 .transparent-box {
-    height: 35rem;
-    width: 40%;
+    height: 34em;
+    width: 42.5%;
     background-color: rgba(225, 225, 225, .9);
 }
 
 .start-transparent-box {
-    padding: 1%;
+    padding-top: 3;
 }
 
 .end-transparent-box {
-    padding: 1%;
+    margin-right: 4em;
+}
+
+#left-transparent-box {
+    margin-inline-end: 2%;
+}
+
+label {
+    font-family: 'roboto', sans-serif;
+    font-size: 130%;
+}
+
+input {
+    margin: 20px 10px 0px 35px;
+    accent-color: rgb(22, 113, 226);
 }
 
 h2 {
     display: flex;
-    padding-left: 5%;
-    padding-top: 5%;
+    padding-left: 8.3%;
+    padding-top: 8.5%;
     font-family: 'Roboto', sans-serif;
-    font-size: 2em;
+    font-size: 200%;
+}
+
+span {
+    color: #ee5253;
+}
+
+.recipe-list {
+    margin: 0px 10px 0px 10px
+}
+
+.lets-cook-button {
+    font-size: 16px;
+    background-color: #0fb9b1;
+    height: 44px;
+    width: 220px;
+    border-radius: 5px;
+    border-style: hidden;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.box-meal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+h3 {
+    display: flex;
+    font-size: 80%;
+}
+
+p {
+    font-size: 150%
+}
+
+.clear-box {
+    display: flex;
+    align-items: end;
+}
+
+#clear-button {
+    font-size: 16px;
+    background-color: #95a5a6;
+    height: 44px;
+    width: 150px;
+    border-radius: 5px;
+    border-style: hidden;
 }
